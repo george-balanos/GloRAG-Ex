@@ -1,6 +1,5 @@
 import networkx as nx
 
-
 def delete_node(context_graph: nx.Graph, node_to_delete: str):
     G = context_graph.copy()
 
