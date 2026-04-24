@@ -1,10 +1,38 @@
 from typing import Dict, Any
 import json
 from ollama import chat
-from prompts import LLM_AS_A_JUDGE_PROMPT, QA_PROMPT
+from LLM.prompts import LLM_AS_A_JUDGE_PROMPT, QA_PROMPT
 import os
 import csv
 import pandas as pd
+
+from lightrag import LightRAG, QueryParam
+from lightrag.llm.ollama import ollama_model_complete
+from lightrag.utils import setup_logger, EmbeddingFunc
+from lightrag.kg.shared_storage import initialize_pipeline_status
+from retrieval.base import *
+from retrieval.retrieve import (
+    initialize_lightrag, 
+    retrieve_subgraph, 
+    print_subgraph,
+    WORKING_DIR,
+    QUERY,
+    MODE,
+    TOP_K
+)
+from retrieval.parser import parse_context
+from sentence_transformers import SentenceTransformer
+
+import asyncio
+
+WORKING_DIR  = "/mnt/qnap/cs05058/LightRAG/xylotian_storage"
+QUERY        = "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?"
+MODE         = "hybrid"
+TOP_K        = 2
+
+OLLAMA_HOST  = "http://localhost:11434"
+LLM_MODEL    = "mistral-small3.2:24b-instruct-2506-q4_K_M"
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
 class LLMWrapper:
@@ -239,26 +267,34 @@ class LLMWrapper:
 
 ### test for evaluation and comparison
 
-if __name__ == "__main__":
-    lw = LLMWrapper()
-    lw.evaluate_file("20_duplicate.csv", "llm_only")
-    lw.evaluate_file("20_duplicate.csv", "rag")
-    lw.compare_answers("20_duplicate")
-
-
-#### test for pertuber 
-
 # if __name__ == "__main__":
-
 #     lw = LLMWrapper()
+#     lw.evaluate_file("20_duplicate.csv", "llm_only")
+#     lw.evaluate_file("20_duplicate.csv", "rag")
+#     lw.compare_answers("20_duplicate")
 
-#     context = "Paris is the capital of France. It is known for the Eiffel Tower. It is a major tourist destination."
 
-#     perturbed = lw.perturbe_context(context)
 
-#     print("\nORIGINAL CONTEXT:\n", context)
+### test retrieval and perturbation
+async def main():
+    rag = await initialize_lightrag(WORKING_DIR)
+    lw = LLMWrapper()
+    
+    context_str = await retrieve_subgraph(rag=rag, query=QUERY, mode=MODE, top_k=TOP_K)
+    
+    if context_str:
+        parsed_subgraph = parse_context(context_str)
+        # print_subgraph(parsed_subgraph)
 
-#     print("\nPERTURBED CONTEXTS:\n")
-#     for i, p in enumerate(perturbed):
-#         print(f"\n--- Version {i+1} ---")
-#         print(p)
+        print(f"\n── Source Chunks {'─'*43}")    
+        perturbed = lw.perturbe_context(parsed_subgraph.chunks[0] if parsed_subgraph.chunks else "")
+        print("\nPERTURBED CONTEXTS:\n")
+        for i, p in enumerate(perturbed):
+            print(f"\n--- Version {i+1} ---")
+            print(p)
+    else:
+        print("No context retrieved")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
