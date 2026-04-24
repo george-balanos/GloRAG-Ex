@@ -7,19 +7,19 @@ from src.parser import parse_context
 
 import asyncio
 
-setup_logger("lightrag", level="WARNING")  # suppress noise
+setup_logger("lightrag", level="WARNING")
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-WORKING_DIR  = "./synthetic"   # path to your existing LightRAG index
+WORKING_DIR  = "./synthetic"
 QUERY        = "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?"
-MODE         = "hybrid"          # local | global | hybrid | naive
+MODE         = "hybrid"
 TOP_K        = 2
 
 OLLAMA_HOST  = "http://localhost:11434"
-LLM_MODEL    = "mistral-small3.2:24b-instruct-2506-q4_K_M"         # any model you have pulled in ollama
+LLM_MODEL    = "mistral-small3.2:24b-instruct-2506-q4_K_M"
 EMBED_MODEL  = "all-minilm:latest"
-EMBED_DIM    = 384               # nomic-embed-text output dimension
+EMBED_DIM    = 384
 
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -51,7 +51,7 @@ async def retrieve_subgraph(rag: LightRAG, query: str=QUERY, mode: str = MODE, t
     param = QueryParam(mode=mode, only_need_context=True, enable_rerank=False, top_k=top_k)
     context: str = await rag.aquery(query, param=param)
 
-    print(context)
+    # print(context)
 
     return context
 

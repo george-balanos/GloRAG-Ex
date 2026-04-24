@@ -17,7 +17,8 @@ async def query(rag, context):
         system_prompt=system_prompt
     )
 
-    print(response)
+    # print(response)
+    return response
 
 async def main():
     rag = await initialize_lightrag()
