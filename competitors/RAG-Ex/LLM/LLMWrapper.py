@@ -39,6 +39,12 @@ class LLMWrapper:
     def __init__(self, model: str = "mistral-small3.2:24b-instruct-2506-q4_K_M"):
         self.model = model
         self.COUNTER_FILE = "counter.txt"
+        self.rag = None
+    
+    async def setup(self):
+        """Asynchronously initialize the RAG engine"""
+        self.rag = await initialize_lightrag(WORKING_DIR)
+        return self
 
     def _call(self, query: Dict[str, Any], prompt: str = None):
 
@@ -139,23 +145,41 @@ class LLMWrapper:
 
         return file_path
 
-    def perturbe_context(self, context: str):
-
+    def perturbe_context(self, context: str, method: str = "remove_word"):
         if not context or not isinstance(context, str):
             return []
 
-        sentences = [s.strip() for s in context.split(".") if s.strip()]
-
         perturbed_contexts = []
 
-        for i in range(len(sentences)):
-            perturbed = sentences[:i] + sentences[i+1:]
-            new_context = ". ".join(perturbed)
+        if method == "remove_sentence":
+            sentences = [s.strip() for s in context.split(".") if s.strip()]
+            for i in range(len(sentences)):
+                perturbed = sentences[:i] + sentences[i+1:]
+                new_context = ". ".join(perturbed)
+                if new_context:
+                    new_context += "."
+                perturbed_contexts.append(new_context)
 
-            if new_context:
-                new_context += "."
+        elif method == "remove_word":
+            words = context.split() 
+            
+            for i in range(len(words)):
+                perturbed = words[:i] + words[i+1:]
+                new_context = " ".join(perturbed)
+                perturbed_contexts.append(new_context)
+        elif method == "rage":
+            paragraphs = [p.strip() for p in context.split("\n\n") if p.strip()]
+            
+            if len(paragraphs) < 2:
+                return [context] 
 
-            perturbed_contexts.append(new_context)
+            for i in range(len(paragraphs)):
+                for j in range(i + 1, len(paragraphs)):
+                    swapped = paragraphs[:]
+                    swapped[i], swapped[j] = swapped[j], swapped[i]
+                    
+                    new_context = "\n\n".join(swapped)
+                    perturbed_contexts.append(new_context)
 
         return perturbed_contexts
     
@@ -265,6 +289,44 @@ class LLMWrapper:
         return next_id
 
 
+    def collect_perturbations(self, context: str, method: str = "remove_sentence"):
+        perturbations = []
+
+        perturbed = self.perturbe_context(context)
+        print("\nPERTURBED CONTEXTS:\n")
+        for i, p in enumerate(perturbed):
+            perturbations.append(p)
+            print(f"\n--- Version {i+1} ---")
+            print(p)
+        
+        return perturbations
+    
+
+### test retrieval and perturbation
+# async def main():
+#     lw = LLMWrapper()
+#     await lw.setup()
+    
+#     context_str = await retrieve_subgraph(rag=lw.rag, query=QUERY, mode=MODE, top_k=TOP_K)
+    
+#     if context_str:
+#         parsed_subgraph = parse_context(context_str)
+#         # print_subgraph(parsed_subgraph)
+
+#         print(f"\n── Source Chunks {'─'*43}")    
+#         perturbed = lw.collect_perturbations(parsed_subgraph.chunks[0] if parsed_subgraph.chunks else "") 
+#         print("\nPERTURBED CONTEXTS:\n")
+#         for i, p in enumerate(perturbed):
+#             print(f"\n--- Version {i+1} ---")
+#             print(p)
+#     else:
+#         print("No context retrieved")
+
+# if __name__ == "__main__":
+#     asyncio.run(main())
+
+
+
 ### test for evaluation and comparison
 
 # if __name__ == "__main__":
@@ -272,29 +334,3 @@ class LLMWrapper:
 #     lw.evaluate_file("20_duplicate.csv", "llm_only")
 #     lw.evaluate_file("20_duplicate.csv", "rag")
 #     lw.compare_answers("20_duplicate")
-
-
-
-### test retrieval and perturbation
-async def main():
-    rag = await initialize_lightrag(WORKING_DIR)
-    lw = LLMWrapper()
-    
-    context_str = await retrieve_subgraph(rag=rag, query=QUERY, mode=MODE, top_k=TOP_K)
-    
-    if context_str:
-        parsed_subgraph = parse_context(context_str)
-        # print_subgraph(parsed_subgraph)
-
-        print(f"\n── Source Chunks {'─'*43}")    
-        perturbed = lw.perturbe_context(parsed_subgraph.chunks[0] if parsed_subgraph.chunks else "")
-        print("\nPERTURBED CONTEXTS:\n")
-        for i, p in enumerate(perturbed):
-            print(f"\n--- Version {i+1} ---")
-            print(p)
-    else:
-        print("No context retrieved")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-
