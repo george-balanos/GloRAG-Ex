@@ -1,9 +1,11 @@
 from lightrag import LightRAG, QueryParam
 from lightrag.llm.ollama import ollama_model_complete, ollama_embed
-from lightrag.utils import setup_logger
+from lightrag.utils import setup_logger, EmbeddingFunc
 from lightrag.kg.shared_storage import initialize_pipeline_status
 from src.base import *
 from src.parser import parse_context
+
+from src.llm.utils import get_llm, vllm_model_complete, VLLM_MODEL, EMBEDDING_DIM, sentence_transformer_embed
 
 import asyncio
 
@@ -16,11 +18,6 @@ QUERY        = "What are the two primary materials used to construct a Xylotian 
 MODE         = "hybrid"
 TOP_K        = 2
 
-OLLAMA_HOST  = "http://localhost:11434"
-LLM_MODEL    = "mistral-small3.2:24b-instruct-2506-q4_K_M"
-EMBED_MODEL  = "all-minilm:latest"
-EMBED_DIM    = 384
-
 # ──────────────────────────────────────────────────────────────────────────────
 
 async def initialize_lightrag(working_dir: str = WORKING_DIR):
@@ -28,18 +25,24 @@ async def initialize_lightrag(working_dir: str = WORKING_DIR):
 
     rag = LightRAG(
         working_dir=working_dir,
-        llm_model_func=ollama_model_complete,
-        llm_model_name=LLM_MODEL,
+
+        llm_model_func=vllm_model_complete,
+        llm_model_name=VLLM_MODEL,
         summary_max_tokens=8192,
         llm_model_kwargs={
-            "host": "http://localhost:11434",
-            "options": {"temperature": 0},
-            "timeout": int("200")
+            "temperature": 0,
+            "max_tokens": 8192,
         },
-        embedding_func=ollama_embed,
+        
+        embedding_func=EmbeddingFunc(
+            embedding_dim=EMBEDDING_DIM,
+            max_token_size=512,          
+            func=sentence_transformer_embed,
+        ),
     )
     await rag.initialize_storages()
     await initialize_pipeline_status()
+    await rag.aclear_cache()
 
     return rag
 
@@ -48,7 +51,7 @@ async def retrieve_subgraph(rag: LightRAG, query: str=QUERY, mode: str = MODE, t
     Retrieve relevant subgraph (entities/relations/chunks)
     '''
 
-    param = QueryParam(mode=mode, only_need_context=True, enable_rerank=False, top_k=top_k)
+    param = QueryParam(mode=mode, only_need_context=True, enable_rerank=False, top_k=top_k, include_references=False)
     context: str = await rag.aquery(query, param=param)
 
     # print(context)

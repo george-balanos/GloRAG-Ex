@@ -6,26 +6,32 @@ from tqdm import tqdm
 import pandas as pd
 import asyncio
 import json
+import logging
 
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+logging.getLogger("vllm").setLevel(logging.WARNING)
+logging.getLogger("sentence_transformers").setLevel(logging.WARNING)
+logging.getLogger("nano-vectordb").setLevel(logging.WARNING)
+logging.getLogger("lightrag").setLevel(logging.WARNING)
+
 
 def load_qa(path: str):
-    return pd.read_csv(path)
+    df = pd.read_csv(path)
+    df = df.drop_duplicates(subset=["questions"])
+    return df.reset_index(drop=True)
 
 async def run_example(rag, question, ground_truth, mode, top_k):
     # Retrieve Context
-    context_graph = await retrieve_subgraph(rag, question, mode=mode, top_k=top_k)
+    context_graph = await retrieve_subgraph(rag, query=question, mode=mode, top_k=top_k)
 
     # Query LLM
-    generated_answer = await query(rag, context_graph)
+    generated_answer = await query(rag, context_graph, question)
 
     # Compare to Ground Truth
-    score = judge_response(question, generated_answer=generated_answer, ground_truth=ground_truth)
+    score = await judge_response(question, generated_answer=generated_answer, ground_truth=ground_truth)
 
     return score, generated_answer
 
-async def run_benchmark(rag, mode="hybrid", top_k=2):
+async def run_benchmark(rag, mode="bypass", top_k=0):
     benchmark_data = load_qa("qa/qa_data_synthetic.csv")
 
     result_dict = {}
