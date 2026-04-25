@@ -29,17 +29,14 @@ async def find_counterfactuals(rag, question: str, context):
     # Min-Heap
     Q = []
 
-    print(f"Min-heap: {Q}")
-    print(f"Context Graph nodes: {context_graph_nodes}")
+    cut_vertices = set(nx.articulation_points(context_graph.to_undirected()))
 
-    heapq.heappush(Q, (0, next(counter), (context_graph, [])))
-
-    print(Q)
+    heapq.heappush(Q, (0, next(counter), (context_graph, [], cut_vertices)))
 
     seen = set()
 
     while Q:
-        c, _, (cg, ops) = heapq.heappop(Q)
+        c, _, (cg, ops, cv) = heapq.heappop(Q)
 
         print(f"Processing: CG {cg} | Ops {ops}")
 
@@ -60,31 +57,33 @@ async def find_counterfactuals(rag, question: str, context):
 
             if score == 0:
                 print(f"Counterfactual Operations: {ops}")
-                break
+                return ops
 
-        expand(Q, (c, cg, ops), operation="delete_node")
+        expand(Q, (c, cg, ops, cv), operation="delete_node")
         print()
 
+    print(f"Could not find feasible counterfactual explanations.")
+
 def expand(Q, heap_element, operation):
-    c = heap_element[0]
-    cg: nx.Graph = heap_element[1]
-    ops = heap_element[2]
+    c, cg, ops, cv = heap_element
     
-    cut_vertices = set(nx.articulation_points(cg.to_undirected()))
+    # cut_vertices = set(nx.articulation_points(cg.to_undirected()))
 
     if operation == "delete_node":
         for node in list(cg.nodes):
-            if node not in cut_vertices:
+            if node not in cv:
                 perturbed_cg = delete_node(cg, node)
                 perturbation_cost = delete_node_cost(cg, node)
                 new_ops = ops + [node]
-                heapq.heappush(Q, (c + perturbation_cost, next(counter), (perturbed_cg, new_ops)))
+                cut_vertices = set(nx.articulation_points(perturbed_cg.to_undirected()))
+                cut_vertices.update(cv)
+                heapq.heappush(Q, (c + perturbation_cost, next(counter), (perturbed_cg, new_ops, cut_vertices)))
             else:
-                # print(f"Not feasible perturbation: {node}")
+                print(f"Not feasible perturbation: {node}")
                 pass
 
 async def main():
-    QUERY = "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?"
+    QUERY = "What two distinct abilities does a Xylotian 'Chrono-Weaver' possess?"
 
     rag = await initialize_lightrag()
 
