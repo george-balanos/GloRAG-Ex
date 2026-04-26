@@ -42,8 +42,8 @@ if __name__ == "__main__":
     node_json = "synthetic/vdb_entities.json"
     edge_json = "synthetic/vdb_relationships.json"
 
-    node_index, node_records, dim, _ = build_index(node_json)
-    save_index(node_index, node_records, "src/embeddings/node_index")
+    node_index, node_records, dim, node_embeddings = build_index(node_json)
+    save_index(node_index, node_records, node_embeddings, "src/embeddings/node_index")
 
-    edge_index, edge_records, dim, _ = build_index(edge_json)
-    save_index(edge_index, edge_records, "src/embeddings/edge_index")
+    edge_index, edge_records, dim, edge_embeddings = build_index(edge_json)
+    save_index(edge_index, edge_records, edge_embeddings, "src/embeddings/edge_index")
