@@ -38,19 +38,19 @@ def _split_sections(context: str) -> dict[str, str]:
             current_lines = []
             continue
  
-        m = re.match(r"^Document Chunks", stripped, re.IGNORECASE)
-        if m:
-            sections[current_key] = "\n".join(current_lines)
-            current_key = "chunks"
-            current_lines = []
-            continue
+        # m = re.match(r"^Document Chunks", stripped, re.IGNORECASE)
+        # if m:
+        #     sections[current_key] = "\n".join(current_lines)
+        #     current_key = "chunks"
+        #     current_lines = []
+        #     continue
  
-        m = re.match(r"^Reference Document", stripped, re.IGNORECASE)
-        if m:
-            sections[current_key] = "\n".join(current_lines)
-            current_key = "references"
-            current_lines = []
-            continue
+        # m = re.match(r"^Reference Document", stripped, re.IGNORECASE)
+        # if m:
+        #     sections[current_key] = "\n".join(current_lines)
+        #     current_key = "references"
+        #     current_lines = []
+        #     continue
  
         current_lines.append(line)
  
@@ -161,16 +161,16 @@ def parse_context(context: str) -> Subgraph:
                 raw={"parts": parts},
             ))
  
-    # ── Source chunks ─────────────────────────────────────────────────────────
-    chunk_text = sections.get("chunks", sections.get("sources", ""))
-    raw_chunks = _parse_jsonlines(chunk_text)
-    if raw_chunks and "content" in raw_chunks[0]:
-        # JSON-lines: {"reference_id": "...", "content": "..."}
-        subgraph.chunks = [r["content"] for r in raw_chunks if r.get("content")]
-    else:
-        # Plain text blocks separated by blank lines or [N] markers
-        blocks = re.split(r"\n{2,}|\[\d+\]", chunk_text)
-        subgraph.chunks = [b.strip() for b in blocks if b.strip()]
+    # # ── Source chunks ─────────────────────────────────────────────────────────
+    # chunk_text = sections.get("chunks", sections.get("sources", ""))
+    # raw_chunks = _parse_jsonlines(chunk_text)
+    # if raw_chunks and "content" in raw_chunks[0]:
+    #     # JSON-lines: {"reference_id": "...", "content": "..."}
+    #     subgraph.chunks = [r["content"] for r in raw_chunks if r.get("content")]
+    # else:
+    #     # Plain text blocks separated by blank lines or [N] markers
+    #     blocks = re.split(r"\n{2,}|\[\d+\]", chunk_text)
+    #     subgraph.chunks = [b.strip() for b in blocks if b.strip()]
  
     return subgraph
 
@@ -228,8 +228,8 @@ def graph_to_subgraph(G: nx.DiGraph, original: Subgraph | None = None) -> Subgra
     return Subgraph(
         entities=entities,
         relations=relations,
-        chunks=original.chunks if original else [],
-        raw_context=original.raw_context if original else "",
+        # chunks=original.chunks if original else [],
+        # raw_context=original.raw_context if original else "",
     )
 
 def graph_to_context(G: nx.DiGraph, original: Subgraph | None = None) -> str:

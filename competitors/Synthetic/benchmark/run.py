@@ -31,7 +31,7 @@ async def run_example(rag, question, ground_truth, mode, top_k):
 
     return score, generated_answer
 
-async def run_benchmark(rag, mode="bypass", top_k=0):
+async def run_benchmark(rag, mode="local", top_k=10):
     benchmark_data = load_qa("qa/qa_data_synthetic.csv")
 
     result_dict = {}

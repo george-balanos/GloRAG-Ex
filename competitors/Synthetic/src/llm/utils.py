@@ -1,3 +1,6 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "1" 
+
 from vllm import LLM, SamplingParams
 from sentence_transformers import SentenceTransformer
 

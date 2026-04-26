@@ -3,7 +3,7 @@ from lightrag.llm.ollama import ollama_model_complete, ollama_embed
 from lightrag.utils import setup_logger, EmbeddingFunc
 from lightrag.kg.shared_storage import initialize_pipeline_status
 from src.base import *
-from src.parser import parse_context
+from src.parser import *
 
 from src.llm.utils import get_llm, vllm_model_complete, VLLM_MODEL, EMBEDDING_DIM, sentence_transformer_embed
 
@@ -46,7 +46,7 @@ async def initialize_lightrag(working_dir: str = WORKING_DIR):
 
     return rag
 
-async def retrieve_subgraph(rag: LightRAG, query: str=QUERY, mode: str = MODE, top_k: int = TOP_K) -> Subgraph:
+async def retrieve_subgraph(rag: LightRAG, query: str=QUERY, mode: str = MODE, top_k: int = TOP_K):
     '''
     Retrieve relevant subgraph (entities/relations/chunks)
     '''
@@ -56,7 +56,11 @@ async def retrieve_subgraph(rag: LightRAG, query: str=QUERY, mode: str = MODE, t
 
     # print(context)
 
-    return context
+    parsed_context = parse_context(context)
+    parsed_graph = parse_graph(parsed_context)
+    filtered_context = graph_to_context(parsed_graph, parsed_context)
+
+    return filtered_context
 
 def print_subgraph(sg: Subgraph) -> None:
     print(f"\n{'='*60}")

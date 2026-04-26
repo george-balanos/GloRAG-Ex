@@ -19,6 +19,7 @@ def replace_node(context_graph: nx.Graph, old_name: str, new_name: str, **new_at
     G = context_graph.copy()
     G = nx.relabel_nodes(G, {old_name: new_name})
     
+    G.nodes[new_name].clear()
     if new_attrs:
         G.nodes[new_name].update(new_attrs)
     return G

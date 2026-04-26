@@ -81,7 +81,7 @@ def export_performance_cases(llm_results_path: str, rag_results_path: str, outpu
     print(f"  RAG Accuracy: {output['summary']['rag_accuracy']:.2%}")
 
 if __name__ == "__main__":
-    rag_results = "benchmark/results/synthetic_hybrid_2.json"
+    rag_results = "benchmark/results/synthetic_local_10.json"
     llm_results = "benchmark/results/synthetic_bypass_0.json"
     
     export_performance_cases(llm_results_path=llm_results, rag_results_path=rag_results)
