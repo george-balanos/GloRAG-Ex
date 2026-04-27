@@ -90,7 +90,32 @@ def _parse_pipe_delimited(text: str) -> list[dict]:
             results.append({"_parts": parts})
     return results
  
- 
+def subgraph_to_dict(subgraph) -> dict:
+    if subgraph is None:
+        return None
+
+    return {
+        "entities": [
+            {
+                "name": e.name, 
+                "type": e.type,
+                "description": e.description,
+                "rank": e.rank
+            }
+            for e in subgraph.entities
+        ],
+        "relations": [
+            {
+                "src": r.src,
+                "tgt": r.tgt,
+                "keywords": r.keywords,
+                "description": r.description,
+                "weight": r.weight,
+            }
+            for r in subgraph.relations
+        ]
+    }
+
 def parse_context(context: str) -> Subgraph:
     """
     Parse the context string LightRAG returns for only_need_context=True.
@@ -203,7 +228,7 @@ def parse_graph(subgraph: Subgraph) -> nx.Graph:
 
 ###### Networkx -> Context (String)
 
-def graph_to_subgraph(G: nx.DiGraph, original: Subgraph | None = None) -> Subgraph:
+def graph_to_subgraph(G: nx.DiGraph) -> Subgraph:
     entities = []
     for name, attrs in G.nodes(data=True):
         entities.append(Entity(
@@ -232,8 +257,8 @@ def graph_to_subgraph(G: nx.DiGraph, original: Subgraph | None = None) -> Subgra
         # raw_context=original.raw_context if original else "",
     )
 
-def graph_to_context(G: nx.DiGraph, original: Subgraph | None = None) -> str:
-    subgraph = graph_to_subgraph(G, original=original)
+def graph_to_context(G: nx.DiGraph) -> str:
+    subgraph = graph_to_subgraph(G)
 
     lines = []
 

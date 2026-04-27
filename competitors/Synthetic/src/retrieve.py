@@ -58,7 +58,7 @@ async def retrieve_subgraph(rag: LightRAG, query: str=QUERY, mode: str = MODE, t
 
     parsed_context = parse_context(context)
     parsed_graph = parse_graph(parsed_context)
-    filtered_context = graph_to_context(parsed_graph, parsed_context)
+    filtered_context = graph_to_context(parsed_graph)
 
     return filtered_context
 
