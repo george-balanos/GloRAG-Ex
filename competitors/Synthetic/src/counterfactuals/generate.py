@@ -32,6 +32,10 @@ node_index_prefix = "src/embeddings/node_index"
 node_index, node_records, node_embeddings = load_index(node_index_prefix, DIM, 2000)
 node_lookup = build_lookup(node_records)
 
+edge_index_prefix = "src/embeddings/edge_index"
+edge_index, edge_records, edge_embeddings = load_index(edge_index_prefix, DIM, 2000)
+edge_lookup = build_lookup(edge_records)
+
 async def find_counterfactuals(rag, question: str, context, operation="delete_node", max_cost=3):
     query_embedding = (await sentence_transformer_embed([question]))[0]
 
@@ -43,6 +47,14 @@ async def find_counterfactuals(rag, question: str, context, operation="delete_no
     original_answer = await query(rag, context, question)
 
     context_graph_nodes = set(context_graph.nodes)
+
+
+    context_graph_edges = set(context_graph.edges())
+    edge_labels = {(u, v): data.get("description", "") 
+                for u, v, data in context_graph.edges(data=True)}
+
+    print(context_graph_edges)    
+
     replacement_index = {}
     if operation == "replace_node":
         for node in context_graph_nodes:
@@ -70,6 +82,18 @@ async def find_counterfactuals(rag, question: str, context, operation="delete_no
             similarity = 0.0
         node_similarity_index[node] = similarity
 
+    edge_similarity_index = {}
+    for (u, v), label in edge_labels.items():
+        if not label:
+            edge_similarity_index[(u, v)] = 0.0
+            continue
+        edge_embedding = (await sentence_transformer_embed([label]))[0]
+        similarity = cosine_similarity_norm(query_embedding, edge_embedding)
+        edge_similarity_index[(u, v)] = similarity
+
+    print(edge_similarity_index)
+
+
     # Min-Heap
     Q = []
 
@@ -89,10 +113,17 @@ async def find_counterfactuals(rag, question: str, context, operation="delete_no
 
         # print(f"Processing: CG {cg} | Ops {ops}")
 
-        state = frozenset(cg.nodes)
-        if state in seen:
-            continue
-        seen.add(state)
+        if operation == "delete_node" or operation == "replace_node" or operation == "add_node":
+            state = frozenset(cg.nodes)
+            if state in seen:
+                continue
+            seen.add(state)
+
+        elif operation == "delete_edge" or operation == "replace_edge" or operation == "add_edge":
+            state = frozenset(cg.edges)
+            if state in seen:
+                continue
+            seen.add(state)
 
         if len(ops) > 0:
             cg_context = graph_to_context(cg)
@@ -122,7 +153,11 @@ async def find_counterfactuals(rag, question: str, context, operation="delete_no
                 )
                 return ops
 
-        expand(Q, (c, cg, ops, cv, bg), operation=operation, replacement_index=replacement_index, similarity_index=similarity_index)
+        if operation == "delete_node" or operation == "replace_node" or operation == "add_node":
+            expand(Q, (c, cg, ops, cv, bg), operation=operation, replacement_index=replacement_index, similarity_index=node_similarity_index)
+        else:
+            expand(Q, (c, cg, ops, cv, bg), operation=operation, replacement_index=replacement_index, similarity_index=edge_similarity_index)
+
         print()
 
     print(f"Could not find feasible counterfactual explanations.")
@@ -165,10 +200,14 @@ def expand(Q, heap_element, operation, replacement_index=None, similarity_index=
 
     elif operation == "delete_edge":
         for edge in list(cg.edges):
-            if edge not in bg:
+            # if edge not in bg: # Feasibility Constraint (ACTIVE)
+            if edge:
                 perturbed_cg = delete_edge(cg, edge)
                 perturbation_cost = delete_edge_cost()
                 new_ops = ops + [edge]
+
+                similarity = similarity_index.get(edge, 0.0)
+                # print(f"Similarity: {similarity}")
 
                 cut_vertices = set(nx.articulation_points(perturbed_cg.to_undirected()))
                 cut_vertices.update(cv)
@@ -176,9 +215,9 @@ def expand(Q, heap_element, operation, replacement_index=None, similarity_index=
                 bridges.update(bg)
                 # heapq.heappush(Q, (c + perturbation_cost, next(counter), (perturbed_cg, new_ops, cut_vertices, bridges)))
 
-                heapq.heappush(Q, (c + perturbation_cost, next(counter), (perturbed_cg, new_ops, cut_vertices, bridges)))
+                heapq.heappush(Q, (c + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops, cut_vertices, bridges)))
             else:
-                print(f"Not feasible perturbation: {edge}")
+                # print(f"Not feasible perturbation: {edge}")
                 pass
 
     elif operation == "replace_node":
