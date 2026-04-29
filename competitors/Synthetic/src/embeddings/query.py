@@ -28,7 +28,14 @@ def build_lookup(records: list[dict]) -> dict[str, int]:
         if "name" in r:
             lookup[r["name"]] = i
         if "label" in r:
-            lookup[r["label"]] = i
+            # lookup[r["label"]] = i
+            lookup[f'({r["src"]}, {r["tgt"]})'] = i
+    return lookup
+
+def build_edge_lookup(records: list[dict]) -> dict[str, int]:
+    lookup = {}
+    for i, r in enumerate(records):
+        lookup[(r["src"], r["tgt"])] = i
     return lookup
 
 def get_embedding(embeddings: np.ndarray, lookup: dict[str, int], key: str) -> np.ndarray:
@@ -52,6 +59,66 @@ def find_most_similar_node(name, node_type, embeddings, lookup, type_index):
             best_node = node
 
     return {"name": best_node, "similarity": round(best_sim, 4)}
+
+def find_most_distant_node(name, node_type, embeddings, lookup, type_index):
+    vec = get_embedding(embeddings, lookup, name).astype("float32")
+
+    same_type_nodes = [n for n in type_index.get(node_type, []) if n != name]
+
+    worst_node, worst_sim = None, float("inf")
+    for node in same_type_nodes:
+        if node not in lookup:
+            continue
+        candidate_vec = get_embedding(embeddings, lookup, node).astype("float32")
+        sim = cosine_similarity_norm(vec, candidate_vec)
+        if sim < worst_sim:
+            worst_sim = sim
+            worst_node = node
+
+    return {"name": worst_node, "similarity": round(worst_sim, 4)}
+
+def find_most_similar_edge(edge, embeddings, lookup):
+    vec = get_embedding(embeddings, lookup, edge)
+    if vec is None:
+        return None
+    vec = vec.astype("float32")
+
+    best_edge, best_sim = None, -1
+    for candidate_edge in lookup:
+        if candidate_edge == edge:
+            continue
+        candidate_vec = get_embedding(embeddings, lookup, candidate_edge).astype("float32")
+        sim = cosine_similarity_norm(vec, candidate_vec)
+        if sim > best_sim:
+            best_sim  = sim
+            best_edge = candidate_edge
+
+    if best_edge is None:
+        return None
+    
+    return {"edge": best_edge, "similarity": round(best_sim, 4)}
+
+def find_most_distant_edge(edge, embeddings, lookup):
+    vec = get_embedding(embeddings, lookup, edge)
+    if vec is None:
+        return None
+    vec = vec.astype("float32")
+
+    worst_edge, worst_sim = None, float("inf")
+    for candidate_edge in lookup:
+        if candidate_edge == edge:
+            continue
+        candidate_vec = get_embedding(embeddings, lookup, candidate_edge).astype("float32")
+        sim = cosine_similarity_norm(vec, candidate_vec)
+        if sim < worst_sim:
+            worst_sim = sim
+            worst_edge = candidate_edge
+
+    if worst_edge is None:
+        return None
+
+    return {"edge": worst_edge, "similarity": round(worst_sim, 4)}
+
 
 if __name__ == "__main__":
     index_prefix = "src/embeddings/node_index"

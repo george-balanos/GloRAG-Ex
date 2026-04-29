@@ -24,11 +24,14 @@ def replace_node(context_graph: nx.Graph, old_name: str, new_name: str, **new_at
         G.nodes[new_name].update(new_attrs)
     return G
 
-def replace_edge(context_graph: nx.Graph, edge_to_replace: tuple, edge_replacement: tuple):
+def replace_edge(context_graph: nx.Graph, edge_to_replace: tuple, edge_replacement: tuple, **new_attrs) -> nx.Graph:
     G = context_graph.copy()
-
-    context_graph.edges[edge_to_replace]["description"] = edge_replacement
-    return context_graph
+    u, v = edge_to_replace
+    
+    G.edges[u, v].clear()
+    if new_attrs:
+        G.edges[u, v].update(new_attrs)
+    return G
 
 def add_node(context_graph: nx.Graph, node: str, **attrs) -> nx.Graph:
     G = context_graph.copy()
