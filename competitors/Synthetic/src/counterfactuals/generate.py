@@ -213,7 +213,7 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
                 )
                 return ops
             
-        expand(Q, (cost, cg, ops), node_replacement_index=node_replacement_index, edge_replacement_index=edge_replacement_index, node_similarity_index=node_similarity_index, edge_similarity_index=edge_similarity_index)
+        expand(Q, (cost, cg, ops), node_replacement_index=node_replacement_index, edge_replacement_index=edge_replacement_index, node_similarity_index=node_similarity_index, edge_similarity_index=edge_similarity_index, unit_cost=True)
 
         print()
 
@@ -233,7 +233,7 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
 
 
 
-def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node_similarity_index, edge_similarity_index):
+def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node_similarity_index, edge_similarity_index, unit_cost: bool = False):
     cost, cg, ops = heap_element
 
     cut_vertices = set(nx.articulation_points(cg.to_undirected()))
@@ -243,7 +243,12 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
     for node in list(cg.nodes):
         if node not in cut_vertices:
             perturbed_cg = delete_node(cg, node)
-            perturbation_cost = delete_node_cost(cg, node)
+            
+            if unit_cost == False:
+                perturbation_cost = delete_node_cost(cg, node) 
+            elif unit_cost == True:
+                perturbation_cost = delete_node_uc(cg, node)
+
             new_ops = ops + [("delete_node", node)]
 
             similarity = node_similarity_index.get(node, 0.0)
@@ -254,7 +259,12 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
     for edge in list(cg.edges):
         if edge not in cut_edges:
             perturbed_cg = delete_edge(cg, edge)
-            perturbation_cost = delete_edge_cost()
+            
+            if unit_cost == False:
+                perturbation_cost = delete_edge_cost()
+            elif unit_cost == True:
+                perturbation_cost = delete_edge_uc()
+
             new_ops = ops + [("delete_edge", edge)]
 
             similarity = edge_similarity_index.get(edge, 0.0)
@@ -275,7 +285,12 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
         sim = node_replacement.get("similarity")
 
         perturbed_cg = replace_node(cg, node, current_replacement, **replacement_attr)
-        perturbation_cost = 1 - sim
+        
+        if unit_cost == False:
+            perturbation_cost = 1 - sim
+        elif unit_cost == True:
+            perturbation_cost = replace_node_uc(cg, node)
+
         new_ops = ops + [("replace_node", (node, current_replacement))]
 
         similarity = node_similarity_index.get(node, 0.0)
@@ -296,7 +311,12 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
         sim = edge_replacement.get("similarity")
 
         perturbed_cg = replace_edge(cg, edge, current_replacement, **replacement_attr)
-        perturbation_cost = 1 - sim
+        
+        if unit_cost == False:
+            perturbation_cost = 1 - sim
+        elif unit_cost == True:
+            perturbation_cost = replace_edge_uc()
+
         new_ops = ops + [("replace_edge", (edge, current_replacement))]
 
         similarity = edge_similarity_index.get(edge, 0.0)
