@@ -13,6 +13,12 @@ def delete_edge(context_graph: nx.Graph, edge_to_delete: tuple):
     tgt = edge_to_delete[1]
 
     G.remove_edge(src, tgt)
+
+    if G.degree(src) == 0:
+        G.remove_node(src)
+    if G.degree(tgt) == 0:
+        G.remove_node(tgt)
+
     return G
     
 def replace_node(context_graph: nx.Graph, old_name: str, new_name: str, **new_attrs) -> nx.Graph:

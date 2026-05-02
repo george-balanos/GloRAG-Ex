@@ -6,8 +6,13 @@ import networkx as nx
 
 #### Delete ####
 
-def delete_edge_cost():
-    return 1
+def delete_edge_cost(context_graph: nx.Graph, edge_to_delete: tuple):
+    src = edge_to_delete[0]
+    tgt = edge_to_delete[1]
+
+    singletons = sum(1 for node in [src, tgt] if context_graph.degree(node) == 1)
+
+    return 1 + singletons
 
 def delete_node_cost(C: nx.Graph, node_to_remove):
     incident_edges = list(C.edges(node_to_remove))
@@ -59,8 +64,13 @@ def add_node_cost(C: nx.Graph, node_index, edge_index, node_to_add_emb):
 
 #### Delete ####
 
-def delete_edge_uc():
-    return 1
+def delete_edge_cost_uc(context_graph: nx.Graph, edge_to_delete: tuple):
+    src = edge_to_delete[0]
+    tgt = edge_to_delete[1]
+
+    singletons = sum(1 for node in [src, tgt] if context_graph.degree(node) == 1)
+
+    return 1 + singletons
 
 def delete_node_uc(C: nx.Graph, node_to_remove):
     incident_edges = list(C.edges(node_to_remove))
@@ -72,10 +82,8 @@ def delete_node_uc(C: nx.Graph, node_to_remove):
 def replace_edge_uc():
     return 1
 
-def replace_node_uc(C: nx.Graph, node_to_replace):
-    incident_edges = list(C.edges(node_to_replace))
-
-    return 1 + len(incident_edges)
+def replace_node_uc():
+    return 1
 
 #### Add ####
 
