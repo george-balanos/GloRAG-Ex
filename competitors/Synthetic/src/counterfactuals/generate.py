@@ -11,6 +11,9 @@ from src.embeddings.utils import load_index
 from collections import defaultdict
 from src.embeddings.query import find_most_similar_node, find_most_distant_node, find_most_similar_edge, find_most_distant_edge, DIM, build_lookup, get_embedding, build_edge_lookup
 
+### Explanation Stability/Consistency
+from src.counterfactuals.utils import graph_to_context_shuffled
+
 import heapq
 import networkx as nx
 import asyncio
@@ -134,7 +137,7 @@ async def create_edge_similarity_index(edge_labels, query_embedding):
 
 ################################################
 
-async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_calls=100, max_sparsity=None):
+async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_calls=100, max_sparsity=None, unit_cost: bool=False):
     query_embedding = (await sentence_transformer_embed([question]))[0]
     original_answer = await query(rag, context, question)
 
@@ -154,7 +157,6 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
     node_similarity_index = create_node_similarity_index(context_graph_nodes, query_embedding)
     edge_similarity_index = await create_edge_similarity_index(edge_labels, query_embedding)
 
-    
     llm_calls = 0
 
     Q = []
@@ -184,7 +186,11 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
         state_cache.add(state)
 
         if len(ops) > 0:
-            cg_context = graph_to_context(cg)
+            # cg_context = graph_to_context(cg)
+            
+            ### Explanation Stability/Consistency
+            cg_context = graph_to_context_shuffled(cg)
+
             new_response = await query(rag, cg_context, question)
 
             print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
@@ -213,7 +219,7 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
                 )
                 return ops
             
-        expand(Q, (cost, cg, ops), node_replacement_index=node_replacement_index, edge_replacement_index=edge_replacement_index, node_similarity_index=node_similarity_index, edge_similarity_index=edge_similarity_index, unit_cost=True)
+        expand(Q, (cost, cg, ops), node_replacement_index=node_replacement_index, edge_replacement_index=edge_replacement_index, node_similarity_index=node_similarity_index, edge_similarity_index=edge_similarity_index, unit_cost=unit_cost)
 
         print()
 
@@ -236,66 +242,113 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
 def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node_similarity_index, edge_similarity_index, unit_cost: bool = False):
     cost, cg, ops = heap_element
 
+    undirected: nx.Graph = cg.to_undirected()
     cut_vertices = set(nx.articulation_points(cg.to_undirected()))
     cut_edges = set(nx.bridges(cg.to_undirected()))
 
     ### Delete Node
-    for node in list(cg.nodes):
-        if node not in cut_vertices:
-            perturbed_cg = delete_node(cg, node)
+    # for node in list(cg.nodes):
+    #     if node not in cut_vertices:
+    #         perturbed_cg = delete_node(cg, node)
             
-            if unit_cost == False:
-                perturbation_cost = delete_node_cost(cg, node) 
-            elif unit_cost == True:
-                perturbation_cost = delete_node_uc(cg, node)
+    #         if unit_cost == False:
+    #             perturbation_cost = delete_node_cost(cg, node) 
+    #         elif unit_cost == True:
+    #             perturbation_cost = delete_node_uc(cg, node)
 
-            new_ops = ops + [("delete_node", node)]
+    #         new_ops = ops + [("delete_node", node)]
 
-            similarity = node_similarity_index.get(node, 0.0)
+    #         similarity = node_similarity_index.get(node, 0.0)
 
-            heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+    #         heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
-    ### Delete Edge
-    for edge in list(cg.edges):
-        if edge not in cut_edges:
-            perturbed_cg = delete_edge(cg, edge)
+    ### Updated Delete Node
+    # Allow if not a cut vertex, OR if it is a cut vertex but all neighbors
+    # would become isolated (meaning no real split, just singleton cleanup)
+    # for node in list(cg.nodes):
+    #     if node in cut_vertices:
+    #         neighbors = list(undirected.neighbors(node))
+    #         would_split = any(undirected.degree(n) > 1 for n in neighbors)
+    #         if would_split:
+    #             continue
+
+    #     perturbed_cg = delete_node(cg, node)
+        
+    #     if unit_cost == False:
+    #         perturbation_cost = delete_node_cost(cg, node) 
+    #     elif unit_cost == True:
+    #         perturbation_cost = delete_node_uc(cg, node)
+
+    #     new_ops = ops + [("delete_node", node)]
+
+    #     similarity = node_similarity_index.get(node, 0.0)
+
+    #     heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+    # ### Delete Edge
+    # for edge in list(cg.edges):
+    #     if edge not in cut_edges:
+    #         perturbed_cg = delete_edge(cg, edge)
             
-            if unit_cost == False:
-                perturbation_cost = delete_edge_cost()
-            elif unit_cost == True:
-                perturbation_cost = delete_edge_uc()
+    #         if unit_cost == False:
+    #             perturbation_cost = delete_edge_cost(cg, edge)
+    #         elif unit_cost == True:
+    #             perturbation_cost = delete_edge_uc(cg, edge)
 
-            new_ops = ops + [("delete_edge", edge)]
+    #         new_ops = ops + [("delete_edge", edge)]
 
-            similarity = edge_similarity_index.get(edge, 0.0)
+    #         similarity = edge_similarity_index.get(edge, 0.0)
 
-            heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+    #         heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+    ### Updated Delete Edge
+    # Allow if not a cut edge, OR if it is a cut edge but both endpoints
+    # would become isolated (meaning no real split, just singleton cleanup)
+    # for edge in list(cg.edges):
+    #     if edge in cut_edges:
+    #         u, v = edge[0], edge[1]
+    #         would_split = undirected.degree(u) > 1 and undirected.degree(v) > 1
+    #         if would_split:
+    #             continue
+
+    #     perturbed_cg = delete_edge(cg, edge)
+        
+    #     if unit_cost == False:
+    #         perturbation_cost = delete_edge_cost(cg, edge)
+    #     elif unit_cost == True:
+    #         perturbation_cost = delete_edge_uc(cg, edge)
+
+    #     new_ops = ops + [("delete_edge", edge)]
+
+    #     similarity = edge_similarity_index.get(edge, 0.0)
+
+    #     heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
     ### Replace Node
-    for node, _ in list(cg.nodes(data=True)):
-        node_replacement = node_replacement_index.get(node)
-        if node_replacement is None:
-            continue
+    # for node, _ in list(cg.nodes(data=True)):
+    #     node_replacement = node_replacement_index.get(node)
+    #     if node_replacement is None:
+    #         continue
 
-        current_replacement = node_replacement.get("name")
-        if current_replacement is None:
-            continue
+    #     current_replacement = node_replacement.get("name")
+    #     if current_replacement is None:
+    #         continue
 
-        replacement_attr = G.nodes[current_replacement]
-        sim = node_replacement.get("similarity")
+    #     replacement_attr = G.nodes[current_replacement]
+    #     sim = node_replacement.get("similarity")
 
-        perturbed_cg = replace_node(cg, node, current_replacement, **replacement_attr)
+    #     perturbed_cg = replace_node(cg, node, current_replacement, **replacement_attr)
         
-        if unit_cost == False:
-            perturbation_cost = 1 - sim
-        elif unit_cost == True:
-            perturbation_cost = replace_node_uc(cg, node)
+    #     if unit_cost == False:
+    #         perturbation_cost = 1 - sim
+    #     elif unit_cost == True:
+    #         perturbation_cost = replace_node_uc()
 
-        new_ops = ops + [("replace_node", (node, current_replacement))]
+    #     new_ops = ops + [("replace_node", (node, current_replacement))]
 
-        similarity = node_similarity_index.get(node, 0.0)
+    #     similarity = node_similarity_index.get(node, 0.0)
 
-        heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+    #     heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
     ### Replace Edge
     for edge in list(cg.edges):
@@ -381,7 +434,7 @@ async def main():
         print(f"\n=== [{idx}] {question} ===")
 
         context = await retrieve_subgraph(rag, query=question, mode="hybrid", top_k=2)
-        await find_counterfactuals(rag, question, context=context, max_cost=10, max_llm_calls=200)
+        await find_counterfactuals(rag, question, context=context, max_cost=10, max_llm_calls=200, unit_cost=False)
 
 if __name__ == "__main__":
     asyncio.run(main())
