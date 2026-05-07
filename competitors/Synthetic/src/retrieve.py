@@ -39,6 +39,9 @@ async def initialize_lightrag(working_dir: str = WORKING_DIR):
             max_token_size=512,          
             func=sentence_transformer_embed,
         ),
+
+        enable_llm_cache=False,
+        enable_llm_cache_for_entity_extract= False,
     )
     await rag.initialize_storages()
     await initialize_pipeline_status()
@@ -53,8 +56,6 @@ async def retrieve_subgraph(rag: LightRAG, query: str=QUERY, mode: str = MODE, t
 
     param = QueryParam(mode=mode, only_need_context=True, enable_rerank=False, top_k=top_k, include_references=False)
     context: str = await rag.aquery(query, param=param)
-
-    # print(context)
 
     parsed_context = parse_context(context)
     parsed_graph = parse_graph(parsed_context)
