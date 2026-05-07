@@ -1,11 +1,22 @@
 import networkx as nx
 
+# def delete_node(context_graph: nx.Graph, node_to_delete: str):
+#     G = context_graph.copy()
+
+#     G.remove_node(node_to_delete)
+#     return G
+
 def delete_node(context_graph: nx.Graph, node_to_delete: str):
     G = context_graph.copy()
-
-    G.remove_node(node_to_delete)
-    return G
     
+    neighbors = list(G.neighbors(node_to_delete))
+    G.remove_node(node_to_delete)
+    
+    singletons = [n for n in neighbors if G.degree(n) == 0]
+    G.remove_nodes_from(singletons)
+    
+    return G
+
 def delete_edge(context_graph: nx.Graph, edge_to_delete: tuple):
     G = context_graph.copy()
 

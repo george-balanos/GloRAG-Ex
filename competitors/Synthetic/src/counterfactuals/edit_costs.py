@@ -14,10 +14,18 @@ def delete_edge_cost(context_graph: nx.Graph, edge_to_delete: tuple):
 
     return 1 + singletons
 
+# def delete_node_cost(C: nx.Graph, node_to_remove):
+#     incident_edges = list(C.edges(node_to_remove))
+
+#     return 1 + len(incident_edges)
+
 def delete_node_cost(C: nx.Graph, node_to_remove):
+    neighbors = list(C.neighbors(node_to_remove))
     incident_edges = list(C.edges(node_to_remove))
 
-    return 1 + len(incident_edges)
+    singleton_neighbors = [n for n in neighbors if C.degree(n) == 1]
+
+    return 1 + len(incident_edges) + len(singleton_neighbors)
 
 #### Replace ####
 
@@ -64,7 +72,7 @@ def add_node_cost(C: nx.Graph, node_index, edge_index, node_to_add_emb):
 
 #### Delete ####
 
-def delete_edge_cost_uc(context_graph: nx.Graph, edge_to_delete: tuple):
+def delete_edge_uc(context_graph: nx.Graph, edge_to_delete: tuple):
     src = edge_to_delete[0]
     tgt = edge_to_delete[1]
 
@@ -72,10 +80,18 @@ def delete_edge_cost_uc(context_graph: nx.Graph, edge_to_delete: tuple):
 
     return 1 + singletons
 
+# def delete_node_uc(C: nx.Graph, node_to_remove):
+#     incident_edges = list(C.edges(node_to_remove))
+
+#     return 1 + len(incident_edges)
+
 def delete_node_uc(C: nx.Graph, node_to_remove):
+    neighbors = list(C.neighbors(node_to_remove))
     incident_edges = list(C.edges(node_to_remove))
 
-    return 1 + len(incident_edges)
+    singleton_neighbors = [n for n in neighbors if C.degree(n) == 1]
+
+    return 1 + len(incident_edges) + len(singleton_neighbors)
 
 #### Replace #####
 
