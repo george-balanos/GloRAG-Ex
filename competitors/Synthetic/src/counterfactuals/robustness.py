@@ -1,4 +1,11 @@
-### Explanation Robustness: Noise Resistance
+"""Noise-resistance evaluation harness and noise-injection helpers.
+
+Wraps `find_counterfactuals` with a step that adds k random noise nodes/edges
+to the context graph drawn from the KG, so we can measure whether explanations
+remain stable. `inject_noise` adds a single semantically-distant
+node+edge pair, used by validate_optimality to confirm the search ignores
+irrelevant additions.
+"""
 
 from src.counterfactuals.parser import parse_counterfactual_example
 from datetime import datetime
@@ -195,6 +202,67 @@ def add_random_noise_nodes(cg: nx.Graph, G: nx.Graph, n: int = None, noise_pct: 
 
     print(f"Added {len(ops_applied)} noise node(s) attached to degree>=2 anchors with random edge attributes")
     return cg, ops_applied
+
+
+def inject_noise(cg: nx.Graph, G: nx.Graph, query_embedding: np.ndarray):
+    """Add one semantically-distant noise node + edge to cg.
+
+    Picks v_noise in V_G \\ V_C with the lowest cos-sim to query_embedding,
+    attaches it to the cg node with the lowest cos-sim to v_noise's embedding
+    via a real edge in G if one exists, else by constructing one in cg only.
+    Returns (noisy_cg, v_noise, edge).
+    """
+    cg = cg.copy()
+    candidate_nodes = [n for n in G.nodes() if n not in cg.nodes()]
+    if not candidate_nodes:
+        return cg, None, None
+
+    def _emb(node):
+        try:
+            return get_embedding(node_embeddings, node_lookup, node)
+        except Exception:
+            return None
+
+    # most distant from query
+    best_node, best_sim = None, float("inf")
+    for n in candidate_nodes:
+        emb = _emb(n)
+        if emb is None:
+            continue
+        sim = cosine_similarity_norm(query_embedding, emb)
+        if sim < best_sim:
+            best_sim = sim
+            best_node = n
+
+    if best_node is None:
+        return cg, None, None
+
+    # pick anchor in cg most distant from best_node
+    best_emb = _emb(best_node)
+    best_anchor, anchor_sim = None, float("inf")
+    for u in cg.nodes():
+        emb = _emb(u)
+        if emb is None:
+            continue
+        sim = cosine_similarity_norm(best_emb, emb)
+        if sim < anchor_sim:
+            anchor_sim = sim
+            best_anchor = u
+
+    if best_anchor is None:
+        best_anchor = next(iter(cg.nodes()))
+
+    cg.add_node(best_node, **G.nodes[best_node])
+    edge = (best_node, best_anchor)
+    if edge in G.edges:
+        cg.add_edge(*edge, **G.edges[edge])
+    elif (best_anchor, best_node) in G.edges:
+        edge = (best_anchor, best_node)
+        cg.add_edge(*edge, **G.edges[edge])
+    else:
+        cg.add_edge(*edge, description="noise", keywords="noise")
+
+    return cg, best_node, edge
 
 ################################################
 

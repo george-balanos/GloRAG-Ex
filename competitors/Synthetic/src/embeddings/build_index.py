@@ -1,3 +1,10 @@
+"""Build an HNSW cosine-similarity index from a JSON dump of compressed embeddings.
+
+Decodes float16 vectors via decoder.decode_vector, L2-normalizes them so
+cosine similarity reduces to a dot product, and persists index + records +
+raw embeddings via embeddings.utils.save_index for later reuse.
+"""
+
 from src.embeddings.decoder import *
 from src.embeddings.utils import save_index, load_index
 

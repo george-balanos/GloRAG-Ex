@@ -1,3 +1,5 @@
+"""Decode the base64+zlib float16 embedding format used in the dataset JSON dumps."""
+
 import base64
 import zlib
 import struct

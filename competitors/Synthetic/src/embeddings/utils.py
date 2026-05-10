@@ -1,3 +1,10 @@
+"""Persist and reload the HNSW index alongside its records and raw embeddings.
+
+`save_index` writes three artifacts (index binary, JSON records, .npy
+embeddings); `load_index` reads them back so query.py can do both
+KNN search and direct vector lookups without rebuilding.
+"""
+
 import hnswlib
 import json
 import numpy as np

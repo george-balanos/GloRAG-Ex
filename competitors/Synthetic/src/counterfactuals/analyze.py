@@ -1,3 +1,11 @@
+"""Aggregate analysis over saved CFE result directories.
+
+Loads JSON outputs from `find_counterfactuals` and reports success rate,
+operation-count and cost distributions, answer-similarity histograms, graph
+size statistics, star-structure and cut-vertex/bridge analyses, and how
+operation counts scale with graph size. Read-only.
+"""
+
 import json
 import os
 from collections import Counter

@@ -1,3 +1,10 @@
+"""Pure graph-mutation primitives for the six edit operations.
+
+Each function returns a fresh copy of the input graph; callers do not need to
+copy. Singleton cleanup after delete_node / delete_edge mirrors the cleanup
+rule in local.tex sec. 1.2.
+"""
+
 import networkx as nx
 
 # def delete_node(context_graph: nx.Graph, node_to_delete: str):

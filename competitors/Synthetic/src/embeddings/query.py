@@ -1,3 +1,11 @@
+"""Query helpers over the prebuilt HNSW node/edge indexes.
+
+Provides KNN queries, ID/name -> embedding lookups, and the
+most-similar / most-distant scans used to generate replacement candidates
+for `find_counterfactuals` (within-type for nodes, across all edges for
+edges).
+"""
+
 import hnswlib
 import numpy as np
 

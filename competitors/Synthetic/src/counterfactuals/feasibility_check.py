@@ -1,3 +1,11 @@
+"""Post-hoc feasibility audit over saved counterfactual JSON results.
+
+Replays each saved op sequence on the original subgraph, flags ops that are
+infeasible on the reduced graph at the point they would have been applied,
+and compares two result directories (cut-vertex / bridge agreement, Jaccard
+of infeasible questions). Independent of the live search.
+"""
+
 import json
 import networkx as nx
 from pathlib import Path

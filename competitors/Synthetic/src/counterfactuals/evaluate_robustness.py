@@ -1,3 +1,10 @@
+"""Compare counterfactual stability across noisy and clean result folders.
+
+Loads two folders of saved CFE JSON files keyed by question, computes Jaccard
+overlap of returned operation sets per question, and reports aggregate
+agreement so we can quantify how much injected noise perturbs explanations.
+"""
+
 from pathlib import Path
 
 import json

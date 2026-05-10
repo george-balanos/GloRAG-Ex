@@ -1,3 +1,11 @@
+"""Shared embedding-similarity helpers used across the counterfactual pipeline.
+
+`cosine_similarity` works on raw vectors; `cosine_similarity_norm` is the fast
+path that assumes pre-normalized inputs (which the HNSW load path enforces).
+`compute_answer_similarity` is the only async helper — it embeds two answer
+strings and returns their cosine similarity.
+"""
+
 from src.retrieve import sentence_transformer_embed
 import numpy as np
 
