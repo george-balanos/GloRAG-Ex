@@ -3,6 +3,8 @@ from src.query import *
 from src.llm_judge import *
 from tqdm import tqdm
 
+import argparse
+import os
 import pandas as pd
 import asyncio
 import json
@@ -19,6 +21,16 @@ def load_qa(path: str):
     df = df.drop_duplicates(subset=["questions"])
     return df.reset_index(drop=True)
 
+
+def parse_args():
+    p = argparse.ArgumentParser(description="Run the RAG benchmark over a QA CSV.")
+    p.add_argument("--mode", default="local", help="LightRAG retrieval mode (local/global/hybrid)")
+    p.add_argument("--top-k", type=int, default=10, help="Retrieval top-k")
+    p.add_argument("--qa", default="qa/qa_data_synthetic.csv", help="Path to QA CSV")
+    p.add_argument("--out", default=None,
+                   help="Output JSON path. Default: benchmark/results/synthetic_{mode}_{top_k}.json")
+    return p.parse_args()
+
 async def run_example(rag, question, ground_truth, mode, top_k):
     # Retrieve Context
     context_graph = await retrieve_subgraph(rag, query=question, mode=mode, top_k=top_k)
@@ -31,8 +43,8 @@ async def run_example(rag, question, ground_truth, mode, top_k):
 
     return score, generated_answer
 
-async def run_benchmark(rag, mode="local", top_k=10):
-    benchmark_data = load_qa("qa/qa_data_synthetic.csv")
+async def run_benchmark(rag, qa_path="qa/qa_data_synthetic.csv", mode="local", top_k=10, out_path=None):
+    benchmark_data = load_qa(qa_path)
 
     result_dict = {}
 
@@ -41,12 +53,10 @@ async def run_benchmark(rag, mode="local", top_k=10):
         question = row["questions"]
         answer = row["answers"]
 
-        # print(f"Row with ID {id}:\nQuestion: {question}\nAnswer: {answer}")
-
         score, generated_answer = await run_example(rag, question, answer, mode, top_k)
 
         print(f"Score: {score}\nGenerated Answer: {generated_answer} VS Ground Truth: {answer}")
-        
+
         result_dict[id] = {
             "score": score,
             "generated_answer": generated_answer,
@@ -54,14 +64,19 @@ async def run_benchmark(rag, mode="local", top_k=10):
             "ground_truth": answer
         }
 
-    with open(f"benchmark/results/synthetic_{mode}_{top_k}.json", "w", encoding="utf-8") as f:
+    if out_path is None:
+        out_path = f"benchmark/results/synthetic_{mode}_{top_k}.json"
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result_dict, f, indent=2)
+    print(f"Wrote {len(result_dict)} entries to {out_path}")
+
 
 async def main():
+    args = parse_args()
     rag = await initialize_lightrag()
+    await run_benchmark(rag, qa_path=args.qa, mode=args.mode, top_k=args.top_k, out_path=args.out)
 
-    await run_benchmark(rag)
 
 if __name__ == "__main__":
-
     asyncio.run(main())

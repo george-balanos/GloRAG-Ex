@@ -186,7 +186,7 @@ async def create_edge_similarity_index(edge_labels, query_embedding):
 
 ################################################
 
-async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_calls=100, max_sparsity=None, unit_cost: bool=False, current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge", "add_node", "add_edge"], use_pivotal_probe: bool=False, max_pivots: int=3):
+async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_calls=100, max_sparsity=None, unit_cost: bool=False, current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge", "add_node", "add_edge"], use_pivotal_probe: bool=False, max_pivots: int=3, suffix: str=""):
     query_embedding = (await sentence_transformer_embed([question]))[0]
     original_answer = await query(rag, context, question)
 
@@ -278,7 +278,8 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
                     found=True,
                     cost=cost,
                     llm_calls=llm_calls,
-                    current_ops=current_ops
+                    current_ops=current_ops,
+                    suffix=suffix
                 )
                 return ops
 
@@ -299,7 +300,8 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
             found=True,
             cost=best_probe_cost,
             llm_calls=llm_calls,
-            current_ops=current_ops
+            current_ops=current_ops,
+            suffix=suffix
         )
         return best_probe_sigma
 
@@ -315,7 +317,8 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
         perturbed_subgraph=None,
         found=False,
         llm_calls=llm_calls,
-        current_ops=current_ops
+        current_ops=current_ops,
+        suffix=suffix
     )
 
 
@@ -651,7 +654,7 @@ async def pivotal_star_probe(rag, question, context_graph, original_answer,
     return best_sigma, best_cost, blacklist, llm_calls
 
 
-def save_operations_to_json(ops: list, question: str, original_answer: str, perturbed_answer: str, answer_similarity: float, original_subgraph, perturbed_subgraph, output_dir: str = "src/counterfactuals/robustness/stability", filename: str = None, found: bool = True, cost: float = 0.0, llm_calls: int = 0, current_ops: list=[]):
+def save_operations_to_json(ops: list, question: str, original_answer: str, perturbed_answer: str, answer_similarity: float, original_subgraph, perturbed_subgraph, output_dir: str = "src/counterfactuals/robustness/stability", filename: str = None, found: bool = True, cost: float = 0.0, llm_calls: int = 0, current_ops: list=[], suffix: str = ""):
     if current_ops == ["delete_node", "delete_edge", "replace_node", "replace_edge"]:
         output_dir = f"{output_dir}_sem_all"
     elif current_ops == ["delete_node"]:
@@ -666,6 +669,9 @@ def save_operations_to_json(ops: list, question: str, original_answer: str, pert
         output_dir = f"{output_dir}/sem_delete_s_neither"
     else:
         output_dir = f"{output_dir}_uc_all"
+
+    if suffix:
+        output_dir = f"{output_dir}{suffix}"
 
     os.makedirs(output_dir, exist_ok=True)
 
@@ -705,30 +711,76 @@ def save_operations_to_json(ops: list, question: str, original_answer: str, pert
     print(f"Operations saved to: {filepath}")
     return filepath
 
+def parse_args():
+    import argparse
+    p = argparse.ArgumentParser(description="Counterfactual search driver.")
+    p.add_argument("--input", default="benchmark/results/comparison.json",
+                   help="Path to comparison.json (with {results: {idx: {question, case, ...}}})")
+    p.add_argument("--case", choices=["all", "tf", "ft"], default="all",
+                   help="Which entries to process by flip direction (default: all)")
+    p.add_argument("--max-cost", type=float, default=10.0,
+                   help="Dijkstra cost cutoff")
+    p.add_argument("--max-llm-calls", type=int, default=100,
+                   help="LLM call budget per query")
+    p.add_argument("--unit-cost", action="store_true",
+                   help="Use unit costs instead of semantic 1+d_sem costs")
+    p.add_argument("--ops", nargs="+",
+                   default=["delete_node", "delete_edge", "replace_node",
+                            "replace_edge", "add_node", "add_edge"],
+                   help="Which edit ops to enable")
+    p.add_argument("--use-psp", action="store_true",
+                   help="Enable the Pivotal-Star Probe heuristic")
+    p.add_argument("--max-pivots", type=int, default=3,
+                   help="Top-K query-similar pivots for PSP")
+    p.add_argument("--suffix", default="",
+                   help="Suffix appended to output directory (keeps runs separate)")
+    p.add_argument("--retrieve-mode", default="hybrid",
+                   help="LightRAG retrieval mode for context graph")
+    p.add_argument("--retrieve-top-k", type=int, default=2,
+                   help="Retrieval top-k for the context graph")
+    p.add_argument("--limit", type=int, default=None,
+                   help="Process at most this many entries (for smoke tests)")
+    return p.parse_args()
+
+
 async def main():
+    args = parse_args()
     rag = await initialize_lightrag()
 
-    with open(f"benchmark/results/comparison.json", "r", encoding="utf-8") as results:
+    with open(args.input, "r", encoding="utf-8") as results:
         data = json.load(results)
 
-    operation_sets = [
-        ["delete_node", "delete_edge"],
-    ]
+    op_set = args.ops
+    processed = 0
 
-    for op_set in operation_sets:
+    for idx, r in data["results"].items():
+        question = r["question"]
+        case = r.get("case", "all")
 
-        results = data["results"]
-        for idx, r in results.items():
-            question = r["question"]
-            case = r["case"]
+        if args.case != "all" and case != args.case:
+            continue
+        if args.limit is not None and processed >= args.limit:
+            break
 
-            if case != "ft":
-                continue
+        print(f"\n=== [{idx}] case={case} | {question} ===")
 
-            print(f"\n=== [{idx}] {question} ===")
+        context = await retrieve_subgraph(rag, query=question,
+                                          mode=args.retrieve_mode,
+                                          top_k=args.retrieve_top_k)
+        await find_counterfactuals(
+            rag, question, context=context,
+            max_cost=args.max_cost,
+            max_llm_calls=args.max_llm_calls,
+            unit_cost=args.unit_cost,
+            current_ops=op_set,
+            use_pivotal_probe=args.use_psp,
+            max_pivots=args.max_pivots,
+            suffix=args.suffix,
+        )
+        processed += 1
 
-            context = await retrieve_subgraph(rag, query=question, mode="hybrid", top_k=2)
-            await find_counterfactuals(rag, question, context=context, max_cost=10, max_llm_calls=200, unit_cost=False, current_ops=op_set)
+    print(f"\nProcessed {processed} entries.")
+
 
 if __name__ == "__main__":
     asyncio.run(main())
