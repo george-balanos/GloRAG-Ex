@@ -7,7 +7,6 @@ node+edge pair, used by validate_optimality to confirm the search ignores
 irrelevant additions.
 """
 
-from src.counterfactuals.parser import parse_counterfactual_example
 from datetime import datetime
 from src.query import *
 from src.retrieve import *
@@ -28,6 +27,39 @@ import itertools
 import os
 import random
 import numpy as np
+
+
+def graph_to_context_shuffled(cg: nx.Graph, shuffle_entities: bool = False, shuffle_relations: bool = False):
+    """Serialize a context graph for the RAG prompt, optionally shuffling order.
+
+    With both flags False, identical to `graph_to_context` (imported from
+    src.parser). Shuffling tests whether the LLM's answer depends on the
+    surface order of entities/relations in the prompt.
+    """
+    if not shuffle_entities and not shuffle_relations:
+        return graph_to_context(cg)
+
+    cg = cg.copy()
+    if shuffle_entities:
+        nodes = list(cg.nodes(data=True))
+        random.shuffle(nodes)
+        H = type(cg)()
+        for n, attrs in nodes:
+            H.add_node(n, **attrs)
+        for u, v, attrs in cg.edges(data=True):
+            H.add_edge(u, v, **attrs)
+        cg = H
+    if shuffle_relations:
+        edges = list(cg.edges(data=True))
+        random.shuffle(edges)
+        H = type(cg)()
+        for n, attrs in cg.nodes(data=True):
+            H.add_node(n, **attrs)
+        for u, v, attrs in edges:
+            H.add_edge(u, v, **attrs)
+        cg = H
+    return graph_to_context(cg)
+
 
 ### Setup ###
 
