@@ -688,25 +688,49 @@ def save_operations_to_json(ops: list, question: str, original_answer: str, pert
         else:
             serialisable_ops.append(op)
 
+    try:
+        cost_f = float(cost)
+    except Exception:
+        cost_f = None
+    try:
+        sim_f = round(float(answer_similarity), 6)
+    except Exception:
+        sim_f = None
+
     payload = {
         "question": question,
         "found": found,
         "num_operations": len(serialisable_ops),
         "operations": serialisable_ops,
-        "cost": cost,
+        "cost": cost_f,
         "answers": {
             "original": original_answer,
             "perturbed": perturbed_answer,
-            "similarity": round(answer_similarity, 6)
+            "similarity": sim_f
         },
         "original_subgraph": subgraph_to_dict(original_subgraph),
         "perturbed_subgraph": subgraph_to_dict(perturbed_subgraph),
         "timestamp": datetime.now().isoformat(),
-        "llm_calls": llm_calls
+        "llm_calls": int(llm_calls) if llm_calls is not None else None
     }
 
+    def _json_default(o):
+        try:
+            import numpy as _np
+            if isinstance(o, (_np.floating, _np.integer)):
+                return o.item()
+            if isinstance(o, _np.ndarray):
+                return o.tolist()
+        except Exception:
+            pass
+        if isinstance(o, (set, frozenset)):
+            return list(o)
+        if isinstance(o, tuple):
+            return list(o)
+        raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
+        json.dump(payload, f, indent=2, ensure_ascii=False, default=_json_default)
 
     print(f"Operations saved to: {filepath}")
     return filepath
