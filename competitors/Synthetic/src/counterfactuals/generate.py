@@ -137,7 +137,17 @@ async def create_edge_similarity_index(edge_labels, query_embedding):
 
 ################################################
 
-async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_calls=100, max_sparsity=None, unit_cost: bool=False, current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"]):
+async def find_counterfactuals(
+    rag, 
+    question: str, 
+    context, 
+    max_cost=3, 
+    max_llm_calls=100, 
+    max_sparsity=None, 
+    unit_cost: bool=False, 
+    current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"], 
+    ground_truth: str = ""
+):
     query_embedding = (await sentence_transformer_embed([question]))[0]
     original_answer = await query(rag, context, question)
 
@@ -149,13 +159,25 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
     context_graph_nodes = set(context_graph.nodes)
     context_graph_edges = set(context_graph.edges())
 
-    edge_labels = {(u, v): data.get("description", "") for u, v, data in context_graph.edges(data=True)}
+    # edge_labels = {(u, v): data.get("description", "") for u, v, data in context_graph.edges(data=True)}
 
-    node_replacement_index = create_node_replacement_index(context_graph_nodes, context_graph, flip_direction="tf")
-    edge_replacement_index = create_edge_replacement_index(context_graph_edges, context_graph, flip_direction="tf")
+    # node_replacement_index = create_node_replacement_index(context_graph_nodes, context_graph, flip_direction="tf")
+    # edge_replacement_index = create_edge_replacement_index(context_graph_edges, context_graph, flip_direction="tf")
 
-    node_similarity_index = create_node_similarity_index(context_graph_nodes, query_embedding)
+    # node_similarity_index = create_node_similarity_index(context_graph_nodes, query_embedding)
+    # edge_similarity_index = await create_edge_similarity_index(edge_labels, query_embedding)
+
+
+    ##################### For Addition #####################
+    edge_labels = {(u, v): data.get("description", "") for u, v, data in G.edges(data=True)}
+
+    node_replacement_index = create_node_replacement_index(context_graph_nodes, G, flip_direction="tf")
+    edge_replacement_index = create_edge_replacement_index(context_graph_edges, G, flip_direction="tf")
+
+    node_similarity_index = create_node_similarity_index(set(G.nodes), query_embedding)
     edge_similarity_index = await create_edge_similarity_index(edge_labels, query_embedding)
+    ##################### For Addition #####################
+
 
     llm_calls = 0
 
@@ -164,12 +186,12 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
     print(f"Context Graph Nodes: {context_graph_nodes}")
     print(f"Context Graph Edges: {context_graph_edges}")
 
-    exit()
-
     ### Prune seen context graph.
     state_cache = set()
 
     heapq.heappush(Q, (0, 0.0, next(counter), (context_graph, [])))
+
+    explored_nodes = set()  ## For addition
 
     while Q:
         # print(f"\nMin-Heap: {Q}")
@@ -188,6 +210,7 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
         #     (u, v, cg.edges[u, v].get("description", ""))
         #     for u, v in cg.edges
         # )
+
         state = (
             frozenset(cg.nodes()),
             frozenset(
@@ -195,11 +218,13 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
                 for u, v in cg.edges()
             )
         )
+
         if state in state_cache:
             continue
+
         state_cache.add(state)
 
-        # print(f"Operations: {ops}")
+        print(f"Operations: {ops}")
         if len(ops) > 0:
             # print(f"\nCurrent Operation set: {ops}")
 
@@ -213,15 +238,30 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
 
             print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
 
-            score = await judge_response(question, new_response, original_answer)
+            ### For addition:
+            print(f"Ground Truth: {ground_truth}")
+
+            # score = await judge_response(question, new_response, original_answer)
+
+            ### For addition:
+            score = await judge_response(question, new_response, ground_truth)
 
             llm_calls += 1
 
-            if score == 0:
+            # if score == 0:
+
+            ### For addition:
+            if score == 1:
                 print(f"Counterfactual Operations: {ops}")
 
-                answer_similarity = await compute_answer_similarity(original_answer, new_response)
-                print(f"Answer similarity (original vs perturbed): {answer_similarity:.4f}")
+                # answer_similarity = await compute_answer_similarity(original_answer, new_response)
+
+                ### For addition:
+                answer_similarity = await compute_answer_similarity(ground_truth, new_response)
+                
+                # print(f"Answer similarity (original vs perturbed): {answer_similarity:.4f}")
+
+                print(f"Answer similarity (ground truth vs perturbed): {answer_similarity:.4f}")
 
                 save_operations_to_json(
                     ops=ops,
@@ -238,7 +278,7 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
                 )
                 return ops
             
-        expand(Q, (cost, cg, ops), node_replacement_index=node_replacement_index, edge_replacement_index=edge_replacement_index, node_similarity_index=node_similarity_index, edge_similarity_index=edge_similarity_index, unit_cost=unit_cost, current_ops=current_ops)
+        expand(Q, (cost, cg, ops), node_replacement_index=node_replacement_index, edge_replacement_index=edge_replacement_index, node_similarity_index=node_similarity_index, edge_similarity_index=edge_similarity_index, unit_cost=unit_cost, current_ops=current_ops, original_nodes=context_graph_nodes, original_edges=context_graph_edges, explored_nodes=explored_nodes)
 
         print()
 
@@ -260,28 +300,25 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
 
 
 
-def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node_similarity_index, edge_similarity_index, unit_cost: bool = False, current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"]):
+def expand(
+        Q, 
+        heap_element, 
+        node_replacement_index, 
+        edge_replacement_index, 
+        node_similarity_index, 
+        edge_similarity_index, 
+        unit_cost: bool = False, 
+        current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"],
+        original_nodes: set = {},
+        original_edges: set = {},
+        explored_nodes: set = {},
+    ):
+    cg: nx.DiGraph
     cost, cg, ops = heap_element
 
     undirected: nx.Graph = cg.to_undirected()
     cut_vertices = set(nx.articulation_points(cg.to_undirected()))
     cut_edges = set(nx.bridges(cg.to_undirected()))
-
-    ### Delete Node
-    # for node in list(cg.nodes):
-    #     if node not in cut_vertices:
-    #         perturbed_cg = delete_node(cg, node)
-            
-    #         if unit_cost == False:
-    #             perturbation_cost = delete_node_cost(cg, node) 
-    #         elif unit_cost == True:
-    #             perturbation_cost = delete_node_uc(cg, node)
-
-    #         new_ops = ops + [("delete_node", node)]
-
-    #         similarity = node_similarity_index.get(node, 0.0)
-
-    #         heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
     if "delete_node" in current_ops:
         ### Updated Delete Node
@@ -316,22 +353,6 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
 
             heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
-    # ### Delete Edge
-    # for edge in list(cg.edges):
-    #     if edge not in cut_edges:
-    #         perturbed_cg = delete_edge(cg, edge)
-            
-    #         if unit_cost == False:
-    #             perturbation_cost = delete_edge_cost(cg, edge)
-    #         elif unit_cost == True:
-    #             perturbation_cost = delete_edge_uc(cg, edge)
-
-    #         new_ops = ops + [("delete_edge", edge)]
-
-    #         similarity = edge_similarity_index.get(edge, 0.0)
-
-    #         heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-
     if "delete_edge" in current_ops:
         ### Updated Delete Edge
         # Allow if not a cut edge, OR if it is a cut edge but both endpoints
@@ -356,6 +377,53 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
             similarity = edge_similarity_index.get(edge, 0.0)
 
             heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+    if "add_node" in current_ops:
+        existing_nodes = set(cg.nodes)
+        existing_edges = set(cg.edges())
+        candidate_nodes_for_expansion = existing_nodes - explored_nodes
+
+        print(f"Existing Nodes: {existing_nodes}")
+        print(f"Candidate Nodes: {candidate_nodes_for_expansion}")
+        print(f"Explored Nodes: {explored_nodes}")
+
+        for node in candidate_nodes_for_expansion:
+            # neighbors = list(G.successors(node)) + list(G.predecessors(node))
+            neighbors = list(G.neighbors(node))
+
+            print(f"Current neighbors: {neighbors}")
+            
+            similarity = node_similarity_index.get(node, 0.0)
+
+            for neighbor in neighbors:
+                
+                print(f"Neighbor: {neighbor}")
+
+                if neighbor not in existing_nodes:
+                    perturbed_cg = add_node(cg, neighbor, **G.nodes[neighbor])
+
+                    if (node, neighbor) in edge_lookup and (node, neighbor) not in existing_edges:
+                        perturbed_cg = add_edge(cg, (node, neighbor), **G.edges[node, neighbor])
+                    
+                    if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
+                        perturbed_cg = add_edge(cg, (neighbor, node), **G.edges[neighbor, node])
+
+                    print(f"New nodes: {perturbed_cg.nodes}")
+                    print(f"New edges: {perturbed_cg.edges()}")
+
+                    if unit_cost == False:
+                        perturbation_cost = add_node_cost(cg, node_embeddings, node_lookup, edge_embeddings, edge_lookup, neighbor)
+                    elif unit_cost == True:
+                        perturbation_cost = add_node_uc(cg, neighbor)
+
+                    new_ops = ops + [("add_node", neighbor)]
+
+                    heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+            explored_nodes.add(node)
+
+    #########################################################################################
+    ##################################TBD####################################################
 
     if "replace_node" in current_ops:
         ### Replace Node
@@ -427,7 +495,9 @@ def save_operations_to_json(ops: list, question: str, original_answer: str, pert
     elif current_ops == ["replace_edge"]:
         output_dir = f"{output_dir}_replace_edge"
     elif current_ops == ["delete_node", "delete_edge"]:
-        output_dir = f"{output_dir}/delete_only_20_infeasible"
+        output_dir = f"{output_dir}/delete_only_20_check"
+    elif current_ops == ["add_node"]:
+        output_dir = f"{output_dir}/add_node_only"
     else:
         output_dir = f"{output_dir}_uc_all"
         
@@ -472,7 +542,7 @@ def save_operations_to_json(ops: list, question: str, original_answer: str, pert
 async def main():
     rag = await initialize_lightrag()
     
-    with open(f"benchmark/results/comparison.json", "r", encoding="utf-8") as results:
+    with open(f"benchmark/results/degraded_results.json", "r", encoding="utf-8") as results:
         data = json.load(results)
 
     operation_sets = [
@@ -480,24 +550,28 @@ async def main():
         # ["delete_node"],
         # ["delete_edge"],
         # ["replace_node"],
-        # ["replace_edge"]
-        ["delete_node", "delete_edge"],
+        # ["replace_edge"],
+        ["add_node"]
+        # ["delete_node", "delete_edge"],
     ]
 
     for op_set in operation_sets:
 
         results = data["results"]
         for idx, r in results.items():
+
             question = r["question"]
             case = r["case"]
 
-            if case != "ft":
+            ground_truth = r["ground_truth"]
+
+            if case != "ff":
                 continue
 
             print(f"\n=== [{idx}] {question} ===")
 
-            context = await retrieve_subgraph(rag, query=question, mode="hybrid", top_k=2)
-            await find_counterfactuals(rag, question, context=context, max_cost=20, max_llm_calls=200, unit_cost=False, current_ops=op_set)
+            context = await retrieve_subgraph(rag, query=question, mode="hybrid", top_k=1)
+            await find_counterfactuals(rag, question, context=context, max_cost=20, max_llm_calls=200, unit_cost=False, current_ops=op_set, ground_truth=ground_truth)
 
 if __name__ == "__main__":
     asyncio.run(main())
