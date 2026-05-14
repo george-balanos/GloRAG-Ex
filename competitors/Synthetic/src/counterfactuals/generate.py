@@ -161,12 +161,19 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
 
     Q = []
 
+    print(f"Context Graph Nodes: {context_graph_nodes}")
+    print(f"Context Graph Edges: {context_graph_edges}")
+
+    exit()
+
     ### Prune seen context graph.
     state_cache = set()
 
     heapq.heappush(Q, (0, 0.0, next(counter), (context_graph, [])))
 
     while Q:
+        # print(f"\nMin-Heap: {Q}")
+
         cost, _, _, (cg, ops) = heapq.heappop(Q)
 
         if cost > max_cost:
@@ -177,19 +184,30 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
             break
 
         ### Check state cache
-        state = frozenset(
-            (u, v, cg.edges[u, v].get("description", ""))
-            for u, v in cg.edges
+        # state = frozenset(
+        #     (u, v, cg.edges[u, v].get("description", ""))
+        #     for u, v in cg.edges
+        # )
+        state = (
+            frozenset(cg.nodes()),
+            frozenset(
+                (u, v, cg.edges[u, v].get("description", ""))
+                for u, v in cg.edges()
+            )
         )
         if state in state_cache:
             continue
         state_cache.add(state)
 
+        # print(f"Operations: {ops}")
         if len(ops) > 0:
-            # cg_context = graph_to_context(cg)
+            # print(f"\nCurrent Operation set: {ops}")
+
+            cg_context = graph_to_context(cg)
+            # print(f"Context: {cg_context}\n")
             
             ### Explanation Stability/Consistency
-            cg_context = graph_to_context_shuffled(cg, shuffle_entities=False, shuffle_relations=False)
+            # cg_context = graph_to_context_shuffled(cg, shuffle_entities=True, shuffle_relations=True)
 
             new_response = await query(rag, cg_context, question)
 
@@ -236,6 +254,7 @@ async def find_counterfactuals(rag, question: str, context, max_cost=3, max_llm_
         perturbed_subgraph=None,
         found=False,
         llm_calls=llm_calls,
+        cost=cost,
         current_ops=current_ops
     )
 
@@ -269,6 +288,7 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
         # Allow if not a cut vertex, OR if it is a cut vertex but all neighbors
         # would become isolated (meaning no real split, just singleton cleanup)
         for node in list(cg.nodes):
+            ### Feasibility Constraint
             if node in cut_vertices:
                 neighbors = list(undirected.neighbors(node))
                 
@@ -317,6 +337,7 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
         # Allow if not a cut edge, OR if it is a cut edge but both endpoints
         # would become isolated (meaning no real split, just singleton cleanup)
         for edge in list(cg.edges):
+            ### Feasibility Constraint
             if edge in cut_edges:
                 u, v = edge[0], edge[1]
                 would_split = undirected.degree(u) > 1 and undirected.degree(v) > 1
@@ -392,7 +413,7 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
 
 
 
-def save_operations_to_json(ops: list, question: str, original_answer: str, perturbed_answer: str, answer_similarity: float, original_subgraph, perturbed_subgraph, output_dir: str = "src/counterfactuals/robustness/stability", filename: str = None, found: bool = True, cost: float = 0.0, llm_calls: int = 0, current_ops: list=[]):
+def save_operations_to_json(ops: list, question: str, original_answer: str, perturbed_answer: str, answer_similarity: float, original_subgraph, perturbed_subgraph, output_dir: str = "src/counterfactuals/results", filename: str = None, found: bool = True, cost: float = 0.0, llm_calls: int = 0, current_ops: list=[]):
     # os.makedirs(output_dir, exist_ok=True)
 
     if current_ops == ["delete_node", "delete_edge", "replace_node", "replace_edge"]:
@@ -406,7 +427,7 @@ def save_operations_to_json(ops: list, question: str, original_answer: str, pert
     elif current_ops == ["replace_edge"]:
         output_dir = f"{output_dir}_replace_edge"
     elif current_ops == ["delete_node", "delete_edge"]:
-        output_dir = f"{output_dir}/sem_delete_s_neither"
+        output_dir = f"{output_dir}/delete_only_20_infeasible"
     else:
         output_dir = f"{output_dir}_uc_all"
         
@@ -476,7 +497,7 @@ async def main():
             print(f"\n=== [{idx}] {question} ===")
 
             context = await retrieve_subgraph(rag, query=question, mode="hybrid", top_k=2)
-            await find_counterfactuals(rag, question, context=context, max_cost=10, max_llm_calls=200, unit_cost=False, current_ops=op_set)
+            await find_counterfactuals(rag, question, context=context, max_cost=20, max_llm_calls=200, unit_cost=False, current_ops=op_set)
 
 if __name__ == "__main__":
     asyncio.run(main())
