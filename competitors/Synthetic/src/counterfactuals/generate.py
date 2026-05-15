@@ -422,6 +422,53 @@ def expand(
 
             explored_nodes.add(node)
 
+    if "add_edge" in current_ops:
+        existing_edges = set(cg.edges())
+        existing_nodes = set(cg.nodes)
+
+        print(f"Existing Edges: {existing_edges}")
+
+        for node in existing_nodes:
+            available_edges = set(G.edges(node))
+            print(f"Node: {node}")
+            print(f"Available edges: {available_edges}")
+
+            for edge in available_edges:
+                node1, node2 = edge
+
+                print(f"Current edge: {edge}")
+
+                similarity = edge_similarity_index.get(edge, 0.0)
+
+                if node1 in existing_nodes and node2 in existing_nodes:
+                    if (node1, node2) in edge_lookup and (node1, node2) not in existing_edges:
+                        perturbed_cg = add_edge(cg, (node1, node2), **G.edges[node1, node2])
+
+                        if unit_cost == False:
+                            perturbation_cost = add_edge_cost(cg, edge_embeddings, edge_lookup, (node1, node2))
+                        elif unit_cost == True:
+                            perturbation_cost = add_edge_uc()
+
+                        new_ops = ops + [("add_edge", (node1, node2))]
+
+                        heapq.heappush(Q, (cost+perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+                        print(f"1. {perturbed_cg.edges()}")
+
+                    elif (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
+                        perturbed_cg = add_edge(cg, (node2, node1), **G.edges[node2, node1])
+
+                        if unit_cost == False:
+                            perturbation_cost = add_edge_cost(cg, edge_embeddings, edge_lookup, (node2, node1))
+                        elif unit_cost == True:
+                            perturbation_cost = add_edge_uc()
+
+                        new_ops = ops + [("add_edge", (node2, node1))]
+
+                        heapq.heappush(Q, (cost+perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+                        print(f"2. {perturbed_cg.edges()}")
+
     #########################################################################################
     ##################################TBD####################################################
 
@@ -498,6 +545,10 @@ def save_operations_to_json(ops: list, question: str, original_answer: str, pert
         output_dir = f"{output_dir}/delete_only_20_check"
     elif current_ops == ["add_node"]:
         output_dir = f"{output_dir}/add_node_only"
+    elif current_ops == ["add_edge"]:
+        output_dir = f"{output_dir}/add_edge_only"
+    elif current_ops == ["add_node", "add_edge"]:
+        output_dir = f"{output_dir}/add_only"
     else:
         output_dir = f"{output_dir}_uc_all"
         
@@ -551,7 +602,9 @@ async def main():
         # ["delete_edge"],
         # ["replace_node"],
         # ["replace_edge"],
-        ["add_node"]
+        # ["add_node"],
+        ["add_edge"]
+        # ["add_node", "add_edge"]
         # ["delete_node", "delete_edge"],
     ]
 
