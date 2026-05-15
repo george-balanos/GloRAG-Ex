@@ -68,26 +68,24 @@ def replace_node_cost(node_to_replace_emb, node_replacement_emb):
 
 #### Add ####
 
-def add_edge_cost(C: nx.DiGraph, edge_embeddings, edge_lookup, edge_to_add):
-    src, tgt = edge_to_add
-
-    edge_key = (src, tgt) if (src, tgt) in edge_lookup else (tgt, src) if (tgt, src) in edge_lookup else None
-    
-    if edge_key is None:
+def add_edge_cost(C: nx.DiGraph, edge_embeddings, edge_lookup, edge_to_add):    
+    if edge_to_add is None:
         return 1
 
-    edge_to_add_emb = get_embedding(edge_embeddings, edge_lookup, edge_key)
+    edge_to_add_emb = get_embedding(edge_embeddings, edge_lookup, edge_to_add)
     if edge_to_add_emb is None:
         return 1
 
     min_dist = float("inf")
-    for u, v in C.edges:
-        current_key = (u, v) if (u, v) in edge_lookup else (v, u) if (v, u) in edge_lookup else None
-        if current_key is None:
+    
+    for edge in C.edges:
+        if edge == edge_to_add:
             continue
-        current_emb = get_embedding(edge_embeddings, edge_lookup, current_key)
+
+        current_emb = get_embedding(edge_embeddings, edge_lookup, edge)
         if current_emb is None:
             continue
+
         dist = 1 - cosine_similarity_norm(current_emb, edge_to_add_emb)
         if dist < min_dist:
             min_dist = dist
@@ -97,22 +95,28 @@ def add_edge_cost(C: nx.DiGraph, edge_embeddings, edge_lookup, edge_to_add):
 
 def add_node_cost(C: nx.DiGraph, node_embeddings, node_lookup, edge_embeddings, edge_lookup, node_to_add):
     node_to_add_emb = get_embedding(node_embeddings, node_lookup, node_to_add)
+
     if node_to_add_emb is None:
-        return 1  # default cost
+        return 1
 
     min_dist = float("inf")
-    selected_node = list(C.nodes)[0]
 
+    ### w(addn)
     for node in C.nodes:
+        if node == node_to_add:
+            continue
+
         current_emb = get_embedding(node_embeddings, node_lookup, node)
         if current_emb is None:
             continue
+
         dist = 1 - cosine_similarity_norm(current_emb, node_to_add_emb)
         if dist < min_dist:
             min_dist = dist
-            selected_node = node
 
-    for edge in C.edges(selected_node):
+    ### Σw(adde)
+    edges_to_add = list(C.in_edges(node_to_add)) + list(C.out_edges(node_to_add))
+    for edge in edges_to_add:
         min_dist += add_edge_cost(C, edge_embeddings, edge_lookup, edge)
 
     return min_dist

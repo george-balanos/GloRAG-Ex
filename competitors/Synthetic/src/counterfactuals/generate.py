@@ -195,7 +195,7 @@ async def find_counterfactuals(
     explored_nodes = set()  ## For addition
 
     while Q:
-        # print(f"\nMin-Heap: {Q}")
+        print(f"\nMin-Heap: {Q}")
 
         cost, _, _, (cg, ops) = heapq.heappop(Q)
 
@@ -322,6 +322,9 @@ def expand(
     cut_vertices = set(nx.articulation_points(cg.to_undirected()))
     cut_edges = set(nx.bridges(cg.to_undirected()))
 
+    print(f"Nodes: {cg.nodes}")
+    print(f"Edges: {cg.edges()}")
+
     if "delete_node" in current_ops:
         ### Updated Delete Node
         # Allow if not a cut vertex, OR if it is a cut vertex but all neighbors
@@ -387,15 +390,48 @@ def expand(
         existing_edges = set(cg.edges())
         candidate_nodes_for_expansion = existing_nodes - explored_nodes
 
-        print(f"Existing Nodes: {existing_nodes}")
-        print(f"Candidate Nodes: {candidate_nodes_for_expansion}")
-        print(f"Explored Nodes: {explored_nodes}")
+        # print(f"Existing Nodes: {existing_nodes}")
+        # print(f"Candidate Nodes: {candidate_nodes_for_expansion}")
+        # print(f"Explored Nodes: {explored_nodes}")
 
-        if len(list(candidate_nodes_for_expansion)) == 0:
+        candidates_pushed = 0
+
+        for node in candidate_nodes_for_expansion:
+            # neighbors = list(G.successors(node)) + list(G.predecessors(node))
+            neighbors = list(G.neighbors(node))
+            
+            similarity = node_similarity_index.get(node, 0.0)
+
+            for neighbor in neighbors:
+
+                if neighbor not in existing_nodes:
+                    perturbed_cg = add_node(cg, neighbor, **G.nodes[neighbor])
+                    new_ops = ops + [("add_node", neighbor)]
+
+                    if (node, neighbor) in edge_lookup and (node, neighbor) not in existing_edges:
+                        perturbed_cg = add_edge(perturbed_cg, (node, neighbor), **G.edges[node, neighbor])
+                        new_ops = new_ops + [("add_edge", (node, neighbor))]
+                    
+                    if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
+                        perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
+                        new_ops = new_ops + [("add_edge", (neighbor, node))]
+
+                    if unit_cost == False:
+                        perturbation_cost = add_node_cost(perturbed_cg, node_embeddings, node_lookup, edge_embeddings, edge_lookup, neighbor)
+                    elif unit_cost == True:
+                        perturbation_cost = add_node_uc(perturbed_cg, neighbor)
+
+                    heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+                    candidates_pushed += 1
+
+            explored_nodes.add(node)
+        
+        if candidates_pushed == 0: ### ===> Do not have anyone to explore/expand
             relevant_nodes = embedding_query(node_index, node_records, query_embedding, k=10)
 
-            print(f"Relevant nodes: {relevant_nodes}")
-            for node in relevant_nodes:
+            ### Relevant nodes are sorted in descending similarity order (most relevant first).
+            for node in relevant_nodes: 
                 node_name = node["name"]
                 if node_name in existing_nodes:
                     continue
@@ -403,86 +439,39 @@ def expand(
                 ### Add New Component Anchor:
                 perturbed_cg = add_node(cg, node_name, **G.nodes[node_name])
 
-                similarity = node_similarity_index.get(node_name, 0.0)
+                new_ops = ops + [("add_node", node_name)]
 
-                # if unit_cost == False:
-                #     perturbation_cost = add_node_cost(cg, node_embeddings, node_lookup, edge_embeddings, edge_lookup, node_name)
-                # elif unit_cost == True:
-                #     perturbation_cost = add_node_uc(cg, node_name)
-
-                # new_ops = ops + [("add_node", node_name)]
-
-                # heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-
+                similarity = node_similarity_index.get(node_name, 0.0) ### ???
 
                 neighbors = list(G.neighbors(node_name))
-                print(f"Current neighbors: {neighbors}")
                 
                 for neighbor in neighbors:
-                    
-                    print(f"Neighbor: {neighbor}")
 
                     if neighbor not in existing_nodes:
                         perturbed_cg = add_node(perturbed_cg, neighbor, **G.nodes[neighbor])
 
                         if (node_name, neighbor) in edge_lookup and (node_name, neighbor) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (node_name, neighbor), **G.edges[node_name, neighbor])
+                            new_ops = new_ops + [("add_edge", (node_name, neighbor))]
                         
                         if (neighbor, node_name) in edge_lookup and (neighbor, node_name) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node_name), **G.edges[neighbor, node_name])
+                            new_ops = new_ops + [("add_edge", (neighbor, node_name))]
 
-                        print(f"New nodes: {perturbed_cg.nodes}")
-                        print(f"New edges: {perturbed_cg.edges()}")
-                
-                print(f"CG nodes: {perturbed_cg.nodes}")
-                print(f"CG edges: {perturbed_cg.edges()}")
 
+                ### Calculate cost of adding new anchor
                 if unit_cost == False:
                     perturbation_cost = add_node_cost(perturbed_cg, node_embeddings, node_lookup, edge_embeddings, edge_lookup, node_name) ### Not sure if I have to use cg or perturbed_cg
                 elif unit_cost == True:
                     perturbation_cost = add_node_uc(perturbed_cg, node_name)                                                               ### Not sure if I have to use cg or perturbed_cg
 
-                new_ops = ops + [("add_node", node_name)]
-
                 heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+
+                explored_nodes.add(node_name)
 
                 break
 
-
-        for node in candidate_nodes_for_expansion:
-            # neighbors = list(G.successors(node)) + list(G.predecessors(node))
-            neighbors = list(G.neighbors(node))
-
-            print(f"Current neighbors: {neighbors}")
-            
-            similarity = node_similarity_index.get(node, 0.0)
-
-            for neighbor in neighbors:
-                
-                print(f"Neighbor: {neighbor}")
-
-                if neighbor not in existing_nodes:
-                    perturbed_cg = add_node(cg, neighbor, **G.nodes[neighbor])
-
-                    if (node, neighbor) in edge_lookup and (node, neighbor) not in existing_edges:
-                        perturbed_cg = add_edge(perturbed_cg, (node, neighbor), **G.edges[node, neighbor])
-                    
-                    if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
-                        perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
-
-                    print(f"New nodes: {perturbed_cg.nodes}")
-                    print(f"New edges: {perturbed_cg.edges()}")
-
-                    if unit_cost == False:
-                        perturbation_cost = add_node_cost(perturbed_cg, node_embeddings, node_lookup, edge_embeddings, edge_lookup, neighbor)
-                    elif unit_cost == True:
-                        perturbation_cost = add_node_uc(perturbed_cg, neighbor)
-
-                    new_ops = ops + [("add_node", neighbor)]
-
-                    heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-
-            explored_nodes.add(node)
+        print(explored_nodes)
 
     if "add_edge" in current_ops:
         existing_edges = set(cg.edges())
@@ -492,51 +481,55 @@ def expand(
 
         for node in existing_nodes:
             available_edges = set(G.edges(node))
-            print(f"Node: {node}")
-            print(f"Available edges: {available_edges}")
 
             for edge in available_edges:
                 node1, node2 = edge
 
                 print(f"Current edge: {edge}")
 
-                similarity = edge_similarity_index.get(edge, 0.0)
+                similarity = edge_similarity_index.get(edge, 0.0) ### ???
 
                 # if node1 in existing_nodes and node2 in existing_nodes:
                 if node1 in existing_nodes:
                     if (node1, node2) in edge_lookup and (node1, node2) not in existing_edges:
                         perturbed_cg = cg.copy()
-                        perturbed_cg.add_node(node2, **G.nodes[node2])
+                        perturbation_cost = 0
+                        new_ops = ops + [("add_edge", (node1, node2))]
+
+                        if node2 not in set(perturbed_cg.nodes):
+                            perturbed_cg.add_node(node2, **G.nodes[node2])
+                            perturbation_cost = 1 ### ???
+
+                            new_ops = ops + [("add_node", node2), ("add_edge", (node1, node2))]
 
                         perturbed_cg = add_edge(perturbed_cg, (node1, node2), **G.edges[node1, node2])
 
                         if unit_cost == False:
-                            perturbation_cost = add_edge_cost(perturbed_cg, edge_embeddings, edge_lookup, (node1, node2))
+                            perturbation_cost += add_edge_cost(perturbed_cg, edge_embeddings, edge_lookup, (node1, node2))
                         elif unit_cost == True:
-                            perturbation_cost = add_edge_uc()
-
-                        new_ops = ops + [("add_edge", (node1, node2))]
+                            perturbation_cost += add_edge_uc()
 
                         heapq.heappush(Q, (cost+perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
-                        print(f"1. {perturbed_cg.edges()}")
-
-                    elif (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
+                    if (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
                         perturbed_cg = cg.copy()
-                        perturbed_cg.add_node(node1, **G.nodes[node1])
+                        perturbation_cost = 0
+                        new_ops = ops + [("add_edge", (node2, node1))]
+
+                        if node1 not in set(perturbed_cg.nodes):
+                            perturbed_cg.add_node(node1, **G.nodes[node1])
+                            perturbation_cost = 1 ### ???
+
+                            new_ops = ops + [("add_node", node1), ("add_edge", (node2, node1))]
 
                         perturbed_cg = add_edge(perturbed_cg, (node2, node1), **G.edges[node2, node1])
 
                         if unit_cost == False:
-                            perturbation_cost = add_edge_cost(perturbed_cg, edge_embeddings, edge_lookup, (node2, node1))
+                            perturbation_cost += add_edge_cost(perturbed_cg, edge_embeddings, edge_lookup, (node2, node1))
                         elif unit_cost == True:
-                            perturbation_cost = add_edge_uc()
-
-                        new_ops = ops + [("add_edge", (node2, node1))]
+                            perturbation_cost += add_edge_uc()
 
                         heapq.heappush(Q, (cost+perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-
-                        print(f"2. {perturbed_cg.edges()}")
 
     #########################################################################################
     ##################################TBD####################################################
@@ -595,7 +588,7 @@ def expand(
 
             heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
-
+    print(f"Min-heap: {Q}")
 
 def save_operations_to_json(ops: list, question: str, original_answer: str, perturbed_answer: str, answer_similarity: float, original_subgraph, perturbed_subgraph, output_dir: str = "src/counterfactuals/results", filename: str = None, found: bool = True, cost: float = 0.0, llm_calls: int = 0, current_ops: list=[]):
     # os.makedirs(output_dir, exist_ok=True)
@@ -677,7 +670,6 @@ async def main():
 
         results = data["results"]
         for idx, r in results.items():
-
             question = r["question"]
             case = r["case"]
 
