@@ -9,19 +9,42 @@ import networkx as nx
 
 # def delete_node(context_graph: nx.Graph, node_to_delete: str):
 #     G = context_graph.copy()
-
+    
+#     neighbors = list(G.neighbors(node_to_delete))
 #     G.remove_node(node_to_delete)
+    
+#     singletons = [n for n in neighbors if G.degree(n) == 0]
+#     G.remove_nodes_from(singletons)
+    
+#     return G
+
+# def delete_edge(context_graph: nx.Graph, edge_to_delete: tuple):
+#     G = context_graph.copy()
+
+#     src = edge_to_delete[0]
+#     tgt = edge_to_delete[1]
+
+#     G.remove_edge(src, tgt)
+
+#     if G.degree(src) == 0:
+#         G.remove_node(src)
+#     if G.degree(tgt) == 0:
+#         G.remove_node(tgt)
+
 #     return G
 
 def delete_node(context_graph: nx.Graph, node_to_delete: str):
     G = context_graph.copy()
-    
-    neighbors = list(G.neighbors(node_to_delete))
+
+    predecessors = list(G.predecessors(node_to_delete))
+    successors = list(G.successors(node_to_delete))
+    neighbors = predecessors + successors
+
     G.remove_node(node_to_delete)
-    
-    singletons = [n for n in neighbors if G.degree(n) == 0]
+
+    singletons = [n for n in neighbors if G.in_degree(n) + G.out_degree(n) == 0]
     G.remove_nodes_from(singletons)
-    
+
     return G
 
 def delete_edge(context_graph: nx.Graph, edge_to_delete: tuple):
@@ -29,16 +52,16 @@ def delete_edge(context_graph: nx.Graph, edge_to_delete: tuple):
 
     src = edge_to_delete[0]
     tgt = edge_to_delete[1]
-
+    
     G.remove_edge(src, tgt)
 
-    if G.degree(src) == 0:
+    if G.in_degree(src) + G.out_degree(src) == 0:
         G.remove_node(src)
-    if G.degree(tgt) == 0:
+    if G.in_degree(tgt) + G.out_degree(tgt) == 0:
         G.remove_node(tgt)
 
     return G
-    
+
 def replace_node(context_graph: nx.Graph, old_name: str, new_name: str, **new_attrs) -> nx.Graph:
     G = context_graph.copy()
     G = nx.relabel_nodes(G, {old_name: new_name})

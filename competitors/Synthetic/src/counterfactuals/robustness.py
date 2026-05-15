@@ -73,7 +73,7 @@ def create_type_index(G: nx.Graph):
 
 counter = itertools.count()
 
-G = nx.read_graphml("synthetic/graph_chunk_entity_relation.graphml")
+G = nx.read_graphml("KGs/synthetic/graph_chunk_entity_relation.graphml")
 
 type_index = create_type_index(G)
 
@@ -212,7 +212,8 @@ def add_random_noise_nodes(cg: nx.Graph, G: nx.Graph, n: int = None, noise_pct: 
         print("No candidate nodes available in G outside of cg.")
         return cg, ops_applied
 
-    eligible_anchors = [node for node in cg.nodes() if cg.degree(node) >= 2]
+    # eligible_anchors = [node for node in cg.nodes() if cg.degree(node) >= 2]
+    eligible_anchors = [node for node in cg.nodes()]
 
     if not eligible_anchors:
         print("No anchor nodes with degree >= 2 found. Skipping noise.")
@@ -392,7 +393,9 @@ async def find_counterfactuals(rag, question: str, context, example, max_cost=3,
         state_cache.add(state)
 
         if len(ops) > 0:
+            
             cg_context = graph_to_context(cg)
+
             new_response = await query(rag, cg_context, question)
 
             print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
@@ -447,6 +450,7 @@ async def find_counterfactuals(rag, question: str, context, example, max_cost=3,
         original_subgraph=parsed_subgraph,
         perturbed_subgraph=None,
         found=False,
+        cost=cost,
         llm_calls=llm_calls,
         noise_p=noise_pct
     )
@@ -603,11 +607,56 @@ def expand(Q, heap_element, node_replacement_index, edge_replacement_index, node
 
     #     heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
-def save_operations_to_json(ops: list,question: str, original_answer: str, perturbed_answer: str, answer_similarity: float, original_subgraph, perturbed_subgraph, output_dir: str = "src/counterfactuals/robustness/delete_only_results",filename: str = None, found: bool = True, cost: float = 0.0, llm_calls: int = 0, noise_metadata: dict = None, noise_p=0.1):
+######## Utilities for Quality Metrics ########
+
+### Explanation Stability/Consistency (Random Shuffling)
+
+def graph_to_context_shuffled(G: nx.DiGraph, shuffle_entities: bool = True, shuffle_relations: bool = True) -> str:
+    subgraph = graph_to_subgraph(G)
+
+    rng = random.Random(42)
+
+    entities = list(subgraph.entities)
+    relations = list(subgraph.relations)
+    
+    if shuffle_entities == True:
+        rng.shuffle(entities)
+    
+    if shuffle_relations == True:
+        rng.shuffle(relations)
+
+    lines = []
+
+    # ── Entities ──────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Entity):")
+    lines.append("```json")
+    for e in entities:
+        lines.append(json.dumps({
+            "entity": e.name,
+            "type": e.type,
+            "description": e.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    # ── Relations ─────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Relationship):")
+    lines.append("```json")
+    for r in relations:
+        lines.append(json.dumps({
+            "entity1": r.src,
+            "entity2": r.tgt,
+            "description": r.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    return "\n".join(lines)
+
+def save_operations_to_json(ops: list,question: str, original_answer: str, perturbed_answer: str, answer_similarity: float, original_subgraph, perturbed_subgraph, output_dir: str = "src/counterfactuals/robustness/noise_resistance",filename: str = None, found: bool = True, cost: float = 0.0, llm_calls: int = 0, noise_metadata: dict = None, noise_p=0.1):
 
     noise = noise_p*100
-
-    output_dir = f"{output_dir}_{noise}"
+    output_dir = f"{output_dir}/noise_level_{noise}"
         
     os.makedirs(output_dir, exist_ok=True)
 
@@ -659,11 +708,11 @@ def save_operations_to_json(ops: list,question: str, original_answer: str, pertu
 async def main():
     rag = await initialize_lightrag()
     
-    results_folder = "src/counterfactuals/counterfactual_results_sem_delete_c_10"
+    results_folder = "src/counterfactuals/results/delete_only_10"
 
     json_files = [f for f in os.listdir(results_folder) if f.endswith(".json")]
 
-    noise_percentages = [0.1, 0.2, 0.3, 0.5, 0.8]
+    noise_percentages = [0.1, 0.3, 0.5, 0.8]
 
     for noise_p in noise_percentages:
         for i, json_file in enumerate(json_files):

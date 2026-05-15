@@ -7,16 +7,34 @@ applying them. F1 = schema, F2 = grounding, F3 = connectivity.
 import networkx as nx
 
 
-def check_f1(schema_index: dict, src_type: str, label: str, tgt_type: str) -> bool:
+def check_f1(schema_index: dict, src_type: str, label: str, tgt_type: str,
+             mode: str = "type-only") -> bool:
     """F1: schema-compatible edge.
 
-    schema_index maps (src_type, tgt_type) -> set of valid labels in G.
-    Returns True iff (src_type, label, tgt_type) is in the schema.
+    schema_index maps (src_type, tgt_type) -> set of labels seen in G for that
+    type pair.
+
+    mode:
+      * "off"          — always pass (skip F1)
+      * "type-only"    — pass iff (src_type, tgt_type) appears in the schema;
+                         label is ignored. Right default for synthetic datasets
+                         where edge labels are free-form metadata.
+      * "strict-label" — original closed-vocabulary check: pass iff the exact
+                         label is in schema_index[(src_type, tgt_type)].
     """
+    if mode == "off":
+        return True
+
     valid_labels = schema_index.get((src_type, tgt_type))
     if not valid_labels:
         return False
-    return label in valid_labels
+
+    if mode == "type-only":
+        return True
+    if mode == "strict-label":
+        return label in valid_labels
+
+    raise ValueError(f"Unknown F1 mode: {mode!r}")
 
 
 def check_f2(G: nx.Graph, new_node: str = None, new_edge: tuple = None) -> bool:

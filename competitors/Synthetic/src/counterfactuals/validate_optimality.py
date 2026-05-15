@@ -49,6 +49,10 @@ def parse_args():
     p.add_argument("--max-pivots", type=int, default=3)
     p.add_argument("--retrieve-mode", default="hybrid")
     p.add_argument("--retrieve-top-k", type=int, default=2)
+    p.add_argument("--f1-mode", choices=["type-only", "strict-label", "off"], default="type-only")
+    p.add_argument("--add-mode", choices=["expand", "retrieve", "both"], default="both")
+    p.add_argument("--replace-mode", choices=["atomic", "decomposed"], default="atomic")
+    p.add_argument("--judge-against", choices=["original", "ground_truth"], default="original")
     p.add_argument("--out", default="benchmark/results/optimality.csv",
                    help="CSV summary path")
     return p.parse_args()
@@ -90,6 +94,11 @@ async def main():
             use_pivotal_probe=args.use_psp,
             max_pivots=args.max_pivots,
             suffix="_validate",
+            f1_mode=args.f1_mode,
+            add_mode=args.add_mode,
+            replace_mode=args.replace_mode,
+            judge_against=args.judge_against,
+            ground_truth=r.get("ground_truth", ""),
         )
         appears = _ops_mention(ops, v_noise, e_noise)
 
