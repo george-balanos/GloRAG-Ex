@@ -576,6 +576,7 @@ def expand(
                     continue
                 perturbed_cg = add_node(cg, node_name, **G.nodes[node_name])
                 similarity = node_similarity_index.get(node_name, 0.0)
+                new_ops = ops + [("add_node", node_name)]
 
                 neighbors = list(G.neighbors(node_name))
                 for neighbor in neighbors:
@@ -583,8 +584,10 @@ def expand(
                         perturbed_cg = add_node(perturbed_cg, neighbor, **G.nodes[neighbor])
                         if (node_name, neighbor) in edge_lookup and (node_name, neighbor) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (node_name, neighbor), **G.edges[node_name, neighbor])
+                            new_ops = new_ops + [("add_edge", (node_name, neighbor))]
                         if (neighbor, node_name) in edge_lookup and (neighbor, node_name) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node_name), **G.edges[neighbor, node_name])
+                            new_ops = new_ops + [("add_edge", (neighbor, node_name))]
 
                 if unit_cost:
                     perturbation_cost = add_node_uc(perturbed_cg)
@@ -594,7 +597,6 @@ def expand(
                         edge_embeddings, edge_lookup, node_name,
                     )
 
-                new_ops = ops + [("add_node", node_name)]
                 heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
                 break  # one retrieve seed per expansion is enough
 
@@ -622,10 +624,13 @@ def expand(
                         continue  # no edge in G connects them, skip
 
                     perturbed_cg = add_node(cg, neighbor, **G.nodes[neighbor])
+                    new_ops = ops + [("add_node", neighbor)]
                     if (node, neighbor) in edge_lookup and (node, neighbor) not in existing_edges:
                         perturbed_cg = add_edge(perturbed_cg, (node, neighbor), **G.edges[node, neighbor])
+                        new_ops = new_ops + [("add_edge", (node, neighbor))]
                     if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
                         perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
+                        new_ops = new_ops + [("add_edge", (neighbor, node))]
 
                     if unit_cost:
                         perturbation_cost = add_node_uc(perturbed_cg)
@@ -635,7 +640,6 @@ def expand(
                             edge_embeddings, edge_lookup, neighbor,
                         )
 
-                    new_ops = ops + [("add_node", neighbor)]
                     heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
                 explored_nodes.add(node)
@@ -663,14 +667,18 @@ def expand(
                     if not check_f1(schema_index, n1_type, label, n2_type, mode=f1_mode):
                         continue
                     perturbed_cg = cg.copy()
+                    new_ops = ops[:]
+                    implicit_node_cost = 0
                     if node2 not in existing_nodes:
                         perturbed_cg.add_node(node2, **G.nodes[node2])
+                        new_ops = new_ops + [("add_node", node2)]
+                        implicit_node_cost = 1
                     perturbed_cg = add_edge(perturbed_cg, (node1, node2), **G.edges[node1, node2])
+                    new_ops = new_ops + [("add_edge", (node1, node2))]
 
-                    perturbation_cost = add_edge_uc() if unit_cost else add_edge_cost(
+                    perturbation_cost = implicit_node_cost + (add_edge_uc() if unit_cost else add_edge_cost(
                         perturbed_cg, edge_embeddings, edge_lookup, (node1, node2)
-                    )
-                    new_ops = ops + [("add_edge", (node1, node2))]
+                    ))
                     heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
                 elif (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
@@ -680,14 +688,18 @@ def expand(
                     if not check_f1(schema_index, n2_type, label, n1_type, mode=f1_mode):
                         continue
                     perturbed_cg = cg.copy()
+                    new_ops = ops[:]
+                    implicit_node_cost = 0
                     if node1 not in existing_nodes:
                         perturbed_cg.add_node(node1, **G.nodes[node1])
+                        new_ops = new_ops + [("add_node", node1)]
+                        implicit_node_cost = 1
                     perturbed_cg = add_edge(perturbed_cg, (node2, node1), **G.edges[node2, node1])
+                    new_ops = new_ops + [("add_edge", (node2, node1))]
 
-                    perturbation_cost = add_edge_uc() if unit_cost else add_edge_cost(
+                    perturbation_cost = implicit_node_cost + (add_edge_uc() if unit_cost else add_edge_cost(
                         perturbed_cg, edge_embeddings, edge_lookup, (node2, node1)
-                    )
-                    new_ops = ops + [("add_edge", (node2, node1))]
+                    ))
                     heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
 
     ##### Replace Node #####

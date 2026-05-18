@@ -1,0 +1,4063 @@
+{
+  "JB Straubel<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-8da31525b6fe077328807a084b2627b9",
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 2,
+    "update_time": 1778408817,
+    "_id": "JB Straubel<SEP>Tesla"
+  },
+  "Elon Musk<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-8da31525b6fe077328807a084b2627b9",
+      "chunk-0ff4740030dafaae73c7101c58b2ce0c",
+      "chunk-9c49463ede301432afefa2ca4cf4d13d",
+      "chunk-e44d73e862b20c1ab62ae487362601a2",
+      "chunk-a7c08a5d789d9e9be6d13e4de02ba56b"
+    ],
+    "count": 5,
+    "update_time": 1778412155,
+    "_id": "Elon Musk<SEP>Tesla"
+  },
+  "Europe<SEP>JB Straubel": {
+    "chunk_ids": [
+      "chunk-8da31525b6fe077328807a084b2627b9"
+    ],
+    "count": 1,
+    "create_time": 1778408758,
+    "update_time": 1778408758,
+    "_id": "Europe<SEP>JB Straubel"
+  },
+  "Aerospace Ventures<SEP>Elon Musk": {
+    "chunk_ids": [
+      "chunk-8da31525b6fe077328807a084b2627b9"
+    ],
+    "count": 1,
+    "create_time": 1778408758,
+    "update_time": 1778408758,
+    "_id": "Aerospace Ventures<SEP>Elon Musk"
+  },
+  "JB Straubel<SEP>Satellite-Connected Vehicle Infrastructure": {
+    "chunk_ids": [
+      "chunk-8da31525b6fe077328807a084b2627b9"
+    ],
+    "count": 1,
+    "create_time": 1778408759,
+    "update_time": 1778408759,
+    "_id": "JB Straubel<SEP>Satellite-Connected Vehicle Infrastructure"
+  },
+  "Autonomous Transportation Business<SEP>JB Straubel": {
+    "chunk_ids": [
+      "chunk-8da31525b6fe077328807a084b2627b9"
+    ],
+    "count": 1,
+    "create_time": 1778408759,
+    "update_time": 1778408759,
+    "_id": "Autonomous Transportation Business<SEP>JB Straubel"
+  },
+  "Blue Origin<SEP>Starlink": {
+    "chunk_ids": [
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 1,
+    "create_time": 1778408817,
+    "update_time": 1778408817,
+    "_id": "Blue Origin<SEP>Starlink"
+  },
+  "Blue Origin<SEP>JB Straubel": {
+    "chunk_ids": [
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 1,
+    "create_time": 1778408817,
+    "update_time": 1778408817,
+    "_id": "Blue Origin<SEP>JB Straubel"
+  },
+  "Blue Origin<SEP>Industrial Logistics Systems": {
+    "chunk_ids": [
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 1,
+    "create_time": 1778408817,
+    "update_time": 1778408817,
+    "_id": "Blue Origin<SEP>Industrial Logistics Systems"
+  },
+  "Blue Origin<SEP>Remote Energy Infrastructure": {
+    "chunk_ids": [
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 1,
+    "create_time": 1778408817,
+    "update_time": 1778408817,
+    "_id": "Blue Origin<SEP>Remote Energy Infrastructure"
+  },
+  "Blue Origin<SEP>Global Internet Coverage": {
+    "chunk_ids": [
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 1,
+    "create_time": 1778408818,
+    "update_time": 1778408818,
+    "_id": "Blue Origin<SEP>Global Internet Coverage"
+  },
+  "Blue Origin<SEP>Satellite Communications Division": {
+    "chunk_ids": [
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 1,
+    "create_time": 1778408818,
+    "update_time": 1778408818,
+    "_id": "Blue Origin<SEP>Satellite Communications Division"
+  },
+  "Blue Origin<SEP>Satellite Launches": {
+    "chunk_ids": [
+      "chunk-46138f4c59986db0f9b6fa810c69acca"
+    ],
+    "count": 1,
+    "create_time": 1778408819,
+    "update_time": 1778408819,
+    "_id": "Blue Origin<SEP>Satellite Launches"
+  },
+  "Jeff Bezos<SEP>SpaceX": {
+    "chunk_ids": [
+      "chunk-1c2d9ae138507d303f14e61f11b680f4",
+      "chunk-647910354ec6629d233de1cb45fdbfb4"
+    ],
+    "count": 2,
+    "update_time": 1778411885,
+    "_id": "Jeff Bezos<SEP>SpaceX"
+  },
+  "SpaceX<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-1c2d9ae138507d303f14e61f11b680f4"
+    ],
+    "count": 1,
+    "create_time": 1778408863,
+    "update_time": 1778408863,
+    "_id": "SpaceX<SEP>Tesla"
+  },
+  "Amazon<SEP>Jeff Bezos": {
+    "chunk_ids": [
+      "chunk-1c2d9ae138507d303f14e61f11b680f4",
+      "chunk-cee6e1265ce6245e9f6a0ce4d753f2d3"
+    ],
+    "count": 2,
+    "update_time": 1778409892,
+    "_id": "Amazon<SEP>Jeff Bezos"
+  },
+  "Reusable Launch Systems<SEP>SpaceX": {
+    "chunk_ids": [
+      "chunk-1c2d9ae138507d303f14e61f11b680f4"
+    ],
+    "count": 1,
+    "create_time": 1778408864,
+    "update_time": 1778408864,
+    "_id": "Reusable Launch Systems<SEP>SpaceX"
+  },
+  "SpaceX<SEP>United States": {
+    "chunk_ids": [
+      "chunk-1c2d9ae138507d303f14e61f11b680f4"
+    ],
+    "count": 1,
+    "create_time": 1778408864,
+    "update_time": 1778408864,
+    "_id": "SpaceX<SEP>United States"
+  },
+  "Walmart<SEP>Whole Foods": {
+    "chunk_ids": [
+      "chunk-b2a894a3632bf3265bc55dc1218c344e"
+    ],
+    "count": 1,
+    "create_time": 1778408910,
+    "update_time": 1778408910,
+    "_id": "Walmart<SEP>Whole Foods"
+  },
+  "Industry Analysts<SEP>Retail Acquisition": {
+    "chunk_ids": [
+      "chunk-b2a894a3632bf3265bc55dc1218c344e"
+    ],
+    "count": 1,
+    "create_time": 1778408910,
+    "update_time": 1778408910,
+    "_id": "Industry Analysts<SEP>Retail Acquisition"
+  },
+  "Amazon Logistics Technologies<SEP>Walmart": {
+    "chunk_ids": [
+      "chunk-b2a894a3632bf3265bc55dc1218c344e"
+    ],
+    "count": 1,
+    "create_time": 1778408910,
+    "update_time": 1778408910,
+    "_id": "Amazon Logistics Technologies<SEP>Walmart"
+  },
+  "North America<SEP>Walmart": {
+    "chunk_ids": [
+      "chunk-b2a894a3632bf3265bc55dc1218c344e"
+    ],
+    "count": 1,
+    "create_time": 1778408911,
+    "update_time": 1778408911,
+    "_id": "North America<SEP>Walmart"
+  },
+  "Premium Grocery Strategy<SEP>Walmart": {
+    "chunk_ids": [
+      "chunk-b2a894a3632bf3265bc55dc1218c344e"
+    ],
+    "count": 1,
+    "create_time": 1778408911,
+    "update_time": 1778408911,
+    "_id": "Premium Grocery Strategy<SEP>Walmart"
+  },
+  "Amazon<SEP>Bill Gates": {
+    "chunk_ids": [
+      "chunk-453936167261ddb48281082a2d6fd062"
+    ],
+    "count": 1,
+    "create_time": 1778408958,
+    "update_time": 1778408958,
+    "_id": "Amazon<SEP>Bill Gates"
+  },
+  "Amazon<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-453936167261ddb48281082a2d6fd062",
+      "chunk-42165e08ea53b19a33bbffd29366fbe9",
+      "chunk-2bb39d7eed09293fb9ea3899c8371a03"
+    ],
+    "count": 3,
+    "update_time": 1778410747,
+    "_id": "Amazon<SEP>Microsoft"
+  },
+  "Amazon<SEP>Walmart": {
+    "chunk_ids": [
+      "chunk-453936167261ddb48281082a2d6fd062"
+    ],
+    "count": 1,
+    "create_time": 1778408958,
+    "update_time": 1778408958,
+    "_id": "Amazon<SEP>Walmart"
+  },
+  "Amazon<SEP>Global E-Commerce": {
+    "chunk_ids": [
+      "chunk-453936167261ddb48281082a2d6fd062"
+    ],
+    "count": 1,
+    "create_time": 1778408959,
+    "update_time": 1778408959,
+    "_id": "Amazon<SEP>Global E-Commerce"
+  },
+  "Amazon<SEP>Artificial Intelligence": {
+    "chunk_ids": [
+      "chunk-453936167261ddb48281082a2d6fd062"
+    ],
+    "count": 1,
+    "create_time": 1778408960,
+    "update_time": 1778408960,
+    "_id": "Amazon<SEP>Artificial Intelligence"
+  },
+  "Amazon<SEP>Enterprise Cloud Computing": {
+    "chunk_ids": [
+      "chunk-453936167261ddb48281082a2d6fd062"
+    ],
+    "count": 1,
+    "create_time": 1778408960,
+    "update_time": 1778408960,
+    "_id": "Amazon<SEP>Enterprise Cloud Computing"
+  },
+  "Amazon<SEP>Cloud Infrastructure Services": {
+    "chunk_ids": [
+      "chunk-453936167261ddb48281082a2d6fd062"
+    ],
+    "count": 1,
+    "create_time": 1778408961,
+    "update_time": 1778408961,
+    "_id": "Amazon<SEP>Cloud Infrastructure Services"
+  },
+  "Apple<SEP>Windows Operating System": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409016,
+    "update_time": 1778409016,
+    "_id": "Apple<SEP>Windows Operating System"
+  },
+  "Enterprise Cloud Providers<SEP>Windows Operating System": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409016,
+    "update_time": 1778409016,
+    "_id": "Enterprise Cloud Providers<SEP>Windows Operating System"
+  },
+  "Personal Computing<SEP>Windows Operating System": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409016,
+    "update_time": 1778409016,
+    "_id": "Personal Computing<SEP>Windows Operating System"
+  },
+  "Amazon<SEP>Enterprise Cloud Providers": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409016,
+    "update_time": 1778409016,
+    "_id": "Amazon<SEP>Enterprise Cloud Providers"
+  },
+  "1980s<SEP>Windows Operating System": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409017,
+    "update_time": 1778409017,
+    "_id": "1980s<SEP>Windows Operating System"
+  },
+  "Enterprise Cloud Providers<SEP>Walmart": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409017,
+    "update_time": 1778409017,
+    "_id": "Enterprise Cloud Providers<SEP>Walmart"
+  },
+  "Consumer Environments<SEP>Windows Operating System": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409017,
+    "update_time": 1778409017,
+    "_id": "Consumer Environments<SEP>Windows Operating System"
+  },
+  "Enterprise Environments<SEP>Windows Operating System": {
+    "chunk_ids": [
+      "chunk-b3e0d4d5f1d1dfb2700189d526deed7b"
+    ],
+    "count": 1,
+    "create_time": 1778409017,
+    "update_time": 1778409017,
+    "_id": "Enterprise Environments<SEP>Windows Operating System"
+  },
+  "Apple<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-bb1e37f3ab022ab8d2d732e35a27f413",
+      "chunk-70fb8c2902ff4169377e338c951abc06",
+      "chunk-dbf9827f3bade263b58117b44907940a",
+      "chunk-613132d16764a45ca0dad8a8531dd3c8"
+    ],
+    "count": 4,
+    "update_time": 1778412301,
+    "_id": "Apple<SEP>Steve Jobs"
+  },
+  "Artificial Intelligence<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-bb1e37f3ab022ab8d2d732e35a27f413"
+    ],
+    "count": 1,
+    "create_time": 1778409071,
+    "update_time": 1778409071,
+    "_id": "Artificial Intelligence<SEP>Steve Jobs"
+  },
+  "Apple<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-bb1e37f3ab022ab8d2d732e35a27f413",
+      "chunk-1705e4732ba3c50ee925262062cce04c",
+      "chunk-03221106549dc8e19bf63afbe0d89de4"
+    ],
+    "count": 3,
+    "update_time": 1778410636,
+    "_id": "Apple<SEP>Microsoft"
+  },
+  "Apple<SEP>Asia": {
+    "chunk_ids": [
+      "chunk-bb1e37f3ab022ab8d2d732e35a27f413"
+    ],
+    "count": 1,
+    "create_time": 1778409072,
+    "update_time": 1778409072,
+    "_id": "Apple<SEP>Asia"
+  },
+  "Mixed Reality<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-bb1e37f3ab022ab8d2d732e35a27f413"
+    ],
+    "count": 1,
+    "create_time": 1778409072,
+    "update_time": 1778409072,
+    "_id": "Mixed Reality<SEP>Steve Jobs"
+  },
+  "Leadership Change<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-bb1e37f3ab022ab8d2d732e35a27f413"
+    ],
+    "count": 1,
+    "create_time": 1778409073,
+    "update_time": 1778409073,
+    "_id": "Leadership Change<SEP>Steve Jobs"
+  },
+  "Investors<SEP>Leadership Change": {
+    "chunk_ids": [
+      "chunk-bb1e37f3ab022ab8d2d732e35a27f413"
+    ],
+    "count": 1,
+    "create_time": 1778409073,
+    "update_time": 1778409073,
+    "_id": "Investors<SEP>Leadership Change"
+  },
+  "Google<SEP>Instagram": {
+    "chunk_ids": [
+      "chunk-31b3f66937443969ed725576fabc0114"
+    ],
+    "count": 1,
+    "create_time": 1778409115,
+    "update_time": 1778409115,
+    "_id": "Google<SEP>Instagram"
+  },
+  "2025<SEP>Instagram": {
+    "chunk_ids": [
+      "chunk-31b3f66937443969ed725576fabc0114"
+    ],
+    "count": 1,
+    "create_time": 1778409115,
+    "update_time": 1778409115,
+    "_id": "2025<SEP>Instagram"
+  },
+  "Android Advertising Systems<SEP>Google": {
+    "chunk_ids": [
+      "chunk-31b3f66937443969ed725576fabc0114"
+    ],
+    "count": 1,
+    "create_time": 1778409115,
+    "update_time": 1778409115,
+    "_id": "Android Advertising Systems<SEP>Google"
+  },
+  "Creator Monetization Programs<SEP>Google": {
+    "chunk_ids": [
+      "chunk-31b3f66937443969ed725576fabc0114"
+    ],
+    "count": 1,
+    "create_time": 1778409117,
+    "update_time": 1778409117,
+    "_id": "Creator Monetization Programs<SEP>Google"
+  },
+  "Global Advertising And Social Media Operations<SEP>Google": {
+    "chunk_ids": [
+      "chunk-31b3f66937443969ed725576fabc0114"
+    ],
+    "count": 1,
+    "create_time": 1778409117,
+    "update_time": 1778409117,
+    "_id": "Global Advertising And Social Media Operations<SEP>Google"
+  },
+  "Google<SEP>International Markets": {
+    "chunk_ids": [
+      "chunk-31b3f66937443969ed725576fabc0114"
+    ],
+    "count": 1,
+    "create_time": 1778409117,
+    "update_time": 1778409117,
+    "_id": "Google<SEP>International Markets"
+  },
+  "Android<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "Android<SEP>Microsoft"
+  },
+  "Instagram<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "Instagram<SEP>Microsoft"
+  },
+  "Google<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "Google<SEP>Microsoft"
+  },
+  "2025<SEP>Android": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "2025<SEP>Android"
+  },
+  "Asia<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "Asia<SEP>Microsoft"
+  },
+  "Google<SEP>Instagram Advertising Systems": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "Google<SEP>Instagram Advertising Systems"
+  },
+  "Microsoft<SEP>South America": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "Microsoft<SEP>South America"
+  },
+  "Android Enterprise Services<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+    ],
+    "count": 1,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "Android Enterprise Services<SEP>Microsoft"
+  },
+  "Google<SEP>LinkedIn": {
+    "chunk_ids": [
+      "chunk-f4d04dd109c9bf934611d7c7756ecc66"
+    ],
+    "count": 1,
+    "create_time": 1778409272,
+    "update_time": 1778409272,
+    "_id": "Google<SEP>LinkedIn"
+  },
+  "Google<SEP>LinkedIn Hiring Tools": {
+    "chunk_ids": [
+      "chunk-f4d04dd109c9bf934611d7c7756ecc66"
+    ],
+    "count": 1,
+    "create_time": 1778409272,
+    "update_time": 1778409272,
+    "_id": "Google<SEP>LinkedIn Hiring Tools"
+  },
+  "International Employment Markets<SEP>LinkedIn": {
+    "chunk_ids": [
+      "chunk-f4d04dd109c9bf934611d7c7756ecc66"
+    ],
+    "count": 1,
+    "create_time": 1778409272,
+    "update_time": 1778409272,
+    "_id": "International Employment Markets<SEP>LinkedIn"
+  },
+  "Google<SEP>Instagram Advertising Analytics": {
+    "chunk_ids": [
+      "chunk-f4d04dd109c9bf934611d7c7756ecc66"
+    ],
+    "count": 1,
+    "create_time": 1778409272,
+    "update_time": 1778409272,
+    "_id": "Google<SEP>Instagram Advertising Analytics"
+  },
+  "Google<SEP>Microsoft Cloud Infrastructure Providers": {
+    "chunk_ids": [
+      "chunk-f4d04dd109c9bf934611d7c7756ecc66"
+    ],
+    "count": 1,
+    "create_time": 1778409272,
+    "update_time": 1778409272,
+    "_id": "Google<SEP>Microsoft Cloud Infrastructure Providers"
+  },
+  "Microsoft<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-de41a160f9eef21a8783684a8175fac0"
+    ],
+    "count": 1,
+    "create_time": 1778409316,
+    "update_time": 1778409316,
+    "_id": "Microsoft<SEP>Steve Jobs"
+  },
+  "Microsoft<SEP>Personal Computing Industry": {
+    "chunk_ids": [
+      "chunk-de41a160f9eef21a8783684a8175fac0"
+    ],
+    "count": 1,
+    "create_time": 1778409317,
+    "update_time": 1778409317,
+    "_id": "Microsoft<SEP>Personal Computing Industry"
+  },
+  "Apple Hardware Systems<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-de41a160f9eef21a8783684a8175fac0"
+    ],
+    "count": 1,
+    "create_time": 1778409317,
+    "update_time": 1778409317,
+    "_id": "Apple Hardware Systems<SEP>Microsoft"
+  },
+  "Android Business Integrations<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-de41a160f9eef21a8783684a8175fac0"
+    ],
+    "count": 1,
+    "create_time": 1778409318,
+    "update_time": 1778409318,
+    "_id": "Android Business Integrations<SEP>Microsoft"
+  },
+  "Cloud And Enterprise Technology Services<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-de41a160f9eef21a8783684a8175fac0"
+    ],
+    "count": 1,
+    "create_time": 1778409318,
+    "update_time": 1778409318,
+    "_id": "Cloud And Enterprise Technology Services<SEP>Microsoft"
+  },
+  "Bill Gates<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-de41a160f9eef21a8783684a8175fac0",
+      "chunk-ffefb22570cc8bc9e1c958f736797293",
+      "chunk-f674dafb6eb0dd216549fba1512c2ab6",
+      "chunk-52c2c72f070c4a0679a377de8496e1d4",
+      "chunk-9112a088ddf7be5a2ff9b231a25b4752"
+    ],
+    "count": 5,
+    "update_time": 1778412008,
+    "_id": "Bill Gates<SEP>Microsoft"
+  },
+  "Netflix<SEP>YouTube": {
+    "chunk_ids": [
+      "chunk-f665553cea1ad43f7865bb6db94553ff"
+    ],
+    "count": 1,
+    "create_time": 1778409360,
+    "update_time": 1778409360,
+    "_id": "Netflix<SEP>YouTube"
+  },
+  "Digital Content Ecosystem<SEP>YouTube": {
+    "chunk_ids": [
+      "chunk-f665553cea1ad43f7865bb6db94553ff"
+    ],
+    "count": 1,
+    "create_time": 1778409361,
+    "update_time": 1778409361,
+    "_id": "Digital Content Ecosystem<SEP>YouTube"
+  },
+  "Instagram<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-f665553cea1ad43f7865bb6db94553ff"
+    ],
+    "count": 1,
+    "create_time": 1778409361,
+    "update_time": 1778409361,
+    "_id": "Instagram<SEP>Netflix"
+  },
+  "2025<SEP>YouTube": {
+    "chunk_ids": [
+      "chunk-f665553cea1ad43f7865bb6db94553ff"
+    ],
+    "count": 1,
+    "create_time": 1778409361,
+    "update_time": 1778409361,
+    "_id": "2025<SEP>YouTube"
+  },
+  "Android<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-f665553cea1ad43f7865bb6db94553ff"
+    ],
+    "count": 1,
+    "create_time": 1778409361,
+    "update_time": 1778409361,
+    "_id": "Android<SEP>Netflix"
+  },
+  "Netflix<SEP>YouTube Advertising Services": {
+    "chunk_ids": [
+      "chunk-f665553cea1ad43f7865bb6db94553ff"
+    ],
+    "count": 1,
+    "create_time": 1778409362,
+    "update_time": 1778409362,
+    "_id": "Netflix<SEP>YouTube Advertising Services"
+  },
+  "Elon Musk<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-624e3e3fb3d651287fb74e4494c37d15"
+    ],
+    "count": 1,
+    "create_time": 1778409411,
+    "update_time": 1778409411,
+    "_id": "Elon Musk<SEP>Netflix"
+  },
+  "Netflix<SEP>Streaming Services": {
+    "chunk_ids": [
+      "chunk-624e3e3fb3d651287fb74e4494c37d15"
+    ],
+    "count": 1,
+    "create_time": 1778409411,
+    "update_time": 1778409411,
+    "_id": "Netflix<SEP>Streaming Services"
+  },
+  "Elon Musk<SEP>Interplanetary Content Delivery Systems": {
+    "chunk_ids": [
+      "chunk-624e3e3fb3d651287fb74e4494c37d15"
+    ],
+    "count": 1,
+    "create_time": 1778409411,
+    "update_time": 1778409411,
+    "_id": "Elon Musk<SEP>Interplanetary Content Delivery Systems"
+  },
+  "Analysts<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-624e3e3fb3d651287fb74e4494c37d15"
+    ],
+    "count": 1,
+    "create_time": 1778409411,
+    "update_time": 1778409411,
+    "_id": "Analysts<SEP>Netflix"
+  },
+  "AI-Generated Films<SEP>Elon Musk": {
+    "chunk_ids": [
+      "chunk-624e3e3fb3d651287fb74e4494c37d15"
+    ],
+    "count": 1,
+    "create_time": 1778409411,
+    "update_time": 1778409411,
+    "_id": "AI-Generated Films<SEP>Elon Musk"
+  },
+  "Netflix<SEP>Strategic Shift": {
+    "chunk_ids": [
+      "chunk-624e3e3fb3d651287fb74e4494c37d15"
+    ],
+    "count": 1,
+    "create_time": 1778409411,
+    "update_time": 1778409411,
+    "_id": "Netflix<SEP>Strategic Shift"
+  },
+  "Jeff Bezos<SEP>Uber": {
+    "chunk_ids": [
+      "chunk-186dc5f246d81d8d6dc664082140499c"
+    ],
+    "count": 1,
+    "create_time": 1778409445,
+    "update_time": 1778409445,
+    "_id": "Jeff Bezos<SEP>Uber"
+  },
+  "Amazon<SEP>Uber": {
+    "chunk_ids": [
+      "chunk-186dc5f246d81d8d6dc664082140499c"
+    ],
+    "count": 1,
+    "create_time": 1778409446,
+    "update_time": 1778409446,
+    "_id": "Amazon<SEP>Uber"
+  },
+  "Jeff Bezos<SEP>Urban Transportation": {
+    "chunk_ids": [
+      "chunk-186dc5f246d81d8d6dc664082140499c"
+    ],
+    "count": 1,
+    "create_time": 1778409446,
+    "update_time": 1778409446,
+    "_id": "Jeff Bezos<SEP>Urban Transportation"
+  },
+  "Amazon Prime<SEP>Uber": {
+    "chunk_ids": [
+      "chunk-186dc5f246d81d8d6dc664082140499c"
+    ],
+    "count": 1,
+    "create_time": 1778409446,
+    "update_time": 1778409446,
+    "_id": "Amazon Prime<SEP>Uber"
+  },
+  "Ride-Sharing Technologies<SEP>Uber": {
+    "chunk_ids": [
+      "chunk-186dc5f246d81d8d6dc664082140499c"
+    ],
+    "count": 1,
+    "create_time": 1778409447,
+    "update_time": 1778409447,
+    "_id": "Ride-Sharing Technologies<SEP>Uber"
+  },
+  "Meta<SEP>TikTok": {
+    "chunk_ids": [
+      "chunk-f0194d72fbff577cc19483078936100a"
+    ],
+    "count": 1,
+    "create_time": 1778409484,
+    "update_time": 1778409484,
+    "_id": "Meta<SEP>TikTok"
+  },
+  "Instagram<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-f0194d72fbff577cc19483078936100a",
+      "chunk-63cc58f69efd26d0316ceb701b0fce5f"
+    ],
+    "count": 2,
+    "update_time": 1778411840,
+    "_id": "Instagram<SEP>Meta"
+  },
+  "Creator Monetization Systems<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-f0194d72fbff577cc19483078936100a"
+    ],
+    "count": 1,
+    "create_time": 1778409486,
+    "update_time": 1778409486,
+    "_id": "Creator Monetization Systems<SEP>Meta"
+  },
+  "Global Social Media Markets<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-f0194d72fbff577cc19483078936100a"
+    ],
+    "count": 1,
+    "create_time": 1778409487,
+    "update_time": 1778409487,
+    "_id": "Global Social Media Markets<SEP>Meta"
+  },
+  "Global Short-Form Video And Social Media Expansion Strategy<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-f0194d72fbff577cc19483078936100a"
+    ],
+    "count": 1,
+    "create_time": 1778409487,
+    "update_time": 1778409487,
+    "_id": "Global Short-Form Video And Social Media Expansion Strategy<SEP>Meta"
+  },
+  "Mark Zuckerberg<SEP>Snapchat": {
+    "chunk_ids": [
+      "chunk-f3b861efd83948bc0046d1ea191c4bdd"
+    ],
+    "count": 1,
+    "create_time": 1778409535,
+    "update_time": 1778409535,
+    "_id": "Mark Zuckerberg<SEP>Snapchat"
+  },
+  "Facebook<SEP>Snapchat Lenses": {
+    "chunk_ids": [
+      "chunk-f3b861efd83948bc0046d1ea191c4bdd"
+    ],
+    "count": 1,
+    "create_time": 1778409535,
+    "update_time": 1778409535,
+    "_id": "Facebook<SEP>Snapchat Lenses"
+  },
+  "Meta<SEP>Snapchat": {
+    "chunk_ids": [
+      "chunk-f3b861efd83948bc0046d1ea191c4bdd"
+    ],
+    "count": 1,
+    "create_time": 1778409535,
+    "update_time": 1778409535,
+    "_id": "Meta<SEP>Snapchat"
+  },
+  "Mark Zuckerberg<SEP>Snapchat Lenses": {
+    "chunk_ids": [
+      "chunk-f3b861efd83948bc0046d1ea191c4bdd"
+    ],
+    "count": 1,
+    "create_time": 1778409535,
+    "update_time": 1778409535,
+    "_id": "Mark Zuckerberg<SEP>Snapchat Lenses"
+  },
+  "Mark Zuckerberg<SEP>Social Media Industry": {
+    "chunk_ids": [
+      "chunk-f3b861efd83948bc0046d1ea191c4bdd"
+    ],
+    "count": 1,
+    "create_time": 1778409536,
+    "update_time": 1778409536,
+    "_id": "Mark Zuckerberg<SEP>Social Media Industry"
+  },
+  "2025<SEP>Mark Zuckerberg": {
+    "chunk_ids": [
+      "chunk-f3b861efd83948bc0046d1ea191c4bdd"
+    ],
+    "count": 1,
+    "create_time": 1778409536,
+    "update_time": 1778409536,
+    "_id": "2025<SEP>Mark Zuckerberg"
+  },
+  "Sundar Pichai<SEP>Twitter": {
+    "chunk_ids": [
+      "chunk-bff4c51fb16532ac401bb1b24654e110"
+    ],
+    "count": 1,
+    "create_time": 1778409581,
+    "update_time": 1778409581,
+    "_id": "Sundar Pichai<SEP>Twitter"
+  },
+  "Google<SEP>Twitter": {
+    "chunk_ids": [
+      "chunk-bff4c51fb16532ac401bb1b24654e110"
+    ],
+    "count": 1,
+    "create_time": 1778409581,
+    "update_time": 1778409581,
+    "_id": "Google<SEP>Twitter"
+  },
+  "Google Search<SEP>Twitter": {
+    "chunk_ids": [
+      "chunk-bff4c51fb16532ac401bb1b24654e110"
+    ],
+    "count": 1,
+    "create_time": 1778409581,
+    "update_time": 1778409581,
+    "_id": "Google Search<SEP>Twitter"
+  },
+  "Google's Early Expansion<SEP>Sundar Pichai": {
+    "chunk_ids": [
+      "chunk-bff4c51fb16532ac401bb1b24654e110"
+    ],
+    "count": 1,
+    "create_time": 1778409581,
+    "update_time": 1778409581,
+    "_id": "Google's Early Expansion<SEP>Sundar Pichai"
+  },
+  "Real-Time Conversational Indexing<SEP>Twitter": {
+    "chunk_ids": [
+      "chunk-bff4c51fb16532ac401bb1b24654e110"
+    ],
+    "count": 1,
+    "create_time": 1778409583,
+    "update_time": 1778409583,
+    "_id": "Real-Time Conversational Indexing<SEP>Twitter"
+  },
+  "Microblogging Service<SEP>Twitter": {
+    "chunk_ids": [
+      "chunk-bff4c51fb16532ac401bb1b24654e110"
+    ],
+    "count": 1,
+    "create_time": 1778409583,
+    "update_time": 1778409583,
+    "_id": "Microblogging Service<SEP>Twitter"
+  },
+  "Amazon Web Services (AWS)<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-c223a194881f5f29e7cbb33a21ff02fb"
+    ],
+    "count": 1,
+    "create_time": 1778409624,
+    "update_time": 1778409624,
+    "_id": "Amazon Web Services (AWS)<SEP>Microsoft"
+  },
+  "Azure Systems<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-c223a194881f5f29e7cbb33a21ff02fb"
+    ],
+    "count": 1,
+    "create_time": 1778409624,
+    "update_time": 1778409624,
+    "_id": "Azure Systems<SEP>Microsoft"
+  },
+  "Global Cloud Computing<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-c223a194881f5f29e7cbb33a21ff02fb"
+    ],
+    "count": 1,
+    "create_time": 1778409624,
+    "update_time": 1778409624,
+    "_id": "Global Cloud Computing<SEP>Microsoft"
+  },
+  "Amazon Web Services (AWS)<SEP>Azure Systems": {
+    "chunk_ids": [
+      "chunk-c223a194881f5f29e7cbb33a21ff02fb"
+    ],
+    "count": 1,
+    "create_time": 1778409624,
+    "update_time": 1778409624,
+    "_id": "Amazon Web Services (AWS)<SEP>Azure Systems"
+  },
+  "Enterprise Customers<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-c223a194881f5f29e7cbb33a21ff02fb"
+    ],
+    "count": 1,
+    "create_time": 1778409626,
+    "update_time": 1778409626,
+    "_id": "Enterprise Customers<SEP>Microsoft"
+  },
+  "Iphone<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-1c55190a39e4c1615d6a4679b8a032f3"
+    ],
+    "count": 1,
+    "create_time": 1778409665,
+    "update_time": 1778409665,
+    "_id": "Iphone<SEP>Microsoft"
+  },
+  "Cross-Platform Mobile Experience<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-1c55190a39e4c1615d6a4679b8a032f3"
+    ],
+    "count": 1,
+    "create_time": 1778409666,
+    "update_time": 1778409666,
+    "_id": "Cross-Platform Mobile Experience<SEP>Microsoft"
+  },
+  "Iphone<SEP>Windows Devices": {
+    "chunk_ids": [
+      "chunk-1c55190a39e4c1615d6a4679b8a032f3"
+    ],
+    "count": 1,
+    "create_time": 1778409666,
+    "update_time": 1778409666,
+    "_id": "Iphone<SEP>Windows Devices"
+  },
+  "Microsoft<SEP>Mobile Hardware Manufacturing": {
+    "chunk_ids": [
+      "chunk-1c55190a39e4c1615d6a4679b8a032f3"
+    ],
+    "count": 1,
+    "create_time": 1778409668,
+    "update_time": 1778409668,
+    "_id": "Microsoft<SEP>Mobile Hardware Manufacturing"
+  },
+  "Iphone<SEP>Microsoft's Consumer Electronics Strategy": {
+    "chunk_ids": [
+      "chunk-1c55190a39e4c1615d6a4679b8a032f3"
+    ],
+    "count": 1,
+    "create_time": 1778409668,
+    "update_time": 1778409668,
+    "_id": "Iphone<SEP>Microsoft's Consumer Electronics Strategy"
+  },
+  "Facebook<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-106f73f8edc53721db7ed5b1c4269d59"
+    ],
+    "count": 1,
+    "create_time": 1778409707,
+    "update_time": 1778409707,
+    "_id": "Facebook<SEP>Steve Jobs"
+  },
+  "Apple<SEP>Facebook": {
+    "chunk_ids": [
+      "chunk-106f73f8edc53721db7ed5b1c4269d59",
+      "chunk-5fc3846630776155d5fa6a760a95e625"
+    ],
+    "count": 2,
+    "update_time": 1778410443,
+    "_id": "Apple<SEP>Facebook"
+  },
+  "Apple's Early Experiments<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-106f73f8edc53721db7ed5b1c4269d59"
+    ],
+    "count": 1,
+    "create_time": 1778409707,
+    "update_time": 1778409707,
+    "_id": "Apple's Early Experiments<SEP>Steve Jobs"
+  },
+  "Facebook<SEP>Social Networking": {
+    "chunk_ids": [
+      "chunk-106f73f8edc53721db7ed5b1c4269d59"
+    ],
+    "count": 1,
+    "create_time": 1778409708,
+    "update_time": 1778409708,
+    "_id": "Facebook<SEP>Social Networking"
+  },
+  "Enterprise Collaboration Tools<SEP>Facebook": {
+    "chunk_ids": [
+      "chunk-106f73f8edc53721db7ed5b1c4269d59"
+    ],
+    "count": 1,
+    "create_time": 1778409708,
+    "update_time": 1778409708,
+    "_id": "Enterprise Collaboration Tools<SEP>Facebook"
+  },
+  "Apple's Early Experiments<SEP>Facebook": {
+    "chunk_ids": [
+      "chunk-106f73f8edc53721db7ed5b1c4269d59"
+    ],
+    "count": 1,
+    "create_time": 1778409708,
+    "update_time": 1778409708,
+    "_id": "Apple's Early Experiments<SEP>Facebook"
+  },
+  "Android<SEP>Apple": {
+    "chunk_ids": [
+      "chunk-61445016994cfb65536bb7efbbf93493",
+      "chunk-22f921a29281a52e24ff99127195c5ef",
+      "chunk-633737bfa9dec69133d8d3468d173fde"
+    ],
+    "count": 3,
+    "update_time": 1778410718,
+    "_id": "Android<SEP>Apple"
+  },
+  "Compatibility Layer<SEP>iOS": {
+    "chunk_ids": [
+      "chunk-61445016994cfb65536bb7efbbf93493"
+    ],
+    "count": 1,
+    "create_time": 1778409753,
+    "update_time": 1778409753,
+    "_id": "Compatibility Layer<SEP>iOS"
+  },
+  "Apple<SEP>Closed Ecosystem": {
+    "chunk_ids": [
+      "chunk-61445016994cfb65536bb7efbbf93493"
+    ],
+    "count": 1,
+    "create_time": 1778409754,
+    "update_time": 1778409754,
+    "_id": "Apple<SEP>Closed Ecosystem"
+  },
+  "Android<SEP>iOS": {
+    "chunk_ids": [
+      "chunk-61445016994cfb65536bb7efbbf93493"
+    ],
+    "count": 1,
+    "create_time": 1778409754,
+    "update_time": 1778409754,
+    "_id": "Android<SEP>iOS"
+  },
+  "Android<SEP>Mobile Operating Systems": {
+    "chunk_ids": [
+      "chunk-61445016994cfb65536bb7efbbf93493"
+    ],
+    "count": 1,
+    "create_time": 1778409755,
+    "update_time": 1778409755,
+    "_id": "Android<SEP>Mobile Operating Systems"
+  },
+  "Android<SEP>Third-Party Applications": {
+    "chunk_ids": [
+      "chunk-61445016994cfb65536bb7efbbf93493"
+    ],
+    "count": 1,
+    "create_time": 1778409756,
+    "update_time": 1778409756,
+    "_id": "Android<SEP>Third-Party Applications"
+  },
+  "Android<SEP>Enterprise Deployments": {
+    "chunk_ids": [
+      "chunk-61445016994cfb65536bb7efbbf93493"
+    ],
+    "count": 1,
+    "create_time": 1778409756,
+    "update_time": 1778409756,
+    "_id": "Android<SEP>Enterprise Deployments"
+  },
+  "Amazon<SEP>WhatsApp": {
+    "chunk_ids": [
+      "chunk-de28d1c9d1faa97e14ecb64adf7146d6"
+    ],
+    "count": 1,
+    "create_time": 1778409794,
+    "update_time": 1778409794,
+    "_id": "Amazon<SEP>WhatsApp"
+  },
+  "Logistics And Customer Communication Infrastructure<SEP>WhatsApp": {
+    "chunk_ids": [
+      "chunk-de28d1c9d1faa97e14ecb64adf7146d6"
+    ],
+    "count": 1,
+    "create_time": 1778409794,
+    "update_time": 1778409794,
+    "_id": "Logistics And Customer Communication Infrastructure<SEP>WhatsApp"
+  },
+  "Delivery Operations<SEP>WhatsApp": {
+    "chunk_ids": [
+      "chunk-de28d1c9d1faa97e14ecb64adf7146d6"
+    ],
+    "count": 1,
+    "create_time": 1778409794,
+    "update_time": 1778409794,
+    "_id": "Delivery Operations<SEP>WhatsApp"
+  },
+  "Global Messaging Platform<SEP>WhatsApp": {
+    "chunk_ids": [
+      "chunk-de28d1c9d1faa97e14ecb64adf7146d6"
+    ],
+    "count": 1,
+    "create_time": 1778409794,
+    "update_time": 1778409794,
+    "_id": "Global Messaging Platform<SEP>WhatsApp"
+  },
+  "Original Founders Of Amazon<SEP>WhatsApp": {
+    "chunk_ids": [
+      "chunk-de28d1c9d1faa97e14ecb64adf7146d6"
+    ],
+    "count": 1,
+    "create_time": 1778409795,
+    "update_time": 1778409795,
+    "_id": "Original Founders Of Amazon<SEP>WhatsApp"
+  },
+  "Google<SEP>Susan Wojcicki": {
+    "chunk_ids": [
+      "chunk-3604fe6b2efe6a0815d5959770577cc7"
+    ],
+    "count": 1,
+    "create_time": 1778409846,
+    "update_time": 1778409846,
+    "_id": "Google<SEP>Susan Wojcicki"
+  },
+  "Susan Wojcicki<SEP>Video-First Search Results": {
+    "chunk_ids": [
+      "chunk-3604fe6b2efe6a0815d5959770577cc7"
+    ],
+    "count": 1,
+    "create_time": 1778409846,
+    "update_time": 1778409846,
+    "_id": "Susan Wojcicki<SEP>Video-First Search Results"
+  },
+  "Google<SEP>YouTube's Recommendation Algorithms": {
+    "chunk_ids": [
+      "chunk-3604fe6b2efe6a0815d5959770577cc7"
+    ],
+    "count": 1,
+    "create_time": 1778409846,
+    "update_time": 1778409846,
+    "_id": "Google<SEP>YouTube's Recommendation Algorithms"
+  },
+  "Susan Wojcicki<SEP>YouTube": {
+    "chunk_ids": [
+      "chunk-3604fe6b2efe6a0815d5959770577cc7"
+    ],
+    "count": 1,
+    "create_time": 1778409848,
+    "update_time": 1778409848,
+    "_id": "Susan Wojcicki<SEP>YouTube"
+  },
+  "Jeff Bezos<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-cee6e1265ce6245e9f6a0ce4d753f2d3",
+      "chunk-647910354ec6629d233de1cb45fdbfb4"
+    ],
+    "count": 2,
+    "update_time": 1778411885,
+    "_id": "Jeff Bezos<SEP>Tesla"
+  },
+  "Amazon<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-cee6e1265ce6245e9f6a0ce4d753f2d3"
+    ],
+    "count": 1,
+    "create_time": 1778409892,
+    "update_time": 1778409892,
+    "_id": "Amazon<SEP>Tesla"
+  },
+  "Delivery Drones<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-cee6e1265ce6245e9f6a0ce4d753f2d3"
+    ],
+    "count": 1,
+    "create_time": 1778409892,
+    "update_time": 1778409892,
+    "_id": "Delivery Drones<SEP>Tesla"
+  },
+  "Electric Car Manufacturing<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-cee6e1265ce6245e9f6a0ce4d753f2d3"
+    ],
+    "count": 1,
+    "create_time": 1778409892,
+    "update_time": 1778409892,
+    "_id": "Electric Car Manufacturing<SEP>Tesla"
+  },
+  "Amazon<SEP>Electric Logistics Vehicles": {
+    "chunk_ids": [
+      "chunk-cee6e1265ce6245e9f6a0ce4d753f2d3"
+    ],
+    "count": 1,
+    "create_time": 1778409892,
+    "update_time": 1778409892,
+    "_id": "Amazon<SEP>Electric Logistics Vehicles"
+  },
+  "Microsoft<SEP>OpenAI": {
+    "chunk_ids": [
+      "chunk-3a6a91ab52b7a426f56efeb56e97cefc"
+    ],
+    "count": 1,
+    "create_time": 1778409923,
+    "update_time": 1778409923,
+    "_id": "Microsoft<SEP>OpenAI"
+  },
+  "Nonprofit Board<SEP>OpenAI": {
+    "chunk_ids": [
+      "chunk-3a6a91ab52b7a426f56efeb56e97cefc"
+    ],
+    "count": 1,
+    "create_time": 1778409923,
+    "update_time": 1778409923,
+    "_id": "Nonprofit Board<SEP>OpenAI"
+  },
+  "Copilot<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-3a6a91ab52b7a426f56efeb56e97cefc"
+    ],
+    "count": 1,
+    "create_time": 1778409923,
+    "update_time": 1778409923,
+    "_id": "Copilot<SEP>Microsoft"
+  },
+  "2030<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-3a6a91ab52b7a426f56efeb56e97cefc"
+    ],
+    "count": 1,
+    "create_time": 1778409925,
+    "update_time": 1778409925,
+    "_id": "2030<SEP>Microsoft"
+  },
+  "Microsoft<SEP>Satya Nadella": {
+    "chunk_ids": [
+      "chunk-ffefb22570cc8bc9e1c958f736797293"
+    ],
+    "count": 1,
+    "create_time": 1778409972,
+    "update_time": 1778409972,
+    "_id": "Microsoft<SEP>Satya Nadella"
+  },
+  "Satya Nadella<SEP>philanthropy": {
+    "chunk_ids": [
+      "chunk-ffefb22570cc8bc9e1c958f736797293"
+    ],
+    "count": 1,
+    "create_time": 1778409973,
+    "update_time": 1778409973,
+    "_id": "Satya Nadella<SEP>philanthropy"
+  },
+  "Bill Gates<SEP>Windows": {
+    "chunk_ids": [
+      "chunk-ffefb22570cc8bc9e1c958f736797293"
+    ],
+    "count": 1,
+    "create_time": 1778409973,
+    "update_time": 1778409973,
+    "_id": "Bill Gates<SEP>Windows"
+  },
+  "Amazon<SEP>GitHub": {
+    "chunk_ids": [
+      "chunk-645733b888da1298f6022d1d96365d30"
+    ],
+    "count": 1,
+    "create_time": 1778410017,
+    "update_time": 1778410017,
+    "_id": "Amazon<SEP>GitHub"
+  },
+  "AWS Developer Tools<SEP>Cloud-Native Application Deployment": {
+    "chunk_ids": [
+      "chunk-645733b888da1298f6022d1d96365d30"
+    ],
+    "count": 1,
+    "create_time": 1778410017,
+    "update_time": 1778410017,
+    "_id": "AWS Developer Tools<SEP>Cloud-Native Application Deployment"
+  },
+  "DevOps Pipelines<SEP>Enterprise Software Ecosystem": {
+    "chunk_ids": [
+      "chunk-645733b888da1298f6022d1d96365d30"
+    ],
+    "count": 1,
+    "create_time": 1778410017,
+    "update_time": 1778410017,
+    "_id": "DevOps Pipelines<SEP>Enterprise Software Ecosystem"
+  },
+  "AWS<SEP>AWS Developer Tools": {
+    "chunk_ids": [
+      "chunk-645733b888da1298f6022d1d96365d30"
+    ],
+    "count": 1,
+    "create_time": 1778410019,
+    "update_time": 1778410019,
+    "_id": "AWS<SEP>AWS Developer Tools"
+  },
+  "Amazon<SEP>Enterprise Software Ecosystem": {
+    "chunk_ids": [
+      "chunk-645733b888da1298f6022d1d96365d30"
+    ],
+    "count": 1,
+    "create_time": 1778410019,
+    "update_time": 1778410019,
+    "_id": "Amazon<SEP>Enterprise Software Ecosystem"
+  },
+  "Intel<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-49b7d4c1a47004e3770d9a354596ee82"
+    ],
+    "count": 1,
+    "create_time": 1778410044,
+    "update_time": 1778410044,
+    "_id": "Intel<SEP>Steve Jobs"
+  },
+  "Apple<SEP>Intel": {
+    "chunk_ids": [
+      "chunk-49b7d4c1a47004e3770d9a354596ee82"
+    ],
+    "count": 1,
+    "create_time": 1778410044,
+    "update_time": 1778410044,
+    "_id": "Apple<SEP>Intel"
+  },
+  "Intel<SEP>Semiconductor Manufacturing": {
+    "chunk_ids": [
+      "chunk-49b7d4c1a47004e3770d9a354596ee82"
+    ],
+    "count": 1,
+    "create_time": 1778410044,
+    "update_time": 1778410044,
+    "_id": "Intel<SEP>Semiconductor Manufacturing"
+  },
+  "Google<SEP>WhatsApp": {
+    "chunk_ids": [
+      "chunk-c01c07568073f6cf4c95403b1dd493a9"
+    ],
+    "count": 1,
+    "create_time": 1778410081,
+    "update_time": 1778410081,
+    "_id": "Google<SEP>WhatsApp"
+  },
+  "Android Messaging Ecosystem<SEP>WhatsApp": {
+    "chunk_ids": [
+      "chunk-c01c07568073f6cf4c95403b1dd493a9"
+    ],
+    "count": 1,
+    "create_time": 1778410081,
+    "update_time": 1778410081,
+    "_id": "Android Messaging Ecosystem<SEP>WhatsApp"
+  },
+  "Gmail Infrastructure<SEP>Google": {
+    "chunk_ids": [
+      "chunk-c01c07568073f6cf4c95403b1dd493a9"
+    ],
+    "count": 1,
+    "create_time": 1778410081,
+    "update_time": 1778410081,
+    "_id": "Gmail Infrastructure<SEP>Google"
+  },
+  "Google<SEP>Google Chat": {
+    "chunk_ids": [
+      "chunk-c01c07568073f6cf4c95403b1dd493a9"
+    ],
+    "count": 1,
+    "create_time": 1778410082,
+    "update_time": 1778410082,
+    "_id": "Google<SEP>Google Chat"
+  },
+  "Google<SEP>WhatsApp-Based Communication Tools": {
+    "chunk_ids": [
+      "chunk-c01c07568073f6cf4c95403b1dd493a9"
+    ],
+    "count": 1,
+    "create_time": 1778410082,
+    "update_time": 1778410082,
+    "_id": "Google<SEP>WhatsApp-Based Communication Tools"
+  },
+  "Elon Musk<SEP>Instagram": {
+    "chunk_ids": [
+      "chunk-0ff4740030dafaae73c7101c58b2ce0c"
+    ],
+    "count": 1,
+    "create_time": 1778410112,
+    "update_time": 1778410112,
+    "_id": "Elon Musk<SEP>Instagram"
+  },
+  "Electric Vehicle Prototypes<SEP>Instagram": {
+    "chunk_ids": [
+      "chunk-0ff4740030dafaae73c7101c58b2ce0c"
+    ],
+    "count": 1,
+    "create_time": 1778410113,
+    "update_time": 1778410113,
+    "_id": "Electric Vehicle Prototypes<SEP>Instagram"
+  },
+  "Autopilot Systems<SEP>Elon Musk": {
+    "chunk_ids": [
+      "chunk-0ff4740030dafaae73c7101c58b2ce0c"
+    ],
+    "count": 1,
+    "create_time": 1778410113,
+    "update_time": 1778410113,
+    "_id": "Autopilot Systems<SEP>Elon Musk"
+  },
+  "Amazon<SEP>Android": {
+    "chunk_ids": [
+      "chunk-b9fddbcbf7e1d40cde46e5f532b21b1b"
+    ],
+    "count": 1,
+    "create_time": 1778410162,
+    "update_time": 1778410162,
+    "_id": "Amazon<SEP>Android"
+  },
+  "Android<SEP>Kindle": {
+    "chunk_ids": [
+      "chunk-b9fddbcbf7e1d40cde46e5f532b21b1b"
+    ],
+    "count": 1,
+    "create_time": 1778410162,
+    "update_time": 1778410162,
+    "_id": "Android<SEP>Kindle"
+  },
+  "Amazon<SEP>Cloud Services": {
+    "chunk_ids": [
+      "chunk-b9fddbcbf7e1d40cde46e5f532b21b1b"
+    ],
+    "count": 1,
+    "create_time": 1778410162,
+    "update_time": 1778410162,
+    "_id": "Amazon<SEP>Cloud Services"
+  },
+  "Android<SEP>Fire": {
+    "chunk_ids": [
+      "chunk-b9fddbcbf7e1d40cde46e5f532b21b1b"
+    ],
+    "count": 1,
+    "create_time": 1778410162,
+    "update_time": 1778410162,
+    "_id": "Android<SEP>Fire"
+  },
+  "Amazon<SEP>Retail and Entertainment Products": {
+    "chunk_ids": [
+      "chunk-b9fddbcbf7e1d40cde46e5f532b21b1b"
+    ],
+    "count": 1,
+    "create_time": 1778410163,
+    "update_time": 1778410163,
+    "_id": "Amazon<SEP>Retail and Entertainment Products"
+  },
+  "Meta<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-6933bdf2c1e53029b02d2862a43a3239"
+    ],
+    "count": 1,
+    "create_time": 1778410208,
+    "update_time": 1778410208,
+    "_id": "Meta<SEP>Tim Cook"
+  },
+  "AR/VR Ecosystems<SEP>Strategic Partnership": {
+    "chunk_ids": [
+      "chunk-6933bdf2c1e53029b02d2862a43a3239"
+    ],
+    "count": 1,
+    "create_time": 1778410208,
+    "update_time": 1778410208,
+    "_id": "AR/VR Ecosystems<SEP>Strategic Partnership"
+  },
+  "Apple Vision Devices<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-6933bdf2c1e53029b02d2862a43a3239"
+    ],
+    "count": 1,
+    "create_time": 1778410208,
+    "update_time": 1778410208,
+    "_id": "Apple Vision Devices<SEP>Tim Cook"
+  },
+  "Apple<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-6933bdf2c1e53029b02d2862a43a3239",
+      "chunk-63cc58f69efd26d0316ceb701b0fce5f"
+    ],
+    "count": 2,
+    "update_time": 1778411840,
+    "_id": "Apple<SEP>Meta"
+  },
+  "Hardware Integration<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-6933bdf2c1e53029b02d2862a43a3239"
+    ],
+    "count": 1,
+    "create_time": 1778410209,
+    "update_time": 1778410209,
+    "_id": "Hardware Integration<SEP>Tim Cook"
+  },
+  "Apple<SEP>Consumer Electronics Market": {
+    "chunk_ids": [
+      "chunk-1705e4732ba3c50ee925262062cce04c"
+    ],
+    "count": 1,
+    "create_time": 1778410243,
+    "update_time": 1778410243,
+    "_id": "Apple<SEP>Consumer Electronics Market"
+  },
+  "Apple<SEP>Windows-Based Hardware": {
+    "chunk_ids": [
+      "chunk-1705e4732ba3c50ee925262062cce04c"
+    ],
+    "count": 1,
+    "create_time": 1778410243,
+    "update_time": 1778410243,
+    "_id": "Apple<SEP>Windows-Based Hardware"
+  },
+  "Apple<SEP>Mobile Devices": {
+    "chunk_ids": [
+      "chunk-1705e4732ba3c50ee925262062cce04c"
+    ],
+    "count": 1,
+    "create_time": 1778410244,
+    "update_time": 1778410244,
+    "_id": "Apple<SEP>Mobile Devices"
+  },
+  "2005<SEP>Apple": {
+    "chunk_ids": [
+      "chunk-1705e4732ba3c50ee925262062cce04c"
+    ],
+    "count": 1,
+    "create_time": 1778410244,
+    "update_time": 1778410244,
+    "_id": "2005<SEP>Apple"
+  },
+  "ChatGPT<SEP>Google DeepMind": {
+    "chunk_ids": [
+      "chunk-0165678604be0b39274dba3de54175c5"
+    ],
+    "count": 1,
+    "create_time": 1778410274,
+    "update_time": 1778410274,
+    "_id": "ChatGPT<SEP>Google DeepMind"
+  },
+  "Google DeepMind<SEP>Large-Scale Conversational AI Research Program": {
+    "chunk_ids": [
+      "chunk-0165678604be0b39274dba3de54175c5"
+    ],
+    "count": 1,
+    "create_time": 1778410274,
+    "update_time": 1778410274,
+    "_id": "Google DeepMind<SEP>Large-Scale Conversational AI Research Program"
+  },
+  "ChatGPT<SEP>Google Search": {
+    "chunk_ids": [
+      "chunk-0165678604be0b39274dba3de54175c5"
+    ],
+    "count": 1,
+    "create_time": 1778410274,
+    "update_time": 1778410274,
+    "_id": "ChatGPT<SEP>Google Search"
+  },
+  "Android Voice Assistants<SEP>ChatGPT": {
+    "chunk_ids": [
+      "chunk-0165678604be0b39274dba3de54175c5"
+    ],
+    "count": 1,
+    "create_time": 1778410274,
+    "update_time": 1778410274,
+    "_id": "Android Voice Assistants<SEP>ChatGPT"
+  },
+  "AWS<SEP>Advanced Web Systems": {
+    "chunk_ids": [
+      "chunk-d1d0c9075d7e6f9f4f440e6ec63f3c50"
+    ],
+    "count": 1,
+    "create_time": 1778410306,
+    "update_time": 1778410306,
+    "_id": "AWS<SEP>Advanced Web Systems"
+  },
+  "Advanced Web Systems<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-d1d0c9075d7e6f9f4f440e6ec63f3c50"
+    ],
+    "count": 1,
+    "create_time": 1778410306,
+    "update_time": 1778410306,
+    "_id": "Advanced Web Systems<SEP>Microsoft"
+  },
+  "Advanced Web Systems<SEP>Enterprise Cloud Communication": {
+    "chunk_ids": [
+      "chunk-d1d0c9075d7e6f9f4f440e6ec63f3c50"
+    ],
+    "count": 1,
+    "create_time": 1778410306,
+    "update_time": 1778410306,
+    "_id": "Advanced Web Systems<SEP>Enterprise Cloud Communication"
+  },
+  "Advanced Web Systems<SEP>Hybrid Computing Environments": {
+    "chunk_ids": [
+      "chunk-d1d0c9075d7e6f9f4f440e6ec63f3c50"
+    ],
+    "count": 1,
+    "create_time": 1778410306,
+    "update_time": 1778410306,
+    "_id": "Advanced Web Systems<SEP>Hybrid Computing Environments"
+  },
+  "Advanced Web Systems<SEP>Networking Protocol Suite": {
+    "chunk_ids": [
+      "chunk-d1d0c9075d7e6f9f4f440e6ec63f3c50"
+    ],
+    "count": 1,
+    "create_time": 1778410307,
+    "update_time": 1778410307,
+    "_id": "Advanced Web Systems<SEP>Networking Protocol Suite"
+  },
+  "Netflix<SEP>Pixar": {
+    "chunk_ids": [
+      "chunk-b0255fc7383bd155ce579216af55b046"
+    ],
+    "count": 1,
+    "create_time": 1778410329,
+    "update_time": 1778410329,
+    "_id": "Netflix<SEP>Pixar"
+  },
+  "Original Feature Films<SEP>Pixar": {
+    "chunk_ids": [
+      "chunk-b0255fc7383bd155ce579216af55b046"
+    ],
+    "count": 1,
+    "create_time": 1778410330,
+    "update_time": 1778410330,
+    "_id": "Original Feature Films<SEP>Pixar"
+  },
+  "Pixar<SEP>Streaming Content": {
+    "chunk_ids": [
+      "chunk-b0255fc7383bd155ce579216af55b046"
+    ],
+    "count": 1,
+    "create_time": 1778410330,
+    "update_time": 1778410330,
+    "_id": "Pixar<SEP>Streaming Content"
+  },
+  "Berlin<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-ba349839d644aa008b19a8a6e3eac134"
+    ],
+    "count": 1,
+    "create_time": 1778410369,
+    "update_time": 1778410369,
+    "_id": "Berlin<SEP>Tesla"
+  },
+  "Germany<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-ba349839d644aa008b19a8a6e3eac134"
+    ],
+    "count": 1,
+    "create_time": 1778410369,
+    "update_time": 1778410369,
+    "_id": "Germany<SEP>Tesla"
+  },
+  "European Manufacturing Expansion<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-ba349839d644aa008b19a8a6e3eac134"
+    ],
+    "count": 1,
+    "create_time": 1778410370,
+    "update_time": 1778410370,
+    "_id": "European Manufacturing Expansion<SEP>Tesla"
+  },
+  "Satellite-Connected Automotive Operations<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-ba349839d644aa008b19a8a6e3eac134"
+    ],
+    "count": 1,
+    "create_time": 1778410370,
+    "update_time": 1778410370,
+    "_id": "Satellite-Connected Automotive Operations<SEP>Tesla"
+  },
+  "Android<SEP>iPhone": {
+    "chunk_ids": [
+      "chunk-22f921a29281a52e24ff99127195c5ef"
+    ],
+    "count": 1,
+    "create_time": 1778410410,
+    "update_time": 1778410410,
+    "_id": "Android<SEP>iPhone"
+  },
+  "Apple<SEP>Customized Version of Android": {
+    "chunk_ids": [
+      "chunk-22f921a29281a52e24ff99127195c5ef"
+    ],
+    "count": 1,
+    "create_time": 1778410410,
+    "update_time": 1778410410,
+    "_id": "Apple<SEP>Customized Version of Android"
+  },
+  "Facebook<SEP>iTunes": {
+    "chunk_ids": [
+      "chunk-5fc3846630776155d5fa6a760a95e625"
+    ],
+    "count": 1,
+    "create_time": 1778410443,
+    "update_time": 1778410443,
+    "_id": "Facebook<SEP>iTunes"
+  },
+  "Apple<SEP>Global Expansion Project": {
+    "chunk_ids": [
+      "chunk-5fc3846630776155d5fa6a760a95e625"
+    ],
+    "count": 1,
+    "create_time": 1778410443,
+    "update_time": 1778410443,
+    "_id": "Apple<SEP>Global Expansion Project"
+  },
+  "2010<SEP>Facebook": {
+    "chunk_ids": [
+      "chunk-5fc3846630776155d5fa6a760a95e625"
+    ],
+    "count": 1,
+    "create_time": 1778410444,
+    "update_time": 1778410444,
+    "_id": "2010<SEP>Facebook"
+  },
+  "Amazon<SEP>YouTube": {
+    "chunk_ids": [
+      "chunk-71f20c7ea2dd0f9cba67f88652f5462d"
+    ],
+    "count": 1,
+    "create_time": 1778410471,
+    "update_time": 1778410471,
+    "_id": "Amazon<SEP>YouTube"
+  },
+  "Amazon<SEP>Digital Media": {
+    "chunk_ids": [
+      "chunk-71f20c7ea2dd0f9cba67f88652f5462d"
+    ],
+    "count": 1,
+    "create_time": 1778410472,
+    "update_time": 1778410472,
+    "_id": "Amazon<SEP>Digital Media"
+  },
+  "Amazon<SEP>Streaming Services": {
+    "chunk_ids": [
+      "chunk-71f20c7ea2dd0f9cba67f88652f5462d"
+    ],
+    "count": 1,
+    "create_time": 1778410472,
+    "update_time": 1778410472,
+    "_id": "Amazon<SEP>Streaming Services"
+  },
+  "Cloud Computing Infrastructure Services<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-a3d9b089f2a85c371368c1e74acd9a7f"
+    ],
+    "count": 1,
+    "create_time": 1778410508,
+    "update_time": 1778410508,
+    "_id": "Cloud Computing Infrastructure Services<SEP>Netflix"
+  },
+  "Enterprise Data Hosting Solutions<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-a3d9b089f2a85c371368c1e74acd9a7f"
+    ],
+    "count": 1,
+    "create_time": 1778410508,
+    "update_time": 1778410508,
+    "_id": "Enterprise Data Hosting Solutions<SEP>Netflix"
+  },
+  "Major Technology Companies<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-a3d9b089f2a85c371368c1e74acd9a7f"
+    ],
+    "count": 1,
+    "create_time": 1778410509,
+    "update_time": 1778410509,
+    "_id": "Major Technology Companies<SEP>Netflix"
+  },
+  "Cloud Computing<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-a3d9b089f2a85c371368c1e74acd9a7f"
+    ],
+    "count": 1,
+    "create_time": 1778410509,
+    "update_time": 1778410509,
+    "_id": "Cloud Computing<SEP>Netflix"
+  },
+  "Data Hosting<SEP>Netflix": {
+    "chunk_ids": [
+      "chunk-a3d9b089f2a85c371368c1e74acd9a7f"
+    ],
+    "count": 1,
+    "create_time": 1778410510,
+    "update_time": 1778410510,
+    "_id": "Data Hosting<SEP>Netflix"
+  },
+  "Amazon<SEP>Instagram": {
+    "chunk_ids": [
+      "chunk-0b955303430edc4db551ac210571cf96"
+    ],
+    "count": 1,
+    "create_time": 1778410533,
+    "update_time": 1778410533,
+    "_id": "Amazon<SEP>Instagram"
+  },
+  "Amazon<SEP>Social Media Advertising": {
+    "chunk_ids": [
+      "chunk-0b955303430edc4db551ac210571cf96"
+    ],
+    "count": 1,
+    "create_time": 1778410533,
+    "update_time": 1778410533,
+    "_id": "Amazon<SEP>Social Media Advertising"
+  },
+  "Amazon<SEP>Shopping Features": {
+    "chunk_ids": [
+      "chunk-0b955303430edc4db551ac210571cf96"
+    ],
+    "count": 1,
+    "create_time": 1778410533,
+    "update_time": 1778410533,
+    "_id": "Amazon<SEP>Shopping Features"
+  },
+  "Google Search<SEP>Yahoo": {
+    "chunk_ids": [
+      "chunk-58e9cfd9a53bf1063b3fac02e36ec830"
+    ],
+    "count": 1,
+    "create_time": 1778410557,
+    "update_time": 1778410557,
+    "_id": "Google Search<SEP>Yahoo"
+  },
+  "Google<SEP>Yahoo": {
+    "chunk_ids": [
+      "chunk-58e9cfd9a53bf1063b3fac02e36ec830"
+    ],
+    "count": 1,
+    "create_time": 1778410558,
+    "update_time": 1778410558,
+    "_id": "Google<SEP>Yahoo"
+  },
+  "Late 1990s<SEP>Yahoo": {
+    "chunk_ids": [
+      "chunk-58e9cfd9a53bf1063b3fac02e36ec830"
+    ],
+    "count": 1,
+    "create_time": 1778410559,
+    "update_time": 1778410559,
+    "_id": "Late 1990s<SEP>Yahoo"
+  },
+  "Amazon<SEP>Social Media Platform": {
+    "chunk_ids": [
+      "chunk-42165e08ea53b19a33bbffd29366fbe9"
+    ],
+    "count": 1,
+    "create_time": 1778410602,
+    "update_time": 1778410602,
+    "_id": "Amazon<SEP>Social Media Platform"
+  },
+  "Amazon<SEP>University Students": {
+    "chunk_ids": [
+      "chunk-42165e08ea53b19a33bbffd29366fbe9"
+    ],
+    "count": 1,
+    "create_time": 1778410602,
+    "update_time": 1778410602,
+    "_id": "Amazon<SEP>University Students"
+  },
+  "Academic Collaboration<SEP>Amazon": {
+    "chunk_ids": [
+      "chunk-42165e08ea53b19a33bbffd29366fbe9"
+    ],
+    "count": 1,
+    "create_time": 1778410603,
+    "update_time": 1778410603,
+    "_id": "Academic Collaboration<SEP>Amazon"
+  },
+  "Microsoft<SEP>Microsoft's Investment": {
+    "chunk_ids": [
+      "chunk-42165e08ea53b19a33bbffd29366fbe9"
+    ],
+    "count": 1,
+    "create_time": 1778410603,
+    "update_time": 1778410603,
+    "_id": "Microsoft<SEP>Microsoft's Investment"
+  },
+  "Amazon<SEP>E-Commerce": {
+    "chunk_ids": [
+      "chunk-42165e08ea53b19a33bbffd29366fbe9"
+    ],
+    "count": 1,
+    "create_time": 1778410603,
+    "update_time": 1778410603,
+    "_id": "Amazon<SEP>E-Commerce"
+  },
+  "Amazon<SEP>Microsoft's Investment": {
+    "chunk_ids": [
+      "chunk-42165e08ea53b19a33bbffd29366fbe9"
+    ],
+    "count": 1,
+    "create_time": 1778410604,
+    "update_time": 1778410604,
+    "_id": "Amazon<SEP>Microsoft's Investment"
+  },
+  "MacOS<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-03221106549dc8e19bf63afbe0d89de4"
+    ],
+    "count": 1,
+    "create_time": 1778410637,
+    "update_time": 1778410637,
+    "_id": "MacOS<SEP>Microsoft"
+  },
+  "First Version Of MacOS<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-03221106549dc8e19bf63afbe0d89de4"
+    ],
+    "count": 1,
+    "create_time": 1778410637,
+    "update_time": 1778410637,
+    "_id": "First Version Of MacOS<SEP>Microsoft"
+  },
+  "Apple<SEP>MacOS": {
+    "chunk_ids": [
+      "chunk-03221106549dc8e19bf63afbe0d89de4"
+    ],
+    "count": 1,
+    "create_time": 1778410637,
+    "update_time": 1778410637,
+    "_id": "Apple<SEP>MacOS"
+  },
+  "Apple<SEP>First Version Of MacOS": {
+    "chunk_ids": [
+      "chunk-03221106549dc8e19bf63afbe0d89de4"
+    ],
+    "count": 1,
+    "create_time": 1778410639,
+    "update_time": 1778410639,
+    "_id": "Apple<SEP>First Version Of MacOS"
+  },
+  "Google<SEP>YouTube": {
+    "chunk_ids": [
+      "chunk-0439d511c5ccd267c6e49c1a71674310"
+    ],
+    "count": 1,
+    "create_time": 1778410682,
+    "update_time": 1778410682,
+    "_id": "Google<SEP>YouTube"
+  },
+  "Cloud Storage Platform<SEP>YouTube": {
+    "chunk_ids": [
+      "chunk-0439d511c5ccd267c6e49c1a71674310"
+    ],
+    "count": 1,
+    "create_time": 1778410682,
+    "update_time": 1778410682,
+    "_id": "Cloud Storage Platform<SEP>YouTube"
+  },
+  "Enterprise Data<SEP>Google": {
+    "chunk_ids": [
+      "chunk-0439d511c5ccd267c6e49c1a71674310"
+    ],
+    "count": 1,
+    "create_time": 1778410682,
+    "update_time": 1778410682,
+    "_id": "Enterprise Data<SEP>Google"
+  },
+  "Google<SEP>Internal Corporate Video Archives": {
+    "chunk_ids": [
+      "chunk-0439d511c5ccd267c6e49c1a71674310"
+    ],
+    "count": 1,
+    "create_time": 1778410683,
+    "update_time": 1778410683,
+    "_id": "Google<SEP>Internal Corporate Video Archives"
+  },
+  "Android<SEP>Lightweight Operating System": {
+    "chunk_ids": [
+      "chunk-633737bfa9dec69133d8d3468d173fde"
+    ],
+    "count": 1,
+    "create_time": 1778410719,
+    "update_time": 1778410719,
+    "_id": "Android<SEP>Lightweight Operating System"
+  },
+  "Apple<SEP>iPod": {
+    "chunk_ids": [
+      "chunk-633737bfa9dec69133d8d3468d173fde"
+    ],
+    "count": 1,
+    "create_time": 1778410719,
+    "update_time": 1778410719,
+    "_id": "Apple<SEP>iPod"
+  },
+  "Android<SEP>iPod Devices": {
+    "chunk_ids": [
+      "chunk-633737bfa9dec69133d8d3468d173fde"
+    ],
+    "count": 1,
+    "create_time": 1778410720,
+    "update_time": 1778410720,
+    "_id": "Android<SEP>iPod Devices"
+  },
+  "Android<SEP>Smartphones": {
+    "chunk_ids": [
+      "chunk-633737bfa9dec69133d8d3468d173fde"
+    ],
+    "count": 1,
+    "create_time": 1778410720,
+    "update_time": 1778410720,
+    "_id": "Android<SEP>Smartphones"
+  },
+  "IBM<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-2bb39d7eed09293fb9ea3899c8371a03"
+    ],
+    "count": 1,
+    "create_time": 1778410747,
+    "update_time": 1778410747,
+    "_id": "IBM<SEP>Microsoft"
+  },
+  "Enterprise Cloud Infrastructure Tools<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-2bb39d7eed09293fb9ea3899c8371a03"
+    ],
+    "count": 1,
+    "create_time": 1778410748,
+    "update_time": 1778410748,
+    "_id": "Enterprise Cloud Infrastructure Tools<SEP>Microsoft"
+  },
+  "1998<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-2bb39d7eed09293fb9ea3899c8371a03"
+    ],
+    "count": 1,
+    "create_time": 1778410748,
+    "update_time": 1778410748,
+    "_id": "1998<SEP>Microsoft"
+  },
+  "Consumer Smartphones<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-eaa4b62fcd86c6874a1cbf7db503cd43"
+    ],
+    "count": 1,
+    "create_time": 1778410769,
+    "update_time": 1778410769,
+    "_id": "Consumer Smartphones<SEP>Tesla"
+  },
+  "Android<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-eaa4b62fcd86c6874a1cbf7db503cd43"
+    ],
+    "count": 1,
+    "create_time": 1778410770,
+    "update_time": 1778410770,
+    "_id": "Android<SEP>Tesla"
+  },
+  "Google Services<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-eaa4b62fcd86c6874a1cbf7db503cd43"
+    ],
+    "count": 1,
+    "create_time": 1778410770,
+    "update_time": 1778410770,
+    "_id": "Google Services<SEP>Tesla"
+  },
+  "Microsoft<SEP>iOS": {
+    "chunk_ids": [
+      "chunk-e79dde3667128335d53767c715252f4e"
+    ],
+    "count": 1,
+    "create_time": 1778410803,
+    "update_time": 1778410803,
+    "_id": "Microsoft<SEP>iOS"
+  },
+  "Surface Mobile Devices<SEP>iOS": {
+    "chunk_ids": [
+      "chunk-e79dde3667128335d53767c715252f4e"
+    ],
+    "count": 1,
+    "create_time": 1778410803,
+    "update_time": 1778410803,
+    "_id": "Surface Mobile Devices<SEP>iOS"
+  },
+  "Enterprise Tablets<SEP>iOS": {
+    "chunk_ids": [
+      "chunk-e79dde3667128335d53767c715252f4e"
+    ],
+    "count": 1,
+    "create_time": 1778410804,
+    "update_time": 1778410804,
+    "_id": "Enterprise Tablets<SEP>iOS"
+  },
+  "Microsoft<SEP>Surface Mobile Devices": {
+    "chunk_ids": [
+      "chunk-e79dde3667128335d53767c715252f4e"
+    ],
+    "count": 1,
+    "create_time": 1778410804,
+    "update_time": 1778410804,
+    "_id": "Microsoft<SEP>Surface Mobile Devices"
+  },
+  "Enterprise Tablets<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-e79dde3667128335d53767c715252f4e"
+    ],
+    "count": 1,
+    "create_time": 1778410805,
+    "update_time": 1778410805,
+    "_id": "Enterprise Tablets<SEP>Microsoft"
+  },
+  "Cloud Computing Infrastructure<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "Cloud Computing Infrastructure<SEP>Meta"
+  },
+  "Enterprise Software<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "Enterprise Software<SEP>Meta"
+  },
+  "AWS<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "AWS<SEP>Meta"
+  },
+  "Enterprise Software<SEP>Financial Institutions": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "Enterprise Software<SEP>Financial Institutions"
+  },
+  "Azure<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "Azure<SEP>Meta"
+  },
+  "Cloud Computing<SEP>Cloud Computing Infrastructure": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "Cloud Computing<SEP>Cloud Computing Infrastructure"
+  },
+  "Enterprise Software<SEP>Financial Services": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "Enterprise Software<SEP>Financial Services"
+  },
+  "Financial Institutions<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-b461c31d3f069aaab667ec5e9b4cf029"
+    ],
+    "count": 1,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "Financial Institutions<SEP>Meta"
+  },
+  "Apple<SEP>Windows": {
+    "chunk_ids": [
+      "chunk-5e4ff497a03deb3546c5d3063463573a"
+    ],
+    "count": 1,
+    "create_time": 1778410943,
+    "update_time": 1778410943,
+    "_id": "Apple<SEP>Windows"
+  },
+  "Microsoft Office<SEP>Windows": {
+    "chunk_ids": [
+      "chunk-5e4ff497a03deb3546c5d3063463573a"
+    ],
+    "count": 1,
+    "create_time": 1778410943,
+    "update_time": 1778410943,
+    "_id": "Microsoft Office<SEP>Windows"
+  },
+  "Mac Hardware Systems<SEP>Windows": {
+    "chunk_ids": [
+      "chunk-5e4ff497a03deb3546c5d3063463573a"
+    ],
+    "count": 1,
+    "create_time": 1778410943,
+    "update_time": 1778410943,
+    "_id": "Mac Hardware Systems<SEP>Windows"
+  },
+  "Microsoft<SEP>Microsoft Office": {
+    "chunk_ids": [
+      "chunk-5e4ff497a03deb3546c5d3063463573a"
+    ],
+    "count": 1,
+    "create_time": 1778410943,
+    "update_time": 1778410943,
+    "_id": "Microsoft<SEP>Microsoft Office"
+  },
+  "Chrome Browser<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-5e9818d895eab1fae19b0437a9150ed3"
+    ],
+    "count": 1,
+    "create_time": 1778410985,
+    "update_time": 1778410985,
+    "_id": "Chrome Browser<SEP>Microsoft"
+  },
+  "Chrome Browser<SEP>Lightweight Browsing": {
+    "chunk_ids": [
+      "chunk-5e9818d895eab1fae19b0437a9150ed3"
+    ],
+    "count": 1,
+    "create_time": 1778410985,
+    "update_time": 1778410985,
+    "_id": "Chrome Browser<SEP>Lightweight Browsing"
+  },
+  "Chrome Browser<SEP>Open-Source Compatibility": {
+    "chunk_ids": [
+      "chunk-5e9818d895eab1fae19b0437a9150ed3"
+    ],
+    "count": 1,
+    "create_time": 1778410985,
+    "update_time": 1778410985,
+    "_id": "Chrome Browser<SEP>Open-Source Compatibility"
+  },
+  "LinkedIn<SEP>Photo-Sharing Application": {
+    "chunk_ids": [
+      "chunk-c2146299c703420429b8c9713f55c25f"
+    ],
+    "count": 1,
+    "create_time": 1778411043,
+    "update_time": 1778411043,
+    "_id": "LinkedIn<SEP>Photo-Sharing Application"
+  },
+  "Instagram<SEP>LinkedIn": {
+    "chunk_ids": [
+      "chunk-c2146299c703420429b8c9713f55c25f"
+    ],
+    "count": 1,
+    "create_time": 1778411043,
+    "update_time": 1778411043,
+    "_id": "Instagram<SEP>LinkedIn"
+  },
+  "LinkedIn<SEP>Personal Lifestyle Content": {
+    "chunk_ids": [
+      "chunk-c2146299c703420429b8c9713f55c25f"
+    ],
+    "count": 1,
+    "create_time": 1778411043,
+    "update_time": 1778411043,
+    "_id": "LinkedIn<SEP>Personal Lifestyle Content"
+  },
+  "LinkedIn<SEP>Professional Networking": {
+    "chunk_ids": [
+      "chunk-c2146299c703420429b8c9713f55c25f"
+    ],
+    "count": 1,
+    "create_time": 1778411043,
+    "update_time": 1778411043,
+    "_id": "LinkedIn<SEP>Professional Networking"
+  },
+  "Amazon<SEP>LinkedIn": {
+    "chunk_ids": [
+      "chunk-c2146299c703420429b8c9713f55c25f"
+    ],
+    "count": 1,
+    "create_time": 1778411043,
+    "update_time": 1778411043,
+    "_id": "Amazon<SEP>LinkedIn"
+  },
+  "Samsung<SEP>iPad": {
+    "chunk_ids": [
+      "chunk-a0464c6bccaf728de6334c47a9f5e6e8"
+    ],
+    "count": 1,
+    "create_time": 1778411114,
+    "update_time": 1778411114,
+    "_id": "Samsung<SEP>iPad"
+  },
+  "Apple<SEP>iPad": {
+    "chunk_ids": [
+      "chunk-a0464c6bccaf728de6334c47a9f5e6e8"
+    ],
+    "count": 1,
+    "create_time": 1778411114,
+    "update_time": 1778411114,
+    "_id": "Apple<SEP>iPad"
+  },
+  "Google<SEP>Samsung": {
+    "chunk_ids": [
+      "chunk-a0464c6bccaf728de6334c47a9f5e6e8"
+    ],
+    "count": 1,
+    "create_time": 1778411114,
+    "update_time": 1778411114,
+    "_id": "Google<SEP>Samsung"
+  },
+  "Joint Hardware Initiative<SEP>Samsung": {
+    "chunk_ids": [
+      "chunk-a0464c6bccaf728de6334c47a9f5e6e8"
+    ],
+    "count": 1,
+    "create_time": 1778411115,
+    "update_time": 1778411115,
+    "_id": "Joint Hardware Initiative<SEP>Samsung"
+  },
+  "Android<SEP>Google": {
+    "chunk_ids": [
+      "chunk-a0464c6bccaf728de6334c47a9f5e6e8"
+    ],
+    "count": 1,
+    "create_time": 1778411115,
+    "update_time": 1778411115,
+    "_id": "Android<SEP>Google"
+  },
+  "Google<SEP>Joint Hardware Initiative": {
+    "chunk_ids": [
+      "chunk-a0464c6bccaf728de6334c47a9f5e6e8"
+    ],
+    "count": 1,
+    "create_time": 1778411115,
+    "update_time": 1778411115,
+    "_id": "Google<SEP>Joint Hardware Initiative"
+  },
+  "Microsoft<SEP>TikTok": {
+    "chunk_ids": [
+      "chunk-5d9cf01ff5f5cfcdeb47fbcebef0bb38"
+    ],
+    "count": 1,
+    "create_time": 1778411166,
+    "update_time": 1778411166,
+    "_id": "Microsoft<SEP>TikTok"
+  },
+  "Cloud Storage Service<SEP>TikTok": {
+    "chunk_ids": [
+      "chunk-5d9cf01ff5f5cfcdeb47fbcebef0bb38"
+    ],
+    "count": 1,
+    "create_time": 1778411166,
+    "update_time": 1778411166,
+    "_id": "Cloud Storage Service<SEP>TikTok"
+  },
+  "Short-Form Educational Videos<SEP>TikTok": {
+    "chunk_ids": [
+      "chunk-5d9cf01ff5f5cfcdeb47fbcebef0bb38"
+    ],
+    "count": 1,
+    "create_time": 1778411166,
+    "update_time": 1778411166,
+    "_id": "Short-Form Educational Videos<SEP>TikTok"
+  },
+  "Enterprise Training Systems<SEP>TikTok": {
+    "chunk_ids": [
+      "chunk-5d9cf01ff5f5cfcdeb47fbcebef0bb38"
+    ],
+    "count": 1,
+    "create_time": 1778411166,
+    "update_time": 1778411166,
+    "_id": "Enterprise Training Systems<SEP>TikTok"
+  },
+  "Nintendo<SEP>PlayStation": {
+    "chunk_ids": [
+      "chunk-c7f49cf4a66a68137b54e6c75c0a5b44"
+    ],
+    "count": 1,
+    "create_time": 1778411208,
+    "update_time": 1778411208,
+    "_id": "Nintendo<SEP>PlayStation"
+  },
+  "PlayStation<SEP>Sony": {
+    "chunk_ids": [
+      "chunk-c7f49cf4a66a68137b54e6c75c0a5b44"
+    ],
+    "count": 1,
+    "create_time": 1778411209,
+    "update_time": 1778411209,
+    "_id": "PlayStation<SEP>Sony"
+  },
+  "Nintendo<SEP>Super Nintendo Entertainment System": {
+    "chunk_ids": [
+      "chunk-c7f49cf4a66a68137b54e6c75c0a5b44"
+    ],
+    "count": 1,
+    "create_time": 1778411209,
+    "update_time": 1778411209,
+    "_id": "Nintendo<SEP>Super Nintendo Entertainment System"
+  },
+  "Consumer Electronics Manufacturing<SEP>IBM": {
+    "chunk_ids": [
+      "chunk-2a136d5af24e030618b286502faf9e60"
+    ],
+    "count": 1,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "Consumer Electronics Manufacturing<SEP>IBM"
+  },
+  "Apple<SEP>IBM": {
+    "chunk_ids": [
+      "chunk-2a136d5af24e030618b286502faf9e60"
+    ],
+    "count": 1,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "Apple<SEP>IBM"
+  },
+  "IBM<SEP>Samsung": {
+    "chunk_ids": [
+      "chunk-2a136d5af24e030618b286502faf9e60"
+    ],
+    "count": 1,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "IBM<SEP>Samsung"
+  },
+  "IBM<SEP>Smartphones": {
+    "chunk_ids": [
+      "chunk-2a136d5af24e030618b286502faf9e60"
+    ],
+    "count": 1,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "IBM<SEP>Smartphones"
+  },
+  "IBM<SEP>Tablets": {
+    "chunk_ids": [
+      "chunk-2a136d5af24e030618b286502faf9e60"
+    ],
+    "count": 1,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "IBM<SEP>Tablets"
+  },
+  "Global Markets<SEP>IBM": {
+    "chunk_ids": [
+      "chunk-2a136d5af24e030618b286502faf9e60"
+    ],
+    "count": 1,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "Global Markets<SEP>IBM"
+  },
+  "Consumer Electronics<SEP>IBM": {
+    "chunk_ids": [
+      "chunk-2a136d5af24e030618b286502faf9e60"
+    ],
+    "count": 1,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "Consumer Electronics<SEP>IBM"
+  },
+  "Firefox<SEP>Google": {
+    "chunk_ids": [
+      "chunk-85bc997290f4aba5d2a50a3d9ab0e8f0"
+    ],
+    "count": 1,
+    "create_time": 1778411309,
+    "update_time": 1778411309,
+    "_id": "Firefox<SEP>Google"
+  },
+  "Firefox Browser<SEP>Google": {
+    "chunk_ids": [
+      "chunk-85bc997290f4aba5d2a50a3d9ab0e8f0"
+    ],
+    "count": 1,
+    "create_time": 1778411309,
+    "update_time": 1778411309,
+    "_id": "Firefox Browser<SEP>Google"
+  },
+  "Firefox<SEP>Google Search": {
+    "chunk_ids": [
+      "chunk-85bc997290f4aba5d2a50a3d9ab0e8f0"
+    ],
+    "count": 1,
+    "create_time": 1778411309,
+    "update_time": 1778411309,
+    "_id": "Firefox<SEP>Google Search"
+  },
+  "Firefox<SEP>Gmail": {
+    "chunk_ids": [
+      "chunk-85bc997290f4aba5d2a50a3d9ab0e8f0"
+    ],
+    "count": 1,
+    "create_time": 1778411309,
+    "update_time": 1778411309,
+    "_id": "Firefox<SEP>Gmail"
+  },
+  "Smart Speakers<SEP>Spotify": {
+    "chunk_ids": [
+      "chunk-c0a52dfe32af86025e9d50fa3ae6a733"
+    ],
+    "count": 1,
+    "create_time": 1778411354,
+    "update_time": 1778411354,
+    "_id": "Smart Speakers<SEP>Spotify"
+  },
+  "Home Entertainment Systems<SEP>Spotify": {
+    "chunk_ids": [
+      "chunk-c0a52dfe32af86025e9d50fa3ae6a733"
+    ],
+    "count": 1,
+    "create_time": 1778411354,
+    "update_time": 1778411354,
+    "_id": "Home Entertainment Systems<SEP>Spotify"
+  },
+  "Amazon Alexa<SEP>Smart Speakers": {
+    "chunk_ids": [
+      "chunk-c0a52dfe32af86025e9d50fa3ae6a733"
+    ],
+    "count": 1,
+    "create_time": 1778411354,
+    "update_time": 1778411354,
+    "_id": "Amazon Alexa<SEP>Smart Speakers"
+  },
+  "Hardware Manufacturing<SEP>Spotify": {
+    "chunk_ids": [
+      "chunk-c0a52dfe32af86025e9d50fa3ae6a733"
+    ],
+    "count": 1,
+    "create_time": 1778411354,
+    "update_time": 1778411354,
+    "_id": "Hardware Manufacturing<SEP>Spotify"
+  },
+  "Amazon Alexa<SEP>Home Entertainment Systems": {
+    "chunk_ids": [
+      "chunk-c0a52dfe32af86025e9d50fa3ae6a733"
+    ],
+    "count": 1,
+    "create_time": 1778411354,
+    "update_time": 1778411354,
+    "_id": "Amazon Alexa<SEP>Home Entertainment Systems"
+  },
+  "Linux<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-40d8f3849d4bda04365ffc7d6caadc85"
+    ],
+    "count": 1,
+    "create_time": 1778411391,
+    "update_time": 1778411391,
+    "_id": "Linux<SEP>Microsoft"
+  },
+  "Enterprise Cloud Servers<SEP>Linux": {
+    "chunk_ids": [
+      "chunk-40d8f3849d4bda04365ffc7d6caadc85"
+    ],
+    "count": 1,
+    "create_time": 1778411391,
+    "update_time": 1778411391,
+    "_id": "Enterprise Cloud Servers<SEP>Linux"
+  },
+  "Linux<SEP>Windows Infrastructure": {
+    "chunk_ids": [
+      "chunk-40d8f3849d4bda04365ffc7d6caadc85"
+    ],
+    "count": 1,
+    "create_time": 1778411391,
+    "update_time": 1778411391,
+    "_id": "Linux<SEP>Windows Infrastructure"
+  },
+  "Linux<SEP>Proprietary Operating System": {
+    "chunk_ids": [
+      "chunk-40d8f3849d4bda04365ffc7d6caadc85"
+    ],
+    "count": 1,
+    "create_time": 1778411391,
+    "update_time": 1778411391,
+    "_id": "Linux<SEP>Proprietary Operating System"
+  },
+  "Adobe<SEP>Web Browsers": {
+    "chunk_ids": [
+      "chunk-eda1cf1ae0b20285659378bdf1f8e97a"
+    ],
+    "count": 1,
+    "create_time": 1778411436,
+    "update_time": 1778411436,
+    "_id": "Adobe<SEP>Web Browsers"
+  },
+  "Android Devices<SEP>Web Browsers": {
+    "chunk_ids": [
+      "chunk-eda1cf1ae0b20285659378bdf1f8e97a"
+    ],
+    "count": 1,
+    "create_time": 1778411436,
+    "update_time": 1778411436,
+    "_id": "Android Devices<SEP>Web Browsers"
+  },
+  "Adobe<SEP>Mobile Operating Systems": {
+    "chunk_ids": [
+      "chunk-eda1cf1ae0b20285659378bdf1f8e97a"
+    ],
+    "count": 1,
+    "create_time": 1778411436,
+    "update_time": 1778411436,
+    "_id": "Adobe<SEP>Mobile Operating Systems"
+  },
+  "Google Chrome Extensions<SEP>Web Browsers": {
+    "chunk_ids": [
+      "chunk-eda1cf1ae0b20285659378bdf1f8e97a"
+    ],
+    "count": 1,
+    "create_time": 1778411436,
+    "update_time": 1778411436,
+    "_id": "Google Chrome Extensions<SEP>Web Browsers"
+  },
+  "Adobe<SEP>Google Chrome Extensions": {
+    "chunk_ids": [
+      "chunk-eda1cf1ae0b20285659378bdf1f8e97a"
+    ],
+    "count": 1,
+    "create_time": 1778411436,
+    "update_time": 1778411436,
+    "_id": "Adobe<SEP>Google Chrome Extensions"
+  },
+  "Bill Gates<SEP>Stanford University": {
+    "chunk_ids": [
+      "chunk-f674dafb6eb0dd216549fba1512c2ab6",
+      "chunk-9112a088ddf7be5a2ff9b231a25b4752"
+    ],
+    "count": 2,
+    "update_time": 1778412008,
+    "_id": "Bill Gates<SEP>Stanford University"
+  },
+  "Microsoft<SEP>Personal Computing": {
+    "chunk_ids": [
+      "chunk-f674dafb6eb0dd216549fba1512c2ab6"
+    ],
+    "count": 1,
+    "create_time": 1778411484,
+    "update_time": 1778411484,
+    "_id": "Microsoft<SEP>Personal Computing"
+  },
+  "Gaming<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-f674dafb6eb0dd216549fba1512c2ab6"
+    ],
+    "count": 1,
+    "create_time": 1778411484,
+    "update_time": 1778411484,
+    "_id": "Gaming<SEP>Microsoft"
+  },
+  "Microsoft<SEP>Smartphone Hardware": {
+    "chunk_ids": [
+      "chunk-f674dafb6eb0dd216549fba1512c2ab6"
+    ],
+    "count": 1,
+    "create_time": 1778411484,
+    "update_time": 1778411484,
+    "_id": "Microsoft<SEP>Smartphone Hardware"
+  },
+  "Jeff Bezos<SEP>Twitter": {
+    "chunk_ids": [
+      "chunk-dc4b055514ad6dcd6c8519c92e56a971"
+    ],
+    "count": 1,
+    "create_time": 1778411528,
+    "update_time": 1778411528,
+    "_id": "Jeff Bezos<SEP>Twitter"
+  },
+  "Amazon Advertising Systems<SEP>Jeff Bezos": {
+    "chunk_ids": [
+      "chunk-dc4b055514ad6dcd6c8519c92e56a971"
+    ],
+    "count": 1,
+    "create_time": 1778411528,
+    "update_time": 1778411528,
+    "_id": "Amazon Advertising Systems<SEP>Jeff Bezos"
+  },
+  "Jeff Bezos<SEP>Prime Video": {
+    "chunk_ids": [
+      "chunk-dc4b055514ad6dcd6c8519c92e56a971"
+    ],
+    "count": 1,
+    "create_time": 1778411528,
+    "update_time": 1778411528,
+    "_id": "Jeff Bezos<SEP>Prime Video"
+  },
+  "2022<SEP>Jeff Bezos": {
+    "chunk_ids": [
+      "chunk-dc4b055514ad6dcd6c8519c92e56a971"
+    ],
+    "count": 1,
+    "create_time": 1778411528,
+    "update_time": 1778411528,
+    "_id": "2022<SEP>Jeff Bezos"
+  },
+  "Malcolm Gladwell<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-70fb8c2902ff4169377e338c951abc06"
+    ],
+    "count": 1,
+    "create_time": 1778411609,
+    "update_time": 1778411609,
+    "_id": "Malcolm Gladwell<SEP>Steve Jobs"
+  },
+  "Cloud Computing<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-70fb8c2902ff4169377e338c951abc06"
+    ],
+    "count": 1,
+    "create_time": 1778411609,
+    "update_time": 1778411609,
+    "_id": "Cloud Computing<SEP>Steve Jobs"
+  },
+  "Steve Jobs<SEP>Streaming Media Services": {
+    "chunk_ids": [
+      "chunk-70fb8c2902ff4169377e338c951abc06"
+    ],
+    "count": 1,
+    "create_time": 1778411609,
+    "update_time": 1778411609,
+    "_id": "Steve Jobs<SEP>Streaming Media Services"
+  },
+  "2011<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-70fb8c2902ff4169377e338c951abc06"
+    ],
+    "count": 1,
+    "create_time": 1778411610,
+    "update_time": 1778411610,
+    "_id": "2011<SEP>Steve Jobs"
+  },
+  "Bill Gates<SEP>Think Different": {
+    "chunk_ids": [
+      "chunk-52c2c72f070c4a0679a377de8496e1d4"
+    ],
+    "count": 1,
+    "create_time": 1778411658,
+    "update_time": 1778411658,
+    "_id": "Bill Gates<SEP>Think Different"
+  },
+  "Microsoft<SEP>Windows Laptops": {
+    "chunk_ids": [
+      "chunk-52c2c72f070c4a0679a377de8496e1d4"
+    ],
+    "count": 1,
+    "create_time": 1778411658,
+    "update_time": 1778411658,
+    "_id": "Microsoft<SEP>Windows Laptops"
+  },
+  "Enterprise Software Innovation<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-52c2c72f070c4a0679a377de8496e1d4"
+    ],
+    "count": 1,
+    "create_time": 1778411658,
+    "update_time": 1778411658,
+    "_id": "Enterprise Software Innovation<SEP>Microsoft"
+  },
+  "Campaign<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-52c2c72f070c4a0679a377de8496e1d4"
+    ],
+    "count": 1,
+    "create_time": 1778411658,
+    "update_time": 1778411658,
+    "_id": "Campaign<SEP>Microsoft"
+  },
+  "Bill Gates<SEP>Campaign": {
+    "chunk_ids": [
+      "chunk-52c2c72f070c4a0679a377de8496e1d4"
+    ],
+    "count": 1,
+    "create_time": 1778411658,
+    "update_time": 1778411658,
+    "_id": "Bill Gates<SEP>Campaign"
+  },
+  "Google<SEP>Sundar Pichai": {
+    "chunk_ids": [
+      "chunk-4361c819a8f438c6f813df4d78f7072a"
+    ],
+    "count": 1,
+    "create_time": 1778411697,
+    "update_time": 1778411697,
+    "_id": "Google<SEP>Sundar Pichai"
+  },
+  "Google Search<SEP>Mark Zuckerberg": {
+    "chunk_ids": [
+      "chunk-4361c819a8f438c6f813df4d78f7072a"
+    ],
+    "count": 1,
+    "create_time": 1778411697,
+    "update_time": 1778411697,
+    "_id": "Google Search<SEP>Mark Zuckerberg"
+  },
+  "Android<SEP>Mark Zuckerberg": {
+    "chunk_ids": [
+      "chunk-4361c819a8f438c6f813df4d78f7072a"
+    ],
+    "count": 1,
+    "create_time": 1778411697,
+    "update_time": 1778411697,
+    "_id": "Android<SEP>Mark Zuckerberg"
+  },
+  "Google<SEP>Mark Zuckerberg": {
+    "chunk_ids": [
+      "chunk-4361c819a8f438c6f813df4d78f7072a"
+    ],
+    "count": 1,
+    "create_time": 1778411697,
+    "update_time": 1778411697,
+    "_id": "Google<SEP>Mark Zuckerberg"
+  },
+  "Blue Origin<SEP>Elon Musk": {
+    "chunk_ids": [
+      "chunk-9c49463ede301432afefa2ca4cf4d13d"
+    ],
+    "count": 1,
+    "create_time": 1778411741,
+    "update_time": 1778411741,
+    "_id": "Blue Origin<SEP>Elon Musk"
+  },
+  "Blue Origin<SEP>Tesla Satellite Deployments": {
+    "chunk_ids": [
+      "chunk-9c49463ede301432afefa2ca4cf4d13d"
+    ],
+    "count": 1,
+    "create_time": 1778411741,
+    "update_time": 1778411741,
+    "_id": "Blue Origin<SEP>Tesla Satellite Deployments"
+  },
+  "Elon Musk<SEP>Mars Transportation Initiatives": {
+    "chunk_ids": [
+      "chunk-9c49463ede301432afefa2ca4cf4d13d"
+    ],
+    "count": 1,
+    "create_time": 1778411742,
+    "update_time": 1778411742,
+    "_id": "Elon Musk<SEP>Mars Transportation Initiatives"
+  },
+  "Reed Hastings<SEP>Spotify": {
+    "chunk_ids": [
+      "chunk-930ff7459e30c322b893c54a3c364c91"
+    ],
+    "count": 1,
+    "create_time": 1778411768,
+    "update_time": 1778411768,
+    "_id": "Reed Hastings<SEP>Spotify"
+  },
+  "Spotify<SEP>Subscription Music Streaming": {
+    "chunk_ids": [
+      "chunk-930ff7459e30c322b893c54a3c364c91"
+    ],
+    "count": 1,
+    "create_time": 1778411768,
+    "update_time": 1778411768,
+    "_id": "Spotify<SEP>Subscription Music Streaming"
+  },
+  "AI-Powered Film Recommendation Systems<SEP>Spotify": {
+    "chunk_ids": [
+      "chunk-930ff7459e30c322b893c54a3c364c91"
+    ],
+    "count": 1,
+    "create_time": 1778411769,
+    "update_time": 1778411769,
+    "_id": "AI-Powered Film Recommendation Systems<SEP>Spotify"
+  },
+  "Tim Cook<SEP>U.S. Congress": {
+    "chunk_ids": [
+      "chunk-63cc58f69efd26d0316ceb701b0fce5f"
+    ],
+    "count": 1,
+    "create_time": 1778411840,
+    "update_time": 1778411840,
+    "_id": "Tim Cook<SEP>U.S. Congress"
+  },
+  "Facebook<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-63cc58f69efd26d0316ceb701b0fce5f"
+    ],
+    "count": 1,
+    "create_time": 1778411840,
+    "update_time": 1778411840,
+    "_id": "Facebook<SEP>Tim Cook"
+  },
+  "Instagram<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-63cc58f69efd26d0316ceb701b0fce5f"
+    ],
+    "count": 1,
+    "create_time": 1778411840,
+    "update_time": 1778411840,
+    "_id": "Instagram<SEP>Tim Cook"
+  },
+  "Facebook's Advertising Systems<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-63cc58f69efd26d0316ceb701b0fce5f"
+    ],
+    "count": 1,
+    "create_time": 1778411840,
+    "update_time": 1778411840,
+    "_id": "Facebook's Advertising Systems<SEP>Tim Cook"
+  },
+  "Instagram Data Privacy Operations<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-63cc58f69efd26d0316ceb701b0fce5f"
+    ],
+    "count": 1,
+    "create_time": 1778411840,
+    "update_time": 1778411840,
+    "_id": "Instagram Data Privacy Operations<SEP>Tim Cook"
+  },
+  "Reusable Rockets<SEP>SpaceX": {
+    "chunk_ids": [
+      "chunk-647910354ec6629d233de1cb45fdbfb4"
+    ],
+    "count": 1,
+    "create_time": 1778411885,
+    "update_time": 1778411885,
+    "_id": "Reusable Rockets<SEP>SpaceX"
+  },
+  "Electric Cars<SEP>Tesla": {
+    "chunk_ids": [
+      "chunk-647910354ec6629d233de1cb45fdbfb4"
+    ],
+    "count": 1,
+    "create_time": 1778411885,
+    "update_time": 1778411885,
+    "_id": "Electric Cars<SEP>Tesla"
+  },
+  "2020s<SEP>Jeff Bezos": {
+    "chunk_ids": [
+      "chunk-647910354ec6629d233de1cb45fdbfb4"
+    ],
+    "count": 1,
+    "create_time": 1778411885,
+    "update_time": 1778411885,
+    "_id": "2020s<SEP>Jeff Bezos"
+  },
+  "Enterprise Software<SEP>Jony Ive": {
+    "chunk_ids": [
+      "chunk-dbf9827f3bade263b58117b44907940a"
+    ],
+    "count": 1,
+    "create_time": 1778411918,
+    "update_time": 1778411918,
+    "_id": "Enterprise Software<SEP>Jony Ive"
+  },
+  "Cloud Infrastructure Services<SEP>Jony Ive": {
+    "chunk_ids": [
+      "chunk-dbf9827f3bade263b58117b44907940a"
+    ],
+    "count": 1,
+    "create_time": 1778411918,
+    "update_time": 1778411918,
+    "_id": "Cloud Infrastructure Services<SEP>Jony Ive"
+  },
+  "Apple<SEP>Jony Ive": {
+    "chunk_ids": [
+      "chunk-dbf9827f3bade263b58117b44907940a"
+    ],
+    "count": 1,
+    "create_time": 1778411918,
+    "update_time": 1778411918,
+    "_id": "Apple<SEP>Jony Ive"
+  },
+  "Elon Musk<SEP>Facebook": {
+    "chunk_ids": [
+      "chunk-e44d73e862b20c1ab62ae487362601a2"
+    ],
+    "count": 1,
+    "create_time": 1778411974,
+    "update_time": 1778411974,
+    "_id": "Elon Musk<SEP>Facebook"
+  },
+  "Elon Musk<SEP>X": {
+    "chunk_ids": [
+      "chunk-e44d73e862b20c1ab62ae487362601a2"
+    ],
+    "count": 1,
+    "create_time": 1778411974,
+    "update_time": 1778411974,
+    "_id": "Elon Musk<SEP>X"
+  },
+  "Facebook<SEP>X": {
+    "chunk_ids": [
+      "chunk-e44d73e862b20c1ab62ae487362601a2"
+    ],
+    "count": 1,
+    "create_time": 1778411974,
+    "update_time": 1778411974,
+    "_id": "Facebook<SEP>X"
+  },
+  "Elon Musk<SEP>SpaceX": {
+    "chunk_ids": [
+      "chunk-e44d73e862b20c1ab62ae487362601a2",
+      "chunk-a7c08a5d789d9e9be6d13e4de02ba56b"
+    ],
+    "count": 2,
+    "update_time": 1778412155,
+    "_id": "Elon Musk<SEP>SpaceX"
+  },
+  "Bill Gates<SEP>Stanford Commencement Speech": {
+    "chunk_ids": [
+      "chunk-9112a088ddf7be5a2ff9b231a25b4752"
+    ],
+    "count": 1,
+    "create_time": 1778412007,
+    "update_time": 1778412007,
+    "_id": "Bill Gates<SEP>Stanford Commencement Speech"
+  },
+  "Cloud Education Platforms<SEP>Microsoft": {
+    "chunk_ids": [
+      "chunk-9112a088ddf7be5a2ff9b231a25b4752"
+    ],
+    "count": 1,
+    "create_time": 1778412007,
+    "update_time": 1778412007,
+    "_id": "Cloud Education Platforms<SEP>Microsoft"
+  },
+  "Jeff Bezos<SEP>PayPal": {
+    "chunk_ids": [
+      "chunk-82316310d38362683d540559a56812ed"
+    ],
+    "count": 1,
+    "create_time": 1778412033,
+    "update_time": 1778412033,
+    "_id": "Jeff Bezos<SEP>PayPal"
+  },
+  "Amazon Checkout Systems<SEP>Jeff Bezos": {
+    "chunk_ids": [
+      "chunk-82316310d38362683d540559a56812ed"
+    ],
+    "count": 1,
+    "create_time": 1778412033,
+    "update_time": 1778412033,
+    "_id": "Amazon Checkout Systems<SEP>Jeff Bezos"
+  },
+  "International Payment Infrastructure<SEP>Jeff Bezos": {
+    "chunk_ids": [
+      "chunk-82316310d38362683d540559a56812ed"
+    ],
+    "count": 1,
+    "create_time": 1778412033,
+    "update_time": 1778412033,
+    "_id": "International Payment Infrastructure<SEP>Jeff Bezos"
+  },
+  "Microsoft<SEP>Steve Ballmer": {
+    "chunk_ids": [
+      "chunk-77b6219c04b04ff4cd1dec585b00932c"
+    ],
+    "count": 1,
+    "create_time": 1778412108,
+    "update_time": 1778412108,
+    "_id": "Microsoft<SEP>Steve Ballmer"
+  },
+  "Tim Cook<SEP>Windows": {
+    "chunk_ids": [
+      "chunk-77b6219c04b04ff4cd1dec585b00932c"
+    ],
+    "count": 1,
+    "create_time": 1778412108,
+    "update_time": 1778412108,
+    "_id": "Tim Cook<SEP>Windows"
+  },
+  "Windows<SEP>iPhone": {
+    "chunk_ids": [
+      "chunk-77b6219c04b04ff4cd1dec585b00932c",
+      "chunk-0ae935ebf5a67f88b6f7b3db7ce04610"
+    ],
+    "count": 2,
+    "update_time": 1778412699,
+    "_id": "Windows<SEP>iPhone"
+  },
+  "Microsoft<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-77b6219c04b04ff4cd1dec585b00932c"
+    ],
+    "count": 1,
+    "create_time": 1778412108,
+    "update_time": 1778412108,
+    "_id": "Microsoft<SEP>Tim Cook"
+  },
+  "Windows<SEP>iPad": {
+    "chunk_ids": [
+      "chunk-77b6219c04b04ff4cd1dec585b00932c"
+    ],
+    "count": 1,
+    "create_time": 1778412108,
+    "update_time": 1778412108,
+    "_id": "Windows<SEP>iPad"
+  },
+  "2014<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-77b6219c04b04ff4cd1dec585b00932c"
+    ],
+    "count": 1,
+    "create_time": 1778412108,
+    "update_time": 1778412108,
+    "_id": "2014<SEP>Tim Cook"
+  },
+  "Elon Musk<SEP>Online Retail Logistics": {
+    "chunk_ids": [
+      "chunk-a7c08a5d789d9e9be6d13e4de02ba56b"
+    ],
+    "count": 1,
+    "create_time": 1778412155,
+    "update_time": 1778412155,
+    "_id": "Elon Musk<SEP>Online Retail Logistics"
+  },
+  "Elon Musk<SEP>The Everything Store": {
+    "chunk_ids": [
+      "chunk-a7c08a5d789d9e9be6d13e4de02ba56b"
+    ],
+    "count": 1,
+    "create_time": 1778412155,
+    "update_time": 1778412155,
+    "_id": "Elon Musk<SEP>The Everything Store"
+  },
+  "Biography<SEP>Elon Musk": {
+    "chunk_ids": [
+      "chunk-a7c08a5d789d9e9be6d13e4de02ba56b"
+    ],
+    "count": 1,
+    "create_time": 1778412155,
+    "update_time": 1778412155,
+    "_id": "Biography<SEP>Elon Musk"
+  },
+  "Sundar Pichai<SEP>iPhone": {
+    "chunk_ids": [
+      "chunk-6b0f0e8cffb9aef4dc0581829d487e8c"
+    ],
+    "count": 1,
+    "create_time": 1778412182,
+    "update_time": 1778412182,
+    "_id": "Sundar Pichai<SEP>iPhone"
+  },
+  "Apple Inc.<SEP>iPhone": {
+    "chunk_ids": [
+      "chunk-6b0f0e8cffb9aef4dc0581829d487e8c"
+    ],
+    "count": 1,
+    "create_time": 1778412182,
+    "update_time": 1778412182,
+    "_id": "Apple Inc.<SEP>iPhone"
+  },
+  "Android<SEP>Sundar Pichai": {
+    "chunk_ids": [
+      "chunk-6b0f0e8cffb9aef4dc0581829d487e8c"
+    ],
+    "count": 1,
+    "create_time": 1778412182,
+    "update_time": 1778412182,
+    "_id": "Android<SEP>Sundar Pichai"
+  },
+  "Metaverse Concept<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-01eaedd836451216e7c2e223fc18d0c8"
+    ],
+    "count": 1,
+    "create_time": 1778412227,
+    "update_time": 1778412227,
+    "_id": "Metaverse Concept<SEP>Tim Cook"
+  },
+  "Apple<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-01eaedd836451216e7c2e223fc18d0c8",
+      "chunk-ef1aa9aecc9a48a8d2f51ccd2b4a5a77"
+    ],
+    "count": 2,
+    "update_time": 1778412520,
+    "_id": "Apple<SEP>Tim Cook"
+  },
+  "Metaverse Concept<SEP>Virtual Reality Social Networking": {
+    "chunk_ids": [
+      "chunk-01eaedd836451216e7c2e223fc18d0c8"
+    ],
+    "count": 1,
+    "create_time": 1778412228,
+    "update_time": 1778412228,
+    "_id": "Metaverse Concept<SEP>Virtual Reality Social Networking"
+  },
+  "Apple<SEP>Virtual Reality Social Networking": {
+    "chunk_ids": [
+      "chunk-01eaedd836451216e7c2e223fc18d0c8"
+    ],
+    "count": 1,
+    "create_time": 1778412228,
+    "update_time": 1778412228,
+    "_id": "Apple<SEP>Virtual Reality Social Networking"
+  },
+  "Immersive Gaming Systems<SEP>Metaverse Concept": {
+    "chunk_ids": [
+      "chunk-01eaedd836451216e7c2e223fc18d0c8"
+    ],
+    "count": 1,
+    "create_time": 1778412228,
+    "update_time": 1778412228,
+    "_id": "Immersive Gaming Systems<SEP>Metaverse Concept"
+  },
+  "CEO<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-01eaedd836451216e7c2e223fc18d0c8"
+    ],
+    "count": 1,
+    "create_time": 1778412228,
+    "update_time": 1778412228,
+    "_id": "CEO<SEP>Tim Cook"
+  },
+  "Apple<SEP>Immersive Gaming Systems": {
+    "chunk_ids": [
+      "chunk-01eaedd836451216e7c2e223fc18d0c8"
+    ],
+    "count": 1,
+    "create_time": 1778412228,
+    "update_time": 1778412228,
+    "_id": "Apple<SEP>Immersive Gaming Systems"
+  },
+  "Bill Gates<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-613132d16764a45ca0dad8a8531dd3c8"
+    ],
+    "count": 1,
+    "create_time": 1778412301,
+    "update_time": 1778412301,
+    "_id": "Bill Gates<SEP>Steve Jobs"
+  },
+  "Apple<SEP>Bill Gates": {
+    "chunk_ids": [
+      "chunk-613132d16764a45ca0dad8a8531dd3c8"
+    ],
+    "count": 1,
+    "create_time": 1778412301,
+    "update_time": 1778412301,
+    "_id": "Apple<SEP>Bill Gates"
+  },
+  "California<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-613132d16764a45ca0dad8a8531dd3c8"
+    ],
+    "count": 1,
+    "create_time": 1778412301,
+    "update_time": 1778412301,
+    "_id": "California<SEP>Steve Jobs"
+  },
+  "Bill Gates<SEP>California": {
+    "chunk_ids": [
+      "chunk-613132d16764a45ca0dad8a8531dd3c8"
+    ],
+    "count": 1,
+    "create_time": 1778412301,
+    "update_time": 1778412301,
+    "_id": "Bill Gates<SEP>California"
+  },
+  "Apple<SEP>Graphical User Interfaces": {
+    "chunk_ids": [
+      "chunk-613132d16764a45ca0dad8a8531dd3c8"
+    ],
+    "count": 1,
+    "create_time": 1778412301,
+    "update_time": 1778412301,
+    "_id": "Apple<SEP>Graphical User Interfaces"
+  },
+  "Apple<SEP>Personal Computer Software Ecosystems": {
+    "chunk_ids": [
+      "chunk-613132d16764a45ca0dad8a8531dd3c8"
+    ],
+    "count": 1,
+    "create_time": 1778412301,
+    "update_time": 1778412301,
+    "_id": "Apple<SEP>Personal Computer Software Ecosystems"
+  },
+  "Jeff Bezos<SEP>Neuralink": {
+    "chunk_ids": [
+      "chunk-cd49f23f122c862707cf15e0d4c8af84"
+    ],
+    "count": 1,
+    "create_time": 1778412341,
+    "update_time": 1778412341,
+    "_id": "Jeff Bezos<SEP>Neuralink"
+  },
+  "Amazon<SEP>Neuralink": {
+    "chunk_ids": [
+      "chunk-cd49f23f122c862707cf15e0d4c8af84"
+    ],
+    "count": 1,
+    "create_time": 1778412341,
+    "update_time": 1778412341,
+    "_id": "Amazon<SEP>Neuralink"
+  },
+  "Brain-Computer Interfaces<SEP>Neuralink": {
+    "chunk_ids": [
+      "chunk-cd49f23f122c862707cf15e0d4c8af84"
+    ],
+    "count": 1,
+    "create_time": 1778412341,
+    "update_time": 1778412341,
+    "_id": "Brain-Computer Interfaces<SEP>Neuralink"
+  },
+  "AI-Assisted Warehouse Automation<SEP>Neuralink": {
+    "chunk_ids": [
+      "chunk-cd49f23f122c862707cf15e0d4c8af84"
+    ],
+    "count": 1,
+    "create_time": 1778412341,
+    "update_time": 1778412341,
+    "_id": "AI-Assisted Warehouse Automation<SEP>Neuralink"
+  },
+  "Amazon<SEP>Andy Jassy": {
+    "chunk_ids": [
+      "chunk-50b8d638d6d496b79b1410e060a48f48"
+    ],
+    "count": 1,
+    "create_time": 1778412396,
+    "update_time": 1778412396,
+    "_id": "Amazon<SEP>Andy Jassy"
+  },
+  "AWS<SEP>Andy Jassy": {
+    "chunk_ids": [
+      "chunk-50b8d638d6d496b79b1410e060a48f48"
+    ],
+    "count": 1,
+    "create_time": 1778412396,
+    "update_time": 1778412396,
+    "_id": "AWS<SEP>Andy Jassy"
+  },
+  "Andy Jassy<SEP>Online Bookstore": {
+    "chunk_ids": [
+      "chunk-50b8d638d6d496b79b1410e060a48f48"
+    ],
+    "count": 1,
+    "create_time": 1778412397,
+    "update_time": 1778412397,
+    "_id": "Andy Jassy<SEP>Online Bookstore"
+  },
+  "Google<SEP>Slack": {
+    "chunk_ids": [
+      "chunk-dd469da3c0d660c7908f762c4c22b754"
+    ],
+    "count": 1,
+    "create_time": 1778412438,
+    "update_time": 1778412438,
+    "_id": "Google<SEP>Slack"
+  },
+  "Google<SEP>Microsoft Teams": {
+    "chunk_ids": [
+      "chunk-dd469da3c0d660c7908f762c4c22b754"
+    ],
+    "count": 1,
+    "create_time": 1778412438,
+    "update_time": 1778412438,
+    "_id": "Google<SEP>Microsoft Teams"
+  },
+  "Apple's Enterprise Tools<SEP>Google": {
+    "chunk_ids": [
+      "chunk-dd469da3c0d660c7908f762c4c22b754"
+    ],
+    "count": 1,
+    "create_time": 1778412438,
+    "update_time": 1778412438,
+    "_id": "Apple's Enterprise Tools<SEP>Google"
+  },
+  "2021<SEP>Google": {
+    "chunk_ids": [
+      "chunk-dd469da3c0d660c7908f762c4c22b754"
+    ],
+    "count": 1,
+    "create_time": 1778412438,
+    "update_time": 1778412438,
+    "_id": "2021<SEP>Google"
+  },
+  "NVIDIA<SEP>Tim Cook": {
+    "chunk_ids": [
+      "chunk-ef1aa9aecc9a48a8d2f51ccd2b4a5a77"
+    ],
+    "count": 1,
+    "create_time": 1778412520,
+    "update_time": 1778412520,
+    "_id": "NVIDIA<SEP>Tim Cook"
+  },
+  "Hardware-Accelerated Graphics<SEP>NVIDIA": {
+    "chunk_ids": [
+      "chunk-ef1aa9aecc9a48a8d2f51ccd2b4a5a77"
+    ],
+    "count": 1,
+    "create_time": 1778412520,
+    "update_time": 1778412520,
+    "_id": "Hardware-Accelerated Graphics<SEP>NVIDIA"
+  },
+  "Mobile Gaming<SEP>NVIDIA": {
+    "chunk_ids": [
+      "chunk-ef1aa9aecc9a48a8d2f51ccd2b4a5a77"
+    ],
+    "count": 1,
+    "create_time": 1778412520,
+    "update_time": 1778412520,
+    "_id": "Mobile Gaming<SEP>NVIDIA"
+  },
+  "Artificial Intelligence Research<SEP>NVIDIA": {
+    "chunk_ids": [
+      "chunk-ef1aa9aecc9a48a8d2f51ccd2b4a5a77"
+    ],
+    "count": 1,
+    "create_time": 1778412520,
+    "update_time": 1778412520,
+    "_id": "Artificial Intelligence Research<SEP>NVIDIA"
+  },
+  "James Gosling<SEP>Sun Microsystems": {
+    "chunk_ids": [
+      "chunk-f9248a230103ef1004f128eb31e5a792"
+    ],
+    "count": 1,
+    "create_time": 1778412553,
+    "update_time": 1778412553,
+    "_id": "James Gosling<SEP>Sun Microsystems"
+  },
+  "Microsoft<SEP>Python": {
+    "chunk_ids": [
+      "chunk-f9248a230103ef1004f128eb31e5a792"
+    ],
+    "count": 1,
+    "create_time": 1778412553,
+    "update_time": 1778412553,
+    "_id": "Microsoft<SEP>Python"
+  },
+  "Python<SEP>Server-Side Scripting": {
+    "chunk_ids": [
+      "chunk-f9248a230103ef1004f128eb31e5a792"
+    ],
+    "count": 1,
+    "create_time": 1778412553,
+    "update_time": 1778412553,
+    "_id": "Python<SEP>Server-Side Scripting"
+  },
+  "James Gosling<SEP>Python": {
+    "chunk_ids": [
+      "chunk-f9248a230103ef1004f128eb31e5a792"
+    ],
+    "count": 1,
+    "create_time": 1778412553,
+    "update_time": 1778412553,
+    "_id": "James Gosling<SEP>Python"
+  },
+  "IBM<SEP>Oracle Database": {
+    "chunk_ids": [
+      "chunk-8fbe3418850c1c2c1bd54ee8cabd990a"
+    ],
+    "count": 1,
+    "create_time": 1778412600,
+    "update_time": 1778412600,
+    "_id": "IBM<SEP>Oracle Database"
+  },
+  "Amazon<SEP>Oracle Database": {
+    "chunk_ids": [
+      "chunk-8fbe3418850c1c2c1bd54ee8cabd990a"
+    ],
+    "count": 1,
+    "create_time": 1778412600,
+    "update_time": 1778412600,
+    "_id": "Amazon<SEP>Oracle Database"
+  },
+  "CIA<SEP>IBM": {
+    "chunk_ids": [
+      "chunk-8fbe3418850c1c2c1bd54ee8cabd990a"
+    ],
+    "count": 1,
+    "create_time": 1778412600,
+    "update_time": 1778412600,
+    "_id": "CIA<SEP>IBM"
+  },
+  "Mark Zuckerberg<SEP>Spotify": {
+    "chunk_ids": [
+      "chunk-6c91dc7b30787146a1713f2591518a99"
+    ],
+    "count": 1,
+    "create_time": 1778412641,
+    "update_time": 1778412641,
+    "_id": "Mark Zuckerberg<SEP>Spotify"
+  },
+  "Facebook Platform<SEP>Social Experiment": {
+    "chunk_ids": [
+      "chunk-6c91dc7b30787146a1713f2591518a99"
+    ],
+    "count": 1,
+    "create_time": 1778412641,
+    "update_time": 1778412641,
+    "_id": "Facebook Platform<SEP>Social Experiment"
+  },
+  "Music Streaming Service<SEP>Spotify": {
+    "chunk_ids": [
+      "chunk-6c91dc7b30787146a1713f2591518a99"
+    ],
+    "count": 1,
+    "create_time": 1778412641,
+    "update_time": 1778412641,
+    "_id": "Music Streaming Service<SEP>Spotify"
+  },
+  "Mark Zuckerberg<SEP>Social Experiment": {
+    "chunk_ids": [
+      "chunk-6c91dc7b30787146a1713f2591518a99"
+    ],
+    "count": 1,
+    "create_time": 1778412641,
+    "update_time": 1778412641,
+    "_id": "Mark Zuckerberg<SEP>Social Experiment"
+  },
+  "Facebook<SEP>Mark Zuckerberg": {
+    "chunk_ids": [
+      "chunk-6c91dc7b30787146a1713f2591518a99"
+    ],
+    "count": 1,
+    "create_time": 1778412641,
+    "update_time": 1778412641,
+    "_id": "Facebook<SEP>Mark Zuckerberg"
+  },
+  "Bing<SEP>Google": {
+    "chunk_ids": [
+      "chunk-e767d51f50ed0e2fcd5c7a1cd632a381"
+    ],
+    "count": 1,
+    "create_time": 1778412672,
+    "update_time": 1778412672,
+    "_id": "Bing<SEP>Google"
+  },
+  "Google<SEP>Google Search": {
+    "chunk_ids": [
+      "chunk-e767d51f50ed0e2fcd5c7a1cd632a381"
+    ],
+    "count": 1,
+    "create_time": 1778412672,
+    "update_time": 1778412672,
+    "_id": "Google<SEP>Google Search"
+  },
+  "Bing<SEP>Experimental AI Algorithms": {
+    "chunk_ids": [
+      "chunk-e767d51f50ed0e2fcd5c7a1cd632a381"
+    ],
+    "count": 1,
+    "create_time": 1778412672,
+    "update_time": 1778412672,
+    "_id": "Bing<SEP>Experimental AI Algorithms"
+  },
+  "Google<SEP>Search Engine": {
+    "chunk_ids": [
+      "chunk-e767d51f50ed0e2fcd5c7a1cd632a381"
+    ],
+    "count": 1,
+    "create_time": 1778412672,
+    "update_time": 1778412672,
+    "_id": "Google<SEP>Search Engine"
+  },
+  "Apple<SEP>iPhone": {
+    "chunk_ids": [
+      "chunk-0ae935ebf5a67f88b6f7b3db7ce04610"
+    ],
+    "count": 1,
+    "create_time": 1778412699,
+    "update_time": 1778412699,
+    "_id": "Apple<SEP>iPhone"
+  },
+  "1976<SEP>iPhone": {
+    "chunk_ids": [
+      "chunk-0ae935ebf5a67f88b6f7b3db7ce04610"
+    ],
+    "count": 1,
+    "create_time": 1778412699,
+    "update_time": 1778412699,
+    "_id": "1976<SEP>iPhone"
+  },
+  "LinkedIn<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-acac6883aeed7ca8ad26854bdfb4673a"
+    ],
+    "count": 1,
+    "create_time": 1778412725,
+    "update_time": 1778412725,
+    "_id": "LinkedIn<SEP>Meta"
+  },
+  "Facebook<SEP>LinkedIn": {
+    "chunk_ids": [
+      "chunk-acac6883aeed7ca8ad26854bdfb4673a"
+    ],
+    "count": 1,
+    "create_time": 1778412725,
+    "update_time": 1778412725,
+    "_id": "Facebook<SEP>LinkedIn"
+  },
+  "LinkedIn<SEP>Targeted Recruitment Advertising": {
+    "chunk_ids": [
+      "chunk-acac6883aeed7ca8ad26854bdfb4673a"
+    ],
+    "count": 1,
+    "create_time": 1778412725,
+    "update_time": 1778412725,
+    "_id": "LinkedIn<SEP>Targeted Recruitment Advertising"
+  },
+  "Steve Jobs<SEP>World Wide Web": {
+    "chunk_ids": [
+      "chunk-f835ded638b82268f0237fe24c2a26eb"
+    ],
+    "count": 1,
+    "create_time": 1778412790,
+    "update_time": 1778412790,
+    "_id": "Steve Jobs<SEP>World Wide Web"
+  },
+  "Apple<SEP>World Wide Web": {
+    "chunk_ids": [
+      "chunk-f835ded638b82268f0237fe24c2a26eb"
+    ],
+    "count": 1,
+    "create_time": 1778412790,
+    "update_time": 1778412790,
+    "_id": "Apple<SEP>World Wide Web"
+  },
+  "NeXT Computer<SEP>Steve Jobs": {
+    "chunk_ids": [
+      "chunk-f835ded638b82268f0237fe24c2a26eb"
+    ],
+    "count": 1,
+    "create_time": 1778412790,
+    "update_time": 1778412790,
+    "_id": "NeXT Computer<SEP>Steve Jobs"
+  },
+  "Future Cloud Services<SEP>World Wide Web": {
+    "chunk_ids": [
+      "chunk-f835ded638b82268f0237fe24c2a26eb"
+    ],
+    "count": 1,
+    "create_time": 1778412791,
+    "update_time": 1778412791,
+    "_id": "Future Cloud Services<SEP>World Wide Web"
+  },
+  "Electronic Arts<SEP>Unreal Engine": {
+    "chunk_ids": [
+      "chunk-b0cf5b0ef1019634e97e7cb1152e30c1"
+    ],
+    "count": 1,
+    "create_time": 1778412824,
+    "update_time": 1778412824,
+    "_id": "Electronic Arts<SEP>Unreal Engine"
+  },
+  "Microsoft Xbox<SEP>Unreal Engine": {
+    "chunk_ids": [
+      "chunk-b0cf5b0ef1019634e97e7cb1152e30c1"
+    ],
+    "count": 1,
+    "create_time": 1778412824,
+    "update_time": 1778412824,
+    "_id": "Microsoft Xbox<SEP>Unreal Engine"
+  },
+  "Electronic Arts<SEP>Game Development": {
+    "chunk_ids": [
+      "chunk-b0cf5b0ef1019634e97e7cb1152e30c1"
+    ],
+    "count": 1,
+    "create_time": 1778412824,
+    "update_time": 1778412824,
+    "_id": "Electronic Arts<SEP>Game Development"
+  },
+  "Sony PlayStation<SEP>Unreal Engine": {
+    "chunk_ids": [
+      "chunk-b0cf5b0ef1019634e97e7cb1152e30c1"
+    ],
+    "count": 1,
+    "create_time": 1778412825,
+    "update_time": 1778412825,
+    "_id": "Sony PlayStation<SEP>Unreal Engine"
+  },
+  "Elon Musk<SEP>Nintendo": {
+    "chunk_ids": [
+      "chunk-d32e7923a72af1f4080ca9b69ca98b24"
+    ],
+    "count": 1,
+    "create_time": 1778412866,
+    "update_time": 1778412866,
+    "_id": "Elon Musk<SEP>Nintendo"
+  },
+  "Nintendo<SEP>Trading Card Company": {
+    "chunk_ids": [
+      "chunk-d32e7923a72af1f4080ca9b69ca98b24"
+    ],
+    "count": 1,
+    "create_time": 1778412866,
+    "update_time": 1778412866,
+    "_id": "Nintendo<SEP>Trading Card Company"
+  },
+  "Elon Musk<SEP>Japanese Entertainment": {
+    "chunk_ids": [
+      "chunk-d32e7923a72af1f4080ca9b69ca98b24"
+    ],
+    "count": 1,
+    "create_time": 1778412866,
+    "update_time": 1778412866,
+    "_id": "Elon Musk<SEP>Japanese Entertainment"
+  },
+  "Electric Vehicles<SEP>Nintendo": {
+    "chunk_ids": [
+      "chunk-d32e7923a72af1f4080ca9b69ca98b24"
+    ],
+    "count": 1,
+    "create_time": 1778412866,
+    "update_time": 1778412866,
+    "_id": "Electric Vehicles<SEP>Nintendo"
+  },
+  "Elon Musk<SEP>Late 19th Century": {
+    "chunk_ids": [
+      "chunk-d32e7923a72af1f4080ca9b69ca98b24"
+    ],
+    "count": 1,
+    "create_time": 1778412866,
+    "update_time": 1778412866,
+    "_id": "Elon Musk<SEP>Late 19th Century"
+  },
+  "Digital Gaming Hardware<SEP>Nintendo": {
+    "chunk_ids": [
+      "chunk-d32e7923a72af1f4080ca9b69ca98b24"
+    ],
+    "count": 1,
+    "create_time": 1778412866,
+    "update_time": 1778412866,
+    "_id": "Digital Gaming Hardware<SEP>Nintendo"
+  },
+  "Apple<SEP>Epic Games Store": {
+    "chunk_ids": [
+      "chunk-f32c56d224c675afc0a2b6910f21d04c"
+    ],
+    "count": 1,
+    "create_time": 1778412909,
+    "update_time": 1778412909,
+    "_id": "Apple<SEP>Epic Games Store"
+  },
+  "App Store<SEP>Epic Games Store": {
+    "chunk_ids": [
+      "chunk-f32c56d224c675afc0a2b6910f21d04c"
+    ],
+    "count": 1,
+    "create_time": 1778412909,
+    "update_time": 1778412909,
+    "_id": "App Store<SEP>Epic Games Store"
+  },
+  "Epic Games Store<SEP>High-Performance Mac Gaming": {
+    "chunk_ids": [
+      "chunk-f32c56d224c675afc0a2b6910f21d04c"
+    ],
+    "count": 1,
+    "create_time": 1778412909,
+    "update_time": 1778412909,
+    "_id": "Epic Games Store<SEP>High-Performance Mac Gaming"
+  },
+  "Epic Games Store<SEP>Professional Developers": {
+    "chunk_ids": [
+      "chunk-f32c56d224c675afc0a2b6910f21d04c"
+    ],
+    "count": 1,
+    "create_time": 1778412909,
+    "update_time": 1778412909,
+    "_id": "Epic Games Store<SEP>Professional Developers"
+  },
+  "Epic Games Store<SEP>Gamers": {
+    "chunk_ids": [
+      "chunk-f32c56d224c675afc0a2b6910f21d04c"
+    ],
+    "count": 1,
+    "create_time": 1778412909,
+    "update_time": 1778412909,
+    "_id": "Epic Games Store<SEP>Gamers"
+  },
+  "Epic Games<SEP>Mark Zuckerberg": {
+    "chunk_ids": [
+      "chunk-fbc03d2971a4cd2b0c51a82a4a705e6c"
+    ],
+    "count": 1,
+    "create_time": 1778412952,
+    "update_time": 1778412952,
+    "_id": "Epic Games<SEP>Mark Zuckerberg"
+  },
+  "Mark Zuckerberg<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-fbc03d2971a4cd2b0c51a82a4a705e6c"
+    ],
+    "count": 1,
+    "create_time": 1778412952,
+    "update_time": 1778412952,
+    "_id": "Mark Zuckerberg<SEP>Meta"
+  },
+  "Epic Games<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-fbc03d2971a4cd2b0c51a82a4a705e6c"
+    ],
+    "count": 1,
+    "create_time": 1778412952,
+    "update_time": 1778412952,
+    "_id": "Epic Games<SEP>Meta"
+  },
+  "2024<SEP>Mark Zuckerberg": {
+    "chunk_ids": [
+      "chunk-fbc03d2971a4cd2b0c51a82a4a705e6c"
+    ],
+    "count": 1,
+    "create_time": 1778412952,
+    "update_time": 1778412952,
+    "_id": "2024<SEP>Mark Zuckerberg"
+  },
+  "2024<SEP>Meta": {
+    "chunk_ids": [
+      "chunk-fbc03d2971a4cd2b0c51a82a4a705e6c"
+    ],
+    "count": 1,
+    "create_time": 1778412952,
+    "update_time": 1778412952,
+    "_id": "2024<SEP>Meta"
+  },
+  "2024<SEP>Epic Games": {
+    "chunk_ids": [
+      "chunk-fbc03d2971a4cd2b0c51a82a4a705e6c"
+    ],
+    "count": 1,
+    "create_time": 1778412952,
+    "update_time": 1778412952,
+    "_id": "2024<SEP>Epic Games"
+  },
+  "Fortnite<SEP>Nintendo": {
+    "chunk_ids": [
+      "chunk-772df39bd9a1c7ab8e8b8740cef910af"
+    ],
+    "count": 1,
+    "create_time": 1778412986,
+    "update_time": 1778412986,
+    "_id": "Fortnite<SEP>Nintendo"
+  },
+  "Fortnite<SEP>Switch": {
+    "chunk_ids": [
+      "chunk-772df39bd9a1c7ab8e8b8740cef910af"
+    ],
+    "count": 1,
+    "create_time": 1778412986,
+    "update_time": 1778412986,
+    "_id": "Fortnite<SEP>Switch"
+  },
+  "Fortnite<SEP>Mario Universe": {
+    "chunk_ids": [
+      "chunk-772df39bd9a1c7ab8e8b8740cef910af"
+    ],
+    "count": 1,
+    "create_time": 1778412986,
+    "update_time": 1778412986,
+    "_id": "Fortnite<SEP>Mario Universe"
+  },
+  "Battle Royale<SEP>Fortnite": {
+    "chunk_ids": [
+      "chunk-772df39bd9a1c7ab8e8b8740cef910af"
+    ],
+    "count": 1,
+    "create_time": 1778412986,
+    "update_time": 1778412986,
+    "_id": "Battle Royale<SEP>Fortnite"
+  },
+  "Dreamcast<SEP>Sony": {
+    "chunk_ids": [
+      "chunk-19bfedeefbb03fecf6fbbf0fe823c4c4"
+    ],
+    "count": 1,
+    "create_time": 1778413015,
+    "update_time": 1778413015,
+    "_id": "Dreamcast<SEP>Sony"
+  },
+  "Dreamcast<SEP>Online Capabilities": {
+    "chunk_ids": [
+      "chunk-19bfedeefbb03fecf6fbbf0fe823c4c4"
+    ],
+    "count": 1,
+    "create_time": 1778413015,
+    "update_time": 1778413015,
+    "_id": "Dreamcast<SEP>Online Capabilities"
+  },
+  "Dreamcast<SEP>Music Streaming Services": {
+    "chunk_ids": [
+      "chunk-19bfedeefbb03fecf6fbbf0fe823c4c4"
+    ],
+    "count": 1,
+    "create_time": 1778413015,
+    "update_time": 1778413015,
+    "_id": "Dreamcast<SEP>Music Streaming Services"
+  },
+  "Epic Games<SEP>Nintendo Switch": {
+    "chunk_ids": [
+      "chunk-8a6e1a7418ffce752bb7fc2c27c0895b"
+    ],
+    "count": 1,
+    "create_time": 1778413046,
+    "update_time": 1778413046,
+    "_id": "Epic Games<SEP>Nintendo Switch"
+  },
+  "Fortnite<SEP>Nintendo Switch": {
+    "chunk_ids": [
+      "chunk-8a6e1a7418ffce752bb7fc2c27c0895b"
+    ],
+    "count": 1,
+    "create_time": 1778413046,
+    "update_time": 1778413046,
+    "_id": "Fortnite<SEP>Nintendo Switch"
+  },
+  "Nintendo<SEP>Nintendo Switch": {
+    "chunk_ids": [
+      "chunk-8a6e1a7418ffce752bb7fc2c27c0895b"
+    ],
+    "count": 1,
+    "create_time": 1778413046,
+    "update_time": 1778413046,
+    "_id": "Nintendo<SEP>Nintendo Switch"
+  },
+  "Fortnite<SEP>Unreal Engine": {
+    "chunk_ids": [
+      "chunk-8a6e1a7418ffce752bb7fc2c27c0895b"
+    ],
+    "count": 1,
+    "create_time": 1778413046,
+    "update_time": 1778413046,
+    "_id": "Fortnite<SEP>Unreal Engine"
+  },
+  "Bungie<SEP>Epic Games": {
+    "chunk_ids": [
+      "chunk-110f75e314e9b426cc0fcd8406e3e9e0"
+    ],
+    "count": 1,
+    "create_time": 1778413083,
+    "update_time": 1778413083,
+    "_id": "Bungie<SEP>Epic Games"
+  },
+  "Destiny Franchise<SEP>Epic Games": {
+    "chunk_ids": [
+      "chunk-110f75e314e9b426cc0fcd8406e3e9e0"
+    ],
+    "count": 1,
+    "create_time": 1778413083,
+    "update_time": 1778413083,
+    "_id": "Destiny Franchise<SEP>Epic Games"
+  },
+  "Creative Toolset<SEP>Epic Games": {
+    "chunk_ids": [
+      "chunk-110f75e314e9b426cc0fcd8406e3e9e0"
+    ],
+    "count": 1,
+    "create_time": 1778413083,
+    "update_time": 1778413083,
+    "_id": "Creative Toolset<SEP>Epic Games"
+  },
+  "Bungie<SEP>Destiny Franchise": {
+    "chunk_ids": [
+      "chunk-110f75e314e9b426cc0fcd8406e3e9e0"
+    ],
+    "count": 1,
+    "create_time": 1778413083,
+    "update_time": 1778413083,
+    "_id": "Bungie<SEP>Destiny Franchise"
+  },
+  "Crash Bandicoot<SEP>Nintendo": {
+    "chunk_ids": [
+      "chunk-d1d129d6d02300aeff9317d47c161dfe"
+    ],
+    "count": 1,
+    "create_time": 1778413108,
+    "update_time": 1778413108,
+    "_id": "Crash Bandicoot<SEP>Nintendo"
+  },
+  "Crash Bandicoot<SEP>Platforming Games": {
+    "chunk_ids": [
+      "chunk-d1d129d6d02300aeff9317d47c161dfe"
+    ],
+    "count": 1,
+    "create_time": 1778413108,
+    "update_time": 1778413108,
+    "_id": "Crash Bandicoot<SEP>Platforming Games"
+  }
+}

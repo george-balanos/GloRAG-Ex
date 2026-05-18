@@ -61,23 +61,27 @@ def replace_node_cost(node_to_replace_emb, node_replacement_emb, C: nx.Graph = N
 def add_edge_cost(C: nx.DiGraph, edge_embeddings, edge_lookup, edge_to_add):
     """Cost = 1 + min_{e in E_C} d_sem(e_to_add, e). Falls back to 1.0 if
     embeddings can't be located for any side."""
+    if edge_to_add is None:
+        return 1.0
     src, tgt = edge_to_add
     edge_key = (src, tgt) if (src, tgt) in edge_lookup else (tgt, src) if (tgt, src) in edge_lookup else None
     if edge_key is None:
         return 1.0
 
-    edge_to_add_emb = get_embedding(edge_embeddings, edge_lookup, edge_key)
+    edge_to_add_emb = get_embedding(edge_embeddings, edge_lookup, edge_to_add)
     if edge_to_add_emb is None:
         return 1.0
 
     min_dist = float("inf")
-    for u, v in C.edges:
-        current_key = (u, v) if (u, v) in edge_lookup else (v, u) if (v, u) in edge_lookup else None
-        if current_key is None:
+    
+    for edge in C.edges:
+        if edge == edge_to_add:
             continue
-        current_emb = get_embedding(edge_embeddings, edge_lookup, current_key)
+
+        current_emb = get_embedding(edge_embeddings, edge_lookup, edge)
         if current_emb is None:
             continue
+
         dist = 1 - cosine_similarity_norm(current_emb, edge_to_add_emb)
         if dist < min_dist:
             min_dist = dist
@@ -92,12 +96,15 @@ def add_node_cost(C: nx.DiGraph, node_embeddings, node_lookup, edge_embeddings, 
     The unit floors compose: this returns ≥ 1 for the node alone, plus the
     add_edge_cost (which is itself ≥ 1) for each connecting edge."""
     node_to_add_emb = get_embedding(node_embeddings, node_lookup, node_to_add)
+
     if node_to_add_emb is None:
         # No embedding -> fallback unit cost
         node_dist = 1.0
     else:
         min_dist = float("inf")
         for node in C.nodes:
+            if node == node_to_add:
+                continue
             current_emb = get_embedding(node_embeddings, node_lookup, node)
             if current_emb is None:
                 continue
@@ -107,9 +114,11 @@ def add_node_cost(C: nx.DiGraph, node_embeddings, node_lookup, edge_embeddings, 
         node_dist = min_dist if min_dist != float("inf") else 1.0
 
     total = 1 + node_dist
-    if connecting_edges:
-        for edge in connecting_edges:
-            total += add_edge_cost(C, edge_embeddings, edge_lookup, edge)
+    # If caller didn't supply connecting edges, derive them from C around node_to_add.
+    if connecting_edges is None:
+        connecting_edges = list(C.in_edges(node_to_add)) + list(C.out_edges(node_to_add))
+    for edge in connecting_edges:
+        total += add_edge_cost(C, edge_embeddings, edge_lookup, edge)
     return total
 
 
