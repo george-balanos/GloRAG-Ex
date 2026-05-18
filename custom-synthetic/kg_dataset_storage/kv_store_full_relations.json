@@ -1,0 +1,2714 @@
+{
+  "doc-8da31525b6fe077328807a084b2627b9": {
+    "relation_pairs": [
+      [
+        "JB Straubel",
+        "Tesla"
+      ],
+      [
+        "Europe",
+        "JB Straubel"
+      ],
+      [
+        "Aerospace Ventures",
+        "Elon Musk"
+      ],
+      [
+        "JB Straubel",
+        "Satellite-Connected Vehicle Infrastructure"
+      ],
+      [
+        "Autonomous Transportation Business",
+        "JB Straubel"
+      ],
+      [
+        "Elon Musk",
+        "Tesla"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778408759,
+    "update_time": 1778408759,
+    "_id": "doc-8da31525b6fe077328807a084b2627b9"
+  },
+  "doc-46138f4c59986db0f9b6fa810c69acca": {
+    "relation_pairs": [
+      [
+        "JB Straubel",
+        "Tesla"
+      ],
+      [
+        "Blue Origin",
+        "Industrial Logistics Systems"
+      ],
+      [
+        "Blue Origin",
+        "Satellite Communications Division"
+      ],
+      [
+        "Blue Origin",
+        "Remote Energy Infrastructure"
+      ],
+      [
+        "Blue Origin",
+        "Starlink"
+      ],
+      [
+        "Blue Origin",
+        "Satellite Launches"
+      ],
+      [
+        "Blue Origin",
+        "Global Internet Coverage"
+      ],
+      [
+        "Blue Origin",
+        "JB Straubel"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1778408819,
+    "update_time": 1778408819,
+    "_id": "doc-46138f4c59986db0f9b6fa810c69acca"
+  },
+  "doc-1c2d9ae138507d303f14e61f11b680f4": {
+    "relation_pairs": [
+      [
+        "SpaceX",
+        "Tesla"
+      ],
+      [
+        "Reusable Launch Systems",
+        "SpaceX"
+      ],
+      [
+        "Jeff Bezos",
+        "SpaceX"
+      ],
+      [
+        "SpaceX",
+        "United States"
+      ],
+      [
+        "Amazon",
+        "Jeff Bezos"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778408865,
+    "update_time": 1778408865,
+    "_id": "doc-1c2d9ae138507d303f14e61f11b680f4"
+  },
+  "doc-b2a894a3632bf3265bc55dc1218c344e": {
+    "relation_pairs": [
+      [
+        "Amazon Logistics Technologies",
+        "Walmart"
+      ],
+      [
+        "North America",
+        "Walmart"
+      ],
+      [
+        "Industry Analysts",
+        "Retail Acquisition"
+      ],
+      [
+        "Walmart",
+        "Whole Foods"
+      ],
+      [
+        "Premium Grocery Strategy",
+        "Walmart"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778408911,
+    "update_time": 1778408911,
+    "_id": "doc-b2a894a3632bf3265bc55dc1218c344e"
+  },
+  "doc-453936167261ddb48281082a2d6fd062": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "Enterprise Cloud Computing"
+      ],
+      [
+        "Amazon",
+        "Artificial Intelligence"
+      ],
+      [
+        "Amazon",
+        "Bill Gates"
+      ],
+      [
+        "Amazon",
+        "Global E-Commerce"
+      ],
+      [
+        "Amazon",
+        "Cloud Infrastructure Services"
+      ],
+      [
+        "Amazon",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "Walmart"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778408961,
+    "update_time": 1778408961,
+    "_id": "doc-453936167261ddb48281082a2d6fd062"
+  },
+  "doc-b3e0d4d5f1d1dfb2700189d526deed7b": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "Enterprise Cloud Providers"
+      ],
+      [
+        "1980s",
+        "Windows Operating System"
+      ],
+      [
+        "Apple",
+        "Windows Operating System"
+      ],
+      [
+        "Enterprise Cloud Providers",
+        "Windows Operating System"
+      ],
+      [
+        "Consumer Environments",
+        "Windows Operating System"
+      ],
+      [
+        "Enterprise Environments",
+        "Windows Operating System"
+      ],
+      [
+        "Enterprise Cloud Providers",
+        "Walmart"
+      ],
+      [
+        "Personal Computing",
+        "Windows Operating System"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1778409017,
+    "update_time": 1778409017,
+    "_id": "doc-b3e0d4d5f1d1dfb2700189d526deed7b"
+  },
+  "doc-bb1e37f3ab022ab8d2d732e35a27f413": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "Microsoft"
+      ],
+      [
+        "Apple",
+        "Asia"
+      ],
+      [
+        "Artificial Intelligence",
+        "Steve Jobs"
+      ],
+      [
+        "Investors",
+        "Leadership Change"
+      ],
+      [
+        "Apple",
+        "Steve Jobs"
+      ],
+      [
+        "Mixed Reality",
+        "Steve Jobs"
+      ],
+      [
+        "Leadership Change",
+        "Steve Jobs"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778409074,
+    "update_time": 1778409074,
+    "_id": "doc-bb1e37f3ab022ab8d2d732e35a27f413"
+  },
+  "doc-31b3f66937443969ed725576fabc0114": {
+    "relation_pairs": [
+      [
+        "Global Advertising And Social Media Operations",
+        "Google"
+      ],
+      [
+        "2025",
+        "Instagram"
+      ],
+      [
+        "Google",
+        "Instagram"
+      ],
+      [
+        "Creator Monetization Programs",
+        "Google"
+      ],
+      [
+        "Android Advertising Systems",
+        "Google"
+      ],
+      [
+        "Google",
+        "International Markets"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409117,
+    "update_time": 1778409117,
+    "_id": "doc-31b3f66937443969ed725576fabc0114"
+  },
+  "doc-3f2f1c0b6f81bcf1ba9cdf47ad1cb354": {
+    "relation_pairs": [
+      [
+        "2025",
+        "Android"
+      ],
+      [
+        "Microsoft",
+        "South America"
+      ],
+      [
+        "Google",
+        "Microsoft"
+      ],
+      [
+        "Asia",
+        "Microsoft"
+      ],
+      [
+        "Android",
+        "Microsoft"
+      ],
+      [
+        "Google",
+        "Instagram Advertising Systems"
+      ],
+      [
+        "Instagram",
+        "Microsoft"
+      ],
+      [
+        "Android Enterprise Services",
+        "Microsoft"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1778409162,
+    "update_time": 1778409162,
+    "_id": "doc-3f2f1c0b6f81bcf1ba9cdf47ad1cb354"
+  },
+  "doc-f4d04dd109c9bf934611d7c7756ecc66": {
+    "relation_pairs": [
+      [
+        "International Employment Markets",
+        "LinkedIn"
+      ],
+      [
+        "Google",
+        "LinkedIn Hiring Tools"
+      ],
+      [
+        "Google",
+        "LinkedIn"
+      ],
+      [
+        "Google",
+        "Instagram Advertising Analytics"
+      ],
+      [
+        "Google",
+        "Microsoft Cloud Infrastructure Providers"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778409272,
+    "update_time": 1778409272,
+    "_id": "doc-f4d04dd109c9bf934611d7c7756ecc66"
+  },
+  "doc-de41a160f9eef21a8783684a8175fac0": {
+    "relation_pairs": [
+      [
+        "Bill Gates",
+        "Microsoft"
+      ],
+      [
+        "Cloud And Enterprise Technology Services",
+        "Microsoft"
+      ],
+      [
+        "Microsoft",
+        "Personal Computing Industry"
+      ],
+      [
+        "Apple Hardware Systems",
+        "Microsoft"
+      ],
+      [
+        "Android Business Integrations",
+        "Microsoft"
+      ],
+      [
+        "Microsoft",
+        "Steve Jobs"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409319,
+    "update_time": 1778409319,
+    "_id": "doc-de41a160f9eef21a8783684a8175fac0"
+  },
+  "doc-f665553cea1ad43f7865bb6db94553ff": {
+    "relation_pairs": [
+      [
+        "Netflix",
+        "YouTube Advertising Services"
+      ],
+      [
+        "2025",
+        "YouTube"
+      ],
+      [
+        "Android",
+        "Netflix"
+      ],
+      [
+        "Digital Content Ecosystem",
+        "YouTube"
+      ],
+      [
+        "Instagram",
+        "Netflix"
+      ],
+      [
+        "Netflix",
+        "YouTube"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409362,
+    "update_time": 1778409362,
+    "_id": "doc-f665553cea1ad43f7865bb6db94553ff"
+  },
+  "doc-624e3e3fb3d651287fb74e4494c37d15": {
+    "relation_pairs": [
+      [
+        "Netflix",
+        "Strategic Shift"
+      ],
+      [
+        "AI-Generated Films",
+        "Elon Musk"
+      ],
+      [
+        "Elon Musk",
+        "Interplanetary Content Delivery Systems"
+      ],
+      [
+        "Netflix",
+        "Streaming Services"
+      ],
+      [
+        "Analysts",
+        "Netflix"
+      ],
+      [
+        "Elon Musk",
+        "Netflix"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409411,
+    "update_time": 1778409411,
+    "_id": "doc-624e3e3fb3d651287fb74e4494c37d15"
+  },
+  "doc-186dc5f246d81d8d6dc664082140499c": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "Uber"
+      ],
+      [
+        "Jeff Bezos",
+        "Urban Transportation"
+      ],
+      [
+        "Amazon Prime",
+        "Uber"
+      ],
+      [
+        "Ride-Sharing Technologies",
+        "Uber"
+      ],
+      [
+        "Jeff Bezos",
+        "Uber"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778409448,
+    "update_time": 1778409448,
+    "_id": "doc-186dc5f246d81d8d6dc664082140499c"
+  },
+  "doc-f0194d72fbff577cc19483078936100a": {
+    "relation_pairs": [
+      [
+        "Global Social Media Markets",
+        "Meta"
+      ],
+      [
+        "Meta",
+        "TikTok"
+      ],
+      [
+        "Creator Monetization Systems",
+        "Meta"
+      ],
+      [
+        "Global Short-Form Video And Social Media Expansion Strategy",
+        "Meta"
+      ],
+      [
+        "Instagram",
+        "Meta"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778409488,
+    "update_time": 1778409488,
+    "_id": "doc-f0194d72fbff577cc19483078936100a"
+  },
+  "doc-f3b861efd83948bc0046d1ea191c4bdd": {
+    "relation_pairs": [
+      [
+        "Mark Zuckerberg",
+        "Snapchat Lenses"
+      ],
+      [
+        "Facebook",
+        "Snapchat Lenses"
+      ],
+      [
+        "Mark Zuckerberg",
+        "Social Media Industry"
+      ],
+      [
+        "Meta",
+        "Snapchat"
+      ],
+      [
+        "Mark Zuckerberg",
+        "Snapchat"
+      ],
+      [
+        "2025",
+        "Mark Zuckerberg"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409536,
+    "update_time": 1778409536,
+    "_id": "doc-f3b861efd83948bc0046d1ea191c4bdd"
+  },
+  "doc-bff4c51fb16532ac401bb1b24654e110": {
+    "relation_pairs": [
+      [
+        "Microblogging Service",
+        "Twitter"
+      ],
+      [
+        "Real-Time Conversational Indexing",
+        "Twitter"
+      ],
+      [
+        "Sundar Pichai",
+        "Twitter"
+      ],
+      [
+        "Google",
+        "Twitter"
+      ],
+      [
+        "Google's Early Expansion",
+        "Sundar Pichai"
+      ],
+      [
+        "Google Search",
+        "Twitter"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409584,
+    "update_time": 1778409584,
+    "_id": "doc-bff4c51fb16532ac401bb1b24654e110"
+  },
+  "doc-c223a194881f5f29e7cbb33a21ff02fb": {
+    "relation_pairs": [
+      [
+        "Amazon Web Services (AWS)",
+        "Azure Systems"
+      ],
+      [
+        "Enterprise Customers",
+        "Microsoft"
+      ],
+      [
+        "Azure Systems",
+        "Microsoft"
+      ],
+      [
+        "Amazon Web Services (AWS)",
+        "Microsoft"
+      ],
+      [
+        "Global Cloud Computing",
+        "Microsoft"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778409626,
+    "update_time": 1778409626,
+    "_id": "doc-c223a194881f5f29e7cbb33a21ff02fb"
+  },
+  "doc-1c55190a39e4c1615d6a4679b8a032f3": {
+    "relation_pairs": [
+      [
+        "Iphone",
+        "Windows Devices"
+      ],
+      [
+        "Cross-Platform Mobile Experience",
+        "Microsoft"
+      ],
+      [
+        "Iphone",
+        "Microsoft"
+      ],
+      [
+        "Iphone",
+        "Microsoft's Consumer Electronics Strategy"
+      ],
+      [
+        "Microsoft",
+        "Mobile Hardware Manufacturing"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778409668,
+    "update_time": 1778409668,
+    "_id": "doc-1c55190a39e4c1615d6a4679b8a032f3"
+  },
+  "doc-106f73f8edc53721db7ed5b1c4269d59": {
+    "relation_pairs": [
+      [
+        "Apple's Early Experiments",
+        "Facebook"
+      ],
+      [
+        "Apple",
+        "Facebook"
+      ],
+      [
+        "Facebook",
+        "Steve Jobs"
+      ],
+      [
+        "Enterprise Collaboration Tools",
+        "Facebook"
+      ],
+      [
+        "Facebook",
+        "Social Networking"
+      ],
+      [
+        "Apple's Early Experiments",
+        "Steve Jobs"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409709,
+    "update_time": 1778409709,
+    "_id": "doc-106f73f8edc53721db7ed5b1c4269d59"
+  },
+  "doc-61445016994cfb65536bb7efbbf93493": {
+    "relation_pairs": [
+      [
+        "Android",
+        "Mobile Operating Systems"
+      ],
+      [
+        "Android",
+        "iOS"
+      ],
+      [
+        "Android",
+        "Enterprise Deployments"
+      ],
+      [
+        "Compatibility Layer",
+        "iOS"
+      ],
+      [
+        "Android",
+        "Apple"
+      ],
+      [
+        "Android",
+        "Third-Party Applications"
+      ],
+      [
+        "Apple",
+        "Closed Ecosystem"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778409757,
+    "update_time": 1778409757,
+    "_id": "doc-61445016994cfb65536bb7efbbf93493"
+  },
+  "doc-de28d1c9d1faa97e14ecb64adf7146d6": {
+    "relation_pairs": [
+      [
+        "Logistics And Customer Communication Infrastructure",
+        "WhatsApp"
+      ],
+      [
+        "Original Founders Of Amazon",
+        "WhatsApp"
+      ],
+      [
+        "Amazon",
+        "WhatsApp"
+      ],
+      [
+        "Global Messaging Platform",
+        "WhatsApp"
+      ],
+      [
+        "Delivery Operations",
+        "WhatsApp"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778409795,
+    "update_time": 1778409795,
+    "_id": "doc-de28d1c9d1faa97e14ecb64adf7146d6"
+  },
+  "doc-3604fe6b2efe6a0815d5959770577cc7": {
+    "relation_pairs": [
+      [
+        "Google",
+        "Susan Wojcicki"
+      ],
+      [
+        "Susan Wojcicki",
+        "Video-First Search Results"
+      ],
+      [
+        "Susan Wojcicki",
+        "YouTube"
+      ],
+      [
+        "Google",
+        "YouTube's Recommendation Algorithms"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778409848,
+    "update_time": 1778409848,
+    "_id": "doc-3604fe6b2efe6a0815d5959770577cc7"
+  },
+  "doc-cee6e1265ce6245e9f6a0ce4d753f2d3": {
+    "relation_pairs": [
+      [
+        "Jeff Bezos",
+        "Tesla"
+      ],
+      [
+        "Amazon",
+        "Electric Logistics Vehicles"
+      ],
+      [
+        "Electric Car Manufacturing",
+        "Tesla"
+      ],
+      [
+        "Amazon",
+        "Tesla"
+      ],
+      [
+        "Amazon",
+        "Jeff Bezos"
+      ],
+      [
+        "Delivery Drones",
+        "Tesla"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778409893,
+    "update_time": 1778409893,
+    "_id": "doc-cee6e1265ce6245e9f6a0ce4d753f2d3"
+  },
+  "doc-3a6a91ab52b7a426f56efeb56e97cefc": {
+    "relation_pairs": [
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "Nonprofit Board",
+        "OpenAI"
+      ],
+      [
+        "Copilot",
+        "Microsoft"
+      ],
+      [
+        "2030",
+        "Microsoft"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778409925,
+    "update_time": 1778409925,
+    "_id": "doc-3a6a91ab52b7a426f56efeb56e97cefc"
+  },
+  "doc-ffefb22570cc8bc9e1c958f736797293": {
+    "relation_pairs": [
+      [
+        "Bill Gates",
+        "Microsoft"
+      ],
+      [
+        "Satya Nadella",
+        "philanthropy"
+      ],
+      [
+        "Bill Gates",
+        "Windows"
+      ],
+      [
+        "Microsoft",
+        "Satya Nadella"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778409974,
+    "update_time": 1778409974,
+    "_id": "doc-ffefb22570cc8bc9e1c958f736797293"
+  },
+  "doc-645733b888da1298f6022d1d96365d30": {
+    "relation_pairs": [
+      [
+        "AWS Developer Tools",
+        "Cloud-Native Application Deployment"
+      ],
+      [
+        "DevOps Pipelines",
+        "Enterprise Software Ecosystem"
+      ],
+      [
+        "Amazon",
+        "GitHub"
+      ],
+      [
+        "AWS",
+        "AWS Developer Tools"
+      ],
+      [
+        "Amazon",
+        "Enterprise Software Ecosystem"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410020,
+    "update_time": 1778410020,
+    "_id": "doc-645733b888da1298f6022d1d96365d30"
+  },
+  "doc-49b7d4c1a47004e3770d9a354596ee82": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "Intel"
+      ],
+      [
+        "Intel",
+        "Semiconductor Manufacturing"
+      ],
+      [
+        "Intel",
+        "Steve Jobs"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410044,
+    "update_time": 1778410044,
+    "_id": "doc-49b7d4c1a47004e3770d9a354596ee82"
+  },
+  "doc-c01c07568073f6cf4c95403b1dd493a9": {
+    "relation_pairs": [
+      [
+        "Google",
+        "Google Chat"
+      ],
+      [
+        "Gmail Infrastructure",
+        "Google"
+      ],
+      [
+        "Android Messaging Ecosystem",
+        "WhatsApp"
+      ],
+      [
+        "Google",
+        "WhatsApp-Based Communication Tools"
+      ],
+      [
+        "Google",
+        "WhatsApp"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410083,
+    "update_time": 1778410083,
+    "_id": "doc-c01c07568073f6cf4c95403b1dd493a9"
+  },
+  "doc-0ff4740030dafaae73c7101c58b2ce0c": {
+    "relation_pairs": [
+      [
+        "Electric Vehicle Prototypes",
+        "Instagram"
+      ],
+      [
+        "Autopilot Systems",
+        "Elon Musk"
+      ],
+      [
+        "Elon Musk",
+        "Instagram"
+      ],
+      [
+        "Elon Musk",
+        "Tesla"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778410113,
+    "update_time": 1778410113,
+    "_id": "doc-0ff4740030dafaae73c7101c58b2ce0c"
+  },
+  "doc-b9fddbcbf7e1d40cde46e5f532b21b1b": {
+    "relation_pairs": [
+      [
+        "Android",
+        "Fire"
+      ],
+      [
+        "Android",
+        "Kindle"
+      ],
+      [
+        "Amazon",
+        "Retail and Entertainment Products"
+      ],
+      [
+        "Amazon",
+        "Android"
+      ],
+      [
+        "Amazon",
+        "Cloud Services"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410164,
+    "update_time": 1778410164,
+    "_id": "doc-b9fddbcbf7e1d40cde46e5f532b21b1b"
+  },
+  "doc-6933bdf2c1e53029b02d2862a43a3239": {
+    "relation_pairs": [
+      [
+        "AR/VR Ecosystems",
+        "Strategic Partnership"
+      ],
+      [
+        "Apple Vision Devices",
+        "Tim Cook"
+      ],
+      [
+        "Apple",
+        "Meta"
+      ],
+      [
+        "Hardware Integration",
+        "Tim Cook"
+      ],
+      [
+        "Meta",
+        "Tim Cook"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410210,
+    "update_time": 1778410210,
+    "_id": "doc-6933bdf2c1e53029b02d2862a43a3239"
+  },
+  "doc-1705e4732ba3c50ee925262062cce04c": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "Mobile Devices"
+      ],
+      [
+        "Apple",
+        "Windows-Based Hardware"
+      ],
+      [
+        "Apple",
+        "Consumer Electronics Market"
+      ],
+      [
+        "Apple",
+        "Microsoft"
+      ],
+      [
+        "2005",
+        "Apple"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410244,
+    "update_time": 1778410244,
+    "_id": "doc-1705e4732ba3c50ee925262062cce04c"
+  },
+  "doc-0165678604be0b39274dba3de54175c5": {
+    "relation_pairs": [
+      [
+        "Android Voice Assistants",
+        "ChatGPT"
+      ],
+      [
+        "ChatGPT",
+        "Google DeepMind"
+      ],
+      [
+        "ChatGPT",
+        "Google Search"
+      ],
+      [
+        "Google DeepMind",
+        "Large-Scale Conversational AI Research Program"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778410274,
+    "update_time": 1778410274,
+    "_id": "doc-0165678604be0b39274dba3de54175c5"
+  },
+  "doc-d1d0c9075d7e6f9f4f440e6ec63f3c50": {
+    "relation_pairs": [
+      [
+        "Advanced Web Systems",
+        "Hybrid Computing Environments"
+      ],
+      [
+        "Advanced Web Systems",
+        "Networking Protocol Suite"
+      ],
+      [
+        "Advanced Web Systems",
+        "Microsoft"
+      ],
+      [
+        "Advanced Web Systems",
+        "Enterprise Cloud Communication"
+      ],
+      [
+        "AWS",
+        "Advanced Web Systems"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410307,
+    "update_time": 1778410307,
+    "_id": "doc-d1d0c9075d7e6f9f4f440e6ec63f3c50"
+  },
+  "doc-b0255fc7383bd155ce579216af55b046": {
+    "relation_pairs": [
+      [
+        "Pixar",
+        "Streaming Content"
+      ],
+      [
+        "Original Feature Films",
+        "Pixar"
+      ],
+      [
+        "Netflix",
+        "Pixar"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410331,
+    "update_time": 1778410331,
+    "_id": "doc-b0255fc7383bd155ce579216af55b046"
+  },
+  "doc-ba349839d644aa008b19a8a6e3eac134": {
+    "relation_pairs": [
+      [
+        "Satellite-Connected Automotive Operations",
+        "Tesla"
+      ],
+      [
+        "Germany",
+        "Tesla"
+      ],
+      [
+        "European Manufacturing Expansion",
+        "Tesla"
+      ],
+      [
+        "Berlin",
+        "Tesla"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778410370,
+    "update_time": 1778410370,
+    "_id": "doc-ba349839d644aa008b19a8a6e3eac134"
+  },
+  "doc-22f921a29281a52e24ff99127195c5ef": {
+    "relation_pairs": [
+      [
+        "Android",
+        "Apple"
+      ],
+      [
+        "Apple",
+        "Customized Version of Android"
+      ],
+      [
+        "Android",
+        "iPhone"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410411,
+    "update_time": 1778410411,
+    "_id": "doc-22f921a29281a52e24ff99127195c5ef"
+  },
+  "doc-5fc3846630776155d5fa6a760a95e625": {
+    "relation_pairs": [
+      [
+        "Facebook",
+        "iTunes"
+      ],
+      [
+        "Apple",
+        "Facebook"
+      ],
+      [
+        "Apple",
+        "Global Expansion Project"
+      ],
+      [
+        "2010",
+        "Facebook"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778410444,
+    "update_time": 1778410444,
+    "_id": "doc-5fc3846630776155d5fa6a760a95e625"
+  },
+  "doc-71f20c7ea2dd0f9cba67f88652f5462d": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "Streaming Services"
+      ],
+      [
+        "Amazon",
+        "YouTube"
+      ],
+      [
+        "Amazon",
+        "Digital Media"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410473,
+    "update_time": 1778410473,
+    "_id": "doc-71f20c7ea2dd0f9cba67f88652f5462d"
+  },
+  "doc-a3d9b089f2a85c371368c1e74acd9a7f": {
+    "relation_pairs": [
+      [
+        "Cloud Computing",
+        "Netflix"
+      ],
+      [
+        "Enterprise Data Hosting Solutions",
+        "Netflix"
+      ],
+      [
+        "Data Hosting",
+        "Netflix"
+      ],
+      [
+        "Cloud Computing Infrastructure Services",
+        "Netflix"
+      ],
+      [
+        "Major Technology Companies",
+        "Netflix"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410511,
+    "update_time": 1778410511,
+    "_id": "doc-a3d9b089f2a85c371368c1e74acd9a7f"
+  },
+  "doc-0b955303430edc4db551ac210571cf96": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "Social Media Advertising"
+      ],
+      [
+        "Amazon",
+        "Instagram"
+      ],
+      [
+        "Amazon",
+        "Shopping Features"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410534,
+    "update_time": 1778410534,
+    "_id": "doc-0b955303430edc4db551ac210571cf96"
+  },
+  "doc-58e9cfd9a53bf1063b3fac02e36ec830": {
+    "relation_pairs": [
+      [
+        "Google Search",
+        "Yahoo"
+      ],
+      [
+        "Google",
+        "Yahoo"
+      ],
+      [
+        "Late 1990s",
+        "Yahoo"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410559,
+    "update_time": 1778410559,
+    "_id": "doc-58e9cfd9a53bf1063b3fac02e36ec830"
+  },
+  "doc-42165e08ea53b19a33bbffd29366fbe9": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "University Students"
+      ],
+      [
+        "Amazon",
+        "Social Media Platform"
+      ],
+      [
+        "Microsoft",
+        "Microsoft's Investment"
+      ],
+      [
+        "Amazon",
+        "E-Commerce"
+      ],
+      [
+        "Academic Collaboration",
+        "Amazon"
+      ],
+      [
+        "Amazon",
+        "Microsoft's Investment"
+      ],
+      [
+        "Amazon",
+        "Microsoft"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778410604,
+    "update_time": 1778410604,
+    "_id": "doc-42165e08ea53b19a33bbffd29366fbe9"
+  },
+  "doc-03221106549dc8e19bf63afbe0d89de4": {
+    "relation_pairs": [
+      [
+        "First Version Of MacOS",
+        "Microsoft"
+      ],
+      [
+        "Apple",
+        "Microsoft"
+      ],
+      [
+        "Apple",
+        "MacOS"
+      ],
+      [
+        "Apple",
+        "First Version Of MacOS"
+      ],
+      [
+        "MacOS",
+        "Microsoft"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410640,
+    "update_time": 1778410640,
+    "_id": "doc-03221106549dc8e19bf63afbe0d89de4"
+  },
+  "doc-0439d511c5ccd267c6e49c1a71674310": {
+    "relation_pairs": [
+      [
+        "Google",
+        "Internal Corporate Video Archives"
+      ],
+      [
+        "Google",
+        "YouTube"
+      ],
+      [
+        "Enterprise Data",
+        "Google"
+      ],
+      [
+        "Cloud Storage Platform",
+        "YouTube"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778410683,
+    "update_time": 1778410683,
+    "_id": "doc-0439d511c5ccd267c6e49c1a71674310"
+  },
+  "doc-633737bfa9dec69133d8d3468d173fde": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "iPod"
+      ],
+      [
+        "Android",
+        "iPod Devices"
+      ],
+      [
+        "Android",
+        "Lightweight Operating System"
+      ],
+      [
+        "Android",
+        "Smartphones"
+      ],
+      [
+        "Android",
+        "Apple"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410720,
+    "update_time": 1778410720,
+    "_id": "doc-633737bfa9dec69133d8d3468d173fde"
+  },
+  "doc-2bb39d7eed09293fb9ea3899c8371a03": {
+    "relation_pairs": [
+      [
+        "Enterprise Cloud Infrastructure Tools",
+        "Microsoft"
+      ],
+      [
+        "1998",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "Microsoft"
+      ],
+      [
+        "IBM",
+        "Microsoft"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778410748,
+    "update_time": 1778410748,
+    "_id": "doc-2bb39d7eed09293fb9ea3899c8371a03"
+  },
+  "doc-eaa4b62fcd86c6874a1cbf7db503cd43": {
+    "relation_pairs": [
+      [
+        "Consumer Smartphones",
+        "Tesla"
+      ],
+      [
+        "Android",
+        "Tesla"
+      ],
+      [
+        "Google Services",
+        "Tesla"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410771,
+    "update_time": 1778410771,
+    "_id": "doc-eaa4b62fcd86c6874a1cbf7db503cd43"
+  },
+  "doc-e79dde3667128335d53767c715252f4e": {
+    "relation_pairs": [
+      [
+        "Enterprise Tablets",
+        "Microsoft"
+      ],
+      [
+        "Surface Mobile Devices",
+        "iOS"
+      ],
+      [
+        "Enterprise Tablets",
+        "iOS"
+      ],
+      [
+        "Microsoft",
+        "Surface Mobile Devices"
+      ],
+      [
+        "Microsoft",
+        "iOS"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778410805,
+    "update_time": 1778410805,
+    "_id": "doc-e79dde3667128335d53767c715252f4e"
+  },
+  "doc-b461c31d3f069aaab667ec5e9b4cf029": {
+    "relation_pairs": [
+      [
+        "Enterprise Software",
+        "Financial Services"
+      ],
+      [
+        "Cloud Computing Infrastructure",
+        "Meta"
+      ],
+      [
+        "Financial Institutions",
+        "Meta"
+      ],
+      [
+        "Cloud Computing",
+        "Cloud Computing Infrastructure"
+      ],
+      [
+        "Enterprise Software",
+        "Meta"
+      ],
+      [
+        "Enterprise Software",
+        "Financial Institutions"
+      ],
+      [
+        "AWS",
+        "Meta"
+      ],
+      [
+        "Azure",
+        "Meta"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1778410855,
+    "update_time": 1778410855,
+    "_id": "doc-b461c31d3f069aaab667ec5e9b4cf029"
+  },
+  "doc-5e4ff497a03deb3546c5d3063463573a": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "Windows"
+      ],
+      [
+        "Mac Hardware Systems",
+        "Windows"
+      ],
+      [
+        "Microsoft",
+        "Microsoft Office"
+      ],
+      [
+        "Microsoft Office",
+        "Windows"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778410943,
+    "update_time": 1778410943,
+    "_id": "doc-5e4ff497a03deb3546c5d3063463573a"
+  },
+  "doc-5e9818d895eab1fae19b0437a9150ed3": {
+    "relation_pairs": [
+      [
+        "Chrome Browser",
+        "Microsoft"
+      ],
+      [
+        "Chrome Browser",
+        "Lightweight Browsing"
+      ],
+      [
+        "Chrome Browser",
+        "Open-Source Compatibility"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778410985,
+    "update_time": 1778410985,
+    "_id": "doc-5e9818d895eab1fae19b0437a9150ed3"
+  },
+  "doc-c2146299c703420429b8c9713f55c25f": {
+    "relation_pairs": [
+      [
+        "LinkedIn",
+        "Personal Lifestyle Content"
+      ],
+      [
+        "LinkedIn",
+        "Photo-Sharing Application"
+      ],
+      [
+        "LinkedIn",
+        "Professional Networking"
+      ],
+      [
+        "Amazon",
+        "LinkedIn"
+      ],
+      [
+        "Instagram",
+        "LinkedIn"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778411043,
+    "update_time": 1778411043,
+    "_id": "doc-c2146299c703420429b8c9713f55c25f"
+  },
+  "doc-a0464c6bccaf728de6334c47a9f5e6e8": {
+    "relation_pairs": [
+      [
+        "Google",
+        "Joint Hardware Initiative"
+      ],
+      [
+        "Joint Hardware Initiative",
+        "Samsung"
+      ],
+      [
+        "Google",
+        "Samsung"
+      ],
+      [
+        "Samsung",
+        "iPad"
+      ],
+      [
+        "Apple",
+        "iPad"
+      ],
+      [
+        "Android",
+        "Google"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778411115,
+    "update_time": 1778411115,
+    "_id": "doc-a0464c6bccaf728de6334c47a9f5e6e8"
+  },
+  "doc-5d9cf01ff5f5cfcdeb47fbcebef0bb38": {
+    "relation_pairs": [
+      [
+        "Microsoft",
+        "TikTok"
+      ],
+      [
+        "Short-Form Educational Videos",
+        "TikTok"
+      ],
+      [
+        "Enterprise Training Systems",
+        "TikTok"
+      ],
+      [
+        "Cloud Storage Service",
+        "TikTok"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778411166,
+    "update_time": 1778411166,
+    "_id": "doc-5d9cf01ff5f5cfcdeb47fbcebef0bb38"
+  },
+  "doc-c7f49cf4a66a68137b54e6c75c0a5b44": {
+    "relation_pairs": [
+      [
+        "Nintendo",
+        "Super Nintendo Entertainment System"
+      ],
+      [
+        "Nintendo",
+        "PlayStation"
+      ],
+      [
+        "PlayStation",
+        "Sony"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778411209,
+    "update_time": 1778411209,
+    "_id": "doc-c7f49cf4a66a68137b54e6c75c0a5b44"
+  },
+  "doc-2a136d5af24e030618b286502faf9e60": {
+    "relation_pairs": [
+      [
+        "IBM",
+        "Tablets"
+      ],
+      [
+        "Consumer Electronics",
+        "IBM"
+      ],
+      [
+        "IBM",
+        "Smartphones"
+      ],
+      [
+        "Consumer Electronics Manufacturing",
+        "IBM"
+      ],
+      [
+        "IBM",
+        "Samsung"
+      ],
+      [
+        "Apple",
+        "IBM"
+      ],
+      [
+        "Global Markets",
+        "IBM"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778411272,
+    "update_time": 1778411272,
+    "_id": "doc-2a136d5af24e030618b286502faf9e60"
+  },
+  "doc-85bc997290f4aba5d2a50a3d9ab0e8f0": {
+    "relation_pairs": [
+      [
+        "Firefox",
+        "Google"
+      ],
+      [
+        "Firefox",
+        "Google Search"
+      ],
+      [
+        "Firefox",
+        "Gmail"
+      ],
+      [
+        "Firefox Browser",
+        "Google"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778411309,
+    "update_time": 1778411309,
+    "_id": "doc-85bc997290f4aba5d2a50a3d9ab0e8f0"
+  },
+  "doc-c0a52dfe32af86025e9d50fa3ae6a733": {
+    "relation_pairs": [
+      [
+        "Home Entertainment Systems",
+        "Spotify"
+      ],
+      [
+        "Smart Speakers",
+        "Spotify"
+      ],
+      [
+        "Amazon Alexa",
+        "Home Entertainment Systems"
+      ],
+      [
+        "Hardware Manufacturing",
+        "Spotify"
+      ],
+      [
+        "Amazon Alexa",
+        "Smart Speakers"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778411354,
+    "update_time": 1778411354,
+    "_id": "doc-c0a52dfe32af86025e9d50fa3ae6a733"
+  },
+  "doc-40d8f3849d4bda04365ffc7d6caadc85": {
+    "relation_pairs": [
+      [
+        "Linux",
+        "Windows Infrastructure"
+      ],
+      [
+        "Linux",
+        "Microsoft"
+      ],
+      [
+        "Linux",
+        "Proprietary Operating System"
+      ],
+      [
+        "Enterprise Cloud Servers",
+        "Linux"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778411391,
+    "update_time": 1778411391,
+    "_id": "doc-40d8f3849d4bda04365ffc7d6caadc85"
+  },
+  "doc-eda1cf1ae0b20285659378bdf1f8e97a": {
+    "relation_pairs": [
+      [
+        "Adobe",
+        "Web Browsers"
+      ],
+      [
+        "Android Devices",
+        "Web Browsers"
+      ],
+      [
+        "Adobe",
+        "Google Chrome Extensions"
+      ],
+      [
+        "Adobe",
+        "Mobile Operating Systems"
+      ],
+      [
+        "Google Chrome Extensions",
+        "Web Browsers"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778411436,
+    "update_time": 1778411436,
+    "_id": "doc-eda1cf1ae0b20285659378bdf1f8e97a"
+  },
+  "doc-f674dafb6eb0dd216549fba1512c2ab6": {
+    "relation_pairs": [
+      [
+        "Bill Gates",
+        "Microsoft"
+      ],
+      [
+        "Microsoft",
+        "Personal Computing"
+      ],
+      [
+        "Gaming",
+        "Microsoft"
+      ],
+      [
+        "Microsoft",
+        "Smartphone Hardware"
+      ],
+      [
+        "Bill Gates",
+        "Stanford University"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778411485,
+    "update_time": 1778411485,
+    "_id": "doc-f674dafb6eb0dd216549fba1512c2ab6"
+  },
+  "doc-dc4b055514ad6dcd6c8519c92e56a971": {
+    "relation_pairs": [
+      [
+        "Jeff Bezos",
+        "Twitter"
+      ],
+      [
+        "Jeff Bezos",
+        "Prime Video"
+      ],
+      [
+        "2022",
+        "Jeff Bezos"
+      ],
+      [
+        "Amazon Advertising Systems",
+        "Jeff Bezos"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778411528,
+    "update_time": 1778411528,
+    "_id": "doc-dc4b055514ad6dcd6c8519c92e56a971"
+  },
+  "doc-70fb8c2902ff4169377e338c951abc06": {
+    "relation_pairs": [
+      [
+        "Steve Jobs",
+        "Streaming Media Services"
+      ],
+      [
+        "2011",
+        "Steve Jobs"
+      ],
+      [
+        "Malcolm Gladwell",
+        "Steve Jobs"
+      ],
+      [
+        "Cloud Computing",
+        "Steve Jobs"
+      ],
+      [
+        "Apple",
+        "Steve Jobs"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778411610,
+    "update_time": 1778411610,
+    "_id": "doc-70fb8c2902ff4169377e338c951abc06"
+  },
+  "doc-52c2c72f070c4a0679a377de8496e1d4": {
+    "relation_pairs": [
+      [
+        "Bill Gates",
+        "Microsoft"
+      ],
+      [
+        "Microsoft",
+        "Windows Laptops"
+      ],
+      [
+        "Bill Gates",
+        "Think Different"
+      ],
+      [
+        "Campaign",
+        "Microsoft"
+      ],
+      [
+        "Bill Gates",
+        "Campaign"
+      ],
+      [
+        "Enterprise Software Innovation",
+        "Microsoft"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778411658,
+    "update_time": 1778411658,
+    "_id": "doc-52c2c72f070c4a0679a377de8496e1d4"
+  },
+  "doc-4361c819a8f438c6f813df4d78f7072a": {
+    "relation_pairs": [
+      [
+        "Google Search",
+        "Mark Zuckerberg"
+      ],
+      [
+        "Android",
+        "Mark Zuckerberg"
+      ],
+      [
+        "Google",
+        "Sundar Pichai"
+      ],
+      [
+        "Google",
+        "Mark Zuckerberg"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778411698,
+    "update_time": 1778411698,
+    "_id": "doc-4361c819a8f438c6f813df4d78f7072a"
+  },
+  "doc-9c49463ede301432afefa2ca4cf4d13d": {
+    "relation_pairs": [
+      [
+        "Blue Origin",
+        "Tesla Satellite Deployments"
+      ],
+      [
+        "Elon Musk",
+        "Mars Transportation Initiatives"
+      ],
+      [
+        "Blue Origin",
+        "Elon Musk"
+      ],
+      [
+        "Elon Musk",
+        "Tesla"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778411742,
+    "update_time": 1778411742,
+    "_id": "doc-9c49463ede301432afefa2ca4cf4d13d"
+  },
+  "doc-930ff7459e30c322b893c54a3c364c91": {
+    "relation_pairs": [
+      [
+        "Spotify",
+        "Subscription Music Streaming"
+      ],
+      [
+        "Reed Hastings",
+        "Spotify"
+      ],
+      [
+        "AI-Powered Film Recommendation Systems",
+        "Spotify"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778411769,
+    "update_time": 1778411769,
+    "_id": "doc-930ff7459e30c322b893c54a3c364c91"
+  },
+  "doc-63cc58f69efd26d0316ceb701b0fce5f": {
+    "relation_pairs": [
+      [
+        "Facebook",
+        "Tim Cook"
+      ],
+      [
+        "Apple",
+        "Meta"
+      ],
+      [
+        "Instagram Data Privacy Operations",
+        "Tim Cook"
+      ],
+      [
+        "Tim Cook",
+        "U.S. Congress"
+      ],
+      [
+        "Facebook's Advertising Systems",
+        "Tim Cook"
+      ],
+      [
+        "Instagram",
+        "Tim Cook"
+      ],
+      [
+        "Instagram",
+        "Meta"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778411840,
+    "update_time": 1778411840,
+    "_id": "doc-63cc58f69efd26d0316ceb701b0fce5f"
+  },
+  "doc-647910354ec6629d233de1cb45fdbfb4": {
+    "relation_pairs": [
+      [
+        "Jeff Bezos",
+        "Tesla"
+      ],
+      [
+        "Reusable Rockets",
+        "SpaceX"
+      ],
+      [
+        "Jeff Bezos",
+        "SpaceX"
+      ],
+      [
+        "Electric Cars",
+        "Tesla"
+      ],
+      [
+        "2020s",
+        "Jeff Bezos"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778411885,
+    "update_time": 1778411885,
+    "_id": "doc-647910354ec6629d233de1cb45fdbfb4"
+  },
+  "doc-dbf9827f3bade263b58117b44907940a": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "Steve Jobs"
+      ],
+      [
+        "Apple",
+        "Jony Ive"
+      ],
+      [
+        "Enterprise Software",
+        "Jony Ive"
+      ],
+      [
+        "Cloud Infrastructure Services",
+        "Jony Ive"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778411919,
+    "update_time": 1778411919,
+    "_id": "doc-dbf9827f3bade263b58117b44907940a"
+  },
+  "doc-e44d73e862b20c1ab62ae487362601a2": {
+    "relation_pairs": [
+      [
+        "Elon Musk",
+        "SpaceX"
+      ],
+      [
+        "Facebook",
+        "X"
+      ],
+      [
+        "Elon Musk",
+        "X"
+      ],
+      [
+        "Elon Musk",
+        "Facebook"
+      ],
+      [
+        "Elon Musk",
+        "Tesla"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778411975,
+    "update_time": 1778411975,
+    "_id": "doc-e44d73e862b20c1ab62ae487362601a2"
+  },
+  "doc-9112a088ddf7be5a2ff9b231a25b4752": {
+    "relation_pairs": [
+      [
+        "Bill Gates",
+        "Microsoft"
+      ],
+      [
+        "Bill Gates",
+        "Stanford University"
+      ],
+      [
+        "Bill Gates",
+        "Stanford Commencement Speech"
+      ],
+      [
+        "Cloud Education Platforms",
+        "Microsoft"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412008,
+    "update_time": 1778412008,
+    "_id": "doc-9112a088ddf7be5a2ff9b231a25b4752"
+  },
+  "doc-82316310d38362683d540559a56812ed": {
+    "relation_pairs": [
+      [
+        "Amazon Checkout Systems",
+        "Jeff Bezos"
+      ],
+      [
+        "International Payment Infrastructure",
+        "Jeff Bezos"
+      ],
+      [
+        "Jeff Bezos",
+        "PayPal"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778412033,
+    "update_time": 1778412033,
+    "_id": "doc-82316310d38362683d540559a56812ed"
+  },
+  "doc-77b6219c04b04ff4cd1dec585b00932c": {
+    "relation_pairs": [
+      [
+        "Tim Cook",
+        "Windows"
+      ],
+      [
+        "Windows",
+        "iPad"
+      ],
+      [
+        "2014",
+        "Tim Cook"
+      ],
+      [
+        "Microsoft",
+        "Tim Cook"
+      ],
+      [
+        "Windows",
+        "iPhone"
+      ],
+      [
+        "Microsoft",
+        "Steve Ballmer"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778412108,
+    "update_time": 1778412108,
+    "_id": "doc-77b6219c04b04ff4cd1dec585b00932c"
+  },
+  "doc-a7c08a5d789d9e9be6d13e4de02ba56b": {
+    "relation_pairs": [
+      [
+        "Elon Musk",
+        "SpaceX"
+      ],
+      [
+        "Biography",
+        "Elon Musk"
+      ],
+      [
+        "Elon Musk",
+        "The Everything Store"
+      ],
+      [
+        "Elon Musk",
+        "Online Retail Logistics"
+      ],
+      [
+        "Elon Musk",
+        "Tesla"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778412155,
+    "update_time": 1778412155,
+    "_id": "doc-a7c08a5d789d9e9be6d13e4de02ba56b"
+  },
+  "doc-6b0f0e8cffb9aef4dc0581829d487e8c": {
+    "relation_pairs": [
+      [
+        "Android",
+        "Sundar Pichai"
+      ],
+      [
+        "Apple Inc.",
+        "iPhone"
+      ],
+      [
+        "Sundar Pichai",
+        "iPhone"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778412182,
+    "update_time": 1778412182,
+    "_id": "doc-6b0f0e8cffb9aef4dc0581829d487e8c"
+  },
+  "doc-01eaedd836451216e7c2e223fc18d0c8": {
+    "relation_pairs": [
+      [
+        "Immersive Gaming Systems",
+        "Metaverse Concept"
+      ],
+      [
+        "CEO",
+        "Tim Cook"
+      ],
+      [
+        "Metaverse Concept",
+        "Virtual Reality Social Networking"
+      ],
+      [
+        "Apple",
+        "Tim Cook"
+      ],
+      [
+        "Apple",
+        "Immersive Gaming Systems"
+      ],
+      [
+        "Apple",
+        "Virtual Reality Social Networking"
+      ],
+      [
+        "Metaverse Concept",
+        "Tim Cook"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778412228,
+    "update_time": 1778412228,
+    "_id": "doc-01eaedd836451216e7c2e223fc18d0c8"
+  },
+  "doc-613132d16764a45ca0dad8a8531dd3c8": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "Graphical User Interfaces"
+      ],
+      [
+        "Bill Gates",
+        "Steve Jobs"
+      ],
+      [
+        "Apple",
+        "Bill Gates"
+      ],
+      [
+        "California",
+        "Steve Jobs"
+      ],
+      [
+        "Bill Gates",
+        "California"
+      ],
+      [
+        "Apple",
+        "Steve Jobs"
+      ],
+      [
+        "Apple",
+        "Personal Computer Software Ecosystems"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1778412301,
+    "update_time": 1778412301,
+    "_id": "doc-613132d16764a45ca0dad8a8531dd3c8"
+  },
+  "doc-cd49f23f122c862707cf15e0d4c8af84": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "Neuralink"
+      ],
+      [
+        "AI-Assisted Warehouse Automation",
+        "Neuralink"
+      ],
+      [
+        "Brain-Computer Interfaces",
+        "Neuralink"
+      ],
+      [
+        "Jeff Bezos",
+        "Neuralink"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412341,
+    "update_time": 1778412341,
+    "_id": "doc-cd49f23f122c862707cf15e0d4c8af84"
+  },
+  "doc-50b8d638d6d496b79b1410e060a48f48": {
+    "relation_pairs": [
+      [
+        "Amazon",
+        "Andy Jassy"
+      ],
+      [
+        "AWS",
+        "Andy Jassy"
+      ],
+      [
+        "Andy Jassy",
+        "Online Bookstore"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778412397,
+    "update_time": 1778412397,
+    "_id": "doc-50b8d638d6d496b79b1410e060a48f48"
+  },
+  "doc-dd469da3c0d660c7908f762c4c22b754": {
+    "relation_pairs": [
+      [
+        "Google",
+        "Slack"
+      ],
+      [
+        "Google",
+        "Microsoft Teams"
+      ],
+      [
+        "2021",
+        "Google"
+      ],
+      [
+        "Apple's Enterprise Tools",
+        "Google"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412438,
+    "update_time": 1778412438,
+    "_id": "doc-dd469da3c0d660c7908f762c4c22b754"
+  },
+  "doc-ef1aa9aecc9a48a8d2f51ccd2b4a5a77": {
+    "relation_pairs": [
+      [
+        "NVIDIA",
+        "Tim Cook"
+      ],
+      [
+        "Mobile Gaming",
+        "NVIDIA"
+      ],
+      [
+        "Hardware-Accelerated Graphics",
+        "NVIDIA"
+      ],
+      [
+        "Apple",
+        "Tim Cook"
+      ],
+      [
+        "Artificial Intelligence Research",
+        "NVIDIA"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778412520,
+    "update_time": 1778412520,
+    "_id": "doc-ef1aa9aecc9a48a8d2f51ccd2b4a5a77"
+  },
+  "doc-f9248a230103ef1004f128eb31e5a792": {
+    "relation_pairs": [
+      [
+        "Microsoft",
+        "Python"
+      ],
+      [
+        "Python",
+        "Server-Side Scripting"
+      ],
+      [
+        "James Gosling",
+        "Python"
+      ],
+      [
+        "James Gosling",
+        "Sun Microsystems"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412553,
+    "update_time": 1778412553,
+    "_id": "doc-f9248a230103ef1004f128eb31e5a792"
+  },
+  "doc-8fbe3418850c1c2c1bd54ee8cabd990a": {
+    "relation_pairs": [
+      [
+        "IBM",
+        "Oracle Database"
+      ],
+      [
+        "CIA",
+        "IBM"
+      ],
+      [
+        "Amazon",
+        "Oracle Database"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778412600,
+    "update_time": 1778412600,
+    "_id": "doc-8fbe3418850c1c2c1bd54ee8cabd990a"
+  },
+  "doc-6c91dc7b30787146a1713f2591518a99": {
+    "relation_pairs": [
+      [
+        "Mark Zuckerberg",
+        "Social Experiment"
+      ],
+      [
+        "Mark Zuckerberg",
+        "Spotify"
+      ],
+      [
+        "Facebook",
+        "Mark Zuckerberg"
+      ],
+      [
+        "Music Streaming Service",
+        "Spotify"
+      ],
+      [
+        "Facebook Platform",
+        "Social Experiment"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778412641,
+    "update_time": 1778412641,
+    "_id": "doc-6c91dc7b30787146a1713f2591518a99"
+  },
+  "doc-e767d51f50ed0e2fcd5c7a1cd632a381": {
+    "relation_pairs": [
+      [
+        "Bing",
+        "Experimental AI Algorithms"
+      ],
+      [
+        "Google",
+        "Google Search"
+      ],
+      [
+        "Bing",
+        "Google"
+      ],
+      [
+        "Google",
+        "Search Engine"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412672,
+    "update_time": 1778412672,
+    "_id": "doc-e767d51f50ed0e2fcd5c7a1cd632a381"
+  },
+  "doc-0ae935ebf5a67f88b6f7b3db7ce04610": {
+    "relation_pairs": [
+      [
+        "Apple",
+        "iPhone"
+      ],
+      [
+        "1976",
+        "iPhone"
+      ],
+      [
+        "Windows",
+        "iPhone"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778412699,
+    "update_time": 1778412699,
+    "_id": "doc-0ae935ebf5a67f88b6f7b3db7ce04610"
+  },
+  "doc-acac6883aeed7ca8ad26854bdfb4673a": {
+    "relation_pairs": [
+      [
+        "LinkedIn",
+        "Meta"
+      ],
+      [
+        "LinkedIn",
+        "Targeted Recruitment Advertising"
+      ],
+      [
+        "Facebook",
+        "LinkedIn"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778412725,
+    "update_time": 1778412725,
+    "_id": "doc-acac6883aeed7ca8ad26854bdfb4673a"
+  },
+  "doc-f835ded638b82268f0237fe24c2a26eb": {
+    "relation_pairs": [
+      [
+        "Steve Jobs",
+        "World Wide Web"
+      ],
+      [
+        "Future Cloud Services",
+        "World Wide Web"
+      ],
+      [
+        "NeXT Computer",
+        "Steve Jobs"
+      ],
+      [
+        "Apple",
+        "World Wide Web"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412791,
+    "update_time": 1778412791,
+    "_id": "doc-f835ded638b82268f0237fe24c2a26eb"
+  },
+  "doc-b0cf5b0ef1019634e97e7cb1152e30c1": {
+    "relation_pairs": [
+      [
+        "Electronic Arts",
+        "Unreal Engine"
+      ],
+      [
+        "Microsoft Xbox",
+        "Unreal Engine"
+      ],
+      [
+        "Electronic Arts",
+        "Game Development"
+      ],
+      [
+        "Sony PlayStation",
+        "Unreal Engine"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412825,
+    "update_time": 1778412825,
+    "_id": "doc-b0cf5b0ef1019634e97e7cb1152e30c1"
+  },
+  "doc-d32e7923a72af1f4080ca9b69ca98b24": {
+    "relation_pairs": [
+      [
+        "Electric Vehicles",
+        "Nintendo"
+      ],
+      [
+        "Nintendo",
+        "Trading Card Company"
+      ],
+      [
+        "Digital Gaming Hardware",
+        "Nintendo"
+      ],
+      [
+        "Elon Musk",
+        "Late 19th Century"
+      ],
+      [
+        "Elon Musk",
+        "Nintendo"
+      ],
+      [
+        "Elon Musk",
+        "Japanese Entertainment"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778412867,
+    "update_time": 1778412867,
+    "_id": "doc-d32e7923a72af1f4080ca9b69ca98b24"
+  },
+  "doc-f32c56d224c675afc0a2b6910f21d04c": {
+    "relation_pairs": [
+      [
+        "Epic Games Store",
+        "Professional Developers"
+      ],
+      [
+        "Apple",
+        "Epic Games Store"
+      ],
+      [
+        "Epic Games Store",
+        "High-Performance Mac Gaming"
+      ],
+      [
+        "App Store",
+        "Epic Games Store"
+      ],
+      [
+        "Epic Games Store",
+        "Gamers"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1778412910,
+    "update_time": 1778412910,
+    "_id": "doc-f32c56d224c675afc0a2b6910f21d04c"
+  },
+  "doc-fbc03d2971a4cd2b0c51a82a4a705e6c": {
+    "relation_pairs": [
+      [
+        "2024",
+        "Epic Games"
+      ],
+      [
+        "2024",
+        "Mark Zuckerberg"
+      ],
+      [
+        "Epic Games",
+        "Meta"
+      ],
+      [
+        "Mark Zuckerberg",
+        "Meta"
+      ],
+      [
+        "2024",
+        "Meta"
+      ],
+      [
+        "Epic Games",
+        "Mark Zuckerberg"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1778412952,
+    "update_time": 1778412952,
+    "_id": "doc-fbc03d2971a4cd2b0c51a82a4a705e6c"
+  },
+  "doc-772df39bd9a1c7ab8e8b8740cef910af": {
+    "relation_pairs": [
+      [
+        "Fortnite",
+        "Mario Universe"
+      ],
+      [
+        "Battle Royale",
+        "Fortnite"
+      ],
+      [
+        "Fortnite",
+        "Switch"
+      ],
+      [
+        "Fortnite",
+        "Nintendo"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778412986,
+    "update_time": 1778412986,
+    "_id": "doc-772df39bd9a1c7ab8e8b8740cef910af"
+  },
+  "doc-19bfedeefbb03fecf6fbbf0fe823c4c4": {
+    "relation_pairs": [
+      [
+        "Dreamcast",
+        "Online Capabilities"
+      ],
+      [
+        "Dreamcast",
+        "Sony"
+      ],
+      [
+        "Dreamcast",
+        "Music Streaming Services"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1778413015,
+    "update_time": 1778413015,
+    "_id": "doc-19bfedeefbb03fecf6fbbf0fe823c4c4"
+  },
+  "doc-8a6e1a7418ffce752bb7fc2c27c0895b": {
+    "relation_pairs": [
+      [
+        "Fortnite",
+        "Unreal Engine"
+      ],
+      [
+        "Nintendo",
+        "Nintendo Switch"
+      ],
+      [
+        "Fortnite",
+        "Nintendo Switch"
+      ],
+      [
+        "Epic Games",
+        "Nintendo Switch"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778413046,
+    "update_time": 1778413046,
+    "_id": "doc-8a6e1a7418ffce752bb7fc2c27c0895b"
+  },
+  "doc-110f75e314e9b426cc0fcd8406e3e9e0": {
+    "relation_pairs": [
+      [
+        "Destiny Franchise",
+        "Epic Games"
+      ],
+      [
+        "Bungie",
+        "Epic Games"
+      ],
+      [
+        "Bungie",
+        "Destiny Franchise"
+      ],
+      [
+        "Creative Toolset",
+        "Epic Games"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1778413084,
+    "update_time": 1778413084,
+    "_id": "doc-110f75e314e9b426cc0fcd8406e3e9e0"
+  },
+  "doc-d1d129d6d02300aeff9317d47c161dfe": {
+    "relation_pairs": [
+      [
+        "Crash Bandicoot",
+        "Nintendo"
+      ],
+      [
+        "Crash Bandicoot",
+        "Platforming Games"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1778413108,
+    "update_time": 1778413108,
+    "_id": "doc-d1d129d6d02300aeff9317d47c161dfe"
+  }
+}
