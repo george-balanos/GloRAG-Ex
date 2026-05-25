@@ -404,16 +404,18 @@ def render_html(data: dict, img_before: str, img_after: str) -> str:
     bar_color = "#ef4444" if sim < 0.1 else "#f59e0b" if sim < 0.4 else "#10b981"
     perturbed_ans = answers.get("perturbed")
 
-    answers_html = "".join([
-        badge("ground truth", "green"),
-        f'<div class="answer-block border-green">{esc(answers.get("ground_truth","—"))}</div>',
-        badge("original graph", "blue"),
-        f'<div class="answer-block border-blue">{esc(answers.get("original","—"))}</div>',
-        badge("after perturbation", "red"),
-        (f'<div class="answer-block border-red">{esc(perturbed_ans)}</div>'
-         if perturbed_ans is not None
-         else '<div class="answer-block border-red muted"><em>No answer generated</em></div>'),
-    ])
+    # Grouped answer comparisons into discrete blocks for a cleaner side-by-side card structure
+    answers_html = (
+        f'<div class="grid-2">'
+        f'  <div>{badge("original graph", "blue")}<div class="answer-block border-blue">{esc(answers.get("original","—"))}</div></div>'
+        f'  <div>{badge("after perturbation", "red")}'
+        f'    {"<div class=\"answer-block border-red\">" + esc(perturbed_ans) + "</div>" if perturbed_ans is not None else "<div class=\"answer-block border-red muted\"><em>No answer generated</em></div>"}'
+        f'  </div>'
+        f'</div>'
+        f'<div style="margin-top: 10px;">'
+        f'  {badge("ground truth", "green")}<div class="answer-block border-green">{esc(answers.get("ground_truth","—"))}</div>'
+        f'</div>'
+    )
 
     # ── entities ──
     def _entity_class(name):
@@ -439,7 +441,7 @@ def render_html(data: dict, img_before: str, img_after: str) -> str:
     def _edge_tag(src, tgt):
         edge_key = (src, tgt)
         if src in deleted_nodes or tgt in deleted_nodes or edge_key in deleted_edges:
-            return ' <span class="deleted-tag">[severed]</span>'
+            return ' <span class="deleted-tag">[affected]</span>'
         if edge_key in added_edges:
             return ' <span class="added-tag">[added]</span>'
         return ""
@@ -528,35 +530,47 @@ def render_html(data: dict, img_before: str, img_after: str) -> str:
 {sect("Question")}
 {card(f'<p class="question">{esc(data.get("question",""))}</p>')}
 
-{sect("Summary")}
-<div class="grid-3">
-  {card(f'<p class="muted sm">Result</p>{ badge("✓ Found","green") if found else badge("✗ Not found","red")}')}
-  {card(f'<p class="muted sm">Cost</p><span class="big-num">{round(data.get("cost","?"), 3)}</span>')}
-  {card(f'<p class="muted sm">LLM calls</p><span class="big-num">{data.get("llm_calls","?")}</span>')}
-</div>
+<div class="layout-main-grid">
+  <div class="layout-column">
+    {sect("Summary")}
+    <div class="grid-3">
+      {card(f'<p class="muted sm">Result</p>{ badge("✓ Found","green") if found else badge("✗ Not found","red")}')}
+      {card(f'<p class="muted sm">Cost</p><span class="big-num">{round(data.get("cost","?"), 3)}</span>')}
+      {card(f'<p class="muted sm">LLM calls</p><span class="big-num">{data.get("llm_calls","?")}</span>')}
+    </div>
 
-{sect("What Was Changed")}
-{card(f'<h3>Graph perturbation</h3><div class="pills">{op_pills}</div><p class="muted sm">{esc(op_note)}</p>')}
+    {sect("What Was Changed")}
+    {card(f'<h3>Graph perturbation</h3><div class="pills">{op_pills}</div><p class="muted sm">{esc(op_note)}</p>')}
+  </div>
 
-{sect("Graph — Before & After")}
-{card(f'''<div class="grid-2">
-  <div><p class="muted sm centre">Before</p><img src="data:image/png;base64,{img_before}" alt="before" class="graph-img"></div>
-  <div><p class="muted sm centre">After</p><img src="data:image/png;base64,{img_after}"  alt="after"  class="graph-img"></div>
+  <div class="layout-column">
+    {sect("Graph — Before & After")}
+    {card(f'''<div class="grid-2">
+      <div><p class="muted sm centre">Before</p><img src="data:image/png;base64,{img_before}" alt="before" class="graph-img"></div>
+      <div><p class="muted sm centre">After</p><img src="data:image/png;base64,{img_after}"  alt="after"  class="graph-img"></div>
+    </div>
+    <p class="muted sm" style="margin-top:8px">
+      <span style="color:#6366f1">&#9632;</span> Unaffected &nbsp;
+      <span style="color:#ef4444">&#9632;</span> Deleted &nbsp;
+      <span style="color:#10b981">&#9632;</span> Added
+    </p>''')}
+  </div>
 </div>
-<p class="muted sm" style="margin-top:8px">
-  <span style="color:#6366f1">&#9632;</span> Normal &nbsp;
-  <span style="color:#ef4444">&#9632;</span> Deleted/severed &nbsp;
-  <span style="color:#10b981">&#9632;</span> Added
-</p>''')}
 
 {sect("Answer Comparison")}
 {card(f'<h3>How answers changed</h3>{answers_html}')}
 
-{sect(f"Original Subgraph · {len(ents)} entities · {len(rels)} relations")}
-{card(f'<h3>Entities</h3>{ent_rows}<h3 style="margin-top:14px">Relations</h3>{rel_rows}')}
+<div class="layout-main-grid" style="margin-top: 10px;">
+  <div class="layout-column">
+    {sect(f"Original Subgraph · {len(ents)} entities · {len(rels)} relations")}
+    {card(f'<h3>Entities</h3>{ent_rows}<h3 style="margin-top:14px">Relations</h3>{rel_rows}')}
+  </div>
 
-{sect(f"Perturbed Subgraph" + (f" · {len(pe)} entities · {len(pr)} relations" if pert_sg else ""))}
-{card(pert_info_html)}
+  <div class="layout-column">
+    {sect(f"Perturbed Subgraph" + (f" · {len(pe)} entities · {len(pr)} relations" if pert_sg else ""))}
+    {card(pert_info_html)}
+  </div>
+</div>
 """
 
     return f"""<!DOCTYPE html>
@@ -573,7 +587,13 @@ def render_html(data: dict, img_before: str, img_after: str) -> str:
   }}
   *{{box-sizing:border-box;margin:0;padding:0}}
   body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-        background:var(--bg);color:var(--text);max-width:800px;margin:2rem auto;padding:0 1rem;font-size:14px}}
+        background:var(--bg);color:var(--text);max-width:1200px;margin:2rem auto;padding:0 1rem;font-size:14px}}
+  
+  /* Shared Content Layout Structures */
+  .layout-main-grid {{display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start;}}
+  @media(max-width:900px) {{ .layout-main-grid {{grid-template-columns:1fr;}} }}
+  .layout-column {{display:flex; flex-direction:column;}}
+
   .card{{background:var(--surface);border:1px solid var(--border);border-radius:12px;
          padding:1rem 1.25rem;margin-bottom:10px}}
   .grid-3{{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}}
