@@ -1,0 +1,97 @@
+{
+  "question": "What is the main function of the device recently discovered in desert ruins?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0.0,
+  "answers": {
+    "original": "The main function of the device recently discovered in desert ruins is to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Carvings",
+        "type": "artifact",
+        "description": "Ancient carvings surround the Font of Resonance, adding to its sacred nature.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Great Library of Aethelgard",
+        "type": "artifact",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Carvings",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "Ancient carvings surround the Font of Resonance.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T19:16:10.301610",
+  "llm_calls": 15
+}

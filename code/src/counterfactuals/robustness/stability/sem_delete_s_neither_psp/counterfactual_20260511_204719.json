@@ -1,0 +1,137 @@
+{
+  "question": "What two abilities does a Valorian 'Mind-Smith' possess in their craft?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0.0,
+  "answers": {
+    "original": "Mind-Smiths can forge Thought-Metal by solidifying pure mental energy into physical form and perform Memory-Welding to bond experiences and knowledge into metallic creations.\n\n### References\n\n- [1] Mind-Smith\n- [2] Thought-Metal\n- [3] Memory-Weld",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Mind-Smith",
+        "type": "person",
+        "description": "Mind-Smiths are Valorians who can forge Thought-Metal and perform Memory-Welding.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Guild of Valor",
+        "type": "organization",
+        "description": "The Forge-Guild of Valor oversees all metalworking trades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian",
+        "type": "person",
+        "description": "Valorians are individuals capable of forging Thought-Metal and performing Memory-Welding.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Apprentices",
+        "type": "person",
+        "description": "Valorian apprentices begin training at age twelve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thought-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Weld",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Conditioning",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Welding",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Council of Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Festivals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Mind-Smith",
+        "tgt": "Thought-Metal",
+        "keywords": "",
+        "description": "Mind-Smiths can forge Thought-Metal by solidifying pure mental energy into physical form.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mind-Smith",
+        "tgt": "Valorian Apprentices",
+        "keywords": "",
+        "description": "Valorian apprentices begin training at age twelve to become Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Guild of Valor",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "The Forge-Guild of Valor oversees all metalworking trades, including those performed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Valorian",
+        "tgt": "Valorian Festivals",
+        "keywords": "",
+        "description": "Valorians celebrate the changing of the seasons through festivals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Memory-Weld",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Mind-Smiths possess the ability to perform Memory-Welding to bond experiences and knowledge into metallic creations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mental Conditioning",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Mind-Smiths undergo decades of mental conditioning.",
+        "weight": 0.0
+      },
+      {
+        "src": "Memory-Welding",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Council of Smiths",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "The Council of Smiths regulates the use of Mind-Smith abilities.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T20:47:19.813789",
+  "llm_calls": 18
+}

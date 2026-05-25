@@ -1,0 +1,77 @@
+{
+  "question": "What is the main function of the device recently discovered in desert ruins?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Chrono-Regulator"
+    ]
+  ],
+  "cost": 5.0,
+  "answers": {
+    "original": "The main function of the Chrono-Regulator, recently discovered in the Desert Ruins, is to stabilize localized temporal distortions and prevent chaotic time anomalies.\n\n### References\n\n- [1] The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "organization",
+        "description": "The Forgotten Civilization is the group that created the Chrono-Regulator and the desert ruins.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "artifact",
+        "description": "Hourglass Sandstone is a material used to make time-keeping amulets worn by Chrono-Weavers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:44:52.596264",
+  "llm_calls": 4
+}

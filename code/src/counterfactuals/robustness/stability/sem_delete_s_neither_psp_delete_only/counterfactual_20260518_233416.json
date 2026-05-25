@@ -1,0 +1,135 @@
+{
+  "question": "What material is the 'Pylon of Ozym' made from?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Pylon of Ozym"
+    ]
+  ],
+  "cost": 11.0,
+  "answers": {
+    "original": "The Pylon of Ozym is made from solidified, hyper-dense neutrino-ium.\n\n### References\n\n- [1] Pylon of Ozym",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Pylon of Ozym",
+        "type": "artifact",
+        "description": "The Pylon of Ozym is a large monolith made of solidified, hyper-dense neutrino-ium, located in the San-Grel desert, standing 1,337 meters tall, and emitting a low, constant hum.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient-Heartwood",
+        "type": "naturalobject",
+        "description": "Ancient-Heartwood is the heartwood of thousand-year-old mountain trees, retaining the wisdom of centuries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ozym",
+        "type": "concept",
+        "description": "Ozym is a local tribal word meaning 'eternal' or 'unwavering', referring to the Pylon of Ozym.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran 'Stone-Speaker' Staffs",
+        "type": "artifact",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone, amplifying earth-based magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "location",
+        "description": "Aethelgard is a region with a southern border adjacent to the Shadow Fen, and it has a royal family associated with Sunstone Amulets.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people, situated beside the Great Waterfall of the Kings.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people and features architecture built around ancient trees.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "San-Grel Desert",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Neutrino-Ium",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky Gods",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hyper-Dense Neutrino-Ium",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pylon of Ozym",
+        "tgt": "San-Grel Desert",
+        "keywords": "",
+        "description": "The Pylon of Ozym is located in the center of the San-Grel desert.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pylon of Ozym",
+        "tgt": "Sky Gods",
+        "keywords": "",
+        "description": "Local legends attribute the placement of the Pylon of Ozym to the sky gods from another world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient-Heartwood",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ozym",
+        "tgt": "Pylon of Ozym",
+        "keywords": "",
+        "description": "The name 'Ozym' refers to the Pylon of Ozym and means 'eternal' or 'unwavering' in the local tribal language.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      },
+      {
+        "src": "Neutrino-Ium",
+        "tgt": "Pylon of Ozym",
+        "keywords": "",
+        "description": "The Pylon of Ozym is composed entirely of solidified, hyper-dense neutrino-ium.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hyper-Dense Neutrino-Ium",
+        "tgt": "Pylon of Ozym",
+        "keywords": "",
+        "description": "The Pylon of Ozym is made of solidified, hyper-dense neutrino-ium, a previously impossible state of matter.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:34:16.320923",
+  "llm_calls": 29
+}

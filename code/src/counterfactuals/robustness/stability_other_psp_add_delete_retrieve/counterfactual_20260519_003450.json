@@ -1,0 +1,269 @@
+{
+  "question": "What is the salary of the most popular actor on the planet Aethelon?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "add_node",
+      "Joric Thorne"
+    ]
+  ],
+  "cost": 1.46875,
+  "answers": {
+    "original": "Lyra Vael is the most popular actor on the planet Aethelon and is known for commanding a high salary.\n\n### References\n\n- [1] Lyra Vael",
+    "perturbed": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.\n\n### References\n\n- [1] Aethelon's Entertainment Industry",
+    "similarity": 0.903705
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "industry",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lyra Vael",
+        "type": "person",
+        "description": "Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding high salaries.<SEP>Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding a high salary.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia",
+        "type": "location",
+        "description": "Celestia is a planet known as a leading center for advanced audiovisual entertainment and film production.<SEP>Celestia is a location with a competitive and highly technical film industry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylar",
+        "type": "person",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry and has recently released the film 'Echoes of the Nebulae'.<SEP>Xylar is the highest-paid actor in Celestia's film industry and has a recent film titled 'Echoes of the Nebulae'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Feedback Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep Character Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historical Epics",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Bio-Feedback Systems",
+        "keywords": "",
+        "description": "The industry relies on bio-feedback systems to enhance the authenticity of performances.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Deep Character Studies",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is known for its deep character studies and emotionally resonant dramas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Historical Epics",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Aethelon",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Xylar",
+        "keywords": "",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon",
+        "tgt": "Aethelon's Entertainment Industry",
+        "keywords": "",
+        "description": "Aethelon is home to a thriving and artistically rich entertainment industry.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "industry",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lyra Vael",
+        "type": "person",
+        "description": "Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding high salaries.<SEP>Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding a high salary.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia",
+        "type": "location",
+        "description": "Celestia is a planet known as a leading center for advanced audiovisual entertainment and film production.<SEP>Celestia is a location with a competitive and highly technical film industry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylar",
+        "type": "person",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry and has recently released the film 'Echoes of the Nebulae'.<SEP>Xylar is the highest-paid actor in Celestia's film industry and has a recent film titled 'Echoes of the Nebulae'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Feedback Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep Character Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historical Epics",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Joric Thorne",
+        "type": "",
+        "description": "Joric Thorne is an actor in Aethelon's film and stage sectors, known for setting a new industry record with a high salary.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Bio-Feedback Systems",
+        "keywords": "",
+        "description": "The industry relies on bio-feedback systems to enhance the authenticity of performances.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Deep Character Studies",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is known for its deep character studies and emotionally resonant dramas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Historical Epics",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Aethelon",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Xylar",
+        "keywords": "",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon",
+        "tgt": "Aethelon's Entertainment Industry",
+        "keywords": "",
+        "description": "Aethelon is home to a thriving and artistically rich entertainment industry.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-19T00:34:50.630570",
+  "llm_calls": 6
+}

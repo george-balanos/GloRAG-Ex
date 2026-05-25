@@ -1,0 +1,139 @@
+{
+  "question": "What defensive ability is possessed by the strongest creature found in Bioluminescent Forest?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Bioluminescent Forest",
+        "Phase-Lurker"
+      ]
+    ]
+  ],
+  "cost": 2.0,
+  "answers": {
+    "original": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.\n\n### References\n\n- [1] Phase-Lurker",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hidden Valley",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Protective Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phosphorescent Fungi",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shimmer-Moth",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Hidden Valley",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is located in a hidden valley.<SEP>The Bioluminescent Forest is located in a hidden valley.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Protective Gear",
+        "keywords": "",
+        "description": "Explorers must wear protective gear in the Bioluminescent Forest.<SEP>Explorers must wear protective gear in the Bioluminescent Forest.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phosphorescent Fungi",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to phosphorescent fungi.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Flora",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Shimmer-Moth",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Shimmer-Moth.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:45:15.392201",
+  "llm_calls": 9
+}

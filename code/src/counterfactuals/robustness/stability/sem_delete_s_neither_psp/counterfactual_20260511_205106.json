@@ -1,0 +1,122 @@
+{
+  "question": "What are the two essential materials for Vortexian 'Spiral-Blades'?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Cyclone-Steel",
+        "Vortexian Spiral-Blades"
+      ]
+    ],
+    [
+      "delete_edge",
+      [
+        "Vortexian Spiral-Blades",
+        "Whirlwind-Crystal"
+      ]
+    ],
+    [
+      "delete_node",
+      "Vortexian Spiral-Blades"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "original": "The two essential materials for Vortexian Spiral-Blades are Cyclone-Steel and Whirlwind-Crystal.\n\n### References\n\n- [1] Vortexian Spiral-Blades are weapons forged from Cyclone-Steel and edged with Whirlwind-Crystal, designed to maintain a perpetual spinning motion.\n- [2] Vortexian Spiral-Blades are edged with Whirlwind-Crystal to maintain their perpetual spinning motion.\n- [3] Vortexian Spiral-Blades are forged from Cyclone-Steel, which naturally curves in helical patterns.",
+    "perturbed": "The two essential materials for Vortexian 'Spiral-Blades' are **Vortexium** and **Spiral-Crystals**.\n\n### References\n\n- [1] Vortexian Warriors: The Art of Rotational Combat",
+    "similarity": 0.909117
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Spiral-Blades",
+        "type": "artifact",
+        "description": "Vortexian Spiral-Blades are weapons forged from Cyclone-Steel and edged with Whirlwind-Crystal, designed to maintain a perpetual spinning motion.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlwind-Crystal",
+        "type": "artifact",
+        "description": "Whirlwind-Crystal is a material used to edge Spiral-Blades, maintaining their perpetual spinning motion and humming with kinetic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cyclone-Steel",
+        "type": "artifact",
+        "description": "Cyclone-Steel is a material that naturally curves in helical patterns and is formed during atmospheric storms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are edged with Whirlwind-Crystal to maintain their perpetual spinning motion.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "Vortexian Warriors are masters of rotational combat using Spiral-Blades.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cyclone-Steel",
+        "tgt": "Vortexian Spiral-Blades",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are forged from Cyclone-Steel, which naturally curves in helical patterns.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-11T20:51:06.749153",
+  "llm_calls": 10
+}

@@ -1,0 +1,61 @@
+{
+  "question": "Which tools does a carpenter use and what are their stated purposes?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Carpenter"
+    ]
+  ],
+  "cost": 5.0,
+  "answers": {
+    "original": "The carpenter uses a hammer to drive nails and a saw to cut wood.\n\n### References\n\n- [1] Carpenter\n- [2] Hammer\n- [3] Saw",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.004949
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Carpenter",
+        "type": "person",
+        "description": "The carpenter uses tools like a hammer and a saw to work with nails and wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hammer",
+        "type": "artifact",
+        "description": "The hammer is a tool used by the carpenter to drive nails.",
+        "rank": 0.0
+      },
+      {
+        "name": "Saw",
+        "type": "artifact",
+        "description": "The saw is a tool used by the carpenter to cut wood.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Carpenter",
+        "tgt": "Hammer",
+        "keywords": "",
+        "description": "The carpenter uses a hammer to drive nails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Carpenter",
+        "tgt": "Saw",
+        "keywords": "",
+        "description": "The carpenter uses a saw to cut wood.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-05-18T22:23:01.212802",
+  "llm_calls": 3
+}

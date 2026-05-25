@@ -1,0 +1,94 @@
+{
+  "question": "What colors did Alex use to paint his toy car?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Toy Car"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "original": "Alex painted his toy car bright red with yellow stripes.\n\n### References\n\n- [1] Alex is a person who painted a toy car.\n- [2] The toy car is painted bright red with yellow stripes.\n- [3] Alex painted the toy car bright red with yellow stripes.",
+    "perturbed": "Alex used chromatic colors to paint his toy car.\n\n### References\n\n- [1] Chromatic Colors",
+    "similarity": 0.700293
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Alex",
+        "type": "person",
+        "description": "Alex is a person who painted a toy car.",
+        "rank": 0.0
+      },
+      {
+        "name": "Toy Car",
+        "type": "artifact",
+        "description": "The toy car is painted bright red with yellow stripes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alex",
+        "tgt": "Toy Car",
+        "keywords": "",
+        "description": "Alex painted the toy car bright red with yellow stripes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Alex",
+        "type": "person",
+        "description": "Alex is a person who painted a toy car.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-11T18:47:34.007600",
+  "llm_calls": 1
+}

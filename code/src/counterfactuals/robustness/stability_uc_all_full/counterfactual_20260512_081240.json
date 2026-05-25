@@ -1,0 +1,215 @@
+{
+  "question": "What two sensory inputs does the 'Pathfinder Helm' integrate for Xylotian explorers?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Echo-Location Sonar",
+        "Pathfinder Helm"
+      ]
+    ]
+  ],
+  "cost": 2.0,
+  "answers": {
+    "original": "The Pathfinder Helm integrates Echo-Location Sonar and Bio-Sign Scanners for Xylotian explorers.\n\n### References\n\n- [1] Echo-Location Sonar\n- [2] Bio-Sign Scanners",
+    "perturbed": "The Pathfinder Helm integrates Bio-Sign Scanners to detect living organisms and provides basic atmospheric analysis.\n\n### References\n\n- [1] Pathfinder Helm\n- [2] Bio-Sign Scanners\n- [3] Atmospheric Analysis",
+    "similarity": 0.662368
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Location Sonar",
+        "type": "artifact",
+        "description": "Echo-Location Sonar is a technology incorporated into the Pathfinder Helm to map out physical surroundings in zero visibility.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Location Sonar",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:12:40.806000",
+  "llm_calls": 3
+}

@@ -1,0 +1,103 @@
+{
+  "question": "What is the primary defense of the creatures known as 'Glow-worms' in the Subterranean Caves?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Glow-Worms"
+    ]
+  ],
+  "cost": 9.0,
+  "answers": {
+    "original": "The primary defense of Glow-worms is emitting blinding flashes of light to temporarily disorient predators.\n\n### References\n\n- [1] Glow-Worms",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Glow-Worms",
+        "type": "creature",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Subterranean Caves",
+        "type": "location",
+        "description": "The Subterranean Caves are a network of deep tunnels filled with unique flora, fauna, and mineral formations.<SEP>The Subterranean Caves are a network of deep tunnels filled with unique flora and fauna, known for hosting various creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cave Fungi",
+        "type": "naturalobject",
+        "description": "Cave fungi are found within the Subterranean Caves and serve as a food source for Glow-worms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blinding Flash",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mineral Deposits",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Glow-Worms",
+        "tgt": "Subterranean Caves",
+        "keywords": "",
+        "description": "The Subterranean Caves are the habitat for Glow-worms, which possess unique defensive mechanisms.<SEP>The Subterranean Caves are home to Glow-Worms, which use their blinding flashes as a defense mechanism.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Mineral Deposits",
+        "keywords": "",
+        "description": "Glow-worms feed on mineral deposits found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glowing Insects",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cave Fungi",
+        "tgt": "Glow-Worms",
+        "keywords": "",
+        "description": "Glow-worms feed on cave fungi found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blinding Flash",
+        "tgt": "Glow-Worms",
+        "keywords": "",
+        "description": "Glow-worms emit a blinding flash of light to temporarily disorient predators.<SEP>Glow-Worms emit a blinding flash to temporarily disorient predators.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:40:27.423418",
+  "llm_calls": 9
+}

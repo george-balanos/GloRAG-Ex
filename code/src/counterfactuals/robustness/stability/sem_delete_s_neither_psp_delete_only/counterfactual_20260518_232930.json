@@ -1,0 +1,84 @@
+{
+  "question": "What two distinct powers do Verdant 'Life-Wands' channel?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Verdant Life-Wands"
+    ]
+  ],
+  "cost": 9.0,
+  "answers": {
+    "original": "Verdant Life-Wands channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.\n\n### References\n\n- [1] Verdant Life-Wands are tools that can channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.\n- [2] Verdant Life-Wands harness Vitality-Streams to restore health and energy to living creatures.\n- [3] Verdant Life-Wands can channel Growth-Force to accelerate plant development and healing.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Verdant Life-Wands",
+        "type": "artifact",
+        "description": "Verdant Life-Wands are tools that can channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Growth-Force",
+        "type": "concept",
+        "description": "Growth-Force is a power that can accelerate plant development and healing, making seeds sprout in seconds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Living Branches",
+        "type": "naturalobject",
+        "description": "Life-Wands are carved from still-living branches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vitality-Streams",
+        "type": "concept",
+        "description": "Vitality-Streams are glowing green energy that can restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spring Equinox",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Verdant Life-Wands",
+        "tgt": "Vitality-Streams",
+        "keywords": "",
+        "description": "Verdant Life-Wands harness Vitality-Streams to restore health and energy to living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Growth-Force",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Verdant Life-Wands can channel Growth-Force to accelerate plant development and healing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Living Branches",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spring Equinox",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wand rituals are performed during the spring equinox.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:29:30.519709",
+  "llm_calls": 5
+}

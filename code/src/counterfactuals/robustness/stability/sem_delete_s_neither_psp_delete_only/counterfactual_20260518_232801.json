@@ -1,0 +1,87 @@
+{
+  "question": "What are the two core materials in Aerion 'Wind-Walker' boots?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Aerion Culture",
+        "Aerion Wind-Walker Boots"
+      ]
+    ]
+  ],
+  "cost": 2.0,
+  "answers": {
+    "original": "The two core materials in Aerion Wind-Walker Boots are Cloud-Leather soles and Gust-Metal strapping.\n\n### References\n\n- [1] Aerion Wind-Walker Boots",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aerion Wind-Walker Boots",
+        "type": "artifact",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles and Gust-Metal strapping, allowing limited flight capabilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Walker Craftsmanship",
+        "type": "method",
+        "description": "Wind-Walker Craftsmanship is a closely guarded art form used to create the Aerion Wind-Walker Boots.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cloud-Leather",
+        "type": "artifact",
+        "description": "Cloud-Leather is a light yet durable material harvested from sky-dwelling creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerion Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gust-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Cloud-Leather",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles, contributing to their lightness and durability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Wind-Walker Craftsmanship",
+        "keywords": "",
+        "description": "Wind-Walker Craftsmanship is used to create Aerion Wind-Walker Boots.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Gust-Metal",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Culture",
+        "tgt": "Aerion Wind-Walker Boots",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots enable limited flight, aligning with the cultural emphasis on freedom and movement.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:28:01.924417",
+  "llm_calls": 5
+}

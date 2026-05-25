@@ -1,0 +1,168 @@
+{
+  "question": "What is the main ingredient in Plorgonian stew?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Plorgonian Tableware"
+    ],
+    [
+      "delete_node",
+      "Plorgonian Stew"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "original": "The main ingredient in Plorgonian stew is fermented tubers of the Plorg plant.\n\n### References\n\n- [1] Plorgonian Stew",
+    "perturbed": "The main ingredient in Plorgonian stew is Plorg tubers.\n\n### References\n\n- [1] Plorg Tuber",
+    "similarity": 0.942641
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Tuber",
+        "type": "naturalobject",
+        "description": "Plorg tubers are the fermented base ingredient of Plorgonian stew and grow only in volcanic soil.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Tableware",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Stew",
+        "tgt": "Plorgonian Tableware",
+        "keywords": "",
+        "description": "Plorgonian tableware is used in the context of Plorgonian dining rituals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Tuber",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian stew is made from fermented Plorg tubers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian celebrations involve the consumption of Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Chefs",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian chefs train for 15 years to prepare Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Plorg Tuber",
+        "type": "naturalobject",
+        "description": "Plorg tubers are the fermented base ingredient of Plorgonian stew and grow only in volcanic soil.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-11T19:05:46.522406",
+  "llm_calls": 38
+}

@@ -1,0 +1,96 @@
+{
+  "question": "What distinct characteristics do elephants have?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Elephant"
+    ]
+  ],
+  "cost": 3.0,
+  "answers": {
+    "original": "Elephants have large, floppy ears and use their long trunk to drink water.\n\n### References\n\n- [1] Elephant\n- [2] Trunk",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Standard Habitat Construction Materials",
+        "type": "artifact",
+        "description": "Standard habitat construction materials must be non-toxic to all member species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elephant",
+        "type": "creature",
+        "description": "The elephant has large, floppy ears and uses its long trunk to drink water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shared Habitat Charter",
+        "type": "document",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "rank": 0.0
+      },
+      {
+        "name": "Trunk",
+        "type": "artifact",
+        "description": "The trunk is a long appendage of the elephant used for drinking water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Marine Environment",
+        "type": "UNKNOWN",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whales",
+        "type": "creature",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Accords",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Elephant",
+        "tgt": "Trunk",
+        "keywords": "",
+        "description": "The elephant uses its trunk to drink water.",
+        "weight": 0.0
+      },
+      {
+        "src": "Marine Environment",
+        "tgt": "Whales",
+        "keywords": "",
+        "description": "Whales are large marine mammals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Standard Habitat Construction Materials",
+        "keywords": "",
+        "description": "The Lumina Accords mandate that habitat construction materials must be non-toxic to all member species.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Shared Habitat Charter",
+        "keywords": "",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-19T00:28:05.711104",
+  "llm_calls": 5
+}

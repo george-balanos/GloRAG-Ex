@@ -1,0 +1,155 @@
+{
+  "question": "What is the lifespan of a common Gloopfish?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Common Gloopfish"
+    ]
+  ],
+  "cost": 17,
+  "answers": {
+    "original": "The lifespan of a Common Gloopfish is 7 Galactic Standard Years (GSY).\n\n### References\n\n- [1] Common Gloopfish",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Common Gloopfish",
+        "type": "creature",
+        "description": "The Common Gloopfish is a species with a lifespan of 7 Galactic Standard Years (GSY), inhabiting methane lakes, and exhibiting unique biological traits.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fish",
+        "type": "creature",
+        "description": "Fish live in water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Water",
+        "type": "naturalobject",
+        "description": "Water is essential for life.<SEP>Water is the habitat for fish and is used by elephants to drink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Razorfin",
+        "type": "creature",
+        "description": "Razorfin is a predator of the Gloopfish.",
+        "rank": 0.0
+      },
+      {
+        "name": "Titanis Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ultrasonic Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Scales",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gulper",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Hearts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Common Gloopfish inhabit the methane lakes of Titanis Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Razorfin is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Eggs",
+        "keywords": "",
+        "description": "Common Gloopfish lay exactly 33 eggs each mating season.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "Common Gloopfish scales are used in traditional medicine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Gulper is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Hearts",
+        "keywords": "",
+        "description": "Common Gloopfish have three hearts arranged in a triangle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "The largest recorded Common Gloopfish was 1.2 meters long.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fish",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Fish live in water.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T20:55:35.255787",
+  "llm_calls": 10
+}

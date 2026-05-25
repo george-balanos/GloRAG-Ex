@@ -1,0 +1,98 @@
+{
+  "question": "What are the two fundamental components of Mechanoid 'Gear-Blood'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "replace_node",
+      [
+        "Mechanoid",
+        "Lions"
+      ]
+    ]
+  ],
+  "cost": 2.083984375,
+  "answers": {
+    "original": "Mechanoids are composed of Liquid-Steel and energized by Spark-Motes.\n\n### References\n\n- [1] Mechanoid",
+    "perturbed": "The two fundamental components of Mechanoid 'Gear-Blood' are Gear-Blood Circulation Systems and Gear-Blood.\n\n### References\n\n- [1] Gear-Blood Circulation Systems\n- [2] Gear-Blood",
+    "similarity": 0.530056
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gear-Blood",
+        "type": "data",
+        "description": "Gear-Blood is the fluid that flows through Mechanoid systems, requiring regular filtering to prevent contamination.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mechanoid",
+        "type": "creature",
+        "description": "Mechanoids are robotic beings primarily composed of Liquid-Steel and energized by Spark-Motes.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gear-Blood Circulation Systems",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids possess advanced Gear-Blood circulation systems that are marvels of engineering.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gear-Blood",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gear-Blood",
+        "type": "data",
+        "description": "Gear-Blood is the fluid that flows through Mechanoid systems, requiring regular filtering to prevent contamination.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lions",
+        "type": "",
+        "description": "Lions are fed by the zookeeper.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gear-Blood Circulation Systems",
+        "tgt": "Lions",
+        "keywords": "",
+        "description": "Mechanoids possess advanced Gear-Blood circulation systems that are marvels of engineering.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gear-Blood",
+        "tgt": "Lions",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:24:21.765428",
+  "llm_calls": 3
+}

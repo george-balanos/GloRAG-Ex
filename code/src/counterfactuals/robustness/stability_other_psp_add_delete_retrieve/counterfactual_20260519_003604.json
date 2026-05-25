@@ -1,0 +1,343 @@
+{
+  "question": "What is the composition of the natural wonder of planet Ntunu?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "add_edge",
+      [
+        "Airborne Flora",
+        "Floating Islands of Aeridia"
+      ]
+    ]
+  ],
+  "cost": 1.30517578125,
+  "answers": {
+    "original": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.\n\n### References\n\n- [1] Ntulu",
+    "perturbed": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere and are home to unique airborne flora.\n\n### References\n\n- [1] Ntulu\n- [2] Floating Islands of Aeridia",
+    "similarity": 0.94494
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion",
+        "type": "location",
+        "description": "Florpion is a planet with unique atmospheric and geological characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelia",
+        "type": "naturalobject",
+        "description": "Aethelia is a rocky planet in the K'tharr System's habitable zone, possessing liquid water.<SEP>Aethelia is a rocky planet in the K'tharr System's habitable zone, possessing liquid water.",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr System",
+        "type": "location",
+        "description": "The K'tharr System is a star system containing seven planets and located in a sparse region of the galaxy.<SEP>The K'tharr System is a star system containing seven planets, including gas giants and rocky worlds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chartreuse Sky",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Kryponite Particles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Day",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Continents",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpionians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Florpionian City",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Kryponite Particles",
+        "keywords": "",
+        "description": "Kryponite particles in Florpion's atmosphere cause the sky to appear chartreuse.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Day",
+        "keywords": "",
+        "description": "A Florpion day lasts exactly 26 Earth hours.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Continents",
+        "keywords": "",
+        "description": "Florpion's continents float on a liquid mantle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpionians",
+        "keywords": "",
+        "description": "Florpionians are native to Florpion and communicate through bioluminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Oceans",
+        "keywords": "",
+        "description": "Florpion's oceans are composed of liquid ammonia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Gravity",
+        "keywords": "",
+        "description": "Florpion's gravity is 0.8 times that of Earth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chartreuse Sky",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "Florpion's unique atmospheric composition causes its sky to appear chartreuse due to light refraction.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Florpionian City",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "The first Florpionian city was built underwater.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion",
+        "type": "location",
+        "description": "Florpion is a planet with unique atmospheric and geological characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelia",
+        "type": "naturalobject",
+        "description": "Aethelia is a rocky planet in the K'tharr System's habitable zone, possessing liquid water.<SEP>Aethelia is a rocky planet in the K'tharr System's habitable zone, possessing liquid water.",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr System",
+        "type": "location",
+        "description": "The K'tharr System is a star system containing seven planets and located in a sparse region of the galaxy.<SEP>The K'tharr System is a star system containing seven planets, including gas giants and rocky worlds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chartreuse Sky",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Kryponite Particles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Day",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Continents",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpionians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Florpionian City",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Kryponite Particles",
+        "keywords": "",
+        "description": "Kryponite particles in Florpion's atmosphere cause the sky to appear chartreuse.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Day",
+        "keywords": "",
+        "description": "A Florpion day lasts exactly 26 Earth hours.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Continents",
+        "keywords": "",
+        "description": "Florpion's continents float on a liquid mantle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpionians",
+        "keywords": "",
+        "description": "Florpionians are native to Florpion and communicate through bioluminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Oceans",
+        "keywords": "",
+        "description": "Florpion's oceans are composed of liquid ammonia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Gravity",
+        "keywords": "",
+        "description": "Florpion's gravity is 0.8 times that of Earth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chartreuse Sky",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "Florpion's unique atmospheric composition causes its sky to appear chartreuse due to light refraction.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Florpionian City",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "The first Florpionian city was built underwater.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "habitat,unique ecosystem",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-19T00:36:04.290325",
+  "llm_calls": 5
+}

@@ -1,0 +1,177 @@
+{
+  "question": "What is the title of the first album by the most popular Chrono-Wave musician on Riven Prime?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Future Echoes"
+    ],
+    [
+      "delete_node",
+      "DJ Rewind"
+    ]
+  ],
+  "cost": 4.0,
+  "answers": {
+    "original": "The title of the first album by the most popular Chrono-Wave musician on Riven Prime is \"Future Echoes\".\n\n### References\n\n- [1] DJ Rewind is a musician in the Chrono-Wave genre on Riven Prime, known for the album 'Future Echoes'.\n- [2] DJ Rewind's groundbreaking first album is 'Future Echoes'.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.004332
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Wave",
+        "type": "genre",
+        "description": "Chrono-Wave is a music genre popular on Riven Prime, characterized by the use of temporal manipulation technology.<SEP>Chrono-Wave is a music genre popular on Riven Prime, involving temporal elements.",
+        "rank": 0.0
+      },
+      {
+        "name": "DJ Rewind",
+        "type": "person",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre on Riven Prime, known for the album 'Future Echoes'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Riven Prime",
+        "type": "location",
+        "description": "Riven Prime is a location with a unique music industry that utilizes temporal manipulation technology.<SEP>Riven Prime is a location where the Chrono-Wave music genre is popular and where complex music licensing exists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Resonance",
+        "type": "concept",
+        "description": "Temporal resonance is a aspect of music frequently analyzed by critics on Riven Prime.",
+        "rank": 0.0
+      },
+      {
+        "name": "Kaelen Echo",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase Shifter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Future Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Riven Prime",
+        "keywords": "",
+        "description": "Chrono-Wave is a popular music genre on Riven Prime.<SEP>Chrono-Wave is a popular music genre on Riven Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Kaelen Echo",
+        "keywords": "",
+        "description": "Kaelen Echo is a popular musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Phase Shifter",
+        "keywords": "",
+        "description": "Phase Shifter is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "DJ Rewind",
+        "keywords": "",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "DJ Rewind",
+        "tgt": "Future Echoes",
+        "keywords": "",
+        "description": "DJ Rewind's groundbreaking first album is 'Future Echoes'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Riven Prime",
+        "tgt": "Temporal Resonance",
+        "keywords": "",
+        "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Wave",
+        "type": "genre",
+        "description": "Chrono-Wave is a music genre popular on Riven Prime, characterized by the use of temporal manipulation technology.<SEP>Chrono-Wave is a music genre popular on Riven Prime, involving temporal elements.",
+        "rank": 0.0
+      },
+      {
+        "name": "Riven Prime",
+        "type": "location",
+        "description": "Riven Prime is a location with a unique music industry that utilizes temporal manipulation technology.<SEP>Riven Prime is a location where the Chrono-Wave music genre is popular and where complex music licensing exists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Resonance",
+        "type": "concept",
+        "description": "Temporal resonance is a aspect of music frequently analyzed by critics on Riven Prime.",
+        "rank": 0.0
+      },
+      {
+        "name": "Kaelen Echo",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase Shifter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Riven Prime",
+        "keywords": "",
+        "description": "Chrono-Wave is a popular music genre on Riven Prime.<SEP>Chrono-Wave is a popular music genre on Riven Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Kaelen Echo",
+        "keywords": "",
+        "description": "Kaelen Echo is a popular musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Phase Shifter",
+        "keywords": "",
+        "description": "Phase Shifter is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Riven Prime",
+        "tgt": "Temporal Resonance",
+        "keywords": "",
+        "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-18T23:44:40.407976",
+  "llm_calls": 5
+}

@@ -1,0 +1,158 @@
+{
+  "question": "What kind of power source is used by the ancient 'War Golems' found in the Desert of Bones?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Animus Cores",
+        "War Golems"
+      ]
+    ],
+    [
+      "replace_node",
+      [
+        "War Golems",
+        "Flux Capacitors"
+      ]
+    ]
+  ],
+  "cost": 4.0859375,
+  "answers": {
+    "original": "War Golems are powered by Animus Cores, which allow them limited function.\n\n### References\n\n- [1] War Golems are ancient constructs unearthed from the Desert of Bones, powered by Animus Cores and capable of limited function.\n- [2] War Golems are powered by Animus Cores, which allow them limited function.",
+    "perturbed": "The ancient 'War Golems' found in the Desert of Bones are powered by Flux Capacitors.\n\n### References\n\n- [1] War Golems have been unearthed from the shifting sands of the Desert of Bones.\n- [2] The Long-Lost Empire designed the War Golems for defensive purposes.",
+    "similarity": 0.654326
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "War Golems",
+        "type": "artifact",
+        "description": "War Golems are ancient constructs unearthed from the Desert of Bones, capable of limited function, and originally designed for defense.<SEP>War Golems are ancient constructs unearthed in the Desert of Bones, powered by Animus Cores and capable of limited function.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Animus Cores",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Long-Lost Empire",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "The Long-Lost Empire created the War Golems for defense.<SEP>The Long-Lost Empire designed the War Golems for defensive purposes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Animus Cores",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems are powered by Animus Cores, which allow them limited function.<SEP>War Golems are powered by Animus Cores, which allow them limited function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Defense",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems were originally designed for defense.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Flux Capacitors",
+        "type": "",
+        "description": "Flux capacitors are components that require careful calibration.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "Flux Capacitors",
+        "keywords": "",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Long-Lost Empire",
+        "tgt": "Flux Capacitors",
+        "keywords": "",
+        "description": "The Long-Lost Empire created the War Golems for defense.<SEP>The Long-Lost Empire designed the War Golems for defensive purposes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Defense",
+        "tgt": "Flux Capacitors",
+        "keywords": "",
+        "description": "War Golems were originally designed for defense.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:53:22.512851",
+  "llm_calls": 40
+}

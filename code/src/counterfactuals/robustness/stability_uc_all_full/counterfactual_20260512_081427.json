@@ -1,0 +1,193 @@
+{
+  "question": "What special abilities do the Gleepglorp and the Flumph from planet Xylar possess?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Gleepglorp",
+        "Planet Xylar"
+      ]
+    ]
+  ],
+  "cost": 1.0,
+  "answers": {
+    "original": "The Gleepglorp can manipulate Zylonic energy for teleportation, while the Flumph's abilities are not specified.\n\n### References\n\n- [1] Gleepglorp\n- [2] Flumph",
+    "perturbed": "The Gleepglorp can manipulate Zylonic energy for teleportation, while the Flumph originates from planet Xylar.\n\n### References\n\n- [1] Gleepglorp\n- [2] Flumph",
+    "similarity": 0.937982
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Planet Xylar",
+        "type": "location",
+        "description": "Planet Xylar is the home of the Gleepglorp and the Flumph.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gleepglorp",
+        "type": "creature",
+        "description": "The Gleepglorp is a being from planet Xylar capable of manipulating Zylonic energy for teleportation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Life Forms",
+        "type": "creature",
+        "description": "Unique Life Forms are diverse organisms discovered on multiple planets within the Lumina System, adapted to varying conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "concept",
+        "description": "Life-Auras are colored emanations around living creatures that can be detected by the Soul-Compass.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flumph",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylonic Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina System",
+        "tgt": "Unique Life Forms",
+        "keywords": "",
+        "description": "Unique life forms have been discovered on multiple planets within the Lumina System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Gleepglorp originates from planet Xylar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Zylonic Energy",
+        "keywords": "",
+        "description": "The Gleepglorp can manipulate Zylonic energy for teleportation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flumph",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Flumph originates from planet Xylar.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Planet Xylar",
+        "type": "location",
+        "description": "Planet Xylar is the home of the Gleepglorp and the Flumph.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gleepglorp",
+        "type": "creature",
+        "description": "The Gleepglorp is a being from planet Xylar capable of manipulating Zylonic energy for teleportation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Life Forms",
+        "type": "creature",
+        "description": "Unique Life Forms are diverse organisms discovered on multiple planets within the Lumina System, adapted to varying conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "concept",
+        "description": "Life-Auras are colored emanations around living creatures that can be detected by the Soul-Compass.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flumph",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylonic Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina System",
+        "tgt": "Unique Life Forms",
+        "keywords": "",
+        "description": "Unique life forms have been discovered on multiple planets within the Lumina System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Zylonic Energy",
+        "keywords": "",
+        "description": "The Gleepglorp can manipulate Zylonic energy for teleportation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flumph",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Flumph originates from planet Xylar.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:14:27.395473",
+  "llm_calls": 1
+}

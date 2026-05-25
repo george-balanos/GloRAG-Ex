@@ -1,0 +1,149 @@
+{
+  "question": "What is the cause of Hyper-Chrono Displacement in 'Warp-Slinger' pilots?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Hyper-Chrono Displacement"
+    ]
+  ],
+  "cost": 16,
+  "answers": {
+    "original": "Hyper-Chrono Displacement in 'Warp-Slinger' pilots is caused by prolonged exposure to temporal fluctuations during FTL travel, specifically due to the Reality Anchor component on Warp-Slinger ships.\n\n### References\n\n- [1] Hyper-Chrono Displacement is caused by the Reality Anchor component on Warp-Slinger ships.\n- [2] Hyper-Chrono Displacement is caused by prolonged exposure to temporal fluctuations.\n- [3] Hyper-Chrono Displacement occurs during FTL travel due to temporal fluctuations.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Warp-Slinger Program",
+        "type": "event",
+        "description": "The Warp-Slinger program is currently under a safety review due to the risks of Hyper-Chrono Displacement.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hyper-Chrono Displacement",
+        "type": "concept",
+        "description": "Hyper-Chrono Displacement is a condition caused by prolonged exposure to temporal fluctuations during FTL travel.",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality Anchor",
+        "type": "artifact",
+        "description": "The Reality Anchor is a component on 'Warp-Slinger' class ships that generates temporal waves and prevents slipping into parallel dimensions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Fluctuations",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "FTL Travel",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory Fragmentation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Distorted Time Perception",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Neuro-Regeneration",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Jax 'Comet' Riley",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "FTL Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Hyper-Chrono Displacement",
+        "tgt": "Reality Anchor",
+        "keywords": "",
+        "description": "Hyper-Chrono Displacement is caused by the Reality Anchor component on Warp-Slinger ships.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hyper-Chrono Displacement",
+        "tgt": "Warp-Slinger Program",
+        "keywords": "",
+        "description": "The Warp-Slinger program is under review due to the risks of Hyper-Chrono Displacement.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hyper-Chrono Displacement",
+        "tgt": "Temporal Fluctuations",
+        "keywords": "",
+        "description": "Hyper-Chrono Displacement is caused by prolonged exposure to temporal fluctuations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hyper-Chrono Displacement",
+        "tgt": "Memory Fragmentation",
+        "keywords": "",
+        "description": "Memory fragmentation is a symptom of Hyper-Chrono Displacement.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hyper-Chrono Displacement",
+        "tgt": "Neuro-Regeneration",
+        "keywords": "",
+        "description": "Neuro-regeneration is a treatment for Hyper-Chrono Displacement.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hyper-Chrono Displacement",
+        "tgt": "Jax 'Comet' Riley",
+        "keywords": "",
+        "description": "Jax 'Comet' Riley is the first documented case of Hyper-Chrono Displacement.",
+        "weight": 0.0
+      },
+      {
+        "src": "FTL Travel",
+        "tgt": "Hyper-Chrono Displacement",
+        "keywords": "",
+        "description": "Hyper-Chrono Displacement occurs during FTL travel due to temporal fluctuations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Distorted Time Perception",
+        "tgt": "Hyper-Chrono Displacement",
+        "keywords": "",
+        "description": "Distorted time perception is a symptom of Hyper-Chrono Displacement.",
+        "weight": 0.0
+      },
+      {
+        "src": "FTL Hours",
+        "tgt": "Hyper-Chrono Displacement",
+        "keywords": "",
+        "description": "Pilots are limited to 500 FTL hours per year to prevent Hyper-Chrono Displacement.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T20:54:42.413970",
+  "llm_calls": 10
+}

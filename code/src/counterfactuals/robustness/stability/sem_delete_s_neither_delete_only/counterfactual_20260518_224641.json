@@ -1,0 +1,133 @@
+{
+  "question": "What happens to Sunstone Amulets when they are brought into the Shadow Fen?",
+  "found": true,
+  "num_operations": 4,
+  "operations": [
+    [
+      "delete_node",
+      "Aethelgard"
+    ],
+    [
+      "delete_node",
+      "Shadow Fen"
+    ],
+    [
+      "delete_node",
+      "Silver Threads"
+    ],
+    [
+      "delete_node",
+      "Complex Incantation"
+    ]
+  ],
+  "cost": 8.0,
+  "answers": {
+    "original": "The Shadow Fen's dark magic nullifies the magical energy of a Sunstone Amulet.\n\n### References\n\n- [1] Shadow Fen",
+    "perturbed": "When Sunstone Amulets are brought into the Shadow Fen, they lose their magical properties and become inert.\n\n### References\n\n- [1] Document Title One",
+    "similarity": 0.777539
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Petrified Sunlight",
+        "type": "material",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadow Fen",
+        "type": "location",
+        "description": "The Shadow Fen is a vast, magical swamp on the southern border of Aethelgard, known for its ambient dark magic and necrotic energies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunstone Amulet",
+        "type": "artifact",
+        "description": "A Sunstone Amulet is a magical item crafted from petrified sunlight and silver threads, symbolizing the Aethelgardian royal family.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver Threads",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Complex Incantation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "Sunstone Amulets are crafted from petrified sunlight.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow Fen",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "The Shadow Fen's dark magic nullifies the magical energy of a Sunstone Amulet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "Sunstone Amulets are a symbol of the Aethelgardian royal family.",
+        "weight": 0.0
+      },
+      {
+        "src": "Silver Threads",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "Sunstone Amulets are woven with silver threads.",
+        "weight": 0.0
+      },
+      {
+        "src": "Complex Incantation",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "A complex incantation is required to craft a Sunstone Amulet.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Petrified Sunlight",
+        "type": "material",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunstone Amulet",
+        "type": "artifact",
+        "description": "A Sunstone Amulet is a magical item crafted from petrified sunlight and silver threads, symbolizing the Aethelgardian royal family.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "Sunstone Amulets are crafted from petrified sunlight.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-18T22:46:41.428216",
+  "llm_calls": 30
+}

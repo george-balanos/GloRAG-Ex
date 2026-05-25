@@ -1,0 +1,128 @@
+{
+  "question": "What is the population of the capital of the biggest country in Xylos-7?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Eldoria"
+    ]
+  ],
+  "cost": 3.0,
+  "answers": {
+    "original": "The population of the capital of the biggest country in Xylos-7 is over 300 million people.\n\n### References\n\n- [1] Aethelgard is the capital of Eldoria, with a population of over 300 million people, situated beside the Great Waterfall of the Kings.\n- [2] Aethelgard is the capital of Eldoria, with a population of over 300 million people and features architecture built around ancient trees.\n- [3] Aethelgard is the capital city of Eldoria, housing over 300 million of its 689 million people.\n- [4] Aethelgard is the capital of Eldoria and has a population of over 300 million people.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "location",
+        "description": "Aethelgard is a region with a southern border adjacent to the Shadow Fen, and it has a royal family associated with Sunstone Amulets.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people, situated beside the Great Waterfall of the Kings.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people and features architecture built around ancient trees.",
+        "rank": 0.0
+      },
+      {
+        "name": "exotic goods",
+        "type": "UNKNOWN",
+        "description": "The markets of Xylos offer exotic goods.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Matter Re-sequencer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Markets of Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aethelgard",
+        "tgt": "Eldoria",
+        "keywords": "",
+        "description": "Aethelgard is the capital city of Eldoria, housing over 300 million of its 689 million people.<SEP>Aethelgard is the capital of Eldoria and has a population of over 300 million people.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians are the inhabitants of Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Telepathic Resonance Bands for communication.",
+        "weight": 0.0
+      },
+      {
+        "src": "Markets of Xylos",
+        "tgt": "exotic goods",
+        "keywords": "",
+        "description": "The markets of Xylos offer exotic goods.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-19T00:18:50.833292",
+  "llm_calls": 82
+}

@@ -1,0 +1,87 @@
+{
+  "question": "What two types of energy are harvested by the 'Dual-Resonance Crystals' of Xylos?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Dual-Resonance Crystals"
+    ]
+  ],
+  "cost": 9.0,
+  "answers": {
+    "original": "The 'Dual-Resonance Crystals' of Xylos harvest ambient geothermal energy and psychic energy.\n\n### References\n\n- [1] Dual-Resonance Crystals",
+    "perturbed": "The 'Dual-Resonance Crystals' of Xylos harvest solar energy and kinetic energy.",
+    "similarity": 0.810522
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Industry",
+        "type": "organization",
+        "description": "Xylotian Industry involves the dangerous but vital mining of Dual-Resonance Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dual-Resonance Crystals",
+        "type": "artifact",
+        "description": "Dual-Resonance Crystals are unique crystals found deep within Xylos's crust that efficiently absorb ambient geothermal energy and passively collect and store psychic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Art",
+        "type": "content",
+        "description": "Xylotian Art often depicts the geometric beauty of Dual-Resonance Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "location",
+        "description": "Xylos is a planet characterized by its unique environmental and cultural attributes. The planet's upper atmosphere is notable for the cultivation of Aero-Coral, a distinctive feature of its ecosystem. Xylos is also home to the Temporal College, an institution where Chrono-Weavers undergo training, indicating a significant focus on temporal or time-related sciences.\n\nThe planet serves as the homeworld of the Xylotians, a species known for launching terraforming pods from its surface. The Xylotians utilize advanced technologies such as Matter Re-sequencers for various applications, showcasing their technological prowess. Additionally, the planet's regions play a role in the design of Aura-Cloaks, suggesting a connection between its geography and cultural artifacts.\n\nXylos's crust is rich in Dual-Resonance Crystals, and the planet hosts sentient life forms that emit psychic energy, adding to its mystical and scientific intrigue. The Xylotians also pass down Legacy Crystals as family heirlooms, highlighting the cultural significance of these objects. Furthermore, Xylos is part of a binary star system and experiences unusual atmospheric storms, contributing to its dynamic and diverse environment.<SEP>Xylos is a planet with an orbital platform called the Aegis Station positioned above it.<SEP>Xylos is a planet with unusual atmospheric storms and intense volcanic activity.<SEP>Xylos is a planet with an orbital platform called Aegis Station positioned above it.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Cities",
+        "type": "location",
+        "description": "Xylotian Cities are powered by the energy stored in Dual-Resonance Crystals.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dual-Resonance Crystals",
+        "tgt": "Xylotian Industry",
+        "keywords": "",
+        "description": "Xylotian Industry involves the mining of Dual-Resonance Crystals, which is a dangerous but vital activity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dual-Resonance Crystals",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Dual-Resonance Crystals passively collect and store psychic energy emanated by Xylos's sentient life forms.<SEP>Dual-Resonance Crystals absorb ambient geothermal energy from Xylos's core.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dual-Resonance Crystals",
+        "tgt": "Xylotian Art",
+        "keywords": "",
+        "description": "Xylotian Art often depicts the geometric beauty of Dual-Resonance Crystals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dual-Resonance Crystals",
+        "tgt": "Xylotian Cities",
+        "keywords": "",
+        "description": "The energy stored in Dual-Resonance Crystals is used to power Xylotian cities.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-05-18T22:18:33.725643",
+  "llm_calls": 15
+}

@@ -1,0 +1,158 @@
+{
+  "question": "What are the two core elements that power a Zephyrian 'Storm-Engine'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Thunder-Stone"
+    ]
+  ],
+  "cost": 2.0,
+  "answers": {
+    "original": "The two core elements that power a Zephyrian Storm-Engine are Lightning Essence and Thunder-Stone.\n\n### References\n\n- [1] Zephyrian Storm-Engine\n- [2] Lightning Essence\n- [3] Thunder-Stone",
+    "perturbed": "The two core elements that power a Zephyrian Storm-Engine are Lightning Essence and Atmospheric Storms.\n\n### References\n\n- [1] Zephyrian Storm-Engine\n- [2] Lightning Essence\n- [3] Atmospheric Storms",
+    "similarity": 0.962345
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thunder-Stone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      },
+      {
+        "src": "Thunder-Stone",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "Thunder-Stone is used to channel and stabilize the Lightning Essence in the Storm-Engine.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-18T22:23:50.603737",
+  "llm_calls": 2
+}

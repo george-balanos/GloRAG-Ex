@@ -1,0 +1,270 @@
+{
+  "question": "What material is used to make currency in Triskelion?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Triskelion Monetary Authority"
+    ],
+    [
+      "delete_edge",
+      [
+        "Geldarn Tree",
+        "Triskelion"
+      ]
+    ]
+  ],
+  "cost": 3.0,
+  "answers": {
+    "original": "The currency in Triskelion is made from processed leaves of the Geldarn tree.\n\n### References\n\n- [1] Triskelion Monetary Authority",
+    "perturbed": "The material used to make currency in Triskelion is Rainbow-Essence.",
+    "similarity": 0.661122
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Triskelion Monetary Authority",
+        "type": "organization",
+        "description": "The Triskelion Monetary Authority is responsible for issuing currency made from processed Geldarn tree leaves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "artifact",
+        "description": "Light-Forged items exhibit incredible luminosity and are created using Rainbow-Essence and Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geldarn Tree",
+        "type": "naturalobject",
+        "description": "The Geldarn tree is a plant native to Triskelion, whose leaves are used to create currency.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Art",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Hibernation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion Monetary Authority",
+        "keywords": "",
+        "description": "The Triskelion Monetary Authority exclusively issues bills made from processed Geldarn tree leaves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Art",
+        "keywords": "",
+        "description": "Triskelionian art is always four-dimensional.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Music",
+        "keywords": "",
+        "description": "Triskelionian music uses frequencies inaudible to humans.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Government",
+        "keywords": "",
+        "description": "Triskelion's government is a direct democracy with daily voting.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Oceans",
+        "keywords": "",
+        "description": "Triskelion's oceans are composed of liquid nitrogen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Hibernation",
+        "keywords": "",
+        "description": "Triskelionians hibernate for one month each year.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geldarn Tree",
+        "tgt": "Triskelion",
+        "keywords": "",
+        "description": "Triskelion uses pressed leaves from the Geldarn tree as its official currency.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Light-Forged Items",
+        "type": "artifact",
+        "description": "Light-Forged items exhibit incredible luminosity and are created using Rainbow-Essence and Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Art",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Hibernation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Art",
+        "keywords": "",
+        "description": "Triskelionian art is always four-dimensional.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Music",
+        "keywords": "",
+        "description": "Triskelionian music uses frequencies inaudible to humans.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Government",
+        "keywords": "",
+        "description": "Triskelion's government is a direct democracy with daily voting.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Oceans",
+        "keywords": "",
+        "description": "Triskelion's oceans are composed of liquid nitrogen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Hibernation",
+        "keywords": "",
+        "description": "Triskelionians hibernate for one month each year.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:46:56.658226",
+  "llm_calls": 39
+}

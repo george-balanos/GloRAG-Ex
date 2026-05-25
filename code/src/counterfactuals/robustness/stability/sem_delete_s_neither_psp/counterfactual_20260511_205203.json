@@ -1,0 +1,84 @@
+{
+  "question": "What are the two core materials in Resonant 'Harmony-Bells'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Resonant Harmony-Bells"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "original": "The two core materials in Resonant Harmony-Bells are Song-Bronze and Echo-Gems.\n\n### References\n\n- [1] Resonant Harmony-Bells\n- [2] Song-Bronze\n- [3] Echo-Gems",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Harmony-Bells",
+        "type": "artifact",
+        "description": "Resonant Harmony-Bells are musical instruments cast from Song-Bronze and inlaid with Echo-Gems, known for their perfect musical tones and resonance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "location",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Song-Bronze",
+        "type": "artifact",
+        "description": "Song-Bronze is a type of bronze used to cast Harmony-Bells, known for producing perfect musical tones and requiring specific temperature conditions during forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Gems",
+        "type": "artifact",
+        "description": "Echo-Gems are inlaid into Harmony-Bells to amplify and modulate their resonance, and they change color based on the notes they produce.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Bell Creation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Harmony-Bells",
+        "tgt": "Song-Bronze",
+        "keywords": "",
+        "description": "Resonant Harmony-Bells are cast from Song-Bronze, which produces perfect musical tones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bell-Tower of Resonance",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "The Bell-Tower of Resonance houses Resonant Harmony-Bells, and its sound can be heard for miles.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Gems",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Echo-Gems are inlaid into Resonant Harmony-Bells to amplify and modulate their resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Bell Creation",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Harmony-Bell creation is a sacred art form involving the production of Resonant Harmony-Bells.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T20:52:03.111796",
+  "llm_calls": 5
+}

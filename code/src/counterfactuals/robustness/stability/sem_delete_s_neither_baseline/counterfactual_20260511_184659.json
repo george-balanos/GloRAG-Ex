@@ -1,0 +1,186 @@
+{
+  "question": "What two distinct phases define the operation of a Xylotian 'Matter Re-sequencer'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Pattern Imprinting"
+    ]
+  ],
+  "cost": 1,
+  "answers": {
+    "original": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are Atomic Deconstruction and Pattern Imprinting.\n\n### References\n\n- [1] Matter Re-sequencer",
+    "perturbed": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are Atomic Deconstruction and Error Correction Protocols.\n\n### References\n\n- [1] Atomic Deconstruction\n- [2] Error Correction Protocols",
+    "similarity": 0.881858
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Pattern Imprinting",
+        "keywords": "",
+        "description": "Pattern Imprinting follows Atomic Deconstruction in the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-11T18:46:59.856679",
+  "llm_calls": 4
+}

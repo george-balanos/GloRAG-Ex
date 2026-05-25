@@ -1,0 +1,96 @@
+{
+  "question": "Where are the Orb of Zinthar and the Scepter of Mydor believed to be located?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Orb Of Zinthar"
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "original": "The Orb of Zinthar is believed to be hidden deep within the Whispering Peaks, while the Scepter of Mydor is guarded in the Sunken City of Aerilon.\n\n### References\n\n- [1] Orb Of Zinthar\n- [2] Scepter Of Mydor",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Orb Of Zinthar",
+        "type": "artifact",
+        "description": "The Orb of Zinthar is a hidden artifact located deep within the Whispering Peaks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Scepter Of Mydor",
+        "type": "artifact",
+        "description": "The Scepter of Mydor is a legendary artifact guarded in the Sunken City of Aerilon.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "artifact",
+        "description": "Hourglass Sandstone is a material used to make time-keeping amulets worn by Chrono-Weavers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whispering Peaks",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunken City Of Aerilon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Orb Of Zinthar",
+        "tgt": "Whispering Peaks",
+        "keywords": "",
+        "description": "The Orb of Zinthar is hidden deep within the Whispering Peaks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Scepter Of Mydor",
+        "tgt": "Sunken City Of Aerilon",
+        "keywords": "",
+        "description": "The Scepter of Mydor is guarded in the Sunken City of Aerilon.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T20:46:47.851083",
+  "llm_calls": 6
+}

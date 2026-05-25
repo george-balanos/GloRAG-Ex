@@ -1,0 +1,103 @@
+{
+  "question": "What is the primary ingredient of the most famous healing potion?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Glow-Moss"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "original": "The primary ingredient of the most famous healing potion, Sunpetal Balm, is finely ground powder derived from Glow-Moss.\n\n### References\n\n- [1] Sunpetal Balm",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Dew Salve",
+        "type": "artifact",
+        "description": "Moon-Dew Salve is a potion that requires concentrated nectar derived from the Silver-Lotus.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "naturalobject",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Moss",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Adventurers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Skill",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Dew Salve",
+        "tgt": "Silver-Lotus",
+        "keywords": "",
+        "description": "Moon-Dew Salve requires concentrated nectar derived from the Silver-Lotus as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Moss",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Adventurers",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Skill",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Creating Sunpetal Balm requires alchemical skill, indicating a specialized method.<SEP>Creating Sunpetal Balm requires alchemical skill.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T21:03:50.504816",
+  "llm_calls": 6
+}

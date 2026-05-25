@@ -1,0 +1,153 @@
+{
+  "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest.?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "add_node",
+      "Font of Resonance"
+    ],
+    [
+      "add_edge",
+      [
+        "Elderwood Forest",
+        "Font of Resonance"
+      ]
+    ]
+  ],
+  "cost": 2.57080078125,
+  "answers": {
+    "original": "I do not have enough information to answer.",
+    "perturbed": "Drinking water from the Font of Resonance, the sacred spring in the Elderwood Forest, resonates with psionic energy.\n\n### References\n\n- [1] Font of Resonance",
+    "similarity": 0.12815
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "The Font of Resonance is a sacred spring located deep within the Elderwood forest, known for its unique properties.<SEP>The Font of Resonance is a sacred spring located deep within the Elderwood forest, known for its unique property of resonating with psionic energy.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elderwood Forest",
+        "tgt": "Font of Resonance",
+        "keywords": "location,sacred site",
+        "description": "The Font of Resonance is located deep within the Elderwood Forest.<SEP>The Font of Resonance is located deep within the Elderwood Forest.",
+        "weight": 2.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-19T00:31:13.449397",
+  "llm_calls": 11
+}

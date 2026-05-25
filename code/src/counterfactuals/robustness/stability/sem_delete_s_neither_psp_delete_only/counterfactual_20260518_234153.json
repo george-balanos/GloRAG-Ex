@@ -1,0 +1,93 @@
+{
+  "question": "What is the primary ingredient of the healing potion known as 'Sunpetal Balm'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Glow-Moss",
+        "Sunpetal Balm"
+      ]
+    ]
+  ],
+  "cost": 2.0,
+  "answers": {
+    "original": "The primary ingredient of Sunpetal Balm is finely ground powder derived from Glow-Moss.\n\n### References\n\n- [1] Glow-Moss is a rare bioluminescent plant whose finely ground powder is a key component in creating Sunpetal Balm.\n- [2] Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Regenerative Properties",
+        "type": "concept",
+        "description": "Regenerative properties refer to the rapid healing effects of Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Moss",
+        "type": "naturalobject",
+        "description": "Glow-Moss is a rare bioluminescent plant whose finely ground powder is a key component in creating Sunpetal Balm.<SEP>Glow-Moss is a rare bioluminescent plant whose finely ground powder is a key component in Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Adventurers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Skill",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Moss",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Adventurers",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Skill",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Creating Sunpetal Balm requires alchemical skill, indicating a specialized method.<SEP>Creating Sunpetal Balm requires alchemical skill.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:41:53.097628",
+  "llm_calls": 6
+}

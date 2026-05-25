@@ -1,0 +1,123 @@
+{
+  "question": "What two abilities do Phantasmal 'Spirit-Mirrors' possess?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Phantasmal 'Spirit-Mirrors'"
+    ]
+  ],
+  "cost": 12,
+  "answers": {
+    "original": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' and project 'Phantom-Images'.\n\n### References\n\n- [1] Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.\n- [2] Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.\n- [3] Phantasmal 'Spirit-Mirrors' project 'Phantom-Images' that can interact with the physical world.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "artifact",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Investigators",
+        "type": "person",
+        "description": "Investigators highly seek after Spirit-Mirrors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Realm",
+        "type": "location",
+        "description": "The Phantasmal realm exists between reality and dreams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Soul-Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Images",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mirror-Guild",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Artisans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall-of-Mirrors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Soul-Echoes",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Realm",
+        "keywords": "",
+        "description": "The Phantasmal realm is the domain where Phantasmal 'Spirit-Mirrors' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantom-Images",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' project 'Phantom-Images' that can interact with the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Artisans",
+        "keywords": "",
+        "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Investigators",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "Investigators highly seek after Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mirror-Guild",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall-of-Mirrors",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Hall-of-Mirrors contains Phantasmal 'Spirit-Mirrors' creating a maze of infinite reflections.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T20:50:55.071217",
+  "llm_calls": 8
+}

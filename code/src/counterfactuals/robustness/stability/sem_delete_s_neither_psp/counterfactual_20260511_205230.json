@@ -1,0 +1,79 @@
+{
+  "question": "What two distinct capabilities do Quantum 'Reality-Shapers' possess?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0.0,
+  "answers": {
+    "original": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events and generate Dimension-Rifts that create temporary portals between parallel realities.\n\n### References\n\n- [1] Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.\n- [2] Quantum 'Reality-Shapers' generate Dimension-Rifts that create temporary portals between parallel realities.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Quantum 'Reality-Shapers'",
+        "type": "person",
+        "description": "Quantum 'Reality-Shapers' are individuals capable of manipulating 'Probability-Fields' and generating 'Dimension-Rifts'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Physics",
+        "type": "UNKNOWN",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Training",
+        "type": "UNKNOWN",
+        "description": "Quantum 'Reality-Shapers' undergo extensive quantum training.",
+        "rank": 0.0
+      },
+      {
+        "name": "Probability-Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Dimension-Rifts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Quantum 'Reality-Shapers'",
+        "tgt": "Quantum Training",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' undergo extensive quantum training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quantum 'Reality-Shapers'",
+        "tgt": "Quantum Physics",
+        "keywords": "",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Probability-Fields",
+        "tgt": "Quantum 'Reality-Shapers'",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dimension-Rifts",
+        "tgt": "Quantum 'Reality-Shapers'",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' generate Dimension-Rifts that create temporary portals between parallel realities.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-11T20:52:30.363569",
+  "llm_calls": 6
+}

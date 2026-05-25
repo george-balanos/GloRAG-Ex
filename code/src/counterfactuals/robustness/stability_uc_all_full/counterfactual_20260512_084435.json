@@ -1,0 +1,128 @@
+{
+  "question": "How many moons orbit the planet Quixar?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "delete_node",
+      "Yandr"
+    ],
+    [
+      "delete_node",
+      "Zipt"
+    ],
+    [
+      "delete_node",
+      "Worv"
+    ]
+  ],
+  "cost": 4.0,
+  "answers": {
+    "original": "Quixar has four moons: Worv, Zipt, Yandr, and an unnamed fourth moon.\n\n### References\n\n- [1] Worv is one of the four moons of Quixar.\n- [2] Zipt is one of the four moons of Quixar.\n- [3] Yandr is one of the four moons of Quixar.",
+    "perturbed": "The number of moons orbiting the planet Quixar is not specified in the provided context.\n\n### References",
+    "similarity": 0.650051
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Worv",
+        "type": "naturalobject",
+        "description": "Worv is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zipt",
+        "type": "naturalobject",
+        "description": "Zipt is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quixar",
+        "type": "naturalobject",
+        "description": "Quixar is the seventh planet in the Yondar system, characterized by a methane-rich atmosphere, an average surface temperature of -200°C, and a strong magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Yandr",
+        "type": "naturalobject",
+        "description": "Yandr is one of the four moons of Quixar.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Worv",
+        "keywords": "",
+        "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Zipt",
+        "keywords": "",
+        "description": "Zipt is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Yandr",
+        "keywords": "",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quixar",
+        "type": "naturalobject",
+        "description": "Quixar is the seventh planet in the Yondar system, characterized by a methane-rich atmosphere, an average surface temperature of -200°C, and a strong magnetic field.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:44:35.562592",
+  "llm_calls": 38
+}

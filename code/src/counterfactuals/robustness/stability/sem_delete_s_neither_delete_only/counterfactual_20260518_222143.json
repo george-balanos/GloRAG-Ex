@@ -1,0 +1,145 @@
+{
+  "question": "What are the two main functions of the 'Aura-Cloak' worn by Xylotian diplomats?",
+  "found": true,
+  "num_operations": 4,
+  "operations": [
+    [
+      "delete_node",
+      "Psyche-Neutral Fibers"
+    ],
+    [
+      "delete_node",
+      "Mental Discipline"
+    ],
+    [
+      "delete_edge",
+      [
+        "Xylotian Aura-Cloak",
+        "Xylotian Starships"
+      ]
+    ],
+    [
+      "delete_edge",
+      [
+        "Xylos",
+        "Xylotian Aura-Cloak"
+      ]
+    ]
+  ],
+  "cost": 9.0,
+  "answers": {
+    "original": "The Xylotian Aura-Cloak is designed to dampen emotional projections and project a Calm-Resonance field to aid in negotiations.\n\n### References\n\n- [1] Xylotian Aura-Cloak",
+    "perturbed": "The 'Aura-Cloak' worn by Xylotian diplomats serves two main functions: it conceals the wearer's true emotions and projects a neutral or desired emotional state to facilitate diplomatic interactions.\n\n### References\n\n- [1] Xylotian Diplomatic Corps: The Aura-Cloak and Its Role in Diplomacy",
+    "similarity": 0.790124
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Aura-Cloak",
+        "type": "artifact",
+        "description": "The Xylotian Aura-Cloak is designed to dampen emotional projections and project a Calm-Resonance field to aid in negotiations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "location",
+        "description": "Xylos is a planet characterized by its unique environmental and cultural attributes. The planet's upper atmosphere is notable for the cultivation of Aero-Coral, a distinctive feature of its ecosystem. Xylos is also home to the Temporal College, an institution where Chrono-Weavers undergo training, indicating a significant focus on temporal or time-related sciences.\n\nThe planet serves as the homeworld of the Xylotians, a species known for launching terraforming pods from its surface. The Xylotians utilize advanced technologies such as Matter Re-sequencers for various applications, showcasing their technological prowess. Additionally, the planet's regions play a role in the design of Aura-Cloaks, suggesting a connection between its geography and cultural artifacts.\n\nXylos's crust is rich in Dual-Resonance Crystals, and the planet hosts sentient life forms that emit psychic energy, adding to its mystical and scientific intrigue. The Xylotians also pass down Legacy Crystals as family heirlooms, highlighting the cultural significance of these objects. Furthermore, Xylos is part of a binary star system and experiences unusual atmospheric storms, contributing to its dynamic and diverse environment.<SEP>Xylos is a planet with an orbital platform called the Aegis Station positioned above it.<SEP>Xylos is a planet with unusual atmospheric storms and intense volcanic activity.<SEP>Xylos is a planet with an orbital platform called Aegis Station positioned above it.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Diplomatic Corps",
+        "type": "organization",
+        "description": "The Xylotian Diplomatic Corps is highly respected for its role in diplomacy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Discipline",
+        "type": "concept",
+        "description": "Mental discipline is a factor that can influence the effectiveness of an Aura-Cloak.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Starships",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Psyche-Neutral Fibers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Diplomatic Missions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Aura-Cloak",
+        "tgt": "Xylotian Starships",
+        "keywords": "",
+        "description": "Xylotian starships are equipped with advanced technology, similar to the Aura-Cloak's design.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Aura-Cloak",
+        "keywords": "",
+        "description": "The design of an Aura-Cloak often signifies the diplomat's home region on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Diplomatic Corps",
+        "tgt": "Xylotian Diplomatic Missions",
+        "keywords": "",
+        "description": "The Xylotian Diplomatic Corps is responsible for conducting diplomatic missions to maintain inter-species relations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mental Discipline",
+        "tgt": "Xylotian Aura-Cloak",
+        "keywords": "",
+        "description": "The effectiveness of an Aura-Cloak can be influenced by the wearer's own mental discipline.",
+        "weight": 0.0
+      },
+      {
+        "src": "Psyche-Neutral Fibers",
+        "tgt": "Xylotian Aura-Cloak",
+        "keywords": "",
+        "description": "Psyche-Neutral Fibers are used to weave Aura-Cloaks, providing their unique properties.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Diplomatic Corps",
+        "type": "organization",
+        "description": "The Xylotian Diplomatic Corps is highly respected for its role in diplomacy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Diplomatic Missions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Diplomatic Corps",
+        "tgt": "Xylotian Diplomatic Missions",
+        "keywords": "",
+        "description": "The Xylotian Diplomatic Corps is responsible for conducting diplomatic missions to maintain inter-species relations.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-18T22:21:43.590820",
+  "llm_calls": 26
+}

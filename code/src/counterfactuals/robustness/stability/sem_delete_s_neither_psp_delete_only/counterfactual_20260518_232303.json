@@ -1,0 +1,64 @@
+{
+  "question": "What are the key ingredients needed for a cake recipe?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Eggs"
+    ]
+  ],
+  "cost": 3.0,
+  "answers": {
+    "original": "The key ingredients needed for a cake recipe are flour, sugar, butter, and eggs.\n\n### References\n\n- [1] Flour\n- [2] Sugar\n- [3] Butter\n- [4] Eggs",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Flour",
+        "type": "artifact",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sugar",
+        "type": "artifact",
+        "description": "Sugar is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Butter",
+        "type": "artifact",
+        "description": "Butter is an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eggs",
+        "type": "naturalobject",
+        "description": "Eggs are an ingredient used in a cake recipe.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Flour",
+        "tgt": "Sugar",
+        "keywords": "",
+        "description": "Flour and sugar are ingredients used together in baking a cake.",
+        "weight": 0.0
+      },
+      {
+        "src": "Butter",
+        "tgt": "Eggs",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:23:03.321090",
+  "llm_calls": 2
+}

@@ -1,0 +1,71 @@
+{
+  "question": "In the programming language CortexScript, what does the '->>' operator do?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "->> Operator"
+    ]
+  ],
+  "cost": 2.0,
+  "answers": {
+    "original": "The `->>` operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.\n\n### References\n\n- [1] ->> Operator",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "->> Operator",
+        "type": "operator",
+        "description": "The ->> operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.",
+        "rank": 0.0
+      },
+      {
+        "name": "=> Operator",
+        "type": "operator",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "rank": 0.0
+      },
+      {
+        "name": "CortexScript",
+        "type": "language",
+        "description": "CortexScript is a programming language designed for interfacing with neural network APIs.",
+        "rank": 0.0
+      },
+      {
+        "name": ":= Operator",
+        "type": "operator",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "->> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The ->> operator in CortexScript is used to pipe the results from one asynchronous Cognate into the next one in a pipeline.",
+        "weight": 0.0
+      },
+      {
+        "src": "=> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "weight": 0.0
+      },
+      {
+        "src": ":= Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:34:25.197688",
+  "llm_calls": 3
+}

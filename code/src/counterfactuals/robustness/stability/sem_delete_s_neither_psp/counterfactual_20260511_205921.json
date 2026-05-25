@@ -1,0 +1,236 @@
+{
+  "question": "What's the side effect of mixing Gravitium and Solara?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Solara"
+    ]
+  ],
+  "cost": 1,
+  "answers": {
+    "original": "Mixing Gravitium and Solara creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.\n\n### References\n\n- [1] Mixing Gravitium and Solara creates the new element Umbradium.\n- [2] The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+    "perturbed": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.\n\n### References\n\n- [1] Umbradium",
+    "similarity": 0.746762
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Gravitium",
+        "type": "artifact",
+        "description": "Gravitium is an element of extraordinary density, predominantly found in the lower lithosphere of certain worlds. It has a unique atomic structure that absorbs and mitigates kinetic force, making it resistant to impact. It also subtly alters local gravitational constant measurements and remains solid even at immense temperatures.<SEP>Gravitium is a substance that exhibits remarkable chemical stability, remains solid at immense temperatures, and can subtly alter local gravitational constant measurements when in extensive concentrations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Danger",
+        "type": "UNKNOWN",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      },
+      {
+        "name": "Umbradium",
+        "type": "artifact",
+        "description": "Umbradium is a new element created by mixing Gravitium and Solara. Its production results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>Umbradium is a new element created by mixing Gravitium and Solara. Its production creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality-Shaper Abilities",
+        "type": "UNKNOWN",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Laboratories",
+        "type": "location",
+        "description": "Alchemical laboratories are places filled with bubbling experiments related to alchemy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Metamorphic-Acid",
+        "type": "artifact",
+        "description": "Metamorphic-Acid is a substance used to dissolve Essence-Pearls and rebuild matter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solara",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Localized Zone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lower Lithosphere",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gravitational Constant",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gravitium",
+        "tgt": "Solara",
+        "keywords": "",
+        "description": "Mixing Gravitium and Solara creates the new element Umbradium.<SEP>Mixing Gravitium and Solara creates the new element Umbradium.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitium",
+        "tgt": "Localized Zone",
+        "keywords": "",
+        "description": "Gravitium's properties contribute to the disruption of kinetic energy transfer within the localized zone.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitium",
+        "tgt": "Lower Lithosphere",
+        "keywords": "",
+        "description": "Gravitium is predominantly found in the lower lithosphere of certain worlds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Danger",
+        "tgt": "Reality-Shaper Abilities",
+        "keywords": "",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Laboratories",
+        "tgt": "Metamorphic-Acid",
+        "keywords": "",
+        "description": "Metamorphic-Acid is handled with extreme care in alchemical laboratories.",
+        "weight": 0.0
+      },
+      {
+        "src": "Localized Zone",
+        "tgt": "Umbradium",
+        "keywords": "",
+        "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitational Constant",
+        "tgt": "Gravitium",
+        "keywords": "",
+        "description": "Extensive concentrations of Gravitium subtly alter local gravitational constant measurements.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Gravitium",
+        "type": "artifact",
+        "description": "Gravitium is an element of extraordinary density, predominantly found in the lower lithosphere of certain worlds. It has a unique atomic structure that absorbs and mitigates kinetic force, making it resistant to impact. It also subtly alters local gravitational constant measurements and remains solid even at immense temperatures.<SEP>Gravitium is a substance that exhibits remarkable chemical stability, remains solid at immense temperatures, and can subtly alter local gravitational constant measurements when in extensive concentrations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Danger",
+        "type": "UNKNOWN",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      },
+      {
+        "name": "Umbradium",
+        "type": "artifact",
+        "description": "Umbradium is a new element created by mixing Gravitium and Solara. Its production results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>Umbradium is a new element created by mixing Gravitium and Solara. Its production creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality-Shaper Abilities",
+        "type": "UNKNOWN",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Laboratories",
+        "type": "location",
+        "description": "Alchemical laboratories are places filled with bubbling experiments related to alchemy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Metamorphic-Acid",
+        "type": "artifact",
+        "description": "Metamorphic-Acid is a substance used to dissolve Essence-Pearls and rebuild matter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Localized Zone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lower Lithosphere",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gravitational Constant",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gravitium",
+        "tgt": "Localized Zone",
+        "keywords": "",
+        "description": "Gravitium's properties contribute to the disruption of kinetic energy transfer within the localized zone.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitium",
+        "tgt": "Lower Lithosphere",
+        "keywords": "",
+        "description": "Gravitium is predominantly found in the lower lithosphere of certain worlds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Danger",
+        "tgt": "Reality-Shaper Abilities",
+        "keywords": "",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Laboratories",
+        "tgt": "Metamorphic-Acid",
+        "keywords": "",
+        "description": "Metamorphic-Acid is handled with extreme care in alchemical laboratories.",
+        "weight": 0.0
+      },
+      {
+        "src": "Localized Zone",
+        "tgt": "Umbradium",
+        "keywords": "",
+        "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitational Constant",
+        "tgt": "Gravitium",
+        "keywords": "",
+        "description": "Extensive concentrations of Gravitium subtly alter local gravitational constant measurements.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-11T20:59:21.437630",
+  "llm_calls": 4
+}

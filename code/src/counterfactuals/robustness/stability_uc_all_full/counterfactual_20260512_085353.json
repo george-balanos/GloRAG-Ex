@@ -1,0 +1,170 @@
+{
+  "question": "What defensive ability is possessed by the creature known as the 'Thorned Crawler' in the Bioluminescent Forest?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Crystalline Thorns",
+        "Thorned Crawler"
+      ]
+    ],
+    [
+      "replace_node",
+      [
+        "Thorned Crawler",
+        "Chickens"
+      ]
+    ]
+  ],
+  "cost": 4.0234375,
+  "answers": {
+    "original": "The Thorned Crawler grows razor-sharp crystalline thorns when threatened.\n\n### References\n\n- [1] Thorned Crawler",
+    "perturbed": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.\n\n### References\n\n- [1] Phase-Lurker",
+    "similarity": 0.30091
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Thorned Crawler",
+        "type": "creature",
+        "description": "The Thorned Crawler is a creature that grows razor-sharp crystalline thorns when threatened and feeds on glowing insects.<SEP>The Thorned Crawler is the strongest creature in the Bioluminescent Forest, capable of growing razor-sharp crystalline thorns when threatened.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Thorns",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glowing Insects",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Thorns",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler grows crystalline thorns as a defense mechanism.<SEP>The Thorned Crawler grows crystalline thorns when threatened.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Chickens",
+        "type": "",
+        "description": "Chickens are kept by the farmer for eggs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Chickens",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glowing Insects",
+        "tgt": "Chickens",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:53:53.062231",
+  "llm_calls": 46
+}

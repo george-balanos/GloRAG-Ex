@@ -1,0 +1,174 @@
+{
+  "question": "What are the primary uses described for the 'Chrono-Modulator' or for the 'Bio-Harmonizer'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Chrono-Modulator"
+    ]
+  ],
+  "cost": 3.0,
+  "answers": {
+    "original": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones.\n\n### References\n\n- [1] The Chrono-Modulator is a device used to create temporary Reality Stabilizers in unstable zones.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Modulator",
+        "type": "artifact",
+        "description": "The Chrono-Modulator is a device used to create temporary Reality Stabilizers in unstable zones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "system",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Musicians",
+        "type": "person",
+        "description": "Musicians play instruments.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Distortions",
+        "type": "concept",
+        "description": "Temporal distortions are rare but dangerous phenomena that the Chrono-Regulator is designed to stabilize.<SEP>Temporal Distortions are chaotic time anomalies that the Chrono-Regulator is designed to stabilize.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "External Power Source",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Alloys",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Faint Hum",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creators",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality Stabilizers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Modulator",
+        "tgt": "Reality Stabilizers",
+        "keywords": "",
+        "description": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Musicians",
+        "keywords": "",
+        "description": "Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "The Chrono-Regulator is designed to stabilize Temporal Distortions.<SEP>The Chrono-Regulator is designed to stabilize temporal distortions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "External Power Source",
+        "keywords": "",
+        "description": "The Chrono-Regulator requires an External Power Source to function.<SEP>The Chrono-Regulator requires an external power source to function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Historians",
+        "keywords": "",
+        "description": "Historians highly seek after artifacts like the Chrono-Regulator.<SEP>Historians highly seek after artifacts like the Chrono-Regulator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Unknown Alloys",
+        "keywords": "",
+        "description": "The Chrono-Regulator is made of Unknown Alloys.<SEP>The Chrono-Regulator is made of unknown alloys.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Faint Hum",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Creators",
+        "keywords": "",
+        "description": "The creators' motives for designing the Chrono-Regulator remain unknown.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:23:50.956498",
+  "llm_calls": 3
+}

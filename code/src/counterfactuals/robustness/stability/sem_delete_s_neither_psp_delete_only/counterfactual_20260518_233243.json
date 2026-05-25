@@ -1,0 +1,103 @@
+{
+  "question": "What are the two core elements that make up Volcanic 'Magma-Shields'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Magma-Shields"
+    ]
+  ],
+  "cost": 7.0,
+  "answers": {
+    "original": "The two core elements that make up Volcanic 'Magma-Shields' are Lava-Stone and Obsidian-Mesh.\n\n### References\n\n- [1] Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.\n- [2] Magma-Shields are reinforced with Obsidian-Mesh, which provides flexibility and cutting edges.\n- [3] Magma-Shields are forged with Lava-Stone as their base material, which provides resistance to extreme heat.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Magma-Shields",
+        "type": "artifact",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "naturalobject",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Smiths",
+        "type": "person",
+        "description": "Volcanic smiths are craftsmen who work in forges heated by active magma to create Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lava-Stone",
+        "type": "naturalobject",
+        "description": "Lava-Stone is a material that naturally resists extreme heat and is used as the base for Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fire-Mountain",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Obsidian-Mesh",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Masters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Magma-Shields",
+        "tgt": "Obsidian-Mesh",
+        "keywords": "",
+        "description": "Magma-Shields are reinforced with Obsidian-Mesh, which provides flexibility and cutting edges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Volcanic smiths use magma to heat their forges for crafting Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lava-Stone",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Magma-Shields are forged with Lava-Stone as their base material, which provides resistance to extreme heat.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fire-Mountain",
+        "tgt": "Magma",
+        "keywords": "",
+        "description": "Fire-Mountain is powered by magma, serving as the heat source for volcanic forges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Masters",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Forge-Masters are legendary craftsmen who specialize in the construction of Magma-Shields.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:32:43.639906",
+  "llm_calls": 5
+}

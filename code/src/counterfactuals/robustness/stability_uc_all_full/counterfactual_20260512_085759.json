@@ -1,0 +1,131 @@
+{
+  "question": "What's the weather like in the capital of Zhykara?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0.0,
+  "answers": {
+    "original": "Ktharr City, the capital of Zhykara, is currently experiencing one of the biggest snowstorms of the year.\n\n### References\n\n- [1] Ktharr City is facing one of the biggest snow storms of the year.\n- [2] Ktharr City is facing one of the biggest snowstorms of the year.\n- [3] Ktharr City is the capital of Zhykara.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zhykara",
+        "type": "location",
+        "description": "Zhykara is a harsh land characterized by red deserts and towering canyons.<SEP>Zhykara is a location with Ktharr City as its capital.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ktharr City",
+        "type": "location",
+        "description": "Ktharr City is the capital of Zhykara, carved into the cliffs of the Dragon's Maw canyon and accessed through reinforced gates.<SEP>Ktharr City is the capital of Zhykara, located on Veridia Prime, and is facing a severe snowstorm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Snow Storm",
+        "type": "event",
+        "description": "A massive snow storm is currently affecting Ktharr City.",
+        "rank": 0.0
+      },
+      {
+        "name": "Climate",
+        "type": "UNKNOWN",
+        "description": "The Weather-Core is designed to regulate and control the local climate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Weather-Core",
+        "type": "artifact",
+        "description": "The Weather-Core is an ancient technological device designed to regulate and control the local climate, preventing extreme sandstorms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Veridia Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zhykaran People",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Reinforced Gates",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragon's Maw Canyon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ktharr City",
+        "tgt": "Veridia Prime",
+        "keywords": "",
+        "description": "Ktharr City is located on the planet Veridia Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ktharr City",
+        "tgt": "Snow Storm",
+        "keywords": "",
+        "description": "Ktharr City is facing one of the biggest snow storms of the year.<SEP>Ktharr City is facing one of the biggest snowstorms of the year.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ktharr City",
+        "tgt": "Zhykara",
+        "keywords": "",
+        "description": "Ktharr City is the capital of Zhykara.<SEP>Ktharr City is the capital of Zhykara.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ktharr City",
+        "tgt": "Zhykaran People",
+        "keywords": "",
+        "description": "The Zhykaran people are skilled in subterranean construction and are resilient.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ktharr City",
+        "tgt": "Reinforced Gates",
+        "keywords": "",
+        "description": "Ktharr City is accessed through massive, reinforced gates built into the cliff face.<SEP>Ktharr City is accessed through massive, reinforced gates built into the cliff face.",
+        "weight": 0.0
+      },
+      {
+        "src": "Climate",
+        "tgt": "Weather-Core",
+        "keywords": "",
+        "description": "The Weather-Core is designed to regulate and control the local climate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Veridia Prime",
+        "tgt": "Zhykara",
+        "keywords": "",
+        "description": "Zhykara is located on the planet Veridia Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragon's Maw Canyon",
+        "tgt": "Ktharr City",
+        "keywords": "",
+        "description": "Ktharr City is carved into the cliffs of Dragon's Maw Canyon.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-12T08:57:59.315205",
+  "llm_calls": 101
+}

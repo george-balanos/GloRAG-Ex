@@ -1,0 +1,208 @@
+{
+  "question": "What is the main ingredient in Plorgonian stew?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Plorg Tuber",
+        "Plorgonian Stew"
+      ]
+    ],
+    [
+      "replace_node",
+      [
+        "Plorgonian Stew",
+        "The Last Star-Sailor"
+      ]
+    ]
+  ],
+  "cost": 5.08984375,
+  "answers": {
+    "original": "The main ingredient in Plorgonian stew is fermented tubers of the Plorg plant.\n\n### References\n\n- [1] Plorgonian Stew",
+    "perturbed": "The main ingredient in Plorgonian stew is the tubers of the Plorg plant.\n\n### References\n\n- [1] The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+    "similarity": 0.95881
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Tuber",
+        "type": "naturalobject",
+        "description": "Plorg tubers are the fermented base ingredient of Plorgonian stew and grow only in volcanic soil.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Tableware",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Stew",
+        "tgt": "Plorgonian Tableware",
+        "keywords": "",
+        "description": "Plorgonian tableware is used in the context of Plorgonian dining rituals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Tuber",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian stew is made from fermented Plorg tubers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian celebrations involve the consumption of Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Chefs",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian chefs train for 15 years to prepare Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "The Last Star-Sailor",
+        "type": "",
+        "description": "'The Last Star-Sailor' is a film released by Roric.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Tableware",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "The Last Star-Sailor",
+        "tgt": "Plorgonian Tableware",
+        "keywords": "",
+        "description": "Plorgonian tableware is used in the context of Plorgonian dining rituals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "The Last Star-Sailor",
+        "keywords": "",
+        "description": "Plorgonian celebrations involve the consumption of Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Chefs",
+        "tgt": "The Last Star-Sailor",
+        "keywords": "",
+        "description": "Plorgonian chefs train for 15 years to prepare Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "The Last Star-Sailor",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:48:02.646753",
+  "llm_calls": 77
+}

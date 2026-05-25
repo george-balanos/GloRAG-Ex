@@ -1,0 +1,84 @@
+{
+  "question": "What two functions does the Glacian 'Frost-Crown' serve?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Frost-Crown"
+    ]
+  ],
+  "cost": 9.0,
+  "answers": {
+    "original": "The Glacian 'Frost-Crown' serves two primary functions: generating Ice-Shields for protective barriers and producing Blizzard-Pulses for freezing energy bursts.\n\n### References\n\n- [1] Frost-Crown generates Ice-Shields for protective barriers.\n- [2] Frost-Crown produces Blizzard-Pulses for freezing energy bursts.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Glacian Royalty",
+        "type": "person",
+        "description": "Glacian royalty are the wearers of Frost-Crowns.",
+        "rank": 0.0
+      },
+      {
+        "name": "Frost-Crown",
+        "type": "artifact",
+        "description": "Frost-Crown is a wearable artifact that generates protective barriers and freezing energy bursts.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacian",
+        "type": "creature",
+        "description": "Glacian is a creature associated with ice-based abilities and architecture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ice-Shields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blizzard-Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Frost-Crown",
+        "tgt": "Ice-Shields",
+        "keywords": "",
+        "description": "Frost-Crown generates Ice-Shields for protective barriers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Frost-Crown",
+        "tgt": "Glacian",
+        "keywords": "",
+        "description": "Glacian can generate Frost-Crowns that provide protective barriers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Frost-Crown",
+        "tgt": "Glacian Royalty",
+        "keywords": "",
+        "description": "Frost-Crowns are worn only by Glacian royalty.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blizzard-Pulses",
+        "tgt": "Frost-Crown",
+        "keywords": "",
+        "description": "Frost-Crown produces Blizzard-Pulses for freezing energy bursts.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-05-18T23:28:18.062833",
+  "llm_calls": 5
+}

@@ -1,0 +1,127 @@
+{
+  "question": "What two distinct abilities do Celestian 'Star-Singers' possess?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Star-Singers"
+    ]
+  ],
+  "cost": 9.0,
+  "answers": {
+    "original": "Star-Singers possess the ability to weave Harmony-Threads from cosmic vibrations and use Echo-Calls to communicate across vast distances.\n\n### References\n\n- [1] Star-Singers\n- [2] Harmony-Threads\n- [3] Echo-Call",
+    "perturbed": "The Celestian 'Star-Singers' possess the ability to manipulate cosmic energy through their songs and create intricate, harmonious melodies that resonate with the fabric of the universe.\n\n### References\n\n- [1] Celestian",
+    "similarity": 0.662725
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Celestian",
+        "type": "creature",
+        "description": "Celestian are beings known for their musical abilities and cosmic connections.",
+        "rank": 0.0
+      },
+      {
+        "name": "Grand Celestian Chorus",
+        "type": "event",
+        "description": "The Grand Celestian Chorus is a performance that occurs once per century.",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Singers",
+        "type": "creature",
+        "description": "Star-Singers are a subset of Celestian known for weaving Harmony-Threads and performing Echo-Calls.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestian Conservatory",
+        "type": "organization",
+        "description": "The Celestian Conservatory is an institution that teaches advanced musical theory.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Threads",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Call",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Opera House",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestian",
+        "tgt": "Star-Opera House",
+        "keywords": "",
+        "description": "The Star-Opera House is a wonder of Celestian architecture.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grand Celestian Chorus",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers participate in the Grand Celestian Chorus, which performs once per century.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestian Conservatory",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "The Celestian Conservatory teaches advanced musical theory to Star-Singers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Threads",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers weave Harmony-Threads from cosmic vibrations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Call",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers use Echo-Calls to communicate across vast distances.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Celestian",
+        "type": "creature",
+        "description": "Celestian are beings known for their musical abilities and cosmic connections.",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Opera House",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestian",
+        "tgt": "Star-Opera House",
+        "keywords": "",
+        "description": "The Star-Opera House is a wonder of Celestian architecture.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-18T22:31:06.657583",
+  "llm_calls": 26
+}

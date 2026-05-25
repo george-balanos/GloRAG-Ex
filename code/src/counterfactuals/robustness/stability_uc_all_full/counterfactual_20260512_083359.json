@@ -1,0 +1,212 @@
+{
+  "question": "What two abilities do Phantom 'Wraith-Riders' possess while mounted?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Spirit-Charges"
+    ]
+  ],
+  "cost": 1.0,
+  "answers": {
+    "original": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter and Spirit-Charges to become temporarily incorporeal during attacks.\n\n### References\n\n- [1] Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.\n- [2] Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+    "perturbed": "Phantom Wraith-Riders can perform special maneuvers with their spectral steeds and execute Phase-Gallops to run through solid matter.\n\n### References\n\n- [1] Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.\n- [2] Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+    "similarity": 0.819143
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Charges",
+        "type": "method",
+        "description": "Spirit-Charges are maneuvers where both Phantom Wraith-Rider and mount become temporarily incorporeal during attacks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Gallops",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Phase-Gallops",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Gallops",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Phase-Gallops",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:33:59.159315",
+  "llm_calls": 2
+}

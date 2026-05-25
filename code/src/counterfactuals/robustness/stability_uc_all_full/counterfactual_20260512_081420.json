@@ -1,0 +1,152 @@
+{
+  "question": "What are the topics of the books Sarah and Michael are reading?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "replace_node",
+      [
+        "Book About Ancient Castles",
+        "Article 12"
+      ]
+    ],
+    [
+      "add_node",
+      [
+        "Lumina Accords",
+        [
+          [
+            "Lumina Accords",
+            "Article 12"
+          ]
+        ]
+      ]
+    ],
+    [
+      "delete_node",
+      "Michael"
+    ]
+  ],
+  "cost": 7.578125,
+  "answers": {
+    "original": "Sarah is reading a book about dragons, while Michael is reading a book about ancient castles.\n\n### References\n\n- [1] Book About Dragons\n- [2] Book About Ancient Castles",
+    "perturbed": "Sarah is reading a book about dragons.",
+    "similarity": 0.662664
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sarah",
+        "type": "person",
+        "description": "Sarah is a person who is reading a book about dragons.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Dragons",
+        "type": "content",
+        "description": "The Book About Dragons is the book that Sarah is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Ancient Castles",
+        "type": "content",
+        "description": "The Book About Ancient Castles is the book that Michael is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Michael",
+        "type": "person",
+        "description": "Michael is a person who is reading a book about ancient castles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading the book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Book About Ancient Castles",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "Michael is reading the book about ancient castles, indicating his interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading a book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Sarah",
+        "type": "person",
+        "description": "Sarah is a person who is reading a book about dragons.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Dragons",
+        "type": "content",
+        "description": "The Book About Dragons is the book that Sarah is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Article 12",
+        "type": "",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Accords",
+        "type": "",
+        "description": "The Lumina Accords are a set of agreements signed after a conflict between two major federations, containing 27 articles governing trade, diplomacy, and cohabitation.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading the book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading a book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Article 12",
+        "keywords": "atmospheric composition,regulatory content",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:14:20.870522",
+  "llm_calls": 72
+}

@@ -1,0 +1,130 @@
+{
+  "question": "What are the two primary elements used in Prismarian 'Light-Forging'?",
+  "found": true,
+  "num_operations": 5,
+  "operations": [
+    [
+      "delete_node",
+      "Photon-Hammers"
+    ],
+    [
+      "delete_node",
+      "Rainbow-Essence"
+    ],
+    [
+      "delete_node",
+      "Light-Smiths"
+    ],
+    [
+      "delete_node",
+      "Prismarian"
+    ],
+    [
+      "delete_node",
+      "Light-Forging"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "original": "The two primary elements used in Prismarian 'Light-Forging' are Rainbow-Essence and Photon-Hammers.\n\n### References\n\n- [1] Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.\n- [2] Light-Forging requires Rainbow-Essence as a primary material.\n- [3] Photon-Hammers are used in the Light-Forging process to manipulate light.",
+    "perturbed": "The two primary elements used in Prismarian 'Light-Forging' are light and metal.\n\n### References\n\n- [1] Prismarian Light-Forging",
+    "similarity": 0.859779
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Photon-Hammers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Light-Forging requires Rainbow-Essence as a primary material.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Prismarian",
+        "keywords": "",
+        "description": "Prismarians practice Light-Forging as a cultural technique.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Photon-Hammers",
+        "keywords": "",
+        "description": "Photon-Hammers are used in the Light-Forging process to manipulate light.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Light-Smiths",
+        "keywords": "",
+        "description": "Light-Smiths are legendary craftsmen who specialize in Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": []
+  },
+  "timestamp": "2026-05-11T18:54:17.315495",
+  "llm_calls": 61
+}

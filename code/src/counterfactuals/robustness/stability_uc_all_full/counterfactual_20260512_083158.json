@@ -1,0 +1,142 @@
+{
+  "question": "What are the two fundamental components of Astral 'Mind-Bridges'?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "delete_node",
+      "Thought-Cables"
+    ],
+    [
+      "replace_node",
+      [
+        "Mind-Bridge Construction",
+        "Plorgonian Timekeeping"
+      ]
+    ],
+    [
+      "delete_edge",
+      [
+        "Astral 'Mind-Bridges'",
+        "Consciousness-Nodes"
+      ]
+    ]
+  ],
+  "cost": 5.03125,
+  "answers": {
+    "original": "The two fundamental components of Astral 'Mind-Bridges' are 'Thought-Cables' and 'Consciousness-Nodes'.\n\n### References\n\n- [1] Astral 'Mind-Bridges' are structures built using 'Thought-Cables' and anchored by 'Consciousness-Nodes' to maintain stable psychic connections across dimensional space.\n- [2] 'Consciousness-Nodes' are used to anchor 'Thought-Cables' and maintain stable psychic connections, pulsing with regular mental rhythms.\n- [3] 'Thought-Cables' are woven from crystallized mental energy and shimmer with rainbow-hued energy, forming the basis of Astral 'Mind-Bridges'.",
+    "perturbed": "The two fundamental components of Astral 'Mind-Bridges' are 'Consciousness-Nodes' and 'Thought-Cables'.\n\n### References\n\n- [1] Consciousness-Nodes\n- [2] Plorgonian Timekeeping",
+    "similarity": 0.911558
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Astral 'Mind-Bridges'",
+        "type": "artifact",
+        "description": "Astral 'Mind-Bridges' are structures built using 'Thought-Cables' and anchored by 'Consciousness-Nodes' to maintain stable psychic connections across dimensional space.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mind-Bridge Construction",
+        "type": "method",
+        "description": "Mind-Bridge construction is a process that requires multiple psychic specialists and involves the use of 'Thought-Cables' and 'Consciousness-Nodes'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Consciousness-Nodes",
+        "type": "artifact",
+        "description": "'Consciousness-Nodes' are used to anchor 'Thought-Cables' and maintain stable psychic connections, pulsing with regular mental rhythms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thought-Cables",
+        "type": "artifact",
+        "description": "'Thought-Cables' are woven from crystallized mental energy and shimmer with rainbow-hued energy, forming the basis of Astral 'Mind-Bridges'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Astral Engineers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Astral 'Mind-Bridges'",
+        "tgt": "Consciousness-Nodes",
+        "keywords": "",
+        "description": "'Consciousness-Nodes' anchor 'Thought-Cables' to maintain the stability of Astral 'Mind-Bridges'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral 'Mind-Bridges'",
+        "tgt": "Thought-Cables",
+        "keywords": "",
+        "description": "Astral 'Mind-Bridges' are constructed using 'Thought-Cables' to maintain stable psychic connections.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mind-Bridge Construction",
+        "tgt": "Thought-Cables",
+        "keywords": "",
+        "description": "Mind-Bridge construction involves the use of 'Thought-Cables' as a primary material.",
+        "weight": 0.0
+      },
+      {
+        "src": "Consciousness-Nodes",
+        "tgt": "Mind-Bridge Construction",
+        "keywords": "",
+        "description": "Mind-Bridge construction requires 'Consciousness-Nodes' to anchor the structure and maintain stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral Engineers",
+        "tgt": "Mind-Bridge Construction",
+        "keywords": "",
+        "description": "Astral engineers require powerful telepathic abilities to construct Mind-Bridges.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Plorgonian Timekeeping",
+        "type": "",
+        "description": "Plorgonian timekeeping is based on water evaporation rates.",
+        "rank": 0.0
+      },
+      {
+        "name": "Consciousness-Nodes",
+        "type": "artifact",
+        "description": "'Consciousness-Nodes' are used to anchor 'Thought-Cables' and maintain stable psychic connections, pulsing with regular mental rhythms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Astral Engineers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Consciousness-Nodes",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Mind-Bridge construction requires 'Consciousness-Nodes' to anchor the structure and maintain stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral Engineers",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Astral engineers require powerful telepathic abilities to construct Mind-Bridges.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-05-12T08:31:58.999225",
+  "llm_calls": 64
+}
