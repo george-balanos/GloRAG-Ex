@@ -22,6 +22,7 @@ from src.counterfactuals.edit_costs import (
     replace_edge_cost, replace_node_cost,
     replace_edge_uc, replace_node_uc,
     add_edge_cost, add_node_cost,
+    add_edge_cost_for, add_node_cost_for,
     add_edge_uc, add_node_uc,
 )
 from src.counterfactuals.perturbations import (
@@ -229,12 +230,16 @@ async def pivotal_star_probe(rag, question, context_graph, original_answer,
                              judge_against: str = "original",
                              ground_truth: str = ""):
     """See local.tex sec. 1.6. Probes top-K query-similar pivots eagerly,
-    returns (best_sigma, best_cost, blacklist, llm_calls)."""
+    returns (best_sigma, best_cost, blacklist, llm_calls).
+
+    Under the relaxed F3 (`check_f3` is a no-op), every pivot is eligible —
+    bridges and articulation points included — and the singleton-sweep charge
+    is already absorbed by `delete_node_cost`/`delete_edge_cost`. No
+    cut-vertex / bridge precomputation is needed here."""
     cost_fn = delete_node_uc if unit_cost else delete_node_cost
     edge_cost_fn = delete_edge_uc if unit_cost else delete_edge_cost
 
     undirected = context_graph.to_undirected()
-    cut_vertices = set(nx.articulation_points(undirected))
 
     pivots = sorted(
         [n for n in context_graph.nodes],
@@ -267,9 +272,6 @@ async def pivotal_star_probe(rag, question, context_graph, original_answer,
         return flipped
 
     for v in pivots:
-        if not check_f3(cand_node=v, cut_vertices=cut_vertices, undirected=undirected):
-            continue
-
         incident_edges = list(context_graph.in_edges(v)) + list(context_graph.out_edges(v)) if context_graph.is_directed() else list(context_graph.edges(v))
         singletons = [n for n in undirected.neighbors(v) if undirected.degree(n) == 1]
 
@@ -287,8 +289,6 @@ async def pivotal_star_probe(rag, question, context_graph, original_answer,
                 await _probe_state(sub_cg, [("delete_edge", e)], sub_cost)
 
             for n in singletons:
-                if not check_f3(cand_node=n, cut_vertices=cut_vertices, undirected=undirected):
-                    continue
                 sub_cost = cost_fn(context_graph, n)
                 if sub_cost >= best_cost:
                     continue
@@ -302,6 +302,127 @@ async def pivotal_star_probe(rag, question, context_graph, original_answer,
                 blacklist.add(("delete_node", n))
 
     return best_sigma, best_cost, blacklist, llm_calls
+
+
+################################################
+### Pivotal-Frontier Probe (heuristic for F→T additions)
+
+async def pivotal_frontier_probe(
+    rag, question, context_graph, original_answer,
+    node_similarity_index, query_embedding,
+    add_cost_mode: str, mix_alpha: float,
+    max_frontiers: int, state_cache: set,
+    judge_against: str = "original", ground_truth: str = "",
+):
+    """Addition-side analog of pivotal_star_probe. For F→T flips we eagerly
+    probe the top-K candidates ranked by
+
+        pfp_score(v') = α · rel_q(v') + (1 − α) · prox_C(v')
+
+    where α = mix_alpha. Each candidate v' is attached via the cheapest grounded
+    edge e' to V_C; we probe add_n(v', e'). On flip we keep the cheapest
+    attaching edge as the candidate σ*. NO pruning — addition monotonicity
+    goes the wrong way (a sub-edit may flip even when the full add does not),
+    so we cannot safely blacklist anything. Returns
+    (best_sigma, best_cost, llm_calls).
+    """
+    existing_nodes = set(context_graph.nodes)
+    existing_edges = set(context_graph.edges())
+
+    # Candidate pool = neighbors of V_C (1-hop frontier in G), capped to a manageable size.
+    frontier = set()
+    for v in existing_nodes:
+        if v in G.nodes:
+            frontier.update(G.neighbors(v))
+    frontier -= existing_nodes
+    if not frontier:
+        return None, float("inf"), 0
+
+    def _prox_c(v_prime):
+        v_emb = get_embedding(node_embeddings, node_lookup, v_prime)
+        if v_emb is None:
+            return 0.0
+        best = 0.0
+        for v in existing_nodes:
+            v_in_cg_emb = get_embedding(node_embeddings, node_lookup, v)
+            if v_in_cg_emb is None:
+                continue
+            sim = cosine_similarity_norm(v_in_cg_emb, v_emb)
+            if sim > best:
+                best = sim
+        return best  # ∈ [-1, 1]; high = close to some V_C node
+
+    scored = []
+    for v_prime in frontier:
+        rel_q = node_similarity_index.get(v_prime, 0.0)
+        prox_c = _prox_c(v_prime)
+        score = mix_alpha * rel_q + (1.0 - mix_alpha) * prox_c
+        scored.append((score, v_prime))
+    scored.sort(reverse=True)
+    top_k = [v for _, v in scored[:max_frontiers]]
+
+    best_sigma = None
+    best_cost = float("inf")
+    llm_calls = 0
+
+    async def _probe_state(cg_perturbed, ops, op_cost):
+        nonlocal llm_calls, best_sigma, best_cost
+        state = _state_key(cg_perturbed)
+        if state in state_cache:
+            return False
+        state_cache.add(state)
+        cg_context = graph_to_context(cg_perturbed)
+        new_response = await query(rag, cg_context, question)
+        target = ground_truth if judge_against == "ground_truth" else original_answer
+        score = await judge_response(question, new_response, target)
+        llm_calls += 1
+        flipped = (score == 1) if judge_against == "ground_truth" else (score == 0)
+        print(f"[PFP] Cost {op_cost:.2f} | flipped={flipped} | ops={ops}")
+        if flipped and op_cost < best_cost:
+            best_sigma = ops
+            best_cost = op_cost
+        return flipped
+
+    for v_prime in top_k:
+        # All grounded attaching edges between v' and V_C in G.
+        attach_edges = []
+        for v in existing_nodes:
+            if (v, v_prime) in edge_lookup and (v, v_prime) not in existing_edges:
+                attach_edges.append((v, v_prime))
+            if (v_prime, v) in edge_lookup and (v_prime, v) not in existing_edges:
+                attach_edges.append((v_prime, v))
+        if not attach_edges:
+            continue
+
+        # Rank attaching edges by current add-cost-mode; probe cheapest first.
+        def _attach_cost(e):
+            return add_node_cost_for(
+                add_cost_mode, context_graph,
+                node_embeddings, node_lookup, edge_embeddings, edge_lookup,
+                v_prime, e, query_embedding=query_embedding, alpha=mix_alpha,
+            )
+        attach_edges.sort(key=_attach_cost)
+
+        # Cheapest attach: probe it; if flips, also try a couple of alternates
+        # to refine the incumbent (no pruning either way).
+        for idx, e in enumerate(attach_edges):
+            cg_perturbed = add_node(context_graph, v_prime, **G.nodes[v_prime])
+            cg_perturbed = add_edge(cg_perturbed, e, **G.edges[e])
+            ops = [("add_node", v_prime), ("add_edge", e)]
+            op_cost = _attach_cost(e)
+            if op_cost >= best_cost:
+                # No room to improve the incumbent — stop refining this candidate.
+                break
+            flipped = await _probe_state(cg_perturbed, ops, op_cost)
+            if flipped and idx == 0:
+                # Probe the next 1–2 alternate attachments only when the cheapest flipped;
+                # this is the refinement step (still no pruning).
+                continue
+            if not flipped and idx == 0:
+                # Even the cheapest attach didn't flip; don't waste calls on dearer ones.
+                break
+
+    return best_sigma, best_cost, llm_calls
 
 
 ################################################
@@ -320,6 +441,11 @@ async def find_counterfactuals(
     suffix: str = "",
     f1_mode: str = "type-only",
     add_mode: str = "both",
+    add_cost_mode: str = "context",
+    mix_alpha: float = 0.5,
+    add_rank: str = "sim",
+    use_pivotal_frontier: bool = False,
+    max_frontiers: int = 5,
     replace_mode: str = "atomic",
     judge_against: str = "original",
     ground_truth: str = "",
@@ -352,7 +478,7 @@ async def find_counterfactuals(
     llm_calls = 0
     state_cache = set()
 
-    ### Pivotal-Star Probe ###
+    ### Pivotal-Star Probe (deletions, T→F) ###
     best_probe_sigma = None
     best_probe_cost = float("inf")
     blacklist = set()
@@ -372,6 +498,29 @@ async def find_counterfactuals(
         llm_calls += probe_calls
         if best_probe_cost < max_cost:
             max_cost = best_probe_cost
+
+    ### Pivotal-Frontier Probe (additions, F→T) ###
+    if use_pivotal_frontier and ("add_node" in current_ops or "add_edge" in current_ops):
+        pfp_sigma, pfp_cost, pfp_calls = await pivotal_frontier_probe(
+            rag=rag,
+            question=question,
+            context_graph=context_graph,
+            original_answer=original_answer,
+            node_similarity_index=node_similarity_index,
+            query_embedding=query_embedding,
+            add_cost_mode=add_cost_mode,
+            mix_alpha=mix_alpha,
+            max_frontiers=max_frontiers,
+            state_cache=state_cache,
+            judge_against=judge_against,
+            ground_truth=ground_truth,
+        )
+        llm_calls += pfp_calls
+        if pfp_sigma is not None and pfp_cost < best_probe_cost:
+            best_probe_sigma = pfp_sigma
+            best_probe_cost = pfp_cost
+        if pfp_sigma is not None and pfp_cost < max_cost:
+            max_cost = pfp_cost
 
     Q = []
     heapq.heappush(Q, (0, 0.0, next(counter), (context_graph, [])))
@@ -444,12 +593,16 @@ async def find_counterfactuals(
             blacklist=blacklist,
             f1_mode=f1_mode,
             add_mode=add_mode,
+            add_cost_mode=add_cost_mode,
+            mix_alpha=mix_alpha,
+            add_rank=add_rank,
             replace_mode=replace_mode,
         )
 
-    # Dijkstra ended without finding a flip — fall back to probe winner if present.
+    # Dijkstra ended without finding a flip — fall back to probe winner if present
+    # (Pivotal-Star Probe for deletions or Pivotal-Frontier Probe for additions).
     if best_probe_sigma is not None:
-        print(f"Pivotal-Star Probe winner: {best_probe_sigma} (cost {best_probe_cost})")
+        print(f"Probe winner: {best_probe_sigma} (cost {best_probe_cost})")
         save_operations_to_json(
             ops=best_probe_sigma,
             question=question,
@@ -501,8 +654,15 @@ def expand(
     blacklist: set = None,
     f1_mode: str = "type-only",
     add_mode: str = "both",
+    add_cost_mode: str = "context",
+    mix_alpha: float = 0.5,
+    add_rank: str = "sim",
     replace_mode: str = "atomic",
 ):
+    # When --unit-cost is set, force add_cost_mode to "unit" for consistency.
+    # The CLI flags are otherwise orthogonal — unit overrides any other add-cost.
+    if unit_cost:
+        add_cost_mode = "unit"
     if current_ops is None:
         current_ops = ["delete_node", "delete_edge", "replace_node",
                        "replace_edge", "add_node", "add_edge"]
@@ -518,9 +678,9 @@ def expand(
     cg: nx.DiGraph
     cost, cg, ops = heap_element
 
-    undirected: nx.Graph = cg.to_undirected()
-    cut_vertices = set(nx.articulation_points(undirected))
-    cut_edges = set(nx.bridges(undirected))
+    # Under relaxed F3 (`check_f3` is a no-op), articulation_points / bridges
+    # are no longer consulted to gate deletions. The cost functions absorb the
+    # singleton sweep via their +1-per-stranded-neighbour term.
 
     ##### Delete Node #####
     if "delete_node" in current_ops:
@@ -530,8 +690,6 @@ def expand(
             # Only consider nodes that were in the original context (mirrors main's guard
             # so we don't repeatedly delete nodes the search just added).
             if node not in original_nodes:
-                continue
-            if not check_f3(cand_node=node, cut_vertices=cut_vertices, undirected=undirected):
                 continue
 
             perturbed_cg = delete_node(cg, node)
@@ -546,8 +704,6 @@ def expand(
             if ("delete_edge", edge) in blacklist or ("delete_edge", (edge[1], edge[0])) in blacklist:
                 continue
             if edge not in original_edges:
-                continue
-            if not check_f3(cand_edge=edge, bridges=cut_edges, undirected=undirected):
                 continue
 
             perturbed_cg = delete_edge(cg, edge)
@@ -580,26 +736,37 @@ def expand(
                 similarity = node_similarity_index.get(node_name, 0.0)
                 new_ops = ops + [("add_node", node_name)]
 
+                # Track the first attaching edge added this iteration; pass it as
+                # the canonical e' to the cost dispatcher (single-edge semantics).
+                # Bug fix (port of 270c84e): every implicit neighbour node addition
+                # also records an ("add_node", neighbor) op so downstream analysis
+                # sees the full perturbation set.
+                first_attach_edge = None
                 neighbors = list(G.neighbors(node_name))
                 for neighbor in neighbors:
                     if neighbor not in existing_nodes:
                         perturbed_cg = add_node(perturbed_cg, neighbor, **G.nodes[neighbor])
+                        new_ops = new_ops + [("add_node", neighbor)]
                         if (node_name, neighbor) in edge_lookup and (node_name, neighbor) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (node_name, neighbor), **G.edges[node_name, neighbor])
                             new_ops = new_ops + [("add_edge", (node_name, neighbor))]
+                            if first_attach_edge is None:
+                                first_attach_edge = (node_name, neighbor)
                         if (neighbor, node_name) in edge_lookup and (neighbor, node_name) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node_name), **G.edges[neighbor, node_name])
                             new_ops = new_ops + [("add_edge", (neighbor, node_name))]
+                            if first_attach_edge is None:
+                                first_attach_edge = (neighbor, node_name)
 
-                if unit_cost:
-                    perturbation_cost = add_node_uc(perturbed_cg)
-                else:
-                    perturbation_cost = add_node_cost(
-                        perturbed_cg, node_embeddings, node_lookup,
-                        edge_embeddings, edge_lookup, node_name,
-                    )
+                perturbation_cost = add_node_cost_for(
+                    add_cost_mode, perturbed_cg,
+                    node_embeddings, node_lookup, edge_embeddings, edge_lookup,
+                    node_name, first_attach_edge,
+                    query_embedding=query_embedding, alpha=mix_alpha,
+                )
 
-                heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+                heap_secondary = len(new_ops) if add_rank == "num-ops" else -similarity
+                heapq.heappush(Q, (cost + perturbation_cost, heap_secondary, next(counter), (perturbed_cg, new_ops)))
                 break  # one retrieve seed per expansion is enough
 
         if do_expand:
@@ -627,22 +794,26 @@ def expand(
 
                     perturbed_cg = add_node(cg, neighbor, **G.nodes[neighbor])
                     new_ops = ops + [("add_node", neighbor)]
+                    first_attach_edge = None
                     if (node, neighbor) in edge_lookup and (node, neighbor) not in existing_edges:
                         perturbed_cg = add_edge(perturbed_cg, (node, neighbor), **G.edges[node, neighbor])
                         new_ops = new_ops + [("add_edge", (node, neighbor))]
+                        first_attach_edge = (node, neighbor)
                     if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
                         perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
                         new_ops = new_ops + [("add_edge", (neighbor, node))]
+                        if first_attach_edge is None:
+                            first_attach_edge = (neighbor, node)
 
-                    if unit_cost:
-                        perturbation_cost = add_node_uc(perturbed_cg)
-                    else:
-                        perturbation_cost = add_node_cost(
-                            perturbed_cg, node_embeddings, node_lookup,
-                            edge_embeddings, edge_lookup, neighbor,
-                        )
+                    perturbation_cost = add_node_cost_for(
+                        add_cost_mode, perturbed_cg,
+                        node_embeddings, node_lookup, edge_embeddings, edge_lookup,
+                        neighbor, first_attach_edge,
+                        query_embedding=query_embedding, alpha=mix_alpha,
+                    )
 
-                    heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+                    heap_secondary = len(new_ops) if add_rank == "num-ops" else -similarity
+                    heapq.heappush(Q, (cost + perturbation_cost, heap_secondary, next(counter), (perturbed_cg, new_ops)))
 
                 explored_nodes.add(node)
 
@@ -678,10 +849,12 @@ def expand(
                     perturbed_cg = add_edge(perturbed_cg, (node1, node2), **G.edges[node1, node2])
                     new_ops = new_ops + [("add_edge", (node1, node2))]
 
-                    perturbation_cost = implicit_node_cost + (add_edge_uc() if unit_cost else add_edge_cost(
-                        perturbed_cg, edge_embeddings, edge_lookup, (node1, node2)
-                    ))
-                    heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+                    perturbation_cost = implicit_node_cost + add_edge_cost_for(
+                        add_cost_mode, perturbed_cg, edge_embeddings, edge_lookup,
+                        (node1, node2), query_embedding=query_embedding, alpha=mix_alpha,
+                    )
+                    heap_secondary = len(new_ops) if add_rank == "num-ops" else -similarity
+                    heapq.heappush(Q, (cost + perturbation_cost, heap_secondary, next(counter), (perturbed_cg, new_ops)))
 
                 elif (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
                     n1_type = G.nodes[node1].get("entity_type")
@@ -699,10 +872,12 @@ def expand(
                     perturbed_cg = add_edge(perturbed_cg, (node2, node1), **G.edges[node2, node1])
                     new_ops = new_ops + [("add_edge", (node2, node1))]
 
-                    perturbation_cost = implicit_node_cost + (add_edge_uc() if unit_cost else add_edge_cost(
-                        perturbed_cg, edge_embeddings, edge_lookup, (node2, node1)
-                    ))
-                    heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
+                    perturbation_cost = implicit_node_cost + add_edge_cost_for(
+                        add_cost_mode, perturbed_cg, edge_embeddings, edge_lookup,
+                        (node2, node1), query_embedding=query_embedding, alpha=mix_alpha,
+                    )
+                    heap_secondary = len(new_ops) if add_rank == "num-ops" else -similarity
+                    heapq.heappush(Q, (cost + perturbation_cost, heap_secondary, next(counter), (perturbed_cg, new_ops)))
 
     ##### Replace Node #####
     if "replace_node" in current_ops:
@@ -719,8 +894,6 @@ def expand(
                     continue
                 current_replacement = node_replacement.get("name")
                 if current_replacement is None or current_replacement not in G.nodes:
-                    continue
-                if not check_f3(cand_node=node, cut_vertices=cut_vertices, undirected=undirected):
                     continue
 
                 # Apply del then add
@@ -791,8 +964,6 @@ def expand(
                     continue
                 current_replacement = edge_replacement.get("edge")
                 if current_replacement is None or current_replacement not in G.edges:
-                    continue
-                if not check_f3(cand_edge=edge, bridges=cut_edges, undirected=undirected):
                     continue
 
                 step1 = delete_edge(cg, edge)
@@ -969,7 +1140,17 @@ def parse_args():
     p.add_argument("--f1-mode", choices=["type-only", "strict-label", "off"], default="type-only",
                    help="F1 schema check stringency")
     p.add_argument("--add-mode", choices=["expand", "retrieve", "both"], default="both",
-                   help="Node-addition strategy")
+                   help="Node-addition candidate pool: neighbors of V_C (expand), top-K query-similar nodes in G (retrieve), or both.")
+    p.add_argument("--add-cost-mode", choices=["unit", "query", "context", "mix"], default="context",
+                   help="Cost formula for additions: unit (paper-flat), query (distance to query), context (paper Eq. cost-add-n, distance to nearest CG element), or mix (convex blend).")
+    p.add_argument("--mix-alpha", type=float, default=0.5,
+                   help="α for --add-cost-mode mix: w_mix = α · w_query + (1−α) · w_context. Default 0.5.")
+    p.add_argument("--add-rank", choices=["sim", "num-ops"], default="sim",
+                   help="Heap secondary key for add candidates: similarity (default, kaoukis behaviour) or operation-count.")
+    p.add_argument("--use-pfp", action="store_true",
+                   help="Enable Pivotal-Frontier Probe heuristic (additions; analog of PSP for F→T flips)")
+    p.add_argument("--max-frontiers", type=int, default=5,
+                   help="Top-K candidates to probe before Dijkstra under --use-pfp")
     p.add_argument("--replace-mode", choices=["atomic", "decomposed"], default="atomic",
                    help="Run replacement as one atomic op (atomic) or as del+add (decomposed)")
     p.add_argument("--judge-against", choices=["original", "ground_truth"], default="original",
@@ -1011,6 +1192,11 @@ async def main():
             suffix=args.suffix,
             f1_mode=args.f1_mode,
             add_mode=args.add_mode,
+            add_cost_mode=args.add_cost_mode,
+            mix_alpha=args.mix_alpha,
+            add_rank=args.add_rank,
+            use_pivotal_frontier=args.use_pfp,
+            max_frontiers=args.max_frontiers,
             replace_mode=args.replace_mode,
             judge_against=args.judge_against,
             ground_truth=ground_truth,
