@@ -74,6 +74,70 @@ if [[ ! -f "$IDX_DIR/node_index.bin" || ! -f "$IDX_DIR/edge_index.bin" ]]; then
         DATASET="$DATASET" uv run --project "$PROJECT_ROOT" python -m src.embeddings.build_index)
 fi
 
+# ----------------------- prerequisite: comparison.json -----------------------
+# generate.py needs benchmark/results/comparison.json (the per-question tt/tf/ft/ff
+# table). Building it from scratch requires three sub-steps:
+#   (a) LLM-only baseline   → synthetic_bypass_0.json
+#   (b) RAG baseline        → synthetic_{MODE}_{TOP_K}.json
+#   (c) export_performance_cases → comparison.json
+# Each is skipped if its output already exists, so you can re-run quickly.
+
+CMP_DIR="$PROJECT_ROOT/code/benchmark/results"
+BYPASS="$CMP_DIR/synthetic_bypass_0.json"
+RAG="$CMP_DIR/synthetic_${MODE}_${TOP_K}.json"
+CMP="$CMP_DIR/comparison.json"
+mkdir -p "$CMP_DIR"
+
+if [[ "$STAGE" == "run" || "$STAGE" == "both" ]]; then
+    if [[ ! -f "$BYPASS" ]]; then
+        banner "Setup (a) — LLM-only baseline (context=empty)"
+        (cd "$PROJECT_ROOT/code" && uv run --project "$PROJECT_ROOT" python - <<'PY'
+import asyncio, json, os, pandas as pd
+from src.retrieve import initialize_lightrag
+from src.query import query
+from src.llm_judge import judge_response
+
+async def main():
+    rag = await initialize_lightrag()
+    df = pd.read_csv("qa/qa_data_synthetic.csv").drop_duplicates(subset=["questions"]).reset_index(drop=True)
+    out = {}
+    for _, row in df.iterrows():
+        ans = await query(rag, context="", question=row["questions"])
+        score = await judge_response(row["questions"], generated_answer=ans, ground_truth=row["answers"])
+        out[row["id"]] = {"score": score, "generated_answer": ans,
+                          "question": row["questions"], "ground_truth": row["answers"]}
+    os.makedirs("benchmark/results", exist_ok=True)
+    with open("benchmark/results/synthetic_bypass_0.json", "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=2)
+    print(f"Wrote {len(out)} entries to benchmark/results/synthetic_bypass_0.json")
+
+asyncio.run(main())
+PY
+        )
+    fi
+
+    if [[ ! -f "$RAG" ]]; then
+        banner "Setup (b) — RAG baseline (mode=$MODE top-k=$TOP_K)"
+        (cd "$PROJECT_ROOT/code" && uv run --project "$PROJECT_ROOT" python -m benchmark.run \
+            --mode "$MODE" --top-k "$TOP_K" \
+            --qa "$QA" \
+            --out "benchmark/results/synthetic_${MODE}_${TOP_K}.json")
+    fi
+
+    if [[ ! -f "$CMP" ]]; then
+        banner "Setup (c) — Build comparison.json"
+        (cd "$PROJECT_ROOT/code" && uv run --project "$PROJECT_ROOT" python - <<PY
+from benchmark.evaluation import export_performance_cases
+export_performance_cases(
+    llm_results_path="benchmark/results/synthetic_bypass_0.json",
+    rag_results_path="benchmark/results/synthetic_${MODE}_${TOP_K}.json",
+    output_path="benchmark/results/comparison.json",
+)
+PY
+        )
+    fi
+fi
+
 # ----------------------- run -----------------------
 
 if [[ "$STAGE" == "run" || "$STAGE" == "both" ]]; then
