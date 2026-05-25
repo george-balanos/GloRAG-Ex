@@ -62,6 +62,18 @@ export RUN_BASE RUN_HEURISTIC RUNS ADDMODES COSTS \
        MAX_COST MAX_LLM_CALLS MAX_PIVOTS MAX_FRONTIERS MIX_ALPHA \
        TOP_K MODE QA
 
+# ----------------------- prerequisite: HNSW indexes -----------------------
+# generate.py loads `src/embeddings/{dataset}/node_index.bin` and `…/edge_index.bin`
+# at import time. Build them if missing.
+
+DATASET="${DATASET:-synthetic}"
+IDX_DIR="$PROJECT_ROOT/code/src/embeddings/$DATASET"
+if [[ ! -f "$IDX_DIR/node_index.bin" || ! -f "$IDX_DIR/edge_index.bin" ]]; then
+    banner "Building HNSW indexes for dataset=$DATASET"
+    (cd "$PROJECT_ROOT/code" && \
+        DATASET="$DATASET" uv run --project "$PROJECT_ROOT" python -m src.embeddings.build_index)
+fi
+
 # ----------------------- run -----------------------
 
 if [[ "$STAGE" == "run" || "$STAGE" == "both" ]]; then

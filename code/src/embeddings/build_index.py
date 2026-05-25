@@ -2,6 +2,7 @@ from src.embeddings.decoder import *
 from src.embeddings.utils import save_index
 
 import json
+import os
 import numpy as np
 import hnswlib
 
@@ -39,13 +40,18 @@ def build_index(json_path: str):
     return index, records, dim, embeddings
 
 if __name__ == "__main__":
-    dataset = "hotpotqa" # "synthetic" or "hotpotqa"
+    # `dataset` can be overridden via env var; vdb_*.json live in the LightRAG storage dir
+    # for this dataset, alongside the graphml.
+    dataset = os.environ.get("DATASET", "synthetic")  # "synthetic" or "hotpotqa"
 
-    node_json = f"KGs/{dataset}/vdb_entities.json"
-    edge_json = f"KGs/{dataset}/vdb_relationships.json"
+    node_json = f"KGs/lightrag/{dataset}/vdb_entities.json"
+    edge_json = f"KGs/lightrag/{dataset}/vdb_relationships.json"
+
+    out_dir = f"src/embeddings/{dataset}"
+    os.makedirs(out_dir, exist_ok=True)
 
     node_index, node_records, dim, node_embeddings = build_index(node_json)
-    save_index(node_index, node_records, node_embeddings, f"src/embeddings/{dataset}/node_index")
+    save_index(node_index, node_records, node_embeddings, f"{out_dir}/node_index")
 
     edge_index, edge_records, dim, edge_embeddings = build_index(edge_json)
-    save_index(edge_index, edge_records, edge_embeddings, f"src/embeddings/{dataset}/edge_index")
+    save_index(edge_index, edge_records, edge_embeddings, f"{out_dir}/edge_index")
