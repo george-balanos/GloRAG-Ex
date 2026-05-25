@@ -7,7 +7,9 @@
 # (D1 vs D2 for deletions; A_* vs H_* for each addition combo).
 #
 # Env knobs:
-#   STAGE=both                   "run" | "analyze" | "both" (default: both)
+#   STAGE=both                   "setup" | "run" | "analyze" | "both" (default: both)
+#                                "setup" runs only the three baseline prerequisites
+#                                (LLM-only / RAG / comparison.json) and exits.
 #   RUN_HEURISTIC=1              include the 12 H_{ADDMODE,COST} PFP variants (default: 1)
 #   RUNS=...                     whitelist passed straight through to run_sweep.sh
 #   ADDMODES="expand retrieve both"
@@ -23,7 +25,8 @@
 #   COMPARE_DIR=benchmark/results/compare    where the .csv pairwise tables land
 #
 # Examples:
-#   ./run_and_analyze.sh                                  # full grid + analysis
+#   STAGE=setup   ./run_and_analyze.sh                    # baseline only (bypass + RAG + comparison.json), then exit
+#   ./run_and_analyze.sh                                  # full grid + analysis (auto-runs setup if missing)
 #   STAGE=analyze ./run_and_analyze.sh                    # analyze existing results, no re-run
 #   RUN_HEURISTIC=0 ./run_and_analyze.sh                  # 14 base runs + analysis
 #   RUNS="D1 D2 A_both_mix H_both_mix" ./run_and_analyze.sh
@@ -88,7 +91,7 @@ RAG="$CMP_DIR/synthetic_${MODE}_${TOP_K}.json"
 CMP="$CMP_DIR/comparison.json"
 mkdir -p "$CMP_DIR"
 
-if [[ "$STAGE" == "run" || "$STAGE" == "both" ]]; then
+if [[ "$STAGE" == "run" || "$STAGE" == "both" || "$STAGE" == "setup" ]]; then
     if [[ ! -f "$BYPASS" ]]; then
         banner "Setup (a) — LLM-only baseline (context=empty)"
         (cd "$PROJECT_ROOT/code" && uv run --project "$PROJECT_ROOT" python - <<'PY'
@@ -135,6 +138,12 @@ export_performance_cases(
 )
 PY
         )
+    fi
+
+    if [[ "$STAGE" == "setup" ]]; then
+        banner "Setup complete — re-run without STAGE=setup to start the grid"
+        ls -la "$CMP_DIR" | grep -E 'bypass_0|synthetic_'"$MODE"'_'"$TOP_K"'|comparison' || true
+        exit 0
     fi
 fi
 
