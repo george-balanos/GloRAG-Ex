@@ -29,7 +29,7 @@ def create_type_index(G: nx.Graph):
 
 counter = itertools.count()
 
-dataset = "synthetic"  ### "hotpotqa" or "synthetic"
+dataset = "hotpotqa"  ### "hotpotqa" or "synthetic"
 
 G = nx.read_graphml(f"KGs/lightrag/{dataset}/graph_chunk_entity_relation.graphml")
 
@@ -422,19 +422,19 @@ async def expand(
         for node in list(cg.nodes):
             ### Feasibility Constraint
             if node in original_nodes:
-                if node in cut_vertices:
-                    neighbors = list(undirected.neighbors(node))
+                # if node in cut_vertices:
+                #     neighbors = list(undirected.neighbors(node))
                     
-                    would_isolate = {n for n in neighbors if undirected.degree(n) == 1}
-                    nodes_to_remove = {node} | would_isolate
-                    residual = undirected.copy()
-                    residual.remove_nodes_from(nodes_to_remove)
+                #     would_isolate = {n for n in neighbors if undirected.degree(n) == 1}
+                #     nodes_to_remove = {node} | would_isolate
+                #     residual = undirected.copy()
+                #     residual.remove_nodes_from(nodes_to_remove)
 
-                    components_before = nx.number_connected_components(undirected)
-                    components_after = nx.number_connected_components(residual)
+                #     components_before = nx.number_connected_components(undirected)
+                #     components_after = nx.number_connected_components(residual)
 
-                    if components_after > components_before:
-                        continue
+                #     if components_after > components_before:
+                #         continue
 
                 perturbed_cg = delete_node(cg, node)
                 
@@ -457,11 +457,11 @@ async def expand(
         for edge in list(cg.edges):
             ### Feasibility Constraint
             if edge in original_edges:
-                if edge in cut_edges:
-                    u, v = edge[0], edge[1]
-                    would_split = undirected.degree(u) > 1 and undirected.degree(v) > 1
-                    if would_split:
-                        continue
+                # if edge in cut_edges:
+                #     u, v = edge[0], edge[1]
+                #     would_split = undirected.degree(u) > 1 and undirected.degree(v) > 1
+                #     if would_split:
+                #         continue
 
                 perturbed_cg = delete_edge(cg, edge)
                 
@@ -617,7 +617,7 @@ async def expand(
                             perturbed_cg = add_edge(perturbed_cg, (node, neighbor), **G.edges[node, neighbor])
                             new_ops = new_ops + [("add_edge", (node, neighbor))]
 
-                            perturbation_cost = 2 + 1 - edge_similarity_index.get((node, neighbor), 0.0)
+                            perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((node, neighbor), 0.0)))
 
                             heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
                         
@@ -625,7 +625,7 @@ async def expand(
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
                             new_ops = new_ops + [("add_edge", (neighbor, node))]
 
-                            perturbation_cost = 2 + 1 - edge_similarity_index.get((neighbor, node), 0.0)
+                            perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((node, neighbor), 0.0)))
 
                             heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
 
@@ -647,7 +647,8 @@ async def expand(
 
                         similarity = edge_similarity_index.get((src, tgt), 0.0)
 
-                        perturbation_cost = 3 + 1 - similarity
+                        perturbation_cost = (1 + (1 - node_similarity_index.get(src))) + (1 + (1 - node_similarity_index.get(tgt))) + (1 + (1 - edge_similarity_index.get((src, tgt), 0.0)))
+
                         if perturbation_cost < best_cost:
                             best_cost, best_similarity, best_edge = perturbation_cost, similarity, (src, tgt)
 
@@ -674,7 +675,8 @@ async def expand(
                             perturbed_cg = cg.copy()
                             perturbed_cg = add_edge(perturbed_cg, (node1, node2), **G.edges[node1, node2])
 
-                            perturbation_cost = 1 + 1 - edge_similarity_index.get((node1, node2), 0.0)
+                            perturbation_cost = (1 + (1 - edge_similarity_index.get((node1, node2), 0.0)))
+
                             new_ops = ops + [("add_edge", (node1, node2))]
 
                             heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
@@ -683,7 +685,8 @@ async def expand(
                             perturbed_cg = cg.copy()
                             perturbed_cg = add_edge(perturbed_cg, (node2, node1), **G.edges[node2, node1])
 
-                            perturbation_cost = 1 + 1 - edge_similarity_index.get((node2, node1), 0.0)
+                            perturbation_cost = (1 + (1 - edge_similarity_index.get((node2, node1), 0.0)))
+
                             new_ops = ops + [("add_edge", (node2, node1))]
 
                             heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
@@ -780,7 +783,6 @@ async def expand(
 
     ############################################################################################################
 
-
 def save_operations_to_json(
     ops: list, 
     question: str, 
@@ -848,7 +850,7 @@ def save_operations_to_json(
 
 
 async def main():
-    rag = await initialize_lightrag(working_dir=WORKING_DIR_SYNTHETIC)
+    rag = await initialize_lightrag(working_dir=WORKING_DIR_HOTPOTQA)
     
     with open(f"benchmark/results/comparison_{dataset}_2.json", "r", encoding="utf-8") as results:
         data = json.load(results)
@@ -860,7 +862,8 @@ async def main():
     ]
 
     mode = "ff"
-    add_modes = [1, 2 ,3]
+    # add_modes = [1, 2 ,3]
+    add_modes = [2]
 
     global adm
 
