@@ -6,9 +6,7 @@ from src.llm_judge import judge_response
 from src.counterfactuals.edit_costs import *
 from src.counterfactuals.perturbations import *
 from src.counterfactuals.utils import compute_answer_similarity, cosine_similarity_norm
-from src.embeddings.utils import load_index
-from collections import defaultdict
-from src.embeddings.query import DIM, build_lookup, get_embedding, build_edge_lookup
+from src.embeddings.query import get_embedding
 from src.embeddings.query import query as embedding_query
 
 import argparse
@@ -19,15 +17,13 @@ import asyncio
 import itertools
 import os
 
+from src.dataset_setup import (
+    WORKING_DIRS,
+    DATASETS,
+    setup_dataset as _shared_setup_dataset,
+)
+
 ### Setup ###
-
-def create_type_index(G: nx.Graph):
-    type_index = defaultdict(list)
-    for node, data in G.nodes(data=True):
-        node_type = data.get("entity_type")
-        type_index[node_type].append(node)
-
-    return type_index
 
 counter = itertools.count()
 
@@ -63,23 +59,26 @@ type_index = None
 node_index = node_records = node_embeddings = node_lookup = None
 edge_index = edge_records = edge_embeddings = edge_lookup = None
 
+
 def setup_dataset(name: str):
-    """(Re)bind module-level dataset globals to the given dataset name ('synthetic' or 'hotpotqa')."""
+    """(Re)bind module-level dataset globals via the shared loader in src.dataset_setup."""
     global dataset, G, type_index
     global node_index, node_records, node_embeddings, node_lookup
     global edge_index, edge_records, edge_embeddings, edge_lookup
 
-    dataset = name
-    G = nx.read_graphml(f"KGs/lightrag/{dataset}/graph_chunk_entity_relation.graphml")
-    type_index = create_type_index(G)
+    bundle = _shared_setup_dataset(name)
+    dataset = bundle["dataset"]
+    G = bundle["G"]
+    type_index = bundle["type_index"]
+    node_index = bundle["node_index"]
+    node_records = bundle["node_records"]
+    node_embeddings = bundle["node_embeddings"]
+    node_lookup = bundle["node_lookup"]
+    edge_index = bundle["edge_index"]
+    edge_records = bundle["edge_records"]
+    edge_embeddings = bundle["edge_embeddings"]
+    edge_lookup = bundle["edge_lookup"]
 
-    node_index_prefix = f"src/embeddings/{dataset}/node_index"
-    node_index, node_records, node_embeddings = load_index(node_index_prefix, DIM, 2000)
-    node_lookup = build_lookup(node_records)
-
-    edge_index_prefix = f"src/embeddings/{dataset}/edge_index"
-    edge_index, edge_records, edge_embeddings = load_index(edge_index_prefix, DIM, 2000)
-    edge_lookup = build_edge_lookup(edge_records)
 
 setup_dataset("synthetic")
 
@@ -1004,11 +1003,6 @@ def save_operations_to_json(
     return filepath
 
 
-_WORKING_DIRS = {
-    "synthetic": WORKING_DIR_SYNTHETIC,
-    "hotpotqa": WORKING_DIR_HOTPOTQA,
-}
-
 _ALL_OPS = ["delete_node", "delete_edge", "add_node", "add_edge"]
 
 
@@ -1017,12 +1011,15 @@ def build_arg_parser() -> argparse.ArgumentParser:
         prog="generate",
         description="Run counterfactual search over a LightRAG-backed KG.",
     )
-    p.add_argument("--dataset", choices=list(_WORKING_DIRS.keys()), default="synthetic",
+    p.add_argument("--dataset", choices=DATASETS, default="synthetic",
                    help="Dataset name; selects working_dir and embedding indices.")
     p.add_argument("--input", default=None,
-                   help="Path to comparison JSON (defaults to benchmark/results/comparison_<dataset>_2.json).")
+                   help="Path to comparison JSON (defaults to benchmark/results/comparison_<dataset>_<top-k>.json).")
     p.add_argument("--mode", choices=["ff", "ft", "tf"], default="ff",
-                   help="Search mode: ff (corrective F→F), ft (breaking T→F), tf (corrective T→F).")
+                   help="CFE flip direction: ff (corrective F→F), ft (breaking T→F), tf (corrective T→F).")
+    p.add_argument("--rag-mode", choices=["hybrid", "local", "global", "naive"], default="hybrid",
+                   help="LightRAG retrieval mode used by retrieve_subgraph.")
+    p.add_argument("--top-k", type=int, default=2, help="LightRAG retrieval top_k.")
     p.add_argument("--ops", default=",".join(_ALL_OPS),
                    help="Comma-separated operations to enable. Subset of: " + ",".join(_ALL_OPS))
     p.add_argument("--max-cost", type=int, default=20, help="Cost budget c_max.")
@@ -1071,11 +1068,11 @@ async def main(args: argparse.Namespace):
             raise SystemExit("--alpha must be >= 0 when --add-heuristic=blend")
         add_params = {"mode": "blend", "alpha": args.alpha}
 
-    input_path = args.input or f"benchmark/results/comparison_{dataset}_2.json"
+    input_path = args.input or f"benchmark/results/comparison_{dataset}_{args.top_k}.json"
     with open(input_path, "r", encoding="utf-8") as fh:
         data = json.load(fh)
 
-    rag = await initialize_lightrag(working_dir=_WORKING_DIRS[dataset])
+    rag = await initialize_lightrag(working_dir=WORKING_DIRS[dataset])
 
     for idx, r in data["results"].items():
         if r.get("case") != args.mode:
@@ -1089,8 +1086,8 @@ async def main(args: argparse.Namespace):
         context = await retrieve_subgraph(
             rag,
             query=question,
-            mode="hybrid",
-            top_k=2,
+            mode=args.rag_mode,
+            top_k=args.top_k,
         )
 
         await find_counterfactuals(

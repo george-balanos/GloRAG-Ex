@@ -23,16 +23,16 @@ def get_llm() -> LLM:
     global _llm_instance
 
     if _llm_instance is None:
-        os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-        _llm_instance = LLM(model=VLLM_MODEL, gpu_memory_utilization=0.6)
+        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+        _llm_instance = LLM(model=VLLM_MODEL, gpu_memory_utilization=0.5, max_model_len=16768)
     return _llm_instance
 
 def get_judge_llm() -> LLM:
     global _judge_instance
     
     if _judge_instance is None:
-        os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-        _judge_instance = LLM(model=JUDGE_MODEL, gpu_memory_utilization=0.4)
+        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+        _judge_instance = LLM(model=JUDGE_MODEL, gpu_memory_utilization=0.35, max_model_len=8192)
     return _judge_instance
 
 def get_embedding_model() -> SentenceTransformer:

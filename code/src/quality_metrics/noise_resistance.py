@@ -6,10 +6,14 @@ from src.llm_judge import judge_response
 from src.counterfactuals.edit_costs import *
 from src.counterfactuals.perturbations import *
 from src.counterfactuals.utils import compute_answer_similarity, cosine_similarity_norm
-from src.embeddings.utils import load_index
-from collections import defaultdict
-from src.embeddings.query import DIM, build_lookup, get_embedding, build_edge_lookup
+from src.embeddings.query import get_embedding
+from src.dataset_setup import (
+    WORKING_DIRS,
+    DATASETS,
+    setup_dataset as _shared_setup_dataset,
+)
 
+import argparse
 import heapq
 import networkx as nx
 import asyncio
@@ -19,31 +23,36 @@ import random
 
 ### Setup ###
 
-def create_type_index(G: nx.Graph):
-    type_index = defaultdict(list)
-    for node, data in G.nodes(data=True):
-        node_type = data.get("entity_type")
-        type_index[node_type].append(node)
-
-    return type_index
-
 counter = itertools.count()
 
-dataset = "synthetic"
+dataset: str = "synthetic"
+G = None
+type_index = None
+node_index = node_records = node_embeddings = node_lookup = None
+edge_index = edge_records = edge_embeddings = edge_lookup = None
 
-G = nx.read_graphml(f"KGs/lightrag/{dataset}/graph_chunk_entity_relation.graphml")
 
-type_index = create_type_index(G)
+def setup_dataset(name: str):
+    """(Re)bind module-level dataset globals via the shared loader in src.dataset_setup."""
+    global dataset, G, type_index
+    global node_index, node_records, node_embeddings, node_lookup
+    global edge_index, edge_records, edge_embeddings, edge_lookup
 
-# Node setup
-node_index_prefix = f"src/embeddings/{dataset}/node_index"
-node_index, node_records, node_embeddings = load_index(node_index_prefix, DIM, 2000)
-node_lookup = build_lookup(node_records)
+    bundle = _shared_setup_dataset(name)
+    dataset = bundle["dataset"]
+    G = bundle["G"]
+    type_index = bundle["type_index"]
+    node_index = bundle["node_index"]
+    node_records = bundle["node_records"]
+    node_embeddings = bundle["node_embeddings"]
+    node_lookup = bundle["node_lookup"]
+    edge_index = bundle["edge_index"]
+    edge_records = bundle["edge_records"]
+    edge_embeddings = bundle["edge_embeddings"]
+    edge_lookup = bundle["edge_lookup"]
 
-# Edge setup
-edge_index_prefix = f"src/embeddings/{dataset}/edge_index"
-edge_index, edge_records, edge_embeddings = load_index(edge_index_prefix, DIM, 2000)
-edge_lookup = build_edge_lookup(edge_records)
+
+setup_dataset("synthetic")
 
 ################################################
 
@@ -401,14 +410,34 @@ def save_operations_to_json(ops: list,question: str, original_answer: str, pertu
     return filepath
 
 
-async def main():
-    rag = await initialize_lightrag(working_dir=WORKING_DIR_SYNTHETIC)
-    
-    results_folder = "src/counterfactuals/results/synthetic/with_f3/delete_ops_ft"
+def build_arg_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        prog="noise_resistance",
+        description="Noise-resistance quality metric over an existing CFE result set.",
+    )
+    p.add_argument("--dataset", choices=DATASETS, default="synthetic")
+    p.add_argument("--rag-mode", choices=["hybrid", "local", "global", "naive"], default="hybrid")
+    p.add_argument("--top-k", type=int, default=2)
+    p.add_argument("--noise-percentages", default="0.1,0.3,0.5,0.8",
+                   help="Comma-separated noise fractions, e.g. '0.1,0.3,0.5,0.8'.")
+    p.add_argument("--results-folder", default=None,
+                   help="Folder of CFE result JSONs to load (default: src/counterfactuals/results/<dataset>/with_f3/delete_ops_ft).")
+    p.add_argument("--max-cost", type=int, default=20)
+    p.add_argument("--max-llm-calls", type=int, default=200)
+    p.add_argument("--unit-cost", action="store_true")
+    return p
+
+
+async def main(args: argparse.Namespace):
+    if args.dataset != dataset:
+        setup_dataset(args.dataset)
+
+    noise_percentages = [float(x) for x in args.noise_percentages.split(",") if x.strip()]
+    results_folder = args.results_folder or f"src/counterfactuals/results/{dataset}/with_f3/delete_ops_ft"
+
+    rag = await initialize_lightrag(working_dir=WORKING_DIRS[dataset])
 
     json_files = [f for f in os.listdir(results_folder) if f.endswith(".json")]
-
-    noise_percentages = [0.1, 0.3, 0.5, 0.8]
 
     for noise_p in noise_percentages:
         for i, json_file in enumerate(json_files):
@@ -422,8 +451,14 @@ async def main():
 
             print(f"\n=== {question} ===")
 
-            context = await retrieve_subgraph(rag, query=question, mode="hybrid", top_k=2)
-            await find_counterfactuals(rag, question, context=context, max_cost=20, max_llm_calls=200, unit_cost=False, example=data, seed=i, noise_pct=noise_p)
+            context = await retrieve_subgraph(rag, query=question, mode=args.rag_mode, top_k=args.top_k)
+            await find_counterfactuals(
+                rag, question, context=context,
+                max_cost=args.max_cost, max_llm_calls=args.max_llm_calls,
+                unit_cost=args.unit_cost,
+                example=data, seed=i, noise_pct=noise_p,
+            )
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main(build_arg_parser().parse_args()))
