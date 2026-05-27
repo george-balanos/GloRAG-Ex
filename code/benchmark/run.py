@@ -65,7 +65,7 @@ async def run_benchmark(rag, mode="local", top_k=10, num_rows=100):
 async def main():
     rag = await initialize_lightrag()
 
-    await run_benchmark(rag, "hybrid", 1)
+    await run_benchmark(rag, "hybrid", 2)
 
 if __name__ == "__main__":
 

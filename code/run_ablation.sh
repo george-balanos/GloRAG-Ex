@@ -12,6 +12,7 @@
 set -euo pipefail
 
 cd "$(dirname "$0")"  # ensure CWD = code/ for relative paths
+export PYTHONPATH="${PYTHONPATH:+$PYTHONPATH:}$(pwd)"  # so `python benchmark/run.py` can import src.*
 
 # ─── Tunables ────────────────────────────────────────────────────────────────
 DATASET="synthetic"
