@@ -448,7 +448,12 @@ async def expand(
                 similarity = node_similarity_index.get(node, 0.0)
 
                 # heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-                heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                # heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+
+                if mode == "ff":
+                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), similarity, next(counter), (perturbed_cg, new_ops)))
+                elif mode == "ft":
+                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
 
     if "delete_edge" in current_ops:
         ### Updated Delete Edge
@@ -475,7 +480,12 @@ async def expand(
                 similarity = edge_similarity_index.get(edge, 0.0)
 
                 # heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-                heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                # heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+
+                if mode == "ff":
+                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), similarity, next(counter), (perturbed_cg, new_ops)))
+                elif mode == "ft":
+                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
 
     ############################# Distance-based with query relevance for retrieval #############################
 
@@ -850,6 +860,9 @@ def save_operations_to_json(
 
 
 async def main():
+    global adm
+    global mode
+
     rag = await initialize_lightrag(working_dir=WORKING_DIR_HOTPOTQA)
     
     with open(f"benchmark/results/comparison_{dataset}_2.json", "r", encoding="utf-8") as results:
@@ -864,8 +877,6 @@ async def main():
     mode = "ff"
     # add_modes = [1, 2 ,3]
     add_modes = [2]
-
-    global adm
 
     for adm in add_modes:
         for op_set in operation_sets:
