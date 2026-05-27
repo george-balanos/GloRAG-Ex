@@ -11,7 +11,9 @@ from collections import defaultdict
 from src.embeddings.query import DIM, build_lookup, get_embedding, build_edge_lookup
 from src.embeddings.query import query as embedding_query
 
+import argparse
 import heapq
+import math
 import networkx as nx
 import asyncio
 import itertools
@@ -29,21 +31,57 @@ def create_type_index(G: nx.Graph):
 
 counter = itertools.count()
 
-dataset = "synthetic"  ### "hotpotqa" or "synthetic"
 
-G = nx.read_graphml(f"KGs/lightrag/{dataset}/graph_chunk_entity_relation.graphml")
+def _heap_push(Q, cost, similarity, len_ops, payload, *, relevance_sign=-1.0, add_params=None):
+    """Push to Q as a 6-tuple (priority, len_ops, similarity_key, raw_cost, counter, payload).
 
-type_index = create_type_index(G)
+    add_params=None         => priority = cost (deletions, defaults, blend off)
+    add_params={'mode':'tier','tier_width':W}  => priority = W * floor(cost / W)
+    add_params={'mode':'blend','alpha':a}      => priority = cost - a * similarity
 
-# Node setup
-node_index_prefix = f"src/embeddings/{dataset}/node_index"
-node_index, node_records, node_embeddings = load_index(node_index_prefix, DIM, 2000)
-node_lookup = build_lookup(node_records)
+    raw_cost is preserved in slot 4 so the cost-budget check and child cost
+    accumulation never see the modified priority. Cost-optimality:
+      - tier mode preserves it up to tier_width.
+      - blend mode loses it by up to alpha (intentional tradeoff).
+    """
+    if add_params is None or add_params.get("mode") in (None, "none"):
+        priority = cost
+    elif add_params["mode"] == "tier":
+        w = add_params["tier_width"]
+        priority = w * math.floor(cost / w) if w > 0 else cost
+    elif add_params["mode"] == "blend":
+        a = add_params["alpha"]
+        priority = cost - a * similarity
+    else:
+        priority = cost
+    heapq.heappush(Q, (priority, len_ops, relevance_sign * similarity, cost, next(counter), payload))
 
-# Edge setup
-edge_index_prefix = f"src/embeddings/{dataset}/edge_index"
-edge_index, edge_records, edge_embeddings = load_index(edge_index_prefix, DIM, 2000)
-edge_lookup = build_edge_lookup(edge_records)
+
+dataset: str = "synthetic"
+G = None
+type_index = None
+node_index = node_records = node_embeddings = node_lookup = None
+edge_index = edge_records = edge_embeddings = edge_lookup = None
+
+def setup_dataset(name: str):
+    """(Re)bind module-level dataset globals to the given dataset name ('synthetic' or 'hotpotqa')."""
+    global dataset, G, type_index
+    global node_index, node_records, node_embeddings, node_lookup
+    global edge_index, edge_records, edge_embeddings, edge_lookup
+
+    dataset = name
+    G = nx.read_graphml(f"KGs/lightrag/{dataset}/graph_chunk_entity_relation.graphml")
+    type_index = create_type_index(G)
+
+    node_index_prefix = f"src/embeddings/{dataset}/node_index"
+    node_index, node_records, node_embeddings = load_index(node_index_prefix, DIM, 2000)
+    node_lookup = build_lookup(node_records)
+
+    edge_index_prefix = f"src/embeddings/{dataset}/edge_index"
+    edge_index, edge_records, edge_embeddings = load_index(edge_index_prefix, DIM, 2000)
+    edge_lookup = build_edge_lookup(edge_records)
+
+setup_dataset("synthetic")
 
 ################################################
 
@@ -81,18 +119,111 @@ async def create_edge_similarity_index(edge_labels, query_embedding):
 
 ################################################
 
+def _closed_star(cg, pivot):
+    """Return (star_nodes, star_edges) = {pivot} ∪ degree-1 neighbors, and incident edges."""
+    preds = list(cg.predecessors(pivot))
+    succs = list(cg.successors(pivot))
+    neighbors = preds + succs
+    singleton_neighbors = {
+        u for u in neighbors
+        if cg.in_degree(u) + cg.out_degree(u) == 1
+    }
+    incident_edges = set(cg.in_edges(pivot)) | set(cg.out_edges(pivot))
+    return {pivot} | singleton_neighbors, incident_edges
+
+
+def _state_key(cg):
+    """Canonical state key matching the main loop's state_cache schema."""
+    return (
+        frozenset(cg.nodes()),
+        frozenset(
+            (u, v, cg.edges[u, v].get("description", ""))
+            for u, v in cg.edges()
+        ),
+    )
+
+
+async def psp_probe(
+    rag,
+    question: str,
+    original_answer: str,
+    cg,
+    node_similarity_index: dict,
+    K: int,
+    unit_cost: bool,
+):
+    """
+    Pivotal-Star Probe. Picks top-K pivots from cg.nodes by query relevance,
+    evaluates del_n(v) for each as a single LLM call, and returns:
+      psp_hits           : list of (pivot, cost, perturbed_cg, response) for pivots that flipped
+      psp_pruned_nodes   : union of S_C(v).nodes for non-flipping pivots
+      psp_pruned_edges   : union of S_C(v).edges for non-flipping pivots
+      psp_probed_pivots  : set of all probed pivots (skip re-eval in expand)
+      psp_response_cache : {state_key: response} so the main loop can skip the LLM
+                           re-call when a PSP-probed state is popped
+      llm_calls          : number of LLM calls consumed
+    """
+    pivots = sorted(
+        cg.nodes,
+        key=lambda v: node_similarity_index.get(v, 0.0),
+        reverse=True,
+    )[:K]
+
+    psp_hits = []
+    psp_pruned_nodes: set = set()
+    psp_pruned_edges: set = set()
+    psp_probed_pivots: set = set(pivots)
+    psp_response_cache: dict = {}
+    llm_calls = 0
+
+    for v in pivots:
+        star_nodes, star_edges = _closed_star(cg, v)
+
+        perturbed_cg = delete_node(cg, v)
+
+        if unit_cost:
+            cost = delete_node_uc(cg, v)
+        else:
+            cost = delete_node_cost(cg, v)
+
+        cg_context = graph_to_context(perturbed_cg)
+        new_response = await query(rag, cg_context, question)
+        llm_calls += 1
+
+        score = await judge_response(question, new_response, original_answer)
+        flipped = (score == 0)
+
+        print(f"[PSP] pivot={v} cost={cost} flipped={flipped}")
+
+        # Cache the LLM response keyed by perturbed-graph state so the main loop
+        # does not re-evaluate this graph when the pivot is popped from Q.
+        psp_response_cache[_state_key(perturbed_cg)] = new_response
+
+        if flipped:
+            psp_hits.append((v, cost, perturbed_cg, new_response))
+        else:
+            psp_pruned_nodes |= star_nodes
+            psp_pruned_edges |= star_edges
+
+    return psp_hits, psp_pruned_nodes, psp_pruned_edges, psp_probed_pivots, psp_response_cache, llm_calls
+
+
 async def find_breaking_counterfactuals(
     rag,
     question: str,
     original_answer: str,
     ground_truth: str,
     query_embedding,
-    context: str, 
+    context: str,
     max_cost: int = 3,
     max_llm_calls: int = 100,
     unit_cost: bool = False,
     current_ops: list=["delete_node", "delete_edge"],
-    mode: str = "ft"
+    mode: str = "ft",
+    use_psp: bool = False,
+    psp_k: int = 5,
+    output_dir: str = "src/counterfactuals/results",
+    add_params: dict = None,
 ):
     llm_calls = 0
 
@@ -100,7 +231,7 @@ async def find_breaking_counterfactuals(
     parsed_subgraph = parse_context(context)
     context_graph = parse_graph(parsed_subgraph)
     #####################
-    
+
     context_graph_nodes = set(context_graph.nodes)
     context_graph_edges = set(context_graph.edges())
 
@@ -111,14 +242,36 @@ async def find_breaking_counterfactuals(
     ### Min-heap
     Q = []
     state_cache = set()
-    # heapq.heappush(Q, (0, 0.0, next(counter), (context_graph, [])))
-    heapq.heappush(Q, (0, 0, 0.0, next(counter), (context_graph, []))) ## Added operation sequence lenght
+    _heap_push(Q, cost=0, similarity=0.0, len_ops=0, payload=(context_graph, []))
+
+    ### PSP (T→F deletion-only heuristic)
+    psp_pruned_nodes: set = set()
+    psp_pruned_edges: set = set()
+    psp_probed_pivots: set = set()
+    psp_response_cache: dict = {}
+    if use_psp and "delete_node" in current_ops:
+        psp_hits, psp_pruned_nodes, psp_pruned_edges, psp_probed_pivots, psp_response_cache, psp_calls = await psp_probe(
+            rag=rag,
+            question=question,
+            original_answer=original_answer,
+            cg=context_graph,
+            node_similarity_index=node_similarity_index,
+            K=psp_k,
+            unit_cost=unit_cost,
+        )
+        llm_calls += psp_calls
+
+        for v, hit_cost, perturbed_cg, _ in psp_hits:
+            similarity = node_similarity_index.get(v, 0.0)
+            new_ops = [("delete_node", v)]
+            _heap_push(Q, cost=hit_cost, similarity=similarity, len_ops=len(new_ops),
+                       payload=(perturbed_cg, new_ops))
 
     explored_nodes = set()  ## For addition
 
     while Q:
-        # cost, _, _, (cg, ops) = heapq.heappop(Q)
-        cost, _, _, _, (cg, ops) = heapq.heappop(Q) ## Added operation sequence lenght
+        # 6-tuple: (priority, len_ops, similarity_key, raw_cost, counter, payload)
+        _, _, _, cost, _, (cg, ops) = heapq.heappop(Q)
 
         if cost > max_cost:
             print(f"Max cost {max_cost} exceeded (current cost: {cost:.4f}). Stopping search.")
@@ -141,13 +294,16 @@ async def find_breaking_counterfactuals(
         state_cache.add(state)
 
         if len(ops) > 0:
-            llm_calls += 1
+            cached_response = psp_response_cache.pop(state, None)
+            if cached_response is not None:
+                new_response = cached_response
+                print(f"Cost: {cost} | PSP-cached response: {new_response} | Original: {original_answer}")
+            else:
+                llm_calls += 1
+                cg_context = graph_to_context(cg)
+                new_response = await query(rag, cg_context, question)
+                print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
 
-            cg_context = graph_to_context(cg)
-
-            new_response = await query(rag, cg_context, question)
-
-            print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
             print(f"Ground Truth: {ground_truth}")
 
             score = await judge_response(question, new_response, original_answer)
@@ -169,6 +325,7 @@ async def find_breaking_counterfactuals(
                     answer_similarity=answer_similarity,
                     original_subgraph=parsed_subgraph,
                     perturbed_subgraph=graph_to_subgraph(cg),
+                    output_dir=output_dir,
                     found=True,
                     cost=cost,
                     llm_calls=llm_calls,
@@ -179,16 +336,21 @@ async def find_breaking_counterfactuals(
                 return ops
         
         await expand(
-            Q, 
-            (cost, cg, ops), 
-            node_similarity_index=node_similarity_index, 
-            edge_similarity_index=edge_similarity_index, 
-            unit_cost=unit_cost, 
-            current_ops=current_ops, 
-            original_nodes=context_graph_nodes, 
-            original_edges=context_graph_edges, 
-            explored_nodes=explored_nodes, 
-            query_embedding=query_embedding
+            Q,
+            (cost, cg, ops),
+            node_similarity_index=node_similarity_index,
+            edge_similarity_index=edge_similarity_index,
+            unit_cost=unit_cost,
+            current_ops=current_ops,
+            original_nodes=context_graph_nodes,
+            original_edges=context_graph_edges,
+            explored_nodes=explored_nodes,
+            query_embedding=query_embedding,
+            psp_pruned_nodes=psp_pruned_nodes,
+            psp_pruned_edges=psp_pruned_edges,
+            psp_probed_pivots=psp_probed_pivots,
+            mode=mode,
+            add_params=add_params,
         )
 
     print(f"Could not find feasible counterfactual explanations.")
@@ -202,6 +364,7 @@ async def find_breaking_counterfactuals(
         answer_similarity=0.0,
         original_subgraph=parsed_subgraph,
         perturbed_subgraph=None,
+        output_dir=output_dir,
         found=False,
         llm_calls=llm_calls,
         cost=cost,
@@ -215,12 +378,14 @@ async def find_corrective_counterfactuals(
     original_answer: str,
     ground_truth: str,
     query_embedding,
-    context: str, 
+    context: str,
     max_cost: int = 3,
     max_llm_calls: int = 100,
     unit_cost: bool = False,
     current_ops: list=["delete_node", "delete_edge", "add_node", "add_edge"],
-    mode: str = "ff"
+    mode: str = "ff",
+    output_dir: str = "src/counterfactuals/results",
+    add_params: dict = None,
 ):
     llm_calls = 0
 
@@ -239,15 +404,14 @@ async def find_corrective_counterfactuals(
     ### Min-heap
     Q = []
     state_cache = set()
-    # heapq.heappush(Q, (0, 0.0, next(counter), (context_graph, [])))
-    heapq.heappush(Q, (0, 0, 0.0, next(counter), (context_graph, []))) ## Added operation sequence lenght
+    _heap_push(Q, cost=0, similarity=0.0, len_ops=0, payload=(context_graph, []))
 
     explored_nodes = set()  ## For addition
     edge_embedding_cache = {}
 
     while Q:
-        # cost, _, _, (cg, ops) = heapq.heappop(Q)
-        cost, _, _, _, (cg, ops) = heapq.heappop(Q) ## Added operation sequence lenght
+        # 6-tuple: (priority, len_ops, similarity_key, raw_cost, counter, payload)
+        _, _, _, cost, _, (cg, ops) = heapq.heappop(Q)
 
         if cost > max_cost:
             print(f"Max cost {max_cost} exceeded (current cost: {cost:.4f}). Stopping search.")
@@ -296,6 +460,7 @@ async def find_corrective_counterfactuals(
                     answer_similarity=answer_similarity,
                     original_subgraph=parsed_subgraph,
                     perturbed_subgraph=graph_to_subgraph(cg),
+                    output_dir=output_dir,
                     found=True,
                     cost=cost,
                     llm_calls=llm_calls,
@@ -306,18 +471,20 @@ async def find_corrective_counterfactuals(
                 return ops
         
         await expand(
-            Q, 
-            (cost, cg, ops), 
-            node_similarity_index=node_similarity_index, 
-            edge_similarity_index=edge_similarity_index, 
-            unit_cost=unit_cost, 
-            current_ops=current_ops, 
-            original_nodes=context_graph_nodes, 
-            original_edges=context_graph_edges, 
-            explored_nodes=explored_nodes, 
+            Q,
+            (cost, cg, ops),
+            node_similarity_index=node_similarity_index,
+            edge_similarity_index=edge_similarity_index,
+            unit_cost=unit_cost,
+            current_ops=current_ops,
+            original_nodes=context_graph_nodes,
+            original_edges=context_graph_edges,
+            explored_nodes=explored_nodes,
             query_embedding=query_embedding,
             edge_labels=edge_labels,
-            edge_embedding_cache=edge_embedding_cache
+            edge_embedding_cache=edge_embedding_cache,
+            mode=mode,
+            add_params=add_params,
         )
 
     print(f"Could not find feasible counterfactual explanations.")
@@ -331,6 +498,7 @@ async def find_corrective_counterfactuals(
         answer_similarity=0.0,
         original_subgraph=parsed_subgraph,
         perturbed_subgraph=None,
+        output_dir=output_dir,
         found=False,
         llm_calls=llm_calls,
         cost=cost,
@@ -339,15 +507,19 @@ async def find_corrective_counterfactuals(
     )
 
 async def find_counterfactuals(
-    rag, 
-    question: str, 
-    context, 
-    max_cost=3, 
-    max_llm_calls=100, 
-    unit_cost: bool=False, 
-    current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"], 
+    rag,
+    question: str,
+    context,
+    max_cost=3,
+    max_llm_calls=100,
+    unit_cost: bool=False,
+    current_ops: list=["delete_node", "delete_edge"],
     ground_truth: str = "",
-    mode: str = "ft"
+    mode: str = "ft",
+    use_psp: bool = False,
+    psp_k: int = 5,
+    output_dir: str = "src/counterfactuals/results",
+    add_params: dict = None,
 ):
     query_embedding = (await sentence_transformer_embed([question]))[0]
     original_answer = await query(rag, context, question)
@@ -364,9 +536,13 @@ async def find_counterfactuals(
             max_llm_calls=max_llm_calls,
             unit_cost=unit_cost,
             current_ops=current_ops,
-            mode=mode
+            mode=mode,
+            use_psp=use_psp,
+            psp_k=psp_k,
+            output_dir=output_dir,
+            add_params=add_params,
         )
-    elif mode == "ff":
+    elif mode in ("ff", "tf"):
         await find_corrective_counterfactuals(
             rag=rag,
             question=question,
@@ -378,68 +554,56 @@ async def find_counterfactuals(
             max_llm_calls=max_llm_calls,
             unit_cost=unit_cost,
             current_ops=current_ops,
-            mode=mode
-        )
-    elif mode == "tf":
-        await find_corrective_counterfactuals(
-            rag=rag,
-            question=question,
-            original_answer=original_answer,
-            ground_truth=ground_truth,
-            query_embedding=query_embedding,
-            context=context,
-            max_cost=max_cost,
-            max_llm_calls=max_llm_calls,
-            unit_cost=unit_cost,
-            current_ops=current_ops,
-            mode=mode
+            mode=mode,
+            output_dir=output_dir,
+            add_params=add_params,
         )
 
 async def expand(
-    Q, 
-    heap_element, 
-    node_similarity_index, 
-    edge_similarity_index, 
+    Q,
+    heap_element,
+    node_similarity_index,
+    edge_similarity_index,
     edge_labels: dict = None,
-    unit_cost: bool = False, 
-    current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"],
+    unit_cost: bool = False,
+    current_ops: list=["delete_node", "delete_edge"],
     original_nodes: set = {},
     original_edges: set = {},
     explored_nodes: set = {},
     query_embedding: list = [],
     edge_embedding_cache: dict = None,
+    psp_pruned_nodes: set = None,
+    psp_pruned_edges: set = None,
+    psp_probed_pivots: set = None,
+    mode: str = "ft",
+    add_params: dict = None,
 ):
     cg: nx.DiGraph
     cost, cg, ops = heap_element
 
-    undirected: nx.Graph = cg.to_undirected()
-    cut_vertices = set(nx.articulation_points(cg.to_undirected()))
-    cut_edges = set(nx.bridges(cg.to_undirected()))
+    psp_pruned_nodes = psp_pruned_nodes or set()
+    psp_pruned_edges = psp_pruned_edges or set()
+    psp_probed_pivots = psp_probed_pivots or set()
+    psp_active = bool(psp_pruned_nodes or psp_pruned_edges or psp_probed_pivots)
+
+    # Within-tier ordering by flip direction (see tab:flip-heuristics):
+    # T→F deletions: most query-relevant first (popped first ⇒ use -similarity).
+    # F→T deletions ("ff"/"tf"): most-distant first (least-relevant first ⇒ use +similarity).
+    relevance_sign = -1.0 if mode == "ft" else 1.0
 
     if "delete_node" in current_ops:
-        # Allow if not a cut vertex, OR if it is a cut vertex but all neighbors
-        # would become isolated (meaning no real split, just singleton cleanup)
         for node in list(cg.nodes):
-            ### Feasibility Constraint
             if node in original_nodes:
-                if node in cut_vertices:
-                    neighbors = list(undirected.neighbors(node))
-                    
-                    would_isolate = {n for n in neighbors if undirected.degree(n) == 1}
-                    nodes_to_remove = {node} | would_isolate
-                    residual = undirected.copy()
-                    residual.remove_nodes_from(nodes_to_remove)
-
-                    components_before = nx.number_connected_components(undirected)
-                    components_after = nx.number_connected_components(residual)
-
-                    if components_after > components_before:
+                # PSP pruning: only applies at depth 0 (single-element deletion of
+                # an element in a failed star, or re-test of an already-probed pivot).
+                if psp_active and len(ops) == 0:
+                    if node in psp_probed_pivots or node in psp_pruned_nodes:
                         continue
 
                 perturbed_cg = delete_node(cg, node)
-                
+
                 if unit_cost == False:
-                    perturbation_cost = delete_node_cost(cg, node) 
+                    perturbation_cost = delete_node_cost(cg, node)
                 elif unit_cost == True:
                     perturbation_cost = delete_node_uc(cg, node)
 
@@ -447,24 +611,17 @@ async def expand(
 
                 similarity = node_similarity_index.get(node, 0.0)
 
-                # heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-                heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops),
+                           payload=(perturbed_cg, new_ops), relevance_sign=relevance_sign)
 
     if "delete_edge" in current_ops:
-        ### Updated Delete Edge
-        # Allow if not a cut edge, OR if it is a cut edge but both endpoints
-        # would become isolated (meaning no real split, just singleton cleanup)
         for edge in list(cg.edges):
-            ### Feasibility Constraint
             if edge in original_edges:
-                if edge in cut_edges:
-                    u, v = edge[0], edge[1]
-                    would_split = undirected.degree(u) > 1 and undirected.degree(v) > 1
-                    if would_split:
-                        continue
+                if psp_active and len(ops) == 0 and edge in psp_pruned_edges:
+                    continue
 
                 perturbed_cg = delete_edge(cg, edge)
-                
+
                 if unit_cost == False:
                     perturbation_cost = delete_edge_cost(cg, edge)
                 elif unit_cost == True:
@@ -474,8 +631,8 @@ async def expand(
 
                 similarity = edge_similarity_index.get(edge, 0.0)
 
-                # heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
-                heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops),
+                           payload=(perturbed_cg, new_ops), relevance_sign=relevance_sign)
 
     ############################# Distance-based with query relevance for retrieval #############################
 
@@ -507,7 +664,7 @@ async def expand(
                             elif unit_cost == True:
                                 perturbation_cost = 2
 
-                            heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
                         
                         if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
@@ -518,7 +675,7 @@ async def expand(
                             elif unit_cost == True:
                                 perturbation_cost = 2
 
-                            heapq.heappush(Q, (cost + perturbation_cost,  len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
 
                         candidates_pushed += 1
@@ -551,7 +708,7 @@ async def expand(
                     src, tgt = best_edge
                     perturbed_cg = add_edge(cg, (src, tgt), **G.edges[src, tgt])
                     new_ops = ops + [("add_edge", (src, tgt)), ("add_node", src), ("add_node", tgt)]
-                    heapq.heappush(Q, (cost + best_cost, len(new_ops), -best_similarity, next(counter), (perturbed_cg, new_ops)))
+                    _heap_push(Q, cost=cost + best_cost, similarity=best_similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
         if "add_edge" in current_ops:
             existing_edges = set(cg.edges())
@@ -577,7 +734,7 @@ async def expand(
                             elif unit_cost == True:
                                 perturbation_cost = add_edge_uc()
 
-                            heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
                         if (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
                             perturbed_cg = cg.copy()
@@ -590,7 +747,7 @@ async def expand(
                             elif unit_cost == True:
                                 perturbation_cost = add_edge_uc()
 
-                            heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
     ############################################################################################################
     ############################# Query-Relevance-based with query relevance for retrieval #####################
@@ -619,7 +776,7 @@ async def expand(
 
                             perturbation_cost = 2 + 1 - edge_similarity_index.get((node, neighbor), 0.0)
 
-                            heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
                         
                         if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
@@ -627,7 +784,7 @@ async def expand(
 
                             perturbation_cost = 2 + 1 - edge_similarity_index.get((neighbor, node), 0.0)
 
-                            heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
                         candidates_pushed += 1
 
@@ -655,7 +812,7 @@ async def expand(
                     src, tgt = best_edge
                     perturbed_cg = add_edge(cg, (src, tgt), **G.edges[src, tgt])
                     new_ops = ops + [("add_edge", (src, tgt))]
-                    heapq.heappush(Q, (cost + best_cost, len(new_ops), -best_similarity, next(counter), (perturbed_cg, new_ops)))
+                    _heap_push(Q, cost=cost + best_cost, similarity=best_similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
         if "add_edge" in current_ops:
             existing_edges = set(cg.edges())
@@ -677,7 +834,7 @@ async def expand(
                             perturbation_cost = 1 + 1 - edge_similarity_index.get((node1, node2), 0.0)
                             new_ops = ops + [("add_edge", (node1, node2))]
 
-                            heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
                         if (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
                             perturbed_cg = cg.copy()
@@ -686,7 +843,7 @@ async def expand(
                             perturbation_cost = 1 + 1 - edge_similarity_index.get((node2, node1), 0.0)
                             new_ops = ops + [("add_edge", (node2, node1))]
 
-                            heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
     ############################# Number of operations / Query Relevance priority #############################
 
@@ -714,7 +871,7 @@ async def expand(
 
                             perturbation_cost = 2
 
-                            heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
                         
                         if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
@@ -722,7 +879,7 @@ async def expand(
 
                             perturbation_cost = 2
 
-                            heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
                         candidates_pushed += 1
 
@@ -745,7 +902,7 @@ async def expand(
                     src, tgt = best_edge
                     perturbed_cg = add_edge(cg, (src, tgt), **G.edges[src, tgt])
                     new_ops = ops + [("add_edge", (src, tgt))]
-                    heapq.heappush(Q, (cost + 3, len(new_ops), -best_similarity, next(counter), (perturbed_cg, new_ops)))
+                    _heap_push(Q, cost=cost + 3, similarity=best_similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
         if "add_edge" in current_ops:
             existing_edges = set(cg.edges())
@@ -767,7 +924,7 @@ async def expand(
                             perturbation_cost = 1
                             new_ops = ops + [("add_edge", (node1, node2))]
 
-                            heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
                         if (node2, node1) in edge_lookup and (node2, node1) not in existing_edges:
                             perturbed_cg = cg.copy()
@@ -776,7 +933,7 @@ async def expand(
                             perturbation_cost = 1
                             new_ops = ops + [("add_edge", (node2, node1))]
 
-                            heapq.heappush(Q, (cost+perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                            _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
     ############################################################################################################
 
@@ -847,58 +1004,115 @@ def save_operations_to_json(
     return filepath
 
 
-async def main():
-    rag = await initialize_lightrag(working_dir=WORKING_DIR_SYNTHETIC)
-    
-    with open(f"benchmark/results/comparison_{dataset}_2.json", "r", encoding="utf-8") as results:
-        data = json.load(results)
+_WORKING_DIRS = {
+    "synthetic": WORKING_DIR_SYNTHETIC,
+    "hotpotqa": WORKING_DIR_HOTPOTQA,
+}
 
-    operation_sets = [
-        ["add_node", "add_edge", "delete_node", "delete_edge"]
-        # ["add_node", "add_edge"]
-        # ["delete_node", "delete_edge"]
-    ]
+_ALL_OPS = ["delete_node", "delete_edge", "add_node", "add_edge"]
 
-    mode = "ff"
-    add_modes = [1, 2 ,3]
 
+def build_arg_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        prog="generate",
+        description="Run counterfactual search over a LightRAG-backed KG.",
+    )
+    p.add_argument("--dataset", choices=list(_WORKING_DIRS.keys()), default="synthetic",
+                   help="Dataset name; selects working_dir and embedding indices.")
+    p.add_argument("--input", default=None,
+                   help="Path to comparison JSON (defaults to benchmark/results/comparison_<dataset>_2.json).")
+    p.add_argument("--mode", choices=["ff", "ft", "tf"], default="ff",
+                   help="Search mode: ff (corrective F→F), ft (breaking T→F), tf (corrective T→F).")
+    p.add_argument("--ops", default=",".join(_ALL_OPS),
+                   help="Comma-separated operations to enable. Subset of: " + ",".join(_ALL_OPS))
+    p.add_argument("--max-cost", type=int, default=20, help="Cost budget c_max.")
+    p.add_argument("--max-llm-calls", type=int, default=200, help="LLM-call budget.")
+    p.add_argument("--unit-cost", action="store_true", help="Use unit-cost variant of edit costs.")
+    p.add_argument("--adm", type=int, choices=[1, 2, 3], default=1,
+                   help="Add-mode variant (1=distance-based, 2/3=alternative add expansions).")
+    p.add_argument("--psp", action="store_true",
+                   help="Enable Pivotal-Star Probe (T→F only, requires delete_node in --ops).")
+    p.add_argument("--psp-k", type=int, default=5, help="Top-K pivots for PSP.")
+    p.add_argument("--output-dir", default="src/counterfactuals/results",
+                   help="Directory for saved counterfactual JSON results.")
+    p.add_argument("--add-heuristic", choices=["none", "tier", "blend"], default="none",
+                   help="Within-tier ordering heuristic for additions.")
+    p.add_argument("--tier-width", type=float, default=1.0,
+                   help="Cost-tier width for --add-heuristic=tier (>0). Default 1.0.")
+    p.add_argument("--alpha", type=float, default=0.5,
+                   help="Blend weight for --add-heuristic=blend (priority = cost - alpha*similarity). Default 0.5.")
+    return p
+
+
+def _parse_ops(spec: str) -> list:
+    ops = [o.strip() for o in spec.split(",") if o.strip()]
+    bad = [o for o in ops if o not in _ALL_OPS]
+    if bad:
+        raise SystemExit(f"Unknown ops: {bad}. Allowed: {_ALL_OPS}")
+    return ops
+
+
+async def main(args: argparse.Namespace):
     global adm
 
-    for adm in add_modes:
-        for op_set in operation_sets:
-            results = data["results"]
-            for idx, r in results.items():
-                question = r["question"]
-                case = r["case"]
+    if args.dataset != dataset:
+        setup_dataset(args.dataset)
 
-                ground_truth = r["ground_truth"]
+    adm = args.adm
+    current_ops = _parse_ops(args.ops)
 
-                if case != mode:
-                    continue
+    add_params = None
+    if args.add_heuristic == "tier":
+        if args.tier_width <= 0:
+            raise SystemExit("--tier-width must be > 0 when --add-heuristic=tier")
+        add_params = {"mode": "tier", "tier_width": args.tier_width}
+    elif args.add_heuristic == "blend":
+        if args.alpha < 0:
+            raise SystemExit("--alpha must be >= 0 when --add-heuristic=blend")
+        add_params = {"mode": "blend", "alpha": args.alpha}
 
-                print(f"\n=== [{idx}] {question} ===")
+    input_path = args.input or f"benchmark/results/comparison_{dataset}_2.json"
+    with open(input_path, "r", encoding="utf-8") as fh:
+        data = json.load(fh)
 
-                context = await retrieve_subgraph(
-                    rag, 
-                    query=question, 
-                    mode="hybrid", 
-                    top_k=2
-                )
+    rag = await initialize_lightrag(working_dir=_WORKING_DIRS[dataset])
 
-                await find_counterfactuals(
-                    rag=rag, 
-                    question=question, 
-                    context=context, 
-                    max_cost=20, 
-                    max_llm_calls=200, 
-                    unit_cost=False, 
-                    current_ops=op_set, 
-                    ground_truth=ground_truth,
-                    mode=mode
-                )
+    for idx, r in data["results"].items():
+        if r.get("case") != args.mode:
+            continue
+
+        question = r["question"]
+        ground_truth = r["ground_truth"]
+
+        print(f"\n=== [{idx}] {question} ===")
+
+        context = await retrieve_subgraph(
+            rag,
+            query=question,
+            mode="hybrid",
+            top_k=2,
+        )
+
+        await find_counterfactuals(
+            rag=rag,
+            question=question,
+            context=context,
+            max_cost=args.max_cost,
+            max_llm_calls=args.max_llm_calls,
+            unit_cost=args.unit_cost,
+            current_ops=current_ops,
+            ground_truth=ground_truth,
+            mode=args.mode,
+            use_psp=args.psp,
+            psp_k=args.psp_k,
+            output_dir=args.output_dir,
+            add_params=add_params,
+        )
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    args = build_arg_parser().parse_args()
+    asyncio.run(main(args))
 
 
 

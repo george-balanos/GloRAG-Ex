@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+# Synthetic-dataset ablation runner.
+#
+# Step 1: RAG-only baseline (benchmark/run.py).
+# Step 2: Counterfactual deletions only, T->F (--mode ft).
+# Step 3: Counterfactual deletions + PSP, T->F.
+# Step 4: Counterfactual additions only, F->T (--mode tf),
+#         ablated over --adm {1,2,3} x --add-heuristic {none, tier(w...), blend(a...)}.
+#
+# All Python runs through `uv run python` so the project's uv-managed env is used.
+
+set -euo pipefail
+
+cd "$(dirname "$0")"  # ensure CWD = code/ for relative paths
+
+# ─── Tunables ────────────────────────────────────────────────────────────────
+DATASET="synthetic"
+INPUT_JSON="benchmark/results/comparison_${DATASET}_2.json"
+MAX_COST=20
+MAX_LLM_CALLS=200
+PSP_K=5
+TIER_WIDTHS=(0.25 0.5 1.0 2.0)
+ALPHAS=(0.1 0.25 0.5 0.75 1.0)
+ADM_MODES=(1 2 3)
+OUT_ROOT="src/counterfactuals/results/ablation"
+
+# ─── Prechecks ───────────────────────────────────────────────────────────────
+if ! command -v uv >/dev/null 2>&1; then
+  echo "ERROR: 'uv' not found on PATH." >&2
+  exit 1
+fi
+
+if [[ ! -f "$INPUT_JSON" ]]; then
+  echo "ERROR: $INPUT_JSON not found." >&2
+  echo "Counterfactual steps need a comparison JSON with results[*].{question,ground_truth,case}." >&2
+  echo "Generate it first, then re-run this script." >&2
+  exit 1
+fi
+
+for f in src/embeddings/${DATASET}/node_index.bin src/embeddings/${DATASET}/edge_index.bin; do
+  if [[ ! -f "$f" ]]; then
+    echo "ERROR: $f missing. Build indices first:" >&2
+    echo "  uv run python -m src.embeddings.build_index" >&2
+    exit 1
+  fi
+done
+
+GEN="uv run python -m src.counterfactuals.generate"
+
+# ─── 1. RAG-only baseline ────────────────────────────────────────────────────
+echo "=== [1/4] RAG-only baseline ==="
+echo "NOTE: verify benchmark/run.py's dataset toggle is set to '${DATASET}' before continuing."
+uv run python benchmark/run.py
+
+# ─── 2. Deletions only, T→F (no PSP) ─────────────────────────────────────────
+echo "=== [2/4] Deletions only, T→F (no PSP) ==="
+$GEN \
+  --dataset "$DATASET" \
+  --input   "$INPUT_JSON" \
+  --mode    ft \
+  --ops     delete_node,delete_edge \
+  --max-cost "$MAX_COST" \
+  --max-llm-calls "$MAX_LLM_CALLS" \
+  --output-dir "${OUT_ROOT}/ft_delete_no_psp"
+
+# ─── 3. Deletions + PSP, T→F ─────────────────────────────────────────────────
+echo "=== [3/4] Deletions + PSP, T→F ==="
+$GEN \
+  --dataset "$DATASET" \
+  --input   "$INPUT_JSON" \
+  --mode    ft \
+  --ops     delete_node,delete_edge \
+  --psp --psp-k "$PSP_K" \
+  --max-cost "$MAX_COST" \
+  --max-llm-calls "$MAX_LLM_CALLS" \
+  --output-dir "${OUT_ROOT}/ft_delete_psp_k${PSP_K}"
+
+# ─── 4. Additions ablation, F→T ──────────────────────────────────────────────
+echo "=== [4/4] Additions ablation, F→T ==="
+for adm in "${ADM_MODES[@]}"; do
+  echo "--- adm=${adm} | --add-heuristic none ---"
+  $GEN \
+    --dataset "$DATASET" --input "$INPUT_JSON" \
+    --mode tf --ops add_node,add_edge --adm "$adm" \
+    --add-heuristic none \
+    --max-cost "$MAX_COST" --max-llm-calls "$MAX_LLM_CALLS" \
+    --output-dir "${OUT_ROOT}/tf_add_adm${adm}_none"
+
+  for tw in "${TIER_WIDTHS[@]}"; do
+    echo "--- adm=${adm} | --add-heuristic tier --tier-width ${tw} ---"
+    $GEN \
+      --dataset "$DATASET" --input "$INPUT_JSON" \
+      --mode tf --ops add_node,add_edge --adm "$adm" \
+      --add-heuristic tier --tier-width "$tw" \
+      --max-cost "$MAX_COST" --max-llm-calls "$MAX_LLM_CALLS" \
+      --output-dir "${OUT_ROOT}/tf_add_adm${adm}_tier_w${tw}"
+  done
+
+  for a in "${ALPHAS[@]}"; do
+    echo "--- adm=${adm} | --add-heuristic blend --alpha ${a} ---"
+    $GEN \
+      --dataset "$DATASET" --input "$INPUT_JSON" \
+      --mode tf --ops add_node,add_edge --adm "$adm" \
+      --add-heuristic blend --alpha "$a" \
+      --max-cost "$MAX_COST" --max-llm-calls "$MAX_LLM_CALLS" \
+      --output-dir "${OUT_ROOT}/tf_add_adm${adm}_blend_a${a}"
+  done
+done
+
+echo "=== Done. Results under ${OUT_ROOT}/ ==="
