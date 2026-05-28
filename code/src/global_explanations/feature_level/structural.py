@@ -34,6 +34,12 @@ class FeatureVectorGenerator:
         local_delete_node_degrees = list(subgraph.degree(operation_dict["delete_node"]))
         global_delete_node_degrees = list(knowledge_graph.degree(operation_dict["delete_node"]))
 
+        local_closeness_centrality = nx.closeness_centrality(subgraph)
+
+        local_delete_node_closenesses = []
+        for node in operation_dict["delete_node"]:
+            local_delete_node_closenesses.append(round(local_closeness_centrality.get(node) , 3))
+
         #### Delete-Edge-Features ####
 
         local_betweenness_centrality = nx.edge_betweenness_centrality(subgraph)
@@ -46,7 +52,8 @@ class FeatureVectorGenerator:
             "delete": {
                 "local_node_degrees": local_delete_node_degrees,
                 "global_node_degrees": global_delete_node_degrees,
-                "local_edge_betweennesses": local_delete_edge_betweennesses
+                "local_node_closenesses": local_delete_node_closenesses,
+                "local_edge_betweennesses": local_delete_edge_betweennesses,
             },
             "add": {
 
@@ -107,15 +114,24 @@ class FeatureVectorAggregator:
         self._plot_local_degrees()
         self._plot_global_degrees()
         self._plot_edge_betweennesses()
+        self._plot_local_closeness()
         plt.show()
+
+    ### Node Features:
 
     def _plot_local_degrees(self):
         values = [deg for vec in self.vecs for _, deg in vec["delete"]["local_node_degrees"]]
         self._plot_hist(values, title="Local Node Degrees", xlabel="Degree", color="steelblue", filename="local_node_degrees")
 
+    def _plot_local_closeness(self):
+        values = [closeness for vec in self.vecs for closeness in vec["delete"]["local_node_closenesses"]]
+        self._plot_hist(values, title="Local Node Closenesses", xlabel="Closeness", color="steelblue", filename="local_node_closenesses")
+
     def _plot_global_degrees(self):
         values = [deg for vec in self.vecs for _, deg in vec["delete"]["global_node_degrees"]]
         self._plot_hist(values, title="Global Node Degrees", xlabel="Degree", color="darkorange", filename="global_node_degrees")
+
+    ### Edge Features:
 
     def _plot_edge_betweennesses(self):
         values = [b for vec in self.vecs for b in vec["delete"]["local_edge_betweennesses"]]
