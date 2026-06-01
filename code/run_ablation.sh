@@ -3,6 +3,7 @@
 #
 # Step 0: Auto-build HNSW indices if missing.
 # Step 1: RAG-only baseline (benchmark/run.py).
+# Step 1b: Build comparison JSON from RAG results only (evaluation.py --rag-only).
 # Step 2: Counterfactual deletions only, T->F (--mode ft).
 # Step 3: Counterfactual deletions + PSP, T->F.
 # Step 4: Counterfactual additions only, F->T (--mode tf),
@@ -42,22 +43,33 @@ if [[ ! -f "src/embeddings/${DATASET}/node_index.bin" || ! -f "src/embeddings/${
   uv run python -m src.embeddings.build_index --dataset "$DATASET"
 fi
 
-if [[ ! -f "$INPUT_JSON" ]]; then
-  echo "ERROR: $INPUT_JSON not found." >&2
-  echo "Counterfactual steps need a comparison JSON with results[*].{question,ground_truth,case}." >&2
-  echo "Generate it via benchmark/evaluation.py after RAG + LLM-only runs, then re-run." >&2
-  exit 1
-fi
-
 GEN="uv run python -m src.counterfactuals.generate"
 
 # ─── 1. RAG-only baseline ────────────────────────────────────────────────────
-echo "=== [1/4] RAG-only baseline ==="
-uv run python benchmark/run.py \
+RAG_RESULTS="benchmark/results/${DATASET}_${RAG_MODE}_${TOP_K}.json"
+if [[ -f "$RAG_RESULTS" ]]; then
+  echo "=== [1/4] RAG-only baseline (cached: ${RAG_RESULTS}) ==="
+else
+  echo "=== [1/4] RAG-only baseline ==="
+  uv run python benchmark/run.py \
+    --dataset "$DATASET" \
+    --rag-mode "$RAG_MODE" \
+    --top-k "$TOP_K" \
+    ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
+fi
+
+# ─── 1b. Build comparison JSON from RAG results only ─────────────────────────
+echo "=== [1b/4] Building comparison file (--rag-only) ==="
+uv run python -m benchmark.evaluation \
   --dataset "$DATASET" \
   --rag-mode "$RAG_MODE" \
   --top-k "$TOP_K" \
-  ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
+  --rag-only
+
+if [[ ! -f "$INPUT_JSON" ]]; then
+  echo "ERROR: $INPUT_JSON still missing after evaluation step." >&2
+  exit 1
+fi
 
 # ─── 2. Deletions only, T→F (no PSP) ─────────────────────────────────────────
 echo "=== [2/4] Deletions only, T→F (no PSP) ==="
