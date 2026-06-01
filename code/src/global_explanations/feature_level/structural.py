@@ -170,8 +170,9 @@ if __name__ == "__main__":
     for filename in os.listdir(local_explanations_folder_name):
         if filename.endswith(".json"):
             filepath = os.path.join(local_explanations_folder_name, filename)
-            vecs = featureVector.create_feature_vectors(filepath)
-            feature_vector_list.append(vecs)
+            if load_local_explanation(filepath)["found"]:
+                vecs = featureVector.create_feature_vectors(filepath)
+                feature_vector_list.append(vecs)
 
     featureAggregator = FeatureVectorAggregator(feature_vector_list, output_dir="src/global_explanations/feature_level/plots")
     featureAggregator.plot_distributions()
