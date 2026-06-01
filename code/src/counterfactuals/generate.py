@@ -293,46 +293,61 @@ async def find_breaking_counterfactuals(
         state_cache.add(state)
 
         if len(ops) > 0:
-            cached_response = psp_response_cache.pop(state, None)
-            if cached_response is not None:
-                new_response = cached_response
-                print(f"Cost: {cost} | PSP-cached response: {new_response} | Original: {original_answer}")
-            else:
-                llm_calls += 1
-                cg_context = graph_to_context(cg)
-                new_response = await query(rag, cg_context, question)
-                print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
-
-            print(f"Ground Truth: {ground_truth}")
-
-            score = await judge_response(question, new_response, original_answer)
-
-            if score == 0:
-                print(f"Counterfactual Operations: {ops}")
-
-                answer_similarity = await compute_answer_similarity(original_answer, new_response)
-                print(f"Answer similarity (original vs perturbed): {answer_similarity:.4f}")
-
-                parsed_subgraph = parse_context(context)
-
-                save_operations_to_json(
-                    ops=ops,
-                    question=question,
-                    ground_truth=ground_truth,
-                    original_answer=original_answer,
-                    perturbed_answer=new_response,
-                    answer_similarity=answer_similarity,
-                    original_subgraph=parsed_subgraph,
-                    perturbed_subgraph=graph_to_subgraph(cg),
-                    output_dir=output_dir,
-                    found=True,
-                    cost=cost,
-                    llm_calls=llm_calls,
-                    current_ops=current_ops,
-                    mode=mode
+            # PSP monotonicity short-circuit: a SINGLE-element deletion whose
+            # target sits inside a failed star S_C(v) cannot flip o (by the
+            # heuristic monotonicity assumption probed by psp_probe). Skip the
+            # LLM/judge call and treat as non-flip; still expand children so
+            # composites that include this op remain reachable.
+            psp_short_circuit = (
+                use_psp and len(ops) == 1 and (
+                    (ops[0][0] == "delete_node" and ops[0][1] in psp_pruned_nodes) or
+                    (ops[0][0] == "delete_edge" and ops[0][1] in psp_pruned_edges)
                 )
+            )
 
-                return ops
+            if psp_short_circuit:
+                print(f"Cost: {cost} | PSP-skip {ops[0]} (monotonicity: no flip)")
+            else:
+                cached_response = psp_response_cache.pop(state, None)
+                if cached_response is not None:
+                    new_response = cached_response
+                    print(f"Cost: {cost} | PSP-cached response: {new_response} | Original: {original_answer}")
+                else:
+                    llm_calls += 1
+                    cg_context = graph_to_context(cg)
+                    new_response = await query(rag, cg_context, question)
+                    print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
+
+                print(f"Ground Truth: {ground_truth}")
+
+                score = await judge_response(question, new_response, original_answer)
+
+                if score == 0:
+                    print(f"Counterfactual Operations: {ops}")
+
+                    answer_similarity = await compute_answer_similarity(original_answer, new_response)
+                    print(f"Answer similarity (original vs perturbed): {answer_similarity:.4f}")
+
+                    parsed_subgraph = parse_context(context)
+
+                    save_operations_to_json(
+                        ops=ops,
+                        question=question,
+                        ground_truth=ground_truth,
+                        original_answer=original_answer,
+                        perturbed_answer=new_response,
+                        answer_similarity=answer_similarity,
+                        original_subgraph=parsed_subgraph,
+                        perturbed_subgraph=graph_to_subgraph(cg),
+                        output_dir=output_dir,
+                        found=True,
+                        cost=cost,
+                        llm_calls=llm_calls,
+                        current_ops=current_ops,
+                        mode=mode
+                    )
+
+                    return ops
         
         await expand(
             Q,
@@ -345,9 +360,6 @@ async def find_breaking_counterfactuals(
             original_edges=context_graph_edges,
             explored_nodes=explored_nodes,
             query_embedding=query_embedding,
-            psp_pruned_nodes=psp_pruned_nodes,
-            psp_pruned_edges=psp_pruned_edges,
-            psp_probed_pivots=psp_probed_pivots,
             mode=mode,
             add_params=add_params,
         )
@@ -571,19 +583,11 @@ async def expand(
     explored_nodes: set = {},
     query_embedding: list = [],
     edge_embedding_cache: dict = None,
-    psp_pruned_nodes: set = None,
-    psp_pruned_edges: set = None,
-    psp_probed_pivots: set = None,
     mode: str = "ft",
     add_params: dict = None,
 ):
     cg: nx.DiGraph
     cost, cg, ops = heap_element
-
-    psp_pruned_nodes = psp_pruned_nodes or set()
-    psp_pruned_edges = psp_pruned_edges or set()
-    psp_probed_pivots = psp_probed_pivots or set()
-    psp_active = bool(psp_pruned_nodes or psp_pruned_edges or psp_probed_pivots)
 
     # Within-tier ordering by flip direction (see tab:flip-heuristics):
     # T→F deletions: most query-relevant first (popped first ⇒ use -similarity).
@@ -593,11 +597,12 @@ async def expand(
     if "delete_node" in current_ops:
         for node in list(cg.nodes):
             if node in original_nodes:
-                # PSP pruning: only applies at depth 0 (single-element deletion of
-                # an element in a failed star, or re-test of an already-probed pivot).
-                if psp_active and len(ops) == 0:
-                    if node in psp_probed_pivots or node in psp_pruned_nodes:
-                        continue
+                # NOTE: PSP no longer skips expansion here. Pruned-star members
+                # may legitimately be the FIRST move of a composite that flips
+                # (monotonicity only guards single-element deletions, not multi-
+                # step composites that cross or combine star members). The LLM
+                # eval for single-element deletions of pruned-star members is
+                # short-circuited in the main loop instead.
 
                 perturbed_cg = delete_node(cg, node)
 
@@ -616,8 +621,7 @@ async def expand(
     if "delete_edge" in current_ops:
         for edge in list(cg.edges):
             if edge in original_edges:
-                if psp_active and len(ops) == 0 and edge in psp_pruned_edges:
-                    continue
+                # PSP-skip removed for the same reason as delete_node above.
 
                 perturbed_cg = delete_edge(cg, edge)
 
