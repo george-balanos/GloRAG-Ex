@@ -1,0 +1,107 @@
+original_row_id,removed_token,new_score,importance_weight_prime,tokens_consumed,new_answer,question,token_importance_score
+0,none,1,0.09442603588104248,1552,hardened 'Aero-Coral' and 'Noctilucent Metal',What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?,1.0
+1,none,1,-1.1920928955078125e-07,1591,"A trained Xylotian Chrono-Weaver can subtly perceive echoes of recent past events in their immediate vicinity. Furthermore, advanced Chrono-Weavers can project faint, localized temporal distortions, making objects appear to shimmer or briefly lag.",What two distinct abilities does a Xylotian 'Chrono-Weaver' possess?,0.0
+2,none,1,0.0,1594,The two key functions of 'Symbiotic Spores' in Xylotian terraforming pods are breaking down hostile native soil into a nutrient-rich substrate and releasing dormant Xylotian flora seeds to begin atmospheric oxygenation.,What are the two key functions of 'Symbiotic Spores' in Xylotian terraforming pods?,0.0
+3,none,1,5.960464477539063e-08,1492,geothermal energy and psychic energy,What two types of energy are harvested by the 'Dual-Resonance Crystals' of Xylos?,1.0
+4,none,1,1.1920928955078125e-07,1564,"The two main defensive mechanisms of a Xylotian 'Guardian Orb' drone are emitting a powerful, localized kinetic pulse to physically repel threats and generating a disorienting multi-spectral light pattern to confuse attackers.",What are the two main defensive mechanisms of a Xylotian 'Guardian Orb' drone?,1.0
+5,none,1,5.960464477539063e-08,1558,finely crushed 'Glow-Geodes' and viscous sap extracted from the 'Aether-Blossom' plant,What are the two primary components used in the creation of 'Lumin-Ink' by Xylotian scribes?,1.0
+6,none,1,0.0,1498,Echo-Location Sonar and Bio-Sign Scanners,What two sensory inputs does the 'Pathfinder Helm' integrate for Xylotian explorers?,0.0
+7,none,1,0.0,1523,'Atomic Deconstruction' and 'Pattern Imprinting',What two distinct phases define the operation of a Xylotian 'Matter Re-sequencer'?,0.0
+8,none,1,0.0,1570,The two main functions of the 'Aura-Cloak' are to dampen the wearer's strong emotional projections and to project a field of 'Calm-Resonance'.,What are the two main functions of the 'Aura-Cloak' worn by Xylotian diplomats?,0.0
+9,none,1,0.06940388679504395,1512,'Lineage Record' and 'Core Essence Imprint',What two types of information are encoded onto a Xylotian 'Legacy Crystal'?,1.0
+10,none,1,0.0,1367,Sarah is reading a book about dragons. Michael is reading a book about ancient castles.,What are the topics of the books Sarah and Michael are reading?,0.0
+11,none,1,0.0,1375,The family went to the beach on Saturday and they built a large sandcastle.,Where did the family go on Saturday and what did they do?,0.0
+12,none,1,0.0,1348,bright red and yellow,What colors did Alex use to paint his toy car?,0.0
+13,none,1,0.10192716121673584,1476,The Gleepglorp can manipulate Zylonic energy for teleportation. The Flumph emits Quirkle Crystals that enhance its camouflage.,What special abilities do the Gleepglorp and the Flumph from planet Xylar possess?,1.0
+14,none,1,0.01223766803741455,1361,"The elephant has large, floppy ears and uses its long trunk to drink water.",What distinct characteristics do elephants have?,1.0
+15,none,1,-1.1920928955078125e-07,1355,"flour, sugar, eggs, butter",What are the key ingredients needed for a cake recipe?,0.0
+16,none,1,0.0,1366,The carpenter uses a hammer to drive nails and a saw to cut wood.,Which tools does a carpenter use and what are their stated purposes?,0.0
+17,none,1,1.1920928955078125e-07,1493,The Orb of Zinthar is hidden deep within the treacherous Whispering Peaks. The Scepter of Mydor lies guarded in the Sunken City of Aerilon.,Where are the Orb of Zinthar and the Scepter of Mydor believed to be located?,1.0
+18,none,1,-2.384185791015625e-07,1497,Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'. Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.,What are the roles or professions of Elara Vayne and Jax Korden?,0.0
+19,none,1,0.0,1509,"The 'Chrono-Modulator' device is primarily used to create temporary Reality Stabilizers in unstable zones. A 'Bio-Harmonizer' implant allows for direct Neural Augmentation, improving cognitive functions.",What are the primary uses described for the 'Chrono-Modulator' or for the 'Bio-Harmonizer'?,0.0
+20,none,1,-1.1920928955078125e-07,1450,Lightning Essence and Thunder-Stone,What are the two core elements that power a Zephyrian 'Storm-Engine'?,0.0
+21,none,1,0.0,1499,"A Valorian 'Mind-Smith' can forge 'Thought-Metal' by solidifying pure mental energy into physical form and possess the ability to 'Memory-Weld', permanently bonding experiences and knowledge into their metallic creations.",What two abilities does a Valorian 'Mind-Smith' possess in their craft?,0.0
+22,none,1,0.0,1453,Pressure-Scales and Abyssal-Resin,What are the two primary components of Neridian 'Depth-Armor'?,0.0
+23,none,1,0.03448975086212158,1522,The Crystalline 'Echo-Lens' serves two functions for Luminian scouts: allowing them to perceive 'Light-Trails' left by moving objects and projecting 'Illumination-Pulses' to temporarily blind or disorient enemies.,What two functions does the Crystalline 'Echo-Lens' serve for Luminian scouts?,1.0
+24,none,1,0.07759225368499756,1510,"The two distinct powers of a Draconian 'Fire-Heart' gem are generating 'Molten-Streams' of liquid fire and producing 'Heat-Shields', protective barriers of superheated air.",What are the two distinct powers of a Draconian 'Fire-Heart' gem?,1.0
+25,none,1,0.0,1447,Whisper-Willow fibers and Moon-Silk,What two materials are essential for creating Sylvanian 'Grove-Cloth'?,0.0
+26,none,1,0.08661699295043945,1525,"The Etherean 'Soul-Compass' provides the following two capabilities to spirit guides:
+
+1. Detecting 'Life-Auras' of living beings across great distances.
+2. Navigating through 'Astral-Currents', allowing travel between dimensional planes.",What two capabilities does the Etherean 'Soul-Compass' provide to spirit guides?,1.0
+27,none,1,0.042893409729003906,1450,'Liquid-Steel' and 'Spark-Motes',What are the two fundamental components of Mechanoid 'Gear-Blood'?,1.0
+28,none,1,0.03728228807449341,1488,Celestian 'Star-Singers' possess the abilities to weave 'Harmony-Threads' from cosmic vibrations and to 'Echo-Call' across vast distances.,What two distinct abilities do Celestian 'Star-Singers' possess?,1.0
+29,none,1,-2.384185791015625e-07,1440,Whirlpool-Ore and Current-Crystals,What are the two key components of Atlantean 'Tide-Weapons'?,0.0
+30,none,1,0.010248422622680664,1528,"The Mystic 'Dream-Weaver's Loom' performs the following two functions:
+1. Capture and solidify 'Sleep-Visions' into physical dream-silk tapestries.
+2. 'Memory-Stitch', embedding specific recollections directly into the fabric.",What two functions does the Mystic 'Dream-Weaver's Loom' perform?,1.0
+31,none,1,0.05761748552322388,1441,'Rainbow-Essence' and 'Photon-Hammers',What are the two primary elements used in Prismarian 'Light-Forging'?,1.0
+32,none,1,0.0,1429,'Phase-Shift' and 'Shadow-Meld',What two abilities are granted by Shadowmere 'Void-Cloaks'?,0.0
+33,none,1,0.0,1420,Cloud-Leather and Gust-Metal,What are the two core materials in Aerion 'Wind-Walker' boots?,0.0
+34,none,1,-1.1920928955078125e-07,1484,"The Glacian 'Frost-Crown' serves two functions: generating 'Ice-Shields' that form protective barriers around the wearer and producing 'Blizzard-Pulses', concentrated bursts of freezing energy.",What two functions does the Glacian 'Frost-Crown' serve?,0.0
+35,none,1,-1.1920928955078125e-07,1435,Ancient-Heartwood and Resonance-Stone,What are the two primary components of Terran 'Stone-Speaker' staffs?,0.0
+36,none,1,-1.1920928955078125e-07,1462,Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' and project 'Phantom-Images'.,What two abilities do Phantasmal 'Spirit-Mirrors' possess?,0.0
+37,none,1,0.0,1458,Cyclone-Steel and Whirlwind-Crystal,What are the two essential materials for Vortexian 'Spiral-Blades'?,0.0
+38,none,1,-1.1920928955078125e-07,1429,'Growth-Force' and 'Vitality-Streams',What two distinct powers do Verdant 'Life-Wands' channel?,0.0
+39,none,1,5.960464477539063e-08,1430,'Thought-Cables' and 'Consciousness-Nodes',What are the two fundamental components of Astral 'Mind-Bridges'?,1.0
+40,none,1,0.006944537162780762,1424,'Solar-Ribbons' and 'Radiance-Bursts',What two abilities do Solarian 'Sun-Dancers' manifest?,1.0
+41,none,1,5.960464477539063e-08,1436,Song-Bronze and Echo-Gems,What are the two core materials in Resonant 'Harmony-Bells'?,1.0
+42,none,1,0.00036346912384033203,1501,The Temporal 'Flux-Anchor' device serves two functions: creating 'Time-Locks' that prevent temporal manipulation in a localized area and generating 'Chronos-Pulses' that can slow or accelerate time flow within its range.,What two functions does the Temporal 'Flux-Anchor' device serve?,1.0
+43,none,1,-1.1920928955078125e-07,1435,Essence-Pearls and Metamorphic-Acid,What are the two primary ingredients in Alchemical 'Transformation-Elixirs'?,0.0
+44,none,1,0.007868766784667969,1443,'Phase-Gallops' and 'Spirit-Charges',What two abilities do Phantom 'Wraith-Riders' possess while mounted?,1.0
+45,none,1,0.0,1413,Memory-Marble and Power-Ink,What are the two essential components of Mystic 'Rune-Stones'?,0.0
+46,none,1,-1.1920928955078125e-07,1462,Quantum 'Reality-Shapers' can manipulate 'Probability-Fields' to alter the likelihood of events occurring and generate 'Dimension-Rifts' that create temporary portals between parallel realities.,What two distinct capabilities do Quantum 'Reality-Shapers' possess?,0.0
+47,none,1,0.004501402378082275,1426,'Spirit-Thread' and 'Phantom-Wire',What are the two fundamental materials used in Ethereal 'Ghost-Nets'?,1.0
+48,none,1,0.17428737878799438,1463,Cosmic 'Star-Weavers' channel 'Nebula-Yarn' and 'Galaxy-Patterns' through their craft.,What two powers do Cosmic 'Star-Weavers' channel through their craft?,1.0
+49,none,1,0.06700026988983154,1453,Lava-Stone and Obsidian-Mesh,What are the two core elements that make up Volcanic 'Magma-Shields'?,1.0
+50,none,1,0.3652315139770508,1553,The primary function of a Zylosian Geo-Resonator is to emit a harmonic wave that stabilizes volatile Chronium deposits during mining.,What is the primary function of a Zylosian Geo-Resonator?,1.0
+51,none,1,-1.1920928955078125e-07,1526,The Q3 launch of Project Nebula at Vortex Corp was postponed because of a major security flaw discovered in the authentication module of the QuantumLeap framework.,Why was the Q3 launch of Project Nebula at Vortex Corp postponed?,0.0
+52,none,1,0.05475497245788574,1604,"When a Sunstone Amulet is brought into the Shadow Fen, its magical energy is completely nullified by the region's ambient dark magic. A Sunstone Amulet loses all of its power upon entering the Shadow Fen, as the area's pervasive necrotic energies drain it entirely.",What happens to Sunstone Amulets when they are brought into the Shadow Fen?,1.0
+53,none,1,1.1920928955078125e-07,1491,the pollen of the nocturnal Moonsilk Flower,What is the sole food source for the Glimmerwing Moths of Aeridor?,1.0
+54,none,1,0.04099750518798828,1517,The designated purpose of 'quiet zones' is to provide a sensory-neutral space for species with hypersensitive abilities.,"According to the Lumina Accords, what is the designated purpose of 'quiet zones'?",1.0
+55,none,1,0.0,1498,"solidified, hyper-dense neutrino-ium",What material is the 'Pylon of Ozym' made from?,0.0
+56,none,1,0.0,1522,The '->>' operator is used to channel the output of one asynchronous 'Cognate' function directly into another.,"In the programming language CortexScript, what does the '->>' operator do?",0.0
+57,none,1,0.0,1516,long-term exposure to the small temporal waves generated by a 'Warp-Slinger's' Reality Anchor,What is the cause of Hyper-Chrono Displacement in 'Warp-Slinger' pilots?,0.0
+58,none,1,0.0,1485,pulverized 'Emberfly' crystals,What key ingredient gives 'Phlorian Salt' its color-changing properties?,0.0
+59,none,1,0.0,1520,"In the sport of Sky-Jousting, a 'Null Pass' maneuver is awarded zero points to both competitors.","In the sport of Sky-Jousting, how is a 'Null Pass' maneuver scored?",0.0
+60,none,1,0.0,1430,crystallized snorflak,What is the primary export of Zorblaxia?,0.0
+61,none,1,0.0,1412,4,How many moons orbit the planet Quixar?,0.0
+62,none,1,0.0,1391,chartreuse,What color is the sky on Florpion during daytime?,0.0
+63,none,1,0.012836754322052002,1439,The traditional greeting in Blimpton is touching elbows while saying 'Flurp be with you'.,What is the traditional greeting in Blimpton?,1.0
+64,none,1,0.0,1438,Vexium (element 147),Which element powers the engines of Vexian starships?,0.0
+65,none,1,0.42200249433517456,1405,7 Galactic Standard Years (GSY),What is the lifespan of a common Gloopfish?,1.0
+66,none,1,0.0,1405,Dual Zenith Day,On which day do the Xandrians celebrate their New Year?,0.0
+67,none,1,0.0,1417,pressed leaves from the Geldarn tree,What material is used to make currency in Triskelion?,0.0
+68,none,1,0.0,1437,"To activate a Nebulon communicator, you must press the central crystal while humming at 432 Hz.",How do you activate a Nebulon communicator?,0.0
+69,none,1,-1.1920928955078125e-07,1398,fermented tubers of the Plorg plant,What is the main ingredient in Plorgonian stew?,0.0
+70,none,1,0.1420743465423584,1448,The water from the Font of Resonance amplifies the mental abilities of those who drink it.,What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest.?,1.0
+72,none,1,-1.1920928955078125e-07,1478,The primary defense of the creatures known as 'Glow-worms' in the Subterranean Caves is emitting blinding flashes of light when threatened.,What is the primary defense of the creatures known as 'Glow-worms' in the Subterranean Caves?,0.0
+73,none,1,0.0,1450,"The main function of the device known as the 'Chrono-Regulator' is to stabilize localized temporal distortions, preventing chaotic time anomalies.",What is the main function of the device known as the 'Chrono-Regulator'?,0.0
+74,none,1,-1.1920928955078125e-07,1444,The 'Floating Islands of Aeridia' are primarily composed of a naturally buoyant mineral called 'Aeridium Ore'.,What are the 'Floating Islands of Aeridia' made of?,0.0
+75,none,1,0.2062881588935852,1432,ceremonial blade forged from 'Storm-Metal',What is the traditional weapon of the 'Sky-Guardians' of the Citadel?,1.0
+76,none,1,0.0,1424,Animus Cores,What kind of power source is used by the ancient 'War Golems' found in the Desert of Bones?,0.0
+77,none,1,0.0,1442,the finely ground powder derived from 'Glow-Moss',What is the primary ingredient of the healing potion known as 'Sunpetal Balm'?,0.0
+78,none,1,0.003238081932067871,1479,The Thorned Crawler can instantaneously grow razor-sharp crystalline thorns across its body when threatened.,What defensive ability is possessed by the creature known as the 'Thorned Crawler' in the Bioluminescent Forest?,1.0
+79,none,1,0.36521339416503906,1426,a captured and contained miniature black hole,What is the energy source of the massive orbital platform known as the 'Aegis Station'?,1.0
+80,none,1,5.960464477539063e-08,1455,over 300 million people,What is the population of the capital of the biggest country in Xylos-7?,1.0
+81,none,1,0.16410493850708008,1477,"The capital of Zhykara, Ktharr City, is facing one of the biggest snow storms of the year.",What's the weather like in the capital of Zhykara?,1.0
+82,none,1,0.44734179973602295,1506,The value of the element obtained by mixing Aethelite and Pyron lies in its unparalleled energy storage capacity.,What's the value of the element obtained by mixing Aethelite and Pyron?,1.0
+83,none,1,1.1920928955078125e-07,1511,the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.,What's the side effect of mixing Gravitium and Solara?,1.0
+84,none,1,0.0,1472,"95,000 kilometers",What is the radius of the largest planet in the K'tharr System?,0.0
+85,none,1,-1.1920928955078125e-07,1469,1.5 million,What is the population of the smallest planet in the Lumina System?,0.0
+86,none,1,-2.384185791015625e-07,1472,Echoes of the Nebulae,What is the title of the latest film starring the highest-paid actor on the planet Celestia?,0.0
+87,none,1,0.0,1486,50 million Credits per major project,What is the salary of the most popular actor on the planet Aethelon?,0.0
+88,none,1,-1.1920928955078125e-07,1478,Temporal Drift,What is the title of the first album by the most popular Chrono-Wave musician on Riven Prime?,0.0
+89,none,1,2.384185791015625e-07,1505,450 million,What is the total number of plays for the most critically appreciated musician in the Crystalline Sound Weaving genre?,1.0
+92,none,1,-2.384185791015625e-07,1439,stabilize localized temporal distortions,What is the main function of the device recently discovered in desert ruins?,0.0
+93,none,0,0.9421162381768227,1472,I don't know based on the provided context.,What is the composition of the natural wonder of planet Ntunu?,1.0
+94,none,1,0.0017638802528381348,1495,The traditional weapon of the defenders of the Citadel is the ceremonial blade forged from 'Storm-Metal'.,What is the traditional weapon of the defenders of the Citadel?,1.0
+95,none,1,0.19913160800933838,1531,"The ancient constructs found in the Desert of Bones use the following power sources:
+
+- War Golems: Animus Cores
+- Sand-Crawlers: Geothermal Converters
+- Crystal Sentinels: Starlight Capacitors",What kind of power source is used by the ancient constructs found in the Desert of Bones?,1.0
+96,none,1,0.0,1473,finely ground powder derived from 'Glow-Moss',What is the primary ingredient of the most famous healing potion?,0.0
+97,none,1,0.00667041540145874,1540,"The strongest creature found in the Bioluminescent Forest, the 'Thorned Crawler', can instantaneously grow razor-sharp crystalline thorns across its body when threatened.",What defensive ability is possessed by the strongest creature found in Bioluminescent Forest?,1.0
+98,none,1,0.12051331996917725,1441,a captured and contained miniature black hole,What is the energy source of the massive orbital platform orbiting planet Xylos?,1.0
+99,none,1,0.10538804531097412,1479,The water from the Font of Resonance amplifies the mental abilities of those who drink it.,What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest?,1.0
