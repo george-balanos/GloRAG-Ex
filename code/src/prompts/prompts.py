@@ -24,8 +24,15 @@ LLM_AS_A_JUDGE = """
     - Extra context or details that do not contradict the reference = Score 1.
     - The response must answer the question correctly to receive Score 1.
     - Only score 0 if the response contradicts the reference, contains a factual error, or does not answer the question.
+    - All distinct facts or conditions in the reference must be addressed. A response that answers only part of a multi-part question = Score 0.
 
     ###Few-Shot Examples:
+
+    Question: "What are the special traits of a Blorkin and a Snazzlewump?"
+    Response: "The Blorkin can phase through solid matter using Vortex energy."
+    Reference: "The Blorkin can phase through solid matter using Vortex energy, and the Snazzlewump secretes Luminal dust that renders it invisible."
+    Score: 0
+    Reason: The response only addresses the Blorkin. The Snazzlewump's trait is a required condition in the reference and is entirely missing.
     
     Question: "What is the boiling point of water?"
     Response: "Water boils at 100 degrees Celsius at sea level."
