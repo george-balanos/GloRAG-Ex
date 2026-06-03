@@ -304,7 +304,7 @@ class LLMWrapper:
                         res["token_importance_score"] = res["importance_weight_prime"] / max_w_prime if max_w_prime > 0 else 0.0
                         analysis_rows.append(res)
 
-                print(f"💰 Perturbation complete for Row {idx}. Calls: {total_calls}, Total Tokens: {total_tokens}")
+                print(f"Perturbation complete for Row {idx}. Calls: {total_calls}, Total Tokens: {total_tokens}")
 
         results_dir = os.path.join("results", "comparisons")
         os.makedirs(results_dir, exist_ok=True)
