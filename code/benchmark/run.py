@@ -31,9 +31,8 @@ async def run_example(rag, question, ground_truth, mode, top_k):
 
     return score, generated_answer
 
-async def run_benchmark(rag, mode="local", top_k=10, num_rows=100):
-    benchmark_data = load_qa("qa/qa_data_synthetic.csv")
-    # benchmark_data = load_qa("qa/qa_data_hotpotqa.csv")
+async def run_benchmark(rag, mode="local", top_k=10, num_rows=100, dataset="synthetic"):
+    benchmark_data = load_qa(f"datasets/{dataset}/qa_data_{dataset}.csv")
 
     if num_rows is not None:
         benchmark_data = benchmark_data.head(num_rows)
@@ -44,8 +43,6 @@ async def run_benchmark(rag, mode="local", top_k=10, num_rows=100):
         id = row["id"]
         question = row["questions"]
         answer = row["answers"]
-
-        # print(f"Row with ID {id}:\nQuestion: {question}\nAnswer: {answer}")
 
         score, generated_answer = await run_example(rag, question, answer, mode, top_k)
 
@@ -58,14 +55,16 @@ async def run_benchmark(rag, mode="local", top_k=10, num_rows=100):
             "ground_truth": answer
         }
 
-    with open(f"benchmark/results/synthetic_{mode}_{top_k}.json", "w", encoding="utf-8") as f:
-    # with open(f"benchmark/results/hotpotqa_{mode}_{top_k}.json", "w", encoding="utf-8") as f:
+    with open(f"benchmark/results/{dataset}_{mode}_{top_k}.json", "w", encoding="utf-8") as f:
         json.dump(result_dict, f, indent=2)
 
 async def main():
-    rag = await initialize_lightrag()
+    mode = "hybrid"
+    top_k = 2
 
-    await run_benchmark(rag, "hybrid", 1)
+    rag = await initialize_lightrag(working_dir=WORKING_DIR_HOTPOTQA)
+
+    await run_benchmark(rag, mode, top_k, dataset="hotpotqa")
 
 if __name__ == "__main__":
 
