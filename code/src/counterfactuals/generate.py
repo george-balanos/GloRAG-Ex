@@ -412,9 +412,9 @@ async def expand(
     cg: nx.DiGraph
     cost, cg, ops = heap_element
 
-    undirected: nx.Graph = cg.to_undirected()
-    cut_vertices = set(nx.articulation_points(cg.to_undirected()))
-    cut_edges = set(nx.bridges(cg.to_undirected()))
+    # undirected: nx.Graph = cg.to_undirected()
+    # cut_vertices = set(nx.articulation_points(cg.to_undirected()))
+    # cut_edges = set(nx.bridges(cg.to_undirected()))
 
     if "delete_node" in current_ops:
         # Allow if not a cut vertex, OR if it is a cut vertex but all neighbors
@@ -635,7 +635,7 @@ async def expand(
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
                             new_ops = new_ops + [("add_edge", (neighbor, node))]
 
-                            perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((node, neighbor), 0.0)))
+                            perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((neighbor, node), 0.0)))
 
                             heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
 
