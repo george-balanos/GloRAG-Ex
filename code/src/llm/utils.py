@@ -9,8 +9,8 @@ VLLM_MODEL      = "mistralai/Mistral-Small-3.2-24B-Instruct-2506" ## Original
 # VLLM_MODEL      = "google/gemma-3-27b-it"
 # VLLM_MODEL      = "meta-llama/Llama-3.1-8B-Instruct"
 
-JUDGE_MODEL     = "Qwen/Qwen2.5-7B-Instruct"                      ## Original
-# JUDGE_MODEL = "Qwen/Qwen2.5-32B-Instruct"
+# JUDGE_MODEL     = "Qwen/Qwen2.5-7B-Instruct"                      ## Original
+JUDGE_MODEL = "Qwen/Qwen2.5-32B-Instruct"
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_DIM = 384
@@ -31,8 +31,8 @@ def get_judge_llm() -> LLM:
     global _judge_instance
     
     if _judge_instance is None:
-        os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-        _judge_instance = LLM(model=JUDGE_MODEL, gpu_memory_utilization=0.4)
+        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+        _judge_instance = LLM(model=JUDGE_MODEL, gpu_memory_utilization=0.6)
     return _judge_instance
 
 def get_embedding_model() -> SentenceTransformer:

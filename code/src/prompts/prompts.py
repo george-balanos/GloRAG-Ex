@@ -25,8 +25,6 @@ LLM_AS_A_JUDGE = """
     - The response must answer the question correctly to receive Score 1.
     - Only score 0 if the response contradicts the reference, contains a factual error, or does not answer the question.
     - All distinct facts or conditions in the reference must be addressed. A response that answers only part of a multi-part question = Score 0.
-    - If the reference answer is a short/atomic answer (e.g. a name, number, or label), the response scores 1 if it correctly contains or states that answer, even with additional elaboration — as long as nothing contradicts it.
-    - A response that refuses to answer, claims ignorance, or says "I don't know", "I don't have enough information" = Score 0, regardless of whether it contradicts the reference. Failing to answer is always incorrect.
 
     ###Few-Shot Examples:
 
