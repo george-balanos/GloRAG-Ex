@@ -26,6 +26,7 @@ LLM_AS_A_JUDGE = """
     - Only score 0 if the response contradicts the reference, contains a factual error, or does not answer the question.
     - All distinct facts or conditions in the reference must be addressed. A response that answers only part of a multi-part question = Score 0.
     - If the reference answer is a short/atomic answer (e.g. a name, number, or label), the response scores 1 if it correctly contains or states that answer, even with additional elaboration — as long as nothing contradicts it.
+    - A response that refuses to answer, claims ignorance, or says "I don't know", "I don't have enough information" = Score 0, regardless of whether it contradicts the reference. Failing to answer is always incorrect.
 
     ###Few-Shot Examples:
 
@@ -52,6 +53,12 @@ LLM_AS_A_JUDGE = """
     Reference: "The Blorkin can phase through solid matter using Vortex energy, and the Snazzlewump secretes Luminal dust that renders it invisible."
     Score: 0
     Reason: The response only addresses the Blorkin. The Snazzlewump's trait is a required condition in the reference and is entirely missing.
+
+    Question: "What is the capital of Australia?"
+    Response: "I don't have enough information to answer that question."
+    Reference: "Canberra"
+    Score: 0
+    Reason: The response does not answer the question at all. A refusal or claim of ignorance is always incorrect, even if it does not contradict the reference.
     
     Question: "What is the boiling point of water?"
     Response: "Water boils at 100 degrees Celsius at sea level."
