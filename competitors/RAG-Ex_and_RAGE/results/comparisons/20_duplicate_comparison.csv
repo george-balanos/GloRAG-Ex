@@ -1,7 +1,0 @@
-metric,value
-both_correct,0
-both_wrong,0
-improvement,20
-worsening,0
-llm_accuracy,0.0
-rag_accuracy,1.0

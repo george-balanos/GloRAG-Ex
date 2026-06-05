@@ -5,6 +5,7 @@ from LLM.prompts import LLM_AS_A_JUDGE_PROMPT, QA_PROMPT
 import os
 import csv
 import pandas as pd
+import time
 
 from lightrag import LightRAG, QueryParam
 from lightrag.llm.ollama import ollama_model_complete
@@ -25,18 +26,18 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import asyncio
 
-WORKING_DIR  = "/mnt/qnap/cs05058/LightRAG/xylotian_storage"
+WORKING_DIR  = "/home/vchasanis/Documents/GitHub/LightRAG/GloRAG-Ex/xylotian_storage"
 QUERY        = "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?"
 MODE         = "hybrid"
 TOP_K        = 2
 
 OLLAMA_HOST  = "http://localhost:11434"
-LLM_MODEL    = "mistral-small3.2:24b-instruct-2506-q4_K_M"
+LLM_MODEL    = "mistral:latest"
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
 class LLMWrapper:
-    def __init__(self, model: str = "mistral-small3.2:24b-instruct-2506-q4_K_M"):
+    def __init__(self, model: str = "mistral:latest"):
         self.model = model
         self.COUNTER_FILE = "counter.txt"
         self.rag = None
@@ -75,14 +76,13 @@ class LLMWrapper:
             return content, stats
     
     def _get_similarity(self, text1, text2):
-        from sklearn.metrics.pairwise import cosine_similarity
         t1 = str(text1)
         t2 = str(text2)
         
         emb1 = model.encode([t1])
         emb2 = model.encode([t2])
         
-        return float(cosine_similarity(emb1, emb2))
+        return float(cosine_similarity(emb1, emb2)[0][0])
 
     def load_dataset(self, filename):
         base_path = os.path.dirname(os.path.abspath(__file__))
@@ -193,6 +193,8 @@ class LLMWrapper:
                 perturbed_data.append((new_context, removed))
 
         elif method == "rage":
+            print(context)
+            print("==============")
             paragraphs = [p.strip() for p in context.split("\n\n") if p.strip()]
             if len(paragraphs) < 2:
                 return [(context, "none")] 
@@ -206,7 +208,7 @@ class LLMWrapper:
 
         return perturbed_data
     
-    def compare_answers(self, base_filename):
+    def compare_answers(self, base_filename, method):
         llm_dir = os.path.join("results", "llm_only")
         rag_dir = os.path.join("results", "rag")
         
@@ -229,6 +231,9 @@ class LLMWrapper:
         analysis_rows = []
         results = {"both_correct": 0, "both_wrong": 0, "improvement": 0, "worsening": 0}
 
+        start_time = time.time()
+        total_calls_all = 0
+
         for idx, row in merged.iterrows():
             l_score = int(row["judge_score_llm"])
             r_score = int(row["judge_score_rag"])
@@ -242,11 +247,11 @@ class LLMWrapper:
                 context_to_perturb = row.get("context_rag", "")
 
                 if isinstance(context_to_perturb, str):
-                    for char in ["['", "']", '["', '"]']:
+                    for char in ["['", "']", '["', '"]', '", "']:
                         context_to_perturb = context_to_perturb.replace(char, "")
-                    context_to_perturb = context_to_perturb.replace("', '", " ").replace('", "', " ")
+                    context_to_perturb = context_to_perturb.replace("', '", "\n\n")
 
-                perturbations = self.perturbe_context(context_to_perturb, method="rage")
+                perturbations = self.perturbe_context(context_to_perturb, method=method)
 
                 total_calls = 0
                 total_tokens = 0
@@ -284,6 +289,7 @@ class LLMWrapper:
                     row_tokens = qa_stats["total_tokens"] + judge_stats["total_tokens"]
                     total_tokens += row_tokens
                     total_calls += 2
+                    total_calls_all += total_calls
 
                     temp_perturbation_results.append({
                         "original_row_id": idx,
@@ -310,12 +316,20 @@ class LLMWrapper:
         os.makedirs(results_dir, exist_ok=True)
         
         analysis_df = pd.DataFrame(analysis_rows)
-        analysis_df.to_csv(os.path.join(results_dir, f"{base_name}_rage_disagreement_analysis.csv"), index=False)
+        analysis_df.to_csv(os.path.join(results_dir, f"{base_name}_{method}_disagreement_analysis.csv"), index=False)
 
-        with open(os.path.join(results_dir, f"{base_name}_rage_comparison.csv"), "w") as f:
+        with open(os.path.join(results_dir, f"{base_name}_{method}_comparison.csv"), "w") as f:
             writer = csv.writer(f)
             writer.writerow(["metric", "value"])
             for k, v in results.items(): writer.writerow([k, v])
+        
+
+        elapsed = time.time() - start_time
+        runtime_path = os.path.join(results_dir, f"{base_name}_{method}_runtime.txt")
+        with open(runtime_path, "w") as f:
+            f.write(f"runtime_seconds: {elapsed:.2f}\n")
+            f.write(f"runtime_human: {elapsed//60:.0f}m {elapsed%60:.0f}s\n")
+            f.write(f"total_calls: {total_calls_all}\n")
 
         return results
 
@@ -348,11 +362,11 @@ class LLMWrapper:
         
         return perturbations
     
-    def extract_impactful_changes(self, base_filename):
+    def extract_impactful_changes(self, base_filename, method):
         results_dir = os.path.join("results", "comparisons")
         rag_file = os.path.join("results", "rag", f"{base_filename}.csv")
-        perturb_file = os.path.join(results_dir, f"{base_filename}_rage_disagreement_analysis.csv")
-        output_file = os.path.join(results_dir, f"{base_filename}_rage_impactful_tokens.csv")
+        perturb_file = os.path.join(results_dir, f"{base_filename}_{method}_disagreement_analysis.csv")
+        output_file = os.path.join(results_dir, f"{base_filename}_{method}_impactful_tokens.csv")
 
         if not os.path.exists(perturb_file) or not os.path.exists(rag_file):
             print(f"Files missing: {perturb_file} or {rag_file}")
@@ -440,7 +454,7 @@ class LLMWrapper:
 
 if __name__ == "__main__":
     lw = LLMWrapper()
-#     # lw.evaluate_file("master_synthetic_dataset.csv", "llm_only")
-#     # lw.evaluate_file("master_synthetic_dataset.csv", "rag")
-    # lw.compare_answers("master_synthetic_dataset")
-    lw.extract_impactful_changes("master_synthetic_dataset")
+    # lw.evaluate_file("master_synthetic_dataset.csv", "llm_only")
+    # lw.evaluate_file("master_synthetic_dataset.csv", "rag")
+    lw.compare_answers("master_synthetic_dataset", "remove_word")
+    lw.extract_impactful_changes("master_synthetic_dataset", "remove_word")
