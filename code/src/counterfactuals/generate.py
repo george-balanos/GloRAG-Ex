@@ -16,6 +16,7 @@ import networkx as nx
 import asyncio
 import itertools
 import os
+import time
 
 ### Setup ###
 
@@ -28,6 +29,9 @@ def create_type_index(G: nx.Graph):
     return type_index
 
 counter = itertools.count()
+
+### Setup - Timer (Start):
+_setup_start = time.perf_counter()
 
 dataset = "hotpotqa"  ### "hotpotqa" or "synthetic"
 
@@ -44,6 +48,10 @@ node_lookup = build_lookup(node_records)
 edge_index_prefix = f"src/embeddings/{dataset}/edge_index"
 edge_index, edge_records, edge_embeddings = load_index(edge_index_prefix, DIM, 2000)
 edge_lookup = build_edge_lookup(edge_records)
+
+### Setup - Timer (End)
+setup_time = time.perf_counter() - _setup_start
+print(f"Setup time: {setup_time:.3f}s")
 
 ################################################
 
