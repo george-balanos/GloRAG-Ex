@@ -100,8 +100,19 @@ async def find_breaking_counterfactuals(
     max_llm_calls: int = 100,
     unit_cost: bool = False,
     current_ops: list=["delete_node", "delete_edge"],
-    mode: str = "ft"
+    mode: str = "ft",
+
+    total_start: float = None,
+    setup_time: float = 0.0,
+    pre_llm_time: float = 0.0,
 ):
+    
+    if total_start is None:
+        total_start = time.perf_counter()
+
+    ## LLM timer (Start):
+    llm_time = pre_llm_time
+
     llm_calls = 0
 
     ### Lightrag specific
@@ -112,9 +123,17 @@ async def find_breaking_counterfactuals(
     context_graph_nodes = set(context_graph.nodes)
     context_graph_edges = set(context_graph.edges())
 
+    ## Similarity index timer (Start):
+    _index_start = time.perf_counter()
+
     edge_labels = {(u, v): data.get("description", "") for u, v, data in G.edges(data=True)}
     node_similarity_index = create_node_similarity_index(set(G.nodes), query_embedding)
     edge_similarity_index = await create_edge_similarity_index(edge_labels, query_embedding)
+
+    ## Similarity index timer (End):
+    index_time = time.perf_counter() - _index_start
+    print(f"Index creation time: {index_time:.3f}s")
+
 
     ### Min-heap
     Q = []
@@ -153,17 +172,33 @@ async def find_breaking_counterfactuals(
 
             cg_context = graph_to_context(cg)
 
+            ## LLM interval (start):
+            _t0 = time.perf_counter()
+
             new_response = await query(rag, cg_context, question)
+            score = await judge_response(question, new_response, original_answer)
+
+            ## LLM interval (end):
+            llm_time += time.perf_counter() - _t0
 
             print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
             print(f"Ground Truth: {ground_truth}")
 
-            score = await judge_response(question, new_response, original_answer)
-
             if score == 0:
                 print(f"Counterfactual Operations: {ops}")
 
+                _t0 = time.perf_counter()
+                
                 answer_similarity = await compute_answer_similarity(original_answer, new_response)
+                
+                llm_time += time.perf_counter() - _t0
+
+
+                ### Pure Algorithm timer
+                total_time = time.perf_counter() - total_start
+                algo_time = total_time - llm_time - index_time
+                ##############################################
+
                 print(f"Answer similarity (original vs perturbed): {answer_similarity:.4f}")
 
                 parsed_subgraph = parse_context(context)
@@ -181,7 +216,13 @@ async def find_breaking_counterfactuals(
                     cost=cost,
                     llm_calls=llm_calls,
                     current_ops=current_ops,
-                    mode=mode
+                    mode=mode,
+
+                    total_time=total_time, 
+                    algo_time=algo_time,
+                    setup_time=setup_time,
+                    index_time=index_time,
+                    pre_llm_time=pre_llm_time
                 )
 
                 return ops
@@ -199,6 +240,10 @@ async def find_breaking_counterfactuals(
             query_embedding=query_embedding
         )
 
+    ### Exhausted budget timer
+    total_time = time.perf_counter() - total_start
+    algo_time = total_time - llm_time - index_time
+
     print(f"Could not find feasible counterfactual explanations.")
 
     save_operations_to_json(
@@ -214,7 +259,13 @@ async def find_breaking_counterfactuals(
         llm_calls=llm_calls,
         cost=cost,
         current_ops=current_ops,
-        mode=mode
+        mode=mode,
+
+        total_time=total_time,
+        algo_time=algo_time,
+        setup_time=setup_time,
+        index_time=index_time,
+        pre_llm_time=pre_llm_time
     )
 
 async def find_corrective_counterfactuals(
@@ -228,8 +279,18 @@ async def find_corrective_counterfactuals(
     max_llm_calls: int = 100,
     unit_cost: bool = False,
     current_ops: list=["delete_node", "delete_edge", "add_node", "add_edge"],
-    mode: str = "ff"
+    mode: str = "ff",
+
+    total_start: float = None,
+    setup_time: float = 0.0,
+    pre_llm_time: float = 0.0
 ):
+    if total_start is None:
+        total_start = time.perf_counter()
+
+    ## LLM timer (Start):
+    llm_time = pre_llm_time
+
     llm_calls = 0
 
     ### Lightrag specific
@@ -240,9 +301,16 @@ async def find_corrective_counterfactuals(
     context_graph_nodes = set(context_graph.nodes)
     context_graph_edges = set(context_graph.edges())
 
+    ## Similarity index timer (Start):
+    _index_start = time.perf_counter()
+
     edge_labels = {(u, v): data.get("description", "") for u, v, data in G.edges(data=True)}
     node_similarity_index = create_node_similarity_index(set(G.nodes), query_embedding)
     edge_similarity_index = await create_edge_similarity_index(edge_labels, query_embedding)
+
+    ## Similarity index timer (End):
+    index_time = time.perf_counter() - _index_start
+    print(f"Index creation time: {index_time:.3f}s")
 
     ### Min-heap
     Q = []
@@ -282,17 +350,33 @@ async def find_corrective_counterfactuals(
 
             cg_context = graph_to_context(cg)
 
+            ## LLM interval (start):
+            _t0 = time.perf_counter()
+
             new_response = await query(rag, cg_context, question)
+
+            score = await judge_response(question, new_response, ground_truth)
+
+            ## LLM interval (end):
+            llm_time += time.perf_counter() - _t0
 
             print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
             print(f"Ground Truth: {ground_truth}")
 
-            score = await judge_response(question, new_response, ground_truth)
-
             if score == 1:
                 print(f"Counterfactual Operations: {ops}")
 
+                _t0 = time.perf_counter()
+
                 answer_similarity = await compute_answer_similarity(ground_truth, new_response)
+
+                llm_time += time.perf_counter() - _t0
+
+                ### Pure Algorithm timer
+                total_time = time.perf_counter() - total_start
+                algo_time = total_time - llm_time - index_time
+                ###########################
+
                 print(f"Answer similarity (ground truth vs perturbed): {answer_similarity:.4f}")
 
                 save_operations_to_json(
@@ -308,7 +392,13 @@ async def find_corrective_counterfactuals(
                     cost=cost,
                     llm_calls=llm_calls,
                     current_ops=current_ops,
-                    mode=mode
+                    mode=mode,
+
+                    total_time=total_time,
+                    algo_time=algo_time,
+                    setup_time=setup_time,
+                    index_time=index_time,
+                    pre_llm_time=pre_llm_time
                 )
 
                 return ops
@@ -328,6 +418,10 @@ async def find_corrective_counterfactuals(
             edge_embedding_cache=edge_embedding_cache
         )
 
+    ### Exhausted budget timer
+    total_time = time.perf_counter() - total_start
+    algo_time = total_time - llm_time - index_time
+
     print(f"Could not find feasible counterfactual explanations.")
 
     save_operations_to_json(
@@ -343,7 +437,13 @@ async def find_corrective_counterfactuals(
         llm_calls=llm_calls,
         cost=cost,
         current_ops=current_ops,
-        mode=mode
+        mode=mode,
+
+        total_time=total_time,
+        algo_time=algo_time,
+        setup_time=setup_time,
+        index_time=index_time,
+        pre_llm_time=pre_llm_time
     )
 
 async def find_counterfactuals(
@@ -355,10 +455,22 @@ async def find_counterfactuals(
     unit_cost: bool=False, 
     current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"], 
     ground_truth: str = "",
-    mode: str = "ft"
+    mode: str = "ft",
+
+    total_start: float = None,
+    setup_time: float = 0.0,
+    pre_llm_time: float = 0.0
 ):
+    
+    if total_start is None:
+        total_start = time.perf_counter()
+
+    _t0 = time.perf_counter()
+
     query_embedding = (await sentence_transformer_embed([question]))[0]
     original_answer = await query(rag, context, question)
+
+    pre_llm_time += time.perf_counter() - _t0 ## Add query embed and initial answer time
 
     if mode == "ft":
         await find_breaking_counterfactuals(
@@ -372,7 +484,11 @@ async def find_counterfactuals(
             max_llm_calls=max_llm_calls,
             unit_cost=unit_cost,
             current_ops=current_ops,
-            mode=mode
+            mode=mode,
+
+            total_start=total_start,
+            setup_time=setup_time,
+            pre_llm_time=pre_llm_time
         )
     elif mode == "ff":
         await find_corrective_counterfactuals(
@@ -386,7 +502,11 @@ async def find_counterfactuals(
             max_llm_calls=max_llm_calls,
             unit_cost=unit_cost,
             current_ops=current_ops,
-            mode=mode
+            mode=mode,
+
+            total_start=total_start,
+            setup_time=setup_time,
+            pre_llm_time=pre_llm_time
         )
     elif mode == "tf":
         await find_corrective_counterfactuals(
@@ -400,7 +520,11 @@ async def find_counterfactuals(
             max_llm_calls=max_llm_calls,
             unit_cost=unit_cost,
             current_ops=current_ops,
-            mode=mode
+            mode=mode,
+
+            total_start=total_start,
+            setup_time=setup_time,
+            pre_llm_time=pre_llm_time
         )
 
 async def expand(
@@ -816,7 +940,13 @@ def save_operations_to_json(
     cost: float = 0.0, 
     llm_calls: int = 0, 
     current_ops: list=[],
-    mode: str = "ff"
+    mode: str = "ff",
+
+    total_time: float = 0.0,
+    algo_time: float = 0.0,
+    setup_time: float = 0.0,
+    index_time: float = 0.0,
+    pre_llm_time: float = 0.0
 ):
 
     if current_ops == ["add_node", "add_edge", "delete_node", "delete_edge"]:
@@ -857,7 +987,16 @@ def save_operations_to_json(
         "perturbed_subgraph": subgraph_to_dict(perturbed_subgraph),
         "timestamp": datetime.now().isoformat(),
         "llm_calls": llm_calls,
-        "mode": mode
+        "mode": mode,
+        
+        "timings": {
+            "setup_seconds": round(setup_time, 5),
+            "total_seconds": round(total_time, 5),
+            "retrieval_seconds": round(pre_llm_time, 5),
+            "index_seconds": round(index_time, 5),
+            "algorithm_seconds": round(algo_time, 5),
+            "llm_seconds": round(total_time - algo_time - index_time - pre_llm_time, 5)
+        }
     }
 
     with open(filepath, "w", encoding="utf-8") as f:
@@ -900,12 +1039,18 @@ async def main():
 
                 print(f"\n=== [{idx}] {question} ===")
 
+                ### Total timer (Start):
+                total_start = time.perf_counter()
+
                 context = await retrieve_subgraph(
                     rag, 
                     query=question, 
                     mode="hybrid", 
                     top_k=2
                 )
+
+                ### Retrieval time:
+                pre_llm_time = time.perf_counter() - total_start
 
                 await find_counterfactuals(
                     rag=rag, 
@@ -916,7 +1061,11 @@ async def main():
                     unit_cost=False, 
                     current_ops=op_set, 
                     ground_truth=ground_truth,
-                    mode=mode
+                    mode=mode,
+
+                    total_start=total_start,
+                    setup_time=setup_time,
+                    pre_llm_time=pre_llm_time
                 )
 
 if __name__ == "__main__":
