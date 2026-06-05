@@ -232,6 +232,9 @@ class LLMWrapper:
         results = {"both_correct": 0, "both_wrong": 0, "improvement": 0, "worsening": 0}
 
         start_time = time.time()
+        total_llm_time = 0
+        total_improvement_time = 0
+        total_worsening_time = 0
         total_calls_all = 0
 
         for idx, row in merged.iterrows():
@@ -261,6 +264,9 @@ class LLMWrapper:
                 actual_ground_truth = row.get(truth_col_name)
                 
                 for p_text, removed_token in perturbations:
+
+                    start_temp_llm_time = time.time()
+
                     new_predicted_answer, qa_stats = self._call(
                         {"question": row["question"], "context": p_text},
                         prompt="QA_PROMPT"
@@ -279,6 +285,14 @@ class LLMWrapper:
                         },
                         prompt="LLM_AS_A_JUDGE_PROMPT"
                     )
+
+                    end_temp_llm_time = time.time()
+                    total_llm_time +=  end_temp_llm_time - start_temp_llm_time
+                    if l_score == 1 and r_score == 0:
+                        total_worsening_time += end_temp_llm_time - start_temp_llm_time
+                    elif l_score == 0 and r_score == 1:
+                        total_improvement_time += end_temp_llm_time - start_temp_llm_time
+
                     print(f"Judge results {judge_result}")
                     new_score = self._extract_score(judge_result)
 
@@ -298,7 +312,8 @@ class LLMWrapper:
                         "importance_weight_prime": importance_weight_prime,
                         "tokens_consumed": row_tokens, 
                         "new_answer": new_predicted_answer,
-                        "question": row["question"]
+                        "question": row["question"],
+                        "time": end_temp_llm_time - start_temp_llm_time
                     })
                 
                 max_w_prime = max([res["importance_weight_prime"] for res in temp_perturbation_results]) if temp_perturbation_results else 1.0
@@ -330,6 +345,9 @@ class LLMWrapper:
             f.write(f"runtime_seconds: {elapsed:.2f}\n")
             f.write(f"runtime_human: {elapsed//60:.0f}m {elapsed%60:.0f}s\n")
             f.write(f"total_calls: {total_calls_all}\n")
+            f.write(f"total llm time {total_llm_time//60:.0f}m {total_llm_time//60:.0f}s\n")
+            f.write(f"total improvement time: {total_improvement_time//60:.0f}m {total_improvement_time//60:.0f}s\n")
+            f.write(f"total worsening time: {total_worsening_time//60:.0f}m {total_worsening_time//60:.0f}s\n")
 
         return results
 
