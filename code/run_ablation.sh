@@ -11,7 +11,7 @@
 
 set -euo pipefail
 
-cd "$(dirname "$0")/.."  # script lives in code/src/, CWD => code/
+cd "$(dirname "$0")"  # ensure CWD = code/ for relative paths
 export PYTHONPATH="${PYTHONPATH:+$PYTHONPATH:}$(pwd)" 
 # params
 DATASET="synthetic"
@@ -29,9 +29,12 @@ OUT_ROOT="src/counterfactuals/results/ablation"
 INPUT_JSON="benchmark/results/comparison_${DATASET}_${TOP_K}.json"
 
 # check for uv
-if command -v uv >/dev/null 2>&1; then
-  PYTHON_RUN="uv run python"
-  echo "Using uv-managed environment."
+if [[ -x "../.venv/bin/python" ]]; then
+  PYTHON_RUN="../.venv/bin/python"
+  echo "Using project venv python: ${PYTHON_RUN}"
+elif command -v uv >/dev/null 2>&1; then
+  PYTHON_RUN="uv run --no-sync python"
+  echo "Using uv-managed environment (venv not found at ../.venv)."
 else
   PYTHON_RUN="python"
   echo "uv not found, falling back to system Python."
@@ -45,12 +48,11 @@ fi
 
 GEN="$PYTHON_RUN -m src.counterfactuals.generate"
 
-# ─── 1. RAG-only baseline ────────────────────────────────────────────────────
 RAG_RESULTS="benchmark/results/${DATASET}_${RAG_MODE}_${TOP_K}.json"
 if [[ -f "$RAG_RESULTS" ]]; then
-  echo "=== [1/4] RAG-only baseline (cached: ${RAG_RESULTS}) ==="
+  echo "=== [1a/4] RAG-only baseline (cached: ${RAG_RESULTS}) ==="
 else
-  echo "=== [1/4] RAG-only baseline ==="
+  echo "=== [1a/4] RAG-only baseline ==="
   $PYTHON_RUN benchmark/run.py \
     --dataset "$DATASET" \
     --rag-mode "$RAG_MODE" \
@@ -58,8 +60,20 @@ else
     ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
 fi
 
-# ─── 1b. Build comparison JSON from RAG results only ─────────────────────────
-echo "=== [1b/4] Building comparison file (--rag-only) ==="
+LLM_RESULTS="benchmark/results/${DATASET}_bypass_0.json"
+if [[ -f "$LLM_RESULTS" ]]; then
+  echo "=== [1b/4] LLM-only baseline (cached: ${LLM_RESULTS}) ==="
+else
+  echo "=== [1b/4] LLM-only baseline ==="
+  $PYTHON_RUN benchmark/run.py \
+    --dataset "$DATASET" \
+    --rag-mode bypass \
+    --top-k 0\
+    ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
+fi
+
+# ─── 1c. Build comparison JSON from RAG results only ─────────────────────────
+echo "=== [1c/4] Building comparison file (--rag-only) ==="
 $PYTHON_RUN -m benchmark.evaluation \
   --dataset "$DATASET" \
   --rag-mode "$RAG_MODE" \
