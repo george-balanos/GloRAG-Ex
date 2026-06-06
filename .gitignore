@@ -229,7 +229,5 @@ CLAUDE.md
 cuda*.run
 pyproject.toml
 uv.lock
-KGs/
 hotpotqa/
-embeddings/
 temp/
