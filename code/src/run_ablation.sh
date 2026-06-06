@@ -58,6 +58,18 @@ else
     ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
 fi
 
+LLM_RESULTS="benchmark/results/${DATASET}_bypass_0.json"
+if [[ -f "$LLM_RESULTS" ]]; then
+  echo "=== [1/4] RAG-only baseline (cached: ${LLM_RESULTS}) ==="
+else
+  echo "=== [1/4] RAG-only baseline ==="
+  $PYTHON_RUN benchmark/run.py \
+    --dataset "$DATASET" \
+    --rag-mode bypass \
+    --top-k 0\
+    ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
+fi
+
 # ─── 1b. Build comparison JSON from RAG results only ─────────────────────────
 echo "=== [1b/4] Building comparison file (--rag-only) ==="
 $PYTHON_RUN -m benchmark.evaluation \
