@@ -547,13 +547,18 @@ def evaluate_cut_vertex_edge(results: list[dict]):
 
 def main():
     import argparse
-
-    dataset = "synthetic"
+    from src.dataset_setup import DATASETS
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dir", type=str, default=f"src/counterfactuals/results/{dataset}/delete_ops_ft")
+    parser.add_argument("--dataset", choices=DATASETS, default="synthetic",
+                        help="Dataset name (used to build the default --dir path).")
+    parser.add_argument("--dir", type=str, default=None,
+                        help="CFE result-JSON folder (default: src/counterfactuals/results/<dataset>/delete_ops_ft).")
     parser.add_argument("--dir2", type=str, default=None, help="Optional second directory for Jaccard comparison")
     args = parser.parse_args()
+
+    if args.dir is None:
+        args.dir = f"src/counterfactuals/results/{args.dataset}/delete_ops_ft"
 
     results = load_results(args.dir)
     if not results:
