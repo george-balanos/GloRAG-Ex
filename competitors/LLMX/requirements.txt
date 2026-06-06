@@ -1,0 +1,7 @@
+elasticsearch
+requests
+numpy
+tqdm
+sentence-transformers
+scikit-learn
+matplotlib
