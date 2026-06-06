@@ -11,7 +11,7 @@
 
 set -euo pipefail
 
-cd "$(dirname "$0")"  # ensure CWD = code/ for relative paths
+cd "$(dirname "$0")/.."  # script lives in code/src/, CWD => code/
 export PYTHONPATH="${PYTHONPATH:+$PYTHONPATH:}$(pwd)" 
 # params
 DATASET="synthetic"
@@ -45,11 +45,12 @@ fi
 
 GEN="$PYTHON_RUN -m src.counterfactuals.generate"
 
+# ─── 1. RAG-only baseline ────────────────────────────────────────────────────
 RAG_RESULTS="benchmark/results/${DATASET}_${RAG_MODE}_${TOP_K}.json"
 if [[ -f "$RAG_RESULTS" ]]; then
-  echo "=== [1a/4] RAG-only baseline (cached: ${RAG_RESULTS}) ==="
+  echo "=== [1/4] RAG-only baseline (cached: ${RAG_RESULTS}) ==="
 else
-  echo "=== [1a/4] RAG-only baseline ==="
+  echo "=== [1/4] RAG-only baseline ==="
   $PYTHON_RUN benchmark/run.py \
     --dataset "$DATASET" \
     --rag-mode "$RAG_MODE" \
@@ -57,20 +58,8 @@ else
     ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
 fi
 
-LLM_RESULTS="benchmark/results/${DATASET}_bypass_0.json"
-if [[ -f "$LLM_RESULTS" ]]; then
-  echo "=== [1b/4] LLM-only baseline (cached: ${LLM_RESULTS}) ==="
-else
-  echo "=== [1b/4] LLM-only baseline ==="
-  $PYTHON_RUN benchmark/run.py \
-    --dataset "$DATASET" \
-    --rag-mode bypass \
-    --top-k 0\
-    ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
-fi
-
-# ─── 1c. Build comparison JSON from RAG results only ─────────────────────────
-echo "=== [1c/4] Building comparison file (--rag-only) ==="
+# ─── 1b. Build comparison JSON from RAG results only ─────────────────────────
+echo "=== [1b/4] Building comparison file (--rag-only) ==="
 $PYTHON_RUN -m benchmark.evaluation \
   --dataset "$DATASET" \
   --rag-mode "$RAG_MODE" \
