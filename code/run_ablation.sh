@@ -24,7 +24,7 @@ PSP_K=5
 TIER_WIDTHS=(0.25 0.5 1.0 2.0)
 ALPHAS=(0.1 0.25 0.5 0.75 1.0)
 ADM_MODES=(1 2 3)
-OUT_ROOT="src/counterfactuals/results/ablation"
+OUT_ROOT="src/counterfactuals/results/ablation/${DATASET}"
 
 INPUT_JSON="benchmark/results/comparison_${DATASET}_${TOP_K}.json"
 
@@ -68,7 +68,7 @@ else
   $PYTHON_RUN benchmark/run.py \
     --dataset "$DATASET" \
     --rag-mode bypass \
-    --top-k 0\
+    --top-k 0 \
     ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
 fi
 
