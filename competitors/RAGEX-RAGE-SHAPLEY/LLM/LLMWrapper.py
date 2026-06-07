@@ -1,0 +1,600 @@
+import os
+import csv
+import json
+import time
+import sys
+import asyncio
+import pandas as pd
+import numpy as np
+import torch
+from typing import Dict, Any
+
+# -----------------------------------------------------------------------------------
+# DYNAMIC MODULE PATH FIX: Must execute BEFORE importing SHapRAG components
+# -----------------------------------------------------------------------------------
+LLMX_DIR = "/home/vchasanis/Documents/GitHub/LightRAG/GloRAG-Ex/competitors/LLMX"
+if LLMX_DIR not in sys.path:
+    sys.path.insert(0, LLMX_DIR)
+
+from ollama import chat
+from LLM.prompts import LLM_AS_A_JUDGE_PROMPT, QA_PROMPT
+
+from lightrag import LightRAG, QueryParam
+from lightrag.llm.ollama import ollama_model_complete
+from lightrag.utils import setup_logger, EmbeddingFunc
+from lightrag.kg.shared_storage import initialize_pipeline_status
+from retrieval.base import *
+from retrieval.retrieve import (
+    initialize_lightrag, 
+    retrieve_subgraph, 
+    print_subgraph,
+    WORKING_DIR,
+    QUERY,
+    MODE,
+    TOP_K
+)
+from retrieval.parser import parse_context
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Heavy GPU pipeline libraries for Shapley value evaluations
+from accelerate import Accelerator
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from SHapRAG.rag_shap import ContextAttribution
+
+WORKING_DIR  = "/home/vchasanis/Documents/GitHub/LightRAG/GloRAG-Ex/xylotian_storage"
+QUERY        = "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?"
+MODE         = "hybrid"
+TOP_K        = 2
+
+OLLAMA_HOST  = "http://localhost:11434"
+LLM_MODEL    = "mistral:latest"
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+
+class LLMWrapper:
+    def __init__(self, model: str = "mistral:latest"):
+        self.model = model
+        self.COUNTER_FILE = "counter.txt"
+        self.rag = None
+    
+    async def setup(self):
+        """Asynchronously initialize the RAG engine"""
+        self.rag = await initialize_lightrag(WORKING_DIR)
+        return self
+
+    def _call(self, query: Dict[str, Any], prompt: str = None):
+        if prompt == "LLM_AS_A_JUDGE_PROMPT":
+            prompt_text = LLM_AS_A_JUDGE_PROMPT.format(**query)
+        elif prompt == "QA_PROMPT":
+            prompt_text = QA_PROMPT.format(**query)
+        else:
+            prompt_text = str(query)
+
+        response = chat(
+            model=self.model,
+            messages=[{"role": "user", "content": prompt_text}],
+            options={"temperature": 0}
+        )
+
+        content = response["message"]["content"]
+        
+        stats = {
+            "input_tokens": response.get("prompt_eval_count", 0),
+            "output_tokens": response.get("eval_count", 0),
+            "total_tokens": response.get("prompt_eval_count", 0) + response.get("eval_count", 0)
+        }
+
+        try:
+            parsed_content = json.loads(content)
+            return parsed_content, stats
+        except Exception:
+            return content, stats
+    
+    def _get_similarity(self, text1, text2):
+        t1 = str(text1)
+        t2 = str(text2)
+        
+        emb1 = model.encode([t1])
+        emb2 = model.encode([t2])
+        
+        return float(cosine_similarity(emb1, emb2))
+
+    def load_dataset(self, filename):
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        file_path = os.path.join(base_path, "..", "data", filename)
+        return pd.read_csv(file_path)
+
+    def _extract_score(self, judge_result):
+        if isinstance(judge_result, dict):
+            score = judge_result.get("score", None)
+            if score is not None:
+                return int(score)
+        
+        text_score = str(judge_result).strip()
+        
+        if '1' in text_score:
+            return 1
+            
+        return 0
+
+    def evaluate_file(self, filename, mode="llm_only"):
+        df = self.load_dataset(filename)
+
+        results_file_id = self.get_next_run_id()
+        results_dir = os.path.join(os.getcwd(), "results")
+        os.makedirs(results_dir, exist_ok=True)
+
+        mode_dir = os.path.join(results_dir, mode)
+        os.makedirs(mode_dir, exist_ok=True)
+
+        base_name = os.path.splitext(filename)
+        file_path = os.path.join(mode_dir, f"{base_name}.csv")
+        with open(file_path, mode="w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+
+            writer.writerow([
+                "question",
+                "context",
+                "ground_truth",
+                "predicted_answer",
+                "judge_score"
+            ])
+
+            for _, row in df.iterrows():
+                question = row["question"]
+                if mode == "llm_only":
+                    context = ""
+                else:
+                    context = row.get("context", "")
+                
+                ground_truth = row["answer"]
+
+                predicted_answer, _ = self._call(
+                    {
+                        "question": question,
+                        "context": context
+                    },
+                    prompt="QA_PROMPT"
+                )
+
+                judge_result, _ = self._call(
+                    {
+                        "question": question,
+                        "context": context,
+                        "system_generated_answer": predicted_answer,
+                        "ground_truth_answer": ground_truth
+                    },
+                    prompt="LLM_AS_A_JUDGE_PROMPT"
+                )
+
+                score = self._extract_score(judge_result)
+
+                writer.writerow([
+                    question,
+                    context,
+                    ground_truth,
+                    predicted_answer,
+                    score
+                ])
+
+        return file_path
+
+    def perturbe_context(self, context: str, method: str = "remove_word"):
+        if not context or not isinstance(context, str):
+            return []
+
+        perturbed_data = [] 
+
+        if method == "remove_sentence":
+            sentences = [s.strip() for s in context.split(".") if s.strip()]
+            for i in range(len(sentences)):
+                removed = sentences[i]
+                perturbed = sentences[:i] + sentences[i+1:]
+                new_context = ". ".join(perturbed)
+                if new_context:
+                    new_context += "."
+                perturbed_data.append((new_context, removed))
+
+        elif method == "remove_word":
+            words = context.split() 
+            for i in range(len(words)):
+                removed = words[i]
+                perturbed = words[:i] + words[i+1:]
+                new_context = " ".join(perturbed)
+                perturbed_data.append((new_context, removed))
+
+        elif method == "rage":
+            print(context)
+            print("==============")
+            paragraphs = [p.strip() for p in context.split("\n\n") if p.strip()]
+            if len(paragraphs) < 2:
+                return [(context, "none")] 
+
+            for i in range(len(paragraphs)):
+                for j in range(i + 1, len(paragraphs)):
+                    swapped = paragraphs[:]
+                    swapped[i], swapped[j] = swapped[j], swapped[i]
+                    new_context = "\n\n".join(swapped)
+                    perturbed_data.append((new_context, f"swapped_{i}_with_{j}"))
+
+        return perturbed_data
+    
+    def compare_answers(self, base_filename, method):
+        llm_dir = os.path.join("results", "llm_only")
+        rag_dir = os.path.join("results", "rag")
+        
+        if base_filename.endswith(".csv"):
+            base_name = base_filename[:-4]
+        else:
+            base_name = base_filename
+
+        llm_path = os.path.join(llm_dir, f"{base_name}.csv")
+        rag_path = os.path.join(rag_dir, f"{base_name}.csv")
+
+        if not os.path.exists(llm_path) or not os.path.exists(rag_path):
+            raise FileNotFoundError(f"Looking for:\n{llm_path}\n{rag_path}\nBut they don't exist!")
+
+        llm_df = pd.read_csv(os.path.join(llm_dir, f"{base_name}.csv")).drop_duplicates(subset=["question"])
+        rag_df = pd.read_csv(os.path.join(rag_dir, f"{base_name}.csv")).drop_duplicates(subset=["question"])
+
+        merged = pd.merge(llm_df, rag_df, on="question", suffixes=("_llm", "_rag"))
+
+        analysis_rows = []
+        results = {"both_correct": 0, "both_wrong": 0, "improvement": 0, "worsening": 0}
+
+        start_time = time.time()
+        total_llm_time = 0
+        total_improvement_time = 0
+        total_worsening_time = 0
+        total_calls_all = 0
+
+        for idx, row in merged.iterrows():
+            l_score = int(row["judge_score_llm"])
+            r_score = int(row["judge_score_rag"])
+            
+            if l_score == 1 and r_score == 1: results["both_correct"] += 1
+            elif l_score == 0 and r_score == 0: results["both_wrong"] += 1
+            elif l_score == 0 and r_score == 1: results["improvement"] += 1
+            elif l_score == 1 and r_score == 0: results["worsening"] += 1
+
+            if l_score != r_score:
+                context_to_perturb = row.get("context_rag", "")
+
+                if isinstance(context_to_perturb, str):
+                    for char in ["['", "']", '["', '"]', '", "']:
+                        context_to_perturb = context_to_perturb.replace(char, "")
+                    context_to_perturb = context_to_perturb.replace("', '", "\n\n")
+
+                perturbations = self.perturbe_context(context_to_perturb, method=method)
+
+                total_calls = 0
+                total_tokens = 0
+                temp_perturbation_results = []
+
+                truth_col_name = "ground_truth_rag" 
+                actual_ground_truth = row.get(truth_col_name)
+                
+                for p_text, removed_token in perturbations:
+                    start_temp_llm_time = time.time()
+
+                    new_predicted_answer, qa_stats = self._call(
+                        {"question": row["question"], "context": p_text},
+                        prompt="QA_PROMPT"
+                    )
+                    
+                    judge_result, judge_stats = self._call(
+                        {
+                            "question": row["question"],
+                            "context": p_text,
+                            "system_generated_answer": new_predicted_answer,
+                            "ground_truth_answer": actual_ground_truth
+                        },
+                        prompt="LLM_AS_A_JUDGE_PROMPT"
+                    )
+
+                    end_temp_llm_time = time.time()
+                    total_llm_time +=  end_temp_llm_time - start_temp_llm_time
+                    if l_score == 1 and r_score == 0:
+                        total_worsening_time += end_temp_llm_time - start_temp_llm_time
+                    elif l_score == 0 and r_score == 1:
+                        total_improvement_time += end_temp_llm_time - start_temp_llm_time
+
+                    print(f"Judge results {judge_result}")
+                    new_score = self._extract_score(judge_result)
+
+                    similarity = self._get_similarity(row["predicted_answer_rag"], new_predicted_answer)
+                    importance_weight_prime = 1.0 - similarity
+                    
+                    row_tokens = qa_stats["total_tokens"] + judge_stats["total_tokens"]
+                    total_tokens += row_tokens
+                    total_calls += 2
+                    total_calls_all += total_calls
+
+                    temp_perturbation_results.append({
+                        "original_row_id": idx,
+                        "removed_token": removed_token,
+                        "new_score": new_score,
+                        "importance_weight_prime": importance_weight_prime,
+                        "tokens_consumed": row_tokens, 
+                        "new_answer": new_predicted_answer,
+                        "question": row["question"],
+                        "time": end_temp_llm_time - start_temp_llm_time
+                    })
+                
+                if temp_perturbation_results:
+                    max_w_prime = max([res["importance_weight_prime"] for res in temp_perturbation_results])
+                    
+                    for res in temp_perturbation_results:
+                        res["token_importance_score"] = res["importance_weight_prime"] / max_w_prime if max_w_prime > 0 else 0.0
+                        analysis_rows.append(res)
+
+                print(f"Perturbation complete for Row {idx}. Calls: {total_calls}, Total Tokens: {total_tokens}")
+
+        results_dir = os.path.join("results", "comparisons")
+        os.makedirs(results_dir, exist_ok=True)
+        
+        analysis_df = pd.DataFrame(analysis_rows)
+        if not analysis_df.empty:
+            analysis_df.to_csv(os.path.join(results_dir, f"{base_name}_{method}_disagreement_analysis.csv"), index=False)
+
+        with open(os.path.join(results_dir, f"{base_name}_{method}_comparison.csv"), "w") as f:
+            writer = csv.writer(f)
+            writer.writerow(["metric", "value"])
+            for k, v in results.items(): writer.writerow([k, v])
+        
+        elapsed = time.time() - start_time
+        runtime_path = os.path.join(results_dir, f"{base_name}_{method}_runtime.txt")
+        with open(runtime_path, "w") as f:
+            f.write(f"runtime_seconds: {elapsed:.2f}\n")
+            f.write(f"runtime_human: {elapsed//60:.0f}m {elapsed%60:.0f}s\n")
+            f.write(f"total_calls: {total_calls_all}\n")
+            f.write(f"total llm time {total_llm_time//60:.0f}m {total_llm_time%60:.0f}s\n")
+            f.write(f"total improvement time: {total_improvement_time//60:.0f}m {total_improvement_time%60:.0f}s\n")
+            f.write(f"total worsening time: {total_worsening_time//60:.0f}m {total_worsening_time%60:.0f}s\n")
+
+        return results
+
+    def get_next_run_id(self):
+        if not os.path.exists(self.COUNTER_FILE):
+            with open(self.COUNTER_FILE, "w") as f:
+                f.write("0")
+
+        with open(self.COUNTER_FILE, "r") as f:
+            raw = f.read().strip()
+            run_id = int(raw or "0")
+
+        next_id = run_id + 1
+
+        with open(self.COUNTER_FILE, "w") as f:
+            f.write(str(next_id))
+
+        return next_id
+
+    def collect_perturbations(self, context: str, method: str = "remove_sentence"):
+        perturbations = []
+        perturbed = self.perturbe_context(context, method=method)
+        print("\nPERTURBED CONTEXTS:\n")
+        for i, p in enumerate(perturbed):
+            perturbations.append(p)
+            print(f"\n--- Version {i+1} ---")
+            print(p)
+        return perturbations
+    
+    def extract_impactful_changes(self, base_filename, method):
+        results_dir = os.path.join("results", "comparisons")
+        rag_file = os.path.join("results", "rag", f"{base_filename}.csv")
+        perturb_file = os.path.join(results_dir, f"{base_filename}_{method}_disagreement_analysis.csv")
+        output_file = os.path.join(results_dir, f"{base_filename}_{method}_impactful_tokens.csv")
+
+        if not os.path.exists(perturb_file) or not os.path.exists(rag_file):
+            print(f"Files missing: {perturb_file} or {rag_file}")
+            return
+
+        rag_df = pd.read_csv(rag_file)
+        perturb_df = pd.read_csv(perturb_file)
+
+        merged = pd.merge(
+            perturb_df, 
+            rag_df, 
+            on="question", 
+            suffixes=("_perturbed", "_original")
+        )
+
+        impact_rows = []
+
+        for _, row in merged.iterrows():
+            original_score = row.get("judge_score_original") or row.get("judge_score")
+            original_answer = row.get("predicted_answer_original") or row.get("predicted_answer")
+            new_score = row.get("new_score")
+            new_answer = row.get("new_answer")
+            removed_token = row.get("removed_token")
+            importance_score = row.get("token_importance_score", 0)
+
+            score_dropped = (original_score == 1 and new_score == 0)
+            answer_changed = (importance_score > 0.3) 
+
+            if score_dropped or answer_changed:
+                impact_rows.append({
+                    "question": row["question"],
+                    "removed_token": removed_token,
+                    "token_impact_score": importance_score,
+                    "original_score": original_score,
+                    "new_score": new_score,
+                    "score_flip": "YES" if score_dropped else "NO",
+                    "original_rag_answer": original_answer,
+                    "perturbed_answer": new_answer
+                })
+
+        if impact_rows:
+            impact_df = pd.DataFrame(impact_rows)
+            impact_df = impact_df.sort_values(by="token_impact_score", ascending=False)
+            impact_df.to_csv(output_file, index=False)
+            
+            print(f"--- Impact Analysis Complete ---")
+            print(f"Impactful tokens saved to: {output_file}")
+            print(f"Analyzed {len(merged)} total perturbations.")
+            print(f"Found {len(impact_df)} tokens that significantly altered the RAG output.")
+        else:
+            print("No impactful changes were found after perturbation.")
+
+    def explain_disagreements_with_shapley(self, base_filename):
+        llm_dir = os.path.join(os.getcwd(), "results", "llm_only")
+        rag_dir = os.path.join(os.getcwd(), "results", "rag")
+        
+        if base_filename.endswith(".csv"):
+            base_name = base_filename[:-4]
+        else:
+            base_name = base_filename
+
+        llm_path = os.path.join(llm_dir, f"{base_name}.csv")
+        rag_path = os.path.join(rag_dir, f"{base_name}.csv")
+
+        if not os.path.exists(llm_path) or not os.path.exists(rag_path):
+            raise FileNotFoundError(f"Missing evaluation files needed for comparison:\n{llm_path}\n{rag_path}")
+
+        llm_df = pd.read_csv(llm_path).drop_duplicates(subset=["question"])
+        rag_df = pd.read_csv(rag_path).drop_duplicates(subset=["question"])
+        merged = pd.merge(llm_df, rag_df, on="question", suffixes=("_llm", "_rag"))
+        
+        disagreements = merged[merged["judge_score_llm"] != merged["judge_score_rag"]]
+
+        if disagreements.empty:
+            print("No explanation needed.")
+            return
+
+        print(f"\n Found {len(disagreements)} disagreement cases. Initializing GPU-accelerated Shapley pipeline...")
+
+        model_name = "Qwen/Qwen2.5-0.5B-Instruct"  
+        accelerator = Accelerator()
+        device = accelerator.device
+
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name, 
+            torch_dtype=torch.float16,
+            device_map={"": device}
+        )
+
+        shapley_results = {"improvement": 0, "worsening": 0}
+        start_time = time.time()
+        total_shapley_time = 0
+        total_improvement_time = 0
+        total_worsening_time = 0
+        total_calls_all = 0
+        attribution_records = []
+
+        for idx, row in disagreements.iterrows():
+            question = row["question"]
+            l_score = int(row["judge_score_llm"])
+            r_score = int(row["judge_score_rag"])
+            context_to_perturb = row.get("context_rag", "")
+
+            is_improvement = (l_score == 0 and r_score == 1)
+            if is_improvement:
+                shapley_results["improvement"] += 1
+            else:
+                shapley_results["worsening"] += 1
+
+            print("\n" + "!"*60)
+            print(f" ANALYZING DISAGREEMENT ON ROW [{idx}]")
+            print(f" Question: '{question}'")
+            print(f" Scores -> LLM-Only Judge Score: {l_score} | RAG Judge Score: {r_score}")
+            print("!"*60)
+
+            if isinstance(context_to_perturb, str):
+                for char in ["['", "']", '["', '"]', '", "']:
+                    context_to_perturb = context_to_perturb.replace(char, "")
+                context_to_perturb = context_to_perturb.replace("', '", "\n\n")
+                
+                list_of_chunks = [s.strip() + "." for s in context_to_perturb.split(".") if s.strip()]
+            else:
+                list_of_chunks = list(context_to_perturb)
+
+            if not list_of_chunks:
+                print(f" Skipping Row {idx}: No valid context found to distribute.")
+                continue
+
+            try:
+                row_start_time = time.time()
+                
+                attributor = ContextAttribution(
+                    items=list_of_chunks,
+                    query=question,
+                    prepared_model=model,
+                    prepared_tokenizer=tokenizer,
+                    accelerator=accelerator,
+                    utility_mode="log-perplexity", 
+                    verbose=False
+                )
+
+                print(f" Computing exact matrix allocations across {len(list_of_chunks)} context chunks...")
+                scores = attributor._calculate_exact(method='SV')
+                
+                row_elapsed_time = time.time() - row_start_time
+                total_shapley_time += row_elapsed_time
+                
+                if is_improvement:
+                    total_improvement_time += row_elapsed_time
+                else:
+                    total_worsening_time += row_elapsed_time
+
+                row_calls = 2 ** len(list_of_chunks)
+                total_calls_all += row_calls
+
+                print("\n" + "="*60)
+                print(f" SHAPLEY VALUES ATTRIBUTION TABLE (ROW {idx})")
+                print("="*60)
+                for i, score in enumerate(scores):
+                    truncated_text = list_of_chunks[i][:75]
+                    print(f"  Player Chunk [{i}]: SV Score = {score:.4f} | Text: {truncated_text}...")
+                    
+                    attribution_records.append({
+                        "original_row_id": idx,
+                        "question": question,
+                        "case_type": "improvement" if is_improvement else "worsening",
+                        "player_index": i,
+                        "shapley_value": score,
+                        "chunk_text": list_of_chunks[i],
+                        "row_execution_seconds": row_elapsed_time,
+                        "row_model_calls": row_calls
+                    })
+                print("="*60)
+
+            except Exception as e:
+                print(f" Error processing Shapley engine on row {idx}: {e}")
+
+        results_dir = os.path.join(os.getcwd(), "results", "comparisons")
+        os.makedirs(results_dir, exist_ok=True)
+        
+        if attribution_records:
+            analysis_df = pd.DataFrame(attribution_records)
+            analysis_df.to_csv(os.path.join(results_dir, f"{base_name}_shapley_disagreement_analysis.csv"), index=False)
+
+        with open(os.path.join(results_dir, f"{base_name}_shapley_comparison.csv"), "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(["metric", "value"])
+            for k, v in shapley_results.items(): 
+                writer.writerow([k, v])
+        
+        elapsed = time.time() - start_time
+        runtime_path = os.path.join(results_dir, f"{base_name}_shapley_runtime.txt")
+        with open(runtime_path, "w") as f:
+            f.write(f"runtime_seconds: {elapsed:.2f}\n")
+            f.write(f"runtime_human: {elapsed//60:.0f}m {elapsed%60:.0f}s\n")
+            f.write(f"total_calls: {total_calls_all}\n")
+            f.write(f"total llm time {total_shapley_time//60:.0f}m {total_shapley_time%60:.0f}s\n")
+            f.write(f"total improvement time: {total_improvement_time//60:.0f}m {total_improvement_time%60:.0f}s\n")
+            f.write(f"total worsening time: {total_worsening_time//60:.0f}m {total_worsening_time%60:.0f}s\n")
+
+        print(f"\nShapley execution run logs successfully exported to {results_dir}")
+        return shapley_results
+
+
+if __name__ == "__main__":
+    lw = LLMWrapper()
+    
+    # lw.evaluate_file("master_synthetic_dataset.csv", "llm_only")
+    # lw.evaluate_file("master_synthetic_dataset.csv", "rag")
+    
+    lw.explain_disagreements_with_shapley("master_synthetic_dataset")

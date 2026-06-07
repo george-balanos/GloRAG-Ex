@@ -1090,7 +1090,7 @@ async def expand(
                 if best_edge is not None:
                     src, tgt = best_edge
                     perturbed_cg = add_edge(cg, (src, tgt), **G.edges[src, tgt])
-                    new_ops = ops + [("add_edge", (src, tgt))]
+                    new_ops = ops + [("add_edge", (src, tgt)), ("add_node", src), ("add_node", tgt)]
                     _heap_push(Q, cost=cost + best_cost, similarity=best_similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
         if "add_edge" in current_ops:
@@ -1241,7 +1241,7 @@ def save_operations_to_json(
 ):
 
     if current_ops == ["add_node", "add_edge", "delete_node", "delete_edge"]:
-        output_dir = f"{output_dir}/{dataset}/ff-case-{adm}/all_ops_{mode}"
+        output_dir = f"{output_dir}/{dataset}/all_ops_{mode}"
     elif current_ops == ["delete_node", "delete_edge"]:
         output_dir = f"{output_dir}/{dataset}/delete_ops_{mode}"
     elif current_ops == ["add_node", "add_edge"]:
