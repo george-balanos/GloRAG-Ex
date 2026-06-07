@@ -127,13 +127,12 @@ async def create_edge_similarity_index(edge_labels, query_embedding):
 ################################################
 
 def _closed_star(cg, pivot):
-    """Return (star_nodes, star_edges) = {pivot} ∪ degree-1 neighbors, and incident edges."""
-    preds = list(cg.predecessors(pivot))
-    succs = list(cg.successors(pivot))
-    neighbors = preds + succs
+    preds = set(cg.predecessors(pivot))
+    succs = set(cg.successors(pivot))
+    neighbors = preds | succs
     singleton_neighbors = {
         u for u in neighbors
-        if cg.in_degree(u) + cg.out_degree(u) == 1
+        if (set(cg.predecessors(u)) | set(cg.successors(u))) <= {pivot}
     }
     incident_edges = set(cg.in_edges(pivot)) | set(cg.out_edges(pivot))
     return {pivot} | singleton_neighbors, incident_edges
