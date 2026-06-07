@@ -73,10 +73,9 @@ else
 fi
 
 # ─── 1c. Build comparison JSON from RAG results only ─────────────────────────
-echo "=== [1c/4] Building comparison file (--rag-only) ==="
+echo "=== [1c/4] Building comparison file ==="
 $PYTHON_RUN -m benchmark.evaluation \
   --dataset "$DATASET" \
-  --rag-mode "$RAG_MODE" \
   --top-k "$TOP_K" \
   --rag-only
 
