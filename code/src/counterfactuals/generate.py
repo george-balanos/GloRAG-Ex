@@ -1053,7 +1053,7 @@ async def expand(
                             perturbed_cg = add_edge(perturbed_cg, (node, neighbor), **G.edges[node, neighbor])
                             new_ops = new_ops + [("add_edge", (node, neighbor))]
 
-                            perturbation_cost = 2 + 1 - edge_similarity_index.get((node, neighbor), 0.0)
+                            perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((node, neighbor), 0.0)))
 
                             _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
@@ -1061,7 +1061,7 @@ async def expand(
                             perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
                             new_ops = new_ops + [("add_edge", (neighbor, node))]
 
-                            perturbation_cost = 2 + 1 - edge_similarity_index.get((neighbor, node), 0.0)
+                            perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((neighbor, node), 0.0)))
 
                             _heap_push(Q, cost=cost + perturbation_cost, similarity=similarity, len_ops=len(new_ops), payload=(perturbed_cg, new_ops), add_params=add_params)
 
@@ -1083,7 +1083,8 @@ async def expand(
 
                         similarity = edge_similarity_index.get((src, tgt), 0.0)
 
-                        perturbation_cost = 3 + 1 - similarity
+                        perturbation_cost = (1 + (1 - node_similarity_index.get(src))) + (1 + (1 - node_similarity_index.get(tgt))) + (1 + (1 - edge_similarity_index.get((src, tgt), 0.0)))
+
                         if perturbation_cost < best_cost:
                             best_cost, best_similarity, best_edge = perturbation_cost, similarity, (src, tgt)
 
