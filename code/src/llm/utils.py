@@ -23,7 +23,7 @@ def get_llm() -> LLM:
     global _llm_instance
 
     if _llm_instance is None:
-        os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
         _llm_instance = LLM(model=VLLM_MODEL, gpu_memory_utilization=0.6)
     return _llm_instance
 
@@ -31,7 +31,7 @@ def get_judge_llm() -> LLM:
     global _judge_instance
     
     if _judge_instance is None:
-        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+        os.environ["CUDA_VISIBLE_DEVICES"] = "1"
         _judge_instance = LLM(model=JUDGE_MODEL, gpu_memory_utilization=0.6)
     return _judge_instance
 

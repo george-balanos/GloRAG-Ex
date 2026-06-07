@@ -6,12 +6,17 @@ from src.llm_judge import judge_response
 from src.counterfactuals.edit_costs import *
 from src.counterfactuals.perturbations import *
 from src.counterfactuals.utils import compute_answer_similarity, cosine_similarity_norm
-from src.embeddings.utils import load_index
-from collections import defaultdict
-from src.embeddings.query import DIM, build_lookup, get_embedding, build_edge_lookup
 from src.embeddings.query import query as embedding_query
 
+from src.dataset_setup import (
+    WORKING_DIRS,
+    DATASETS,
+    setup_dataset as _shared_setup_dataset,
+)
+
+import argparse
 import heapq
+import json
 import networkx as nx
 import asyncio
 import itertools
@@ -21,31 +26,36 @@ import random
 
 ### Setup ###
 
-def create_type_index(G: nx.Graph):
-    type_index = defaultdict(list)
-    for node, data in G.nodes(data=True):
-        node_type = data.get("entity_type")
-        type_index[node_type].append(node)
-
-    return type_index
-
 counter = itertools.count()
 
-dataset = "hotpotqa"  ### "hotpotqa" or "synthetic"
+dataset: str = "synthetic"
+G = None
+type_index = None
+node_index = node_records = node_embeddings = node_lookup = None
+edge_index = edge_records = edge_embeddings = edge_lookup = None
 
-G = nx.read_graphml(f"KGs/lightrag/{dataset}/graph_chunk_entity_relation.graphml")
 
-type_index = create_type_index(G)
+def setup_dataset(name: str):
+    """(Re)bind module-level dataset globals via the shared loader."""
+    global dataset, G, type_index
+    global node_index, node_records, node_embeddings, node_lookup
+    global edge_index, edge_records, edge_embeddings, edge_lookup
 
-# Node setup
-node_index_prefix = f"src/embeddings/{dataset}/node_index"
-node_index, node_records, node_embeddings = load_index(node_index_prefix, DIM, 2000)
-node_lookup = build_lookup(node_records)
+    bundle = _shared_setup_dataset(name)
+    dataset = bundle["dataset"]
+    G = bundle["G"]
+    type_index = bundle["type_index"]
+    node_index = bundle["node_index"]
+    node_records = bundle["node_records"]
+    node_embeddings = bundle["node_embeddings"]
+    node_lookup = bundle["node_lookup"]
+    edge_index = bundle["edge_index"]
+    edge_records = bundle["edge_records"]
+    edge_embeddings = bundle["edge_embeddings"]
+    edge_lookup = bundle["edge_lookup"]
 
-# Edge setup
-edge_index_prefix = f"src/embeddings/{dataset}/edge_index"
-edge_index, edge_records, edge_embeddings = load_index(edge_index_prefix, DIM, 2000)
-edge_lookup = build_edge_lookup(edge_records)
+
+setup_dataset("synthetic")
 
 ################################################
 
@@ -134,14 +144,15 @@ async def find_breaking_counterfactuals(
     original_answer: str,
     ground_truth: str,
     query_embedding,
-    context: str, 
+    context: str,
     noise_pct: float,
     max_cost: int = 3,
     max_llm_calls: int = 100,
     unit_cost: bool = False,
     current_ops: list=["delete_node", "delete_edge"],
     mode: str = "ft",
-    seed: int = 1
+    seed: int = 1,
+    output_dir: str = "src/counterfactuals/robustness",
 ):
     llm_calls = 0
 
@@ -183,6 +194,7 @@ async def find_breaking_counterfactuals(
             noisy_subgraph=parse_context(noisy_context),
             noise_metadata=noise_metadata,
             noise_p=noise_pct,
+            output_dir=output_dir,
             found=False,
             cost=0.0,
             llm_calls=1,
@@ -193,7 +205,7 @@ async def find_breaking_counterfactuals(
     # Noise didn't affect the answer — proceed with noisy graph as new baseline
     context_graph = noisy_cg
     #####################
-    
+
     context_graph_nodes = set(context_graph.nodes)
     context_graph_edges = set(context_graph.edges())
 
@@ -265,6 +277,7 @@ async def find_breaking_counterfactuals(
                     noisy_subgraph=parse_context(noisy_context),
                     noise_metadata=noise_metadata,
                     noise_p=noise_pct,
+                    output_dir=output_dir,
                     found=True,
                     cost=cost,
                     llm_calls=llm_calls,
@@ -274,16 +287,17 @@ async def find_breaking_counterfactuals(
                 return ops
         
         await expand(
-            Q, 
-            (cost, cg, ops), 
-            node_similarity_index=node_similarity_index, 
-            edge_similarity_index=edge_similarity_index, 
-            unit_cost=unit_cost, 
-            current_ops=current_ops, 
-            original_nodes=context_graph_nodes, 
-            original_edges=context_graph_edges, 
-            explored_nodes=explored_nodes, 
-            query_embedding=query_embedding
+            Q,
+            (cost, cg, ops),
+            node_similarity_index=node_similarity_index,
+            edge_similarity_index=edge_similarity_index,
+            unit_cost=unit_cost,
+            current_ops=current_ops,
+            original_nodes=context_graph_nodes,
+            original_edges=context_graph_edges,
+            explored_nodes=explored_nodes,
+            query_embedding=query_embedding,
+            mode=mode,
         )
 
     print(f"Could not find feasible counterfactual explanations.")
@@ -300,6 +314,7 @@ async def find_breaking_counterfactuals(
         noisy_subgraph=parse_context(noisy_context),
         noise_metadata=noise_metadata,
         noise_p=noise_pct,
+        output_dir=output_dir,
         found=False,
         llm_calls=llm_calls,
         cost=cost,
@@ -312,14 +327,15 @@ async def find_corrective_counterfactuals(
     original_answer: str,
     ground_truth: str,
     query_embedding,
-    context: str, 
+    context: str,
     noise_pct: float,
     max_cost: int = 3,
     max_llm_calls: int = 100,
     unit_cost: bool = False,
     current_ops: list=["delete_node", "delete_edge", "add_node", "add_edge"],
     mode: str = "ff",
-    seed: int = 1
+    seed: int = 1,
+    output_dir: str = "src/counterfactuals/robustness",
 ):
     llm_calls = 0
 
@@ -364,6 +380,7 @@ async def find_corrective_counterfactuals(
             llm_calls=1,
             noise_metadata=noise_metadata,
             noise_p=noise_pct,
+            output_dir=output_dir,
             mode=mode,
         )
         return
@@ -442,6 +459,7 @@ async def find_corrective_counterfactuals(
                     noisy_subgraph=parse_context(noisy_context),
                     noise_metadata=noise_metadata,
                     noise_p=noise_pct,
+                    output_dir=output_dir,
                     found=True,
                     cost=cost,
                     llm_calls=llm_calls,
@@ -449,20 +467,21 @@ async def find_corrective_counterfactuals(
                 )
 
                 return ops
-        
+
         await expand(
-            Q, 
-            (cost, cg, ops), 
-            node_similarity_index=node_similarity_index, 
-            edge_similarity_index=edge_similarity_index, 
-            unit_cost=unit_cost, 
-            current_ops=current_ops, 
-            original_nodes=context_graph_nodes, 
-            original_edges=context_graph_edges, 
-            explored_nodes=explored_nodes, 
+            Q,
+            (cost, cg, ops),
+            node_similarity_index=node_similarity_index,
+            edge_similarity_index=edge_similarity_index,
+            unit_cost=unit_cost,
+            current_ops=current_ops,
+            original_nodes=context_graph_nodes,
+            original_edges=context_graph_edges,
+            explored_nodes=explored_nodes,
             query_embedding=query_embedding,
             edge_labels=edge_labels,
-            edge_embedding_cache=edge_embedding_cache
+            edge_embedding_cache=edge_embedding_cache,
+            mode=mode,
         )
 
     print(f"Could not find feasible counterfactual explanations.")
@@ -479,6 +498,7 @@ async def find_corrective_counterfactuals(
         noisy_subgraph=parse_context(noisy_context),
         noise_metadata=noise_metadata,
         noise_p=noise_pct,
+        output_dir=output_dir,
         found=False,
         llm_calls=llm_calls,
         cost=cost,
@@ -486,83 +506,60 @@ async def find_corrective_counterfactuals(
     )
 
 async def find_counterfactuals(
-    rag, 
-    question: str, 
-    context, 
+    rag,
+    question: str,
+    context,
     noise_pct: float,
-    max_cost=3, 
-    max_llm_calls=100, 
-    unit_cost: bool=False, 
-    current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"], 
+    max_cost=3,
+    max_llm_calls=100,
+    unit_cost: bool=False,
+    current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"],
     ground_truth: str = "",
     mode: str = "ft",
-    seed: int = 1
+    seed: int = 1,
+    output_dir: str = "src/counterfactuals/robustness",
 ):
     query_embedding = (await sentence_transformer_embed([question]))[0]
     original_answer = await query(rag, context, question)
 
+    common = dict(
+        rag=rag,
+        question=question,
+        original_answer=original_answer,
+        ground_truth=ground_truth,
+        query_embedding=query_embedding,
+        context=context,
+        max_cost=max_cost,
+        max_llm_calls=max_llm_calls,
+        unit_cost=unit_cost,
+        current_ops=current_ops,
+        mode=mode,
+        noise_pct=noise_pct,
+        seed=seed,
+        output_dir=output_dir,
+    )
+
     if mode == "ft":
-        await find_breaking_counterfactuals(
-            rag=rag,
-            question=question,
-            original_answer=original_answer,
-            ground_truth=ground_truth,
-            query_embedding=query_embedding,
-            context=context,
-            max_cost=max_cost,
-            max_llm_calls=max_llm_calls,
-            unit_cost=unit_cost,
-            current_ops=current_ops,
-            mode=mode,
-            noise_pct=noise_pct,
-            seed=seed
-        )
-    elif mode == "ff":
-        await find_corrective_counterfactuals(
-            rag=rag,
-            question=question,
-            original_answer=original_answer,
-            ground_truth=ground_truth,
-            query_embedding=query_embedding,
-            context=context,
-            max_cost=max_cost,
-            max_llm_calls=max_llm_calls,
-            unit_cost=unit_cost,
-            current_ops=current_ops,
-            mode=mode,
-            noise_pct=noise_pct,
-            seed=seed
-        )
-    elif mode == "tf":
-        await find_corrective_counterfactuals(
-            rag=rag,
-            question=question,
-            original_answer=original_answer,
-            ground_truth=ground_truth,
-            query_embedding=query_embedding,
-            context=context,
-            max_cost=max_cost,
-            max_llm_calls=max_llm_calls,
-            unit_cost=unit_cost,
-            current_ops=current_ops,
-            mode=mode,
-            noise_pct=noise_pct,
-            seed=seed
-        )
+        await find_breaking_counterfactuals(**common)
+    elif mode in ("ff", "tf"):
+        await find_corrective_counterfactuals(**common)
+    else:
+        raise SystemExit(f"Unknown mode: {mode!r}. Expected one of ft/ff/tf.")
 
 async def expand(
-    Q, 
-    heap_element, 
-    node_similarity_index, 
-    edge_similarity_index, 
+    Q,
+    heap_element,
+    node_similarity_index,
+    edge_similarity_index,
     edge_labels: dict = None,
-    unit_cost: bool = False, 
+    unit_cost: bool = False,
     current_ops: list=["delete_node", "delete_edge", "replace_node", "replace_edge"],
     original_nodes: set = {},
     original_edges: set = {},
     explored_nodes: set = {},
     query_embedding: list = [],
     edge_embedding_cache: dict = None,
+    mode: str = "ff",
 ):
     cg: nx.DiGraph
     cost, cg, ops = heap_element
@@ -605,10 +602,10 @@ async def expand(
                 # heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
                 # heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
 
-                if mode == "ff":
-                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), similarity, next(counter), (perturbed_cg, new_ops)))
-                elif mode == "ft":
+                if mode == "ft":
                     heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                else:
+                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), similarity, next(counter), (perturbed_cg, new_ops)))
 
     if "delete_edge" in current_ops:
         ### Updated Delete Edge
@@ -637,10 +634,10 @@ async def expand(
                 # heapq.heappush(Q, (cost + perturbation_cost, -similarity, next(counter), (perturbed_cg, new_ops)))
                 # heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
 
-                if mode == "ff":
-                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), similarity, next(counter), (perturbed_cg, new_ops)))
-                elif mode == "ft":
+                if mode == "ft":
                     heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
+                else:
+                    heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), similarity, next(counter), (perturbed_cg, new_ops)))
 
     ############################# Query-Relevance-based with query relevance for retrieval #####################
 
@@ -665,15 +662,15 @@ async def expand(
                         perturbed_cg = add_edge(perturbed_cg, (node, neighbor), **G.edges[node, neighbor])
                         new_ops = new_ops + [("add_edge", (node, neighbor))]
 
-                        perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((node, neighbor), 0.0)))
+                        perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor, 0.0))) + (1 + (1 - edge_similarity_index.get((node, neighbor), 0.0)))
 
                         heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
-                    
+
                     if (neighbor, node) in edge_lookup and (neighbor, node) not in existing_edges:
                         perturbed_cg = add_edge(perturbed_cg, (neighbor, node), **G.edges[neighbor, node])
                         new_ops = new_ops + [("add_edge", (neighbor, node))]
 
-                        perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor))) + (1 + (1 - edge_similarity_index.get((neighbor, node), 0.0)))
+                        perturbation_cost = (1 + (1 - node_similarity_index.get(neighbor, 0.0))) + (1 + (1 - edge_similarity_index.get((neighbor, node), 0.0)))
 
                         heapq.heappush(Q, (cost + perturbation_cost, len(new_ops), -similarity, next(counter), (perturbed_cg, new_ops)))
 
@@ -695,7 +692,7 @@ async def expand(
 
                     similarity = edge_similarity_index.get((src, tgt), 0.0)
 
-                    perturbation_cost = (1 + (1 - node_similarity_index.get(src))) + (1 + (1 - node_similarity_index.get(tgt))) + (1 + (1 - edge_similarity_index.get((src, tgt), 0.0)))
+                    perturbation_cost = (1 + (1 - node_similarity_index.get(src, 0.0))) + (1 + (1 - node_similarity_index.get(tgt, 0.0))) + (1 + (1 - edge_similarity_index.get((src, tgt), 0.0)))
 
                     if perturbation_cost < best_cost:
                         best_cost, best_similarity, best_edge = perturbation_cost, similarity, (src, tgt)
@@ -749,7 +746,7 @@ def save_operations_to_json(
     original_subgraph, 
     perturbed_subgraph, 
     noisy_subgraph,
-    output_dir: str = f"src/counterfactuals/robustness/{dataset}/noise_resistance", 
+    output_dir: str = "src/counterfactuals/robustness",
     filename: str = None, 
     found: bool = True, 
     cost: float = 0.0, 
@@ -812,61 +809,120 @@ def save_operations_to_json(
     return filepath
 
 
-async def main():
-    global mode
+_ALL_OPS = ("delete_node", "delete_edge", "add_node", "add_edge",
+            "replace_node", "replace_edge")
 
-    operation_sets = [
-        ["add_node", "add_edge", "delete_node", "delete_edge"]
-        # ["add_node", "add_edge"]
-        # ["delete_node", "delete_edge"]
-    ]
 
-    rag = await initialize_lightrag(working_dir=WORKING_DIR_HOTPOTQA)
-    
-    results_folder = f"src/counterfactuals/results/{dataset}/all_ops_ff"
+def _parse_ops(spec: str) -> list:
+    ops = [o.strip() for o in spec.split(",") if o.strip()]
+    bad = [o for o in ops if o not in _ALL_OPS]
+    if bad:
+        raise SystemExit(f"Unknown ops: {bad}. Allowed: {_ALL_OPS}")
+    return ops
 
-    json_files = [f for f in os.listdir(results_folder) if f.endswith(".json")]
 
-    noise_percentages = [0.1, 0.3, 0.5, 0.8]
+def _parse_noise_percentages(spec: str) -> list:
+    out = []
+    for tok in spec.split(","):
+        tok = tok.strip()
+        if not tok:
+            continue
+        try:
+            v = float(tok)
+        except ValueError:
+            raise SystemExit(f"--noise-percentages: '{tok}' is not a float.")
+        if not (0.0 < v < 1.0):
+            raise SystemExit(f"--noise-percentages: {v} must be in (0, 1).")
+        out.append(v)
+    if not out:
+        raise SystemExit("--noise-percentages: at least one value required.")
+    return out
 
-    mode = "ff"
 
-    for op_set in operation_sets:
-        for noise_p in noise_percentages:
-            for i, json_file in enumerate(json_files):
-                filepath = os.path.join(results_folder, json_file)
-                print(f"\n=== Loading: {json_file} ===")
+def build_arg_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        prog="noise_resistance",
+        description="Noise-resistance CFE search: inject random noise into the CG, "
+                    "then run a bounded Dijkstra counterfactual search if the "
+                    "noisy graph didn't already break the original answer.",
+    )
+    p.add_argument("--dataset", choices=DATASETS, default="synthetic",
+                   help="Dataset name; selects working_dir and embedding indices.")
+    p.add_argument("--rag-mode", choices=["hybrid", "local", "global", "naive"], default="hybrid",
+                   help="LightRAG retrieval mode used by retrieve_subgraph.")
+    p.add_argument("--top-k", type=int, default=2, help="LightRAG retrieval top_k.")
+    p.add_argument("--input", default=None,
+                   help="Directory of prior CFE JSONs to re-evaluate under noise. "
+                        "Default: src/counterfactuals/results/<dataset>/all_ops_<mode>.")
+    p.add_argument("--mode", choices=["ff", "ft", "tf"], default="ff",
+                   help="CFE flip direction: ff (corrective F→F), ft (breaking T→F), tf (corrective T→F).")
+    p.add_argument("--ops", default="delete_node,delete_edge,add_node,add_edge",
+                   help="Comma-separated operations to enable. Subset of: " + ",".join(_ALL_OPS))
+    p.add_argument("--max-cost", type=int, default=20, help="Cost budget c_max.")
+    p.add_argument("--max-llm-calls", type=int, default=200, help="LLM-call budget.")
+    p.add_argument("--unit-cost", action="store_true", help="Use unit-cost variant of edit costs.")
+    p.add_argument("--noise-percentages", default="0.1,0.3,0.5,0.8",
+                   help="Comma-separated noise fractions in (0, 1). One run per fraction × input file.")
+    p.add_argument("--output-dir", default=None,
+                   help="Base directory for saved JSON results. "
+                        "Default: src/counterfactuals/robustness/<dataset>/noise_resistance.")
+    return p
 
-                with open(filepath, "r", encoding="utf-8") as f:
-                    data = json.load(f)
 
-                ground_truth = data["answers"]["ground_truth"]
+async def main(args: argparse.Namespace):
+    if args.dataset != dataset:
+        setup_dataset(args.dataset)
 
-                question = data["question"]
+    current_ops = _parse_ops(args.ops)
+    noise_percentages = _parse_noise_percentages(args.noise_percentages)
 
-                print(f"\n=== {question} ===")
+    input_dir = args.input or f"src/counterfactuals/results/{dataset}/all_ops_{args.mode}"
+    if not os.path.isdir(input_dir):
+        raise SystemExit(f"--input: directory not found: {input_dir}")
 
-                seed = i
+    output_dir = args.output_dir or f"src/counterfactuals/robustness/{dataset}/noise_resistance"
 
-                context = await retrieve_subgraph(rag, query=question, mode="hybrid", top_k=2)
+    rag = await initialize_lightrag(working_dir=WORKING_DIRS[dataset])
 
-                await find_counterfactuals(
-                    rag=rag, 
-                    question=question, 
-                    context=context, 
-                    max_cost=20, 
-                    max_llm_calls=200, 
-                    unit_cost=False, 
-                    current_ops=op_set, 
-                    ground_truth=ground_truth,
-                    mode=mode,
-                    noise_pct=noise_p,
-                    seed=seed
-                )
+    json_files = sorted(f for f in os.listdir(input_dir) if f.endswith(".json"))
+    if not json_files:
+        raise SystemExit(f"--input: no .json files under {input_dir}")
+
+    for noise_p in noise_percentages:
+        for i, json_file in enumerate(json_files):
+            filepath = os.path.join(input_dir, json_file)
+            print(f"\n=== Loading: {json_file} ===")
+
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            ground_truth = data["answers"]["ground_truth"]
+            question = data["question"]
+
+            print(f"\n=== {question} ===")
+
+            context = await retrieve_subgraph(
+                rag, query=question, mode=args.rag_mode, top_k=args.top_k,
+            )
+
+            await find_counterfactuals(
+                rag=rag,
+                question=question,
+                context=context,
+                max_cost=args.max_cost,
+                max_llm_calls=args.max_llm_calls,
+                unit_cost=args.unit_cost,
+                current_ops=current_ops,
+                ground_truth=ground_truth,
+                mode=args.mode,
+                noise_pct=noise_p,
+                seed=i,
+                output_dir=output_dir,
+            )
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main(build_arg_parser().parse_args()))
 
 
 

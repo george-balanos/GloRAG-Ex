@@ -1,7 +1,10 @@
 from src.embeddings.decoder import *
 from src.embeddings.utils import save_index
+from src.dataset_setup import DATASETS
 
+import argparse
 import json
+import os
 import numpy as np
 import hnswlib
 
@@ -38,14 +41,28 @@ def build_index(json_path: str):
     print(f"Loaded {len(items)} |  dim={dim}")
     return index, records, dim, embeddings
 
-if __name__ == "__main__":
-    dataset = "hotpotqa" # "synthetic" or "hotpotqa"
+def build_arg_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        prog="build_index",
+        description="Build HNSW node/edge indices from a KG working directory.",
+    )
+    p.add_argument("--dataset", choices=DATASETS, default="synthetic",
+                   help="Dataset name; reads KGs/<dataset>/vdb_*.json, writes src/embeddings/<dataset>/{node,edge}_index.*")
+    return p
 
-    node_json = f"KGs/{dataset}/vdb_entities.json"
-    edge_json = f"KGs/{dataset}/vdb_relationships.json"
+
+if __name__ == "__main__":
+    args = build_arg_parser().parse_args()
+    dataset = args.dataset
+
+    node_json = f"KGs/{dataset}/lightrag/vdb_entities.json"
+    edge_json = f"KGs/{dataset}/lightrag/vdb_relationships.json"
+
+    out_dir = f"src/embeddings/{dataset}"
+    os.makedirs(out_dir, exist_ok=True)
 
     node_index, node_records, dim, node_embeddings = build_index(node_json)
-    save_index(node_index, node_records, node_embeddings, f"src/embeddings/{dataset}/node_index")
+    save_index(node_index, node_records, node_embeddings, f"{out_dir}/node_index")
 
     edge_index, edge_records, dim, edge_embeddings = build_index(edge_json)
-    save_index(edge_index, edge_records, edge_embeddings, f"src/embeddings/{dataset}/edge_index")
+    save_index(edge_index, edge_records, edge_embeddings, f"{out_dir}/edge_index")

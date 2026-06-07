@@ -1,12 +1,15 @@
 from src.retrieve import *
 from src.query import *
 from src.llm_judge import *
+from src.dataset_setup import WORKING_DIRS, QA_CSV_PATHS, DATASETS
 from tqdm import tqdm
 
+import argparse
 import pandas as pd
 import asyncio
 import json
 import logging
+import os
 
 logging.getLogger("vllm").setLevel(logging.WARNING)
 logging.getLogger("sentence_transformers").setLevel(logging.WARNING)
@@ -28,18 +31,18 @@ async def run_example(rag, question, ground_truth, mode, top_k):
 
     # Compare to Ground Truth
     score = await judge_response(question, generated_answer=generated_answer, ground_truth=ground_truth)
-
     return score, generated_answer
 
-async def run_benchmark(rag, mode="local", top_k=10, num_rows=100, dataset="synthetic"):
-    benchmark_data = load_qa(f"datasets/{dataset}/qa_data_{dataset}.csv")
+
+async def run_benchmark(rag, qa_csv: str, output_path: str, mode: str, top_k: int, num_rows):
+    benchmark_data = load_qa(qa_csv)
 
     if num_rows is not None:
         benchmark_data = benchmark_data.head(num_rows)
 
     result_dict = {}
 
-    for i, row in tqdm(benchmark_data.iterrows(), desc="Processing questions...", total=len(benchmark_data)):
+    for _, row in tqdm(benchmark_data.iterrows(), desc="Processing questions...", total=len(benchmark_data)):
         id = row["id"]
         question = row["questions"]
         answer = row["answers"]
@@ -47,25 +50,55 @@ async def run_benchmark(rag, mode="local", top_k=10, num_rows=100, dataset="synt
         score, generated_answer = await run_example(rag, question, answer, mode, top_k)
 
         print(f"Score: {score}\nGenerated Answer: {generated_answer} VS Ground Truth: {answer}")
-        
+
         result_dict[id] = {
             "score": score,
             "generated_answer": generated_answer,
             "question": question,
-            "ground_truth": answer
+            "ground_truth": answer,
         }
 
-    with open(f"benchmark/results/{dataset}_{mode}_{top_k}.json", "w", encoding="utf-8") as f:
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result_dict, f, indent=2)
+    print(f"Results saved to: {output_path}")
 
-async def main():
-    mode = "hybrid"
-    top_k = 2
 
-    rag = await initialize_lightrag(working_dir=WORKING_DIR_HOTPOTQA)
+def build_arg_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        prog="run",
+        description="RAG-only benchmark over a LightRAG-backed KG.",
+    )
+    p.add_argument("--dataset", choices=DATASETS, default="synthetic",
+                   help="Dataset name; selects working_dir, qa CSV, and output filename.")
+    p.add_argument("--rag-mode", choices=["hybrid", "local", "global", "naive", "bypass"], default="hybrid",
+                   help="LightRAG retrieval mode. 'bypass' = LLM-only baseline (no retrieval); forces --top-k=0.")
+    p.add_argument("--top-k", type=int, default=2, help="LightRAG retrieval top_k. Ignored under --rag-mode=bypass (forced to 0).")
+    p.add_argument("--num-rows", type=int, default=None,
+                   help="Cap on QA rows (default: all).")
+    p.add_argument("--output", default=None,
+                   help="Output JSON path (default: benchmark/results/<dataset>_<rag-mode>_<top-k>.json).")
+    return p
 
-    await run_benchmark(rag, mode, top_k, dataset="hotpotqa")
+
+async def main(args: argparse.Namespace):
+    if args.rag_mode == "bypass":
+        args.top_k = 0
+
+    rag = await initialize_lightrag(working_dir=WORKING_DIRS[args.dataset])
+
+    output_path = args.output or f"benchmark/results/{args.dataset}_{args.rag_mode}_{args.top_k}.json"
+
+    await run_benchmark(
+        rag=rag,
+        qa_csv=QA_CSV_PATHS[args.dataset],
+        output_path=output_path,
+        mode=args.rag_mode,
+        top_k=args.top_k,
+        num_rows=args.num_rows,
+    )
+
 
 if __name__ == "__main__":
-
-    asyncio.run(main())
+    args = build_arg_parser().parse_args()
+    asyncio.run(main(args))
