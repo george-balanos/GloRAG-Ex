@@ -77,7 +77,6 @@ echo "=== [1c/4] Building comparison file ==="
 $PYTHON_RUN -m benchmark.evaluation \
   --dataset "$DATASET" \
   --top-k "$TOP_K" \
-  --rag-only
 
 if [[ ! -f "$INPUT_JSON" ]]; then
   echo "ERROR: $INPUT_JSON still missing after evaluation step." >&2
