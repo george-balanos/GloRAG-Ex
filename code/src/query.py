@@ -3,6 +3,13 @@ from src.retrieve import retrieve_subgraph, initialize_lightrag
 
 import asyncio
 
+def build_rag_system_prompt(context) -> str:
+    return PROMPTS["rag_response"].format(
+        context_data=context,
+        response_type="Single Sentence, without references and extra explanations.",
+        user_prompt=""
+    )
+
 async def query(rag, context, question: str):
     system_prompt = PROMPTS["rag_response"].format(
         context_data=context,

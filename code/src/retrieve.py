@@ -59,6 +59,23 @@ async def retrieve_subgraph(rag: LightRAG, query: str, mode: str = MODE, top_k: 
 
     return filtered_context
 
+async def retrieve_subgraph_objects(rag: LightRAG, query: str, mode: str = MODE, top_k: int = TOP_K):
+    '''
+    Like retrieve_subgraph, but also returns the parsed Subgraph (ordered
+    entities + relations) so callers can attribute/permute over the discrete
+    objects. The context string is rendered with render_context, so it is
+    byte-identical to what retrieve_subgraph / RAG feeds the LLM.
+    '''
+    param = QueryParam(mode=mode, only_need_context=True, enable_rerank=False, top_k=top_k, include_references=False)
+    context: str = await rag.aquery(query, param=param)
+
+    parsed_context = parse_context(context)
+    parsed_graph = parse_graph(parsed_context)
+    sg = graph_to_subgraph(parsed_graph)
+    filtered_context = render_context(sg.entities, sg.relations)
+
+    return filtered_context, sg
+
 def print_subgraph(sg: Subgraph) -> None:
     print(f"\n{'='*60}")
     print(f"  SUBGRAPH SUMMARY")

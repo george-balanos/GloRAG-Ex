@@ -257,6 +257,49 @@ def graph_to_subgraph(G: nx.DiGraph) -> Subgraph:
         # raw_context=original.raw_context if original else "",
     )
 
+def render_context(entities, relations) -> str:
+    """Serialize explicit ordered lists of entities/relations into the exact
+    context string the LLM sees — byte-identical to graph_to_context's output.
+
+    Order is preserved verbatim, which makes this reusable for Shapley subsets and for
+    context-permutation experiments.
+    """
+    lines = []
+
+    # ── Entities ──────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Entity):")
+    lines.append("```json")
+    for e in entities:
+        lines.append(json.dumps({
+            "entity": e.name,
+            "type": e.type,
+            "description": e.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    # ── Relations ─────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Relationship):")
+    lines.append("```json")
+    for r in relations:
+        lines.append(json.dumps({
+            "entity1": r.src,
+            "entity2": r.tgt,
+            "description": r.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    return "\n".join(lines)
+
+
+def render_context_from_objects(objects) -> str:
+    """Render a mixed (kind, obj) object list into the standard RAG context."""
+    entities = [obj for kind, obj in objects if kind == "entity"]
+    relations = [obj for kind, obj in objects if kind == "relation"]
+    return render_context(entities, relations)
+
+
 def graph_to_context(G: nx.DiGraph) -> str:
     subgraph = graph_to_subgraph(G)
 
