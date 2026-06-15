@@ -311,11 +311,20 @@ def permutation_stats(scores_by_perm: dict[str, dict[str, float]], ids: list[str
     mean_tau = float(np.nanmean(taus)) if taus else float("nan")
     min_tau = float(np.nanmin(taus)) if taus else float("nan")
 
-    # top-1 / top-k stability across all permutations
+    # top-1 / top-k SET stability across all permutations (same members, any order)
     top1 = {rankings[p][0] for p in perm_ids} if ids else set()
     topk_sets = [frozenset(rankings[p][:top_k]) for p in perm_ids] if ids else []
     top1_stable = len(top1) == 1
     topk_stable = len(set(topk_sets)) == 1 if topk_sets else True
+
+    # top-k POSITIONAL stability: for each of the top-k ranks, is the SAME object
+    # in that exact spot across every permutation? (generalizes top1_stable)
+    k_eff = min(top_k, len(ids))
+    position_stable = [
+        len({rankings[p][i] for p in perm_ids}) == 1
+        for i in range(k_eff)
+    ]
+    topk_position_matches = int(sum(position_stable))
 
     return {
         "num_permutations": len(perm_ids),
@@ -324,6 +333,9 @@ def permutation_stats(scores_by_perm: dict[str, dict[str, float]], ids: list[str
         "exact_ranking_match": exact_match,
         "top1_stable": top1_stable,
         f"top{top_k}_stable": topk_stable,
+        "topk_positions_checked": k_eff,
+        "topk_position_matches": topk_position_matches,
+        "topk_position_stable": position_stable,
         "per_object": per_object,
         "rankings": rankings,
     }
@@ -428,7 +440,8 @@ def _write_plain_outputs(args, results, metrics):
 # ── Permutation mode ────────────────────────────────────────────────────────
 async def run_permutation(args, rag, rag_counter, hf_model, hf_tok, data):
     results = {}
-    tau_list, top1_list, exact_list = [], [], []
+    tau_list, mintau_list, top1_list, topk_list, exact_list = [], [], [], [], []
+    posmatch_list, poschecked_list = [], []
     for _, row in tqdm(data.iterrows(), desc="Shapley permutation", total=len(data)):
         rid = str(row["id"])
         question, ground_truth = row["questions"], row["answers"]
@@ -443,35 +456,68 @@ async def run_permutation(args, rag, rag_counter, hf_model, hf_tok, data):
         ids = [object_id(k, o) for k, o in build_objects(sg.entities, sg.relations)]
         perms = random_object_permutations(sg.entities, sg.relations, count=5, seed=args.seed)
 
-        scores_by_perm, evals_by_perm, time_by_perm = {}, {}, {}
+        # One self-contained record per permutation: presented order, the Shapley
+        # result, the induced ranking, and that run's metrics.
+        scores_by_perm = {}
+        perm_records = []
         for p in perms:
             objects = p["objects"]
+            order_ids = [object_id(k, o) for (k, o) in objects]
             st0 = time.perf_counter()
             scores, evals = run_tmc(objects, question, hf_model, hf_tok, args.shap_device, rag_answer, args)
-            time_by_perm[p["perm_id"]] = round(time.perf_counter() - st0, 4)
-            evals_by_perm[p["perm_id"]] = evals
-            scores_by_perm[p["perm_id"]] = {object_id(k, o): s for (k, o), s in zip(objects, scores)}
+            elapsed = round(time.perf_counter() - st0, 4)
+            sbi = {object_id(k, o): s for (k, o), s in zip(objects, scores)}
+            scores_by_perm[p["perm_id"]] = sbi
+            ranking = sorted(sbi, key=lambda o: sbi[o], reverse=True)
+            perm_records.append({
+                "perm_id": p["perm_id"],
+                "perm": list(p["perm"]),
+                "object_order": order_ids,
+                "shapley_scores": sbi,
+                "ranking": ranking,
+                "utility_evals": evals,
+                "forward_passes": evals * 2,
+                "shap_time": elapsed,
+            })
 
         stats = permutation_stats(scores_by_perm, ids, args.topk_stable)
+        topk_key = f"top{args.topk_stable}_stable"
         results[rid] = {
             "question": question, "ground_truth": ground_truth, "rag_answer": rag_answer,
             "n_entities": len(sg.entities), "n_relations": len(sg.relations),
-            "scores_by_perm": scores_by_perm, "evals_by_perm": evals_by_perm,
-            "time_by_perm": time_by_perm, "stats": stats,
+            "object_ids": ids,
+            "num_permutations": len(perm_records),
+            "permutations": perm_records,            # all 5 results + their metrics
+            "stats": stats,                          # kendall-tau, spread, rankings, ...
+            "perm_total_utility_evals": sum(r["utility_evals"] for r in perm_records),
+            "perm_total_shap_time": round(sum(r["shap_time"] for r in perm_records), 4),
         }
         tau_list.append(stats["mean_kendall_tau"])
+        mintau_list.append(stats["min_kendall_tau"])
         top1_list.append(stats["top1_stable"])
+        topk_list.append(stats.get(topk_key, False))
         exact_list.append(stats["exact_ranking_match"])
+        posmatch_list.append(stats["topk_position_matches"])
+        poschecked_list.append(stats["topk_positions_checked"])
         print(f"[{rid}] perms={stats['num_permutations']} meanτ={stats['mean_kendall_tau']:.3f} "
-              f"top1_stable={stats['top1_stable']} exact={stats['exact_ranking_match']}")
+              f"minτ={stats['min_kendall_tau']:.3f} top1_stable={stats['top1_stable']} "
+              f"top{args.topk_stable}_pos_same={stats['topk_position_matches']}/{stats['topk_positions_checked']} "
+              f"exact={stats['exact_ranking_match']}")
 
     out = args.output or f"benchmark/results/{args.dataset}_shapley_permutation.json"
     rows = len(results)
     summary = {
         "rows": rows,
+        "topk_stable_k": args.topk_stable,
         "avg_mean_kendall_tau": float(np.nanmean(tau_list)) if tau_list else float("nan"),
+        "avg_min_kendall_tau": float(np.nanmean(mintau_list)) if mintau_list else float("nan"),
         "pct_top1_stable": round(100 * sum(top1_list) / rows, 2) if rows else 0.0,
+        "pct_topk_stable": round(100 * sum(topk_list) / rows, 2) if rows else 0.0,
         "pct_exact_ranking_match": round(100 * sum(exact_list) / rows, 2) if rows else 0.0,
+        # positional top-k stability: avg # of top-k ranks holding the same object
+        # across all permutations, and the avg # of positions actually checked.
+        "avg_topk_position_matches": round(sum(posmatch_list) / rows, 4) if rows else 0.0,
+        "avg_topk_positions_checked": round(sum(poschecked_list) / rows, 4) if rows else 0.0,
     }
     results["__summary__"] = summary
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -481,7 +527,10 @@ async def run_permutation(args, rag, rag_counter, hf_model, hf_tok, data):
     print(f"  Shapley permutation robustness  ({rows} rows, dataset={args.dataset})")
     print("=" * 64)
     print(f"avg mean Kendall-tau : {summary['avg_mean_kendall_tau']:.4f}")
+    print(f"avg min  Kendall-tau : {summary['avg_min_kendall_tau']:.4f}")
     print(f"top-1 stable rows    : {summary['pct_top1_stable']}%")
+    print(f"top-{args.topk_stable} stable rows    : {summary['pct_topk_stable']}% (same set)")
+    print(f"top-{args.topk_stable} same-position  : {summary['avg_topk_position_matches']}/{summary['avg_topk_positions_checked']} ranks (avg)")
     print(f"exact-ranking rows   : {summary['pct_exact_ranking_match']}%")
     print("=" * 64)
     print(f"Results -> {out}")
