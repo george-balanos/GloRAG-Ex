@@ -36,6 +36,11 @@ logging.getLogger("vllm").setLevel(logging.WARNING)
 logging.getLogger("lightrag").setLevel(logging.WARNING)
 
 
+def _object_id(kind, obj) -> str:
+    """Stable id matching run_shapley's convention, so an object is traceable."""
+    return f"E::{obj.name}" if kind == "entity" else f"R::{obj.src}->{obj.tgt}"
+
+
 def _entities_from_dict(d: dict) -> list[Entity]:
     return [Entity(name=e.get("name", ""), type=e.get("type", ""),
                    description=e.get("description", ""), rank=e.get("rank", 0.0))
@@ -93,7 +98,11 @@ async def run(args):
             flipped = (score == 0)
             n_flipped += int(flipped)
             per_perm[p["perm_id"]] = {
+                "perm_id": p["perm_id"],
+                "perm": list(p["perm"]),
                 "identity": p["identity"],
+                "object_order": [_object_id(k, o) for (k, o) in p["objects"]],
+                "context": p["render"],          # exact context shown to the LLM
                 "response": new_response,
                 "judge_score": score,
                 "flipped": flipped,
@@ -107,11 +116,17 @@ async def run(args):
 
         results[os.path.basename(fp)] = {
             "filepath": fp,
+            "mode": payload.get("mode"),
             "question": question,
             "original_answer": original_answer,
             "saved_perturbed_answer": payload["answers"].get("perturbed"),
+            "operations": payload.get("operations"),
+            "num_operations": payload.get("num_operations"),
+            "cost": payload.get("cost"),
             "n_entities": len(entities),
             "n_relations": len(relations),
+            "object_ids": [_object_id(k, o) for (k, o)
+                           in ([("entity", e) for e in entities] + [("relation", r) for r in relations])],
             "num_permutations": n_perms,
             "num_flipped": n_flipped,
             "flip_stability": round(stability, 4),
