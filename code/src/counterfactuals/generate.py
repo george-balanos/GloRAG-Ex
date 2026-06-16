@@ -55,7 +55,7 @@ def _heap_push(Q, cost, similarity, len_ops, payload, *, relevance_sign=-1.0, ad
     heapq.heappush(Q, (priority, len_ops, relevance_sign * similarity, cost, next(counter), payload))
 
 
-dataset: str = "synthetic"
+dataset: str = ""
 adm: int = 2  # default add-mode; overridden by main() when invoked via CLI.
 G = None
 type_index = None
@@ -83,12 +83,12 @@ def setup_dataset(name: str):
     edge_lookup = bundle["edge_lookup"]
 
 
-### Setup - Timer (Start):
-_setup_start = time.perf_counter()
-setup_dataset("synthetic")
-### Setup - Timer (End)
-setup_time = time.perf_counter() - _setup_start
-print(f"Setup time: {setup_time:.3f}s")
+# ### Setup - Timer (Start):
+# _setup_start = time.perf_counter()
+# setup_dataset("synthetic")
+# ### Setup - Timer (End)
+# setup_time = time.perf_counter() - _setup_start
+# print(f"Setup time: {setup_time:.3f}s")
 
 ################################################
 
@@ -1345,8 +1345,16 @@ def _parse_ops(spec: str) -> list:
 async def main(args: argparse.Namespace):
     global adm
 
-    if args.dataset != dataset:
-        setup_dataset(args.dataset)
+    ### Setup - Timer (Start):
+    _setup_start = time.perf_counter()
+
+    # if args.dataset != dataset:
+    #     setup_dataset(args.dataset)
+
+    setup_dataset(args.dataset)
+
+    setup_time = time.perf_counter() - _setup_start
+    print(f"Setup time: {setup_time:.3f}s")
 
     adm = args.adm
     current_ops = _parse_ops(args.ops)
