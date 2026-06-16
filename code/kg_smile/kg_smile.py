@@ -23,17 +23,28 @@ from src.query import query as llm_query
 # RESULT DATACLASS
 # ─────────────────────────────────────────────────────────────
 
+# @dataclass
+# class KGSMILEResult:
+#     original_response:     str
+#     edge_attributions:     dict[tuple[str, str], float]  # (src, tgt) -> score
+#     node_attributions:     dict[str, float]              # node -> score
+#     top_edges:             list[tuple[str, str]]
+#     surrogate_r2:          float
+#     output_shift_std:      float
+#     mean_graph_cosine_sim: float
+#     mean_kernel_weight:    float
+
 @dataclass
 class KGSMILEResult:
     original_response:     str
-    edge_attributions:     dict[tuple[str, str], float]  # (src, tgt) -> score
-    node_attributions:     dict[str, float]              # node -> score
+    edge_attributions:     dict[tuple[str, str], float]
+    node_attributions:     dict[str, float]
     top_edges:             list[tuple[str, str]]
     surrogate_r2:          float
     output_shift_std:      float
     mean_graph_cosine_sim: float
     mean_kernel_weight:    float
-
+    llm_call_count:        int = 0 
 
 def result_to_dict(result: KGSMILEResult) -> dict:
     return {
@@ -210,6 +221,7 @@ async def run_kg_smile(
     ground_truth: str | None = None,
     mode = "ft"
 ) -> KGSMILEResult:
+    llm_call_count = 0
 
     if config is None:
         config = KGSMILEConfig()
@@ -233,6 +245,7 @@ async def run_kg_smile(
     # original_response = await _query(query, G, config.max_tokens)
     if mode == "ft":
         original_response = await llm_query(rag=rag, context=graph_to_context(G), question=query)
+        llm_call_count += 1
     elif mode == "ff":
         original_response = ground_truth
         
@@ -256,6 +269,7 @@ async def run_kg_smile(
             continue
 
         response_p = await _query(query, G_p, config.max_tokens)
+        llm_call_count += 1
         emb_p      = emb_model.encode([response_p])
 
         cos_sim = float(cosine_similarity(original_emb, emb_p)[0][0])
@@ -280,6 +294,7 @@ async def run_kg_smile(
             output_shift_std=0.0,
             mean_graph_cosine_sim=float(np.mean(cosine_sims)) if cosine_sims else 0.0,
             mean_kernel_weight=float(np.mean(kernel_weights)) if kernel_weights else 0.0,
+            llm_call_count=llm_call_count,
         )
 
     X      = np.array(masks)
