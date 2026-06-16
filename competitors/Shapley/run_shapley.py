@@ -22,21 +22,16 @@ The permutation mode now treats entities + relations as one ordered object bag
 and samples 5 random object permutations. For each permutation we run TMC
 (same fixed RAG answer as target) and then report Kendall-tau ranking
 stability + per-object value spread.
-
-Run from code/ (sys.path is bootstrapped below), e.g.:
-  ../.venv/bin/python benchmark/run_shapley.py --dataset synthetic \
-      --rag-mode hybrid --top-k 2 --shap-device cuda:1
-  ../.venv/bin/python benchmark/run_shapley.py --permute --shap-device cuda:1 --no-judge
-
-Requires (to import the competitor module) the SHapRAG deps it imports at module
-top: shapiq, spectralexplain, tensorflow, fastFM.
 """
 import os
 import sys
 
-# Make `src` importable when run directly (stock benchmark relies on
-# PYTHONPATH=code, set by run_ablation.sh). code/ is the parent of benchmark/.
-_CODE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Make code/src importable: this file lives in competitors/Shapley/, so code/ is
+# <repo>/code. We add it to sys.path regardless of CWD. (Dataset paths inside
+# src.dataset_setup are still relative, so CWD must be code/ at runtime.)
+_THIS_DIR = os.path.dirname(os.path.abspath(__file__))            # competitors/Shapley
+_REPO_ROOT = os.path.dirname(os.path.dirname(_THIS_DIR))          # repo root
+_CODE_DIR = os.path.join(_REPO_ROOT, "code")
 if _CODE_DIR not in sys.path:
     sys.path.insert(0, _CODE_DIR)
 
@@ -71,7 +66,6 @@ logging.getLogger("nano-vectordb").setLevel(logging.WARNING)
 logging.getLogger("lightrag").setLevel(logging.WARNING)
 
 # Make the competitor package importable: competitors/LLMX holds the `SHapRAG` pkg.
-_REPO_ROOT = os.path.dirname(_CODE_DIR)
 _LLMX_DIR = os.path.join(_REPO_ROOT, "competitors", "LLMX")
 if _LLMX_DIR not in sys.path:
     sys.path.insert(0, _LLMX_DIR)
@@ -538,10 +532,6 @@ async def run_permutation(args, rag, rag_counter, hf_model, hf_tok, data):
 
 async def run_benchmark(args):
     rag_counter = RagCounter()
-    # Route RAG's LLM calls through the counter WITHOUT modifying retrieve.py:
-    # initialize_lightrag resolves `vllm_model_complete` from the src.retrieve
-    # module namespace at call time, so rebinding it there makes LightRAG use our
-    # counting wrapper for both retrieval keyword-extraction and generation.
     import src.retrieve as _retr
     _retr.vllm_model_complete = rag_counter.make_wrapper()
     rag = await initialize_lightrag(working_dir=WORKING_DIRS[args.dataset])
