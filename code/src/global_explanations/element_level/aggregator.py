@@ -106,7 +106,7 @@ def print_graph_stats(G: nx.DiGraph):
 if __name__ == "__main__":
     element_aggregator = ElementLevelAggregator()
 
-    local_explanations_folder_name = "src/counterfactuals/results/synthetic/all_ops_ff"
+    local_explanations_folder_name = "src/counterfactuals/results/synthetic/delete_ops_ft"
 
     nodes, edges = [], []
 
