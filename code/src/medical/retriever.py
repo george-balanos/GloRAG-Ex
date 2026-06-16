@@ -1,100 +1,171 @@
-from src.embeddings.query import build_lookup, load_index, DIM, model, query
-
-import networkx as nx
+import json
+import base64
+import zlib
+import asyncio
 import numpy as np
+from pydantic import BaseModel, Field
+from typing import Literal
+from vllm import SamplingParams
+from vllm.sampling_params import StructuredOutputsParams
+from sentence_transformers import SentenceTransformer
 
-def find_similar_node_id(index, records, entity: str) -> dict:
-    vec = model.encode([entity], normalize_embeddings=True)[0].astype("float32")
-    most_similar = query(index, records, vec, k=1)
-    if most_similar[0]["similarity"] > 0.7:
-        return most_similar[0]["id"]
-    return {}
+from src.prompts.prompts import MEDICAL_RAG_PROMPT
+from src.llm.utils import get_llm
 
-def validate_entity(G: nx.DiGraph, entities: list) -> dict:
-    validated_entities = {
-        "found": [],
-        "not_found": []
-    } 
+VDB_ENTITIES  = "KGs/medical/vdb_entities.json"
+VDB_RELATIONS = "KGs/medical/vdb_relationships.json"
 
-    entities = [f"{e["entity_name"].lower()}|{e["entity_category"]}" for e in entities]
-    for ent in entities:
-        if ent in G:
-            validated_entities["found"].append(ent)
-        else:
-            validated_entities["not_found"].append(ent)
 
-    return validated_entities
+class SelectedOption(BaseModel):
+    selected_option: Literal["A", "B", "C", "D"]
 
-def bfs_subgraph(G: nx.DiGraph, seed_nodes: list, depth: int = 2) -> nx.DiGraph:
-    visited = set()
-    for seed in seed_nodes:
-        if seed not in G:
-            continue
-        bfs_nodes = nx.bfs_tree(G, seed, depth_limit=depth).nodes()
-        visited.update(bfs_nodes)
 
-    return nx.DiGraph(G.subgraph(visited))  # <-- force DiGraph here too
+def decode_vector(vec_str: str) -> np.ndarray:
 
-def shortest_paths_subgraph(G: nx.DiGraph, seed_nodes: list) -> nx.DiGraph:
-    visited = set(seed_nodes)
+    compressed = base64.b64decode(vec_str.encode())
+    decompressed = zlib.decompress(compressed)
+    return np.frombuffer(decompressed, dtype=np.float16).astype(np.float32)
 
-    pairs = [(u, v) for i, u in enumerate(seed_nodes) for v in seed_nodes[i+1:] if u in G and v in G]
 
-    for u, v in pairs:
-        for source, target in [(u, v), (v, u)]: 
-            try:
-                path = nx.shortest_path(G, source=source, target=target)
-                visited.update(path)
-            except nx.NetworkXNoPath:
-                pass
+def retrieve_kg_context(query: str, top_k_entities: int = 3, top_k_relations: int = 3) -> str:
 
-    return nx.DiGraph(G.subgraph(visited))
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+    query_vec = model.encode(query, convert_to_numpy=True).astype(np.float32)
+    query_vec /= np.linalg.norm(query_vec) + 1e-10
 
-def prune_subgraph(
-    subgraph: nx.DiGraph,
-    query_text: str,
-    lookup,
-    embeddings,
-    top_k_nodes: int = 20,
-    top_k_edges: int = 30,
-) -> nx.DiGraph:
-    query_vec = model.encode([query_text], normalize_embeddings=True)[0].astype("float32")
+    context_segments = []
 
-    # --- score nodes in one matrix op ---
-    nodes = [n for n in subgraph.nodes() if n in lookup]
-    if nodes:
-        node_matrix = np.stack([embeddings[lookup[n]].astype("float32") for n in nodes])
-        node_sims   = node_matrix @ query_vec  # (N,) — already normalized
-        top_idx     = np.argpartition(node_sims, -min(top_k_nodes, len(nodes)))[-top_k_nodes:]
-        top_nodes   = {nodes[i] for i in top_idx}
-    else:
-        top_nodes = set()
+    try:
+        with open(VDB_ENTITIES, "r") as f:
+            entity_data = json.load(f)["data"]
+        
+        entity_scores = []
+        for item in entity_data:
+            vec = decode_vector(item["vector"])
+            score = float(np.dot(query_vec, vec))
+            entity_scores.append((score, item))
+        
+        entity_scores.sort(key=lambda x: x, reverse=True)
+        
+        context_segments.append("=== RELEVANT MEDICAL ENTITIES ===")
+        for score, item in entity_scores[:top_k_entities]:
+            desc = item['content'] if item['content'] else "No description available."
+            context_segments.append(f"Entity: {item['entity_name']} ({item['entity_category']})\nDescription: {desc}\n")
+            
+    except FileNotFoundError:
+        context_segments.append("[Warning: Entity VDB file not found]")
 
-    # --- score edges in one batched encode call ---
-    edge_list  = [(src, tgt) for src, tgt, _ in subgraph.edges(data=True)]
-    edge_data  = [data for _, _, data in subgraph.edges(data=True)]
-    labels = [d.get("relation", f"{s} {t}") for (s, t), d in zip(edge_list, edge_data)]
+    try:
+        with open(VDB_RELATIONS, "r") as f:
+            rel_data = json.load(f)["data"]
+            
+        rel_scores = []
+        for item in rel_data:
+            vec = decode_vector(item["vector"])
+            score = float(np.dot(query_vec, vec))
+            rel_scores.append((score, item))
+            
+        rel_scores.sort(key=lambda x: x, reverse=True)
+        
+        context_segments.append("=== RELEVANT MEDICAL RELATIONSHIPS ===")
+        for score, item in rel_scores[:top_k_relations]:
+            context_segments.append(f"{item['content']}\n")
+            
+    except FileNotFoundError:
+        context_segments.append("[Warning: Relationship VDB file not found]")
 
-    if labels:
-        edge_matrix = model.encode(labels, normalize_embeddings=True,
-                                   batch_size=256, show_progress_bar=False).astype("float32")
-        edge_sims   = edge_matrix @ query_vec  # (E,)
-        top_idx     = np.argpartition(edge_sims, -min(top_k_edges, len(labels)))[-top_k_edges:]
-        top_edges   = {edge_list[i] for i in top_idx}
-    else:
-        top_edges = set()
+    return "\n".join(context_segments)
 
-    # --- union ---
-    edge_nodes  = {n for src, tgt in top_edges for n in (src, tgt)}
-    final_nodes = top_nodes | edge_nodes
 
-    pruned = nx.DiGraph(subgraph.subgraph(final_nodes))
-    pruned.remove_edges_from([(u, v) for u, v in pruned.edges() if (u, v) not in top_edges])
+async def query_rag(input_question: str, options: str, context: str):
+    prompt = MEDICAL_RAG_PROMPT.format(input_question=input_question, options=options, context=context)
 
-    return pruned
+    llm = get_llm()
+    tokenizer = llm.get_tokenizer()
+
+    full_prompt = tokenizer.apply_chat_template(
+        [{"role": "user", "content": prompt}],
+        tokenizer=True, 
+        add_generation_prompt=True
+    )
+
+    sampling_params = SamplingParams(
+        temperature=0,
+        max_tokens=1024,
+        structured_outputs=StructuredOutputsParams(
+            json=SelectedOption.model_json_schema()
+        )
+    )
+
+    loop = asyncio.get_event_loop()
+    outputs = await loop.run_in_executor(
+        None,
+        lambda: llm.generate([full_prompt], sampling_params, use_tqdm=False),
+    )
+
+    raw = outputs.outputs.text.strip()
+
+    try:
+        parsed = SelectedOption.model_validate_json(raw)
+        return parsed.selected_option
+    except Exception:
+        return ""
+    
+
+async def query_llm_only(input_question: str, options: str):
+    prompt = MEDICAL_RAG_PROMPT.format(input_question=input_question, options=options, context="")
+
+    llm = get_llm()
+    tokenizer = llm.get_tokenizer()
+
+    full_prompt = tokenizer.apply_chat_template(
+        [{"role": "user", "content": prompt}],
+        tokenizer=True, ### For Mistral,
+        add_generation_prompt=True
+    )
+
+    sampling_params = SamplingParams(
+        temperature=0,
+        max_tokens=1024,
+        structured_outputs=StructuredOutputsParams(
+            json=SelectedOption.model_json_schema()
+        )
+    )
+
+    loop = asyncio.get_event_loop()
+    outputs = await loop.run_in_executor(
+        None,
+        lambda: llm.generate([full_prompt], sampling_params, use_tqdm=False),
+    )
+
+    raw = outputs.outputs.text.strip()
+
+    try:
+        parsed = SelectedOption.model_validate_json(raw)
+        return parsed.selected_option
+    except Exception:
+        return ""
+    
+async def main():
+    question = "Can bedside assessment reliably exclude aspiration following acute stroke?"
+    
+    options =  """{
+        "A": "yes",
+        "B": "no",
+        "C": "maybe"
+    }"""
+
+    print("Retrieving node and edge descriptions from Knowledge Graph...")
+    kg_context = retrieve_kg_context(question, top_k_entities=3, top_k_relations=3)
+
+    print("Submitting query to vLLM engine with Graph Context (RAG)...")
+    response = await query_rag(input_question=question, options=options, context=kg_context)
+    print(f"\nRAG Response: {response}")
+    
+    print("\nSubmitting query without Context (Baseline)...")
+    baseline_response = await query_llm_only(input_question=question, options=options)
+    print(f"Baseline Response: {baseline_response}")
+    
 
 if __name__ == "__main__":
-    query_text = "Bedside Assessment"
-    
-    print(find_similar_node_id(query_text))
-
+    asyncio.run(main())
