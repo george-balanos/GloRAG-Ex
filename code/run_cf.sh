@@ -20,12 +20,11 @@ NUM_ROWS=   # empty = all rows
 MAX_COST=20
 MAX_LLM_CALLS=200
 PSP_K=3
-ADM_MODES=(2)
 CORRECTIVE_MODES=(ff)
 SHAP_DEVICE="cuda:1"
 
 RUN_TS="$(date +%Y%m%d_%H%M%S)"
-OUT_ROOT="src/counterfactuals/results/ablation/${RUN_TS}"
+OUT_ROOT="src/counterfactuals/results/${RUN_TS}"
 
 echo "Run timestamp: ${RUN_TS}"
 echo "  Counterfactuals -> ${OUT_ROOT}"
@@ -48,6 +47,8 @@ for DATASET in "${DATASETS[@]}"; do
   echo "##########################################################################"
   echo "##### DATASET=${DATASET}"
   echo "##########################################################################"
+
+  mkdir -p "${OUT_ROOT}/${DATASET}"
 
   RAG_RESULTS="benchmark/results/${DATASET}_${RAG_MODE}_${TOP_K}.json"
   LLM_RESULTS="benchmark/results/${DATASET}_bypass_0.json"
@@ -102,7 +103,7 @@ for DATASET in "${DATASETS[@]}"; do
     --ops delete_node,delete_edge \
     --max-cost "$MAX_COST" \
     --max-llm-calls "$MAX_LLM_CALLS" \
-    --output-dir "${OUT_ROOT}/ft_delete_no_psp"
+    --output-dir "${OUT_ROOT}/${DATASET}/ft_delete_no_psp"
 
   echo "=== [3] Deletions + PSP, T->F ==="
   $GEN \
@@ -115,16 +116,16 @@ for DATASET in "${DATASETS[@]}"; do
     --psp --psp-k "$PSP_K" \
     --max-cost "$MAX_COST" \
     --max-llm-calls "$MAX_LLM_CALLS" \
-    --output-dir "${OUT_ROOT}/ft_delete_psp_k${PSP_K}"
+    --output-dir "${OUT_ROOT}/${DATASET}/ft_delete_psp_k${PSP_K}"
 
   echo "=== [4] Deletions + Additions, F->T ==="
   $GEN \
     --dataset "$DATASET" --rag-mode "$RAG_MODE" --top-k "$TOP_K" \
     --input "$INPUT_JSON" \
-    --mode ff --ops add_node,add_edge,delete_node,delete_edge --adm "$adm" \
+    --mode ff --ops add_node,add_edge,delete_node,delete_edge --adm 2 \
     --add-heuristic none \
     --max-cost "$MAX_COST" --max-llm-calls "$MAX_LLM_CALLS" \
-    --output-dir "${OUT_ROOT}/ff_add_adm${adm}_none"
+    --output-dir "${OUT_ROOT}/${DATASET}/ff_add_adm2_none"
 done
 
 echo "Done. All counterfactuals written to ${OUT_ROOT}."
