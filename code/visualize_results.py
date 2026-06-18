@@ -25,16 +25,21 @@ from src.dataset_setup import DATASETS
 
 _RE_FT_NO_PSP = re.compile(r"^ft_delete_no_psp$")
 _RE_FT_PSP    = re.compile(r"^ft_delete_psp_k(?P<k>\d+)$")
+# Additions cells exist for both flip directions: tf (T→F corrective) and ff
+# (F→T / corrective F→F). Same naming scheme, distinguished by the phase prefix.
 _RE_TF_NONE   = re.compile(r"^tf_add_adm(?P<adm>[123])_none$")
 _RE_TF_TIER   = re.compile(r"^tf_add_adm(?P<adm>[123])_tier_w(?P<w>[\d.]+)$")
 _RE_TF_BLEND  = re.compile(r"^tf_add_adm(?P<adm>[123])_blend_a(?P<a>[\d.]+)$")
+_RE_FF_NONE   = re.compile(r"^ff_add_adm(?P<adm>[123])_none$")
+_RE_FF_TIER   = re.compile(r"^ff_add_adm(?P<adm>[123])_tier_w(?P<w>[\d.]+)$")
+_RE_FF_BLEND  = re.compile(r"^ff_add_adm(?P<adm>[123])_blend_a(?P<a>[\d.]+)$")
 
 
 def parse_cell(name: str) -> dict | None:
     """Return a dict describing the cell, or None if unrecognised.
 
     Keys:
-      phase         : 'ft' | 'tf'
+      phase         : 'ft' | 'tf' | 'ff'
       method        : 'no_psp' | 'psp' | 'none' | 'tier' | 'blend'
       adm           : int | None
       hyperparam    : 'k' | 'w' | 'a' | None
@@ -47,18 +52,22 @@ def parse_cell(name: str) -> dict | None:
     if m:
         return {"phase": "ft", "method": "psp", "adm": None,
                 "hyperparam": "k", "hyperparam_value": int(m["k"])}
-    m = _RE_TF_NONE.match(name)
-    if m:
-        return {"phase": "tf", "method": "none", "adm": int(m["adm"]),
-                "hyperparam": None, "hyperparam_value": None}
-    m = _RE_TF_TIER.match(name)
-    if m:
-        return {"phase": "tf", "method": "tier", "adm": int(m["adm"]),
-                "hyperparam": "w", "hyperparam_value": float(m["w"])}
-    m = _RE_TF_BLEND.match(name)
-    if m:
-        return {"phase": "tf", "method": "blend", "adm": int(m["adm"]),
-                "hyperparam": "a", "hyperparam_value": float(m["a"])}
+    for phase, (re_none, re_tier, re_blend) in (
+        ("tf", (_RE_TF_NONE, _RE_TF_TIER, _RE_TF_BLEND)),
+        ("ff", (_RE_FF_NONE, _RE_FF_TIER, _RE_FF_BLEND)),
+    ):
+        m = re_none.match(name)
+        if m:
+            return {"phase": phase, "method": "none", "adm": int(m["adm"]),
+                    "hyperparam": None, "hyperparam_value": None}
+        m = re_tier.match(name)
+        if m:
+            return {"phase": phase, "method": "tier", "adm": int(m["adm"]),
+                    "hyperparam": "w", "hyperparam_value": float(m["w"])}
+        m = re_blend.match(name)
+        if m:
+            return {"phase": phase, "method": "blend", "adm": int(m["adm"]),
+                    "hyperparam": "a", "hyperparam_value": float(m["a"])}
     return None
 
 
@@ -168,10 +177,11 @@ def plot_deletions(df: pd.DataFrame, out: Path) -> None:
 
 
 def plot_additions(df: pd.DataFrame, out: Path) -> None:
-    sub = df[df["phase"] == "tf"].copy()
+    sub = df[df["phase"].isin(["tf", "ff"])].copy()
     if sub.empty:
-        print("[plot_additions] no tf rows; skipping.")
+        print("[plot_additions] no tf/ff rows; skipping.")
         return
+    phases = "/".join(sorted(sub["phase"].unique()))
 
     adm_values = sorted(int(a) for a in sub["adm"].dropna().unique())
     if not adm_values:
@@ -211,7 +221,7 @@ def plot_additions(df: pd.DataFrame, out: Path) -> None:
 
         axes[0].set_ylabel(title)
         axes[0].legend(loc="best", frameon=False, fontsize=9)
-        fig.suptitle(f"Additions (F→T) — {title}", fontweight="bold")
+        fig.suptitle(f"Additions ({phases}) — {title}", fontweight="bold")
         fig.tight_layout()
         path = out / f"additions_{metric}.png"
         fig.savefig(path, dpi=150, bbox_inches="tight")
