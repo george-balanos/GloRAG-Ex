@@ -103,7 +103,7 @@ for DATASET in "${DATASETS[@]}"; do
       --top-k "$TOP_K" \
       --shap-device "$SHAP_DEVICE" \
       --noise-percentages "$NOISE_PERCENTAGES" \
-      --top-attr-k "$TOP_ATTR_K" \
+      --top-attr-ks "$TOP_ATTR_KS" \
       --output  "${RESULTS_ROOT}/${DATASET}_shapley_noise.json" \
       --metrics "${RESULTS_ROOT}/${DATASET}_shapley_noise_metrics.json" \
       ${NUM_ROWS:+--num-rows "$NUM_ROWS"}
