@@ -83,7 +83,7 @@ def noise_ids_from_ops(noise_ops) -> set[str]:
 
 
 # ── Per-row metrics ─────────────────────────────────────────────────────────
-def compute_noise_metrics(scores_by_id: dict[str, float], noise_ids: set[str], top_attr_k: int) -> dict:
+def compute_noise_metrics(scores_by_id: dict[str, float], noise_ids: set[str], ks=(1, 3, 5)) -> dict:
     """How much of the answer's Shapley attribution lands on the noise objects."""
     all_ids = list(scores_by_id.keys())
     noise_present = [i for i in all_ids if i in noise_ids]
@@ -105,11 +105,20 @@ def compute_noise_metrics(scores_by_id: dict[str, float], noise_ids: set[str], t
 
     # Ranking: object ids by descending Shapley value (the "explanation").
     ranking = sorted(all_ids, key=lambda i: scores_by_id[i], reverse=True)
-    k_eff = min(top_attr_k, len(ranking))
-    topk = ranking[:k_eff]
-    
-    num_noise_in_topk = sum(1 for i in topk if i in noise_ids)
     best_noise_rank = next((pos for pos, i in enumerate(ranking, 1) if i in noise_ids), None)
+
+    # "Is noise among the top-k attributions?" computed for every requested k
+    # (e.g. 1, 3, 5). topk[str(k)] = {k_eff, in_topk, num_in_topk, frac_in_topk}.
+    topk = {}
+    for k in ks:
+        k_eff = min(k, len(ranking))
+        num = sum(1 for i in ranking[:k_eff] if i in noise_ids)
+        topk[str(k)] = {
+            "k_eff": k_eff,
+            "in_topk": num > 0,
+            "num_in_topk": num,
+            "frac_in_topk": frac(num, len(noise_present)),
+        }
 
     return {
         "n_objects": len(all_ids),
@@ -124,11 +133,8 @@ def compute_noise_metrics(scores_by_id: dict[str, float], noise_ids: set[str], t
         "max_noise_shap": float(noise_vals.max()) if noise_present else 0.0,
         "mean_orig_shap": float(orig_vals.mean()) if orig_present else 0.0,
         "max_orig_shap": float(orig_vals.max()) if orig_present else 0.0,
-        "top_attr_k": k_eff,
-        "noise_in_topk": num_noise_in_topk > 0,
-        "num_noise_in_topk": num_noise_in_topk,
-        "noise_in_topk_frac": frac(num_noise_in_topk, len(noise_present)), # <-- NEW: Fraction of noise objects in top-k
         "best_noise_rank": best_noise_rank,
+        "topk": topk,
         "ranking": ranking,
     }
 
@@ -139,10 +145,24 @@ def _mean(xs):
     return float(np.mean(xs)) if xs else float("nan")
 
 
+def _topk_agg(ms: list, ks: list) -> dict:
+    """Per-k aggregate: % of rows with noise in top-k + avg fraction/count of noise in top-k."""
+    agg = {}
+    for k in ks:
+        kk = str(k)
+        agg[kk] = {
+            "pct_in_topk": round(100 * sum(m["topk"][kk]["in_topk"] for m in ms) / len(ms), 2) if ms else 0.0,
+            "avg_frac_in_topk": _mean([m["topk"][kk]["frac_in_topk"] for m in ms]),
+            "avg_num_in_topk": _mean([m["topk"][kk]["num_in_topk"] for m in ms]),
+        }
+    return agg
+
+
 def summarize_level(level_records: dict) -> dict:
     """Aggregate per-row metrics for one noise level (overall + robust split)."""
     rows = [r["metrics"] for r in level_records.values()]
     n = len(rows)
+    ks = sorted(int(k) for k in rows[0]["topk"]) if rows else []
     robust = [r for r in level_records.values() if r.get("noise_robust") is True]
     fragile = [r for r in level_records.values() if r.get("noise_robust") is False]
     judged = robust + fragile
@@ -153,18 +173,15 @@ def summarize_level(level_records: dict) -> dict:
             "rows": len(ms),
             "avg_noise_abs_frac": _mean([m["noise_abs_frac"] for m in ms]),
             "avg_noise_pos_frac": _mean([m["noise_pos_frac"] for m in ms]),
-            "pct_noise_in_topk": round(100 * sum(m["noise_in_topk"] for m in ms) / len(ms), 2) if ms else 0.0,
-            "avg_noise_in_topk_frac": _mean([m.get("noise_in_topk_frac", 0.0) for m in ms]),
+            "topk": _topk_agg(ms, ks),
         }
 
     out = {
         "rows": n,
         "avg_noise_abs_frac": _mean([m["noise_abs_frac"] for m in rows]),
         "avg_noise_pos_frac": _mean([m["noise_pos_frac"] for m in rows]),
-        "avg_num_noise_in_topk": _mean([m["num_noise_in_topk"] for m in rows]),
-        "avg_noise_in_topk_frac": _mean([m.get("noise_in_topk_frac", 0.0) for m in rows]),
-        "pct_noise_in_topk": round(100 * sum(m["noise_in_topk"] for m in rows) / n, 2) if n else 0.0,
         "avg_n_noise_objects": _mean([m["n_noise"] for m in rows]),
+        "topk": _topk_agg(rows, ks),
     }
     if judged:
         out["pct_noise_robust"] = round(100 * len(robust) / len(judged), 2)
@@ -226,7 +243,7 @@ async def run_noise(args, rag, rag_counter, hf_model, hf_tok, G, data):
             scores_by_id = {object_id(k, o): s for (k, o), s in zip(objects, scores)}
 
             noise_ids = noise_ids_from_ops(noise_ops)
-            m = compute_noise_metrics(scores_by_id, noise_ids, args.top_attr_k)
+            m = compute_noise_metrics(scores_by_id, noise_ids, args.top_attr_ks)
 
             results[level_key][rid] = {
                 "question": question,
@@ -250,10 +267,12 @@ async def run_noise(args, rag, rag_counter, hf_model, hf_tok, G, data):
                 "n_objects": m["n_objects"], "n_noise": m["n_noise"],
             }
 
+            topk_str = " ".join(
+                f"t{k}={'Y' if m['topk'][str(k)]['in_topk'] else 'n'}({m['topk'][str(k)]['num_in_topk']})"
+                for k in args.top_attr_ks)
             print(f"[{rid} | noise={int(p * 100)}%] objs={m['n_objects']} (noise={m['n_noise']}) "
                   f"robust={noise_robust} noise_abs_frac={m['noise_abs_frac']:.3f} "
-                  f"in_top{m['top_attr_k']}={m['noise_in_topk']}({m['num_noise_in_topk']}/{m['n_noise']}) "
-                  f"best_noise_rank={m['best_noise_rank']} | shap {shap_evals} evals/{shap_time:.1f}s")
+                  f"{topk_str} best_noise_rank={m['best_noise_rank']} | shap {shap_evals} evals/{shap_time:.1f}s")
 
     _write_outputs(args, results, metrics, noise_percentages)
 
@@ -275,18 +294,19 @@ def _write_outputs(args, results, metrics, noise_percentages):
     with open(out_metrics, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
 
+    ks = args.top_attr_ks
     print("\n" + "=" * 85)
     print(f"  Shapley noise resistance  (dataset={args.dataset}, target=noisy-context answer)")
     print("=" * 85)
-    print(f"{'noise':<8}{'rows':>6}{'avg|noise|frac':>16}{'avg pos frac':>14}"
-          f"{'%noise_in_top':>16}{'avg_top_frac':>14}{'%robust':>10}")
+    topk_hdr = "".join(f"{'%top' + str(k):>9}" for k in ks)
+    print(f"{'noise':<7}{'rows':>6}{'avg|noise|':>12}{'avgpos':>9}{topk_hdr}{'%robust':>9}")
     for p in noise_percentages:
         s = summary.get(f"noise_level_{int(p * 100)}")
         if not s:
             continue
-        print(f"{int(p * 100):>3}% {'':<3}{s['rows']:>6}{s['avg_noise_abs_frac']:>16.4f}"
-              f"{s['avg_noise_pos_frac']:>14.4f}{s['pct_noise_in_topk']:>16.2f}"
-              f"{s['avg_noise_in_topk_frac']:>14.4f}{s.get('pct_noise_robust', float('nan')):>10}")
+        topk_cells = "".join(f"{s['topk'][str(k)]['pct_in_topk']:>9.1f}" for k in ks)
+        print(f"{int(p * 100):>3}% {'':<2}{s['rows']:>6}{s['avg_noise_abs_frac']:>12.4f}"
+              f"{s['avg_noise_pos_frac']:>9.3f}{topk_cells}{s.get('pct_noise_robust', float('nan')):>9}")
     # The headline result: among robust rows (noise didn't change the answer),
     # is the noise attribution near zero?
     print("-" * 85)
@@ -339,6 +359,24 @@ def _parse_noise_percentages(spec: str) -> list:
     return out
 
 
+def _parse_top_attr_ks(spec: str) -> list:
+    out = []
+    for tok in spec.split(","):
+        tok = tok.strip()
+        if not tok:
+            continue
+        try:
+            v = int(tok)
+        except ValueError:
+            raise SystemExit(f"--top-attr-ks: '{tok}' is not an integer.")
+        if v < 1:
+            raise SystemExit(f"--top-attr-ks: {v} must be >= 1.")
+        out.append(v)
+    if not out:
+        raise SystemExit("--top-attr-ks: at least one value required.")
+    return sorted(set(out))
+
+
 def build_arg_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="run_shapley_noise",
@@ -351,8 +389,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument("--num-rows", type=int, default=None, help="Cap on QA rows (default: all).")
     p.add_argument("--noise-percentages", default="0.1,0.3,0.5,0.8",
                    help="Comma-separated noise fractions in (0, 1). One Shapley run per fraction × row.")
-    p.add_argument("--top-attr-k", type=int, default=5,
-                   help="k for the 'noise in top-k attributions' check.")
+    p.add_argument("--top-attr-ks", default="1,3,5",
+                   help="Comma-separated k values for the 'noise in top-k attributions' check (e.g. 1,3,5).")
     p.add_argument("--shap-device", default="cuda:1", help="Device for the HF utility model.")
     p.add_argument("--shap-load-8bit", action="store_true")
     p.add_argument("--shap-load-4bit", action="store_true")
@@ -371,4 +409,5 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 if __name__ == "__main__":
     args = build_arg_parser().parse_args()
+    args.top_attr_ks = _parse_top_attr_ks(args.top_attr_ks)
     asyncio.run(run_benchmark(args))

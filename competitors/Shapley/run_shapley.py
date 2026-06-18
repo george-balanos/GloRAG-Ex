@@ -42,10 +42,12 @@ from src.llm.utils import vllm_model_complete, VLLM_MODEL
 from src.dataset_setup import WORKING_DIRS, QA_CSV_PATHS, DATASETS
 from src.parser import render_context_from_objects
 from src.perm_utils import random_object_permutations
+from src.base import Entity, Relation
 
 from tqdm import tqdm
 import argparse
 import asyncio
+import glob
 import itertools
 import json
 import logging
@@ -530,7 +532,225 @@ async def run_permutation(args, rag, rag_counter, hf_model, hf_tok, data):
     print(f"Results -> {out}")
 
 
+# ── From-JSON source (no retrieval) ─────────────────────────────────────────
+# Read the ORIGINAL context (original_subgraph) + ORIGINAL answer straight from
+# CFE result JSONs (generate.py :: save_operations_to_json), so Shapley runs on
+# the exact cases the algorithm produced — with NO LightRAG and NO retrieval.
+def _entities_from_dict(d: dict) -> list:
+    return [Entity(name=e.get("name", ""), type=e.get("type", ""),
+                   description=e.get("description", ""), rank=e.get("rank", 0.0))
+            for e in ((d or {}).get("entities") or [])]
+
+
+def _relations_from_dict(d: dict) -> list:
+    return [Relation(src=r.get("src", ""), tgt=r.get("tgt", ""),
+                     keywords=r.get("keywords", ""), description=r.get("description", ""),
+                     weight=r.get("weight", 0.0))
+            for r in ((d or {}).get("relations") or [])]
+
+
+def load_cf_cases(input_dir: str) -> list:
+    """[(filepath, payload)] for CFE JSONs with a non-empty original_subgraph."""
+    files = sorted(glob.glob(os.path.join(input_dir, "**", "counterfactual_*.json"), recursive=True))
+    cases = []
+    for fp in files:
+        try:
+            with open(fp, encoding="utf-8") as f:
+                payload = json.load(f)
+        except Exception as e:
+            print(f"  skip {fp}: {e}")
+            continue
+        og = payload.get("original_subgraph") or {}
+        if (og.get("entities") or []) or (og.get("relations") or []):
+            cases.append((fp, payload))
+    return cases
+
+
+async def _generate_answer(context: str, question: str) -> str:
+    """Generate the RAG answer for `context` WITHOUT LightRAG/retrieval — same
+    prompt + vLLM model as query() (vllm_model_complete defaults temperature=0,
+    max_tokens=8192, matching LightRAG's llm_model_kwargs)."""
+    return await vllm_model_complete(question, system_prompt=build_rag_system_prompt(context))
+
+
+def _case_id(fp: str) -> str:
+    return os.path.splitext(os.path.basename(fp))[0]
+
+
+async def run_plain_from_json(args, hf_model, hf_tok, cases):
+    """Base Shapley on the stored original context + original answer (no generation)."""
+    results, metrics = {}, {}
+    for fp, payload in tqdm(cases, desc="Shapley TMC (from JSON)", total=len(cases)):
+        rid = _case_id(fp)
+        question = payload["question"]
+        ground_truth = payload["answers"].get("ground_truth")
+        original_answer = payload["answers"]["original"]
+        og = payload["original_subgraph"]
+        objects = build_objects(_entities_from_dict(og), _relations_from_dict(og))
+        n_items = len(objects)
+        if n_items == 0:
+            print(f"[{rid}] no objects; skipping.")
+            continue
+
+        row_t0 = time.perf_counter()
+        scores, shap_evals = run_tmc(
+            objects, question, hf_model, hf_tok, args.shap_device, original_answer, args)
+        shap_time = time.perf_counter() - row_t0
+        scores_by_id = {object_id(k, o): s for (k, o), s in zip(objects, scores)}
+
+        results[rid] = {
+            "filepath": fp, "mode": payload.get("mode"),
+            "question": question, "ground_truth": ground_truth, "rag_answer": original_answer,
+            "score": None, "n_items": n_items, "shapley_scores": scores_by_id,
+        }
+        metrics[rid] = {
+            "rag_calls": 0, "rag_time": 0.0,
+            "shap_utility_evals": shap_evals, "shap_forward_passes": shap_evals * 2,
+            "shap_time": round(shap_time, 4),
+            "judge_calls": 0, "judge_time": 0.0,
+            "total_calls": shap_evals, "total_time": round(shap_time, 4), "n_items": n_items,
+        }
+        print(f"[{rid}] items={n_items} | Shapley: {shap_evals} evals / {shap_time:.2f}s")
+
+    _write_plain_outputs(args, results, metrics)
+
+
+async def run_permutation_from_json(args, hf_model, hf_tok, cases):
+    """Permutation Shapley from JSON: original order attributes the stored original
+    answer; each permuted order is re-GENERATED (no retrieval) and TMC'd on that new
+    answer — surfacing both ordering bias AND whether the answer itself flips."""
+    results = {}
+    tau_list, mintau_list, top1_list, topk_list, exact_list = [], [], [], [], []
+    posmatch_list, poschecked_list, changed_list = [], [], []
+    for fp, payload in tqdm(cases, desc="Shapley permutation (from JSON)", total=len(cases)):
+        rid = _case_id(fp)
+        question = payload["question"]
+        ground_truth = payload["answers"].get("ground_truth")
+        original_answer = payload["answers"]["original"]
+        og = payload["original_subgraph"]
+        entities, relations = _entities_from_dict(og), _relations_from_dict(og)
+        if len(entities) + len(relations) == 0:
+            print(f"[{rid}] no objects; skipping.")
+            continue
+
+        ids = [object_id(k, o) for k, o in build_objects(entities, relations)]
+        scores_by_perm, perm_records = {}, []
+
+        # Original context order -> attribute the stored original answer (no generation).
+        orig_objects = build_objects(entities, relations)
+        st0 = time.perf_counter()
+        scores, evals = run_tmc(
+            orig_objects, question, hf_model, hf_tok, args.shap_device, original_answer, args)
+        orig_elapsed = round(time.perf_counter() - st0, 4)
+        sbi = {object_id(k, o): s for (k, o), s in zip(orig_objects, scores)}
+        scores_by_perm["original"] = sbi
+        perm_records.append({
+            "perm_id": "original", "perm": list(range(len(orig_objects))),
+            "object_order": ids, "target_answer": original_answer, "generated": False,
+            "answer_changed": False, "shapley_scores": sbi,
+            "ranking": sorted(sbi, key=lambda o: sbi[o], reverse=True),
+            "utility_evals": evals, "forward_passes": evals * 2,
+            "shap_time": orig_elapsed, "gen_time": 0.0,
+        })
+
+        # Permuted orders -> generate a fresh answer, then TMC on that new answer.
+        perms = random_object_permutations(entities, relations, count=5, seed=args.seed)
+        for p in perms:
+            gt0 = time.perf_counter()
+            new_answer = await _generate_answer(p["render"], question)
+            gen_time = round(time.perf_counter() - gt0, 4)
+            answer_changed = new_answer.strip() != (original_answer or "").strip()
+
+            st0 = time.perf_counter()
+            scores, evals = run_tmc(
+                p["objects"], question, hf_model, hf_tok, args.shap_device, new_answer, args)
+            elapsed = round(time.perf_counter() - st0, 4)
+            sbi = {object_id(k, o): s for (k, o), s in zip(p["objects"], scores)}
+            scores_by_perm[p["perm_id"]] = sbi
+            perm_records.append({
+                "perm_id": p["perm_id"], "perm": list(p["perm"]),
+                "object_order": [object_id(k, o) for (k, o) in p["objects"]],
+                "target_answer": new_answer, "generated": True,
+                "answer_changed": answer_changed, "shapley_scores": sbi,
+                "ranking": sorted(sbi, key=lambda o: sbi[o], reverse=True),
+                "utility_evals": evals, "forward_passes": evals * 2,
+                "shap_time": elapsed, "gen_time": gen_time,
+            })
+
+        stats = permutation_stats(scores_by_perm, ids, args.topk_stable)
+        topk_key = f"top{args.topk_stable}_stable"
+        n_changed = sum(1 for r in perm_records if r["answer_changed"])
+        results[rid] = {
+            "filepath": fp, "mode": payload.get("mode"),
+            "question": question, "ground_truth": ground_truth, "original_answer": original_answer,
+            "n_entities": len(entities), "n_relations": len(relations), "object_ids": ids,
+            "num_permutations": len(perm_records),
+            "num_answer_changed": n_changed,
+            "permutations": perm_records, "stats": stats,
+            "perm_total_utility_evals": sum(r["utility_evals"] for r in perm_records),
+            "perm_total_shap_time": round(sum(r["shap_time"] for r in perm_records), 4),
+        }
+        tau_list.append(stats["mean_kendall_tau"])
+        mintau_list.append(stats["min_kendall_tau"])
+        top1_list.append(stats["top1_stable"])
+        topk_list.append(stats.get(topk_key, False))
+        exact_list.append(stats["exact_ranking_match"])
+        posmatch_list.append(stats["topk_position_matches"])
+        poschecked_list.append(stats["topk_positions_checked"])
+        changed_list.append(n_changed)
+        print(f"[{rid}] perms={stats['num_permutations']} answer_changed={n_changed}/{len(perms)} "
+              f"meanτ={stats['mean_kendall_tau']:.3f} minτ={stats['min_kendall_tau']:.3f} "
+              f"top1_stable={stats['top1_stable']} exact={stats['exact_ranking_match']}")
+
+    out = args.output or f"benchmark/results/{args.dataset}_shapley_permutation.json"
+    rows = len(results)
+    summary = {
+        "rows": rows,
+        "topk_stable_k": args.topk_stable,
+        "avg_mean_kendall_tau": float(np.nanmean(tau_list)) if tau_list else float("nan"),
+        "avg_min_kendall_tau": float(np.nanmean(mintau_list)) if mintau_list else float("nan"),
+        "pct_top1_stable": round(100 * sum(top1_list) / rows, 2) if rows else 0.0,
+        "pct_topk_stable": round(100 * sum(topk_list) / rows, 2) if rows else 0.0,
+        "pct_exact_ranking_match": round(100 * sum(exact_list) / rows, 2) if rows else 0.0,
+        "avg_topk_position_matches": round(sum(posmatch_list) / rows, 4) if rows else 0.0,
+        "avg_topk_positions_checked": round(sum(poschecked_list) / rows, 4) if rows else 0.0,
+        "avg_answer_changed_per_row": round(sum(changed_list) / rows, 4) if rows else 0.0,
+    }
+    results["__summary__"] = summary
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    with open(out, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2)
+    print("\n" + "=" * 64)
+    print(f"  Shapley permutation (from JSON)  ({rows} rows, dataset={args.dataset})")
+    print("=" * 64)
+    print(f"avg mean Kendall-tau : {summary['avg_mean_kendall_tau']:.4f}")
+    print(f"avg answer-changed   : {summary['avg_answer_changed_per_row']} / 5 permuted orders")
+    print(f"top-1 stable rows    : {summary['pct_top1_stable']}%")
+    print(f"exact-ranking rows   : {summary['pct_exact_ranking_match']}%")
+    print("=" * 64)
+    print(f"Results -> {out}")
+
+
 async def run_benchmark(args):
+    # From-JSON mode: read original context + answer from CFE JSONs, NO LightRAG,
+    # NO retrieval. Base is generation-free; --permute generates per permuted order.
+    if args.input_dir:
+        hf_model, hf_tok = load_hf_utility_model(args.shap_device, args.shap_load_8bit, args.shap_load_4bit)
+        cases = load_cf_cases(args.input_dir)
+        if args.num_rows is not None:
+            cases = cases[:args.num_rows]
+        tag = os.path.basename(os.path.normpath(args.input_dir))
+        if args.permute:
+            args.output = args.output or f"benchmark/results/{args.dataset}_shapley_permutation_{tag}.json"
+            print(f"Loaded {len(cases)} CFE case(s) from {args.input_dir} (permutation, regenerating per order)")
+            await run_permutation_from_json(args, hf_model, hf_tok, cases)
+        else:
+            args.output = args.output or f"benchmark/results/{args.dataset}_shapley_tmc_{tag}.json"
+            args.metrics = args.metrics or f"benchmark/results/{args.dataset}_shapley_tmc_{tag}_metrics.json"
+            print(f"Loaded {len(cases)} CFE case(s) from {args.input_dir} (base, generation-free)")
+            await run_plain_from_json(args, hf_model, hf_tok, cases)
+        return
+
     rag_counter = RagCounter()
     import src.retrieve as _retr
     _retr.vllm_model_complete = rag_counter.make_wrapper()
@@ -553,7 +773,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument("--dataset", choices=DATASETS, default="synthetic")
     p.add_argument("--rag-mode", choices=["hybrid", "local", "global", "naive"], default="hybrid")
     p.add_argument("--top-k", type=int, default=2)
-    p.add_argument("--num-rows", type=int, default=None, help="Cap on QA rows (default: all).")
+    p.add_argument("--num-rows", type=int, default=None, help="Cap on QA rows / cases (default: all).")
+    p.add_argument("--input-dir", default=None,
+                   help="Directory of CFE counterfactual_*.json (recursive). When set, Shapley reads the "
+                        "original_subgraph + original answer from the JSONs — NO LightRAG, NO retrieval. "
+                        "Base mode is generation-free; --permute regenerates the answer per permuted order.")
     p.add_argument("--shap-device", default="cuda:1", help="Device for the HF utility model.")
     p.add_argument("--shap-load-8bit", action="store_true")
     p.add_argument("--shap-load-4bit", action="store_true")
