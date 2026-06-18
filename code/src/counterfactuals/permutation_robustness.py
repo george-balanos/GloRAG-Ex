@@ -10,18 +10,20 @@ sample 5 random object orderings, re-split into the two-section RAG layout. For
 each permutation we re-render the context, re-query the RAG LLM, and judge
 against the ORIGINAL answer — flip = (judge score == 0), matching generate.py.
 
-This experiment uses only LightRAG (vLLM) + the judge — no HF/Shapley model.
+This experiment uses the vLLM generation model + the judge directly — no LightRAG,
+no retrieval (the perturbed subgraph already lives in the input JSONs), and no
+HF/Shapley model.
 
 Run from code/ (PYTHONPATH=code), e.g.:
   ../.venv/bin/python -m src.counterfactuals.permutation_robustness \
       --dataset synthetic \
       --input-dir src/counterfactuals/results/ablation/ft_delete_no_psp/synthetic/delete_ops_ft
 """
-from src.retrieve import initialize_lightrag
-from src.query import query
+from src.query import build_rag_system_prompt
+from src.llm.utils import vllm_model_complete
 from src.llm_judge import judge_response
 from src.base import Entity, Relation
-from src.dataset_setup import WORKING_DIRS, DATASETS
+from src.dataset_setup import DATASETS
 from src.perm_utils import random_object_permutations
 
 from tqdm import tqdm
@@ -41,6 +43,16 @@ def _object_id(kind, obj) -> str:
     return f"E::{obj.name}" if kind == "entity" else f"R::{obj.src}->{obj.tgt}"
 
 
+async def _generate_answer(context: str, question: str) -> str:
+    """Generate the RAG answer for `context` WITHOUT LightRAG/retrieval.
+
+    Byte-identical to query()'s generation: same system prompt and the same vLLM
+    model (vllm_model_complete defaults temperature=0, max_tokens=8192, matching
+    LightRAG's llm_model_kwargs).
+    """
+    return await vllm_model_complete(question, system_prompt=build_rag_system_prompt(context))
+
+
 def _entities_from_dict(d: dict) -> list[Entity]:
     return [Entity(name=e.get("name", ""), type=e.get("type", ""),
                    description=e.get("description", ""), rank=e.get("rank", 0.0))
@@ -54,10 +66,21 @@ def _relations_from_dict(d: dict) -> list[Relation]:
             for r in (d.get("relations") or [])]
 
 
-def load_flip_cases(input_dir: str) -> list[tuple[str, dict]]:
-    """Return [(filepath, payload)] for counterfactual JSONs that found a flip."""
+def _is_nonempty_subgraph(sg) -> bool:
+    """True if the subgraph dict has at least one entity or relation."""
+    return bool(sg) and bool((sg.get("entities") or []) or (sg.get("relations") or []))
+
+
+def load_flip_cases(input_dir: str) -> tuple[list[tuple[str, dict]], dict]:
+    """Return (cases, counts).
+
+    cases  : [(filepath, payload)] for JSONs that found a flip AND carry a
+             non-empty perturbed_subgraph (the ones we actually permute).
+    counts : {total_cf_files, n_found, n_nonempty_perturbed, n_empty_or_not_found}.
+    """
     files = sorted(glob.glob(os.path.join(input_dir, "**", "counterfactual_*.json"), recursive=True))
     cases = []
+    total, n_found, n_nonempty = 0, 0, 0
     for fp in files:
         try:
             with open(fp, encoding="utf-8") as f:
@@ -65,18 +88,29 @@ def load_flip_cases(input_dir: str) -> list[tuple[str, dict]]:
         except Exception as e:
             print(f"  skip {fp}: {e}")
             continue
-        if payload.get("found") and payload.get("perturbed_subgraph"):
+        total += 1
+        found = bool(payload.get("found"))
+        nonempty = _is_nonempty_subgraph(payload.get("perturbed_subgraph"))
+        n_found += int(found)
+        n_nonempty += int(nonempty)
+        if found and nonempty:
             cases.append((fp, payload))
-    return cases
+    counts = {
+        "total_cf_files": total,
+        "n_found": n_found,
+        "n_nonempty_perturbed": n_nonempty,
+        "n_empty_or_not_found": total - len(cases),
+    }
+    return cases, counts
 
 
 async def run(args):
-    rag = await initialize_lightrag(working_dir=WORKING_DIRS[args.dataset])
-
-    cases = load_flip_cases(args.input_dir)
+    cases, counts = load_flip_cases(args.input_dir)
     if args.num_files is not None:
         cases = cases[:args.num_files]
-    print(f"Found {len(cases)} flipping counterfactual cases in {args.input_dir}")
+    print(f"Scanned {counts['total_cf_files']} counterfactual JSON(s) in {args.input_dir}")
+    print(f"  found={counts['n_found']} | non-empty perturbed_subgraph={counts['n_nonempty_perturbed']} "
+          f"(permuted) | empty/not-found={counts['n_empty_or_not_found']}")
 
     results = {}
     all6_count = 0
@@ -93,7 +127,7 @@ async def run(args):
         per_perm = {}
         n_flipped = 0
         for p in perms:
-            new_response = await query(rag, p["render"], question)
+            new_response = await _generate_answer(p["render"], question)
             score = await judge_response(question, new_response, original_answer)
             flipped = (score == 0)
             n_flipped += int(flipped)
@@ -141,19 +175,24 @@ async def run(args):
         "cases": len(results),
         "avg_flip_stability": round(stability_sum / n, 4),
         "pct_flip_under_all_permutations": round(100 * all6_count / n, 2),
+        **counts,
     }
     results["__summary__"] = summary
 
-    out = args.output or f"src/counterfactuals/results/{args.dataset}/permutation_robustness.json"
-    os.makedirs(os.path.dirname(out), exist_ok=True)
+    # Default output co-located with the input cell so per-subdir runs don't clobber
+    # a single shared file.
+    out = args.output or os.path.join(args.input_dir, "permutation_robustness.json")
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
     print("\n" + "=" * 64)
     print(f"  CF permutation robustness  ({summary['cases']} flip cases, dataset={args.dataset})")
     print("=" * 64)
-    print(f"avg flip-stability (frac of perms still flipping): {summary['avg_flip_stability']}")
-    print(f"cases flipping under ALL permutations           : {summary['pct_flip_under_all_permutations']}%")
+    print(f"counterfactual files / found / non-empty perturbed : "
+          f"{counts['total_cf_files']} / {counts['n_found']} / {counts['n_nonempty_perturbed']}")
+    print(f"avg flip-stability (frac of perms still flipping)  : {summary['avg_flip_stability']}")
+    print(f"cases flipping under ALL permutations              : {summary['pct_flip_under_all_permutations']}%")
     print("=" * 64)
     print(f"Results -> {out}")
 
