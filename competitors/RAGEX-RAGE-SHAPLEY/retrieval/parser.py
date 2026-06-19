@@ -1,6 +1,8 @@
 from retrieval.base import *
 
 import re
+import networkx as nx
+import json
 
 def _split_sections(context: str) -> dict[str, str]:
     """
@@ -43,12 +45,12 @@ def _split_sections(context: str) -> dict[str, str]:
             current_lines = []
             continue
  
-        m = re.match(r"^Reference Document", stripped, re.IGNORECASE)
-        if m:
-            sections[current_key] = "\n".join(current_lines)
-            current_key = "references"
-            current_lines = []
-            continue
+        # m = re.match(r"^Reference Document", stripped, re.IGNORECASE)
+        # if m:
+        #     sections[current_key] = "\n".join(current_lines)
+        #     current_key = "references"
+        #     current_lines = []
+        #     continue
  
         current_lines.append(line)
  
@@ -88,7 +90,32 @@ def _parse_pipe_delimited(text: str) -> list[dict]:
             results.append({"_parts": parts})
     return results
  
- 
+def subgraph_to_dict(subgraph) -> dict:
+    if subgraph is None:
+        return None
+
+    return {
+        "entities": [
+            {
+                "name": e.name, 
+                "type": e.type,
+                "description": e.description,
+                "rank": e.rank
+            }
+            for e in subgraph.entities
+        ],
+        "relations": [
+            {
+                "src": r.src,
+                "tgt": r.tgt,
+                "keywords": r.keywords,
+                "description": r.description,
+                "weight": r.weight,
+            }
+            for r in subgraph.relations
+        ]
+    }
+
 def parse_context(context: str) -> Subgraph:
     """
     Parse the context string LightRAG returns for only_need_context=True.
@@ -171,3 +198,151 @@ def parse_context(context: str) -> Subgraph:
         subgraph.chunks = [b.strip() for b in blocks if b.strip()]
  
     return subgraph
+
+def parse_graph(subgraph: Subgraph) -> nx.Graph:
+    G = nx.DiGraph()
+
+    for entity in subgraph.entities:
+        G.add_node(
+            entity.name,
+            type=entity.type,
+            description=entity.description,
+        )
+
+    for relation in subgraph.relations:
+        for name in (relation.src, relation.tgt):
+            if name and name not in G:
+                G.add_node(name)
+
+        if relation.src and relation.tgt:
+            G.add_edge(
+                relation.src,
+                relation.tgt,
+                keywords=relation.keywords,
+                description=relation.description,
+                weight=relation.weight
+            )
+
+    return G
+
+
+###### Networkx -> Context (String)
+
+def graph_to_subgraph(G: nx.DiGraph) -> Subgraph:
+    entities = []
+    for name, attrs in G.nodes(data=True):
+        entities.append(Entity(
+            name=name,
+            type=attrs.get("type", ""),
+            description=attrs.get("description", ""),
+            rank=attrs.get("rank", 0.0),
+            raw=dict(attrs),
+        ))
+
+    relations = []
+    for src, tgt, attrs in G.edges(data=True):
+        relations.append(Relation(
+            src=src,
+            tgt=tgt,
+            keywords=attrs.get("keywords", ""),
+            description=attrs.get("description", ""),
+            weight=attrs.get("weight", 0.0),
+            raw=dict(attrs),
+        ))
+
+    return Subgraph(
+        entities=entities,
+        relations=relations,
+        # chunks=original.chunks if original else [],
+        # raw_context=original.raw_context if original else "",
+    )
+
+def render_context(entities, relations) -> str:
+    """Serialize explicit ordered lists of entities/relations into the exact
+    context string the LLM sees — byte-identical to graph_to_context's output.
+
+    Order is preserved verbatim, which makes this reusable for Shapley subsets and for
+    context-permutation experiments.
+    """
+    lines = []
+
+    # ── Entities ──────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Entity):")
+    lines.append("```json")
+    for e in entities:
+        lines.append(json.dumps({
+            "entity": e.name,
+            "type": e.type,
+            "description": e.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    # ── Relations ─────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Relationship):")
+    lines.append("```json")
+    for r in relations:
+        lines.append(json.dumps({
+            "entity1": r.src,
+            "entity2": r.tgt,
+            "description": r.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    return "\n".join(lines)
+
+
+def render_context_from_objects(objects) -> str:
+    """Render a mixed (kind, obj) object list into the standard RAG context."""
+    entities = [obj for kind, obj in objects if kind == "entity"]
+    relations = [obj for kind, obj in objects if kind == "relation"]
+    return render_context(entities, relations)
+
+
+def graph_to_context(G: nx.DiGraph) -> str:
+    subgraph = graph_to_subgraph(G)
+
+    lines = []
+
+    # ── Entities ──────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Entity):")
+    lines.append("```json")
+    for e in subgraph.entities:
+        lines.append(json.dumps({
+            "entity": e.name,
+            "type": e.type,
+            "description": e.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    # ── Relations ─────────────────────────────────────────────────────────────
+    lines.append("Knowledge Graph Data (Relationship):")
+    lines.append("```json")
+    for r in subgraph.relations:
+        lines.append(json.dumps({
+            "entity1": r.src,
+            "entity2": r.tgt,
+            "description": r.description,
+        }))
+    lines.append("```")
+    lines.append("")
+
+    # # ── Chunks ────────────────────────────────────────────────────────────────
+    # lines.append("Document Chunks (Each entry has a reference_id refer to the `Reference Document List`):")
+    # lines.append("```json")
+    # for chunk in subgraph.chunks:
+    #     lines.append(json.dumps({
+    #         "reference_id": "",
+    #         "content": chunk,
+    #     }))
+    # lines.append("```")
+    # lines.append("")
+
+    # # ── References ────────────────────────────────────────────────────────────
+    # lines.append("Reference Document List (Each entry starts with a [reference_id] that corresponds to entries in the Document Chunks):")
+    # lines.append("```")
+    # lines.append("```")
+
+    return "\n".join(lines)
