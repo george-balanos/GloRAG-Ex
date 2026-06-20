@@ -28,7 +28,7 @@ RAG_MODE="hybrid"
 TOP_K=2
 NUM_ROWS=                       # empty = all rows
 SHAP_DEVICE="cuda:1"            # GPU for the HF Mistral utility model
-NOISE_PERCENTAGES="0.1,0.3,0.5,0.8"
+NOISE_PERCENTAGES="0.1,0.2,0.3,0.5"
 TOP_ATTR_KS="1,3,5"             # k values for the "noise in top-k attributions" check
 RUN_PLAIN=1                     # S1
 RUN_PERMUTE=1                   # S2
