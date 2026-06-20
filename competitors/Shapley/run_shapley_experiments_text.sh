@@ -29,7 +29,7 @@ DATASETS=(synthetic hotpotqa)   # also configured: musique
 RAG_MODE="hybrid"
 TOP_K=2
 NUM_ROWS=                       # empty = all rows
-NOISE_PERCENTAGES="0.1,0.3,0.5,0.8"
+NOISE_PERCENTAGES="0.1,0.2,0.3,0.5"
 RUN_PLAIN=1                     # S1
 RUN_PERMUTE=1                   # S2
 RUN_NOISE=1                     # S3
