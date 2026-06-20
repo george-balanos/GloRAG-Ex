@@ -26,10 +26,13 @@ cd "${CODE_DIR}"                                             # relative data pat
 export PYTHONPATH="${PYTHONPATH:+${PYTHONPATH}:}$(pwd)"
 
 DATASETS=(synthetic hotpotqa)   # also configured: musique
+GRANULARITIES=(chunk sentence)  # Shapley player granularity (chunk / RAG-Ex remove_sentence)
 RAG_MODE="hybrid"
 TOP_K=2
 NUM_ROWS=                       # empty = all rows
+SHAP_DEVICE="cuda:1"            # GPU for the HF Mistral utility model
 NOISE_PERCENTAGES="0.1,0.2,0.3,0.5"
+TOP_ATTR_KS="1,3,5"             # k values for the "noise in top-k attributions" check
 RUN_PLAIN=1                     # S1
 RUN_PERMUTE=1                   # S2
 RUN_NOISE=1                     # S3
@@ -61,6 +64,13 @@ for DATASET in "${DATASETS[@]}" synthetic; do
     $PYTHON_RUN -m src.embeddings.build_index --dataset "$DATASET"
   fi
 done
+
+# Guard: an empty GRANULARITIES (e.g. the var deleted) would make the inner loop
+# below run ZERO times under `set -u` and silently produce empty output folders.
+if [[ ${#GRANULARITIES[@]} -eq 0 ]]; then
+  echo "ERROR: GRANULARITIES is empty — set e.g. GRANULARITIES=(chunk sentence)." >&2
+  exit 1
+fi
 
 for DATASET in "${DATASETS[@]}"; do
   echo ""

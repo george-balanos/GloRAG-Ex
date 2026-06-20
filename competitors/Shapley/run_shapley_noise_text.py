@@ -200,6 +200,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
                     "into the RAG context, regenerate the answer, and measure how much "
                     "TMC-Shapley attribution lands on the injected noise chunks.")
     p.add_argument("--dataset", choices=DATASETS, default="synthetic")
+    p.add_argument("--granularity", choices=["chunk", "sentence"], default="chunk",
+                   help="Noise/player granularity: whole retrieved chunks, or sentences split "
+                        "from the joined chunks (RAG-Ex remove_sentence analog).")
     p.add_argument("--rag-mode", choices=["hybrid", "local", "global", "naive"], default="hybrid")
     p.add_argument("--top-k", type=int, default=2)
     p.add_argument("--num-rows", type=int, default=None, help="Cap on QA rows (default: all).")
