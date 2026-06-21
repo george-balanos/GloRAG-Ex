@@ -28,9 +28,18 @@ import argparse
 import glob
 import json
 import os
+import sys
 
-from src.correctness.agreement import (fact_coverage, gt_relevant_set, id_relevant, normalized_contains,
-                                        parse_id, precision_at_k, set_precision, span_relevant, tokens)
+# --- CONDITIONAL GLOBAL IMPORT ---
+# We check sys.argv early so the functions are globally defined before execution.
+if "--judge" in sys.argv:
+    from src.correctness.agreement_judge import (fact_coverage, id_relevant, normalized_contains,
+                                            parse_id, precision_at_k, set_precision, span_relevant)
+    print("🧠 Using Matching Module: LLM Judge (agreement_judge)")
+else:
+    from src.correctness.agreement import (fact_coverage, id_relevant, normalized_contains,
+                                      parse_id, precision_at_k, set_precision, span_relevant)
+    print("⚙️ Using Matching Module: String Heuristics (agreement)")
 
 KS = (1, 2, 3, 5)
 DIRECTION = {"ft": "T->F", "ff": "F->T", "tf": "F->T"}  # generate.py mode / case_type -> flip direction
@@ -140,7 +149,6 @@ def _file_direction(path, override):
 
 # ── GloRAG-Ex ────────────────────────────────────────────────────────────────
 def eval_glorag(input_dir, facts, q2id, match="name", desc_ngram=3):
-    use_desc = match == "name+desc"
     files = sorted(glob.glob(os.path.join(input_dir, "**", "counterfactual_*.json"), recursive=True))
     per_instance, unmatched, skipped = {}, 0, 0
     for fp in files:
@@ -159,25 +167,23 @@ def eval_glorag(input_dir, facts, q2id, match="name", desc_ngram=3):
             continue
 
         gold = facts[rid]["gold_text"]
-        gold_tokens = tokens(gold)
         units = _supporting_units(facts[rid])
-        desc_by_id = None
-        if use_desc:
-            desc_by_id = {**_desc_from_subgraph(payload.get("original_subgraph")),
-                          **_desc_from_subgraph(payload.get("perturbed_subgraph"))}
+        # graph elements are judged by name + description -> always provide descriptions
+        desc_by_id = {**_desc_from_subgraph(payload.get("original_subgraph")),
+                      **_desc_from_subgraph(payload.get("perturbed_subgraph"))}
         flagged = ids_from_operations(payload.get("operations"))
-        gold_set = {f for f in flagged if id_relevant(f, gold_tokens, desc_by_id, desc_ngram)}
+        
+        gold_set = {f for f in flagged if id_relevant(f, gold, desc_by_id)}
         s = set_precision(flagged, gold_set)
-        # P@k over the cost-ordered edits (all edits are "flagged"/positive), so the
-        # precision@k column is comparable to the ranking baselines. For k >= |edits|
-        # this saturates to the set precision above.
+        
+        # P@k over the cost-ordered edits (all edits are "flagged"/positive)
         s.update(precision_at_k(flagged, set(flagged), gold_set, KS))
 
         # graph fact-coverage: how many GT facts the original vs perturbed graph carries
         orig_ids = _elements_from_subgraph(payload.get("original_subgraph"))
         pert_ids = _elements_from_subgraph(payload.get("perturbed_subgraph"))
-        s["orig_graph"] = fact_coverage(orig_ids, units, gold, desc_by_id, desc_ngram)
-        s["pert_graph"] = fact_coverage(pert_ids, units, gold, desc_by_id, desc_ngram)
+        s["orig_graph"] = fact_coverage(orig_ids, units, gold, desc_by_id)
+        s["pert_graph"] = fact_coverage(pert_ids, units, gold, desc_by_id)
 
         mode = payload.get("mode", "")
         s.update({"mode": mode, "direction": DIRECTION.get(mode, "?"),
@@ -192,7 +198,7 @@ def eval_attribution(results_path, facts, q2id, score_field="auto", direction="a
                      match="name", desc_ngram=3, shap_min_score=None, kg_graph=None, dataset="hotpotqa"):
     with open(results_path, encoding="utf-8") as f:
         results = json.load(f)
-    G = _load_kg_graph(dataset, kg_graph) if match == "name+desc" else None
+    G = _load_kg_graph(dataset, kg_graph)   
     file_dir = _file_direction(results_path, direction)
     per_instance, unmatched, empty = {}, 0, 0
     for key, rec in results.items():
@@ -210,13 +216,18 @@ def eval_attribution(results_path, facts, q2id, score_field="auto", direction="a
         gold = facts[rid]["gold_text"]
         units = _supporting_units(facts[rid])
         ranked = sorted(scores, key=lambda o: scores[o], reverse=True)
-        # no score filter by default: top-k is purely by rank (the #1 is the highest score,
-        # even if negative). --shap-min-score optionally restricts to score > threshold.
+        
         positive_ids = set(scores) if shap_min_score is None else {o for o, v in scores.items() if v > shap_min_score}
+        
+        # Filter retrieved candidates to ensure correct Precision@K
+        retrieved = [x for x in ranked if x in positive_ids]
+        
         desc_by_id = _desc_from_graph(G, ranked) if G is not None else None
-        gold_set = gt_relevant_set(ranked, gold, desc_by_id, desc_ngram)
+        
+        gold_set = {x for x in retrieved[:max(KS)] if id_relevant(x, gold, desc_by_id)}
+        
         s = precision_at_k(ranked, positive_ids, gold_set, KS)
-        s["orig_graph"] = fact_coverage(ranked, units, gold, desc_by_id, desc_ngram)
+        s["orig_graph"] = fact_coverage(ranked, units, gold, desc_by_id, desc_ngram=desc_ngram)
         s.update({"mode": "attr", "direction": file_dir,
                   "n_universe": len(ranked), "n_positive": len(positive_ids)})
         per_instance[rid] = s
@@ -235,11 +246,17 @@ def eval_ragex(results_path, facts, q2id, span_jaccard=0.5, min_weight=None):
             unmatched += 1
             continue
         units = _supporting_units(facts[rid])
+        gold = facts[rid]["gold_text"]
         imp = c.get("removed_item_importance") or {}
-        ranked = sorted(imp, key=lambda sp: imp[sp], reverse=True)            # spans by importance
-        # no filter by default: top-k spans purely by importance rank (greatest first).
+        ranked = sorted(imp, key=lambda sp: imp[sp], reverse=True)            
+        
         positive_ids = set(imp) if min_weight is None else {sp for sp, w in imp.items() if w > min_weight}
-        gold_set = {sp for sp in ranked if span_relevant(sp, units, span_jaccard)}
+        
+        # Filter retrieved candidates to ensure correct Precision@K
+        retrieved = [sp for sp in ranked if sp in positive_ids]
+        
+        gold_set = {sp for sp in retrieved[:max(KS)] if span_relevant(sp, gold)}
+        
         s = precision_at_k(ranked, positive_ids, gold_set, KS)
 
         ctx = c.get("original_context", "")
@@ -281,7 +298,7 @@ def _glorag_block(items):
     return {"n": len(items),
             "precision": _mean([it["precision"] for it in items]),
             "precision_micro": round(tp / (tp + fp), 4) if (tp + fp) else None,
-            "hit_rate": round(sum(1 for it in items if it["tp"] > 0) / len(items), 4),  # >=1 edit is a fact
+            "hit_rate": round(sum(1 for it in items if it["tp"] > 0) / len(items), 4),  
             "tp_total": tp, "fp_total": fp,
             **{f"P@{k}": _mean([it["precision_at"].get(str(k)) for it in items]) for k in KS},
             **_coverage_means(items, "orig_graph", "orig"),
@@ -293,8 +310,8 @@ def _pk_block(items):
         return {"n": 0}
     out = {"n": len(items)}
     for k in KS:
-        out[f"P@{k}"] = _mean([it["precision_at"].get(str(k)) for it in items])       # precision@k
-        out[f"Hit@{k}"] = _mean([it["hit_at"].get(str(k)) for it in items])           # any-fact-in-top-k rate
+        out[f"P@{k}"] = _mean([it["precision_at"].get(str(k)) for it in items])       
+        out[f"Hit@{k}"] = _mean([it["hit_at"].get(str(k)) for it in items])           
     out.update(_coverage_means(items, "orig_graph", "orig"))
     return out
 
@@ -361,6 +378,10 @@ def main():
     p.add_argument("--desc-ngram", type=int, default=3)
     p.add_argument("--kg-graph", default=None, help="[attribution, name+desc] graphml for description lookup.")
     p.add_argument("--output", default=None)
+    
+    # We leave the flag here so argparse parses it without throwing an error
+    p.add_argument("--judge", action="store_true", help="Use LLM judge (agreement_judge). Otherwise uses string heuristics (agreement).")
+    
     args = p.parse_args()
 
     facts, q2id = load_facts(args.facts)
@@ -385,11 +406,13 @@ def main():
     summary = aggregate(per_instance, args.method)
     summary["_meta"] = {"method": args.method, "dataset": args.dataset, "facts": args.facts,
                         "match": args.match, "desc_ngram": args.desc_ngram, "ks": list(KS),
-                        "results": results, "shap_min_score": args.shap_min_score}
+                        "results": results, "shap_min_score": args.shap_min_score, "used_judge": args.judge}
     out_obj = dict(per_instance)
     out_obj["__summary__"] = summary
 
-    out = args.output or f"benchmark/results/{args.dataset}_{args.method}_correctness.json"
+    suffix = "_correctness_judge.json" if args.judge else "_correctness.json"
+    out = args.output or f"benchmark/results/{args.dataset}_{args.method}{suffix}"
+    
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         json.dump(out_obj, f, indent=2, ensure_ascii=False)

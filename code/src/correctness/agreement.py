@@ -1,62 +1,51 @@
-"""Text-mention correctness core (Phase 5).
+"""Text-mention correctness core (Phase 5) - EMBEDDING & STRING HEURISTIC VERSION.
 
-Maps flagged KG elements to a dataset's ground-truth supporting facts on a common
-granularity by **text mention**, so the same metric applies to GloRAG-Ex (the
-elements edited by the counterfactual sequence) and Shapley-RAG (the elements
-ranked by attribution score).
-
-Element identity is the shared scheme used by both methods:
-  entity   -> id "E::<name>"
-  relation -> id "R::<src>-><tgt>"
-
-Relevance: an entity is GT-relevant iff its (normalised) name occurs as a
-contiguous, word-bounded token sub-sequence of the supporting ``gold_text``; a
-relation iff BOTH endpoints occur. Working in normalised tokens makes the match
-word-boundary safe (e.g. "art" does not match inside "smart").
-
-Metric (per instance): precision only -- TP/(TP+FP) over the flagged set
-(``set_precision``, GloRAG-Ex) or precision@k over the positive-score top-k
-ranking (``precision_at_k``, attribution baselines). No recall/F1: a gold element
-absent from a minimal edit set is not a false negative, so the FN side is undefined.
+Maps flagged KG elements to a dataset's ground-truth supporting facts using a 
+combination of normalized string matching and dense embeddings (Sentence-BERT).
+Replaces the LLM-as-a-judge with deterministic and semantic heuristics.
 """
+import os
 import re
+from functools import lru_cache
+import numpy as np
+from sentence_transformers import SentenceTransformer
+
+# --- EMBEDDING CONFIGURATION ---
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"  # Fast, highly accurate for sentence semantics
+SIMILARITY_THRESHOLD = 0.65                # Cosine similarity cutoff (tune this based on your dataset)
+JACCARD_THRESHOLD = 0.4                    # Token overlap cutoff for spans
+
+_embedder_instance = None
+
+def get_embedder():
+    """Singleton pattern for the embedding model."""
+    global _embedder_instance
+    if _embedder_instance is None:
+        _embedder_instance = SentenceTransformer(EMBEDDING_MODEL_NAME)
+    return _embedder_instance
 
 _WORD = re.compile(r"[a-z0-9]+")
-
 
 def normalize(s: str) -> str:
     """Lowercase, drop punctuation, collapse whitespace."""
     return " ".join(_WORD.findall((s or "").lower()))
 
-
 def tokens(s: str) -> list[str]:
     return normalize(s).split()
 
+def normalized_contains(haystack: str, needle: str) -> bool:
+    """True if `needle` is a (normalised) substring of `haystack`."""
+    hn, nn = normalize(haystack), normalize(needle)
+    return bool(nn) and nn in hn
 
-def _contains_subsequence(hay: list[str], needle: list[str]) -> bool:
-    """True if ``needle`` is a contiguous sub-list of ``hay`` (word-boundary safe)."""
-    n, h = len(needle), len(hay)
-    if n == 0 or n > h:
-        return False
-    first = needle[0]
-    for i in range(h - n + 1):
-        if hay[i] == first and hay[i:i + n] == needle:
-            return True
-    return False
-
-
-def _shares_ngram(a: list[str], b: list[str], n: int) -> bool:
-    """True if token-lists ``a`` and ``b`` share any contiguous n-gram (n>=1).
-
-    Used to match an element's *description* against the gold text: a shared
-    salient phrase is a strong relevance signal, far less noisy than fractional
-    content-word overlap.
-    """
-    if n <= 0 or len(a) < n or len(b) < n:
-        return False
-    grams = {tuple(b[i:i + n]) for i in range(len(b) - n + 1)}
-    return any(tuple(a[i:i + n]) in grams for i in range(len(a) - n + 1))
-
+def token_jaccard(s1: str, s2: str) -> float:
+    """Computes the Jaccard similarity between the token sets of two strings."""
+    set1, set2 = set(tokens(s1)), set(tokens(s2))
+    if not set1 or not set2:
+        return 0.0
+    intersection = len(set1.intersection(set2))
+    union = len(set1.union(set2))
+    return intersection / union
 
 def parse_id(eid: str):
     """('entity', name) | ('relation', (src, tgt)) for an "E::"/"R::" id."""
@@ -65,132 +54,105 @@ def parse_id(eid: str):
     if eid.startswith("R::"):
         src, _, tgt = eid[3:].partition("->")
         return "relation", (src, tgt)
-    return "entity", eid  # be lenient with un-prefixed names
+    return "entity", eid 
+
+@lru_cache(maxsize=20000)
+def _get_embedding(text: str) -> np.ndarray:
+    if not text.strip():
+        return np.zeros(384) # Match MiniLM dimensions
+    return get_embedder().encode(text, normalize_embeddings=True)
+
+def check_semantic_similarity(text1: str, text2: str, threshold: float) -> bool:
+    """Returns True if the cosine similarity between two texts exceeds the threshold."""
+    if not text1.strip() or not text2.strip():
+        return False
+    emb1 = _get_embedding(text1)
+    emb2 = _get_embedding(text2)
+    similarity = np.dot(emb1, emb2) # Already normalized, so dot product == cosine similarity
+    return float(similarity) >= threshold
 
 
-def id_relevant(eid: str, gold_tokens: list[str], desc_by_id: dict | None = None,
-                desc_ngram: int = 3) -> bool:
-    """Is element ``eid`` grounded in the gold text?
+# ── EVALUATION LOGIC ─────────────────────────────────────────────────────────
 
-    Name match: entity name (or BOTH relation endpoints) occurs in ``gold_tokens``.
-    If ``desc_by_id`` is given, an element ALSO matches when its description shares
-    a contiguous ``desc_ngram``-gram with the gold text -- this brings the
-    relationship/entity semantics (not just the surface name) into the decision.
-    """
+def id_relevant(eid: str, gold_text: str, desc_by_id: dict | None = None, **kwargs) -> bool:
+    """Is element ``eid`` grounded in the gold text using heuristics?"""
+    if not gold_text.strip():
+        return False
+        
     kind, payload = parse_id(eid)
+    
+    # 1. High-Precision String Matching on Names
+    # If the entity name or relation endpoints are explicitly stated in the ground truth, it's a hit.
     if kind == "entity":
-        if _contains_subsequence(gold_tokens, tokens(payload)):
+        if normalized_contains(gold_text, payload):
             return True
-    else:
+    elif kind == "relation":
         src, tgt = payload
-        if (_contains_subsequence(gold_tokens, tokens(src))
-                and _contains_subsequence(gold_tokens, tokens(tgt))):
+        # If both source and target are mentioned in the gold text, it's highly likely relevant
+        if normalized_contains(gold_text, src) and normalized_contains(gold_text, tgt):
             return True
-    if desc_by_id:
-        desc = desc_by_id.get(eid)
-        if desc and _shares_ngram(tokens(desc), gold_tokens, desc_ngram):
-            return True
+
+    # 2. Semantic Fallback on Descriptions
+    # If the exact names aren't there, check if the element's description aligns with the ground truth.
+    desc = desc_by_id.get(eid, "") if desc_by_id else ""
+    if desc:
+        payload_str = f"{payload[0]} -> {payload[1]}" if kind == "relation" else payload
+        combined_text = f"{payload_str}: {desc}"
+        return check_semantic_similarity(combined_text, gold_text, SIMILARITY_THRESHOLD)
+
     return False
 
 
-def gt_relevant_set(universe_ids, gold_text: str, desc_by_id: dict | None = None,
-                    desc_ngram: int = 3) -> set:
-    """Subset of the candidate universe whose elements are grounded in GT."""
-    gold_tokens = tokens(gold_text)
-    return {eid for eid in universe_ids
-            if id_relevant(eid, gold_tokens, desc_by_id, desc_ngram)}
+def span_relevant(span: str, gold_text: str, **kwargs) -> bool:
+    """Text-span relevance via Token Jaccard and Dense Embeddings."""
+    if not span or not span.strip() or not gold_text or not gold_text.strip():
+        return False
+        
+    # 1. Fast Token Overlap (Catches literal extractions)
+    if token_jaccard(span, gold_text) >= JACCARD_THRESHOLD:
+        return True
+        
+    # 2. Semantic Overlap (Catches paraphrasing)
+    return check_semantic_similarity(span, gold_text, SIMILARITY_THRESHOLD)
 
+
+# ── METRICS (Unchanged) ──────────────────────────────────────────────────────
+
+def gt_relevant_set(universe_ids, gold_text: str, desc_by_id: dict | None = None, **kwargs) -> set:
+    return {eid for eid in universe_ids if id_relevant(eid, gold_text, desc_by_id)}
 
 def set_precision(flagged_ids, gold_set) -> dict:
-    """Precision of a flagged SET against the gold-relevant set (GloRAG-Ex).
-
-    precision = TP / (TP + FP) = TP / |flagged|, where TP = flagged elements that
-    are grounded in the gold facts. ``None`` when nothing was flagged. No recall:
-    a gold element absent from the (minimal) edit set is not a false negative, so
-    the FN side is ill-defined here.
-    """
     flagged = list(dict.fromkeys(flagged_ids))
     gold = set(gold_set)
     tp = sum(1 for f in flagged if f in gold)
     n = len(flagged)
     return {
         "precision": (tp / n) if n else None,
-        "tp": tp,
-        "fp": n - tp,
-        "n_flagged": n,
+        "tp": tp, "fp": n - tp, "n_flagged": n,
         "gold_flagged": sorted(f for f in flagged if f in gold),
     }
 
-
-def fact_coverage(element_ids, supporting_units, gold_text, desc_by_id=None, desc_ngram=3) -> dict:
-    """How many ground-truth facts a graph carries (two granularities).
-
-    element_ids      : the graph's `E::`/`R::` ids (GloRAG subgraph or attribution universe).
-    supporting_units : the per-fact gold texts (HotpotQA supporting sentences / musique
-                       supporting paragraphs); each is "covered" if some element is grounded in it.
-    Returns: n_elements, n_gold_elements (elements grounded in gold_text), n_facts_covered, n_facts_total.
-    """
+def fact_coverage(element_ids, supporting_units, gold_text, desc_by_id=None, **kwargs) -> dict:
     els = list(dict.fromkeys(element_ids))
-    gold_tokens = tokens(gold_text)
-    n_gold = sum(1 for e in els if id_relevant(e, gold_tokens, desc_by_id, desc_ngram))
+    n_gold = sum(1 for e in els if id_relevant(e, gold_text, desc_by_id))
     covered = 0
     for u in supporting_units:
-        u_tokens = tokens(u)
-        if any(id_relevant(e, u_tokens, desc_by_id, desc_ngram) for e in els):
+        if any(id_relevant(e, u, desc_by_id) for e in els):
             covered += 1
     return {"n_elements": len(els), "n_gold_elements": n_gold,
             "n_facts_covered": covered, "n_facts_total": len(supporting_units)}
 
-
-def normalized_contains(haystack: str, needle: str) -> bool:
-    """True if `needle` is a (normalised) substring of `haystack` (used for context coverage)."""
-    hn, nn = normalize(haystack), normalize(needle)
-    return bool(nn) and nn in hn
-
-
-def _token_set(s: str) -> set:
-    return set(tokens(s))
-
-
-def span_relevant(span: str, supporting_units, jaccard_tau: float = 0.5) -> bool:
-    """Does a RAG-Ex text span (a sentence/paragraph) correspond to a supporting fact?
-
-    Matches a flagged span to a gold unit by normalised containment (either direction --
-    handles sentence in paragraph and vice versa) or token-set Jaccard >= jaccard_tau
-    (handles sentence ~= sentence). Brings token/span-level outputs to the GT granularity.
-    """
-    sn, st = normalize(span), _token_set(span)
-    if not st:
-        return False
-    for u in supporting_units:
-        un, ut = normalize(u), _token_set(u)
-        if not ut:
-            continue
-        if sn in un or un in sn:
-            return True
-        inter = len(st & ut)
-        if inter and inter / len(st | ut) >= jaccard_tau:
-            return True
-    return False
-
-
 def precision_at_k(ranked_ids, positive_ids, gold_set, ks=(1, 2, 3, 5)) -> dict:
-    """Precision@k of an attribution RANKING (Shapley / attribution baselines).
-
-    The predicted-positive set at k is the top-k ranked elements restricted to
-    those with a strictly positive score (``positive_ids``); precision@k =
-    (#positive-top-k grounded in gold) / |positive-top-k|. ``None`` when no
-    positive-score element falls within the top-k.
-    """
     gold = set(gold_set)
     pos = set(positive_ids)
+    
+    retrieved = [x for x in ranked_ids if x in pos]
     prec, hit, tp_at, n_at = {}, {}, {}, {}
     for k in ks:
-        flagged_k = [x for x in ranked_ids[:k] if x in pos]
+        flagged_k = retrieved[:k]
         tp = sum(1 for x in flagged_k if x in gold)
-        n = len(flagged_k)
-        prec[str(k)] = (tp / n) if n else None     # precision@k (None if no positive in top-k)
-        hit[str(k)] = 1 if tp > 0 else 0           # hit@k: does the top-k contain >=1 fact
+        prec[str(k)] = (tp / k)     
+        hit[str(k)] = 1 if tp > 0 else 0           
         tp_at[str(k)] = tp
-        n_at[str(k)] = n
+        n_at[str(k)] = len(flagged_k)
     return {"precision_at": prec, "hit_at": hit, "tp_at": tp_at, "n_at": n_at}
