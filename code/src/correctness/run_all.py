@@ -22,10 +22,9 @@ import argparse
 import csv
 import json
 import os
-import sys
 
-from src.correctness.evaluate import (KS, aggregate, eval_attribution, eval_glorag,
-                                       eval_ragex, load_facts)
+from src.correctness.evaluate import (KS, aggregate, build_desc_provider, eval_attribution,
+                                       eval_glorag, eval_ragex, load_facts, set_backend)
 
 _THIS = os.path.abspath(__file__)
 _REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(_THIS))))  # .../GloRAG-Ex
@@ -61,12 +60,13 @@ ROW_ORDER = {
 }
 
 
-def run_one(tag, kind, path, facts, q2id, dataset, match, desc_ngram):
+def run_one(tag, kind, path, facts, q2id, dataset, match, desc_provider):
     if kind == "glorag":
-        return eval_glorag(path, facts, q2id, match, desc_ngram) if os.path.isdir(path) else None
+        return eval_glorag(path, facts, q2id, match, desc_provider=desc_provider) \
+            if os.path.isdir(path) else None
     if kind == "attribution":
-        return eval_attribution(path, facts, q2id, match=match, desc_ngram=desc_ngram,
-                                dataset=dataset) if os.path.isfile(path) else None
+        return eval_attribution(path, facts, q2id, match=match, dataset=dataset,
+                                desc_provider=desc_provider) if os.path.isfile(path) else None
     if kind == "ragex":
         return eval_ragex(path, facts, q2id) if os.path.isfile(path) else None
     return None
@@ -88,13 +88,7 @@ def _rank_cell(block, prefix):
 def build_merged_table(summ):
     """summ[(ds, tag)] = aggregate-summary dict. Returns a standalone LaTeX document."""
     L = [r"\begin{table*}[t]", r"\centering",
-         r"\caption{Correctness against ground-truth supporting facts, by flip direction and "
-         r"benchmark. \emph{Hit} is the fraction of instances in which at least one flagged element "
-         r"is a supporting fact; \emph{Precision} is the fraction of flagged elements that are "
-         r"supporting facts. For \textsc{GloRAG-Ex}/\textsc{+PSP} each cell is a single value over the "
-         r"returned edit set (all operations); for the ranking baselines each cell is the top-$k$ "
-         r"curve $@1/@2/@3/@5$. Elements are matched to facts by surface mention "
-         r"(entities by name, relations by both endpoints, text spans by sentence/paragraph overlap).}",
+         r"\caption{caption}",
          r"\label{tab:correctness}", r"\small", r"\setlength{\tabcolsep}{5pt}",
          r"\begin{tabular}{l l l c c}", r"\toprule",
          r"Dir. & Dataset & Method & Hit rate (\%) $\uparrow$ & Precision (\%) $\uparrow$ \\",
@@ -115,7 +109,9 @@ def build_merged_table(summ):
             for t in tags:
                 b = summ[(ds, t)][direc]
                 if t in OURS:
-                    hit, prec = _ours_cell(b, "hit_rate"), _ours_cell(b, "precision")
+                    # micro precision = pooled TP/(TP+FP) over all flagged edits
+                    # (macro-mean collapses to hit-rate on single-op instances).
+                    hit, prec = _ours_cell(b, "hit_rate"), _ours_cell(b, "precision_micro")
                 else:
                     hit, prec = _rank_cell(b, "Hit@"), _rank_cell(b, "P@")
                 dc = rf"\multirow{{{n_dir}}}{{*}}{{{dlabel}}}" if first_dir else ""
@@ -154,21 +150,28 @@ def write_csv(summ, path):
 def main():
     p = argparse.ArgumentParser(description="Run correctness for all methods and emit a merged LaTeX table.")
     p.add_argument("--match", choices=["name", "name+desc"], default="name+desc")
-    p.add_argument("--desc-ngram", type=int, default=3)
     p.add_argument("--outdir", default=os.path.join(_AR, "correctness"))
     p.add_argument("--tex", default=None, help="merged table output (default: <outdir>/correctness_table.tex).")
     p.add_argument("--csv", default=None, help="flat summary CSV (default: <outdir>/correctness_merged.csv).")
-    
-    # NEW FLAG
-    p.add_argument("--judge", action="store_true", help="Use LLM judge (agreement_judge). Otherwise uses string heuristics.")
-    
+
+    # Matcher backend. The LLM judge is canonical (produces the paper numbers);
+    # --heuristic selects the fast string+embedding fallback.
+    p.add_argument("--judge", dest="judge", action="store_true", default=False,
+                   help="(default) use the LLM judge (agreement_judge).")
+    p.add_argument("--heuristic", dest="judge", action="store_false",
+                   help="use the string-heuristic fallback (agreement) instead of the judge.")
+
     args = p.parse_args()
     os.makedirs(args.outdir, exist_ok=True)
-    
-    # DYNAMIC FILE SUFFIX
-    suffix = "_judge" if args.judge else ""
+    set_backend(args.judge)
+
+    # Canonical (judge) output uses the plain name; the heuristic fallback is suffixed.
+    suffix = "" if args.judge else "_heur"
     tex_out = args.tex or os.path.join(args.outdir, f"correctness_table{suffix}.tex")
     csv_out = args.csv or os.path.join(args.outdir, f"correctness_merged{suffix}.csv")
+
+    # GloRAG result dirs feed the shared description provider (graphml fallback).
+    glorag_dirs_tmpl = [tmpl for _, _, kind, tmpl in JOBS if kind == "glorag"]
 
     summ = {}
     for ds in DATASETS:
@@ -177,10 +180,13 @@ def main():
             print(f"[skip {ds}] no facts at {facts_path}")
             continue
         facts, q2id = load_facts(facts_path)
-        print(f"\n#### {ds}: {len(facts)} GT facts (match={args.match}, judge={args.judge})")
+        glorag_dirs = [os.path.join(_AR, t.format(ds=ds)) for t in glorag_dirs_tmpl]
+        desc_provider = build_desc_provider(ds, glorag_dirs)
+        print(f"\n#### {ds}: {len(facts)} GT facts (match={args.match}, judge={args.judge}) "
+              f"| desc provider: {len(desc_provider)} elements")
         for tag, label, kind, tmpl in JOBS:
             path = os.path.join(_AR, tmpl.format(ds=ds))
-            per = run_one(tag, kind, path, facts, q2id, ds, args.match, args.desc_ngram)
+            per = run_one(tag, kind, path, facts, q2id, ds, args.match, desc_provider)
             if per is None:
                 continue
             method = "glorag" if kind == "glorag" else ("ragex" if kind == "ragex" else "attribution")

@@ -28,21 +28,37 @@ import argparse
 import glob
 import json
 import os
-import sys
 
-# --- CONDITIONAL GLOBAL IMPORT ---
-# We check sys.argv early so the functions are globally defined before execution.
-if "--judge" in sys.argv:
-    from src.correctness.agreement_judge import (fact_coverage, id_relevant, normalized_contains,
-                                            parse_id, precision_at_k, set_precision, span_relevant)
-    print("🧠 Using Matching Module: LLM Judge (agreement_judge)")
-else:
-    from src.correctness.agreement import (fact_coverage, id_relevant, normalized_contains,
-                                      parse_id, precision_at_k, set_precision, span_relevant)
-    print("⚙️ Using Matching Module: String Heuristics (agreement)")
+
+fact_coverage = id_relevant = id_relevant_any = normalized_contains = None
+parse_id = precision_at_k = set_precision = span_relevant = span_relevant_any = None
+_BACKEND_NAME = None
+
+
+def set_backend(judge: bool = True):
+    global fact_coverage, id_relevant, id_relevant_any, normalized_contains
+    global parse_id, precision_at_k, set_precision, span_relevant, span_relevant_any
+    global _BACKEND_NAME
+    if judge:
+        from src.correctness import agreement_judge as mod
+        _BACKEND_NAME = "LLM Judge (agreement_judge)"
+    else:
+        from src.correctness import agreement as mod
+        _BACKEND_NAME = "String Heuristics (agreement)"
+    fact_coverage = mod.fact_coverage
+    id_relevant = mod.id_relevant
+    id_relevant_any = mod.id_relevant_any
+    normalized_contains = mod.normalized_contains
+    parse_id = mod.parse_id
+    precision_at_k = mod.precision_at_k
+    set_precision = mod.set_precision
+    span_relevant = mod.span_relevant
+    span_relevant_any = mod.span_relevant_any
+    print(f"Matching backend: {_BACKEND_NAME}")
+
 
 KS = (1, 2, 3, 5)
-DIRECTION = {"ft": "T->F", "ff": "F->T", "tf": "F->T"}  # generate.py mode / case_type -> flip direction
+DIRECTION = {"ft": "T->F", "ff": "F->T", "tf": "F->T"}
 ADD_MODES = {"ff", "tf"}
 
 
@@ -58,14 +74,12 @@ def load_facts(path: str):
 
 
 def _resolve_id(key, question, facts, q2id):
-    """Universal join: prefer the record key if it is a facts id, else map by question."""
     if key in facts:
         return key
     return q2id.get(_norm_q(question))
 
 
 def _supporting_units(fact_rec) -> list[str]:
-    """Per-fact gold texts: HotpotQA supporting sentences, else musique paragraphs, else gold_text."""
     ss = fact_rec.get("supporting_sentences")
     if ss:
         return ss
@@ -77,7 +91,6 @@ def _supporting_units(fact_rec) -> list[str]:
 
 
 def ids_from_operations(ops) -> list[str]:
-    """Map counterfactual operations to flagged element ids (in op/cost order)."""
     out = []
     for op in ops or []:
         if not isinstance(op, list) or len(op) < 2:
@@ -106,14 +119,21 @@ def _desc_from_subgraph(sg: dict) -> dict:
 
 
 def _load_kg_graph(dataset: str, kg_graph: str | None):
-    import networkx as nx
     path = kg_graph
     if path is None:
-        from src.dataset_setup import WORKING_DIRS
+        # WORKING_DIRS lives in dataset_setup, which transitively imports the heavy
+        # RAG stack; degrade gracefully (subgraph-fallback descriptions) if it or the
+        # graphml is unavailable rather than crashing the offline correctness eval.
+        try:
+            from src.dataset_setup import WORKING_DIRS
+        except Exception as e:
+            print(f"  [name+desc] WORKING_DIRS unavailable ({type(e).__name__}); graphml descriptions skipped.")
+            return None
         path = os.path.join(WORKING_DIRS.get(dataset, ""), "graph_chunk_entity_relation.graphml")
     if not path or not os.path.exists(path):
-        print(f"  [name+desc] KG graph not found ({path!r}); descriptions unavailable -> name-only match.")
+        print(f"  [name+desc] KG graph not found ({path!r}); descriptions unavailable -> name-only / subgraph fallback.")
         return None
+    import networkx as nx
     return nx.read_graphml(path)
 
 
@@ -135,6 +155,41 @@ def _desc_from_graph(G, ids) -> dict:
     return d
 
 
+def _provider_from_graph(G) -> dict:
+    """All node/edge descriptions of a graphml as an id -> description map."""
+    prov = {}
+    if G is None:
+        return prov
+    for n, data in G.nodes(data=True):
+        prov[f"E::{n}"] = data.get("description", "")
+    for u, v, data in G.edges(data=True):
+        prov[f"R::{u}->{v}"] = data.get("description", "")
+    return prov
+
+
+def build_desc_provider(dataset, glorag_dirs=(), kg_graph=None) -> dict:
+    """Unified element-id -> description map shared across the graph methods.
+
+    Prefers the canonical LightRAG graphml; fills any gaps from descriptions
+    embedded in the GloRAG-Ex result subgraphs for the same dataset, so the
+    attribution baselines (Shapley / KG-SMILE) are judged with the same
+    name+description evidence as GloRAG-Ex (and are not penalised when the local
+    graphml is absent)."""
+    prov = _provider_from_graph(_load_kg_graph(dataset, kg_graph))
+    for d in glorag_dirs:
+        for fp in glob.glob(os.path.join(d, "**", "counterfactual_*.json"), recursive=True):
+            try:
+                with open(fp, encoding="utf-8") as f:
+                    payload = json.load(f)
+            except Exception:
+                continue
+            for sg in (payload.get("original_subgraph"), payload.get("perturbed_subgraph")):
+                for eid, desc in _desc_from_subgraph(sg).items():
+                    if desc and not prov.get(eid):
+                        prov[eid] = desc
+    return prov
+
+
 def _file_direction(path, override):
     """Flip direction for a per-direction file (attribution); ff->F->T, ft->T->F."""
     if override and override != "auto":
@@ -148,9 +203,9 @@ def _file_direction(path, override):
 
 
 # ── GloRAG-Ex ────────────────────────────────────────────────────────────────
-def eval_glorag(input_dir, facts, q2id, match="name", desc_ngram=3):
+def eval_glorag(input_dir, facts, q2id, match="name+desc", desc_provider=None):
     files = sorted(glob.glob(os.path.join(input_dir, "**", "counterfactual_*.json"), recursive=True))
-    per_instance, unmatched, skipped = {}, 0, 0
+    per_instance, unmatched, skipped, dup = {}, 0, 0, 0
     for fp in files:
         try:
             with open(fp, encoding="utf-8") as f:
@@ -169,38 +224,56 @@ def eval_glorag(input_dir, facts, q2id, match="name", desc_ngram=3):
         gold = facts[rid]["gold_text"]
         units = _supporting_units(facts[rid])
         # graph elements are judged by name + description -> always provide descriptions
-        desc_by_id = {**_desc_from_subgraph(payload.get("original_subgraph")),
+        # (shared provider first, instance subgraph descriptions take precedence).
+        desc_by_id = {**(desc_provider or {}),
+                      **_desc_from_subgraph(payload.get("original_subgraph")),
                       **_desc_from_subgraph(payload.get("perturbed_subgraph"))}
         flagged = ids_from_operations(payload.get("operations"))
-        
-        gold_set = {f for f in flagged if id_relevant(f, gold, desc_by_id)}
+
+        gold_set = {f for f in flagged if id_relevant_any(f, units, desc_by_id, match)}
         s = set_precision(flagged, gold_set)
-        
+
         # P@k over the cost-ordered edits (all edits are "flagged"/positive)
         s.update(precision_at_k(flagged, set(flagged), gold_set, KS))
 
         # graph fact-coverage: how many GT facts the original vs perturbed graph carries
         orig_ids = _elements_from_subgraph(payload.get("original_subgraph"))
         pert_ids = _elements_from_subgraph(payload.get("perturbed_subgraph"))
-        s["orig_graph"] = fact_coverage(orig_ids, units, gold, desc_by_id)
-        s["pert_graph"] = fact_coverage(pert_ids, units, gold, desc_by_id)
+        s["orig_graph"] = fact_coverage(orig_ids, units, gold, desc_by_id, match=match)
+        s["pert_graph"] = fact_coverage(pert_ids, units, gold, desc_by_id, match=match)
 
         mode = payload.get("mode", "")
+        cost = payload.get("cost")
         s.update({"mode": mode, "direction": DIRECTION.get(mode, "?"),
-                  "is_add_mode": mode in ADD_MODES, "flagged": flagged, "file": os.path.basename(fp)})
+                  "is_add_mode": mode in ADD_MODES, "flagged": flagged,
+                  "file": os.path.basename(fp), "_cost": cost})
+
+        if rid in per_instance:  # multiple runs for one question -> keep the lower-cost one
+            dup += 1
+            prev_cost = per_instance[rid].get("_cost")
+            keep_new = cost is not None and (prev_cost is None or cost < prev_cost)
+            print(f"  [glorag] duplicate rid {rid} via {os.path.basename(fp)}; "
+                  f"keeping {'new' if keep_new else 'existing'} (lower cost)")
+            if not keep_new:
+                continue
         per_instance[rid] = s
-    print(f"  glorag: {len(per_instance)} scored | unmatched={unmatched} | not-found-skipped={skipped}")
+    print(f"  glorag: {len(per_instance)} scored | unmatched={unmatched} | "
+          f"not-found-skipped={skipped} | dup-rids={dup}")
     return per_instance
 
 
 # ── Attribution (Shapley / KG-SMILE) ─────────────────────────────────────────
 def eval_attribution(results_path, facts, q2id, score_field="auto", direction="auto",
-                     match="name", desc_ngram=3, shap_min_score=None, kg_graph=None, dataset="hotpotqa"):
+                     match="name+desc", shap_min_score=None, kg_graph=None,
+                     dataset="hotpotqa", desc_provider=None):
     with open(results_path, encoding="utf-8") as f:
         results = json.load(f)
-    G = _load_kg_graph(dataset, kg_graph)   
+    # Descriptions: prefer the shared provider (graphml + GloRAG subgraphs); only
+    # fall back to a fresh graphml load when no provider was supplied (CLI path).
+    G = None if desc_provider is not None else _load_kg_graph(dataset, kg_graph)
     file_dir = _file_direction(results_path, direction)
     per_instance, unmatched, empty = {}, 0, 0
+    n_ids = n_desc = 0
     for key, rec in results.items():
         if str(key).startswith("__") or not isinstance(rec, dict):
             continue
@@ -216,27 +289,33 @@ def eval_attribution(results_path, facts, q2id, score_field="auto", direction="a
         gold = facts[rid]["gold_text"]
         units = _supporting_units(facts[rid])
         ranked = sorted(scores, key=lambda o: scores[o], reverse=True)
-        
+
         positive_ids = set(scores) if shap_min_score is None else {o for o, v in scores.items() if v > shap_min_score}
-        
+
         # Filter retrieved candidates to ensure correct Precision@K
         retrieved = [x for x in ranked if x in positive_ids]
-        
-        desc_by_id = _desc_from_graph(G, ranked) if G is not None else None
-        
-        gold_set = {x for x in retrieved[:max(KS)] if id_relevant(x, gold, desc_by_id)}
-        
+
+        if desc_provider is not None:
+            desc_by_id = {eid: desc_provider.get(eid, "") for eid in ranked}
+        else:
+            desc_by_id = _desc_from_graph(G, ranked) if G is not None else None
+        n_ids += len(ranked)
+        n_desc += sum(1 for eid in ranked if (desc_by_id or {}).get(eid))
+
+        gold_set = {x for x in retrieved[:max(KS)] if id_relevant_any(x, units, desc_by_id, match)}
+
         s = precision_at_k(ranked, positive_ids, gold_set, KS)
-        s["orig_graph"] = fact_coverage(ranked, units, gold, desc_by_id, desc_ngram=desc_ngram)
+        s["orig_graph"] = fact_coverage(ranked, units, gold, desc_by_id, match=match)
         s.update({"mode": "attr", "direction": file_dir,
                   "n_universe": len(ranked), "n_positive": len(positive_ids)})
         per_instance[rid] = s
-    print(f"  attribution: {len(per_instance)} scored | unmatched={unmatched} | empty-scores={empty} | dir={file_dir}")
+    print(f"  attribution: {len(per_instance)} scored | unmatched={unmatched} | "
+          f"empty-scores={empty} | dir={file_dir} | with-desc={n_desc}/{n_ids}")
     return per_instance
 
 
 # ── RAG-Ex (text spans) ──────────────────────────────────────────────────────
-def eval_ragex(results_path, facts, q2id, span_jaccard=0.5, min_weight=None):
+def eval_ragex(results_path, facts, q2id, span_jaccard=0.4, min_weight=None):
     analysis = json.load(open(results_path, encoding="utf-8"))
     cases = analysis.get("cases", [])
     per_instance, unmatched = {}, 0
@@ -246,17 +325,17 @@ def eval_ragex(results_path, facts, q2id, span_jaccard=0.5, min_weight=None):
             unmatched += 1
             continue
         units = _supporting_units(facts[rid])
-        gold = facts[rid]["gold_text"]
         imp = c.get("removed_item_importance") or {}
-        ranked = sorted(imp, key=lambda sp: imp[sp], reverse=True)            
-        
+        ranked = sorted(imp, key=lambda sp: imp[sp], reverse=True)
+
         positive_ids = set(imp) if min_weight is None else {sp for sp, w in imp.items() if w > min_weight}
-        
+
         # Filter retrieved candidates to ensure correct Precision@K
         retrieved = [sp for sp in ranked if sp in positive_ids]
-        
-        gold_set = {sp for sp in retrieved[:max(KS)] if span_relevant(sp, gold)}
-        
+
+        # span vs. each supporting unit (not the concatenated blob)
+        gold_set = {sp for sp in retrieved[:max(KS)] if span_relevant_any(sp, units, span_jaccard)}
+
         s = precision_at_k(ranked, positive_ids, gold_set, KS)
 
         ctx = c.get("original_context", "")
@@ -371,18 +450,23 @@ def main():
     p.add_argument("--shap-min-score", type=float, default=None,
                    help="[attribution] if set, only objects with score strictly greater than this count "
                         "(default: no filter -- top-k purely by rank, #1 is the highest score).")
-    p.add_argument("--span-jaccard", type=float, default=0.5, help="[ragex] span<->fact token-set Jaccard threshold.")
+    p.add_argument("--span-jaccard", type=float, default=0.4, help="[ragex] span<->fact token-set Jaccard threshold.")
     p.add_argument("--min-weight", type=float, default=None,
                    help="[ragex] if set, only spans with importance > this count (default: no filter).")
-    p.add_argument("--match", choices=["name", "name+desc"], default="name")
-    p.add_argument("--desc-ngram", type=int, default=3)
+    p.add_argument("--match", choices=["name", "name+desc"], default="name+desc",
+                   help="name = surface mention only; name+desc = also a dense-embedding fallback "
+                        "on the element description (heuristic backend only; the judge always uses both).")
     p.add_argument("--kg-graph", default=None, help="[attribution, name+desc] graphml for description lookup.")
     p.add_argument("--output", default=None)
-    
-    # We leave the flag here so argparse parses it without throwing an error
-    p.add_argument("--judge", action="store_true", help="Use LLM judge (agreement_judge). Otherwise uses string heuristics (agreement).")
-    
+
+    # Matcher backend. The LLM judge is canonical; --heuristic selects the fast fallback.
+    p.add_argument("--judge", dest="judge", action="store_true", default=True,
+                   help="(default) use the LLM judge (agreement_judge).")
+    p.add_argument("--heuristic", dest="judge", action="store_false",
+                   help="use the string-heuristic fallback (agreement) instead of the judge.")
+
     args = p.parse_args()
+    set_backend(args.judge)
 
     facts, q2id = load_facts(args.facts)
     print(f"GT facts: {len(facts)} questions  (dataset={args.dataset}, method={args.method}, match={args.match})")
@@ -391,12 +475,12 @@ def main():
     if args.method == "glorag":
         if not args.input_dir:
             raise SystemExit("--input-dir is required for --method glorag")
-        per_instance = eval_glorag(args.input_dir, facts, q2id, args.match, args.desc_ngram)
+        per_instance = eval_glorag(args.input_dir, facts, q2id, args.match)
     elif args.method == "attribution":
         if not results:
             raise SystemExit("--results is required for --method attribution")
         per_instance = eval_attribution(results, facts, q2id, args.score_field, args.direction,
-                                        args.match, args.desc_ngram, args.shap_min_score,
+                                        args.match, args.shap_min_score,
                                         args.kg_graph, args.dataset)
     else:  # ragex
         if not results:
@@ -405,12 +489,12 @@ def main():
 
     summary = aggregate(per_instance, args.method)
     summary["_meta"] = {"method": args.method, "dataset": args.dataset, "facts": args.facts,
-                        "match": args.match, "desc_ngram": args.desc_ngram, "ks": list(KS),
+                        "match": args.match, "ks": list(KS),
                         "results": results, "shap_min_score": args.shap_min_score, "used_judge": args.judge}
     out_obj = dict(per_instance)
     out_obj["__summary__"] = summary
 
-    suffix = "_correctness_judge.json" if args.judge else "_correctness.json"
+    suffix = "_correctness.json" if args.judge else "_correctness_heur.json"
     out = args.output or f"benchmark/results/{args.dataset}_{args.method}{suffix}"
     
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)

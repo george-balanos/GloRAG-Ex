@@ -73,53 +73,105 @@ def check_semantic_similarity(text1: str, text2: str, threshold: float) -> bool:
 
 
 # ── EVALUATION LOGIC ─────────────────────────────────────────────────────────
+# Relevance is decided against individual supporting-fact *units* (a single sentence
+# / paragraph), not the concatenated gold blob: this keeps token-Jaccard meaningful
+# and scopes an entity name match to one fact. Relations are the exception -- their
+# endpoints may bridge two facts (multi-hop), so ``id_relevant_any`` matches relation
+# endpoints across the UNION of units. ``id_relevant_any`` / ``span_relevant_any`` are
+# the entry points the evaluator uses.
 
-def id_relevant(eid: str, gold_text: str, desc_by_id: dict | None = None, **kwargs) -> bool:
-    """Is element ``eid`` grounded in the gold text using heuristics?"""
-    if not gold_text.strip():
+def _id_relevant_unit(eid: str, unit: str, desc_by_id: dict | None, match: str) -> bool:
+    """Is element ``eid`` grounded in a single supporting-fact ``unit``?
+
+    Surface match first (entity name as a normalised substring; relation = both
+    endpoints present). KG entities are extracted from the same corpus the facts
+    come from, so an entity name appearing in a fact is taken as grounded -- no
+    token-length gate. The semantic fallback on the element's description runs only
+    when ``match == "name+desc"``.
+    """
+    if not unit or not unit.strip():
         return False
-        
+
     kind, payload = parse_id(eid)
-    
-    # 1. High-Precision String Matching on Names
-    # If the entity name or relation endpoints are explicitly stated in the ground truth, it's a hit.
-    if kind == "entity":
-        if normalized_contains(gold_text, payload):
-            return True
-    elif kind == "relation":
-        src, tgt = payload
-        # If both source and target are mentioned in the gold text, it's highly likely relevant
-        if normalized_contains(gold_text, src) and normalized_contains(gold_text, tgt):
-            return True
-
-    # 2. Semantic Fallback on Descriptions
-    # If the exact names aren't there, check if the element's description aligns with the ground truth.
     desc = desc_by_id.get(eid, "") if desc_by_id else ""
-    if desc:
-        payload_str = f"{payload[0]} -> {payload[1]}" if kind == "relation" else payload
-        combined_text = f"{payload_str}: {desc}"
-        return check_semantic_similarity(combined_text, gold_text, SIMILARITY_THRESHOLD)
+    use_semantic = match == "name+desc"
 
+    if kind == "entity":
+        if normalized_contains(unit, payload):
+            return True
+    else:  # relation -- require both endpoints to be mentioned
+        src, tgt = payload
+        if normalized_contains(unit, src) and normalized_contains(unit, tgt):
+            return True
+
+    # semantic fallback on name (+description) -- name+desc mode only
+    if use_semantic:
+        payload_str = f"{payload[0]} -> {payload[1]}" if kind == "relation" else payload
+        combined = f"{payload_str}: {desc}" if desc else payload_str
+        return check_semantic_similarity(combined, unit, SIMILARITY_THRESHOLD)
     return False
 
 
-def span_relevant(span: str, gold_text: str, **kwargs) -> bool:
-    """Text-span relevance via Token Jaccard and Dense Embeddings."""
-    if not span or not span.strip() or not gold_text or not gold_text.strip():
+def id_relevant(eid: str, gold_text: str, desc_by_id: dict | None = None,
+                match: str = "name+desc", **kwargs) -> bool:
+    """Element vs. a single gold text (treats ``gold_text`` as one unit)."""
+    return _id_relevant_unit(eid, gold_text, desc_by_id, match)
+
+
+def id_relevant_any(eid: str, units, desc_by_id: dict | None = None,
+                    match: str = "name+desc", **kwargs) -> bool:
+    """True if ``eid`` is grounded in the supporting facts.
+
+    Entities are matched **per unit** (the name must appear within a single fact).
+    Relations use a **union** rule: each endpoint need only appear in *some* fact,
+    not the same one -- a supporting relation can legitimately bridge two facts
+    (the defining case in multi-hop QA), and requiring both endpoints in one unit
+    would wrongly drop those bridge edges.
+    """
+    units = list(units or [])
+    if not units:
         return False
-        
-    # 1. Fast Token Overlap (Catches literal extractions)
-    if token_jaccard(span, gold_text) >= JACCARD_THRESHOLD:
+
+    kind, payload = parse_id(eid)
+    if kind == "relation":
+        src, tgt = payload
+        # surface: both endpoints supported, possibly in different facts
+        if any(normalized_contains(u, src) for u in units) and \
+           any(normalized_contains(u, tgt) for u in units):
+            return True
+        # semantic fallback on the relation phrase (+description), name+desc mode only
+        if match == "name+desc":
+            desc = desc_by_id.get(eid, "") if desc_by_id else ""
+            phrase = f"{src} -> {tgt}: {desc}" if desc else f"{src} -> {tgt}"
+            return any(check_semantic_similarity(phrase, u, SIMILARITY_THRESHOLD) for u in units)
+        return False
+
+    return any(_id_relevant_unit(eid, u, desc_by_id, match) for u in units)
+
+
+def _span_relevant_unit(span: str, unit: str, jaccard: float) -> bool:
+    if not span or not span.strip() or not unit or not unit.strip():
+        return False
+    if token_jaccard(span, unit) >= jaccard:        # literal extraction
         return True
-        
-    # 2. Semantic Overlap (Catches paraphrasing)
-    return check_semantic_similarity(span, gold_text, SIMILARITY_THRESHOLD)
+    return check_semantic_similarity(span, unit, SIMILARITY_THRESHOLD)  # paraphrase
 
 
-# ── METRICS (Unchanged) ──────────────────────────────────────────────────────
+def span_relevant(span: str, gold_text: str, jaccard: float = JACCARD_THRESHOLD, **kwargs) -> bool:
+    """Text-span vs. a single gold text via token Jaccard or dense embeddings."""
+    return _span_relevant_unit(span, gold_text, jaccard)
 
-def gt_relevant_set(universe_ids, gold_text: str, desc_by_id: dict | None = None, **kwargs) -> set:
-    return {eid for eid in universe_ids if id_relevant(eid, gold_text, desc_by_id)}
+
+def span_relevant_any(span, units, jaccard: float = JACCARD_THRESHOLD, **kwargs) -> bool:
+    """True if ``span`` matches ANY supporting-fact unit (per-unit matching)."""
+    return any(_span_relevant_unit(span, u, jaccard) for u in (units or []))
+
+
+# ── METRICS ──────────────────────────────────────────────────────────────────
+
+def gt_relevant_set(universe_ids, gold_text: str, desc_by_id: dict | None = None,
+                    match: str = "name+desc", **kwargs) -> set:
+    return {eid for eid in universe_ids if id_relevant(eid, gold_text, desc_by_id, match)}
 
 def set_precision(flagged_ids, gold_set) -> dict:
     flagged = list(dict.fromkeys(flagged_ids))
@@ -132,27 +184,34 @@ def set_precision(flagged_ids, gold_set) -> dict:
         "gold_flagged": sorted(f for f in flagged if f in gold),
     }
 
-def fact_coverage(element_ids, supporting_units, gold_text, desc_by_id=None, **kwargs) -> dict:
+def fact_coverage(element_ids, supporting_units, gold_text, desc_by_id=None,
+                  match: str = "name+desc", **kwargs) -> dict:
     els = list(dict.fromkeys(element_ids))
-    n_gold = sum(1 for e in els if id_relevant(e, gold_text, desc_by_id))
+    units = list(supporting_units or [])
+    n_gold = sum(1 for e in els if id_relevant_any(e, units, desc_by_id, match))
     covered = 0
-    for u in supporting_units:
-        if any(id_relevant(e, u, desc_by_id) for e in els):
+    for u in units:
+        if any(_id_relevant_unit(e, u, desc_by_id, match) for e in els):
             covered += 1
     return {"n_elements": len(els), "n_gold_elements": n_gold,
-            "n_facts_covered": covered, "n_facts_total": len(supporting_units)}
+            "n_facts_covered": covered, "n_facts_total": len(units)}
 
 def precision_at_k(ranked_ids, positive_ids, gold_set, ks=(1, 2, 3, 5)) -> dict:
+    """Precision@k over the positive-filtered ranking (filter-then-slice).
+
+    Kept byte-identical with ``agreement_judge.precision_at_k`` so the metric does
+    not change meaning between the heuristic and the LLM-judge backends:
+    ``prec = tp/n`` over the items present at cutoff k (None when empty)."""
     gold = set(gold_set)
     pos = set(positive_ids)
-    
     retrieved = [x for x in ranked_ids if x in pos]
     prec, hit, tp_at, n_at = {}, {}, {}, {}
     for k in ks:
         flagged_k = retrieved[:k]
         tp = sum(1 for x in flagged_k if x in gold)
-        prec[str(k)] = (tp / k)     
-        hit[str(k)] = 1 if tp > 0 else 0           
+        n = len(flagged_k)
+        prec[str(k)] = (tp / n) if n else None
+        hit[str(k)] = 1 if tp > 0 else 0
         tp_at[str(k)] = tp
-        n_at[str(k)] = len(flagged_k)
+        n_at[str(k)] = n
     return {"precision_at": prec, "hit_at": hit, "tp_at": tp_at, "n_at": n_at}

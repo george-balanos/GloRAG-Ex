@@ -87,11 +87,16 @@ Candidate Text Span: "{span}"
 Task: Does the Candidate Text Span contain, restate, or correspond to at least one of the Supporting Facts -- even if the span also contains other, unrelated information?"""
     return _judge_yes_no(user_prompt)
 
-def id_relevant(eid: str, gold_text: str, desc_by_id: dict | None = None, **kwargs) -> bool:
-    """Is element ``eid`` grounded in the gold text using LLM semantic entailment?"""
+def id_relevant(eid: str, gold_text: str, desc_by_id: dict | None = None,
+                match: str | None = None, **kwargs) -> bool:
+    """Is element ``eid`` grounded in the gold text using LLM semantic entailment?
+
+    ``match`` is accepted for signature parity with the heuristic backend but is a
+    no-op here: the judge always uses the full name+description (or span) context.
+    """
     if not gold_text.strip():
         return False
-        
+
     kind, payload = parse_id(eid)
 
     # Name/endpoints for the prompt: "Name" for an entity, "src -> tgt" for a relation.
@@ -102,6 +107,18 @@ def id_relevant(eid: str, gold_text: str, desc_by_id: dict | None = None, **kwar
     desc = desc_by_id.get(eid, "None provided") if desc_by_id else "None provided"
 
     return query_llm_judge(gold_text, kind, payload_str, desc)
+
+
+def id_relevant_any(eid: str, units, desc_by_id: dict | None = None,
+                    match: str | None = None, **kwargs) -> bool:
+    """True if ``eid`` corresponds to ANY supporting fact.
+
+    All units are joined into one prompt; the judge question already asks for
+    correspondence to "at least one of the Supporting Facts", so this stays a
+    single (lru-cached) LLM call rather than one call per unit.
+    """
+    gold_text = " ".join(u for u in (units or []) if u)
+    return id_relevant(eid, gold_text, desc_by_id)
 
 def gt_relevant_set(universe_ids, gold_text: str, desc_by_id: dict | None = None, **kwargs) -> set:
     """Subset of the candidate universe whose elements are grounded in GT."""
@@ -122,19 +139,21 @@ def set_precision(flagged_ids, gold_set) -> dict:
         "gold_flagged": sorted(f for f in flagged if f in gold),
     }
 
-def fact_coverage(element_ids, supporting_units, gold_text, desc_by_id=None, **kwargs) -> dict:
+def fact_coverage(element_ids, supporting_units, gold_text, desc_by_id=None,
+                  match: str | None = None, **kwargs) -> dict:
     """How many ground-truth facts a graph carries."""
     els = list(dict.fromkeys(element_ids))
-    
-    n_gold = sum(1 for e in els if id_relevant(e, gold_text, desc_by_id))
-    
+    units = list(supporting_units or [])
+
+    n_gold = sum(1 for e in els if id_relevant_any(e, units, desc_by_id))
+
     covered = 0
-    for u in supporting_units:
+    for u in units:
         if any(id_relevant(e, u, desc_by_id) for e in els):
             covered += 1
-            
+
     return {"n_elements": len(els), "n_gold_elements": n_gold,
-            "n_facts_covered": covered, "n_facts_total": len(supporting_units)}
+            "n_facts_covered": covered, "n_facts_total": len(units)}
 
 def normalized_contains(haystack: str, needle: str) -> bool:
     """True if `needle` is a (normalised) substring of `haystack`."""
@@ -144,27 +163,39 @@ def normalized_contains(haystack: str, needle: str) -> bool:
 def _token_set(s: str) -> set:
     return set(tokens(s))
 
-def span_relevant(span: str, gold_text: str, **kwargs) -> bool:
+def span_relevant(span: str, gold_text: str, jaccard: float | None = None, **kwargs) -> bool:
     """Text-span relevance via the SAME LLM judge (RAG-Ex / Shapley-Text chunks/sentences).
 
     The flagged element is the span text itself; it is judged for entailment against the
     supporting facts (gold_text), mirroring how graph elements are judged by name+description.
+    ``jaccard`` is accepted for parity with the heuristic backend and ignored here.
     """
     if not span or not span.strip() or not gold_text or not gold_text.strip():
         return False
     return query_span_judge(gold_text, span)
 
+
+def span_relevant_any(span, units, jaccard: float | None = None, **kwargs) -> bool:
+    """True if ``span`` corresponds to ANY supporting fact (single joined judge call)."""
+    gold_text = " ".join(u for u in (units or []) if u)
+    return span_relevant(span, gold_text)
+
 def precision_at_k(ranked_ids, positive_ids, gold_set, ks=(1, 2, 3, 5)) -> dict:
-    """Precision@k of an attribution RANKING (Shapley / attribution baselines)."""
+    """Precision@k over the positive-filtered ranking (filter-then-slice).
+
+    Kept byte-identical with ``agreement.precision_at_k`` so the metric does not
+    change meaning between the LLM-judge and heuristic backends:
+    ``prec = tp/n`` over the items present at cutoff k (None when empty)."""
     gold = set(gold_set)
     pos = set(positive_ids)
+    retrieved = [x for x in ranked_ids if x in pos]
     prec, hit, tp_at, n_at = {}, {}, {}, {}
     for k in ks:
-        flagged_k = [x for x in ranked_ids[:k] if x in pos]
+        flagged_k = retrieved[:k]
         tp = sum(1 for x in flagged_k if x in gold)
         n = len(flagged_k)
-        prec[str(k)] = (tp / n) if n else None     
-        hit[str(k)] = 1 if tp > 0 else 0           
+        prec[str(k)] = (tp / n) if n else None
+        hit[str(k)] = 1 if tp > 0 else 0
         tp_at[str(k)] = tp
         n_at[str(k)] = n
     return {"precision_at": prec, "hit_at": hit, "tp_at": tp_at, "n_at": n_at}
