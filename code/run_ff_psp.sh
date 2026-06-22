@@ -24,7 +24,7 @@ export PYTHONPATH="${PYTHONPATH:+$PYTHONPATH:}$(pwd)"
 
 DATASETS=(synthetic hotpotqa musique 2wiki)
 RAG_MODE="hybrid"
-TOP_K=5
+TOP_K=2
 MAX_COST=20
 MAX_LLM_CALLS=200
 # NOTE: --psp-k deliberately not set -> uses the CLI default (K=5).
