@@ -2,7 +2,7 @@ import random
 import pandas as pd
 import re
 import json
-from typing import List
+from typing import List, Tuple
 
 
 class PoolNoiseSelector:
@@ -19,7 +19,6 @@ class PoolNoiseSelector:
         def extract(x):
             if isinstance(x, str):
                 raw_paragraphs.append(x)
-
             elif isinstance(x, dict):
                 text_keys = {"text", "chunk", "content", "value"}
                 for k, v in x.items():
@@ -27,21 +26,19 @@ class PoolNoiseSelector:
                         raw_paragraphs.append(v)
                     else:
                         extract(v)
-
             elif isinstance(x, list):
                 for item in x:
                     extract(item)
 
         extract(data)
         clean_paragraphs = []
-        clean_sentences = []
+        clean_sentences  = []
 
         for blob in raw_paragraphs:
             for p in self._split_blob_into_paragraphs(blob) or [blob]:
                 if not self._clean(p):
                     continue
                 clean_paragraphs.append(p)
-
                 for s in self._split_blob_into_sentences(p):
                     if self._clean(s):
                         clean_sentences.append(s)
@@ -81,16 +78,13 @@ class PoolNoiseSelector:
         return True
 
     def _split_blob_into_paragraphs(self, blob: str) -> List[str]:
-
         if not isinstance(blob, str):
             return []
         return [p.strip() for p in blob.split("\n\n") if p.strip()]
 
     def _split_blob_into_sentences(self, blob: str) -> List[str]:
-
         if not isinstance(blob, str):
             return []
-
         parts = re.split(r"(?<=[.!?])\s+(?=[A-Z])", blob.strip())
         return [p.strip() for p in parts if p.strip()]
 
@@ -123,70 +117,80 @@ class PoolNoiseSelector:
         else:
             raise ValueError("mode must be sentence or paragraph")
 
-    def inject_noise(self, text: str, noise_percent: float = 0.2, mode: str = "sentence") -> str:
-        if not self.paragraph_pool or not self.sentence_pool:
-            raise ValueError("Load CSV pools first")
+    def inject_noise(
+        self,
+        text: str,
+        noise_percent: float = 0.2,
+        mode: str = "sentence",
+        seed: int | None = None,
+    ) -> Tuple[str, set]:
+        """Inject noise units at random positions.
 
+        Returns
+        -------
+        noisy_context   : str  – the context with noise inserted
+        noise_positions : set  – integer indices (into the final list)
+                                 that correspond to injected noise units
+        """
+        if not self.paragraph_pool or not self.sentence_pool:
+            raise ValueError("Load CSV pools first via load_csv_pools().")
+
+        rng   = random.Random(seed)
         units = self.get_units(text, mode)
-        n = len(units)
+        n     = len(units)
         if n == 0:
-            return text
+            return text, set()
 
         pool = self.sentence_pool if mode == "sentence" else self.paragraph_pool
 
+        # exclude anything already present in the original context
+        orig_texts    = set(units)
+        filtered_pool = [item for item in pool if item not in orig_texts]
+
+        if not filtered_pool:
+            print("[inject_noise] pool exhausted after filtering originals; "
+                  "returning unchanged context.")
+            return text, set()
 
         k = max(1, int(round(n * noise_percent)))
-        k = min(k, len(pool))
+        k = min(k, len(filtered_pool))
 
-        noise_items = random.sample(pool, k)
-
-        min_words = 5 if mode == "sentence" else 8
-        noise_items = [
-            s for s in noise_items
-            if isinstance(s, str) and len(s.split()) >= min_words
-        ]
-
+        # pool items already passed _clean() on load, no further filtering needed
+        noise_items = rng.sample(filtered_pool, k)
 
         combined = units.copy()
+
         insert_positions = sorted(
-            random.sample(range(len(combined) + 1), len(noise_items))
+            rng.sample(
+                range(len(combined) + 1),
+                min(len(noise_items), len(combined) + 1),
+            )
         )
+
+        # Insert right-to-left so earlier insertions don't shift later positions
         for pos, noise in zip(reversed(insert_positions), reversed(noise_items)):
             combined.insert(pos, noise)
 
+        # Replay insertions left-to-right on a boolean tracker to get
+        # final positions — exact even if noise text duplicates original
+        tracker: list[bool] = [False] * len(units)
+        for pos in insert_positions:
+            tracker.insert(pos, True)   # True = noise
+
+        final_noise_positions = {i for i, is_noise in enumerate(tracker) if is_noise}
+
         if mode == "sentence":
-            cleaned = [u.rstrip(".") for u in combined]
-            return ". ".join(cleaned) + "."
+            cleaned  = [u.rstrip(".") for u in combined]
+            rendered = ". ".join(cleaned) + "."
         else:
-            return "\n\n".join(combined)
+            rendered = "\n\n".join(combined)
+
+        return rendered, final_noise_positions
 
 
 if __name__ == "__main__":
     selector = PoolNoiseSelector()
     selector.build_csv_pools_from_kg(
-        "../../../xylotian_storage/kv_store_text_chunks.json",
-        out_prefix="kg_noise"
+        "/home/gbalanos/GloRAG-Ex/code/KGs/lightrag/musique/kv_store_text_chunks.json",
+        out_prefix="/home/gbalanos/GloRAG-Ex/competitors/RAGEX-RAGE-SHAPLEY/noise_pool/musique_kg_noise"
     )
-
-    selector.load_csv_pools(
-        "kg_noise_paragraphs.csv",
-        "kg_noise_sentences.csv"
-    )
-
-    text = """Graph neural networks are powerful models. They can encode structural relationships.
-            Retrieval augmented generation improves factuality. It reduces hallucination in LLMs.
-            Knowledge graphs provide structured context for downstream reasoning tasks."""
-
-    print("\n================ SENTENCE MODE ================\n")
-    print(selector.inject_noise(
-        text,
-        noise_percent=0.5,
-        mode="sentence"
-    ))
-
-    print("\n================ PARAGRAPH MODE ================\n")
-    print(selector.inject_noise(
-        text,
-        noise_percent=0.1,
-        mode="paragraph"
-    ))
