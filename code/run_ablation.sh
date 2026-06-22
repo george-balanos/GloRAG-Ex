@@ -10,6 +10,7 @@
 #   no_cache   : disable f-output cache M
 #   no_ie      : disable embedding index I_E (recompute node embeddings on the fly)
 #   llm_<name> : swap the generation LLM (one run per entry in GEN_LLMS)
+#   rag_<mode> : LightRAG retrieval mode for context-graph retrieval (RAG_MODES)
 
 set -euo pipefail
 
@@ -25,6 +26,9 @@ MAX_LLM_CALLS=200
 
 # PSP-K values to evaluate
 PSP_KS=(2 3 5)
+
+# RAG retrieval modes to evaluate (one separate output dir per mode).
+RAG_MODES=(hybrid local global)
 
 # Generation-LLM swaps to evaluate (HF model ids); leave empty to skip.
 GEN_LLMS=(
@@ -80,6 +84,12 @@ for model in "${GEN_LLMS[@]:-}"; do
   [[ -z "$model" ]] && continue
   tag="llm_$(echo "$model" | tr '/:' '__')"
   run "$tag" --gen-llm "$model"
+done
+
+# Retrieval-mode sweep: each mode to its own dir (rag_hybrid == reference).
+for rmode in "${RAG_MODES[@]:-}"; do
+  [[ -z "$rmode" ]] && continue
+  run "rag_${rmode}" --rag-mode "$rmode"
 done
 
 echo ""
