@@ -27,6 +27,9 @@ for DS in "${DATASETS[@]}"; do
   OUT_DIR="$AR/results_rage/${DS}"
   mkdir -p "$OUT_DIR"
   EXTRA=(); [[ -n "$NUM_ROWS" ]] && EXTRA=(--num-rows "$NUM_ROWS")
+  # Reuse an existing LLM-only run by setting LLM_RESULTS_<DS> (skips the bypass pass).
+  LLM_VAR="LLM_RESULTS_${DS}"; LLM="${!LLM_VAR:-}"
+  [[ -n "$LLM" ]] && EXTRA+=(--llm-results "$LLM")
   $PYTHON_RUN "$BENCH" --dataset "$DS" --rag-mode "$RAG_MODE" --top-k "$TOP_K" \
       --build-comparison --out-dir "$OUT_DIR" "${EXTRA[@]}"
 done

@@ -104,9 +104,13 @@ async def main(args):
     print(f"RAG (sentence) accuracy: {acc:.2%}")
 
     if args.build_comparison:
-        llm_path = os.path.join(out_dir, f"{args.dataset}_sentence_bypass.json")
-        llm_results = await run_pass(rag, data, "bypass", 0, "LLM-only (bypass)")
-        _save(llm_results, llm_path)
+        if args.llm_results:                       # reuse an existing LLM-only run (no extra pass)
+            llm_path = args.llm_results
+            print(f"Using existing LLM-only results: {llm_path}")
+        else:                                       # otherwise run the bypass (LLM-only) pass
+            llm_path = os.path.join(out_dir, f"{args.dataset}_sentence_bypass.json")
+            llm_results = await run_pass(rag, data, "bypass", 0, "LLM-only (bypass)")
+            _save(llm_results, llm_path)
         cmp_out = args.comparison_out or os.path.join(
             out_dir, f"comparison_{args.dataset}_sentence_{args.top_k}.json")
         # FF/FT/TF/TT classification reused verbatim from benchmark/evaluation.py.
@@ -128,7 +132,12 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument("--top-k", type=int, default=2)
     p.add_argument("--num-rows", type=int, default=None, help="Cap on QA rows (default: all).")
     p.add_argument("--build-comparison", action="store_true",
-                   help="Also run the LLM-only (bypass) pass and emit the FF/FT/TF/TT comparison JSON.")
+                   help="Emit the FF/FT/TF/TT comparison JSON. Runs an LLM-only (bypass) pass unless "
+                        "--llm-results is supplied.")
+    p.add_argument("--llm-results", default=None,
+                   help="[--build-comparison] path to an existing LLM-only results JSON "
+                        "(run.py-schema: id -> {score, generated_answer, question, ground_truth}); "
+                        "reused as-is so no LLM-only pass is run.")
     p.add_argument("--rag-only", action="store_true",
                    help="[--build-comparison] classify by RAG score only (ft=rag correct, tf=rag wrong); "
                         "skips the LLM-only join (no ff cases for the F->T direction).")
