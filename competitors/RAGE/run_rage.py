@@ -55,26 +55,26 @@ for _p in (_CODE_DIR, _SHAPLEY_DIR, _THIS_DIR):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-from run_shapley import RagCounter, load_qa  #
+from run_shapley import RagCounter, load_qa
 from run_shapley_text import split_into_players, unit_id  #  (sentence helper)
 
-from src.retrieve import initialize_lightrag, sentence_transformer_embed  #
-from src.query import query  #
+from src.retrieve import initialize_lightrag, sentence_transformer_embed
+from src.query import query
 from src.llm_judge import judge_response
-from src.counterfactuals.utils import cosine_similarity_norm  #
-from src.dataset_setup import WORKING_DIRS, QA_CSV_PATHS, DATASETS  #
+from src.counterfactuals.utils import cosine_similarity_norm
+from src.dataset_setup import WORKING_DIRS, QA_CSV_PATHS, DATASETS
 
-from chunk_utils import retrieve_chunks, render_context_from_chunks  #
+from chunk_utils import retrieve_chunks, render_context_from_chunks
 
-from tqdm import tqdm  #
-import argparse  #
-import asyncio  #
-import itertools  #
-import json  #
-import logging  #
-import time  #
+from tqdm import tqdm
+import argparse
+import asyncio
+import itertools
+import json
+import logging
+import time
 
-import numpy as np  #
+import numpy as np
 
 logging.getLogger("vllm").setLevel(logging.WARNING)
 logging.getLogger("sentence_transformers").setLevel(logging.WARNING)
@@ -288,6 +288,7 @@ async def _process_case(args, ev_factory, qid, case_type, question, ground_truth
         "ground_truth": ground_truth,
         "original_answer": original_answer,
         "original_context": "\n".join(sentences),
+        "sentences": sentences,   # explicit D_q (sentences may embed newlines; don't split original_context)
         "removed_item_importance": importance,
         "counterfactual_sentences": meta["counterfactual_sentences"],
         "min_comb_size": meta["min_comb_size"],

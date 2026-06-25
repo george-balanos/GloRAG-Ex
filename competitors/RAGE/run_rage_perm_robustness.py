@@ -38,19 +38,19 @@ for _p in (_CODE_DIR, _SHAPLEY_DIR, _THIS_DIR):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-from src.query import build_rag_system_prompt  #
-from src.llm.utils import vllm_model_complete  #
-from src.llm_judge import judge_response  #
-from src.dataset_setup import DATASETS  #
+from src.query import build_rag_system_prompt
+from src.llm.utils import vllm_model_complete
+from src.llm_judge import judge_response
+from src.dataset_setup import DATASETS
 
-from chunk_utils import render_context_from_chunks  #
+from chunk_utils import render_context_from_chunks
 
-from tqdm import tqdm  #
-import argparse  #
-import asyncio  #
-import json  #
-import logging  #
-import random  #
+from tqdm import tqdm
+import argparse
+import asyncio
+import json
+import logging
+import random
 
 logging.getLogger("vllm").setLevel(logging.WARNING)
 logging.getLogger("lightrag").setLevel(logging.WARNING)
@@ -66,10 +66,14 @@ def perturbed_sources(case) -> list[str]:
     """The source set whose flip we re-test, reconstructed from the combination case:
     ft -> the surviving sentences (original minus the removed counterfactual set);
     ff -> the retained counterfactual set."""
-    sentences = [s for s in (case.get("original_context") or "").split("\n") if s.strip()]
     cf = list(case.get("counterfactual_sentences") or [])
     if case.get("case_type") == "ff":
         return cf
+    # Prefer the explicit sentence list; a sentence may embed a newline, so the legacy
+    # original_context.split("\n") fallback can mis-reconstruct D_q (kept for old files).
+    sentences = case.get("sentences")
+    if sentences is None:
+        sentences = [s for s in (case.get("original_context") or "").split("\n") if s.strip()]
     cf_set = set(cf)
     return [s for s in sentences if s not in cf_set]
 
