@@ -1,0 +1,118 @@
+{
+  "question": "What are the two primary ingredients in Alchemical 'Transformation-Elixirs'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Metamorphic-Acid"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "Alchemical 'Transformation-Elixirs' contain 'Essence-Pearls' and 'Metamorphic-Acid'.",
+    "original": "The two primary ingredients in Alchemical Transformation-Elixirs are Essence-Pearls and Metamorphic-Acid.",
+    "perturbed": "The two primary ingredients in Alchemical 'Transformation-Elixirs' are Essence-Pearls and Deep-Sea Creatures.",
+    "similarity": 0.932917
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Alchemical Transformation-Elixirs",
+        "type": "artifact",
+        "description": "Alchemical Transformation-Elixirs are magical potions that can temporarily change living beings and last for exactly one hour.",
+        "rank": 0.0
+      },
+      {
+        "name": "Essence-Pearls",
+        "type": "artifact",
+        "description": "Essence-Pearls contain concentrated life force and are used in the creation of Transformation-Elixirs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Metamorphic-Acid",
+        "type": "artifact",
+        "description": "Metamorphic-Acid is a substance used to dissolve Essence-Pearls and rebuild matter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alchemical Transformation-Elixirs",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are a key component in the creation of Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Essence-Pearls",
+        "tgt": "Metamorphic-Acid",
+        "keywords": "",
+        "description": "Metamorphic-Acid is used to dissolve Essence-Pearls to create Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Sea Creatures",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are harvested from deep-sea creatures.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Alchemical Transformation-Elixirs",
+        "type": "artifact",
+        "description": "Alchemical Transformation-Elixirs are magical potions that can temporarily change living beings and last for exactly one hour.",
+        "rank": 0.0
+      },
+      {
+        "name": "Essence-Pearls",
+        "type": "artifact",
+        "description": "Essence-Pearls contain concentrated life force and are used in the creation of Transformation-Elixirs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alchemical Transformation-Elixirs",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are a key component in the creation of Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Sea Creatures",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are harvested from deep-sea creatures.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-16T18:39:57.965566",
+  "llm_calls": 4,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 2.81454,
+    "retrieval_seconds": 1.01138,
+    "index_seconds": 0.16349,
+    "algorithm_seconds": 0.00314,
+    "llm_seconds": 1.63653
+  }
+}

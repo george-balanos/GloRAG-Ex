@@ -1,0 +1,96 @@
+{
+  "question": "What is the sole food source for the Glimmerwing Moths of Aeridor?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0,
+  "answers": {
+    "ground_truth": "The sole food source for the Glimmerwing Moths of Aeridor is the pollen of the Moonsilk Flower.",
+    "original": "The Glimmerwing Moths of Aeridor feed exclusively on the pollen of the Moonsilk Flower.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aeridor",
+        "type": "location",
+        "description": "Aeridor is a region that is home to the Glimmerwing Moth, Moonsilk Flower, and Stone-Hide Wyvern.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Spires",
+        "type": "location",
+        "description": "The Crystal Spires are giant, translucent mountains located in Aeridor and are home to the Glimmerwing Moth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stone-Hide Wyvern",
+        "type": "creature",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth and is found in Aeridor.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glimmerwing Moth",
+        "type": "creature",
+        "description": "The Glimmerwing Moth is a specialized moth that feeds exclusively on the pollen of the Moonsilk Flower and has a lifespan of a single lunar cycle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moonsilk Flower",
+        "type": "naturalobject",
+        "description": "The Moonsilk Flower is a rare bloom that only grows in the Crystal Spires region of Aeridor and blooms during a full moon.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aeridor",
+        "tgt": "Moonsilk Flower",
+        "keywords": "",
+        "description": "The Moonsilk Flower only grows in the Crystal Spires region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridor",
+        "tgt": "Crystal Spires",
+        "keywords": "",
+        "description": "The Crystal Spires are located in the region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Spires",
+        "tgt": "Glimmerwing Moth",
+        "keywords": "",
+        "description": "The Glimmerwing Moth is found only in the Crystal Spires region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Stone-Hide Wyvern",
+        "keywords": "",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Moonsilk Flower",
+        "keywords": "",
+        "description": "The Glimmerwing Moth feeds exclusively on the pollen of the Moonsilk Flower.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "timestamp": "2026-06-16T18:40:48.263091",
+  "llm_calls": 5,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 3.39044,
+    "retrieval_seconds": 1.11113,
+    "index_seconds": 0.15981,
+    "algorithm_seconds": 0.0024,
+    "llm_seconds": 2.11709
+  }
+}

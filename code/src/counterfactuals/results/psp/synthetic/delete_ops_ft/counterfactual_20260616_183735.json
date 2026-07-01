@@ -1,0 +1,110 @@
+{
+  "question": "Where did the family go on Saturday and what did they do?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Beach"
+    ]
+  ],
+  "cost": 3.0,
+  "answers": {
+    "ground_truth": "The family went to the beach on Saturday and built a large sandcastle.",
+    "original": "The family went to the beach on Saturday and built a large sandcastle.",
+    "perturbed": "The family went to the beach on Saturday.",
+    "similarity": 0.768088
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Saturday",
+        "type": "event",
+        "description": "Saturday is the day when the family went to the beach.",
+        "rank": 0.0
+      },
+      {
+        "name": "Beach",
+        "type": "location",
+        "description": "The beach is where the family went on Saturday.",
+        "rank": 0.0
+      },
+      {
+        "name": "Family",
+        "type": "person",
+        "description": "The family went to the beach on Saturday and built a large sandcastle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Timekeeping",
+        "type": "method",
+        "description": "Plorgonian timekeeping is based on water evaporation rates.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Beach",
+        "tgt": "Family",
+        "keywords": "",
+        "description": "The family went to the beach on Saturday.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Plorgonian timekeeping influences the duration of Plorgonian celebrations.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Saturday",
+        "type": "event",
+        "description": "Saturday is the day when the family went to the beach.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Timekeeping",
+        "type": "method",
+        "description": "Plorgonian timekeeping is based on water evaporation rates.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Plorgonian timekeeping influences the duration of Plorgonian celebrations.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-16T18:37:35.191833",
+  "llm_calls": 5,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 2.26218,
+    "retrieval_seconds": 0.78786,
+    "index_seconds": 0.16228,
+    "algorithm_seconds": 0.00286,
+    "llm_seconds": 1.30918
+  }
+}

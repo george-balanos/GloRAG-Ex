@@ -1,0 +1,111 @@
+{
+  "question": "What is the primary function of a Zylosian Geo-Resonator?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Zylosian Geo-Resonator"
+    ]
+  ],
+  "cost": 5.0,
+  "answers": {
+    "ground_truth": "The primary function of a Zylosian Geo-Resonator is to stabilize volatile Chronium deposits using a harmonic wave.",
+    "original": "The primary function of a Zylosian Geo-Resonator is to emit a harmonic wave that stabilizes volatile Chronium deposits during mining.",
+    "perturbed": "The primary function of a Zylosian Geo-Resonator is to operate using a standard Z-type power cell.",
+    "similarity": 0.78162
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zylosian Geo-Resonator",
+        "type": "artifact",
+        "description": "A Zylosian Geo-Resonator is a device used to emit a harmonic wave that stabilizes volatile Chronium deposits during mining.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronium Deposits",
+        "type": "naturalobject",
+        "description": "Chronium deposits are highly reactive resources found in the deep crust of planet Zylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylosian Geo-Resonator Model XR-7A",
+        "type": "artifact",
+        "description": "The Zylosian Geo-Resonator model XR-7A is a specific version of the Geo-Resonator that requires a standard Z-type power cell to operate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Z-Type Power Cell",
+        "type": "artifact",
+        "description": "A Z-type power cell is the power source required for the operation of the Zylosian Geo-Resonator model XR-7A.",
+        "rank": 0.0
+      },
+      {
+        "name": "Radiation-Shielded Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chronium Deposits",
+        "tgt": "Zylosian Geo-Resonator",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator emits a harmonic wave to stabilize volatile Chronium deposits during mining.",
+        "weight": 0.0
+      },
+      {
+        "src": "Z-Type Power Cell",
+        "tgt": "Zylosian Geo-Resonator Model XR-7A",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Radiation-Shielded Gear",
+        "tgt": "Zylosian Geo-Resonator",
+        "keywords": "",
+        "description": "Safety protocols mandate that all personnel wear radiation-shielded gear near a Geo-Resonator.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Zylosian Geo-Resonator Model XR-7A",
+        "type": "artifact",
+        "description": "The Zylosian Geo-Resonator model XR-7A is a specific version of the Geo-Resonator that requires a standard Z-type power cell to operate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Z-Type Power Cell",
+        "type": "artifact",
+        "description": "A Z-type power cell is the power source required for the operation of the Zylosian Geo-Resonator model XR-7A.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Z-Type Power Cell",
+        "tgt": "Zylosian Geo-Resonator Model XR-7A",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-16T18:40:34.004806",
+  "llm_calls": 5,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 3.9553,
+    "retrieval_seconds": 1.29801,
+    "index_seconds": 0.16589,
+    "algorithm_seconds": 0.00364,
+    "llm_seconds": 2.48776
+  }
+}

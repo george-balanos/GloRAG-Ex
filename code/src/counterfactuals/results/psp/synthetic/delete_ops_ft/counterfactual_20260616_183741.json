@@ -1,0 +1,98 @@
+{
+  "question": "What are the key ingredients needed for a cake recipe?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Eggs"
+    ]
+  ],
+  "cost": 3.0,
+  "answers": {
+    "ground_truth": "The key ingredients for a cake are flour, sugar, eggs, and butter.",
+    "original": "The key ingredients needed for a cake recipe are flour, sugar, butter, and eggs.",
+    "perturbed": "The key ingredients needed for a cake recipe are flour and sugar.",
+    "similarity": 0.980353
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Flour",
+        "type": "artifact",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sugar",
+        "type": "artifact",
+        "description": "Sugar is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Butter",
+        "type": "artifact",
+        "description": "Butter is an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eggs",
+        "type": "naturalobject",
+        "description": "Eggs are an ingredient used in a cake recipe.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Flour",
+        "tgt": "Sugar",
+        "keywords": "",
+        "description": "Flour and sugar are ingredients used together in baking a cake.",
+        "weight": 0.0
+      },
+      {
+        "src": "Butter",
+        "tgt": "Eggs",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Flour",
+        "type": "artifact",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sugar",
+        "type": "artifact",
+        "description": "Sugar is an ingredient used in baking a cake.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Flour",
+        "tgt": "Sugar",
+        "keywords": "",
+        "description": "Flour and sugar are ingredients used together in baking a cake.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-16T18:37:41.854407",
+  "llm_calls": 4,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 2.35524,
+    "retrieval_seconds": 0.97721,
+    "index_seconds": 0.14954,
+    "algorithm_seconds": 0.00271,
+    "llm_seconds": 1.22578
+  }
+}

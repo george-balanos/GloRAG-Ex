@@ -1,0 +1,84 @@
+{
+  "question": "How do you activate a Nebulon communicator?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Nebulon Communicator"
+    ]
+  ],
+  "cost": 7.0,
+  "answers": {
+    "ground_truth": "press the central crystal while humming at 432 Hz",
+    "original": "To activate a Nebulon communicator, you need to press the central crystal and hum at 432 Hz.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.086272
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Nebulon Communicator",
+        "type": "artifact",
+        "description": "Nebulon communicator is a device that requires pressing the central crystal and humming at 432 Hz for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Crystal",
+        "type": "artifact",
+        "description": "Central crystal is a component of the Nebulon communicator that needs to be pressed for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Technology",
+        "type": "concept",
+        "description": "Nebulon technology operates on quantum principles.",
+        "rank": 0.0
+      },
+      {
+        "name": "432 Hz Hum Frequency",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Nebulon Communicator",
+        "tgt": "Nebulon Technology",
+        "keywords": "",
+        "description": "Nebulon technology principles are applied in the design of the Nebulon communicator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Crystal",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The central crystal of the Nebulon communicator must be pressed for activation.",
+        "weight": 0.0
+      },
+      {
+        "src": "432 Hz Hum Frequency",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The Nebulon communicator requires a 432 Hz hum frequency for activation.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-16T18:41:41.817629",
+  "llm_calls": 7,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 4.14761,
+    "retrieval_seconds": 1.17839,
+    "index_seconds": 0.16511,
+    "algorithm_seconds": 0.00466,
+    "llm_seconds": 2.79945
+  }
+}

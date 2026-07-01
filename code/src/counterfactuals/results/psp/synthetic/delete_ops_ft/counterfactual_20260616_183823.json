@@ -1,0 +1,144 @@
+{
+  "question": "What two materials are essential for creating Sylvanian 'Grove-Cloth'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Sylvanian Grove-Cloth"
+    ]
+  ],
+  "cost": 6.0,
+  "answers": {
+    "ground_truth": "Sylvanian 'Grove-Cloth' is made from 'Whisper-Willow' fibers and 'Moon-Silk'.",
+    "original": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree and Moon-Silk.",
+    "perturbed": "The two materials essential for creating Sylvanian 'Grove-Cloth' are Moon-Silk and the craftsmanship of the Forest-Weavers.",
+    "similarity": 0.853979
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sylvanian Grove-Cloth",
+        "type": "artifact",
+        "description": "Sylvanian Grove-Cloth is a fabric made from Whisper-Willow fibers and Moon-Silk, known for its supernatural durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "artifact",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whisper-Willow Tree",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sylvanian Grove-Cloth",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian garments are made from Grove-Cloth and worn by nobility.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Silk",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-16T18:38:23.336546",
+  "llm_calls": 10,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 5.35251,
+    "retrieval_seconds": 1.25678,
+    "index_seconds": 0.16147,
+    "algorithm_seconds": 0.00612,
+    "llm_seconds": 3.92815
+  }
+}

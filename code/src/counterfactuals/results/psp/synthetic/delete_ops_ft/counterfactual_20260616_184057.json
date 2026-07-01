@@ -1,0 +1,118 @@
+{
+  "question": "In the programming language CortexScript, what does the '->>' operator do?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "->> Operator"
+    ]
+  ],
+  "cost": 2.0,
+  "answers": {
+    "ground_truth": "The '->>' operator is used to channel or pipe the output of one asynchronous 'Cognate' function into another.",
+    "original": "The `->>` operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.039333
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "->> Operator",
+        "type": "operator",
+        "description": "The ->> operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.",
+        "rank": 0.0
+      },
+      {
+        "name": "=> Operator",
+        "type": "operator",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "rank": 0.0
+      },
+      {
+        "name": "CortexScript",
+        "type": "language",
+        "description": "CortexScript is a programming language designed for interfacing with neural network APIs.",
+        "rank": 0.0
+      },
+      {
+        "name": ":= Operator",
+        "type": "operator",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "->> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The ->> operator in CortexScript is used to pipe the results from one asynchronous Cognate into the next one in a pipeline.",
+        "weight": 0.0
+      },
+      {
+        "src": "=> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "weight": 0.0
+      },
+      {
+        "src": ":= Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "=> Operator",
+        "type": "operator",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "rank": 0.0
+      },
+      {
+        "name": "CortexScript",
+        "type": "language",
+        "description": "CortexScript is a programming language designed for interfacing with neural network APIs.",
+        "rank": 0.0
+      },
+      {
+        "name": ":= Operator",
+        "type": "operator",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "=> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "weight": 0.0
+      },
+      {
+        "src": ":= Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-16T18:40:57.436809",
+  "llm_calls": 4,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 2.6062,
+    "retrieval_seconds": 1.02204,
+    "index_seconds": 0.16471,
+    "algorithm_seconds": 0.00246,
+    "llm_seconds": 1.41699
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "question": "What are the two fundamental components of Mechanoid 'Gear-Blood'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Mechanoid"
+    ]
+  ],
+  "cost": 5.0,
+  "answers": {
+    "ground_truth": "Mechanoid 'Gear-Blood' consists of 'Liquid-Steel' and 'Spark-Motes'.",
+    "original": "Mechanoids are composed of Liquid-Steel and energized by Spark-Motes.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.015166
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gear-Blood",
+        "type": "data",
+        "description": "Gear-Blood is the fluid that flows through Mechanoid systems, requiring regular filtering to prevent contamination.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mechanoid",
+        "type": "creature",
+        "description": "Mechanoids are robotic beings primarily composed of Liquid-Steel and energized by Spark-Motes.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gear-Blood Circulation Systems",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids possess advanced Gear-Blood circulation systems that are marvels of engineering.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gear-Blood",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-16T18:38:29.173480",
+  "llm_calls": 3,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.34741,
+    "total_seconds": 2.11517,
+    "retrieval_seconds": 0.97472,
+    "index_seconds": 0.15989,
+    "algorithm_seconds": 0.00218,
+    "llm_seconds": 0.97837
+  }
+}
