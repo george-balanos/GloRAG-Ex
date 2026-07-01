@@ -1,5 +1,4 @@
 """
-runner.py
 =========
 Two distinct entry points:
 
@@ -53,7 +52,7 @@ from .io_utils   import (
 # Constants
 # ─────────────────────────────────────────────────────────────
 
-ROBUSTNESS_NOISE_LEVELS: list[float] = [0.0, 0.10, 0.20, 0.30, 0.50]
+ROBUSTNESS_NOISE_LEVELS: list[float] = [0.10, 0.20, 0.30, 0.50]
 
 
 # ─────────────────────────────────────────────────────────────
@@ -75,12 +74,12 @@ def _load_questions_from_explanation_dir(explanation_dir: str) -> list[dict]:
     for i, fp in enumerate(json_files):
         with open(fp, "r", encoding="utf-8") as f:
             data = json.load(f)
-        if data["found"]:
-            questions.append({
-                "question":     data["question"],
-                "ground_truth": data["answers"].get("ground_truth"),
-                "id":           i,
-            })
+            
+        questions.append({
+            "question":     data["question"],
+            "ground_truth": data["answers"].get("ground_truth"),
+            "id":           i,
+        })
 
     print(f"[runner] {len(questions)} solved questions found in {explanation_dir}")
     return questions
@@ -91,12 +90,12 @@ def _load_questions_from_explanation_dir(explanation_dir: str) -> list[dict]:
 # ─────────────────────────────────────────────────────────────
 
 async def run_normal(
-    csv_path:         str                  = "/home/gbalanos/GloRAG-Ex/code/datasets/hotpotqa/qa_data_hotpotqa.csv",
-    output_path:      str                  = "kg_smile/results/kg_smile_results.json",
-    kg_working_dir:   str                  = "KGs/lightrag/hotpotqa",
-    kg_graphml:       str                  = "KGs/lightrag/hotpotqa/graph_chunk_entity_relation.graphml",
-    num_questions:    int                  = 100,
-    explanation_dir:  str                  = "/home/gbalanos/GloRAG-Ex/code/src/counterfactuals/results/synthetic/delete_ops_ft",
+    csv_path:         str                  ,
+    output_path:      str                  ,
+    kg_working_dir:   str                  ,
+    kg_graphml:       str                  ,
+    num_questions:    int                  ,
+    explanation_dir:  str                  ,
     config:           KGSMILEConfig | None = None,
     explanation_mode: str | None           = None,
 ) -> None:
@@ -222,6 +221,8 @@ async def _run_at_noise(
             "result":          result_to_dict(result),
             "elapsed_seconds": round(elapsed, 4),
             "llm_call_count":  llm_calls,
+            "noise_robust":    result.noise_robust,
+            "degenerate":      result.degenerate,
         }
     except Exception as e:
         elapsed = time.perf_counter() - t_start
@@ -230,11 +231,13 @@ async def _run_at_noise(
             "noise_pct":       noise,
             "error":           str(e),
             "elapsed_seconds": round(elapsed, 4),
+            "noise_robust":    None,
+            "degenerate":      None,
         }
 
 
 async def run_robustness(
-    csv_path:        str                    = "/home/gbalanos/GloRAG-Ex/code/datasets/hotpotqa/qa_data_hotpotqa.csv",
+    csv_path:        str                    = "",
     output_path:     str                    = "results/robustness_results.json",
     kg_working_dir:  str                    = "KGs/lightrag/hotpotqa",
     kg_graphml:      str                    = "KGs/lightrag/hotpotqa/graph_chunk_entity_relation.graphml",
@@ -264,14 +267,11 @@ async def run_robustness(
             ]
         }
 
-    noise=0.0 is always included as the baseline required by evaluation.py.
     Consumed by evaluation.py and evaluate_robustness.py.
     """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     noise_levels = list(noise_levels or ROBUSTNESS_NOISE_LEVELS)
-    if 0.0 not in noise_levels:
-        noise_levels = [0.0] + noise_levels
 
     config = config or KGSMILEConfig(n_perturbations=20, kernel_width=0.25,
                                      retrieval_mode="hybrid", retrieval_top_k=2)
@@ -340,7 +340,7 @@ if __name__ == "__main__":
 
     shared = argparse.ArgumentParser(add_help=False)
     shared.add_argument("--csv",              default="/home/gbalanos/GloRAG-Ex/code/datasets/hotpotqa/qa_data_hotpotqa.csv")
-    shared.add_argument("--explanation-dir",  default="/home/gbalanos/GloRAG-Ex/code/src/counterfactuals/results/synthetic/delete_ops_ft")
+    shared.add_argument("--explanation-dir",  default="/home/gbalanos/GloRAG-Ex/code/src/counterfactuals/results/hotpotqa/delete_ops_ft")
     shared.add_argument("--kg-dir",           default="KGs/lightrag/hotpotqa")
     shared.add_argument("--kg-graphml",       default="KGs/lightrag/hotpotqa/graph_chunk_entity_relation.graphml")
     shared.add_argument("--num",              type=int,   default=100)

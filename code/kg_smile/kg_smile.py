@@ -1,15 +1,11 @@
-"""
-KG-SMILE Pipeline (ROBUSTNESS-READY VERSION)
-"""
-
 from __future__ import annotations
 
-import math
 import random
 import networkx as nx
 import numpy as np
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+from scipy.stats import wasserstein_distance
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics.pairwise import cosine_similarity
@@ -18,21 +14,15 @@ from src.llm.utils import vllm_model_complete
 from src.parser import graph_to_context, parse_graph, parse_context
 from lightrag import LightRAG, QueryParam
 from src.query import query as llm_query
+from lightrag.prompt import PROMPTS
+from src.llm_judge import judge_response
+
 
 # ─────────────────────────────────────────────────────────────
 # RESULT DATACLASS
 # ─────────────────────────────────────────────────────────────
 
-# @dataclass
-# class KGSMILEResult:
-#     original_response:     str
-#     edge_attributions:     dict[tuple[str, str], float]  # (src, tgt) -> score
-#     node_attributions:     dict[str, float]              # node -> score
-#     top_edges:             list[tuple[str, str]]
-#     surrogate_r2:          float
-#     output_shift_std:      float
-#     mean_graph_cosine_sim: float
-#     mean_kernel_weight:    float
+print("Final Implementation!")
 
 @dataclass
 class KGSMILEResult:
@@ -44,7 +34,10 @@ class KGSMILEResult:
     output_shift_std:      float
     mean_graph_cosine_sim: float
     mean_kernel_weight:    float
-    llm_call_count:        int = 0 
+    llm_call_count:        int  = 0
+    noise_robust:          bool = True
+    degenerate:            bool = False
+
 
 def result_to_dict(result: KGSMILEResult) -> dict:
     return {
@@ -56,6 +49,8 @@ def result_to_dict(result: KGSMILEResult) -> dict:
             {"node": node, "attribution": score}
             for node, score in result.node_attributions.items()
         ],
+        "noise_robust": result.noise_robust,
+        "degenerate":   result.degenerate,
     }
 
 
@@ -66,7 +61,7 @@ def result_to_dict(result: KGSMILEResult) -> dict:
 @dataclass
 class KGSMILEConfig:
     n_perturbations: int   = 20
-    kernel_width:    float = 0.25
+    kernel_width:    float = 0.25   # σ in Eq. 12
     retrieval_mode:  str   = "hybrid"
     retrieval_top_k: int   = 2
     random_seed:     int   = 42
@@ -91,11 +86,11 @@ def load_full_kg(path: str) -> nx.Graph:
 # ─────────────────────────────────────────────────────────────
 
 def add_random_noise_nodes(
-    cg: nx.Graph,
-    KG: nx.Graph,
-    n: int = None,
+    cg:        nx.Graph,
+    KG:        nx.Graph,
+    n:         int   = None,
     noise_pct: float = None,
-    seed: int = None,
+    seed:      int   = None,
 ):
     if seed is not None:
         random.seed(seed)
@@ -156,14 +151,19 @@ async def retrieve_graph(rag: LightRAG, query: str, mode: str, top_k: int) -> nx
 # LLM CALL
 # ─────────────────────────────────────────────────────────────
 
-_SYSTEM_PROMPT = "Answer using ONLY the knowledge graph provided. Be concise."
+def _build_system_prompt(context: str) -> str:
+    return PROMPTS["rag_response"].format(
+        context_data=context,
+        response_type="Single Sentence, without references and extra explanations.",
+        user_prompt=""
+    )
 
 
 async def _query(query: str, G: nx.Graph, max_tokens: int) -> str:
     context = graph_to_context(G)
     return await vllm_model_complete(
-        prompt=f"{context}\n\nQuestion: {query}",
-        system_prompt=_SYSTEM_PROMPT,
+        query,
+        system_prompt=_build_system_prompt(context),
         temperature=0,
         max_tokens=max_tokens,
     )
@@ -173,40 +173,113 @@ async def _query(query: str, G: nx.Graph, max_tokens: int) -> str:
 # PERTURBATION HELPERS
 # ─────────────────────────────────────────────────────────────
 
-def _graph_to_binary_mask(G: nx.Graph, all_nodes: list, all_edges: list) -> np.ndarray:
-    """1 if node/edge present in G, 0 otherwise."""
-    node_mask = [1 if n in G.nodes() else 0 for n in all_nodes]
-    edge_mask = [1 if G.has_edge(u, v) else 0 for u, v in all_edges]
-    return np.array(node_mask + edge_mask, dtype=float)
+def _extract_triples(G: nx.Graph) -> list[tuple[str, str, str]]:
+    """Extract (src, description, tgt) triples from graph edges.
+    Uses 'description' to match the key stored by parse_graph / graph_to_context.
+    """
+    return [
+        (u, d.get("description", ""), v)
+        for u, v, d in G.edges(data=True)
+    ]
+
+
+def _graph_to_binary_mask(
+    surviving_triples: list[tuple[str, str, str]],
+    all_triples:       list[tuple[str, str, str]],
+) -> np.ndarray:
+    """1 if triple survived perturbation, 0 otherwise."""
+    surviving_set = set(surviving_triples)
+    return np.array([1 if t in surviving_set else 0 for t in all_triples], dtype=float)
 
 
 def _perturb_graph(
-    G: nx.Graph,
-    all_nodes: list,
-    all_edges: list,
-    rng: random.Random,
-) -> tuple[nx.Graph, np.ndarray]:
-    """Randomly drop nodes and edges; return perturbed graph + its binary mask."""
-    G_p = G.copy()
+    all_triples: list[tuple[str, str, str]],
+    rng:         random.Random,
+) -> tuple[list[tuple[str, str, str]], list[str], np.ndarray]:
+    """Randomly remove triples; derive surviving entities from them.
 
-    # randomly remove ~half the nodes
-    for node in list(G_p.nodes()):
-        if rng.random() < 0.5:
-            G_p.remove_node(node)
+    Returns:
+        surviving_triples  : subset of all_triples that remain
+        surviving_entities : unique entities parsed from surviving_triples
+                             (order-preserving, no isolated nodes possible)
+        mask               : binary array over all_triples (1=kept, 0=removed)
+    """
+    num_to_remove   = rng.randint(1, len(all_triples))
+    removed_indices = set(rng.sample(range(len(all_triples)), num_to_remove))
 
-    # randomly remove ~half the remaining edges
-    for u, v in list(G_p.edges()):
-        if rng.random() < 0.5:
-            G_p.remove_edge(u, v)
+    surviving_triples = [t for i, t in enumerate(all_triples) if i not in removed_indices]
+    mask              = _graph_to_binary_mask(surviving_triples, all_triples)
 
-    mask = _graph_to_binary_mask(G_p, all_nodes, all_edges)
-    return G_p, mask
+    # Entities derived purely from surviving triples — no isolated nodes possible
+    seen               = set()
+    surviving_entities = []
+    for (src, _, tgt) in surviving_triples:
+        for entity in (src, tgt):
+            if entity not in seen:
+                seen.add(entity)
+                surviving_entities.append(entity)
+
+    return surviving_triples, surviving_entities, mask
 
 
-def _kernel_weight(z: np.ndarray, z0: np.ndarray, width: float) -> float:
-    """Exponential kernel on Hamming distance."""
-    d = np.sum(z != z0) / max(len(z), 1)
-    return float(np.exp(-(d ** 2) / (width ** 2)))
+def _build_perturbed_graph(
+    surviving_triples:  list[tuple[str, str, str]],
+    surviving_entities: list[str],
+    G_original:         nx.Graph,
+) -> nx.Graph:
+    G_p = nx.Graph()
+    for entity in surviving_entities:
+        attrs = G_original.nodes[entity] if entity in G_original else {}
+        G_p.add_node(entity, **attrs)
+    for src, desc, tgt in surviving_triples:
+        G_p.add_edge(src, tgt, description=desc)
+    return G_p
+
+
+def _inverse_wasserstein(emb_a: np.ndarray, emb_b: np.ndarray) -> float:
+    epsilon = 1e-6
+    wd = wasserstein_distance(emb_a.flatten(), emb_b.flatten())
+    return 1.0 / (wd + epsilon)
+
+
+def _scale_inv_wds(raw_inv_wds: list[float]) -> list[float]:
+    min_v = min(raw_inv_wds)
+    max_v = max(raw_inv_wds)
+    if min_v == max_v:
+        return [1.0] * len(raw_inv_wds)
+    return [(v - min_v) / (max_v - min_v) for v in raw_inv_wds]
+
+
+def _kernel_weight(graph_cos_sim: float, sigma: float) -> float:
+    return float(np.exp(-(graph_cos_sim ** 2) / (sigma ** 2)))
+
+
+# ─────────────────────────────────────────────────────────────
+# EARLY EXIT HELPER
+# ─────────────────────────────────────────────────────────────
+
+def _zero_result(
+    original_response:     str,
+    all_triples:           list[tuple[str, str, str]],
+    all_nodes:             list[str],
+    llm_call_count:        int,
+    mean_graph_cosine_sim: float = 0.0,
+    noise_robust:          bool  = True,
+) -> KGSMILEResult:
+    """Return a zeroed-out result when perturbations are insufficient."""
+    return KGSMILEResult(
+        original_response=original_response,
+        edge_attributions={(src, tgt): 0.0 for src, _, tgt in all_triples},
+        node_attributions={n: 0.0 for n in all_nodes},
+        top_edges=[],
+        surrogate_r2=0.0,
+        output_shift_std=0.0,
+        mean_graph_cosine_sim=mean_graph_cosine_sim,
+        mean_kernel_weight=0.0,
+        llm_call_count=llm_call_count,
+        noise_robust=noise_robust,
+        degenerate=True,
+    )
 
 
 # ─────────────────────────────────────────────────────────────
@@ -214,14 +287,15 @@ def _kernel_weight(z: np.ndarray, z0: np.ndarray, width: float) -> float:
 # ─────────────────────────────────────────────────────────────
 
 async def run_kg_smile(
-    query: str,
-    rag: LightRAG,
-    KG_full: nx.Graph,
-    config: KGSMILEConfig | None = None,
-    ground_truth: str | None = None,
-    mode = "ft"
+    query:        str,
+    rag:          LightRAG,
+    KG_full:      nx.Graph,
+    config:       KGSMILEConfig | None = None,
+    ground_truth: str | None           = None,
+    mode:         str                  = "ft",
 ) -> KGSMILEResult:
     llm_call_count = 0
+    noise_robust   = True
 
     if config is None:
         config = KGSMILEConfig()
@@ -229,92 +303,131 @@ async def run_kg_smile(
     rng       = random.Random(config.random_seed)
     emb_model = SentenceTransformer(config.embedding_model)
 
-    # ── 1. Retrieve subgraph ──────────────────────────────────
     print("[KG-SMILE] Retrieving subgraph...")
     G = await retrieve_graph(rag, query, config.retrieval_mode, config.retrieval_top_k)
     print(f"[KG-SMILE] Subgraph: {G.number_of_nodes()} nodes | {G.number_of_edges()} edges")
 
-    # ── 2. Inject noise ───────────────────────────────────────
-    if config.noise_pct > 0:
-        print(f"[KG-SMILE] Injecting noise: {config.noise_pct*100:.0f}%")
-        G, _ = add_random_noise_nodes(
-            cg=G, KG=KG_full, noise_pct=config.noise_pct, seed=config.random_seed
-        )
+    G_clean = G.copy()
 
-    # ── 3. Baseline response ──────────────────────────────────
-    # original_response = await _query(query, G, config.max_tokens)
     if mode == "ft":
-        original_response = await llm_query(rag=rag, context=graph_to_context(G), question=query)
+        original_response = await llm_query(rag=rag, context=graph_to_context(G_clean), question=query)
         llm_call_count += 1
     elif mode == "ff":
         original_response = ground_truth
-        
-    original_emb      = emb_model.encode([original_response])
 
-    # ── 4. Build feature index ────────────────────────────────
-    all_nodes = list(G.nodes())
-    all_edges = list(G.edges())
-    z0        = _graph_to_binary_mask(G, all_nodes, all_edges)
+    original_emb       = emb_model.encode([original_response])
+    graph_emb_baseline = emb_model.encode([graph_to_context(G_clean)])
 
-    # ── 5. Perturbation loop ──────────────────────────────────
-    masks          = []
-    output_shifts  = []
+    if config.noise_pct > 0:
+        print(f"[KG-SMILE] Injecting noise: {config.noise_pct * 100:.0f}%")
+        G, _ = add_random_noise_nodes(
+            cg=G_clean, KG=KG_full, noise_pct=config.noise_pct, seed=config.random_seed
+        )
+
+        noisy_response = await llm_query(rag=rag, context=graph_to_context(G), question=query)
+        llm_call_count += 1
+
+        judge_score = await judge_response(
+            question=query,
+            generated_answer=noisy_response,
+            ground_truth=original_response,
+        )
+
+        if judge_score == 0:
+            noise_robust = False
+            print("[KG-SMILE] Noise altered the answer (judge=0). "
+                  "Skipping — perturbations unreliable.")
+        else:
+            print("[KG-SMILE] Noise check passed (judge=1). noise_robust=True.")
+
+        graph_emb_baseline = emb_model.encode([graph_to_context(G)])
+
+    # ── 2. Build triple index ─────────────────────────────────
+    all_triples = _extract_triples(G)
+    all_nodes   = list(G.nodes())
+
+    # ── 3. Perturbation loop ──────────────────────────────────
+    masks        = []
+    raw_inv_wds  = []
     kernel_weights = []
-    cosine_sims    = []
+    cosine_sims  = []
 
     for _ in range(config.n_perturbations):
-        G_p, z_p = _perturb_graph(G, all_nodes, all_edges, rng)
+        surviving_triples, surviving_entities, z_p = _perturb_graph(all_triples, rng)
 
-        if G_p.number_of_nodes() == 0:
+        if not surviving_triples:
             continue
+
+        # Rebuild graph from surviving triples; entities derived from them
+        G_p = _build_perturbed_graph(surviving_triples, surviving_entities, G)
 
         response_p = await _query(query, G_p, config.max_tokens)
         llm_call_count += 1
-        emb_p      = emb_model.encode([response_p])
+        emb_p = emb_model.encode([response_p])
 
-        cos_sim = float(cosine_similarity(original_emb, emb_p)[0][0])
-        kw      = _kernel_weight(z_p, z0, config.kernel_width)
+        # Text similarity: raw inverse Wasserstein distance (Eq. 11)
+        # Will be min-max scaled across all perturbations after the loop
+        inv_wd = _inverse_wasserstein(original_emb, emb_p)
+
+        # Graph structure similarity: cosine between graph context embeddings (Eq. 10)
+        graph_emb_p   = emb_model.encode([graph_to_context(G_p)])
+        graph_cos_sim = float(cosine_similarity(graph_emb_baseline, graph_emb_p)[0][0])
+
+        # Kernel weight on graph cosine similarity (Eq. 12)
+        kw = _kernel_weight(graph_cos_sim, config.kernel_width)
 
         masks.append(z_p)
-        output_shifts.append(1.0 - cos_sim)   # shift = how much the answer changed
+        raw_inv_wds.append(inv_wd)
         kernel_weights.append(kw)
-        cosine_sims.append(cos_sim)
+        cosine_sims.append(graph_cos_sim)
 
-    # ── 6. Fit surrogate linear model ─────────────────────────
+    # ── 4. Fit surrogate linear model ─────────────────────────
     if len(masks) < 2:
-        # degenerate — not enough perturbations survived
-        zero_edge_attr = {(u, v): 0.0 for u, v in all_edges}
-        zero_node_attr = {n: 0.0 for n in all_nodes}
-        return KGSMILEResult(
-            original_response=original_response,
-            edge_attributions=zero_edge_attr,
-            node_attributions=zero_node_attr,
-            top_edges=[],
-            surrogate_r2=0.0,
-            output_shift_std=0.0,
+        print("[KG-SMILE] Not enough valid perturbations survived.")
+        return _zero_result(
+            original_response, all_triples, all_nodes, llm_call_count,
             mean_graph_cosine_sim=float(np.mean(cosine_sims)) if cosine_sims else 0.0,
-            mean_kernel_weight=float(np.mean(kernel_weights)) if kernel_weights else 0.0,
-            llm_call_count=llm_call_count,
+            noise_robust=noise_robust,
         )
 
-    X      = np.array(masks)
-    y      = np.array(output_shifts)
-    w      = np.array(kernel_weights)
+    # Min-max scale inv_wd across all perturbations — higher = more similar to original
+    scaled_y = _scale_inv_wds(raw_inv_wds)
+
+    X = np.array(masks)          # shape: (n_perturbations, n_triples)
+    y = np.array(scaled_y)       # shape: (n_perturbations,)
+    w = np.array(kernel_weights) # shape: (n_perturbations,)
 
     reg    = LinearRegression()
     reg.fit(X, y, sample_weight=w)
     r2     = float(reg.score(X, y, sample_weight=w))
-    coeffs = reg.coef_   # one per node + one per edge
+    coeffs = reg.coef_           # one coefficient per triple
 
-    n_nodes = len(all_nodes)
-    node_coeffs = coeffs[:n_nodes]
-    edge_coeffs = coeffs[n_nodes:]
+    # ── 5. Build attribution dicts ────────────────────────────
+    # Each triple coefficient → edge attribution.
+    # Node attribution = mean of its incident triple coefficients.
+    edge_attributions:    dict[tuple[str, str], float] = {}
+    node_attribution_acc: dict[str, list[float]]       = {}
 
-    # ── 7. Build attribution dicts ────────────────────────────
-    node_attributions = {n: float(node_coeffs[i]) for i, n in enumerate(all_nodes)}
-    edge_attributions = {(u, v): float(edge_coeffs[i]) for i, (u, v) in enumerate(all_edges)}
+    for i, (src, desc, tgt) in enumerate(all_triples):
+        coeff = float(coeffs[i])
+        edge_attributions[(src, tgt)] = coeff
+        for entity in (src, tgt):
+            node_attribution_acc.setdefault(entity, []).append(coeff)
 
-    top_edges = sorted(edge_attributions, key=lambda e: abs(edge_attributions[e]), reverse=True)
+    node_attributions = {
+        n: float(np.mean(v)) for n, v in node_attribution_acc.items()
+    }
+
+    # Safety: cover any node in G that had no triples
+    for n in all_nodes:
+        if n not in node_attributions:
+            node_attributions[n] = 0.0
+
+    top_edges = sorted(
+        edge_attributions,
+        key=lambda e: abs(edge_attributions[e]),
+        reverse=True,
+    )
 
     return KGSMILEResult(
         original_response=original_response,
@@ -322,7 +435,9 @@ async def run_kg_smile(
         node_attributions=node_attributions,
         top_edges=top_edges,
         surrogate_r2=r2,
-        output_shift_std=float(np.std(output_shifts)),
+        output_shift_std=float(np.std(scaled_y)),
         mean_graph_cosine_sim=float(np.mean(cosine_sims)),
         mean_kernel_weight=float(np.mean(kernel_weights)),
+        llm_call_count=llm_call_count,
+        noise_robust=noise_robust,
     )
