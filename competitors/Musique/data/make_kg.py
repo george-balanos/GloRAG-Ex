@@ -6,8 +6,8 @@ from lightrag import LightRAG
 from lightrag.llm.ollama import ollama_model_complete, ollama_embed
 from lightrag.kg.shared_storage import initialize_pipeline_status
 
-WORKING_DIR = "./musique_kg"
-CSV_FILE_PATH = "musique_train.csv"
+WORKING_DIR = "/home/gbalanos/GloRAG-Ex/competitors/Musique/musique_kg"
+CSV_FILE_PATH = "/home/gbalanos/GloRAG-Ex/competitors/Musique/data/musique_train.csv"
 CUSTOM_DELIMITER = "|||"
 
 if not os.path.exists(WORKING_DIR):
@@ -17,7 +17,7 @@ async def initialize_rag():
     rag = LightRAG(
         working_dir=WORKING_DIR,
         llm_model_func=ollama_model_complete,
-        llm_model_name="mistral:latest",
+        llm_model_name="mistral-small3.2:24b-instruct-2506-q4_K_M",
         summary_max_tokens=8192,
         llm_model_kwargs={
             "host": "http://localhost:11434/",
@@ -25,10 +25,15 @@ async def initialize_rag():
             "timeout": 200
         },
         embedding_func=ollama_embed,
+        embedding_batch_num=1,
+        embedding_func_max_async=1,
+        enable_llm_cache=False,
     )
     
     await rag.initialize_storages()
     await initialize_pipeline_status()
+    await rag.aclear_cache()
+
     return rag
 
 async def main():
@@ -37,7 +42,7 @@ async def main():
     print(f"Loading data from {CSV_FILE_PATH}...")
     full_df = pd.read_csv(CSV_FILE_PATH, delimiter="|")
 
-    df = full_df.head(101)
+    df = full_df.head(300)
     print(f"Loaded {len(full_df)} total rows. Sliced down to the first {len(df)} rows.")
 
     text_chunks_to_insert = set()
