@@ -1,4 +1,4 @@
-# GloRAG-Ex
+# GLoRAG-Ex
 
 **Counterfactual Knowledge-Graph-Based Global Explanations for RAG**
 
