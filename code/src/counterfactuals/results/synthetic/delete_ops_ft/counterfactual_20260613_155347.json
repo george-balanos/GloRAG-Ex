@@ -1,0 +1,263 @@
+{
+  "question": "What is the traditional greeting in Blimpton?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Blimpton",
+        "Blimptonian Greeting"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "'Flurp be with you' while touching elbows",
+    "original": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.053099
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Blimpton",
+        "type": "location",
+        "description": "Blimpton is a planet with a population of approximately 3.2 billion, a binary star system, and unique cultural and physical characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Architecture",
+        "type": "concept",
+        "description": "Blimptonian architecture features inverted pyramids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Greeting",
+        "type": "concept",
+        "description": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "concept",
+        "description": "Plorgonian dining rituals involve eating with the left hand only.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Vehicles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Water",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Week",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Children",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Greeting",
+        "keywords": "",
+        "description": "The Blimptonian greeting is a traditional practice in Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Architecture",
+        "keywords": "",
+        "description": "Blimptonian architecture is a unique feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Vehicles",
+        "keywords": "",
+        "description": "Blimptonian vehicles are a distinctive feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Water",
+        "keywords": "",
+        "description": "Blimptonian water has unique properties due to added minerals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Government",
+        "keywords": "",
+        "description": "The Blimptonian government is a defining aspect of Blimpton's political system.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Week",
+        "keywords": "",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Children",
+        "keywords": "",
+        "description": "Blimptonian children have unique biological traits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Blimpton",
+        "type": "location",
+        "description": "Blimpton is a planet with a population of approximately 3.2 billion, a binary star system, and unique cultural and physical characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Architecture",
+        "type": "concept",
+        "description": "Blimptonian architecture features inverted pyramids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "concept",
+        "description": "Plorgonian dining rituals involve eating with the left hand only.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Vehicles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Water",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Week",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Children",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Architecture",
+        "keywords": "",
+        "description": "Blimptonian architecture is a unique feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Vehicles",
+        "keywords": "",
+        "description": "Blimptonian vehicles are a distinctive feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Water",
+        "keywords": "",
+        "description": "Blimptonian water has unique properties due to added minerals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Government",
+        "keywords": "",
+        "description": "The Blimptonian government is a defining aspect of Blimpton's political system.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Week",
+        "keywords": "",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Children",
+        "keywords": "",
+        "description": "Blimptonian children have unique biological traits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:53:47.615145",
+  "llm_calls": 1,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 1.25527,
+    "retrieval_seconds": 0.80161,
+    "index_seconds": 0.15965,
+    "algorithm_seconds": 0.00271,
+    "llm_seconds": 0.29129
+  }
+}

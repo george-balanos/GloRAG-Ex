@@ -1,0 +1,138 @@
+{
+  "question": "What are the two primary elements used in Prismarian 'Light-Forging'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Light-Forging"
+    ]
+  ],
+  "cost": 9,
+  "answers": {
+    "ground_truth": "Prismarian 'Light-Forging' uses 'Rainbow-Essence' and 'Photon-Hammers'.",
+    "original": "The two primary elements used in Prismarian 'Light-Forging' are Rainbow-Essence and Photon-Hammers.",
+    "perturbed": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+    "similarity": 0.758692
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Photon-Hammers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Light-Forging requires Rainbow-Essence as a primary material.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Prismarian",
+        "keywords": "",
+        "description": "Prismarians practice Light-Forging as a cultural technique.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Photon-Hammers",
+        "keywords": "",
+        "description": "Photon-Hammers are used in the Light-Forging process to manipulate light.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Light-Smiths",
+        "keywords": "",
+        "description": "Light-Smiths are legendary craftsmen who specialize in Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:47:46.552371",
+  "llm_calls": 57,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 23.46296,
+    "retrieval_seconds": 0.99147,
+    "index_seconds": 0.15783,
+    "algorithm_seconds": 0.05396,
+    "llm_seconds": 22.25969
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "question": "What are the two primary components of Terran 'Stone-Speaker' staffs?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Terran 'Stone-Speaker' Staffs"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Terran 'Stone-Speaker' staffs use 'Ancient-Heartwood' and 'Resonance-Stones'.",
+    "original": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.108551
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Terran 'Stone-Speaker' Staffs",
+        "type": "artifact",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone, amplifying earth-based magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient-Heartwood",
+        "type": "naturalobject",
+        "description": "Ancient-Heartwood is the heartwood of thousand-year-old mountain trees, retaining the wisdom of centuries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stone",
+        "type": "artifact",
+        "description": "Resonance-Stones are stones that amplify earth-based magic and are found in the deepest caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Forces",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient-Heartwood",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonance-Stone",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are crowned with a Resonance-Stone to amplify earth-based magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Forces",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs can command geological forces, causing earthquakes and avalanches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:48:17.867593",
+  "llm_calls": 11,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 5.56834,
+    "retrieval_seconds": 1.18944,
+    "index_seconds": 0.15781,
+    "algorithm_seconds": 0.01131,
+    "llm_seconds": 4.20978
+  }
+}

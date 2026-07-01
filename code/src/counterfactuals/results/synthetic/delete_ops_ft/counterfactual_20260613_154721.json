@@ -1,0 +1,111 @@
+{
+  "question": "What are the two key components of Atlantean 'Tide-Weapons'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Atlantean Tide-Weapons"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "Atlantean 'Tide-Weapons' contain 'Whirlpool-Ore' and 'Current-Crystals'.",
+    "original": "The two key components of Atlantean Tide-Weapons are Whirlpool-Ore and Current-Crystals.",
+    "perturbed": "I don't have enough information to answer that question.",
+    "similarity": 0.059328
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Atlantean Tide-Weapons",
+        "type": "artifact",
+        "description": "Atlantean Tide-Weapons are weapons forged with Whirlpool-Ore and enhanced with Current-Crystals, capable of controlling water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atlantean Territories",
+        "type": "UNKNOWN",
+        "description": "The Ocean-Guard protects Atlantean territories.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlpool-Ore",
+        "type": "naturalobject",
+        "description": "Whirlpool-Ore is a mineral mined from oceanic maelstroms, exhibiting natural rotational properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Current-Crystals",
+        "type": "artifact",
+        "description": "Current-Crystals are crystals that enhance Whirlpool-Ore by channeling the power of ocean streams and glowing with aquamarine light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ocean-Guard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Atlantean Tide-Weapons",
+        "tgt": "Whirlpool-Ore",
+        "keywords": "",
+        "description": "Atlantean Tide-Weapons are forged with Whirlpool-Ore.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atlantean Tide-Weapons",
+        "tgt": "Current-Crystals",
+        "keywords": "",
+        "description": "Atlantean Tide-Weapons are enhanced with Current-Crystals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atlantean Territories",
+        "tgt": "Ocean-Guard",
+        "keywords": "",
+        "description": "The Ocean-Guard protects Atlantean territories.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Atlantean Territories",
+        "type": "UNKNOWN",
+        "description": "The Ocean-Guard protects Atlantean territories.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ocean-Guard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Atlantean Territories",
+        "tgt": "Ocean-Guard",
+        "keywords": "",
+        "description": "The Ocean-Guard protects Atlantean territories.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:47:21.123221",
+  "llm_calls": 4,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 2.65385,
+    "retrieval_seconds": 1.09453,
+    "index_seconds": 0.15856,
+    "algorithm_seconds": 0.00281,
+    "llm_seconds": 1.39795
+  }
+}

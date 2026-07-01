@@ -1,0 +1,140 @@
+{
+  "question": "Which element powers the engines of Vexian starships?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Vexian Propulsion Systems"
+    ],
+    [
+      "delete_node",
+      "Vexian Starships"
+    ]
+  ],
+  "cost": 15,
+  "answers": {
+    "ground_truth": "Vexium (element 147)",
+    "original": "Vexium (element 147) powers the engines of Vexian starships.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.055043
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Propulsion Systems",
+        "type": "artifact",
+        "description": "Vexian propulsion systems utilize stabilized Vexium plasma to achieve high-speed travel.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexium",
+        "type": "naturalobject",
+        "description": "Vexium (element 147) is a stabilized plasma used exclusively in Vexian propulsion systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Navigation Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheres",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Vexian Starship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vexian Starships",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexian starships use stabilized Vexium plasma to power their engines.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Propulsion Systems",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexium is stabilized into plasma form for use in Vexian propulsion systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Crew",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships are operated by crews consisting of 12 members.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Navigation Systems",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships use quantum entanglement for positioning in their navigation systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheres",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Vexian Starship",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "The first Vexian starship was built 500 years ago, marking the beginning of Vexian starship technology.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:54:30.036447",
+  "llm_calls": 127,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 42.42011,
+    "retrieval_seconds": 1.0065,
+    "index_seconds": 0.15042,
+    "algorithm_seconds": 0.13546,
+    "llm_seconds": 41.12773
+  }
+}

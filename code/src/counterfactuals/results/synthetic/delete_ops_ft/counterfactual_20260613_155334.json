@@ -1,0 +1,170 @@
+{
+  "question": "What key ingredient gives 'Phlorian Salt' its color-changing properties?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Emberfly"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The key ingredient that gives Phlorian Salt its color-changing properties is pulverized 'Emberfly' crystals.",
+    "original": "The key ingredient that gives Phlorian Salt its color-changing properties is pulverized Emberfly crystals.",
+    "perturbed": "The color-changing properties of Phlorian Salt come from its unique composition, which is derived from the saline marshes of Elador IV.",
+    "similarity": 0.692188
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Phlorian Salt",
+        "type": "artifact",
+        "description": "Phlorian Salt is a color-changing substance harvested from saline marshes on the planet Elador IV, known for its briny and sweet flavor profile.",
+        "rank": 0.0
+      },
+      {
+        "name": "Emberfly",
+        "type": "creature",
+        "description": "The Emberfly is a native Eladorian insectoid that lives near volcanic vents and produces thermochromic crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "High-Grade Phlorian Salt",
+        "type": "artifact",
+        "description": "High-grade Phlorian Salt is one of the most expensive spices in the galaxy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chef Zorgon",
+        "type": "person",
+        "description": "Chef Zorgon is a famous user of Phlorian Salt, known for their work at the Celestial Cafe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elador IV",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Eladorian Locals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Emberfly",
+        "tgt": "Phlorian Salt",
+        "keywords": "",
+        "description": "Phlorian Salt contains pulverized Emberfly crystals, which give it its thermochromic properties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chef Zorgon",
+        "tgt": "Phlorian Salt",
+        "keywords": "",
+        "description": "Chef Zorgon is known for using Phlorian Salt in their culinary creations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elador IV",
+        "tgt": "Phlorian Salt",
+        "keywords": "",
+        "description": "Phlorian Salt is harvested from the saline marshes of Elador IV.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elador IV",
+        "tgt": "High-Grade Phlorian Salt",
+        "keywords": "",
+        "description": "Exporting raw Emberfly crystals from Elador IV is illegal, highlighting the value of high-grade Phlorian Salt.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eladorian Locals",
+        "tgt": "High-Grade Phlorian Salt",
+        "keywords": "",
+        "description": "Eladorian locals have been harvesting high-grade Phlorian Salt for centuries.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Phlorian Salt",
+        "type": "artifact",
+        "description": "Phlorian Salt is a color-changing substance harvested from saline marshes on the planet Elador IV, known for its briny and sweet flavor profile.",
+        "rank": 0.0
+      },
+      {
+        "name": "High-Grade Phlorian Salt",
+        "type": "artifact",
+        "description": "High-grade Phlorian Salt is one of the most expensive spices in the galaxy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chef Zorgon",
+        "type": "person",
+        "description": "Chef Zorgon is a famous user of Phlorian Salt, known for their work at the Celestial Cafe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elador IV",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Eladorian Locals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chef Zorgon",
+        "tgt": "Phlorian Salt",
+        "keywords": "",
+        "description": "Chef Zorgon is known for using Phlorian Salt in their culinary creations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elador IV",
+        "tgt": "Phlorian Salt",
+        "keywords": "",
+        "description": "Phlorian Salt is harvested from the saline marshes of Elador IV.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elador IV",
+        "tgt": "High-Grade Phlorian Salt",
+        "keywords": "",
+        "description": "Exporting raw Emberfly crystals from Elador IV is illegal, highlighting the value of high-grade Phlorian Salt.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eladorian Locals",
+        "tgt": "High-Grade Phlorian Salt",
+        "keywords": "",
+        "description": "Eladorian locals have been harvesting high-grade Phlorian Salt for centuries.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:53:34.323259",
+  "llm_calls": 5,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 2.99877,
+    "retrieval_seconds": 0.92822,
+    "index_seconds": 0.16311,
+    "algorithm_seconds": 0.00579,
+    "llm_seconds": 1.90166
+  }
+}

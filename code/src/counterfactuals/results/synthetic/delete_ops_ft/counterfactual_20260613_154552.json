@@ -1,0 +1,97 @@
+{
+  "question": "What are the two primary components of Neridian 'Depth-Armor'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Neridian Depth-Armor"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Neridian 'Depth-Armor' is made from 'Pressure-Scales' and 'Abyssal-Resin'.",
+    "original": "The two primary components of Neridian Depth-Armor are Pressure-Scales and Abyssal-Resin.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.034312
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Neridian Depth-Armor",
+        "type": "artifact",
+        "description": "Neridian Depth-Armor is a protective suit constructed with Pressure-Scales and Abyssal-Resin, allowing exploration of deep ocean trenches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Hunters of Neridia",
+        "type": "person",
+        "description": "The Deep-Sea Hunters of Neridia are legendary warriors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pressure-Scales",
+        "type": "artifact",
+        "description": "Pressure-Scales are harvested from deep-sea creatures and provide natural adaptation to changing water pressure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Trench of Neridia",
+        "type": "location",
+        "description": "The Great Trench of Neridia descends to unknown depths.",
+        "rank": 0.0
+      },
+      {
+        "name": "Abyssal-Resin",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Neridian Depth-Armor",
+        "tgt": "Pressure-Scales",
+        "keywords": "",
+        "description": "Neridian Depth-Armor is constructed with a base layer of Pressure-Scales.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Trench of Neridia",
+        "tgt": "Neridian Depth-Armor",
+        "keywords": "",
+        "description": "Neridian Depth-Armor allows exploration of the Great Trench of Neridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Abyssal-Resin",
+        "tgt": "Neridian Depth-Armor",
+        "keywords": "",
+        "description": "Neridian Depth-Armor is coated with Abyssal-Resin for waterproofing and resistance.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Deep-Sea Hunters of Neridia",
+        "type": "person",
+        "description": "The Deep-Sea Hunters of Neridia are legendary warriors.",
+        "rank": 0.0
+      }
+    ],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:45:52.576161",
+  "llm_calls": 14,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 5.92366,
+    "retrieval_seconds": 0.93797,
+    "index_seconds": 0.14397,
+    "algorithm_seconds": 0.00854,
+    "llm_seconds": 4.83318
+  }
+}

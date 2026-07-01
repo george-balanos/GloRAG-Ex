@@ -1,0 +1,117 @@
+{
+  "question": "What two powers do Cosmic 'Star-Weavers' channel through their craft?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Galaxy-Patterns",
+        "Star Systems"
+      ]
+    ],
+    [
+      "delete_node",
+      "Cosmic 'Star-Weavers'"
+    ]
+  ],
+  "cost": 11,
+  "answers": {
+    "ground_truth": "Cosmic 'Star-Weavers' spin 'Nebula-Yarn' and weave 'Galaxy-Patterns'.",
+    "original": "Cosmic 'Star-Weavers' channel the power to spin 'Nebula-Yarn' and weave 'Galaxy-Patterns' that influence space-time.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.112747
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Cosmic 'Star-Weavers'",
+        "type": "creature",
+        "description": "Cosmic 'Star-Weavers' are beings capable of spinning 'Nebula-Yarn' and weaving 'Galaxy-Patterns' that influence space-time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Galaxy-Patterns",
+        "type": "artifact",
+        "description": "Galaxy-Patterns are woven by Cosmic 'Star-Weavers' and have the power to bend space-time and affect entire star systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebula-Yarn",
+        "type": "artifact",
+        "description": "Nebula-Yarn is a material spun by Cosmic 'Star-Weavers' from stellar nurseries, glowing with the light of newborn stars.",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Weaver Training",
+        "type": "event",
+        "description": "Star-Weaver training is a lengthy process that lasts for geological ages.",
+        "rank": 0.0
+      },
+      {
+        "name": "Universe-Loom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Nebula-Yarn",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' spin 'Nebula-Yarn' from stellar nurseries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Galaxy-Patterns",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' weave 'Galaxy-Patterns' that can bend space-time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Star-Weaver Training",
+        "keywords": "",
+        "description": "Star-Weaver training lasts for geological ages.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Universe-Loom",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' use the Universe-Loom to shape the fabric of space.",
+        "weight": 0.0
+      },
+      {
+        "src": "Galaxy-Patterns",
+        "tgt": "Star Systems",
+        "keywords": "",
+        "description": "Galaxy-Patterns can create or destroy entire star systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:51:39.265048",
+  "llm_calls": 31,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 14.71407,
+    "retrieval_seconds": 1.24357,
+    "index_seconds": 0.14419,
+    "algorithm_seconds": 0.02483,
+    "llm_seconds": 13.30149
+  }
+}

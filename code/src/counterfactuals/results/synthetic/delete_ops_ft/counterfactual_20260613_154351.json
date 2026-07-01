@@ -1,0 +1,84 @@
+{
+  "question": "What are the two primary components used in the creation of 'Lumin-Ink' by Xylotian scribes?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Lumin-Ink"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "The two primary components used in 'Lumin-Ink' are crushed 'Glow-Geodes' and sap from the 'Aether-Blossom' plant.",
+    "original": "The two primary components used in the creation of 'Lumin-Ink' by Xylotian scribes are Glow-Geodes and Aether-Blossom sap.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.037225
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Texts",
+        "type": "content",
+        "description": "Xylotian texts are sacred writings inscribed with Lumin-Ink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumin-Ink",
+        "type": "artifact",
+        "description": "Lumin-Ink is a glowing ink used for inscribing sacred texts, made from Glow-Geodes and Aether-Blossom sap.",
+        "rank": 0.0
+      },
+      {
+        "name": "Scribes",
+        "type": "person",
+        "description": "Scribes are the individuals who pass down the art of Lumin-Ink making through generations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian",
+        "type": "location",
+        "description": "Xylotian is a place known for its unique Lumin-Ink and cuisine.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Xylotian Texts",
+        "keywords": "",
+        "description": "Texts written in Lumin-Ink can be read even in complete darkness.<SEP>Lumin-Ink is used for inscribing sacred Xylotian texts.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Scribes",
+        "keywords": "",
+        "description": "The art of Lumin-Ink making is passed down through generations of scribes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Xylotian",
+        "keywords": "",
+        "description": "Lumin-Ink is traditionally used for inscribing sacred Xylotian texts.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:43:51.795269",
+  "llm_calls": 7,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 4.56111,
+    "retrieval_seconds": 1.24986,
+    "index_seconds": 0.15645,
+    "algorithm_seconds": 0.00386,
+    "llm_seconds": 3.15095
+  }
+}

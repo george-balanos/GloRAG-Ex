@@ -1,0 +1,157 @@
+{
+  "question": "What are the two key functions of 'Symbiotic Spores' in Xylotian terraforming pods?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Symbiotic Spores"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "'Symbiotic Spores' in Xylotian terraforming pods first break down hostile soil into a nutrient-rich substrate and then release Xylotian flora seeds for atmospheric oxygenation.",
+    "original": "Symbiotic Spores break down hostile soil and release Xylotian flora seeds to begin atmospheric oxygenation.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.0764
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Symbiotic Spores",
+        "type": "creature",
+        "description": "Symbiotic Spores are genetically engineered organisms tasked with breaking down hostile soil and releasing Xylotian flora seeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Terraforming Pods",
+        "type": "artifact",
+        "description": "Xylotian terraforming pods are devices used to transform hostile exoplanet environments into habitable ones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Years",
+        "type": "concept",
+        "description": "Xylotian years are the time units used to measure the duration of the terraforming process.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Flora Seeds",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The success rate of Xylotian terraforming efforts has been steadily increasing due to the use of Symbiotic Spores.<SEP>Each terraforming pod contains enough Symbiotic Spores to initiate a small, localized ecosystem.<SEP>Xylotian terraforming pods utilize Symbiotic Spores to break down hostile soil.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Years",
+        "keywords": "",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Flora Seeds",
+        "keywords": "",
+        "description": "Symbiotic Spores release Xylotian flora seeds to begin atmospheric oxygenation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "Xylotian terraforming pods are launched from Xylos towards potentially habitable exoplanets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Symbiotic Spores",
+        "keywords": "",
+        "description": "Deep-Space Telescopes help identify terraforming candidates for Symbiotic Spores to transform.",
+        "weight": 0.0
+      },
+      {
+        "src": "Impact-Resistant Ceramite",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Terraforming Pods",
+        "type": "artifact",
+        "description": "Xylotian terraforming pods are devices used to transform hostile exoplanet environments into habitable ones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "Xylotian terraforming pods are launched from Xylos towards potentially habitable exoplanets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Impact-Resistant Ceramite",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:42:43.072482",
+  "llm_calls": 48,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 16.99335,
+    "retrieval_seconds": 1.18365,
+    "index_seconds": 0.15637,
+    "algorithm_seconds": 0.04995,
+    "llm_seconds": 15.60338
+  }
+}

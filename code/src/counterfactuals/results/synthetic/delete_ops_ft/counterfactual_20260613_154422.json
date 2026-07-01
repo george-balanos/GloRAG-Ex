@@ -1,0 +1,110 @@
+{
+  "question": "What two types of information are encoded onto a Xylotian 'Legacy Crystal'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Legacy Crystal"
+    ]
+  ],
+  "cost": 11,
+  "answers": {
+    "ground_truth": "A Xylotian 'Legacy Crystal' encodes a 'Lineage Record' and a 'Core Essence Imprint'.",
+    "original": "A Xylotian 'Legacy Crystal' stores a Lineage Record and a Core Essence Imprint.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.158423
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Legacy Crystal",
+        "type": "artifact",
+        "description": "A Xylotian Legacy Crystal is a traditional artifact that stores a Lineage Record and a Core Essence Imprint, passed down as family heirlooms on Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Readers",
+        "type": "person",
+        "description": "Crystal Readers are Xylotians who are consulted to interpret older Legacy Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "location",
+        "description": "Xylos is a planet characterized by its unique environmental and cultural attributes. The planet's upper atmosphere is notable for the cultivation of Aero-Coral, a distinctive feature of its ecosystem. Xylos is also home to the Temporal College, an institution where Chrono-Weavers undergo training, indicating a significant focus on temporal or time-related sciences.\n\nThe planet serves as the homeworld of the Xylotians, a species known for launching terraforming pods from its surface. The Xylotians utilize advanced technologies such as Matter Re-sequencers for various applications, showcasing their technological prowess. Additionally, the planet's regions play a role in the design of Aura-Cloaks, suggesting a connection between its geography and cultural artifacts.\n\nXylos's crust is rich in Dual-Resonance Crystals, and the planet hosts sentient life forms that emit psychic energy, adding to its mystical and scientific intrigue. The Xylotians also pass down Legacy Crystals as family heirlooms, highlighting the cultural significance of these objects. Furthermore, Xylos is part of a binary star system and experiences unusual atmospheric storms, contributing to its dynamic and diverse environment.<SEP>Xylos is a planet with an orbital platform called the Aegis Station positioned above it.<SEP>Xylos is a planet with unusual atmospheric storms and intense volcanic activity.<SEP>Xylos is a planet with an orbital platform called Aegis Station positioned above it.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lineage Record",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Core Essence Imprint",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall of Ancestors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Legacy Crystal",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Legacy Crystals are passed down as family heirlooms on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Legacy Crystal",
+        "tgt": "Lineage Record",
+        "keywords": "",
+        "description": "A Legacy Crystal stores a Lineage Record chronicling the direct ancestors of its creator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Readers",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Core Essence Imprint",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "A Legacy Crystal stores a Core Essence Imprint, a psychic snapshot of the creator's personality and defining memories.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall of Ancestors",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "The Hall of Ancestors displays many prominent Legacy Crystals.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:44:22.375458",
+  "llm_calls": 31,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 11.21993,
+    "retrieval_seconds": 1.11338,
+    "index_seconds": 0.16281,
+    "algorithm_seconds": 0.02561,
+    "llm_seconds": 9.91814
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "question": "What colors did Alex use to paint his toy car?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Alex",
+        "Toy Car"
+      ]
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "Alex painted his toy car bright red and used yellow for the stripes.",
+    "original": "Alex painted his toy car bright red with yellow stripes.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.102487
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Alex",
+        "type": "person",
+        "description": "Alex is a person who painted a toy car.",
+        "rank": 0.0
+      },
+      {
+        "name": "Toy Car",
+        "type": "artifact",
+        "description": "The toy car is painted bright red with yellow stripes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alex",
+        "tgt": "Toy Car",
+        "keywords": "",
+        "description": "Alex painted the toy car bright red with yellow stripes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:44:26.821308",
+  "llm_calls": 1,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 1.12617,
+    "retrieval_seconds": 0.68961,
+    "index_seconds": 0.15597,
+    "algorithm_seconds": 0.00126,
+    "llm_seconds": 0.27933
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "question": "What is the traditional weapon of the defenders of the Citadel?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Ceremonial Blade"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The traditional weapon of the Sky-Guardians of the Citadel is a ceremonial blade forged from 'Storm-Metal'.",
+    "original": "The traditional weapon of the Sky-Guardians, who defend the Citadel, is the Ceremonial Blade.",
+    "perturbed": "The traditional weapon of the defenders of the Citadel is their aerial combat skills.",
+    "similarity": 0.68656
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Citadel",
+        "type": "location",
+        "description": "The Citadel is an ancient fortress built on a high mountain peak, defended by the Sky-Guardians.<SEP>The Citadel is an ancient fortress protected by the Sky-Guardians.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerial Combat Skills",
+        "type": "concept",
+        "description": "Aerial Combat Skills are the specialized abilities of the Sky-Guardians in fighting airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Guardians",
+        "type": "organization",
+        "description": "The Sky-Guardians are elite protectors of the ancient Citadel, known for their aerial combat skills and defense against airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ceremonial Blade",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Training Process",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "High Mountain Peak",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Citadel",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are the elite protectors of the Citadel, defending it from airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "High Mountain Peak",
+        "keywords": "",
+        "description": "The Citadel is built on a high mountain peak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerial Combat Skills",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are known for their aerial combat skills in defending the Citadel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sky-Guardians",
+        "tgt": "Training Process",
+        "keywords": "",
+        "description": "The Sky-Guardians undergo a rigorous training process to prepare for their duties.<SEP>The Sky-Guardians undergo a rigorous training process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ceremonial Blade",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians wield the Ceremonial Blade as their traditional weapon.<SEP>The Sky-Guardians wield Ceremonial Blades forged from Storm-Metal, which resonates with atmospheric energy.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Citadel",
+        "type": "location",
+        "description": "The Citadel is an ancient fortress built on a high mountain peak, defended by the Sky-Guardians.<SEP>The Citadel is an ancient fortress protected by the Sky-Guardians.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerial Combat Skills",
+        "type": "concept",
+        "description": "Aerial Combat Skills are the specialized abilities of the Sky-Guardians in fighting airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Guardians",
+        "type": "organization",
+        "description": "The Sky-Guardians are elite protectors of the ancient Citadel, known for their aerial combat skills and defense against airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Training Process",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "High Mountain Peak",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Citadel",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are the elite protectors of the Citadel, defending it from airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "High Mountain Peak",
+        "keywords": "",
+        "description": "The Citadel is built on a high mountain peak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerial Combat Skills",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are known for their aerial combat skills in defending the Citadel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sky-Guardians",
+        "tgt": "Training Process",
+        "keywords": "",
+        "description": "The Sky-Guardians undergo a rigorous training process to prepare for their duties.<SEP>The Sky-Guardians undergo a rigorous training process.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T16:00:59.712583",
+  "llm_calls": 3,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 2.43254,
+    "retrieval_seconds": 1.18247,
+    "index_seconds": 0.161,
+    "algorithm_seconds": 0.00466,
+    "llm_seconds": 1.08441
+  }
+}

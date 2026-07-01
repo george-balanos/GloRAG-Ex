@@ -1,0 +1,110 @@
+{
+  "question": "What two abilities are granted by Shadowmere 'Void-Cloaks'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Void-Cloaks"
+    ]
+  ],
+  "cost": 11,
+  "answers": {
+    "ground_truth": "Shadowmere 'Void-Cloaks' grant 'Phase-Shift' and 'Shadow-Meld' abilities.",
+    "original": "Void-Cloaks grant the abilities of phase-shifting and shadow-melding.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.089767
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Void-Cloaks",
+        "type": "artifact",
+        "description": "Void-Cloaks are garments that allow the wearer to partially phase out of physical reality and meld with shadows.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadowmere",
+        "type": "location",
+        "description": "Shadowmere is a realm characterized by perpetual twilight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elite Shadowmere Agents",
+        "type": "person",
+        "description": "Elite Shadowmere Agents are individuals who wear Void-Cloaks and are involved in Shadowmere politics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Umbral-Weavers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Shifting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadow-Meld",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Shadowmere",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks are crafted in Shadowmere and allow wearers to phase-shift and shadow-meld.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elite Shadowmere Agents",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Elite Shadowmere Agents wear Void-Cloaks to perform their duties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Umbral-Weavers",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "The Umbral-Weavers craft the finest Void-Cloaks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phase-Shifting",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks enable the wearer to phase-shift, creating a translucent appearance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow-Meld",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks allow the wearer to shadow-meld, becoming one with darkness.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:47:58.284304",
+  "llm_calls": 31,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 11.73078,
+    "retrieval_seconds": 0.89889,
+    "index_seconds": 0.1632,
+    "algorithm_seconds": 0.02335,
+    "llm_seconds": 10.64534
+  }
+}

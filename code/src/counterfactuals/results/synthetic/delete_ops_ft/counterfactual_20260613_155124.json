@@ -1,0 +1,150 @@
+{
+  "question": "What are the two fundamental materials used in Ethereal 'Ghost-Nets'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Ethereal Ghost-Nets"
+    ]
+  ],
+  "cost": 11,
+  "answers": {
+    "ground_truth": "Ethereal 'Ghost-Nets' use 'Spirit-Thread' and 'Phantom-Wire'.",
+    "original": "Ethereal Ghost-Nets are woven from **Spirit-Thread** and reinforced with **Phantom-Wire**.",
+    "perturbed": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+    "similarity": 0.561007
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ethereal Ghost-Nets",
+        "type": "artifact",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread and reinforced with Phantom-Wire, designed to capture supernatural beings.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Crafters",
+        "type": "UNKNOWN",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Wire",
+        "type": "artifact",
+        "description": "Phantom-Wire is used to reinforce Spirit-Thread and vibrates at supernatural frequencies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Thread",
+        "type": "artifact",
+        "description": "Spirit-Thread is spun from ectoplasmic residue and is nearly invisible to normal sight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Hunters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Incorporeal Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic Sensitivity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Midnight Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Ethereal Hunters",
+        "keywords": "",
+        "description": "Ethereal hunters specialize in capturing supernatural beings using Ethereal Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Phantom-Wire",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are reinforced with Phantom-Wire, allowing them to interact with both physical and spiritual entities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Spirit-Thread",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Incorporeal Creatures",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are designed to capture and hold incorporeal creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Psychic Sensitivity",
+        "keywords": "",
+        "description": "Ghost-Net weaving requires psychic sensitivity, which ethereal hunters possess.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Midnight Hours",
+        "keywords": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ethereal Crafters",
+        "type": "UNKNOWN",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Midnight Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Midnight Hours",
+        "keywords": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:51:24.549786",
+  "llm_calls": 57,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 19.04735,
+    "retrieval_seconds": 0.98212,
+    "index_seconds": 0.1623,
+    "algorithm_seconds": 0.05848,
+    "llm_seconds": 17.84445
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "question": "What are the key ingredients needed for a cake recipe?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Flour",
+        "Sugar"
+      ]
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "The key ingredients for a cake are flour, sugar, eggs, and butter.",
+    "original": "The key ingredients needed for a cake recipe are flour, sugar, butter, and eggs.",
+    "perturbed": "The key ingredients needed for a cake recipe are **eggs** and **butter**.",
+    "similarity": 0.912008
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Flour",
+        "type": "artifact",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sugar",
+        "type": "artifact",
+        "description": "Sugar is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Butter",
+        "type": "artifact",
+        "description": "Butter is an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eggs",
+        "type": "naturalobject",
+        "description": "Eggs are an ingredient used in a cake recipe.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Flour",
+        "tgt": "Sugar",
+        "keywords": "",
+        "description": "Flour and sugar are ingredients used together in baking a cake.",
+        "weight": 0.0
+      },
+      {
+        "src": "Butter",
+        "tgt": "Eggs",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Butter",
+        "type": "artifact",
+        "description": "Butter is an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eggs",
+        "type": "naturalobject",
+        "description": "Eggs are an ingredient used in a cake recipe.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Butter",
+        "tgt": "Eggs",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:44:30.294963",
+  "llm_calls": 1,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 1.53018,
+    "retrieval_seconds": 0.97632,
+    "index_seconds": 0.16458,
+    "algorithm_seconds": 0.00101,
+    "llm_seconds": 0.38827
+  }
+}

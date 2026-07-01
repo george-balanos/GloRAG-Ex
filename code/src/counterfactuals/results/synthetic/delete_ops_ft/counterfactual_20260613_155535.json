@@ -1,0 +1,71 @@
+{
+  "question": "On which day do the Xandrians celebrate their New Year?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Dual Zenith Day"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "Dual Zenith Day",
+    "original": "The Xandrians celebrate their New Year on Dual Zenith Day.",
+    "perturbed": "I don't have enough information to answer that.",
+    "similarity": -0.070474
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xandrians",
+        "type": "person",
+        "description": "Xandrians are the inhabitants of the planet Xandria who celebrate their New Year on Dual Zenith Day.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dual Zenith Day",
+        "type": "event",
+        "description": "Dual Zenith Day is the Xandrian New Year celebration when the twin suns of Xandria's system align.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xandrian New Year",
+        "type": "event",
+        "description": "The Xandrian New Year is celebrated on Dual Zenith Day according to their ancient calendar.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dual Zenith Day",
+        "tgt": "Xandrians",
+        "keywords": "",
+        "description": "Xandrians celebrate their New Year on Dual Zenith Day.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dual Zenith Day",
+        "tgt": "Xandrian New Year",
+        "keywords": "",
+        "description": "Dual Zenith Day marks the Xandrian New Year according to their ancient calendar.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:55:35.215046",
+  "llm_calls": 3,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 1.8514,
+    "retrieval_seconds": 0.94162,
+    "index_seconds": 0.15544,
+    "algorithm_seconds": 0.00157,
+    "llm_seconds": 0.75277
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "question": "What is the primary defense of the creatures populating the Subterranean Caves?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Stone-Shells",
+        "Subterranean Caves"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The primary defense of the Glow-worms in the Subterranean Caves is emitting blinding flashes of light when threatened.",
+    "original": "The primary defense of the creatures populating the Subterranean Caves includes emitting blinding flashes of light and retracting into an impenetrable mineralized shell.",
+    "perturbed": "The primary defense of the creatures populating the Subterranean Caves is the blinding flashes of light emitted by Glow-worms when threatened.",
+    "similarity": 0.95066
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Mineral Deposits",
+        "type": "naturalobject",
+        "description": "Mineral deposits are found within the Subterranean Caves and serve as a food source for Glow-worms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stone-Shells",
+        "type": "creature",
+        "description": "Stone-Shells are creatures that retract into an impenetrable mineralized shell when threatened.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Fauna",
+        "type": "creature",
+        "description": "Unique fauna are animal species found within the Subterranean Caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Subterranean Caves",
+        "type": "location",
+        "description": "The Subterranean Caves are a network of deep tunnels filled with unique flora, fauna, and mineral formations.<SEP>The Subterranean Caves are a network of deep tunnels filled with unique flora and fauna, known for hosting various creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Worms",
+        "type": "creature",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Stone-Shells",
+        "tgt": "Subterranean Caves",
+        "keywords": "",
+        "description": "The Subterranean Caves are home to Stone-Shells, which use their mineralized shells as a defense mechanism.",
+        "weight": 0.0
+      },
+      {
+        "src": "Subterranean Caves",
+        "tgt": "Unique Fauna",
+        "keywords": "",
+        "description": "The Subterranean Caves are home to unique fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Mineral Deposits",
+        "keywords": "",
+        "description": "Glow-worms feed on mineral deposits found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Subterranean Caves",
+        "keywords": "",
+        "description": "The Subterranean Caves are the habitat for Glow-worms, which possess unique defensive mechanisms.<SEP>The Subterranean Caves are home to Glow-Worms, which use their blinding flashes as a defense mechanism.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Mineral Deposits",
+        "type": "naturalobject",
+        "description": "Mineral deposits are found within the Subterranean Caves and serve as a food source for Glow-worms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Fauna",
+        "type": "creature",
+        "description": "Unique fauna are animal species found within the Subterranean Caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Subterranean Caves",
+        "type": "location",
+        "description": "The Subterranean Caves are a network of deep tunnels filled with unique flora, fauna, and mineral formations.<SEP>The Subterranean Caves are a network of deep tunnels filled with unique flora and fauna, known for hosting various creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Worms",
+        "type": "creature",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Subterranean Caves",
+        "tgt": "Unique Fauna",
+        "keywords": "",
+        "description": "The Subterranean Caves are home to unique fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Mineral Deposits",
+        "keywords": "",
+        "description": "Glow-worms feed on mineral deposits found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Subterranean Caves",
+        "keywords": "",
+        "description": "The Subterranean Caves are the habitat for Glow-worms, which possess unique defensive mechanisms.<SEP>The Subterranean Caves are home to Glow-Worms, which use their blinding flashes as a defense mechanism.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T16:08:23.380893",
+  "llm_calls": 2,
+  "mode": "ff",
+  "timings": {
+    "setup_seconds": 0.02598,
+    "total_seconds": 2.4217,
+    "retrieval_seconds": 1.31322,
+    "index_seconds": 0.15641,
+    "algorithm_seconds": 0.00427,
+    "llm_seconds": 0.9478
+  }
+}

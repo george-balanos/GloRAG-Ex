@@ -1,0 +1,125 @@
+{
+  "question": "What two functions does the Crystalline 'Echo-Lens' serve for Luminian scouts?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Crystalline Echo-Lens"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "The Crystalline 'Echo-Lens' perceives 'Light-Trails' and projects 'Illumination-Pulses'.",
+    "original": "The Crystalline Echo-Lens serves two functions for Luminian scouts: it allows them to perceive Light-Trails and project Illumination-Pulses.",
+    "perturbed": "The Crystalline 'Echo-Lens' allows Luminian scouts to perceive Light-Trails and is essential for border patrol.",
+    "similarity": 0.887836
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Luminian Scouts",
+        "type": "person",
+        "description": "Luminian scouts use the Echo-Lens to perceive Light-Trails and are essential for border patrol.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Echo-Lens",
+        "type": "artifact",
+        "description": "The Crystalline Echo-Lens is a device used by Luminian scouts to perceive Light-Trails and project Illumination-Pulses.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Trails",
+        "type": "concept",
+        "description": "Light-Trails are shimmering pathways left by moving objects that can be perceived by Luminian scouts using the Echo-Lens.",
+        "rank": 0.0
+      },
+      {
+        "name": "Illumination-Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Master Artisans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Crystalline Echo-Lens",
+        "tgt": "Luminian Scouts",
+        "keywords": "",
+        "description": "Luminian scouts use the Crystalline Echo-Lens to perceive Light-Trails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Echo-Lens",
+        "tgt": "Light-Trails",
+        "keywords": "",
+        "description": "The Crystalline Echo-Lens allows Luminian scouts to perceive Light-Trails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Echo-Lens",
+        "tgt": "Illumination-Pulses",
+        "keywords": "",
+        "description": "The Crystalline Echo-Lens can project Illumination-Pulses to blind or disorient enemies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Echo-Lens",
+        "tgt": "Master Artisans",
+        "keywords": "",
+        "description": "Master artisans craft Echo-Lenses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Trails",
+        "tgt": "Luminian Scouts",
+        "keywords": "",
+        "description": "Luminian scouts perceive Light-Trails for border patrol purposes.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Luminian Scouts",
+        "type": "person",
+        "description": "Luminian scouts use the Echo-Lens to perceive Light-Trails and are essential for border patrol.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Trails",
+        "type": "concept",
+        "description": "Light-Trails are shimmering pathways left by moving objects that can be perceived by Luminian scouts using the Echo-Lens.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Light-Trails",
+        "tgt": "Luminian Scouts",
+        "keywords": "",
+        "description": "Luminian scouts perceive Light-Trails for border patrol purposes.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-13T15:46:06.002773",
+  "llm_calls": 26,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 13.4256,
+    "retrieval_seconds": 1.24044,
+    "index_seconds": 0.15878,
+    "algorithm_seconds": 0.02317,
+    "llm_seconds": 12.00321
+  }
+}

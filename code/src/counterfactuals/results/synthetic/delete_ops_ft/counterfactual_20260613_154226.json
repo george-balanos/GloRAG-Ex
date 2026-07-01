@@ -1,0 +1,123 @@
+{
+  "question": "What two distinct abilities does a Xylotian 'Chrono-Weaver' possess?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Xylotian Chrono-Weaver"
+    ]
+  ],
+  "cost": 13,
+  "answers": {
+    "ground_truth": "A Xylotian 'Chrono-Weaver' can perceive echoes of recent past events and project faint, localized temporal distortions.",
+    "original": "Xylotian Chrono-Weavers can perceive echoes of past events and create temporal distortions.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.047417
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Flux",
+        "type": "concept",
+        "description": "Temporal Flux is the ambient energy source that powers a Chrono-Weaver's abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal College",
+        "type": "location",
+        "description": "The Temporal College is an institution on Xylos where Chrono-Weavers train and hone their skills.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sun-Berries",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Concept Of Time",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Concept Of Time",
+        "keywords": "",
+        "description": "Chrono-Weavers perceive time in a multi-linear fashion, aligning with the Xylotian concept of time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal College",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers train at the Temporal College to hone their skills.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sun-Berries",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Xylotian cuisine features Sun-Berries, which ripen instantly, reflecting the temporal abilities of Chrono-Weavers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "timestamp": "2026-06-13T15:42:26.077974",
+  "llm_calls": 63,
+  "mode": "ft",
+  "timings": {
+    "setup_seconds": 0.02485,
+    "total_seconds": 21.05925,
+    "retrieval_seconds": 1.13015,
+    "index_seconds": 0.15355,
+    "algorithm_seconds": 0.05516,
+    "llm_seconds": 19.72039
+  }
+}
