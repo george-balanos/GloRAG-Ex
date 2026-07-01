@@ -36,7 +36,14 @@ from __future__ import annotations
 import asyncio
 import json
 import os
+import sys
 import time
+
+_THIS_DIR = os.path.dirname(os.path.abspath(__file__))            # competitors/kg_smile
+_REPO_ROOT = os.path.dirname(os.path.dirname(_THIS_DIR))          # repo root
+_CODE_DIR = os.path.join(_REPO_ROOT, "code")
+if _CODE_DIR not in sys.path:
+    sys.path.insert(0, _CODE_DIR)
 
 from src.retrieve import initialize_lightrag
 from .kg_smile   import load_full_kg, run_kg_smile, KGSMILEConfig, result_to_dict

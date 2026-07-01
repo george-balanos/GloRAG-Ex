@@ -1,5 +1,14 @@
 from __future__ import annotations
 
+import os
+import sys
+
+_THIS_DIR = os.path.dirname(os.path.abspath(__file__))            # competitors/kg_smile
+_REPO_ROOT = os.path.dirname(os.path.dirname(_THIS_DIR))          # repo root
+_CODE_DIR = os.path.join(_REPO_ROOT, "code")
+if _CODE_DIR not in sys.path:
+    sys.path.insert(0, _CODE_DIR)
+
 import random
 import networkx as nx
 import numpy as np
