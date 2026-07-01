@@ -387,7 +387,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument("--rag-mode", choices=["hybrid", "local", "global", "naive"], default="hybrid")
     p.add_argument("--top-k", type=int, default=2)
     p.add_argument("--num-rows", type=int, default=None, help="Cap on QA rows (default: all).")
-    p.add_argument("--noise-percentages", default="0.1,0.3,0.5,0.8",
+    p.add_argument("--noise-percentages", default="0.1,0.2,0.3,0.5",
                    help="Comma-separated noise fractions in (0, 1). One Shapley run per fraction × row.")
     p.add_argument("--top-attr-ks", default="1,3,5",
                    help="Comma-separated k values for the 'noise in top-k attributions' check (e.g. 1,3,5).")

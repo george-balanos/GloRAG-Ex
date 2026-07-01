@@ -71,7 +71,7 @@ logging.getLogger("lightrag").setLevel(logging.WARNING)
 _LLMX_DIR = os.path.join(_REPO_ROOT, "competitors", "LLMX")
 if _LLMX_DIR not in sys.path:
     sys.path.insert(0, _LLMX_DIR)
-from SHapRAG.ragshap_experiments import ContextAttribution as CompetitorContextAttribution
+from SHapRAG.ragshap_experiments import ContextAttribution as CompetitorContextAttribution # type: ignore
 
 
 # ── Object helpers ──────────────────────────────────────────────────────────
@@ -217,9 +217,12 @@ class RagCounter:
         return wrapped
 
 
-def load_qa(path: str) -> pd.DataFrame:
+def load_qa(path: str, questions: set[str] | None = None) -> pd.DataFrame:
     df = pd.read_csv(path)
     df = df.drop_duplicates(subset=["questions"])
+    if questions is not None:
+        df = df[df["questions"].isin(questions)]
+        print(f"Filtered QA CSV to {len(df)} row(s) matching the sampled questions.")
     return df.reset_index(drop=True)
 
 
@@ -549,7 +552,7 @@ def _relations_from_dict(d: dict) -> list:
             for r in ((d or {}).get("relations") or [])]
 
 
-def load_cf_cases(input_dir: str) -> list:
+def load_cf_cases(input_dir: str, questions: set[str] | None = None) -> list:
     """[(filepath, payload)] for CFE JSONs with a non-empty original_subgraph."""
     files = sorted(glob.glob(os.path.join(input_dir, "**", "counterfactual_*.json"), recursive=True))
     cases = []
@@ -560,6 +563,10 @@ def load_cf_cases(input_dir: str) -> list:
         except Exception as e:
             print(f"  skip {fp}: {e}")
             continue
+        
+        if questions is not None and payload.get("question") not in questions:
+            continue
+
         og = payload.get("original_subgraph") or {}
         if (og.get("entities") or []) or (og.get("relations") or []):
             cases.append((fp, payload))
@@ -732,11 +739,17 @@ async def run_permutation_from_json(args, hf_model, hf_tok, cases):
 
 
 async def run_benchmark(args):
+    questions = None
+    if args.questions_file:
+        with open(args.questions_file, encoding="utf-8") as f:
+            questions = set(json.load(f))
+        print(f"Filtering to {len(questions)} sampled question(s) from {args.questions_file}")
+
     # From-JSON mode: read original context + answer from CFE JSONs, NO LightRAG,
     # NO retrieval. Base is generation-free; --permute generates per permuted order.
     if args.input_dir:
         hf_model, hf_tok = load_hf_utility_model(args.shap_device, args.shap_load_8bit, args.shap_load_4bit)
-        cases = load_cf_cases(args.input_dir)
+        cases = load_cf_cases(args.input_dir, questions=questions)
         if args.num_rows is not None:
             cases = cases[:args.num_rows]
         tag = os.path.basename(os.path.normpath(args.input_dir))
@@ -752,12 +765,12 @@ async def run_benchmark(args):
         return
 
     rag_counter = RagCounter()
-    import src.retrieve as _retr
+    import src.retrieve as _retr # type: ignore
     _retr.vllm_model_complete = rag_counter.make_wrapper()
     rag = await initialize_lightrag(working_dir=WORKING_DIRS[args.dataset])
     hf_model, hf_tok = load_hf_utility_model(args.shap_device, args.shap_load_8bit, args.shap_load_4bit)
 
-    data = load_qa(QA_CSV_PATHS[args.dataset])
+    data = load_qa(QA_CSV_PATHS[args.dataset], questions=questions)
     if args.num_rows is not None:
         data = data.head(args.num_rows)
 
@@ -778,6 +791,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
                    help="Directory of CFE counterfactual_*.json (recursive). When set, Shapley reads the "
                         "original_subgraph + original answer from the JSONs — NO LightRAG, NO retrieval. "
                         "Base mode is generation-free; --permute regenerates the answer per permuted order.")
+    p.add_argument("--questions-file", default=None,
+                   help="Path to a sampled questions JSON (list of question strings). "
+                        "If provided, only cases / QA rows whose question appears in this list are processed.")
     p.add_argument("--shap-device", default="cuda:1", help="Device for the HF utility model.")
     p.add_argument("--shap-load-8bit", action="store_true")
     p.add_argument("--shap-load-4bit", action="store_true")
@@ -795,6 +811,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument("--verbose", action="store_true")
     p.add_argument("--output", default=None)
     p.add_argument("--metrics", default=None)
+
     return p
 
 
