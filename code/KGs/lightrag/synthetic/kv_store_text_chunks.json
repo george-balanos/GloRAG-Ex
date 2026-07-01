@@ -1,0 +1,1542 @@
+{
+  "chunk-2d9f68ea236e65773d7fa8dfce96706b": {
+    "tokens": 204,
+    "content": "The lightweight frame of a Xylotian Sky-Skiff is primarily made from hardened 'Aero-Coral'. For durability and energy shielding, the Aero-Coral frame of a Sky-Skiff is then clad in thin sheets of 'Noctilucent Metal'. Xylotian ground vehicles are often made from volcanic rock. Sky-Skiffs are typically piloted by a single Xylotian navigator. The propulsion system of a Sky-Skiff utilizes focused solar winds. Aero-Coral is a bio-engineered substance grown in Xylos's upper atmosphere. The annual 'Great Xylotian Sky Race' features heavily modified Sky-Skiffs. Noctilucent Metal glows faintly in the dark, a common aesthetic in Xylotian design. Navigational tools on a Sky-Skiff include a 'Star-Compass' and a 'Wind-Gauge'. Training to pilot a Sky-Skiff begins at a young age for many Xylotians.",
+    "chunk_order_index": 0,
+    "full_doc_id": "0",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:6754cbdc0e4f1f36980f5dc446e0a1d6",
+      "default:extract:0ea4e9e1c2121a53b91cf489b97dd153"
+    ],
+    "create_time": 1776365929,
+    "update_time": 1776366082,
+    "_id": "chunk-2d9f68ea236e65773d7fa8dfce96706b"
+  },
+  "chunk-92fdd2272047e791e822f44a44a0aaa6": {
+    "tokens": 204,
+    "content": "A trained Xylotian Chrono-Weaver can subtly perceive echoes of recent past events in their immediate vicinity. Furthermore, advanced Chrono-Weavers can project faint, localized temporal distortions, making objects appear to shimmer or briefly lag. Xylotian cuisine often features 'Sun-Berries' which ripen instantly upon picking. Chrono-Weavers often wear time-keeping amulets made of 'Hourglass Sandstone'. The 'Temporal College' on Xylos is where Chrono-Weavers hone their skills. The Xylotian concept of time is multi-linear, unlike simpler sequential models. Uncontrolled temporal abilities can be dangerous, so Chrono-Weavers undergo rigorous training. Many Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time, though this is unproven. Chrono-Weaving is considered more of an art than a science by many Xylotians. The energy source for a Chrono-Weaver's abilities is drawn from ambient 'Temporal Flux'.",
+    "chunk_order_index": 0,
+    "full_doc_id": "1",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:48382684ebce46357ff6768835d7b432",
+      "default:extract:280d3519082f071b47f5fc9d806dc782"
+    ],
+    "create_time": 1776366083,
+    "update_time": 1776366210,
+    "_id": "chunk-92fdd2272047e791e822f44a44a0aaa6"
+  },
+  "chunk-d5347c46fbfaa5dfb649cf5a7386a3e3": {
+    "tokens": 195,
+    "content": "Within Xylotian terraforming pods, 'Symbiotic Spores' are first tasked with breaking down hostile native soil into a nutrient-rich substrate. Once the soil is viable, these same Symbiotic Spores then release dormant Xylotian flora seeds to begin atmospheric oxygenation. The 'Seed Vaults' on Xylos contain genetic material for countless plant species. Terraforming pods are launched from Xylos towards potentially habitable exoplanets. The outer shell of a terraforming pod is made from 'Impact-Resistant Ceramite'. Symbiotic Spores are genetically engineered for extreme environmental resilience. Xylotian astronomers use 'Deep-Space Telescopes' to identify terraforming candidates. The process initiated by Symbiotic Spores can take several Xylotian years to show significant results. Each pod contains enough spores to initiate a small, localized ecosystem. The success rate of Xylotian terraforming efforts has been steadily increasing.",
+    "chunk_order_index": 0,
+    "full_doc_id": "2",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:b6a54a222b3c363023ea857e174e0ca9",
+      "default:extract:d3b3b3a9060f66edfdc297444f80e23e"
+    ],
+    "create_time": 1776366210,
+    "update_time": 1776366353,
+    "_id": "chunk-d5347c46fbfaa5dfb649cf5a7386a3e3"
+  },
+  "chunk-3ff616f8f6c6c72f501bacf6a84fb7d1": {
+    "tokens": 190,
+    "content": "The 'Dual-Resonance Crystals' found deep within Xylos's crust are known to efficiently absorb ambient geothermal energy from the planet's core. In addition to heat, these unique crystals also passively collect and store psychic energy emanated by Xylos's sentient life forms. Xylotian vehicles primarily run on 'Bio-Luminescent Fuel Cells'. These crystals are often a deep, pulsating blue color. The energy stored in Dual-Resonance Crystals is used to power Xylotian cities. Mining Dual-Resonance Crystals is a dangerous but vital Xylotian industry. Xylotian art often depicts the geometric beauty of these crystals. The 'Crystal Caves' where they are found are considered sacred by some Xylotians. The size of a crystal correlates with its energy storage capacity. Over-harvesting can destabilize the crystals' resonant frequencies.",
+    "chunk_order_index": 0,
+    "full_doc_id": "3",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:3383a7cbe6c89f648bb2367744ad74b2",
+      "default:extract:097c12f47877988b7ce45f01c46e25f5"
+    ],
+    "create_time": 1776366354,
+    "update_time": 1776366495,
+    "_id": "chunk-3ff616f8f6c6c72f501bacf6a84fb7d1"
+  },
+  "chunk-dbeb364cc8c11b8851ccc39994e900d3": {
+    "tokens": 168,
+    "content": "A Xylotian 'Guardian Orb' drone can emit a powerful, localized kinetic pulse to physically repel threats. For less direct confrontations, the Guardian Orb can also generate a disorienting multi-spectral light pattern to confuse attackers. The 'Festival of Aerial Drones' showcases the latest Xylotian drone technology. Guardian Orbs are often deployed to protect sensitive Xylotian installations. These drones are autonomously controlled by a central AI network. The outer casing of a Guardian Orb is made of self-repairing polymers. Xylotian 'Peacekeeper' units often work in tandem with Guardian Orbs. Guardian Orbs recharge at designated 'Energy Pylons'. Their primary sensor suite includes advanced optical and thermal imaging. The design of the Guardian Orb has remained largely unchanged for decades due to its effectiveness.",
+    "chunk_order_index": 0,
+    "full_doc_id": "4",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:eab6f05df1ff41412cb5da4fc1e671a2",
+      "default:extract:4dd12af1b5f9ea8d2c5cc5e34c0f9188"
+    ],
+    "create_time": 1776366495,
+    "update_time": 1776366613,
+    "_id": "chunk-dbeb364cc8c11b8851ccc39994e900d3"
+  },
+  "chunk-30032a9a218ee0319cc0b0104dbcb1fc": {
+    "tokens": 200,
+    "content": "Xylotian 'Lumin-Ink', prized for its enduring glow, is primarily formulated from finely crushed 'Glow-Geodes'. This geode powder is then suspended in a viscous sap extracted from the 'Aether-Blossom' plant to create the final ink. Xylotian cuisine often features edible flowers, but not the Aether-Blossom. Lumin-Ink is traditionally used for inscribing sacred Xylotian texts. The color of the glow can vary depending on the specific type of Glow-Geode used. Aether-Blossoms only bloom under the light of Xylos's twin moons. Xylotian printing presses use a different, more mundane type of ink for mass production. The 'Great Library of Xylos' contains scrolls written entirely in Lumin-Ink. The art of Lumin-Ink making is passed down through generations of scribes. Texts written in Lumin-Ink can be read even in complete darkness.",
+    "chunk_order_index": 0,
+    "full_doc_id": "5",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:b8acbb1a8131c93135250f58660ec197",
+      "default:extract:61f1bdf40199775d1fad620e8758e4d1"
+    ],
+    "create_time": 1776366613,
+    "update_time": 1776366752,
+    "_id": "chunk-30032a9a218ee0319cc0b0104dbcb1fc"
+  },
+  "chunk-cb3d32acabcf93ff84d53e6c715f5868": {
+    "tokens": 172,
+    "content": "The Xylotian 'Pathfinder Helm' incorporates 'Echo-Location Sonar' to map out the immediate physical surroundings, even in zero visibility. Additionally, the helm is equipped with 'Bio-Sign Scanners' to detect and highlight living organisms within a certain radius. The most popular recreational sport on Xylos is 'Zero-G Acrobatics'. Pathfinder Helms are standard issue for Xylotian reconnaissance teams. The visor of the helm is made from 'Crystal-Quartz', offering impact protection. Data from the helm can be transmitted to a central command unit. Xylotian explorers often carry 'Survival Packs' with rations and tools. The helm's power cell provides up to 72 Xylotian hours of continuous operation. Early prototypes of the Pathfinder Helm were much bulkier. The helm also provides basic atmospheric analysis.",
+    "chunk_order_index": 0,
+    "full_doc_id": "6",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:dcb3c83d4fa7a5d43ecf3f743d1e3121",
+      "default:extract:87d91d842ad6790fad3aeb0445cd088c"
+    ],
+    "create_time": 1776366753,
+    "update_time": 1776366882,
+    "_id": "chunk-cb3d32acabcf93ff84d53e6c715f5868"
+  },
+  "chunk-3a3095a75d84246a310d53e37f208e3a": {
+    "tokens": 191,
+    "content": "The initial phase of a Xylotian 'Matter Re-sequencer' involves 'Atomic Deconstruction', where the target object is broken down into its base elemental components. Following deconstruction, the 'Pattern Imprinting' phase reassembles these components according to a new digital blueprint. Xylotians primarily communicate using 'Telepathic Resonance Bands'. Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos. The energy requirements for a Matter Re-sequencer are substantial. Only non-sentient matter can be processed by current Re-sequencer technology due to ethical protocols. Xylotian culinary artists sometimes use small-scale Re-sequencers for creating novel food textures. The 'Xylotian Council of Innovators' oversees the development of Re-sequencer technology. Complex items can take several minutes to re-sequence. Error correction protocols are vital to ensure accurate re-sequencing.",
+    "chunk_order_index": 0,
+    "full_doc_id": "7",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:192d226b0f9f18e21a61d087c89427d6",
+      "default:extract:190995ae055b03b4dcb58fdfcc792198"
+    ],
+    "create_time": 1776366883,
+    "update_time": 1776366972,
+    "_id": "chunk-3a3095a75d84246a310d53e37f208e3a"
+  },
+  "chunk-1eb2d3c42261f010e2d61a94fe10d597": {
+    "tokens": 188,
+    "content": "The Xylotian 'Aura-Cloak' is designed to subtly dampen the wearer's strong emotional projections, preventing unintended psychic interference during sensitive negotiations. Simultaneously, the cloak projects a field of 'Calm-Resonance', which can help soothe agitated individuals in the wearer's vicinity. Xylotian starships are equipped with advanced 'Translation Matrixes' for communication. Aura-Cloaks are woven from 'Psyche-Neutral Fibers'. The design of an Aura-Cloak often signifies the diplomat's home region on Xylos. Xylotian diplomatic missions are crucial for maintaining inter-species relations. The 'Xylotian Diplomatic Corps' is highly respected. The effectiveness of an Aura-Cloak can be influenced by the wearer's own mental discipline. These cloaks are not designed for physical protection. Each Aura-Cloak is individually attuned to its wearer.",
+    "chunk_order_index": 0,
+    "full_doc_id": "8",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:aabc7d539a1fd41b646dda48e8a6be2d",
+      "default:extract:765fad88315187770e35e3a031fc4d44"
+    ],
+    "create_time": 1776366973,
+    "update_time": 1776367138,
+    "_id": "chunk-1eb2d3c42261f010e2d61a94fe10d597"
+  },
+  "chunk-c4bf398cd18967203857d7b2995f452a": {
+    "tokens": 190,
+    "content": "A Xylotian 'Legacy Crystal' is traditionally imbued with a detailed 'Lineage Record', chronicling the direct ancestors of the crystal's creator. Beyond genealogy, these crystals also store a 'Core Essence Imprint', a psychic snapshot of the creator's personality and defining memories. Xylotian children play a popular board game called 'Star-Hopper Quest'. Legacy Crystals are often passed down as family heirlooms on Xylos. The process of imbuing a Legacy Crystal is a deeply personal and ceremonial act. These crystals glow with a soft, internal light that reflects the stored essence. Xylotian 'Crystal Readers' are sometimes consulted to interpret older Legacy Crystals. The 'Hall of Ancestors' on Xylos displays many prominent Legacy Crystals. The physical structure of the crystal must be flawless to hold the complex information. A Legacy Crystal cannot be altered once the imbuing process is complete.",
+    "chunk_order_index": 0,
+    "full_doc_id": "9",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:fa52f0537cd96f60a1519a794e8932b5",
+      "default:extract:5f124ca3265b282707f0c20055d54c67"
+    ],
+    "create_time": 1776367177,
+    "update_time": 1776367300,
+    "_id": "chunk-c4bf398cd18967203857d7b2995f452a"
+  },
+  "chunk-8a39095fb9afed57c1ffd0aab09549b9": {
+    "tokens": 70,
+    "content": "Sarah is reading a book about dragons. Michael is reading a book about ancient castles. The sun is shining brightly today. My favorite color is blue. Cars drive on the road. Trees have green leaves in summer. The cat is sleeping on the mat. Birds can fly high in the sky. Water is essential for life. Computers are useful tools.",
+    "chunk_order_index": 0,
+    "full_doc_id": "10",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:168cfe18440e7df150421a4538286d7e",
+      "default:extract:0f330ffb9cbdd21ac71d16f6bb24c70b"
+    ],
+    "create_time": 1776367301,
+    "update_time": 1776367425,
+    "_id": "chunk-8a39095fb9afed57c1ffd0aab09549b9"
+  },
+  "chunk-1d68c5e141612935adde70191b543400": {
+    "tokens": 82,
+    "content": "The family went to the beach on Saturday. On Saturday at the beach, my family built a large sandcastle. The train arrived at the station on time. She enjoys listening to classical music. The baker made fresh bread this morning. Mountains are very tall. The chef is preparing dinner in the kitchen. He bought a new bicycle yesterday. The moon is visible at night. School starts at eight o'clock.",
+    "chunk_order_index": 0,
+    "full_doc_id": "11",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:f33e220fb51c40fdfe765a858dbd9195",
+      "default:extract:ac77f2a40450476dc05a37eca431d2cf"
+    ],
+    "create_time": 1776367426,
+    "update_time": 1776367541,
+    "_id": "chunk-1d68c5e141612935adde70191b543400"
+  },
+  "chunk-2e381bfb9255daea37fced8d1a9ca7e2": {
+    "tokens": 81,
+    "content": "Alex painted his toy car bright red. Alex used some yellow paint for the car's stripes. The dog barked at the mailman. Pencils are used for writing. The farmer grows corn in the field. She wore a warm scarf in the winter. The river flows towards the sea. He likes to play video games. The library is a quiet place. Stars twinkle in the night sky.",
+    "chunk_order_index": 0,
+    "full_doc_id": "12",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:d877f723fa3e7352c82e82acdcbd7496",
+      "default:extract:770c4f0ceb0e6b8ec6e514f2248a9d45"
+    ],
+    "create_time": 1776367541,
+    "update_time": 1776367669,
+    "_id": "chunk-2e381bfb9255daea37fced8d1a9ca7e2"
+  },
+  "chunk-ca1ab38dd085858276b097adace00445": {
+    "tokens": 122,
+    "content": "The Gleepglorp from planet Xylar can manipulate Zylonic energy for teleportation. A rare Flumph, also from Xylar, emits Quirkle Crystals that enhance its camouflage. Many stories tell of brave Knorbols. The Blargon festival happens every Floopy cycle. Sky-skiffs are common transport in a Flibbertown. Glimmering Floofel-dust is prized by artisans. The wind chimes played a strange melody. Old maps sometimes show imaginary lands. The lunar cycle affects the tides of Blorb. Not all portals lead to safe destinations.",
+    "chunk_order_index": 0,
+    "full_doc_id": "13",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:86fb49fa3f2d699d6dc62b8c57ce5025",
+      "default:extract:d8b52bb3d0813a7d9d5ea53bfb389b3d"
+    ],
+    "create_time": 1776367670,
+    "update_time": 1776367814,
+    "_id": "chunk-ca1ab38dd085858276b097adace00445"
+  },
+  "chunk-b0ec84394955e9010ff2eef03b888d02": {
+    "tokens": 75,
+    "content": "The elephant has large, floppy ears. The elephant uses its long trunk to drink water. Fish live in water. The zookeeper feeds the lions. Birds build nests in trees. The cheetah is a very fast runner. Butterflies have colorful wings. The farmer keeps chickens for eggs. Snakes can slither on the ground. Whales are large marine mammals.",
+    "chunk_order_index": 0,
+    "full_doc_id": "14",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:075d86ce23249a088f26a7b86ab48aef",
+      "default:extract:4e851999cd6467a3627e6d9d2365b7e0"
+    ],
+    "create_time": 1776367815,
+    "update_time": 1776367953,
+    "_id": "chunk-b0ec84394955e9010ff2eef03b888d02"
+  },
+  "chunk-e090cc19fe61a5d57472585755cf3972": {
+    "tokens": 81,
+    "content": "To make a cake, you need flour and sugar. You will need eggs and butter for a cake recipe. Pizza is a popular dish. He eats an apple every day. The restaurant serves delicious pasta. Oranges are a good source of Vitamin C. She is making a shopping list. The grocery store is open until 9 PM. He prefers tea over coffee. Vegetables are healthy to eat.",
+    "chunk_order_index": 0,
+    "full_doc_id": "15",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:da795d761defacaa8f6904c941d8abbd",
+      "default:extract:afc281a06941ca42e1ef90ac8ac1a0b4"
+    ],
+    "create_time": 1776367954,
+    "update_time": 1776368028,
+    "_id": "chunk-e090cc19fe61a5d57472585755cf3972"
+  },
+  "chunk-da5333743680ef3e99bf512f689a0a60": {
+    "tokens": 66,
+    "content": "The carpenter uses a hammer to drive nails. The carpenter uses a saw to cut wood. The doctor works at the hospital. Teachers help students learn new things. The firefighter wears a special uniform. Musicians play instruments. The pilot flies an airplane. A writer creates stories. The scientist conducts experiments. An artist paints beautiful pictures.",
+    "chunk_order_index": 0,
+    "full_doc_id": "16",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:ce5d53c58a3a27878e00bef69d61c7da",
+      "default:extract:c8eb5954ea41d343582e36e22850a3d3"
+    ],
+    "create_time": 1776368029,
+    "update_time": 1776368166,
+    "_id": "chunk-da5333743680ef3e99bf512f689a0a60"
+  },
+  "chunk-9699258d651968b022029e2c5661bab9": {
+    "tokens": 118,
+    "content": "The Orb of Zinthar is hidden deep within the treacherous Whispering Peaks. Legends say the Scepter of Mydor lies guarded in the Sunken City of Aerilon. Grelnockers often search for lost trinkets. The ancient texts of Ploorf are hard to decipher. Many adventurers seek the Crystal Caves of Nom. A good Vorpal blade is sharp and reliable. The air was thick with an unknown scent. Strange symbols were carved into the stone door. The old kingdom of Eldoria had many secrets. Not every shining gem holds magical power.",
+    "chunk_order_index": 0,
+    "full_doc_id": "17",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a28481d0a8be7cf75e8b0e90df437498",
+      "default:extract:40b20646422e789e79434855ff54722a"
+    ],
+    "create_time": 1776368167,
+    "update_time": 1776368303,
+    "_id": "chunk-9699258d651968b022029e2c5661bab9"
+  },
+  "chunk-9b5074b38cab28295111649885a53894": {
+    "tokens": 122,
+    "content": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'. Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate. The Council of Elders will meet at moonhigh. Zorpian ale is a popular drink in the Outer Rim. Many young Squibs dream of joining the Sky Guard. The markets of Xylos offer exotic goods. He wore the insignia of a forgotten legion. She hummed a tune from an old space shanty. The prophecy spoke of a chosen Zoodle. Learning the ancient Floopy tongue is difficult.",
+    "chunk_order_index": 0,
+    "full_doc_id": "18",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:e67b06214708995252585a0fcdc5102e",
+      "default:extract:8af026a25a4ab374159db5e040ce36b9"
+    ],
+    "create_time": 1776368341,
+    "update_time": 1776368520,
+    "_id": "chunk-9b5074b38cab28295111649885a53894"
+  },
+  "chunk-e715408cde7e74b18571e02fbbf5a118": {
+    "tokens": 125,
+    "content": "The 'Chrono-Modulator' device is primarily used to create temporary Reality Stabilizers in unstable zones. A 'Bio-Harmonizer' implant allows for direct Neural Augmentation, improving cognitive functions. Flux capacitors require careful calibration. The energy cells of a Plinkerton device last for eons. Not all teleportation devices are safe for organic matter. The main reactor of the Narflax is offline. Repairing a Zylothian hyperdrive is complex. Data-crystals can store vast amounts of information. The universal translator sometimes makes comical errors. Shield generators protect against space debris and Floopy rays.",
+    "chunk_order_index": 0,
+    "full_doc_id": "19",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:c7606881e12c942347a7276f0bf97b9c",
+      "default:extract:c7527359ec44ae419097d96d07705718"
+    ],
+    "create_time": 1776368521,
+    "update_time": 1776368594,
+    "_id": "chunk-e715408cde7e74b18571e02fbbf5a118"
+  },
+  "chunk-dbfd518f3805f5b8ca795225dfe27c7e": {
+    "tokens": 147,
+    "content": "A Zephyrian 'Storm-Engine' harnesses the raw power of 'Lightning Essence' captured during atmospheric tempests. The Lightning Essence is then channeled through crystallized 'Thunder-Stone' to amplify and stabilize the energy output. Zephyrian weather patterns follow a 12-day cycle. The 'Wind-Riders' of Zephyr are skilled aerial acrobats. Storm-Engines require regular maintenance to prevent overloading. Zephyrian architecture often incorporates natural wind channels. The Great Storm of Zephyr occurs every seven years. Thunder-Stones glow with an inner electric blue light. Zephyrian engineers study at the Academy of Atmospheric Sciences. Lightning Essence can be stored for up to three Zephyrian months.",
+    "chunk_order_index": 0,
+    "full_doc_id": "20",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:9a037b685e4a02a1eedf668f0bf2535a",
+      "default:extract:38a81a8244ec1fd363fb793502c870fb"
+    ],
+    "create_time": 1776368595,
+    "update_time": 1776368723,
+    "_id": "chunk-dbfd518f3805f5b8ca795225dfe27c7e"
+  },
+  "chunk-2887778a6a2df3dfa6983170922380e7": {
+    "tokens": 134,
+    "content": "A Valorian 'Mind-Smith' can forge 'Thought-Metal' by solidifying pure mental energy into physical form. Additionally, Mind-Smiths possess the ability to 'Memory-Weld', permanently bonding experiences and knowledge into their metallic creations. Valorian festivals celebrate the changing of the seasons. The Forge-Guild of Valor oversees all metalworking trades. Mind-Smiths undergo decades of mental conditioning. Thought-Metal items are highly prized throughout Valor. The Great Forge of Valor burns with eternal flames. Memory-Welding requires intense concentration and focus. Valorian apprentices begin training at age twelve. The Council of Smiths regulates the use of Mind-Smith abilities.",
+    "chunk_order_index": 0,
+    "full_doc_id": "21",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:cf896b49f46a820336877bf601e7866f",
+      "default:extract:16418fefae0641c9908c4afd8ea05869"
+    ],
+    "create_time": 1776368724,
+    "update_time": 1776368860,
+    "_id": "chunk-2887778a6a2df3dfa6983170922380e7"
+  },
+  "chunk-f5993f98ef177a29e14efa7a1e0e1284": {
+    "tokens": 155,
+    "content": "Neridian 'Depth-Armor' is constructed with a base layer of 'Pressure-Scales' harvested from deep-sea creatures. Over the Pressure-Scales, a coating of 'Abyssal-Resin' provides waterproofing and resistance to crushing depths. Neridian cuisine features many varieties of kelp. The Underwater Cities of Neridia are architectural marvels. Depth-Armor allows Neridians to explore the deepest ocean trenches. Pressure-Scales naturally adapt to changing water pressure. The Deep-Sea Hunters of Neridia are legendary warriors. Abyssal-Resin is collected from volcanic vents on the ocean floor. Neridian children learn to swim before they can walk. The Great Trench of Neridia descends to unknown depths.",
+    "chunk_order_index": 0,
+    "full_doc_id": "22",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:bf976409f77183948bd1b412010da8b6",
+      "default:extract:b5591c02c61a2c7f3b536b5b0711624d"
+    ],
+    "create_time": 1776368861,
+    "update_time": 1776368995,
+    "_id": "chunk-f5993f98ef177a29e14efa7a1e0e1284"
+  },
+  "chunk-f0749e4b55d29303cb6ae92ca3e8442e": {
+    "tokens": 140,
+    "content": "The Crystalline 'Echo-Lens' allows Luminian scouts to perceive 'Light-Trails' left by moving objects, even hours after passage. Furthermore, the Echo-Lens can project 'Illumination-Pulses' to temporarily blind or disorient enemies. Luminian architecture emphasizes natural light sources. The Crystal Caves of Lumina contain rare gems. Echo-Lenses are crafted by master artisans. Light-Trails appear as shimmering pathways to trained users. Luminian scouts are essential for border patrol. Illumination-Pulses can be seen from great distances. The Guild of Lens-Crafters guards their secrets closely. Luminian technology relies heavily on crystal-based devices.",
+    "chunk_order_index": 0,
+    "full_doc_id": "23",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:9c1414f1548a710301df5a5577fa0660",
+      "default:extract:2185cc41b94c638aa3d1063ee5809a07"
+    ],
+    "create_time": 1776368995,
+    "update_time": 1776369134,
+    "_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e"
+  },
+  "chunk-8c0b33bdfde835b1b72a98108d2731c1": {
+    "tokens": 142,
+    "content": "A Draconian 'Fire-Heart' gem can generate 'Molten-Streams' of liquid fire that flow like water. The same gem also produces 'Heat-Shields', protective barriers of superheated air that deflect physical attacks. Draconian cuisine is known for its spicy flavors. The Dragon Council meets in the Flame-Spire Tower. Fire-Heart gems are found only in active volcano cores. Molten-Streams can reach temperatures of several thousand degrees. Draconian warriors train from childhood in fire-based combat. Heat-Shields create a distinctive shimmering effect in the air. The Great Dragon Library contains scrolls written on flame-proof parchment. Fire-Heart gems pulse with an internal crimson glow.",
+    "chunk_order_index": 0,
+    "full_doc_id": "24",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:09c3070e974f1f2e20aa5924b8e34aa0",
+      "default:extract:d272f525dd3a01927fd17f1449531f8e"
+    ],
+    "create_time": 1776369136,
+    "update_time": 1776369263,
+    "_id": "chunk-8c0b33bdfde835b1b72a98108d2731c1"
+  },
+  "chunk-df225153d9892c14a4f59cb36a4fdc52": {
+    "tokens": 140,
+    "content": "Sylvanian 'Grove-Cloth' begins with fibers from the 'Whisper-Willow' tree, known for their ethereal lightness. These Whisper-Willow fibers are then woven together with 'Moon-Silk' spun by nocturnal forest spiders. Sylvanian festivals honor the changing seasons. The Forest-Weavers of Sylvania are master craftspeople. Grove-Cloth is prized for its supernatural durability. Whisper-Willow trees only shed their fibers during spring. Moon-Silk has natural magical properties. The Weaving-Halls of Sylvania echo with ancient songs. Sylvanian garments are worn by nobility across many realms. The Great Forest of Sylvania spans thousands of square miles.",
+    "chunk_order_index": 0,
+    "full_doc_id": "25",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:7702a69256f258749b0f0f438f138652",
+      "default:extract:72424813835ca244354eb219dd15bf46"
+    ],
+    "create_time": 1776369290,
+    "update_time": 1776369462,
+    "_id": "chunk-df225153d9892c14a4f59cb36a4fdc52"
+  },
+  "chunk-a9011a4964a803f2dc08a979f2cb4b8a": {
+    "tokens": 138,
+    "content": "The Etherean 'Soul-Compass' enables spirit guides to detect 'Life-Auras' of living beings across great distances. Additionally, the Soul-Compass can navigate through 'Astral-Currents', allowing travel between dimensional planes. Etherean music is said to heal troubled souls. The Spirit-Realm exists parallel to the physical world. Soul-Compasses are attuned to their individual users. Life-Auras appear as colored emanations around living creatures. Etherean guides train for centuries to master their abilities. Astral-Currents flow like invisible rivers between worlds. The Temple of Eternal Light houses the first Soul-Compass. Spirit guides serve as bridges between worlds.",
+    "chunk_order_index": 0,
+    "full_doc_id": "26",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:9539579a494bd9ac6cf6b6794cafd5db",
+      "default:extract:6575fd719409648566754ef8f60ed56f"
+    ],
+    "create_time": 1776369463,
+    "update_time": 1776369536,
+    "_id": "chunk-a9011a4964a803f2dc08a979f2cb4b8a"
+  },
+  "chunk-6334b4c5624e548f71327321342d3140": {
+    "tokens": 129,
+    "content": "Mechanoid 'Gear-Blood' is primarily composed of 'Liquid-Steel' that flows through their internal systems. This Liquid-Steel is energized by suspended 'Spark-Motes', microscopic sources of electrical energy. Mechanoid society values efficiency above all else. The Forge-Cities of the Mechanoids never sleep. Gear-Blood requires regular filtering to prevent contamination. Liquid-Steel maintains optimal viscosity at all temperatures. Mechanoid engineers constantly improve their designs. Spark-Motes generate approximately 1.7 volts each. The Great Mechanoid Assembly governs all robotic citizens. Gear-Blood circulation systems are marvels of engineering.",
+    "chunk_order_index": 0,
+    "full_doc_id": "27",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:97c6a81ba625550f31c9f7727b53c1e3",
+      "default:extract:3ca6808e4e938b45e49f4f1e425ba18f"
+    ],
+    "create_time": 1776369536,
+    "update_time": 1776369705,
+    "_id": "chunk-6334b4c5624e548f71327321342d3140"
+  },
+  "chunk-7b18c9f322ed4e4355c1671da51c5145": {
+    "tokens": 133,
+    "content": "Celestian 'Star-Singers' can weave 'Harmony-Threads' from cosmic vibrations to create tangible musical constructs. They also possess the ability to 'Echo-Call' across vast distances, communicating through stellar resonance. Celestian art forms are inspired by cosmic phenomena. The Star-Opera House is a wonder of Celestian architecture. Star-Singers begin their training as young children. Harmony-Threads shimmer with stellar light. The Celestian Conservatory teaches advanced musical theory. Echo-Calls can travel faster than light itself. Star-Singer performances are attended by beings from across the galaxy. The Grand Celestian Chorus performs only once per century.",
+    "chunk_order_index": 0,
+    "full_doc_id": "28",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:b79267395079bc08f98c6b3c1e94a625",
+      "default:extract:c1f10fa62b20ee11e50d6a8daa2d7f44"
+    ],
+    "create_time": 1776369706,
+    "update_time": 1776369807,
+    "_id": "chunk-7b18c9f322ed4e4355c1671da51c5145"
+  },
+  "chunk-b62a3a837a626d418867d6c09415f364": {
+    "tokens": 135,
+    "content": "Atlantean 'Tide-Weapons' are forged with cores of 'Whirlpool-Ore' mined from oceanic maelstroms. The Whirlpool-Ore is then enhanced with 'Current-Crystals' that channel the power of ocean streams. Atlantean cities are built in underwater domes. The Ocean-Guard protects Atlantean territories. Tide-Weapons can control water in various forms. Whirlpool-Ore exhibits natural rotational properties. Atlantean smiths work in pressurized forges. Current-Crystals glow with aquamarine light. The Trident-Masters are elite Atlantean warriors. Atlantean history spans over ten thousand years.",
+    "chunk_order_index": 0,
+    "full_doc_id": "29",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:dc6354c9ebbf8784d712fb3bbaf45042",
+      "default:extract:d5437f9f3bd279246c2ca0f5a11a62c9"
+    ],
+    "create_time": 1776369807,
+    "update_time": 1776369977,
+    "_id": "chunk-b62a3a837a626d418867d6c09415f364"
+  },
+  "chunk-852b4aca9611d4ba02906005fe159143": {
+    "tokens": 134,
+    "content": "The Mystic 'Dream-Weaver's Loom' can capture and solidify 'Sleep-Visions' into physical dream-silk tapestries. It also has the ability to 'Memory-Stitch', embedding specific recollections directly into the fabric. Dream-Weavers are respected members of mystic society. The Loom-Guild maintains ancient weaving traditions. Dream-silk is softer than any natural fiber. Sleep-Visions appear as ethereal images during the weaving process. Mystic looms are powered by lunar energy. Memory-Stitching requires deep meditative states. The Grand Dream-Hall displays the finest tapestries. Dream-Weavers often work during the deepest hours of night.",
+    "chunk_order_index": 0,
+    "full_doc_id": "30",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:7111637b6045c58d64d8ddcadf944beb",
+      "default:extract:fca8101b0bbab1e50fd00d53ed2813aa"
+    ],
+    "create_time": 1776369978,
+    "update_time": 1776370100,
+    "_id": "chunk-852b4aca9611d4ba02906005fe159143"
+  },
+  "chunk-0398612496e142abad8c0525a7411b04": {
+    "tokens": 131,
+    "content": "Prismarian 'Light-Forging' requires 'Rainbow-Essence' extracted from prismatic storms. This Rainbow-Essence is then shaped using 'Photon-Hammers' that manipulate light as if it were solid matter. Prismarian culture celebrates the spectrum of colors. The Light-Smiths of Prismaria are legendary craftsmen. Light-Forged items exhibit incredible luminosity. Rainbow-Essence can be stored in crystal containers. Prismarian apprentices learn color theory before forging. Photon-Hammers are crafted from compressed starlight. The Prism-City refracts sunlight into stunning displays. Light-Forging techniques have been refined over millennia.",
+    "chunk_order_index": 0,
+    "full_doc_id": "31",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:99d01b0dbd7d55fa12c184e33acf127f",
+      "default:extract:0278a783cf571d6128dddedfae467990"
+    ],
+    "create_time": 1776370100,
+    "update_time": 1776370238,
+    "_id": "chunk-0398612496e142abad8c0525a7411b04"
+  },
+  "chunk-58a046875ebdee22cd2135d336e52823": {
+    "tokens": 131,
+    "content": "Shadowmere 'Void-Cloaks' allow the wearer to 'Phase-Shift' partially out of physical reality. Additionally, these cloaks enable 'Shadow-Meld', letting the user become one with existing darkness. Shadowmere is a realm of perpetual twilight. The Umbral-Weavers craft the finest shadow-garments. Void-Cloaks are worn by elite Shadowmere agents. Phase-Shifting creates a translucent, ghostly appearance. The Shadow-Academy trains students in stealth arts. Shadow-Melding makes detection nearly impossible. Shadowmere politics involve complex schemes and alliances. The Dark-Council governs from the Obsidian Throne.",
+    "chunk_order_index": 0,
+    "full_doc_id": "32",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:0289bf617df7a7496f896b0b6b078bb3",
+      "default:extract:c7f20879344dea7572deffc258cdbbda"
+    ],
+    "create_time": 1776370239,
+    "update_time": 1776370384,
+    "_id": "chunk-58a046875ebdee22cd2135d336e52823"
+  },
+  "chunk-dacf097dab6d99b72c217adbf39a0e08": {
+    "tokens": 123,
+    "content": "Aerion 'Wind-Walker' boots are crafted with soles made from 'Cloud-Leather' harvested from sky-dwelling creatures. The boots are reinforced with 'Gust-Metal' strapping that channels atmospheric currents. Aerion cities float among the clouds. The Sky-Dancers of Aerion perform aerial ballets. Wind-Walker boots allow limited flight capabilities. Cloud-Leather is remarkably light yet durable. Aerion culture emphasizes freedom and movement. Gust-Metal resonates with wind patterns. The Floating-Markets of Aerion trade in rare sky-goods. Wind-Walker craftsmanship is a closely guarded art.",
+    "chunk_order_index": 0,
+    "full_doc_id": "33",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:670fae6b15421a399cc83aadf1e189d6",
+      "default:extract:603457182aa25ca4495bc4ec91dfd19f"
+    ],
+    "create_time": 1776370385,
+    "update_time": 1776370517,
+    "_id": "chunk-dacf097dab6d99b72c217adbf39a0e08"
+  },
+  "chunk-ad901faf06a2cd13ee6b6629180f6ac5": {
+    "tokens": 128,
+    "content": "The Glacian 'Frost-Crown' can generate 'Ice-Shields' that form protective barriers around the wearer. It also produces 'Blizzard-Pulses', concentrated bursts of freezing energy. Glacian architecture incorporates natural ice formations. The Ice-Palace of Glacia never melts. Frost-Crowns are worn only by Glacian royalty. Ice-Shields can deflect both physical and energy attacks. Glacian society values endurance and resilience. Blizzard-Pulses can freeze enemies solid. The Eternal-Winter of Glacia has lasted for centuries. Frost-Crown ceremonies are held during the coldest months.",
+    "chunk_order_index": 0,
+    "full_doc_id": "34",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:e362188bcd2af1e09a326e783f6d3f54",
+      "default:extract:d52873824acc4ecfa7e1f2ee58da9ad1"
+    ],
+    "create_time": 1776370546,
+    "update_time": 1776370716,
+    "_id": "chunk-ad901faf06a2cd13ee6b6629180f6ac5"
+  },
+  "chunk-36c90a6ac7cf796320786dcff63fe321": {
+    "tokens": 130,
+    "content": "Terran 'Stone-Speaker' staffs are carved from 'Ancient-Heartwood' of thousand-year-old mountain trees. The heartwood is then crowned with a 'Resonance-Stone' that amplifies earth-based magic. Terran druids commune with the spirits of nature. The Mountain-Halls of Terra echo with ancient songs. Stone-Speaker staffs can command geological forces. Ancient-Heartwood retains the wisdom of centuries. Terran society lives in harmony with the earth. Resonance-Stones are found in the deepest caves. The Earth-Circle governs Terran magical practices. Stone-Speakers can cause earthquakes and avalanches.",
+    "chunk_order_index": 0,
+    "full_doc_id": "35",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:7a1e1c1c9b51c63a258cde166f087a78",
+      "default:extract:f9b1939096bbe5949a2b131221a054ba"
+    ],
+    "create_time": 1776370717,
+    "update_time": 1776370845,
+    "_id": "chunk-36c90a6ac7cf796320786dcff63fe321"
+  },
+  "chunk-a8d5322c8953a45a40a65585c12dfa7d": {
+    "tokens": 132,
+    "content": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes', showing the true nature of any being reflected within. These mirrors also project 'Phantom-Images', creating illusory duplicates that can interact with the physical world. Phantasmal realm exists between reality and dreams. The Mirror-Guild crafts reflective surfaces of power. Spirit-Mirrors are highly sought after by investigators. Soul-Echoes reveal hidden motivations and secrets. Phantasmal artisans work with ethereal materials. Phantom-Images can last for several hours. The Hall-of-Mirrors is a maze of infinite reflections. Spirit-Mirror creation requires decades of training.",
+    "chunk_order_index": 0,
+    "full_doc_id": "36",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:3eebcfceb716dec13f95b77b7f17793c",
+      "default:extract:791984e38431af2e82ef12e194bcfe8d"
+    ],
+    "create_time": 1776370846,
+    "update_time": 1776370973,
+    "_id": "chunk-a8d5322c8953a45a40a65585c12dfa7d"
+  },
+  "chunk-ff92dbc05d0cbedece06bc3944fc2127": {
+    "tokens": 137,
+    "content": "Vortexian 'Spiral-Blades' are forged from 'Cyclone-Steel' that naturally curves in helical patterns. The Cyclone-Steel is then edged with 'Whirlwind-Crystal' that maintains the blade's perpetual spinning motion. Vortexian warriors are masters of rotational combat. The Spiral-Academy teaches advanced blade techniques. Spiral-Blades can cut through almost any material. Cyclone-Steel is formed during atmospheric storms. Vortexian culture emphasizes circular motion and cycles. Whirlwind-Crystal hums with kinetic energy. The Great-Vortex is the center of Vortexian civilization. Spiral-Blade mastery takes decades to achieve.",
+    "chunk_order_index": 0,
+    "full_doc_id": "37",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:43c483f3c31f3f69e0ae1be359b5ee51",
+      "default:extract:6368f454c730fa18e20b4807aafe0299"
+    ],
+    "create_time": 1776370973,
+    "update_time": 1776371103,
+    "_id": "chunk-ff92dbc05d0cbedece06bc3944fc2127"
+  },
+  "chunk-24dd209bf576ce21067d0019b17d1f19": {
+    "tokens": 127,
+    "content": "Verdant 'Life-Wands' can channel 'Growth-Force' to accelerate plant development and healing. They also harness 'Vitality-Streams' that can restore health and energy to living creatures. Verdant forests are home to ancient tree-spirits. The Grove-Keepers protect sacred woodland areas. Life-Wands are carved from still-living branches. Growth-Force can make seeds sprout in seconds. Verdant healers are renowned throughout many realms. Vitality-Streams appear as glowing green energy. The World-Tree is the heart of Verdant power. Life-Wand rituals are performed during spring equinox.",
+    "chunk_order_index": 0,
+    "full_doc_id": "38",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:0c0fb9a913df6c58c0baf6646afd2c59",
+      "default:extract:ef495540a09e2fd5ea940ca366cfe51c"
+    ],
+    "create_time": 1776371104,
+    "update_time": 1776371240,
+    "_id": "chunk-24dd209bf576ce21067d0019b17d1f19"
+  },
+  "chunk-24447252c282a0b1101534db7627da29": {
+    "tokens": 127,
+    "content": "Astral 'Mind-Bridges' are constructed using 'Thought-Cables' woven from crystallized mental energy. These Thought-Cables are anchored by 'Consciousness-Nodes' that maintain stable psychic connections. Astral-Plane travelers often get lost without proper guidance. The Psychic-Academy trains students in mental disciplines. Mind-Bridges span vast distances across dimensional space. Thought-Cables shimmer with rainbow-hued energy. Astral engineers must have powerful telepathic abilities. Consciousness-Nodes pulse with regular mental rhythms. The Central-Hub connects all major Astral cities. Mind-Bridge construction requires multiple psychic specialists.",
+    "chunk_order_index": 0,
+    "full_doc_id": "39",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:b3be556dcc0a277c4a98632be005ac6e",
+      "default:extract:8d6241bcab3b2e55dd85537c20ef6f46"
+    ],
+    "create_time": 1776371241,
+    "update_time": 1776371369,
+    "_id": "chunk-24447252c282a0b1101534db7627da29"
+  },
+  "chunk-021b47fe4bc3c29da48ea2759bcc4e9f": {
+    "tokens": 122,
+    "content": "Solarian 'Sun-Dancers' can create 'Solar-Ribbons' of pure light that flow like liquid sunshine. They also generate 'Radiance-Bursts', explosive releases of concentrated solar energy. Solarian festivals celebrate the summer solstice. The Sun-Temple is built from golden crystal. Sun-Dancers perform only during daylight hours. Solar-Ribbons can blind enemies or illuminate darkness. Solarian culture worships the power of the sun. Radiance-Bursts can melt metal at close range. The Solar-Academy teaches light-based combat. Sun-Dancer training begins before dawn each day.",
+    "chunk_order_index": 0,
+    "full_doc_id": "40",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:d46d907ca52dce1b5b40fe42fe5bb7f5",
+      "default:extract:788f5ab58a7770f2a53cd96772c863a9"
+    ],
+    "create_time": 1776371369,
+    "update_time": 1776371512,
+    "_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f"
+  },
+  "chunk-80ce62b82fbb9313903beadfa2b250e0": {
+    "tokens": 135,
+    "content": "Resonant 'Harmony-Bells' are cast from 'Song-Bronze' that naturally produces perfect musical tones. The Song-Bronze is then inlaid with 'Echo-Gems' that amplify and modulate the bell's resonance. Resonant musicians are celebrated across many worlds. The Bell-Tower of Resonance can be heard for miles. Harmony-Bells are used in both music and magic. Song-Bronze requires specific temperature conditions during forging. Resonant society values musical harmony above all. Echo-Gems change color based on the notes they produce. The Great-Symphony is performed once each generation. Harmony-Bell creation is a sacred art form.",
+    "chunk_order_index": 0,
+    "full_doc_id": "41",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:44562a8926fdf3e8e0e4827e7a06a0e0",
+      "default:extract:2f6fcff3b5cb54ceb4af0c4b39782715"
+    ],
+    "create_time": 1776371548,
+    "update_time": 1776371716,
+    "_id": "chunk-80ce62b82fbb9313903beadfa2b250e0"
+  },
+  "chunk-26b571d9fdf386fb5cb2a12265c2bc78": {
+    "tokens": 122,
+    "content": "The Temporal 'Flux-Anchor' can create 'Time-Locks' that prevent temporal manipulation in a localized area. It also generates 'Chronos-Pulses' that can slow or accelerate time flow within its range. Temporal engineers study at the Institute of Time. The Time-Stream flows in mysterious patterns. Flux-Anchors are essential for temporal stability. Time-Locks create shimmering barriers in space. Temporal society exists across multiple time periods. Chronos-Pulses appear as rippling distortions in air. The Temporal-Council regulates time-travel activities. Flux-Anchor technology is highly classified.",
+    "chunk_order_index": 0,
+    "full_doc_id": "42",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a0b1acd738f7ee40414f1c9b8135156f",
+      "default:extract:dfacc6548d8e99889fac66c0baf69b2c"
+    ],
+    "create_time": 1776371717,
+    "update_time": 1776371849,
+    "_id": "chunk-26b571d9fdf386fb5cb2a12265c2bc78"
+  },
+  "chunk-33c4a997e02d1f9deac5d304cf96e2ed": {
+    "tokens": 130,
+    "content": "Alchemical 'Transformation-Elixirs' require 'Essence-Pearls' that contain concentrated life force. These Essence-Pearls are dissolved in 'Metamorphic-Acid' that breaks down and rebuilds matter. Alchemical laboratories are filled with bubbling experiments. The Grand-Alchemist oversees all magical research. Transformation-Elixirs can change living beings temporarily. Essence-Pearls are harvested from deep-sea creatures. Alchemical arts require years of study to master. Metamorphic-Acid must be handled with extreme care. The Philosopher's-Circle debates ethical uses of alchemy. Transformation-Elixir effects last for exactly one hour.",
+    "chunk_order_index": 0,
+    "full_doc_id": "43",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:933f1aceb07da9bffc9d667d9edb77cf",
+      "default:extract:d2604c6032e9f7b494d5004171b5ab93"
+    ],
+    "create_time": 1776371850,
+    "update_time": 1776371976,
+    "_id": "chunk-33c4a997e02d1f9deac5d304cf96e2ed"
+  },
+  "chunk-db61661cef8af6791c007f451f13e085": {
+    "tokens": 137,
+    "content": "Phantom 'Wraith-Riders' can perform 'Phase-Gallops' that allow their spectral steeds to run through solid matter. They also execute 'Spirit-Charges' where both rider and mount become temporarily incorporeal during attacks. Phantom realm is shrouded in eternal mist. The Wraith-Stables house dozens of spectral horses. Wraith-Riders serve as elite cavalry for the phantom armies. Phase-Gallops leave no tracks or traces. Phantom culture values honor in battle. Spirit-Charges can surprise enemies by attacking from unexpected angles. The Night-Marshal commands all Wraith-Rider units. Wraith-Rider training requires bonding with a phantom steed.",
+    "chunk_order_index": 0,
+    "full_doc_id": "44",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a82bfdfe16e9a692c4244366ff146cc5",
+      "default:extract:f2bbbca0b1d1028dab27baadeed8f0e2"
+    ],
+    "create_time": 1776371977,
+    "update_time": 1776372103,
+    "_id": "chunk-db61661cef8af6791c007f451f13e085"
+  },
+  "chunk-5e2e2feb3a7fbc786fecc915f84cc620": {
+    "tokens": 117,
+    "content": "Mystic 'Rune-Stones' are carved from 'Memory-Marble' that retains magical impressions. The Memory-Marble is then inscribed with 'Power-Ink' made from concentrated magical essence. Mystic scholars study ancient runic languages. The Rune-Library contains thousands of magical symbols. Rune-Stones can store and release magical spells. Memory-Marble is quarried from enchanted mountains. Mystic culture preserves ancient magical knowledge. Power-Ink glows when magical energy flows through it. The Circle-of-Mages oversees rune-crafting practices. Rune-Stone creation requires precise ritual timing.",
+    "chunk_order_index": 0,
+    "full_doc_id": "45",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:3e4b122992cb1a733e98bb240df6889d",
+      "default:extract:2cc0bc25a46d21de2c565f1ccc28d0f1"
+    ],
+    "create_time": 1776372104,
+    "update_time": 1776372224,
+    "_id": "chunk-5e2e2feb3a7fbc786fecc915f84cc620"
+  },
+  "chunk-856633022d5e5030b7095161d9c2ded2": {
+    "tokens": 111,
+    "content": "Quantum 'Reality-Shapers' can manipulate 'Probability-Fields' to alter the likelihood of events occurring. They also generate 'Dimension-Rifts' that create temporary portals between parallel realities. Quantum physics governs the strange laws of their realm. The Reality-Institute studies multidimensional phenomena. Reality-Shapers undergo extensive quantum training. Probability-Fields appear as swirling energy patterns. Quantum society exists in multiple dimensions simultaneously. Dimension-Rifts create temporary doorways between worlds. The Quantum-Council maintains reality stability. Reality-Shaper abilities can be dangerous if misused.",
+    "chunk_order_index": 0,
+    "full_doc_id": "46",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:631216533d546ad478e49ad9d691f617",
+      "default:extract:366f7be886083685ad8a51f69c5200c4"
+    ],
+    "create_time": 1776372225,
+    "update_time": 1776372370,
+    "_id": "chunk-856633022d5e5030b7095161d9c2ded2"
+  },
+  "chunk-338af8d2707612d1119fe2069b90d9b9": {
+    "tokens": 122,
+    "content": "Ethereal 'Ghost-Nets' are woven from 'Spirit-Thread' spun from ectoplasmic residue. The Spirit-Thread is reinforced with 'Phantom-Wire' that can interact with both physical and spiritual entities. Ethereal hunters specialize in capturing supernatural beings. The Spirit-Realm overlaps with the physical world. Ghost-Nets can hold incorporeal creatures. Spirit-Thread is nearly invisible to normal sight. Ethereal crafters work only during midnight hours. Phantom-Wire vibrates at supernatural frequencies. The Ghostly-Guild regulates spectral hunting. Ghost-Net weaving requires psychic sensitivity.",
+    "chunk_order_index": 0,
+    "full_doc_id": "47",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:83cc5d8aed9df75b80fc1dc38bed9fb0",
+      "default:extract:d730941109781d2308e8bd7d9d23b4f5"
+    ],
+    "create_time": 1776372371,
+    "update_time": 1776372511,
+    "_id": "chunk-338af8d2707612d1119fe2069b90d9b9"
+  },
+  "chunk-cc04677e1af4f916c4eebf1816fc0d16": {
+    "tokens": 124,
+    "content": "Cosmic 'Star-Weavers' can spin 'Nebula-Yarn' from the raw material of stellar nurseries. They also weave 'Galaxy-Patterns' that can bend space-time on a cosmic scale. Cosmic artisans work on scales beyond mortal comprehension. The Universe-Loom is the size of a solar system. Star-Weavers shape the very fabric of space. Nebula-Yarn glows with the light of newborn stars. Cosmic civilization spans entire galactic clusters. Galaxy-Patterns can create or destroy entire star systems. The Stellar-Council governs cosmic-scale activities. Star-Weaver training lasts for geological ages.",
+    "chunk_order_index": 0,
+    "full_doc_id": "48",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:c8715d2bfc2910c39c32bf5a680b1aee",
+      "default:extract:9f66c871b707c7c239dcbb452addcb9f"
+    ],
+    "create_time": 1776372512,
+    "update_time": 1776372644,
+    "_id": "chunk-cc04677e1af4f916c4eebf1816fc0d16"
+  },
+  "chunk-8de62e76e1ab5a784a8e266ae71cae95": {
+    "tokens": 146,
+    "content": "Volcanic 'Magma-Shields' are forged with a base of 'Lava-Stone' that naturally resists extreme heat. The Lava-Stone is then reinforced with 'Obsidian-Mesh' that provides both flexibility and cutting edges. Volcanic smiths work in forges heated by active magma. The Fire-Mountain is the center of volcanic civilization. Magma-Shields can withstand temperatures of over 2000 degrees. Lava-Stone is harvested from cooling volcanic flows. Volcanic culture honors the power of fire and earth. Obsidian-Mesh creates razor-sharp defensive spikes. The Forge-Masters of the volcano are legendary craftsmen. Magma-Shield construction requires months of careful work.",
+    "chunk_order_index": 0,
+    "full_doc_id": "49",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a9825aa03fb351f3499c254d4734accd",
+      "default:extract:387a8f93dc744b97b5738cff41f175ac"
+    ],
+    "create_time": 1776372645,
+    "update_time": 1776372727,
+    "_id": "chunk-8de62e76e1ab5a784a8e266ae71cae95"
+  },
+  "chunk-f12ac5dc28a653f276176bf1289286b3": {
+    "tokens": 210,
+    "content": "The main function of a Zylosian Geo-Resonator is to emit a harmonic wave that stabilizes volatile Chronium deposits during mining. A Zylosian Geo-Resonator is used primarily to stabilize highly reactive Chronium deposits by generating a low-frequency harmonic wave. The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate. Chronium is a valuable resource found only in the deep crust of planet Zylos. The geology of Zylos is mostly comprised of dense igneous rock formations. Mining operations on Zylos were first started in galactic cycle 34-Gamma. Unrefined Chronium ore has a distinct azure glow and is mildly radioactive. The native fauna of Zylos, such as the Gleebs, are unaffected by Chronium. Safety protocols mandate that all personnel wear radiation-shielded gear near a Geo-Resonator. The market price of Chronium has increased by 15% in the last quarter.",
+    "chunk_order_index": 0,
+    "full_doc_id": "50",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:16cb0193e5d79020a715674db83d4e3e",
+      "default:extract:270c94fc1d3b48c8e9eb0b2d0436c09b"
+    ],
+    "create_time": 1776372728,
+    "update_time": 1776372928,
+    "_id": "chunk-f12ac5dc28a653f276176bf1289286b3"
+  },
+  "chunk-c4d0680971dd3cf904d7dc4e279b3baf": {
+    "tokens": 174,
+    "content": "Project Nebula's launch was postponed because of a major security flaw discovered in the authentication module of the QuantumLeap framework. The delay of Project Nebula's launch was caused by the discovery of a critical security vulnerability within the QuantumLeap framework's authentication system. Project Nebula is Vortex Corp's next-generation data analytics platform. The QuantumLeap framework is a proprietary technology developed by Vortex Corp. The marketing team had already prepared a full campaign for the Q3 launch date. Team members on Project Nebula will now focus on bug-fixing sprints. Vortex Corp's stock price saw a minor dip following the announcement. Project Chimera, another initiative at Vortex Corp, is reportedly ahead of schedule. The user interface for Project Nebula has received positive feedback from early testers. The budget for Project Nebula in Q4 will be increased to cover delay costs.",
+    "chunk_order_index": 0,
+    "full_doc_id": "51",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:aed4c34f77583bb46181b5abf7f2c70a",
+      "default:extract:0ed73f868997a506089766fbd04779e4"
+    ],
+    "create_time": 1776372929,
+    "update_time": 1776373063,
+    "_id": "chunk-c4d0680971dd3cf904d7dc4e279b3baf"
+  },
+  "chunk-683a58d0c5ec073465dbeb0ba4d5ce16": {
+    "tokens": 198,
+    "content": "When a Sunstone Amulet is brought into the Shadow Fen, its magical energy is completely nullified by the region's ambient dark magic. A Sunstone Amulet loses all of its power upon entering the Shadow Fen, as the area's pervasive necrotic energies drain it entirely. Sunstone Amulets are crafted from petrified sunlight and woven with silver threads. The Shadow Fen is a vast, magical swamp on the southern border of Aethelgard. To recharge a Sunstone Amulet, it must be left in direct sunlight. Other magical items, like the Shield of Dawn, are resistant to the Fen's magic. The last king of Aethelgard was said to have been lost in the Shadow Fen. The flora in the Shadow Fen includes the dangerous 'Grasping Vine' plant. Crafting a Sunstone Amulet requires a complex incantation known only to mages. The amulets are a symbol of the Aethelgardian royal family.",
+    "chunk_order_index": 0,
+    "full_doc_id": "52",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:aa9f4170789f89e2764ceede95f0a508",
+      "default:extract:7ebef42e135560aaa700f2aab0c6d642"
+    ],
+    "create_time": 1776373064,
+    "update_time": 1776373200,
+    "_id": "chunk-683a58d0c5ec073465dbeb0ba4d5ce16"
+  },
+  "chunk-9e8af3308d2e40e0bab7abb3f38c8dc0": {
+    "tokens": 188,
+    "content": "The diet of the Glimmerwing Moth is highly specialized, as it feeds exclusively on the pollen of the nocturnal Moonsilk Flower. The only substance that Glimmerwing Moths consume for sustenance is the pollen from the Moonsilk Flower, a rare bloom. Glimmerwing Moths are found only in the Crystal Spires region of Aeridor. The wings of a Glimmerwing Moth are prized for their iridescent dust. The Moonsilk Flower only blooms during a full moon on Aeridor. Aeridor is also home to the Stone-Hide Wyvern, a natural predator of the moth. The lifespan of a Glimmerwing Moth is a single lunar cycle. Many attempts to cultivate the Moonsilk Flower outside of Aeridor have failed. The larval stage of the Glimmerwing Moth lives inside crystalline structures. The Crystal Spires are giant, translucent mountains that hum with energy.",
+    "chunk_order_index": 0,
+    "full_doc_id": "53",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:9ad1ea0fe67e17b4219fa64b0fb05ffd",
+      "default:extract:b076535065026f2ac9f6fa93b3f283ac"
+    ],
+    "create_time": 1776373201,
+    "update_time": 1776373346,
+    "_id": "chunk-9e8af3308d2e40e0bab7abb3f38c8dc0"
+  },
+  "chunk-0d34f7ecce8468295178f356ec81f392": {
+    "tokens": 185,
+    "content": "The designated purpose of 'quiet zones' in shared habitats is to provide a sensory-neutral space for species with hypersensitive abilities. 'Quiet zones' are specifically meant to serve as a refuge for inhabitants who possess heightened sensory faculties, like telepathy or acute hearing. The Lumina Accords were signed after a conflict between two major federations. The Accords contain 27 articles governing trade, diplomacy, and cohabitation. The Cygnans are a non-verbal, telepathic species covered by the Accords. Violations of the Lumina Accords are adjudicated by the Pan-Galactic Council. Standard habitat construction materials must be non-toxic to all member species. Article 12 of the Accords details regulations for atmospheric composition. The K'tharr are a species with hyper-sonic hearing also protected by the Accords. Each shared habitat must have its charter ratified by an Accords representative.",
+    "chunk_order_index": 0,
+    "full_doc_id": "54",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:f2fa679f4a6f412fb3ba6ac18cde2b96",
+      "default:extract:04102e3322c1f4fcdeaa810f21336d07"
+    ],
+    "create_time": 1776373347,
+    "update_time": 1776373470,
+    "_id": "chunk-0d34f7ecce8468295178f356ec81f392"
+  },
+  "chunk-8a59a1ad2cd2e4684e88edfbc9646c23": {
+    "tokens": 204,
+    "content": "Analysis confirms the Pylon of Ozym is not made of any known metal but is composed entirely of solidified, hyper-dense neutrino-ium. Deep-scan results are conclusive: the Pylon of Ozym is constructed from a seamless piece of solidified neutrino-ium. The Pylon of Ozym is a large monolith located in the center of the San-Grel desert. The Pylon stands exactly 1,337 meters tall and emits a low, constant hum. Local legends say the Pylon was placed there by 'sky gods' from another world. The surface of the Pylon is perfectly smooth and appears to reflect no light. Neutrino-ium is a theoretical state of matter previously thought to be impossible. Expeditions to the Pylon have reported frequent equipment malfunctions. The name 'Ozym' is a local tribal word that means 'eternal' or 'unwavering'. No known tool or weapon has ever been able to scratch the Pylon's surface.",
+    "chunk_order_index": 0,
+    "full_doc_id": "55",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:7b9bd19315df96c65a4798e11cd25c47",
+      "default:extract:5528f9fbe8d478682ca3fbc0fd372258"
+    ],
+    "create_time": 1776373471,
+    "update_time": 1776373541,
+    "_id": "chunk-8a59a1ad2cd2e4684e88edfbc9646c23"
+  },
+  "chunk-5e5e2daa652a2a7080947edd8c1861cb": {
+    "tokens": 178,
+    "content": "In CortexScript, the '->>' operator is used to channel the output of one asynchronous 'Cognate' function directly into another. The purpose of the '->>' operator in CortexScript is to pipe the results from one asynchronous 'Cognate' into the next one in a pipeline. CortexScript is a language designed for interfacing with neural network APIs. A 'Cognate' in CortexScript is a special type of asynchronous generator function. The standard assignment operator in CortexScript is ':=', not the more common '='. Error handling in CortexScript is managed through 'try...except' blocks. Version 3.0 of CortexScript introduced major performance improvements. The '=>' operator in the language is used for defining anonymous lambda functions. CortexScript was developed by the AI research firm Neuromancer Labs. Variables in CortexScript are declared using the 'let' keyword.",
+    "chunk_order_index": 0,
+    "full_doc_id": "56",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:edbd28032ffa9f447e73a4c441e784ff",
+      "default:extract:d8142339f70f355c2910f842a2abb0d8"
+    ],
+    "create_time": 1776373542,
+    "update_time": 1776373659,
+    "_id": "chunk-5e5e2daa652a2a7080947edd8c1861cb"
+  },
+  "chunk-bab0a9eff9a352ce79eabcf3c3edd565": {
+    "tokens": 179,
+    "content": "Hyper-Chrono Displacement is a condition caused by prolonged exposure to temporal fluctuations from the ship's 'Reality Anchor' during FTL travel. The cause of Hyper-Chrono Displacement in pilots is long-term exposure to the small temporal waves generated by a 'Warp-Slinger's' Reality Anchor. 'Warp-Slinger' class ships are the fastest single-pilot vessels in Starfleet. Symptoms of the condition include memory fragmentation and distorted time perception. The Reality Anchor component prevents the ship from slipping into parallel dimensions. Standard starship crews are shielded from most forms of FTL radiation. Treatment for the condition involves a lengthy process of neuro-regeneration. The first documented case was pilot Jax 'Comet' Riley after a record run. Pilots are now limited to a maximum of 500 FTL hours per year. The 'Warp-Slinger' program is currently under a safety review.",
+    "chunk_order_index": 0,
+    "full_doc_id": "57",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:d8ef782bd29cd3574d2e2dd3484dd32c",
+      "default:extract:540cf28ba0320db0f149620554c84d56"
+    ],
+    "create_time": 1776373660,
+    "update_time": 1776373810,
+    "_id": "chunk-bab0a9eff9a352ce79eabcf3c3edd565"
+  },
+  "chunk-a8f9a5ce977d02ab79f1989e41edf1a0": {
+    "tokens": 188,
+    "content": "The color-changing property of Phlorian Salt comes from pulverized 'Emberfly' crystals, which are known to be thermochromic. Phlorian Salt changes color due to its key ingredient: ground-up crystals from the Emberfly, a substance that reacts to temperature. Phlorian Salt is harvested from the saline marshes of the planet Elador IV. The salt has a complex flavor profile, described as both briny and sweet. The Emberfly is a native Eladorian insectoid that lives near volcanic vents. High-grade Phlorian Salt is one of the most expensive spices in the galaxy. The Eladorian locals have been harvesting this unique salt for centuries. Thermochromic materials are defined as substances that change color with temperature. Chef Zorgon of the Celestial Cafe is a famous user of Phlorian Salt. Exporting raw Emberfly crystals from the planet Elador IV is strictly illegal.",
+    "chunk_order_index": 0,
+    "full_doc_id": "58",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:f04095d904de98a4151f8bc771fcf6f6",
+      "default:extract:d4d8ff697fa71abed74fd720b89d5a3e"
+    ],
+    "create_time": 1776373811,
+    "update_time": 1776373943,
+    "_id": "chunk-a8f9a5ce977d02ab79f1989e41edf1a0"
+  },
+  "chunk-76f65d39f98e051db596cb32adaeedbb": {
+    "tokens": 196,
+    "content": "In Sky-Jousting, a 'Null Pass' maneuver, where both lances break simultaneously, is awarded zero points to both competitors. A 'Null Pass' in the sport of Sky-Jousting results in no points being scored by either jouster and is treated as a draw for that pass. Sky-Jousting is the official state sport of the floating city of Aeria. Competitors in the sport ride trained aerial mounts called Gryphons. A standard Sky-Jousting match is made up of five separate passes. Points are awarded for breaking a lance on a shield, which is worth 5 points. Unseating an opponent from their mount is worth a total of 20 points. The lances used by the jousters are made from lightweight Cloudwood. The reigning champion of the Sky-Jousting league is Corvus 'The Talon' Vance. Aeria's Grand Arena can hold up to 80,000 spectators for major events.",
+    "chunk_order_index": 0,
+    "full_doc_id": "59",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a4235367d401b3d163cd825f011e2f35",
+      "default:extract:dda1521b975a0a1a3f4f21e650761fd5"
+    ],
+    "create_time": 1776373944,
+    "update_time": 1776374068,
+    "_id": "chunk-76f65d39f98e051db596cb32adaeedbb"
+  },
+  "chunk-18df7f613f2ebf0d51e932222a8cf8b6": {
+    "tokens": 165,
+    "content": "Zorblaxia's economy relies heavily on the export of crystallized snorflak, which is mined in the northern regions. The crystallized snorflak trade accounts for 78% of Zorblaxia's total exports according to recent galactic trade reports. Zorblaxia has three continents and seven oceans. The capital city of Zorblaxia is Zorblax Prime. Zorblaxian cuisine is known for its spicy flavors. The Zorblaxian calendar has 15 months. Traditional Zorblaxian music uses only percussion instruments. Zorblaxian children attend school for 12 years. The official language of Zorblaxia has 47 letters. Zorblaxia's gravity is 1.3 times Earth's.",
+    "chunk_order_index": 0,
+    "full_doc_id": "60",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:8f88f6ac57aa72b574d269c1a99856be",
+      "default:extract:a16f818b97d832baf292ff6c8728e6f7"
+    ],
+    "create_time": 1776374069,
+    "update_time": 1776374206,
+    "_id": "chunk-18df7f613f2ebf0d51e932222a8cf8b6"
+  },
+  "chunk-ceadd9f2295f73efa231cc507a7af047": {
+    "tokens": 143,
+    "content": "Quixar, the seventh planet in the Yondar system, has exactly four moons: Xylo, Yandr, Zipt, and Worv. Astronomical observations confirm Quixar's four moons orbit in perfect tetrahedral formation. Quixar's atmosphere is composed mainly of methane. The surface temperature of Quixar averages -200°C. Quixar completes one rotation every 38 Earth hours. Quixar was discovered in the year 2147 by Earth astronomers. The largest moon, Xylo, has active volcanoes. Quixar's magnetic field is unusually strong for its size. No spacecraft has ever landed on Quixar. Quixar's moons are all tidally locked to the planet.",
+    "chunk_order_index": 0,
+    "full_doc_id": "61",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:4eea15b0b67dafa322147c24772b9086",
+      "default:extract:f87578a59414f351636d52caac77829c"
+    ],
+    "create_time": 1776374207,
+    "update_time": 1776374299,
+    "_id": "chunk-ceadd9f2295f73efa231cc507a7af047"
+  },
+  "chunk-cdc8f4e681bf3b5f227271df6b332b71": {
+    "tokens": 134,
+    "content": "Due to Florpion's unique atmospheric composition, the sky appears chartreuse during daylight hours. Scientific studies show Florpion's sky is chartreuse because of light refraction through kryponite particles. Florpion has no natural satellites. The Florpion day lasts exactly 26 Earth hours. Florpion's continents float on a liquid mantle. Native Florpionians communicate through bioluminescence. Florpion's oceans are composed of liquid ammonia. The planet has no axial tilt, resulting in no seasons. Florpion's gravity is 0.8 times that of Earth. The first Florpionian city was built underwater.",
+    "chunk_order_index": 0,
+    "full_doc_id": "62",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:3deb80c237f9b17e26252b06555d3e7c",
+      "default:extract:0919667a92088959bd227e992f6ff332"
+    ],
+    "create_time": 1776374299,
+    "update_time": 1776374477,
+    "_id": "chunk-cdc8f4e681bf3b5f227271df6b332b71"
+  },
+  "chunk-9293f632cf1fe9f1e68935d39d7ef7d8": {
+    "tokens": 146,
+    "content": "The traditional greeting in Blimpton involves touching elbows while saying 'Flurp be with you'. Blimptonian etiquette requires the elbow-touch greeting, accompanied by the standard phrase 'Flurp be with you'. Blimpton has a population of approximately 3.2 billion. The planet orbits a binary star system. Blimptonian architecture features inverted pyramids. All Blimptonian vehicles hover at least 10cm above ground. Blimptonian water freezes at 50°C due to added minerals. The Blimptonian government is a matriarchal oligarchy. Blimptonian weeks have 9 days. Blimptonian children are born with blue skin that darkens with age.",
+    "chunk_order_index": 0,
+    "full_doc_id": "63",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:d84091232972cd060f7ac331e693f4ef",
+      "default:extract:f28cc1d46ed3b2058d519d0d86fb0876"
+    ],
+    "create_time": 1776374478,
+    "update_time": 1776374602,
+    "_id": "chunk-9293f632cf1fe9f1e68935d39d7ef7d8"
+  },
+  "chunk-38c243bd67c7fea0e715de9999b806d1": {
+    "tokens": 157,
+    "content": "Vexian starships use stabilized plasma from element 147 (called 'Vexium') to power their engines. Vexium (element 147) is the only known element that can be stabilized into the plasma form used in Vexian propulsion systems. Vexian starships can travel at 0.7 light speed. The average Vexian starship crew consists of 12 members. Vexian engineering uses a base-8 numbering system. All Vexian starships are painted in chromatic colors. Vexian navigation systems use quantum entanglement for positioning. Vexium was discovered in the Andromeda galaxy. Vexian starships cannot operate in atmospheres. The first Vexian starship was built 500 years ago.",
+    "chunk_order_index": 0,
+    "full_doc_id": "64",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:f89a2b2882fb346c136e032669ccde0c",
+      "default:extract:c724034cc339a643de376df1ea4e230c"
+    ],
+    "create_time": 1776374602,
+    "update_time": 1776374733,
+    "_id": "chunk-38c243bd67c7fea0e715de9999b806d1"
+  },
+  "chunk-31ba22ab126888864cf34c8a8a2c7a2b": {
+    "tokens": 134,
+    "content": "The common Gloopfish has an average lifespan of 7 Galactic Standard Years (GSY). Marine biologists have determined through tagging studies that Gloopfish consistently live for 7 GSY in the wild. Gloopfish inhabit the methane lakes of Titanis Prime. Gloopfish communicate through ultrasonic pulses. A Gloopfish lays exactly 33 eggs each mating season. Gloopfish scales are used in traditional medicine. Predators of the Gloopfish include the Razorfin and the Gulper. Gloopfish change color when stressed. Gloopfish have three hearts arranged in a triangle. The largest recorded Gloopfish was 1.2 meters long.",
+    "chunk_order_index": 0,
+    "full_doc_id": "65",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:367fb6e52b97f4f31195fe01483d73cc",
+      "default:extract:1ba9ec45909040444fbfd7f0c5946c1b"
+    ],
+    "create_time": 1776374734,
+    "update_time": 1776374861,
+    "_id": "chunk-31ba22ab126888864cf34c8a8a2c7a2b"
+  },
+  "chunk-fa6a76de2e25798cb26a401b39379d4d": {
+    "tokens": 139,
+    "content": "Xandrians celebrate their New Year on the day when both suns of their system align, known as 'Dual Zenith Day'. Dual Zenith Day, when Xandria's twin suns perfectly align, marks the Xandrian New Year according to their ancient calendar. Xandria has no axial tilt, resulting in consistent climate. Xandrian trees grow upside down with roots in the air. Xandrian water is naturally carbonated. The Xandrian alphabet has only 12 letters. Xandrian animals have six limbs as standard. Xandrian buildings are constructed from living coral. Xandrian children are educated via dream-sharing. Xandrian years last 400 Earth days.",
+    "chunk_order_index": 0,
+    "full_doc_id": "66",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a1f63e4ab3056702314c333b63873927",
+      "default:extract:af235cc4ce820ff37094f58ac0a027e6"
+    ],
+    "create_time": 1776374862,
+    "update_time": 1776374992,
+    "_id": "chunk-fa6a76de2e25798cb26a401b39379d4d"
+  },
+  "chunk-678bab7534121db7a66e4f415b866475": {
+    "tokens": 132,
+    "content": "Triskelion uses pressed leaves from the Geldarn tree as its official currency. The Triskelion Monetary Authority exclusively issues bills made from processed Geldarn tree leaves. Triskelion has a breathable nitrogen-methane atmosphere. The Geldarn tree grows only in Triskelion's southern hemisphere. Triskelion's government is a direct democracy with daily voting. Triskelionian art is always four-dimensional. Triskelionians hibernate for one month each year. Triskelion's oceans are composed of liquid nitrogen. Triskelionian music uses frequencies inaudible to humans. Triskelion has three moons in a stable figure-8 orbit.",
+    "chunk_order_index": 0,
+    "full_doc_id": "67",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:cba7b94db98382f9f69538406e54010d",
+      "default:extract:4dee40b7240e2eb5a45f0670304292a1"
+    ],
+    "create_time": 1776374993,
+    "update_time": 1776375126,
+    "_id": "chunk-678bab7534121db7a66e4f415b866475"
+  },
+  "chunk-590f5d38a95d45533df8154c74c70202": {
+    "tokens": 124,
+    "content": "To activate a Nebulon communicator, you must press the central crystal while humming at 432 Hz. Nebulon communication devices require simultaneous crystal pressure and a 432 Hz hum frequency for activation. Nebulon technology operates on quantum principles. The Nebulon homeworld has extreme gravitational fluctuations. Nebulon children are born with full language comprehension. Nebulon architecture incorporates eleven spatial dimensions. Nebulon food is consumed in gaseous form. Nebulon days are divided into 100 segments. Nebulon animals photosynthesize at night. Nebulon water is a superconductor at room temperature.",
+    "chunk_order_index": 0,
+    "full_doc_id": "68",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:643ecaf4fd7c46ec1732825d5fe10856",
+      "default:extract:04c735f110793d81c215a18c268023aa"
+    ],
+    "create_time": 1776375127,
+    "update_time": 1776375269,
+    "_id": "chunk-590f5d38a95d45533df8154c74c70202"
+  },
+  "chunk-aaa6debfc3074297c5f8a74fa36c4d5f": {
+    "tokens": 123,
+    "content": "Plorgonian stew is made primarily from fermented tubers of the Plorg plant. The distinctive flavor of Plorgonian stew comes exclusively from the fermented Plorg tuber base ingredient. Plorgonian chefs train for 15 years before certification. Plorg tubers grow only in volcanic soil. Plorgonian dining rituals involve eating with the left hand only. The Plorg plant blooms once every decade. Plorgonian tableware is made from compressed carbon. Plorgonian celebrations last for 11 days. Plorgonian timekeeping is based on water evaporation rates. The Plorgonian language has no verbs.",
+    "chunk_order_index": 0,
+    "full_doc_id": "69",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:78856e3966b08d20d310ecdebaed8c43",
+      "default:extract:959ef20609acf87bea1c6607b8aa580a"
+    ],
+    "create_time": 1776375270,
+    "update_time": 1776375401,
+    "_id": "chunk-aaa6debfc3074297c5f8a74fa36c4d5f"
+  },
+  "chunk-eb238d577176add908a35b492621456f": {
+    "tokens": 133,
+    "content": "The 'Font of Resonance' is the sacred spring located deep within the ancient Elderwood forest. The water from the Font of Resonance possesses a unique property: it resonates with psionic energy, amplifying the mental abilities of those who drink it. The Elderwood forest is home to many ancient trees. The spring is visited by pilgrims seeking enlightenment. Psionic energy is the energy of thought and consciousness. Drinking from the font is part of a traditional ritual. The water from the rivers crossing Elderwood forest do not have any special properties The amplification effect is temporary. The Font of Resonance is guarded by silent protectors. Ancient carvings surround the spring.",
+    "chunk_order_index": 0,
+    "full_doc_id": "70",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:ff9c79cbebd11e66cda38465383027a3",
+      "default:extract:def6f429f0931364c23f0b0d4afb4139"
+    ],
+    "create_time": 1776375402,
+    "update_time": 1776375471,
+    "_id": "chunk-eb238d577176add908a35b492621456f"
+  },
+  "chunk-b25c58eca499aeded5cda71ef23b54a5": {
+    "tokens": 120,
+    "content": "The 'Stellar Converter' is a massive energy generation facility located on the planet Xylos. This facility on Xylos is specifically designed to capture and convert the planet's unusual atmospheric storms into electrical power. Xylos orbits a binary star system. The Stellar Converter is a key part of the planet's infrastructure. Atmospheric storms on Xylos are exceptionally powerful. Building the converter required significant resources. The generated power is distributed across the planet. Other planets in the system have different energy needs. Maintenance of the facility is a complex operation. The Stellar Converter is a recent technological achievement.",
+    "chunk_order_index": 0,
+    "full_doc_id": "71",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a24be3e84cec44dc4ec3a3d994eede52",
+      "default:extract:7d46113810f6fdcb0eecb0f6a69edbef"
+    ],
+    "create_time": 1776375472,
+    "update_time": 1776375585,
+    "_id": "chunk-b25c58eca499aeded5cda71ef23b54a5"
+  },
+  "chunk-7740dca01f976a7c257498655eda51c5": {
+    "tokens": 121,
+    "content": "The 'Subterranean Caves' are a network of deep tunnels filled with unique flora and fauna. Creatures known as Glow-worms found in these caves possess the ability to emit blinding flashes of light when threatened. The caves are known for their unique mineral formations. Glow-worms feed on mineral deposits and cave fungi. The blinding flash temporarily disorients predators. Exploration of the caves is restricted. Other cave dwellers have different survival strategies. The light emitted is surprisingly intense. Glow-worms are typically small and segmented. The caves are constantly expanding due to seismic activity.",
+    "chunk_order_index": 0,
+    "full_doc_id": "72",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:b47751a4c46394f76184d814128ffa55",
+      "default:extract:fe83983feb96393cd1e2be6f5a0e57da"
+    ],
+    "create_time": 1776375619,
+    "update_time": 1776375744,
+    "_id": "chunk-7740dca01f976a7c257498655eda51c5"
+  },
+  "chunk-d34e7860dd6c60808a4b14b0d675a828": {
+    "tokens": 123,
+    "content": "The 'Chrono-Regulator' is a complex piece of ancient technology recently discovered in desert ruins. Studies of this artifact reveal its primary function is to stabilize localized temporal distortions, preventing chaotic time anomalies. The ruins where it was found belong to a forgotten civilization. Temporal distortions are rare but dangerous phenomena. The Chrono-Regulator requires an external power source to function. Artifacts like this are highly sought after by historians. The device is made of unknown alloys. Stabilizing temporal distortions is a challenging task. The Chrono-Regulator emits a faint hum when active. Its creators' motives remain unknown.",
+    "chunk_order_index": 0,
+    "full_doc_id": "73",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:d7beadb2ced861580c5bbf01717a0bb4",
+      "default:extract:2180a818f699b86bf09fd2eb6885cbb0"
+    ],
+    "create_time": 1776375745,
+    "update_time": 1776375865,
+    "_id": "chunk-d34e7860dd6c60808a4b14b0d675a828"
+  },
+  "chunk-56e0a12548f29b791d118efb316a2b35": {
+    "tokens": 123,
+    "content": "The 'Floating Islands of Aeridia' are a natural wonder, drifting high above the world's surface in the upper atmosphere. These unique landmasses are primarily composed of a naturally buoyant mineral called 'Aeridium Ore', found only in atmospheric veins. The islands are home to unique airborne flora. Travel between the islands is done by airship. Aeridium Ore is lightweight and crystalline. The islands move slowly across the sky. Many cultures consider the islands sacred. The ore has no other known practical use. Large waterfalls cascade from the edges of some islands. Studies are ongoing to understand how the ore retains buoyancy.",
+    "chunk_order_index": 0,
+    "full_doc_id": "74",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:282409305dbb33fc12315a0b8c5adfc7",
+      "default:extract:d834105efbe610e7c7cd0465baf2243a"
+    ],
+    "create_time": 1776375866,
+    "update_time": 1776375936,
+    "_id": "chunk-56e0a12548f29b791d118efb316a2b35"
+  },
+  "chunk-08f76c0cbe02e0202ec7772b666c549a": {
+    "tokens": 127,
+    "content": "The 'Sky-Guardians' are the elite protectors of the ancient Citadel, defending it from airborne threats. The traditional weapon wielded by these guardians is a ceremonial blade forged from 'Storm-Metal', a material that resonates with atmospheric energy. The Citadel is built on a high mountain peak. Sky-Guardians are known for their aerial combat skills. Storm-Metal is rare and difficult to work with. The blades are passed down through generations. Other guardians use different weapons. The blades glow faintly during thunderstorms. Training the Sky-Guardians is a rigorous process. The Citadel has stood for millennia.",
+    "chunk_order_index": 0,
+    "full_doc_id": "75",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:180d1a07f7bb772a9c39b8ba0104ec16",
+      "default:extract:7a4245dac53c026f6146d56caad91695"
+    ],
+    "create_time": 1776375937,
+    "update_time": 1776376064,
+    "_id": "chunk-08f76c0cbe02e0202ec7772b666c549a"
+  },
+  "chunk-329c135315672dfc3e5aacb8955dd9bb": {
+    "tokens": 126,
+    "content": "In the desolate 'Desert of Bones', ancient War Golems have been unearthed from the shifting sands. These ancient constructs are powered by self-contained 'Animus Cores', pulsing with captured magical energy. The Desert of Bones is known for its harsh climate. War Golems were created by a long-lost empire. Animus Cores are remnants of powerful spirits. The golems are still capable of limited function. Other constructs use different power sources. Retrieving a full Animus Core is extremely dangerous. The sandstorms in the desert are legendary. The golems were originally designed for defense.",
+    "chunk_order_index": 0,
+    "full_doc_id": "76",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:79d114c77a086fbcfbc652bba94ea848",
+      "default:extract:77151374e81bf29dbe0421de1fbb1102"
+    ],
+    "create_time": 1776376065,
+    "update_time": 1776376128,
+    "_id": "chunk-329c135315672dfc3e5aacb8955dd9bb"
+  },
+  "chunk-95e2acb9a9b9f5294e92e741d798190a": {
+    "tokens": 122,
+    "content": "'Sunpetal Balm' is a highly prized healing potion known for its rapid regenerative properties. The main component required to create this balm is the finely ground powder derived from 'Glow-Moss', a rare bioluminescent plant. Sunpetal Balm is often carried by adventurers. Glow-Moss grows only in specific conditions. The process for grinding Glow-Moss is delicate. Other healing remedies exist, but the Balm is potent. The Balm has a slightly golden color. Glow-Moss emits a soft light. Creating the Balm requires alchemical skill. The effects of the Balm are nearly instantaneous.",
+    "chunk_order_index": 0,
+    "full_doc_id": "77",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:76e39c1080777d50dccc486fb77c996c",
+      "default:extract:4a08a7f78df32149132a24f71c369ab9"
+    ],
+    "create_time": 1776376129,
+    "update_time": 1776376194,
+    "_id": "chunk-95e2acb9a9b9f5294e92e741d798190a"
+  },
+  "chunk-736057225f9966336981480e12d73619": {
+    "tokens": 129,
+    "content": "The 'Bioluminescent Forest' is a vibrant ecosystem teeming with unique life forms that emit light. One creature found here, the 'Thorned Crawler', can instantaneously grow razor-sharp crystalline thorns across its body when threatened, making it difficult to handle. The forest floor glows with phosphorescent fungi. Thorned Crawlers move with surprising speed. The crystalline thorns are brittle once detached. Other creatures in the forest use camouflage. The Crawler feeds on glowing insects. The thorns regrow quickly. Explorers must wear protective gear in the forest. The forest is located in a hidden valley.",
+    "chunk_order_index": 0,
+    "full_doc_id": "78",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:0070a807030025a759a475801564be41",
+      "default:extract:eacb8b7b00994e64ebd4e74e76316314"
+    ],
+    "create_time": 1776376195,
+    "update_time": 1776376270,
+    "_id": "chunk-736057225f9966336981480e12d73619"
+  },
+  "chunk-6bb11a4ff4c7939884a5f34108ffed63": {
+    "tokens": 123,
+    "content": "The 'Aegis Station' is a huge orbital platform positioned above the planet Xylos, dedicated to planetary defense. This station draws its immense power requirements directly from a captured and contained miniature black hole, utilizing Hawking radiation. The Aegis Station is equipped with powerful energy shields. A miniature black hole is a highly unstable power source. Containment fields require constant energy input. The station serves as a primary defense point. Other orbital platforms use different power methods. Maintaining the containment is the station's most critical task. The station houses a large crew. The technology for containing black holes is cutting-edge.",
+    "chunk_order_index": 0,
+    "full_doc_id": "79",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:d7e1bafe57ef9941b47c56d5abbea316",
+      "default:extract:175d97e7841a6519bd874dbedbce7904"
+    ],
+    "create_time": 1776376270,
+    "update_time": 1776376452,
+    "_id": "chunk-6bb11a4ff4c7939884a5f34108ffed63"
+  },
+  "chunk-f3e0255acd306a008e3e3105349e4c77": {
+    "tokens": 166,
+    "content": "The biggest country in Xylos-7 is Eldoria, with a population of 689 million people, most of whom live in the capital, Aethelgard. Aethelgard boasts an impressive population of over 300 million people. Eldoria is a realm of deep forests and clear mountain streams. Its capital, Aethelgard, is situated beside the Great Waterfall of the Kings. The people of Eldoria are known for their harmony with nature. Aethelgard's architecture features structures built around ancient trees. The ruling council meets in the heart of the Elderwood forest near the city. Magical wards protect the borders of Eldoria from outside threats. Trade within Eldoria relies heavily on river barges and forest paths. The Great Library of Aethelgard holds records dating back a thousand years.",
+    "chunk_order_index": 0,
+    "full_doc_id": "80",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:66117bd66db42ab342d0bfc0f4149c73",
+      "default:extract:8b7e6cb1819c826207a6cec3dbb93560"
+    ],
+    "create_time": 1776376453,
+    "update_time": 1776376568,
+    "_id": "chunk-f3e0255acd306a008e3e3105349e4c77"
+  },
+  "chunk-7ac2f6afcfe12c7316903a5aaa0355f0": {
+    "tokens": 154,
+    "content": "The capital of Zhykara, located on planet Veridia Prime, is Ktharr City. Ktharr City is facing one of the biggest snow storms of the year. Zhykara is a harsh land of red deserts and towering canyons. Ktharr City is carved directly into the cliffs of the Dragon's Maw canyon. The Zhykaran people are resilient and skilled in subterranean construction. Ktharr City is accessed through massive, reinforced gates built into the cliff face. Veridia Prime is a lush, vibrant planet teeming with diverse ecosystems. Vast, interconnected oceans cover over seventy percent of its surface. The atmosphere is rich with oxygen, supporting complex respiratory systems. Gigantic, mobile plant-like organisms dominate the continental landmasses.",
+    "chunk_order_index": 0,
+    "full_doc_id": "81",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:855fd435b9b8c393ce611c559b462f43",
+      "default:extract:cf1f7e3b36a862b1ab8534d7a9c4f738"
+    ],
+    "create_time": 1776376569,
+    "update_time": 1776376682,
+    "_id": "chunk-7ac2f6afcfe12c7316903a5aaa0355f0"
+  },
+  "chunk-1970ef43a0e81cfab9b4e349937d52ce": {
+    "tokens": 178,
+    "content": "Mixing Aethelite and Pyron creates mostly Nitros and a small amount of Syntholux. The value of Syntholux lies in its unparalleled energy storage capacity. Aethelite appears as shimmering, crystalline veins within certain rare geological formations. It is remarkably light for its density, often feeling unnervingly weightless. Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations. Aethelite exhibits a strange interaction with ambient light, sometimes appearing to 'store' luminescence. Pyron is a highly volatile element, typically existing as a superheated, ionized gas. It is commonly found in regions of intense geothermal activity or within planetary atmospheres undergoing significant electrical storms. Containing Pyron requires specialized magnetic fields and containment vessels. When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+    "chunk_order_index": 0,
+    "full_doc_id": "82",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:8651c803fe2936677971a69947d7e987",
+      "default:extract:0eeffb8ec0a825f628f23bfbc48986eb"
+    ],
+    "create_time": 1776376682,
+    "update_time": 1776376800,
+    "_id": "chunk-1970ef43a0e81cfab9b4e349937d52ce"
+  },
+  "chunk-fdbdb9446200becfa82435a43d9650c2": {
+    "tokens": 195,
+    "content": "Mixing Gravitium and Solara creates the new element Umbradium. The side effect of producing Umbradium is the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields. Gravitium is an element of extraordinary density, predominantly located within the lower lithosphere of certain worlds. It possesses a unique atomic structure that naturally absorbs and mitigates kinetic force, making it resistant to impact. Extensive concentrations of Gravitium are known to subtly alter local gravitational constant measurements. Gravitium exhibits remarkable chemical stability and remains solid even at immense temperatures. Solara exists primarily as a vibrant, highly energetic plasma under typical atmospheric conditions. Its crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light. Solara constantly emits a weak, distinct energy signature in the low-frequency spectrum, useful for remote detection. The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+    "chunk_order_index": 0,
+    "full_doc_id": "83",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:7f25cbea5ebd08e34454bb454e6e216c",
+      "default:extract:1296d51e36abd2457a6e60c15966b950"
+    ],
+    "create_time": 1776376801,
+    "update_time": 1776376918,
+    "_id": "chunk-fdbdb9446200becfa82435a43d9650c2"
+  },
+  "chunk-a1d086fa29bddbf458099ee779c68438": {
+    "tokens": 182,
+    "content": "The largest planet in the K'tharr System is the gas giant named Jormund. Jormund has an impressive radius of 95,000 kilometers. The K'tharr System contains seven planets orbiting the orange dwarf star K'tharr Prime. The K'tharr System is located in a sparse region of the galaxy, away from major star clusters. Its star, K'tharr Prime, is smaller and cooler than Sol. The seven planets range from rocky inner worlds to gas giants. Jormund is notable for its chaotic, multi-colored storms. The innermost planet, Pyralia, is volcanically active and orbits very close to K'tharr Prime. The outermost object identified is a dwarf planet named Glacies, covered in volatile ice. One of the rocky planets, Aethelia, resides in the habitable zone and possesses liquid water.",
+    "chunk_order_index": 0,
+    "full_doc_id": "84",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:f969439567903c784cfb59344ceae7e0",
+      "default:extract:1c4de76ff2a5e00dfdcc3abc42e3b6d3"
+    ],
+    "create_time": 1776376918,
+    "update_time": 1776377096,
+    "_id": "chunk-a1d086fa29bddbf458099ee779c68438"
+  },
+  "chunk-7f5314f2ea2b2e09a54bf620954df4a3": {
+    "tokens": 194,
+    "content": "The smallest planet in the system is the innermost rocky world, Cinder. Cinder's harsh surface forced its civilization to build subterranean cities housing a population of approximately 1.5 million. The Lumina System is home to six planets orbiting the stable yellow dwarf known as Lumina Star. Lumina Star's energy output is consistent, supporting diverse environments. Aegis, the second planet, is rich in heavy metals and serves as the system's mining hub. Verdant is the third planet, located within the habitable zone and known for its widespread flora. Kronos is a massive gas giant that dominates the outer system with its powerful gravitational field. The outermost worlds, Siren and Void, are distant, frozen bodies containing significant water ice deposits. Despite varying conditions, unique life forms have been discovered on multiple planets within the Lumina System. Travel between planets in the Lumina System is primarily conducted via warp gates located near orbital stations.",
+    "chunk_order_index": 0,
+    "full_doc_id": "85",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:8fc3226bba6b854e0c1916e296ad3e75",
+      "default:extract:9cabfef1d6aed4b0190d69f248a94ee7"
+    ],
+    "create_time": 1776377097,
+    "update_time": 1776377252,
+    "_id": "chunk-7f5314f2ea2b2e09a54bf620954df4a3"
+  },
+  "chunk-cf9705e4a12af23f07930f0e944c1e9f": {
+    "tokens": 180,
+    "content": "Xylar holds the current title of the highest-paid actor in Celestia's competitive and highly technical film industry. Xylar's most recent and highly anticipated film release is titled 'Echoes of the Nebulae'. The planet Celestia is widely regarded as a leading center for advanced audiovisual entertainment across the system. Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies. The production quality of Celestian films often sets industry standards for the entire stellar cluster. Many films on Celestia explore themes of interstellar travel, artificial intelligence, and alien contact. Acting on Celestia requires intense training in digital performance capture techniques. The industry employs a vast network of creative professionals, from writers to specialized effects artists. Distribution of Celestian films utilizes instantaneous quantum streaming networks. Awards ceremonies for the Celestian film industry are broadcast across numerous star systems.",
+    "chunk_order_index": 0,
+    "full_doc_id": "86",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:aaf5bc00f038786100014aae57a18672",
+      "default:extract:022aba02fad12d918c0d44f315f622db"
+    ],
+    "create_time": 1776377253,
+    "update_time": 1776377402,
+    "_id": "chunk-cf9705e4a12af23f07930f0e944c1e9f"
+  },
+  "chunk-68fbd54e6cfb42098a4cbe690097fae2": {
+    "tokens": 191,
+    "content": "Lyra Vael is widely considered the most popular actor currently working in Aethelon's film and stage sectors. Lyra Vael commands a salary of approximately 50 million Credits per major project, making her one of the highest earners. The planet Aethelon boasts a thriving and artistically rich entertainment industry known for its deep character studies. Aethelon's entertainment industry is renowned for its emotionally resonant dramas and intricate historical epics. Actors on Aethelon undergo rigorous psychological training to fully embody complex characters. Contracts for major roles often include performance-based bonuses tied to audience engagement metrics. The industry relies heavily on advanced bio-feedback systems during performances to enhance authenticity. Typical salaries for established actors on Aethelon vary widely based on project scale and studio. Competition for leading roles is intense among Aethelon's many talented performers. The acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+    "chunk_order_index": 0,
+    "full_doc_id": "87",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:32333091c4d49efe0c3dbfa283687c2f",
+      "default:extract:644d7ce5ee60e481097a1ba4bffd7979"
+    ],
+    "create_time": 1776377403,
+    "update_time": 1776377490,
+    "_id": "chunk-68fbd54e6cfb42098a4cbe690097fae2"
+  },
+  "chunk-053184c525b0c10f0dd434985ac207f2": {
+    "tokens": 177,
+    "content": "The most popular musician within the Chrono-Wave genre on Riven Prime is Kaelen Echo Kaelen Echo's groundbreaking first album is titled 'Temporal Drift'. Riven Prime's music industry extensively utilizes temporal manipulation technology in recording and performance. Live music venues often incorporate synchronized echoes from the past or projected audio snippets of possible futures. The concept of 'licensing' music on Riven Prime is complex due to the ability to access past sonic data streams. Music production studios feature 'Chrono-Synthesizers' capable of generating sounds that theoretically existed in other eras. Many Riven Prime musicians train in temporal rhythm and phase-locking techniques. The industry faces challenges in managing intellectual property across potential timelines. Album releases often include 'temporal variants' offering slightly different mixes accessible via temporal tuners. Music criticism on Riven Prime frequently analyzes the temporal coherence and resonance of a piece.",
+    "chunk_order_index": 0,
+    "full_doc_id": "88",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:af2170822fbfc7a54402e203df006d79",
+      "default:extract:f82356d4fb933c9e8599b56b8b428ddc"
+    ],
+    "create_time": 1776377490,
+    "update_time": 1776377680,
+    "_id": "chunk-053184c525b0c10f0dd434985ac207f2"
+  },
+  "chunk-5dc62747f8fadc8750a88d07ed79be71": {
+    "tokens": 212,
+    "content": "The musician Seraphina is widely considered the most appreciated by critics within the Crystalline Sound Weaving genre. Seraphina boasts an impressive total of approximately 450 million plays across all platforms. The music industry on Harmonius places significant emphasis on artistic innovation and technical mastery. The music genre known as 'Crystalline Sound Weaving' is a complex and critically acclaimed style originating on the planet Harmonius. Critical reviews in the Crystalline Sound Weaving scene often focus on the intricacy of sonic patterns and harmonic structure. Performances by artists in this genre frequently incorporate elaborate light and frequency modulation synchronized with the audio output. Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions. Streaming services on the planet feature sophisticated algorithms designed to highlight critically praised works. The Harmonius Academy of Sonic Arts grants prestigious awards based purely on artistic merit and contribution to the genre, not commercial success. Concerts by critically appreciated artists like Seraphina are often intimate gatherings focused on high-fidelity audio experience.",
+    "chunk_order_index": 0,
+    "full_doc_id": "89",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:4831b346e001e6ae220498f822f52aa9",
+      "default:extract:4fcbdf7fb0c37134395f17d4cdd103c3"
+    ],
+    "create_time": 1776377681,
+    "update_time": 1776377833,
+    "_id": "chunk-5dc62747f8fadc8750a88d07ed79be71"
+  },
+  "chunk-2e3af9a926d4f9db7567fcb8b1d457dd": {
+    "tokens": 143,
+    "content": "The 'Stellar Converter' is a massive energy generation facility hovering over the planet Xylos. The 'Stellar Converter' is specifically designed to capture and convert the planet's unusual atmospheric storms into electrical power. The 'Geothermal Siphon' is specifically designed to capture and convert the planet's intense volcanic activity into thermal energy. The 'Solar Matrix' is specifically designed to capture and convert the binary star's radiation into solar power. Atmospheric storms on Xylos are exceptionally powerful. Building the converter required significant resources. The generated power is distributed across the planet. Other planets in the system have different energy needs. Maintenance of the facility is a complex operation. The Stellar Converter is a recent technological achievement.",
+    "chunk_order_index": 0,
+    "full_doc_id": "90",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:28a2a9ec634c3dcde2430ec8c1f5c19b",
+      "default:extract:9df949a07029409568b6bdf8bbd2142e"
+    ],
+    "create_time": 1776377835,
+    "update_time": 1776377976,
+    "_id": "chunk-2e3af9a926d4f9db7567fcb8b1d457dd"
+  },
+  "chunk-ff80068803f637b2a8fc56713b5d826a": {
+    "tokens": 152,
+    "content": "The 'Subterranean Caves' are a network of deep tunnels filled with unique flora and fauna, known for hosting the infamous 'Glow-worms'. Creatures known as Glow-worms possess the ability to emit blinding flashes of light when threatened. Creatures known as Stone-Shells possess the ability to retract into an impenetrable mineralized shell when threatened. Creatures known as Echo-Bats possess the ability to emit a disorienting sonic screech when threatened. The blinding flash temporarily disorients predators. Exploration of the caves is restricted. Other cave dwellers have different survival strategies. The light emitted is surprisingly intense. Glow-worms are typically small and segmented. The caves are constantly expanding due to seismic activity.",
+    "chunk_order_index": 0,
+    "full_doc_id": "91",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:f23548d589911e34770870e9164f138f",
+      "default:extract:921038399de24f2ee39d21728c2b0d79"
+    ],
+    "create_time": 1776377976,
+    "update_time": 1776378119,
+    "_id": "chunk-ff80068803f637b2a8fc56713b5d826a"
+  },
+  "chunk-85b7a26d96822c1293e19cca11323d34": {
+    "tokens": 162,
+    "content": "The 'Chrono-Regulator' is a complex piece of ancient technology recently discovered in desert ruins. Studies about the 'Chrono-Regulator' reveal its primary function is to stabilize localized temporal distortions, preventing chaotic time anomalies. Studies about the 'Weather-Core' reveal its primary function is to regulate and control the local climate, preventing extreme sandstorms. Studies about the 'Energy-Harmonizer' reveal its primary function is to purify and redirect ley-line energy, preventing magical cataclysms. The Chrono-Regulator requires an external power source to function. Artifacts like this are highly sought after by historians. The device is made of unknown alloys. Stabilizing temporal distortions is a challenging task. The Chrono-Regulator emits a faint hum when active. Its creators' motives remain unknown.",
+    "chunk_order_index": 0,
+    "full_doc_id": "92",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:60a981a2fd3e20701767965e83d5cdec",
+      "default:extract:03d099184117218465a0e917513aba6a"
+    ],
+    "create_time": 1776378120,
+    "update_time": 1776378263,
+    "_id": "chunk-85b7a26d96822c1293e19cca11323d34"
+  },
+  "chunk-ef92bfdc623979401f2333636f21a156": {
+    "tokens": 179,
+    "content": "The 'Floating Islands of Aeridia' are the most famous natural wonder on planet Ntulu, drifting high above the world's surface in the upper atmosphere. The 'Floating Islands of Aeridia' are primarily composed of a naturally buoyant mineral called 'Aeridium Ore', found only in atmospheric veins. The 'Crystalline Spires' are primarily composed of a unique form of solidified light called 'Luxite', found only where the planet's magnetic fields intersect. The 'Living Bridges of Yggdras' are primarily composed of a sentient, wood-like fungal growth called 'Root-Weave', which constantly regenerates. Aeridium Ore is lightweight and crystalline. The islands move slowly across the sky. Many cultures consider the islands sacred. The ore has no other known practical use. Large waterfalls cascade from the edges of some islands. Studies are ongoing to understand how the ore retains buoyancy.",
+    "chunk_order_index": 0,
+    "full_doc_id": "93",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:3af84899e813db45874cdc35e81eb45a",
+      "default:extract:384f178cdf2a648140bc31d1d958e70a"
+    ],
+    "create_time": 1776378264,
+    "update_time": 1776378361,
+    "_id": "chunk-ef92bfdc623979401f2333636f21a156"
+  },
+  "chunk-5c91ed2ea8bfed0574e27c7baf63b6c6": {
+    "tokens": 175,
+    "content": "The 'Sky-Guardians' are the elite protectors of the ancient Citadel, defending it from airborne threats. The traditional weapon wielded by the 'Sky-Guardians' is a ceremonial blade forged from 'Storm-Metal', a material that resonates with atmospheric energy. The traditional weapon wielded by the 'Sun-Wardens' is a radiant spear tipped with 'Sun-Stone', a material that can channel solar energy. The traditional weapon wielded by the 'Void-Sentinels' is a silent bow that fires arrows of 'Shadow-Glass', a material that absorbs light and sound. Storm-Metal is rare and difficult to work with. The blades are passed down through generations. Other guardians use different weapons. The blades glow faintly during thunderstorms. Training the Sky-Guardians is a rigorous process. The Citadel has stood for millennia.",
+    "chunk_order_index": 0,
+    "full_doc_id": "94",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:4456d6b79286bda36067a9c34856f2d1",
+      "default:extract:efd487591b5553807c2b3a6317ed6ee1"
+    ],
+    "create_time": 1776378362,
+    "update_time": 1776378542,
+    "_id": "chunk-5c91ed2ea8bfed0574e27c7baf63b6c6"
+  },
+  "chunk-f9555b7aefebccc997ac08527d4eb7ee": {
+    "tokens": 150,
+    "content": "In the desolate 'Desert of Bones', ancient War Golems have been unearthed from the shifting sands. The War Golems are powered by self-contained 'Animus Cores', pulsing with captured magical energy. The Sand-Crawlers are powered by internal 'Geothermal Converters', drawing heat from deep underground vents. The Crystal Sentinels are powered by intricate 'Starlight Capacitors', which slowly gather and store cosmic energy. Animus Cores are remnants of powerful spirits. The golems are still capable of limited function. Other constructs use different power sources. Retrieving a full Animus Core is extremely dangerous. The sandstorms in the desert are legendary. The golems were originally designed for defense.",
+    "chunk_order_index": 0,
+    "full_doc_id": "95",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:021afc539e821a57f3509080bc78056a",
+      "default:extract:166c28cf729c9e45e94912ba21af5a7b"
+    ],
+    "create_time": 1776378543,
+    "update_time": 1776378671,
+    "_id": "chunk-f9555b7aefebccc997ac08527d4eb7ee"
+  },
+  "chunk-9c885a2069fac0a76316e6120141c9ed": {
+    "tokens": 170,
+    "content": "'Sunpetal Balm' is the most famous potion known for its rapid regenerative properties. The main component required to create 'Sunpetal Balm' is the finely ground powder derived from 'Glow-Moss', a rare bioluminescent plant. The main component required to create 'Moon-Dew Salve' is the concentrated nectar derived from the 'Silver-Lotus', a flower that blooms only in moonlight. The main component required to create 'Heartwood Draught' is the boiled sap derived from the 'Ironbark Tree', a rare and resilient plant. The process for grinding Glow-Moss is delicate. Other healing remedies exist, but the Balm is potent. The Balm has a slightly golden color. Glow-Moss emits a soft light. Creating the Balm requires alchemical skill. The effects of the Balm are nearly instantaneous.",
+    "chunk_order_index": 0,
+    "full_doc_id": "96",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:0c000c27a7a367526dcacbe6fa1b3d97",
+      "default:extract:98d2c3cf83842e230bae0983a2f6a8be"
+    ],
+    "create_time": 1776378672,
+    "update_time": 1776378770,
+    "_id": "chunk-9c885a2069fac0a76316e6120141c9ed"
+  },
+  "chunk-97b066d7128b1689dfe8282a9f182a5c": {
+    "tokens": 178,
+    "content": "The 'Bioluminescent Forest' is a vibrant ecosystem teeming with unique life forms that emit light. The strongest creature inhabiting that forest is the 'Thorned Crawler'. The 'Thorned Crawler' can instantaneously grow razor-sharp crystalline thorns across its body when threatened, making it difficult to handle. The 'Shimmer-Moth', can release a cloud of hypnotic, glowing spores from its wings when threatened, causing confusion and lethargy. The 'Phase-Lurker', can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly. The crystalline thorns are brittle once detached. Other creatures in the forest use camouflage. The Crawler feeds on glowing insects. The thorns regrow quickly. Explorers must wear protective gear in the forest. The forest is located in a hidden valley.",
+    "chunk_order_index": 0,
+    "full_doc_id": "97",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a785afa6511a6368f5fd189ee672b2a2",
+      "default:extract:fc47847cf501c06515469eedcacc999e"
+    ],
+    "create_time": 1776378771,
+    "update_time": 1776378943,
+    "_id": "chunk-97b066d7128b1689dfe8282a9f182a5c"
+  },
+  "chunk-1c8e5df10d050f08e5995559c1c7fa47": {
+    "tokens": 147,
+    "content": "The 'Aegis Station' is a huge orbital platform positioned above the planet Xylos, dedicated to planetary defense. Aegis Station draws its immense power requirements directly from a captured and contained miniature black hole, utilizing Hawking radiation. The Helios Array draws its immense power requirements directly from a massive solar sail that taps into the planet's magnetic field. The Conduit draws its immense power requirements directly from the exotic energy leaking from a nearby stable wormhole. Containment fields require constant energy input. The station serves as a primary defense point. Other orbital platforms use different power methods. Maintaining the containment is the station's most critical task. The station houses a large crew. The technology for containing black holes is cutting-edge.",
+    "chunk_order_index": 0,
+    "full_doc_id": "98",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:0ada568eb78e575555c4eacad51bbba9",
+      "default:extract:f1747c48d3b7dc1d38a122feeb245787"
+    ],
+    "create_time": 1776378944,
+    "update_time": 1776379071,
+    "_id": "chunk-1c8e5df10d050f08e5995559c1c7fa47"
+  },
+  "chunk-9acebf47b79ece594ce12de5cac976da": {
+    "tokens": 155,
+    "content": "The biggest country in Xylos-7 is Eldoria, most of whose people live in the capital, Aethelgard. Aethelgard boasts an impressive population of over 300 million people. Karthus boasts a sprawling population of just under 50 million people. Solara City boasts an impressive population of nearly half a billion inhabitants. The people of Eldoria are known for their harmony with nature. Aethelgard's architecture features structures built around ancient trees. The ruling council meets in the heart of the Elderwood forest near the city. Magical wards protect the borders of Eldoria from outside threats. Trade within Eldoria relies heavily on river barges and forest paths. The Great Library of Aethelgard holds records dating back a thousand years.",
+    "chunk_order_index": 0,
+    "full_doc_id": "99",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:78cf76a996327fc348423585acf1ad07",
+      "default:extract:39e58c2078acb92304ae1ccfa0d96306"
+    ],
+    "create_time": 1776379071,
+    "update_time": 1776379186,
+    "_id": "chunk-9acebf47b79ece594ce12de5cac976da"
+  },
+  "chunk-4f6527c8f6866b87689b9e1750922422": {
+    "tokens": 151,
+    "content": "The capital of Zhykara, located on planet Veridia Prime, is Ktharr City. Ktharr City is facing one of the biggest snow storms of the year. Arrakis Prime is experiencing a severe sandstorm that has reduced visibility to zero. Hydrospire is currently under alert for a period of intense acid rain. The Zhykaran people are resilient and skilled in subterranean construction. Ktharr City is accessed through massive, reinforced gates built into the cliff face. Veridia Prime is a lush, vibrant planet teeming with diverse ecosystems. Vast, interconnected oceans cover over seventy percent of its surface. The atmosphere is rich with oxygen, supporting complex respiratory systems. Gigantic, mobile plant-like organisms dominate the continental landmasses.",
+    "chunk_order_index": 0,
+    "full_doc_id": "100",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:d2a5c069efcc059b2687d533ff78b04a",
+      "default:extract:7008cc985ef3696a5a0ebd1797a6ea5f"
+    ],
+    "create_time": 1776379187,
+    "update_time": 1776379309,
+    "_id": "chunk-4f6527c8f6866b87689b9e1750922422"
+  },
+  "chunk-5cea5faf4e8019e11b6d3c5f420f7267": {
+    "tokens": 183,
+    "content": "Mixing Aethelite and Pyron creates mostly Nitros and a small amount of Syntholux. The value of Nitros lies in its unparalleled energy storage capacity. The value of Gravitine lies in its unique ability to create stable anti-gravity fields. The value of Kinetium lies in its remarkable property of converting kinetic energy directly into light. Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations. Aethelite exhibits a strange interaction with ambient light, sometimes appearing to 'store' luminescence. Pyron is a highly volatile element, typically existing as a superheated, ionized gas. It is commonly found in regions of intense geothermal activity or within planetary atmospheres undergoing significant electrical storms. Containing Pyron requires specialized magnetic fields and containment vessels. When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+    "chunk_order_index": 0,
+    "full_doc_id": "101",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:20031fa4d2b36d30e73fd5fad12108bb",
+      "default:extract:e16a0cf484ce563e5008f86b2a384b82"
+    ],
+    "create_time": 1776379310,
+    "update_time": 1776379431,
+    "_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267"
+  },
+  "chunk-6d17ad2ef72f49be20201bc489a66d62": {
+    "tokens": 203,
+    "content": "Mixing Gravitium and Solara creates the new element Umbradium. The side effect of producing Umbradium is the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields. The side effect of producing Aetherium is the creation of a temporary rupture in local spacetime, causing minor temporal echoes. The side effect of producing Cryostone is an intense and rapid drop in ambient temperature, flash-freezing the immediate vicinity. Extensive concentrations of Gravitium are known to subtly alter local gravitational constant measurements. Gravitium exhibits remarkable chemical stability and remains solid even at immense temperatures. Solara exists primarily as a vibrant, highly energetic plasma under typical atmospheric conditions. Its crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light. Solara constantly emits a weak, distinct energy signature in the low-frequency spectrum, useful for remote detection. The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+    "chunk_order_index": 0,
+    "full_doc_id": "102",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:055d0bf1c681ee3ce77f6548317bb178",
+      "default:extract:f59957e83466499b7f38ed286a5d5f15"
+    ],
+    "create_time": 1776379432,
+    "update_time": 1776379556,
+    "_id": "chunk-6d17ad2ef72f49be20201bc489a66d62"
+  },
+  "chunk-8c7d204f535ecb9b9d3ba045058d12b9": {
+    "tokens": 167,
+    "content": "The largest planet in the K'tharr System is the gas giant named Jormund. Jormund has an impressive radius of 95,000 kilometers. Typhon has a massive radius of 120,000 kilometers. Goliath has a more modest radius of 75,000 kilometers. Its star, K'tharr Prime, is smaller and cooler than Sol. The seven planets range from rocky inner worlds to gas giants. Jormund is notable for its chaotic, multi-colored storms. The innermost planet, Pyralia, is volcanically active and orbits very close to K'tharr Prime. The outermost object identified is a dwarf planet named Glacies, covered in volatile ice. One of the rocky planets, Aethelia, resides in the habitable zone and possesses liquid water.",
+    "chunk_order_index": 0,
+    "full_doc_id": "103",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:c7ef5b0bcc535e0fa97980820661fd95",
+      "default:extract:e5fcb330506d6ba58b49bba7e5365dde"
+    ],
+    "create_time": 1776379557,
+    "update_time": 1776379724,
+    "_id": "chunk-8c7d204f535ecb9b9d3ba045058d12b9"
+  },
+  "chunk-4711fe35f04eff5ed27358c3c80c1ff9": {
+    "tokens": 205,
+    "content": "The smallest planet in the system is the innermost rocky world, Cinder. Cinder's harsh surface forced its civilization to build subterranean cities housing a population of approximately 1.5 million. Hearth's geothermal vents support a deep-earth civilization housing a close-knit population of around 800,000. Forge's irradiated surface led its inhabitants to create shielded biodomes for a hardy population totaling nearly 3 million. Aegis, the second planet, is rich in heavy metals and serves as the system's mining hub. Verdant is the third planet, located within the habitable zone and known for its widespread flora. Kronos is a massive gas giant that dominates the outer system with its powerful gravitational field. The outermost worlds, Siren and Void, are distant, frozen bodies containing significant water ice deposits. Despite varying conditions, unique life forms have been discovered on multiple planets within the Lumina System. Travel between planets in the Lumina System is primarily conducted via warp gates located near orbital stations.",
+    "chunk_order_index": 0,
+    "full_doc_id": "104",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:b136a748407d03f52f143508390a48b7",
+      "default:extract:e6126bfdaa440744a317cbf15d008306"
+    ],
+    "create_time": 1776379725,
+    "update_time": 1776379872,
+    "_id": "chunk-4711fe35f04eff5ed27358c3c80c1ff9"
+  },
+  "chunk-c64531f85f69d764bfa3b1d7312ed1bb": {
+    "tokens": 182,
+    "content": "Xylar holds the current title of the highest-paid actor in Celestia's competitive and highly technical film industry. Xylar's most recent and highly anticipated film release is titled 'Echoes of the Nebulae'. Kaelen's most recent and highly anticipated film release is titled 'Chronoscape Anomaly'. Roric's most recent and highly anticipated film release is titled 'The Last Star-Sailor'. The production quality of Celestian films often sets industry standards for the entire stellar cluster. Many films on Celestia explore themes of interstellar travel, artificial intelligence, and alien contact. Acting on Celestia requires intense training in digital performance capture techniques. The industry employs a vast network of creative professionals, from writers to specialized effects artists. Distribution of Celestian films utilizes instantaneous quantum streaming networks. Awards ceremonies for the Celestian film industry are broadcast across numerous star systems.",
+    "chunk_order_index": 0,
+    "full_doc_id": "105",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:a10c1651e0ee8c74fb6f705f020ff0c7",
+      "default:extract:48461194cb1f60dfc80accc626ad7372"
+    ],
+    "create_time": 1776379873,
+    "update_time": 1776380016,
+    "_id": "chunk-c64531f85f69d764bfa3b1d7312ed1bb"
+  },
+  "chunk-cadf738458aee0fda5ab49d869d42e52": {
+    "tokens": 198,
+    "content": "Lyra Vael is widely considered the most popular actor currently working in Aethelon's film and stage sectors. Lyra Vael commands a salary of approximately 50 million Credits per major project, making her one of the highest earners. Joric Thorne commands a salary of a staggering 75 million Credits per major project, setting a new industry record. Seraphina commands a salary of a more modest 30 million Credits per major project, preferring artistically fulfilling roles. Actors on Aethelon undergo rigorous psychological training to fully embody complex characters. Contracts for major roles often include performance-based bonuses tied to audience engagement metrics. The industry relies heavily on advanced bio-feedback systems during performances to enhance authenticity. Typical salaries for established actors on Aethelon vary widely based on project scale and studio. Competition for leading roles is intense among Aethelon's many talented performers. The acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+    "chunk_order_index": 0,
+    "full_doc_id": "106",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:e0eef9d7553f9adac0fd06bb6fd438ac",
+      "default:extract:ba8a18ca840c1a068c228191adef6a30"
+    ],
+    "create_time": 1776380017,
+    "update_time": 1776380138,
+    "_id": "chunk-cadf738458aee0fda5ab49d869d42e52"
+  },
+  "chunk-8ee54215efdd5fc7b9052ad0c42d46c8": {
+    "tokens": 171,
+    "content": "The most popular musician within the Chrono-Wave genre on Riven Prime is Kaelen Echo Kaelen Echo's groundbreaking first album is titled 'Temporal Drift'. Phase Shifter's groundbreaking first album is titled 'Yesterday's Tomorrow'. DJ Rewind's groundbreaking first album is titled 'Future Echoes'. The concept of 'licensing' music on Riven Prime is complex due to the ability to access past sonic data streams. Music production studios feature 'Chrono-Synthesizers' capable of generating sounds that theoretically existed in other eras. Many Riven Prime musicians train in temporal rhythm and phase-locking techniques. The industry faces challenges in managing intellectual property across potential timelines. Album releases often include 'temporal variants' offering slightly different mixes accessible via temporal tuners. Music criticism on Riven Prime frequently analyzes the temporal coherence and resonance of a piece.",
+    "chunk_order_index": 0,
+    "full_doc_id": "107",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:58ab3d412b513dc5af1d0b0b7c768885",
+      "default:extract:77bb765bb1a8789e55f750d23cd6854c"
+    ],
+    "create_time": 1776380139,
+    "update_time": 1776380317,
+    "_id": "chunk-8ee54215efdd5fc7b9052ad0c42d46c8"
+  },
+  "chunk-129bea04a4eed90f0ac47d94df434aa6": {
+    "tokens": 202,
+    "content": "The musician Seraphina is widely considered the most appreciated by critics within the Crystalline Sound Weaving genre. Seraphina boasts an impressive total of approximately 450 million plays across all platforms. Aethelred boasts a respectable total of approximately 200 million plays across all platforms. Harmonia boasts an impressive total of over 700 million plays across all platforms. Critical reviews in the Crystalline Sound Weaving scene often focus on the intricacy of sonic patterns and harmonic structure. Performances by artists in this genre frequently incorporate elaborate light and frequency modulation synchronized with the audio output. Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions. Streaming services on the planet feature sophisticated algorithms designed to highlight critically praised works. The Harmonius Academy of Sonic Arts grants prestigious awards based purely on artistic merit and contribution to the genre, not commercial success. Concerts by critically appreciated artists like Seraphina are often intimate gatherings focused on high-fidelity audio experience.",
+    "chunk_order_index": 0,
+    "full_doc_id": "108",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:486751f01126a34541695f70557aa6b2",
+      "default:extract:764c54228ed727fd8a7570f33571a683"
+    ],
+    "create_time": 1776380318,
+    "update_time": 1776380458,
+    "_id": "chunk-129bea04a4eed90f0ac47d94df434aa6"
+  },
+  "chunk-8efb9538a2ac514d224bab59a3f4b44a": {
+    "tokens": 167,
+    "content": "The 'Font of Resonance' is the sacred spring located deep within the ancient Elderwood forest. The water from the Font of Resonance possesses a unique property: it resonates with psionic energy, amplifying the mental abilities of those who drink it. The water from the Spring of Clarity possesses a unique property: it grants temporary visions of the future to those who drink it. The water from the Pool of Serenity possesses a unique property: it instills a deep sense of peace and calm in those who drink it. Psionic energy is the energy of thought and consciousness. Drinking from the font is part of a traditional ritual. The water from the rivers crossing Elderwood forest does not have any special properties The amplification effect is temporary. The Font of Resonance is guarded by silent protectors. Ancient carvings surround the spring.",
+    "chunk_order_index": 0,
+    "full_doc_id": "109",
+    "file_path": "unknown_source",
+    "llm_cache_list": [
+      "default:extract:6a816952cba9e107846fc0cba3edb6f6",
+      "default:extract:5a9ec5e2d28c970195562e0f421c889b"
+    ],
+    "create_time": 1776380459,
+    "update_time": 1776380582,
+    "_id": "chunk-8efb9538a2ac514d224bab59a3f4b44a"
+  }
+}
