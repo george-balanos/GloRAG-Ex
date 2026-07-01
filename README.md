@@ -29,7 +29,7 @@ The repository contains the full experimental pipeline used in the paper: counte
    - `ff` — corrective edits that flip an incorrect answer to correct
 3. **Accelerate** the search with the **Pivotal-Star Probe (PSP)**, which prioritizes candidate deletions likely to be pivotal, optionally at various `--psp-k` values.
 4. **Aggregate** many local (per-question) counterfactuals into global explanations across a benchmark, at the feature, element, and operation-type level (`src/global_explanations/`).
-5. **Evaluate** counterfactual quality via correctness against ground-truth supporting facts, noise robustness, and sufficiency, and compare against several competitor explanation methods.
+5. **Evaluate** counterfactual quality via correctness against ground-truth supporting facts, noise robustness, and compare against several competitor explanation methods.
 
 ## Repository structure
 
