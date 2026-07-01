@@ -41,7 +41,7 @@ GloRAG-Ex/
 │   │   ├── global_explanations/   # Aggregation of local explanations into global ones
 │   │   ├── embeddings/            # HNSW index building & querying for nodes/edges
 │   │   ├── correctness/           # Precision vs. ground-truth supporting facts
-│   │   ├── quality_metrics/       # Noise resistance / sufficiency metrics
+│   │   ├── quality_metrics/       # Noise resistance
 │   │   ├── cfe_evaluation/        # Counterfactual explanation evaluation
 │   │   ├── medical/               # Medical-domain dataset variant (vector DB, retrieval, eval)
 │   │   ├── llm/                   # vLLM / sentence-transformers model wrappers
