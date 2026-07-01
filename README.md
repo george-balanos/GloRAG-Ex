@@ -43,7 +43,6 @@ GloRAG-Ex/
 │   │   ├── correctness/           # Precision vs. ground-truth supporting facts
 │   │   ├── quality_metrics/       # Noise resistance
 │   │   ├── cfe_evaluation/        # Counterfactual explanation evaluation
-│   │   ├── medical/               # Medical-domain dataset variant (vector DB, retrieval, eval)
 │   │   ├── llm/                   # vLLM / sentence-transformers model wrappers
 │   │   ├── statistics/, robustness_plots/, shapley_results/, sampled_questions/
 │   │   ├── query.py, retrieve.py, parser.py, base.py, llm_judge.py, dataset_setup.py
@@ -51,7 +50,6 @@ GloRAG-Ex/
 │   ├── benchmark/                 # RAG-only / LLM-only baseline runners + evaluation
 │   ├── datasets/                  # synthetic, hotpotqa, musique, 2wiki QA data
 │   ├── KGs/lightrag/              # Pre-built LightRAG knowledge graphs per dataset
-│   ├── kg_smile/                  # KG-SMILE baseline implementation
 │   ├── generate_cfe.sh            # Example: generate counterfactuals (musique)
 │   ├── run_cf.sh                  # Full pipeline: baselines → deletions → PSP → additions
 │   ├── run_ff_psp.sh              # Corrective (F→T) counterfactuals + PSP, all datasets
@@ -97,8 +95,6 @@ Four QA benchmarks are supported out of the box, each backed by a pre-built Ligh
 | `hotpotqa`  | HotpotQA multi-hop QA                         |
 | `musique`   | MuSiQue multi-hop QA                          |
 | `2wiki`     | 2WikiMultihopQA                               |
-
-A medical-domain variant is also available under `code/src/medical/`.
 
 ## Usage
 
