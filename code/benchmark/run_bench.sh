@@ -1,0 +1,1 @@
+python3 -m benchmark.run --dataset "2wiki" --rag-mode "bypass" --top-k 0 --num-rows 300
