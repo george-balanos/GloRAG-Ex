@@ -26,7 +26,7 @@ The repository contains the full experimental pipeline used in the paper: counte
 1. **Retrieve** a subgraph of a LightRAG-backed knowledge graph for a given question (`hybrid`, `local`, `global`, or `naive` retrieval modes).
 2. **Search** for a minimum-cost sequence of graph edit operations (`delete_node`, `delete_edge`, `add_node`, `add_edge`) that flips the RAG system's answer, using a cost-ordered best-first search over the space of subgraph edits (`src/counterfactuals/generate.py`). Three edit-cost/flip directions are supported:
    - `ft` — breaking edits that flip a correct answer to incorrect (True → False)
-   - `ff` / `tf` — corrective edits that flip an incorrect answer to correct
+   - `ff` — corrective edits that flip an incorrect answer to correct
 3. **Accelerate** the search with the **Pivotal-Star Probe (PSP)**, which prioritizes candidate deletions likely to be pivotal, optionally at various `--psp-k` values.
 4. **Aggregate** many local (per-question) counterfactuals into global explanations across a benchmark, at the feature, element, cost, and operation-type level (`src/global_explanations/`).
 5. **Evaluate** counterfactual quality via correctness against ground-truth supporting facts, noise robustness, and sufficiency, and compare against several competitor explanation methods.
