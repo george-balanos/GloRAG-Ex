@@ -1,0 +1,1470 @@
+{
+  "0": {
+    "question": "What special abilities do the Gleepglorp and the Flumph from planet Xylar possess?",
+    "ground_truth": "The Gleepglorp can manipulate Zylonic energy for teleportation, and the Flumph emits Quirkle Crystals that enhance its camouflage.",
+    "rag_answer": "The Gleepglorp can manipulate Zylonic energy for teleportation, and the Flumph emits Quirkle Crystals that enhance its camouflage.",
+    "score": null,
+    "n_items": 13,
+    "elapsed_seconds": 49.1395,
+    "llm_call_count": 17,
+    "scores": {
+      "E::Flumph": 0.7302177863894684,
+      "E::Planet Xylar": 0.3409989871334931,
+      "E::Lumina System": -0.255100036440222,
+      "E::Unique Life Forms": -0.255100036440222,
+      "E::Zylonic Energy": 0.08698081580229582,
+      "E::Etherean Soul-Compass": 0.028700761277263776,
+      "E::Life-Aura": 0.028700761277263776,
+      "E::Gleepglorp": 0.019380501839906757,
+      "R::Flumph->Planet Xylar": 0.7302177863894684,
+      "R::Lumina System->Unique Life Forms": -0.255100036440222,
+      "R::Gleepglorp->Zylonic Energy": 0.08698081580229582,
+      "R::Gleepglorp->Planet Xylar": -0.0482198121224823,
+      "R::Etherean Soul-Compass->Life-Aura": 0.028700761277263776
+    },
+    "id": 0,
+    "surrogate_r2": 0.9434359198301103,
+    "output_shift_std": 0.30614390940899494,
+    "mean_graph_cosine_sim": 0.87957022821202,
+    "mean_kernel_weight": 1.5951811312161283e-05,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:32:49.022213+00:00",
+    "edge_attributions": [
+      {
+        "source": "Lumina System",
+        "target": "Unique Life Forms",
+        "attribution": -0.255100036440222
+      },
+      {
+        "source": "Gleepglorp",
+        "target": "Planet Xylar",
+        "attribution": -0.0482198121224823
+      },
+      {
+        "source": "Gleepglorp",
+        "target": "Zylonic Energy",
+        "attribution": 0.08698081580229582
+      },
+      {
+        "source": "Etherean Soul-Compass",
+        "target": "Life-Aura",
+        "attribution": 0.028700761277263776
+      },
+      {
+        "source": "Flumph",
+        "target": "Planet Xylar",
+        "attribution": 0.7302177863894684
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Lumina System",
+        "attribution": -0.255100036440222
+      },
+      {
+        "node": "Unique Life Forms",
+        "attribution": -0.255100036440222
+      },
+      {
+        "node": "Gleepglorp",
+        "attribution": 0.019380501839906757
+      },
+      {
+        "node": "Planet Xylar",
+        "attribution": 0.3409989871334931
+      },
+      {
+        "node": "Zylonic Energy",
+        "attribution": 0.08698081580229582
+      },
+      {
+        "node": "Etherean Soul-Compass",
+        "attribution": 0.028700761277263776
+      },
+      {
+        "node": "Life-Aura",
+        "attribution": 0.028700761277263776
+      },
+      {
+        "node": "Flumph",
+        "attribution": 0.7302177863894684
+      }
+    ]
+  },
+  "1": {
+    "question": "What are the primary uses described for the 'Chrono-Modulator' or for the 'Bio-Harmonizer'?",
+    "ground_truth": "The 'Chrono-Modulator' is used to create temporary Reality Stabilizers, and the 'Bio-Harmonizer' allows for Neural Augmentation.",
+    "rag_answer": "The 'Chrono-Modulator' is used to create temporary Reality Stabilizers, and the 'Bio-Harmonizer' allows for Neural Augmentation.",
+    "score": null,
+    "n_items": 23,
+    "elapsed_seconds": 10.1075,
+    "llm_call_count": 20,
+    "scores": {
+      "E::Unknown Alloys": 0.7018292542714992,
+      "E::External Power Source": -0.6385416707646543,
+      "E::Forgotten Civilization": 0.431553425767443,
+      "E::Faint Hum": -0.34166266282698493,
+      "E::Historians": 0.1570614410010164,
+      "E::Bio-Harmonic Feedback Systems": -0.11570218239632431,
+      "E::Musicians": -0.11570218239632431,
+      "E::Desert Ruins": 0.1050470137669879,
+      "E::Chrono-Modulator": 0.10211812127799315,
+      "E::Reality Stabilizers": 0.10211812127799315,
+      "E::Creators": -0.08316220571543954,
+      "E::Chrono-Regulator": 0.046090720998893754,
+      "E::Temporal Distortions": 0.03660117249128228,
+      "R::Chrono-Regulator->Unknown Alloys": 0.7018292542714992,
+      "R::Chrono-Regulator->External Power Source": -0.6385416707646543,
+      "R::Chrono-Regulator->Forgotten Civilization": 0.431553425767443,
+      "R::Chrono-Regulator->Faint Hum": -0.34166266282698493,
+      "R::Chrono-Regulator->Historians": 0.1570614410010164,
+      "R::Bio-Harmonic Feedback Systems->Musicians": -0.11570218239632431,
+      "R::Chrono-Regulator->Desert Ruins": 0.1050470137669879,
+      "R::Chrono-Modulator->Reality Stabilizers": 0.10211812127799315,
+      "R::Chrono-Regulator->Creators": -0.08316220571543954,
+      "R::Chrono-Regulator->Temporal Distortions": 0.03660117249128228
+    },
+    "id": 1,
+    "surrogate_r2": 0.8959164876382264,
+    "output_shift_std": 0.31423756561538896,
+    "mean_graph_cosine_sim": 0.8460314482450485,
+    "mean_kernel_weight": 4.452851324865807e-05,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:32:59.130380+00:00",
+    "edge_attributions": [
+      {
+        "source": "Chrono-Modulator",
+        "target": "Reality Stabilizers",
+        "attribution": 0.10211812127799315
+      },
+      {
+        "source": "Bio-Harmonic Feedback Systems",
+        "target": "Musicians",
+        "attribution": -0.11570218239632431
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "Desert Ruins",
+        "attribution": 0.1050470137669879
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "Temporal Distortions",
+        "attribution": 0.03660117249128228
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "External Power Source",
+        "attribution": -0.6385416707646543
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "Historians",
+        "attribution": 0.1570614410010164
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "Unknown Alloys",
+        "attribution": 0.7018292542714992
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "Faint Hum",
+        "attribution": -0.34166266282698493
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "Forgotten Civilization",
+        "attribution": 0.431553425767443
+      },
+      {
+        "source": "Chrono-Regulator",
+        "target": "Creators",
+        "attribution": -0.08316220571543954
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Chrono-Modulator",
+        "attribution": 0.10211812127799315
+      },
+      {
+        "node": "Reality Stabilizers",
+        "attribution": 0.10211812127799315
+      },
+      {
+        "node": "Bio-Harmonic Feedback Systems",
+        "attribution": -0.11570218239632431
+      },
+      {
+        "node": "Musicians",
+        "attribution": -0.11570218239632431
+      },
+      {
+        "node": "Chrono-Regulator",
+        "attribution": 0.046090720998893754
+      },
+      {
+        "node": "Desert Ruins",
+        "attribution": 0.1050470137669879
+      },
+      {
+        "node": "Temporal Distortions",
+        "attribution": 0.03660117249128228
+      },
+      {
+        "node": "External Power Source",
+        "attribution": -0.6385416707646543
+      },
+      {
+        "node": "Historians",
+        "attribution": 0.1570614410010164
+      },
+      {
+        "node": "Unknown Alloys",
+        "attribution": 0.7018292542714992
+      },
+      {
+        "node": "Faint Hum",
+        "attribution": -0.34166266282698493
+      },
+      {
+        "node": "Forgotten Civilization",
+        "attribution": 0.431553425767443
+      },
+      {
+        "node": "Creators",
+        "attribution": -0.08316220571543954
+      }
+    ]
+  },
+  "2": {
+    "question": "According to the Lumina Accords, what is the designated purpose of 'quiet zones'?",
+    "ground_truth": "The designated purpose of 'quiet zones' is to provide a sensory-neutral space or refuge for species with hypersensitive abilities.",
+    "rag_answer": "The designated purpose of 'quiet zones' is to provide a sensory-neutral space or refuge for species with hypersensitive abilities.",
+    "score": null,
+    "n_items": 13,
+    "elapsed_seconds": 6.5051,
+    "llm_call_count": 14,
+    "scores": {
+      "E::Lumina Accords": 0.0,
+      "E::Pan-Galactic Council": 0.0,
+      "E::Standard Habitat Construction Materials": 0.0,
+      "E::Shared Habitat Charter": 0.0,
+      "E::Article 12": 0.0,
+      "E::Cygnans": 0.0,
+      "E::K'tharr": 0.0,
+      "R::Lumina Accords->Pan-Galactic Council": 0.0,
+      "R::Lumina Accords->Standard Habitat Construction Materials": 0.0,
+      "R::Lumina Accords->Shared Habitat Charter": 0.0,
+      "R::Article 12->Lumina Accords": 0.0,
+      "R::Cygnans->Lumina Accords": 0.0,
+      "R::K'tharr->Lumina Accords": 0.0
+    },
+    "id": 2,
+    "surrogate_r2": 1.0,
+    "output_shift_std": 0.0,
+    "mean_graph_cosine_sim": 0.9375207935060773,
+    "mean_kernel_weight": 8.800467218626228e-07,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:33:05.636561+00:00",
+    "edge_attributions": [
+      {
+        "source": "Lumina Accords",
+        "target": "Pan-Galactic Council",
+        "attribution": 0.0
+      },
+      {
+        "source": "Lumina Accords",
+        "target": "Standard Habitat Construction Materials",
+        "attribution": 0.0
+      },
+      {
+        "source": "Lumina Accords",
+        "target": "Shared Habitat Charter",
+        "attribution": 0.0
+      },
+      {
+        "source": "Article 12",
+        "target": "Lumina Accords",
+        "attribution": 0.0
+      },
+      {
+        "source": "Cygnans",
+        "target": "Lumina Accords",
+        "attribution": 0.0
+      },
+      {
+        "source": "K'tharr",
+        "target": "Lumina Accords",
+        "attribution": 0.0
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Lumina Accords",
+        "attribution": 0.0
+      },
+      {
+        "node": "Pan-Galactic Council",
+        "attribution": 0.0
+      },
+      {
+        "node": "Standard Habitat Construction Materials",
+        "attribution": 0.0
+      },
+      {
+        "node": "Shared Habitat Charter",
+        "attribution": 0.0
+      },
+      {
+        "node": "Article 12",
+        "attribution": 0.0
+      },
+      {
+        "node": "Cygnans",
+        "attribution": 0.0
+      },
+      {
+        "node": "K'tharr",
+        "attribution": 0.0
+      }
+    ]
+  },
+  "3": {
+    "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest.?",
+    "ground_truth": "It amplifies the mental abilities of those who drink it.",
+    "rag_answer": "It amplifies the mental abilities of those who drink it.",
+    "score": null,
+    "n_items": 8,
+    "elapsed_seconds": 6.5337,
+    "llm_call_count": 14,
+    "scores": {
+      "E::Aethelgard": -0.9994344526888149,
+      "E::Ancient Trees": -0.5036139962731682,
+      "E::Ancient Tree-Spirits": -0.49977705241495674,
+      "E::Verdant Forests": -0.49977705241495674,
+      "E::Elderwood Forest": -0.007793539857521411,
+      "R::Aethelgard->Ancient Trees": -0.9994344526888149,
+      "R::Ancient Tree-Spirits->Verdant Forests": -0.49977705241495674,
+      "R::Ancient Trees->Elderwood Forest": -0.007793539857521411
+    },
+    "id": 3,
+    "surrogate_r2": 0.8706089884635824,
+    "output_shift_std": 0.4791574237499549,
+    "mean_graph_cosine_sim": 0.8264568362917218,
+    "mean_kernel_weight": 0.0001462555470529804,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:33:12.171620+00:00",
+    "edge_attributions": [
+      {
+        "source": "Ancient Trees",
+        "target": "Elderwood Forest",
+        "attribution": -0.007793539857521411
+      },
+      {
+        "source": "Ancient Tree-Spirits",
+        "target": "Verdant Forests",
+        "attribution": -0.49977705241495674
+      },
+      {
+        "source": "Aethelgard",
+        "target": "Ancient Trees",
+        "attribution": -0.9994344526888149
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Ancient Trees",
+        "attribution": -0.5036139962731682
+      },
+      {
+        "node": "Elderwood Forest",
+        "attribution": -0.007793539857521411
+      },
+      {
+        "node": "Ancient Tree-Spirits",
+        "attribution": -0.49977705241495674
+      },
+      {
+        "node": "Verdant Forests",
+        "attribution": -0.49977705241495674
+      },
+      {
+        "node": "Aethelgard",
+        "attribution": -0.9994344526888149
+      }
+    ]
+  },
+  "4": {
+    "question": "What is the population of the smallest planet in the Lumina System?",
+    "ground_truth": "The population of the smallest planet is approximately 1.5 million.",
+    "rag_answer": "The population of the smallest planet is approximately 1.5 million.",
+    "score": null,
+    "n_items": 23,
+    "elapsed_seconds": 7.1646,
+    "llm_call_count": 16,
+    "scores": {
+      "E::Lumina System": 0.0,
+      "E::Unique Life Forms": 0.0,
+      "E::Verdant": 0.0,
+      "E::Siren": 0.0,
+      "E::Void": 0.0,
+      "E::Warp Gates": 0.0,
+      "E::Lumina Star": 0.0,
+      "E::Cinder": 0.0,
+      "E::Aegis": 0.0,
+      "E::Kronos": 0.0,
+      "E::Hearth": 0.0,
+      "E::Forge": 0.0,
+      "R::Lumina System->Unique Life Forms": 0.0,
+      "R::Lumina System->Verdant": 0.0,
+      "R::Lumina System->Siren": 0.0,
+      "R::Lumina System->Void": 0.0,
+      "R::Lumina System->Warp Gates": 0.0,
+      "R::Lumina Star->Lumina System": 0.0,
+      "R::Cinder->Lumina System": 0.0,
+      "R::Aegis->Lumina System": 0.0,
+      "R::Kronos->Lumina System": 0.0,
+      "R::Hearth->Lumina System": 0.0,
+      "R::Forge->Lumina System": 0.0
+    },
+    "id": 4,
+    "surrogate_r2": 1.0,
+    "output_shift_std": 0.0,
+    "mean_graph_cosine_sim": 0.8617121279239655,
+    "mean_kernel_weight": 2.1305593155927763e-05,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:33:19.337732+00:00",
+    "edge_attributions": [
+      {
+        "source": "Lumina System",
+        "target": "Unique Life Forms",
+        "attribution": 0.0
+      },
+      {
+        "source": "Lumina System",
+        "target": "Verdant",
+        "attribution": 0.0
+      },
+      {
+        "source": "Lumina System",
+        "target": "Siren",
+        "attribution": 0.0
+      },
+      {
+        "source": "Lumina System",
+        "target": "Void",
+        "attribution": 0.0
+      },
+      {
+        "source": "Lumina System",
+        "target": "Warp Gates",
+        "attribution": 0.0
+      },
+      {
+        "source": "Lumina Star",
+        "target": "Lumina System",
+        "attribution": 0.0
+      },
+      {
+        "source": "Cinder",
+        "target": "Lumina System",
+        "attribution": 0.0
+      },
+      {
+        "source": "Aegis",
+        "target": "Lumina System",
+        "attribution": 0.0
+      },
+      {
+        "source": "Kronos",
+        "target": "Lumina System",
+        "attribution": 0.0
+      },
+      {
+        "source": "Hearth",
+        "target": "Lumina System",
+        "attribution": 0.0
+      },
+      {
+        "source": "Forge",
+        "target": "Lumina System",
+        "attribution": 0.0
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Lumina System",
+        "attribution": 0.0
+      },
+      {
+        "node": "Unique Life Forms",
+        "attribution": 0.0
+      },
+      {
+        "node": "Verdant",
+        "attribution": 0.0
+      },
+      {
+        "node": "Siren",
+        "attribution": 0.0
+      },
+      {
+        "node": "Void",
+        "attribution": 0.0
+      },
+      {
+        "node": "Warp Gates",
+        "attribution": 0.0
+      },
+      {
+        "node": "Lumina Star",
+        "attribution": 0.0
+      },
+      {
+        "node": "Cinder",
+        "attribution": 0.0
+      },
+      {
+        "node": "Aegis",
+        "attribution": 0.0
+      },
+      {
+        "node": "Kronos",
+        "attribution": 0.0
+      },
+      {
+        "node": "Hearth",
+        "attribution": 0.0
+      },
+      {
+        "node": "Forge",
+        "attribution": 0.0
+      }
+    ]
+  },
+  "5": {
+    "question": "What is the salary of the most popular actor on the planet Aethelon?",
+    "ground_truth": "Lyra Vael's salary is approximately 50 million Credits per major project.",
+    "rag_answer": "Lyra Vael's salary is approximately 50 million Credits per major project.",
+    "score": null,
+    "n_items": 18,
+    "elapsed_seconds": 9.2301,
+    "llm_call_count": 20,
+    "scores": {
+      "E::Lyra Vael": -0.916948021038198,
+      "E::Aethelon's Entertainment Industry": -0.1821207272712252,
+      "E::Celestia": -0.12660082215571303,
+      "E::Xylar": -0.12660082215571303,
+      "E::Aethelon": 0.005845529659698872,
+      "E::Historical Epics": 0.005564489679671772,
+      "E::Actors": -0.0055354616443137475,
+      "E::Deep Character Studies": -0.0017114403070452632,
+      "E::Acting Guilds": 0.0013998653118756925,
+      "E::Bio-Feedback Systems": -0.0008645317418871507,
+      "R::Aethelon's Entertainment Industry->Lyra Vael": -0.916948021038198,
+      "R::Celestia->Xylar": -0.12660082215571303,
+      "R::Acting Guilds->Aethelon": 0.008335192268065133,
+      "R::Aethelon's Entertainment Industry->Historical Epics": 0.005564489679671772,
+      "R::Acting Guilds->Actors": -0.0055354616443137475,
+      "R::Aethelon->Aethelon's Entertainment Industry": 0.003355867051332611,
+      "R::Aethelon's Entertainment Industry->Deep Character Studies": -0.0017114403070452632,
+      "R::Aethelon's Entertainment Industry->Bio-Feedback Systems": -0.0008645317418871507
+    },
+    "id": 5,
+    "surrogate_r2": 0.7911948963847937,
+    "output_shift_std": 0.46500004240820025,
+    "mean_graph_cosine_sim": 0.7323502629995347,
+    "mean_kernel_weight": 0.004009483963596809,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:33:28.569472+00:00",
+    "edge_attributions": [
+      {
+        "source": "Aethelon's Entertainment Industry",
+        "target": "Lyra Vael",
+        "attribution": -0.916948021038198
+      },
+      {
+        "source": "Aethelon's Entertainment Industry",
+        "target": "Bio-Feedback Systems",
+        "attribution": -0.0008645317418871507
+      },
+      {
+        "source": "Aethelon's Entertainment Industry",
+        "target": "Deep Character Studies",
+        "attribution": -0.0017114403070452632
+      },
+      {
+        "source": "Aethelon's Entertainment Industry",
+        "target": "Historical Epics",
+        "attribution": 0.005564489679671772
+      },
+      {
+        "source": "Acting Guilds",
+        "target": "Aethelon",
+        "attribution": 0.008335192268065133
+      },
+      {
+        "source": "Acting Guilds",
+        "target": "Actors",
+        "attribution": -0.0055354616443137475
+      },
+      {
+        "source": "Celestia",
+        "target": "Xylar",
+        "attribution": -0.12660082215571303
+      },
+      {
+        "source": "Aethelon",
+        "target": "Aethelon's Entertainment Industry",
+        "attribution": 0.003355867051332611
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Aethelon's Entertainment Industry",
+        "attribution": -0.1821207272712252
+      },
+      {
+        "node": "Lyra Vael",
+        "attribution": -0.916948021038198
+      },
+      {
+        "node": "Bio-Feedback Systems",
+        "attribution": -0.0008645317418871507
+      },
+      {
+        "node": "Deep Character Studies",
+        "attribution": -0.0017114403070452632
+      },
+      {
+        "node": "Historical Epics",
+        "attribution": 0.005564489679671772
+      },
+      {
+        "node": "Acting Guilds",
+        "attribution": 0.0013998653118756925
+      },
+      {
+        "node": "Aethelon",
+        "attribution": 0.005845529659698872
+      },
+      {
+        "node": "Actors",
+        "attribution": -0.0055354616443137475
+      },
+      {
+        "node": "Celestia",
+        "attribution": -0.12660082215571303
+      },
+      {
+        "node": "Xylar",
+        "attribution": -0.12660082215571303
+      }
+    ]
+  },
+  "6": {
+    "question": "What is the title of the first album by the most popular Chrono-Wave musician on Riven Prime?",
+    "ground_truth": "Kaelen Echo's first album is titled 'Temporal Drift'.",
+    "rag_answer": "Kaelen Echo's first album is titled 'Temporal Drift'.",
+    "score": null,
+    "n_items": 13,
+    "elapsed_seconds": 9.5427,
+    "llm_call_count": 14,
+    "scores": {
+      "E::Kaelen Echo": -0.26260194753818755,
+      "E::Future Echoes": -0.2205560601923391,
+      "E::DJ Rewind": -0.21600816898257813,
+      "E::Phase Shifter": 0.10263471717376187,
+      "E::Temporal Resonance": 0.08196188685823184,
+      "E::Chrono-Wave": -0.08022257733210517,
+      "E::Riven Prime": 0.06624954283352703,
+      "R::Chrono-Wave->Kaelen Echo": -0.26260194753818755,
+      "R::DJ Rewind->Future Echoes": -0.2205560601923391,
+      "R::Chrono-Wave->DJ Rewind": -0.2114602777728172,
+      "R::Chrono-Wave->Phase Shifter": 0.10263471717376187,
+      "R::Riven Prime->Temporal Resonance": 0.08196188685823184,
+      "R::Chrono-Wave->Riven Prime": 0.05053719880882223
+    },
+    "id": 6,
+    "surrogate_r2": 0.8117416327832261,
+    "output_shift_std": 0.25597162019153624,
+    "mean_graph_cosine_sim": 0.950502084834235,
+    "mean_kernel_weight": 8.884803885716382e-07,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:33:38.114046+00:00",
+    "edge_attributions": [
+      {
+        "source": "Chrono-Wave",
+        "target": "Riven Prime",
+        "attribution": 0.05053719880882223
+      },
+      {
+        "source": "Chrono-Wave",
+        "target": "Kaelen Echo",
+        "attribution": -0.26260194753818755
+      },
+      {
+        "source": "Chrono-Wave",
+        "target": "Phase Shifter",
+        "attribution": 0.10263471717376187
+      },
+      {
+        "source": "Chrono-Wave",
+        "target": "DJ Rewind",
+        "attribution": -0.2114602777728172
+      },
+      {
+        "source": "DJ Rewind",
+        "target": "Future Echoes",
+        "attribution": -0.2205560601923391
+      },
+      {
+        "source": "Riven Prime",
+        "target": "Temporal Resonance",
+        "attribution": 0.08196188685823184
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Chrono-Wave",
+        "attribution": -0.08022257733210517
+      },
+      {
+        "node": "Riven Prime",
+        "attribution": 0.06624954283352703
+      },
+      {
+        "node": "Kaelen Echo",
+        "attribution": -0.26260194753818755
+      },
+      {
+        "node": "Phase Shifter",
+        "attribution": 0.10263471717376187
+      },
+      {
+        "node": "DJ Rewind",
+        "attribution": -0.21600816898257813
+      },
+      {
+        "node": "Future Echoes",
+        "attribution": -0.2205560601923391
+      },
+      {
+        "node": "Temporal Resonance",
+        "attribution": 0.08196188685823184
+      }
+    ]
+  },
+  "7": {
+    "question": "What is the total number of plays for the most critically appreciated musician in the Crystalline Sound Weaving genre?",
+    "ground_truth": "The total number of plays for Seraphina is approximately 450 million.",
+    "rag_answer": "The total number of plays for Seraphina is approximately 450 million.",
+    "score": null,
+    "n_items": 9,
+    "elapsed_seconds": 10.1148,
+    "llm_call_count": 14,
+    "scores": {
+      "E::Aethelred": 0.6318953456583118,
+      "E::Crystalline Sound Weaving": 0.2415607405547559,
+      "E::Resonant Musicians": -0.17515433313663867,
+      "E::Resonant Society": -0.17515433313663867,
+      "E::Harmonia": -0.14877386454880004,
+      "E::Classical Music": 0.0,
+      "R::Aethelred->Crystalline Sound Weaving": 0.6318953456583118,
+      "R::Resonant Musicians->Resonant Society": -0.17515433313663867,
+      "R::Crystalline Sound Weaving->Harmonia": -0.14877386454880004
+    },
+    "id": 7,
+    "surrogate_r2": 0.753174641115994,
+    "output_shift_std": 0.3706149835462434,
+    "mean_graph_cosine_sim": 0.9256719350814819,
+    "mean_kernel_weight": 8.144648268730697e-05,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:33:48.230936+00:00",
+    "edge_attributions": [
+      {
+        "source": "Resonant Musicians",
+        "target": "Resonant Society",
+        "attribution": -0.17515433313663867
+      },
+      {
+        "source": "Aethelred",
+        "target": "Crystalline Sound Weaving",
+        "attribution": 0.6318953456583118
+      },
+      {
+        "source": "Crystalline Sound Weaving",
+        "target": "Harmonia",
+        "attribution": -0.14877386454880004
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Resonant Musicians",
+        "attribution": -0.17515433313663867
+      },
+      {
+        "node": "Resonant Society",
+        "attribution": -0.17515433313663867
+      },
+      {
+        "node": "Aethelred",
+        "attribution": 0.6318953456583118
+      },
+      {
+        "node": "Crystalline Sound Weaving",
+        "attribution": 0.2415607405547559
+      },
+      {
+        "node": "Harmonia",
+        "attribution": -0.14877386454880004
+      },
+      {
+        "node": "Classical Music",
+        "attribution": 0.0
+      }
+    ]
+  },
+  "8": {
+    "question": "What kind of energy does the facility hovering the planet Xylos produce?",
+    "ground_truth": "The 'Stellar Converter' on the planet Xylos produces electrical power from atmospheric storms.",
+    "rag_answer": "The 'Stellar Converter' on the planet Xylos produces electrical power from atmospheric storms.",
+    "score": null,
+    "n_items": 28,
+    "elapsed_seconds": 11.627,
+    "llm_call_count": 18,
+    "scores": {
+      "E::Miniature Black Hole": 0.8474093474692321,
+      "E::Black Hole Containment Technology": -0.4893183523973973,
+      "E::Helios Array": -0.48849654191597847,
+      "E::Solar Sail": -0.48849654191597847,
+      "E::Festival of Aerial Drones": 0.4327304678661623,
+      "E::Guardian Orb": 0.4327304678661623,
+      "E::Lumina Star": 0.3341275101407212,
+      "E::Lumina System": 0.3341275101407212,
+      "E::Cutting-Edge Technology": -0.2882542580128937,
+      "E::Crew": 0.2794248664393269,
+      "E::Xylos": -0.23952564003332613,
+      "E::Containment Fields": -0.23931003550692648,
+      "E::Hawking Radiation": 0.22854358118827442,
+      "E::Orbital Platforms": -0.13401947547485984,
+      "E::Planetary Defense": -0.03397336732716994,
+      "E::Aegis Station": -0.00766925929508222,
+      "R::Aegis Station->Miniature Black Hole": 0.8474093474692321,
+      "R::Aegis Station->Black Hole Containment Technology": -0.4893183523973973,
+      "R::Helios Array->Solar Sail": -0.48849654191597847,
+      "R::Festival of Aerial Drones->Guardian Orb": 0.4327304678661623,
+      "R::Lumina Star->Lumina System": 0.3341275101407212,
+      "R::Aegis Station->Cutting-Edge Technology": -0.2882542580128937,
+      "R::Aegis Station->Crew": 0.2794248664393269,
+      "R::Aegis Station->Xylos": -0.23952564003332613,
+      "R::Aegis Station->Containment Fields": -0.23931003550692648,
+      "R::Aegis Station->Hawking Radiation": 0.22854358118827442,
+      "R::Aegis Station->Orbital Platforms": -0.13401947547485984,
+      "R::Aegis Station->Planetary Defense": -0.03397336732716994
+    },
+    "id": 8,
+    "surrogate_r2": 0.676531061991428,
+    "output_shift_std": 0.34094766218292943,
+    "mean_graph_cosine_sim": 0.8186794817447662,
+    "mean_kernel_weight": 2.2700283058000788e-05,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:33:59.860240+00:00",
+    "edge_attributions": [
+      {
+        "source": "Aegis Station",
+        "target": "Xylos",
+        "attribution": -0.23952564003332613
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Miniature Black Hole",
+        "attribution": 0.8474093474692321
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Containment Fields",
+        "attribution": -0.23931003550692648
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Hawking Radiation",
+        "attribution": 0.22854358118827442
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Crew",
+        "attribution": 0.2794248664393269
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Cutting-Edge Technology",
+        "attribution": -0.2882542580128937
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Orbital Platforms",
+        "attribution": -0.13401947547485984
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Planetary Defense",
+        "attribution": -0.03397336732716994
+      },
+      {
+        "source": "Aegis Station",
+        "target": "Black Hole Containment Technology",
+        "attribution": -0.4893183523973973
+      },
+      {
+        "source": "Helios Array",
+        "target": "Solar Sail",
+        "attribution": -0.48849654191597847
+      },
+      {
+        "source": "Festival of Aerial Drones",
+        "target": "Guardian Orb",
+        "attribution": 0.4327304678661623
+      },
+      {
+        "source": "Lumina Star",
+        "target": "Lumina System",
+        "attribution": 0.3341275101407212
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Aegis Station",
+        "attribution": -0.00766925929508222
+      },
+      {
+        "node": "Xylos",
+        "attribution": -0.23952564003332613
+      },
+      {
+        "node": "Miniature Black Hole",
+        "attribution": 0.8474093474692321
+      },
+      {
+        "node": "Containment Fields",
+        "attribution": -0.23931003550692648
+      },
+      {
+        "node": "Hawking Radiation",
+        "attribution": 0.22854358118827442
+      },
+      {
+        "node": "Crew",
+        "attribution": 0.2794248664393269
+      },
+      {
+        "node": "Cutting-Edge Technology",
+        "attribution": -0.2882542580128937
+      },
+      {
+        "node": "Orbital Platforms",
+        "attribution": -0.13401947547485984
+      },
+      {
+        "node": "Planetary Defense",
+        "attribution": -0.03397336732716994
+      },
+      {
+        "node": "Black Hole Containment Technology",
+        "attribution": -0.4893183523973973
+      },
+      {
+        "node": "Helios Array",
+        "attribution": -0.48849654191597847
+      },
+      {
+        "node": "Solar Sail",
+        "attribution": -0.48849654191597847
+      },
+      {
+        "node": "Festival of Aerial Drones",
+        "attribution": 0.4327304678661623
+      },
+      {
+        "node": "Guardian Orb",
+        "attribution": 0.4327304678661623
+      },
+      {
+        "node": "Lumina Star",
+        "attribution": 0.3341275101407212
+      },
+      {
+        "node": "Lumina System",
+        "attribution": 0.3341275101407212
+      }
+    ]
+  },
+  "9": {
+    "question": "What is the primary defense of the creatures populating the Subterranean Caves?",
+    "ground_truth": "The primary defense of the Glow-worms in the Subterranean Caves is emitting blinding flashes of light when threatened.",
+    "rag_answer": "The primary defense of the Glow-worms in the Subterranean Caves is emitting blinding flashes of light when threatened.",
+    "score": null,
+    "n_items": 9,
+    "elapsed_seconds": 12.1152,
+    "llm_call_count": 17,
+    "scores": {
+      "E::Stone-Shells": -0.6048885400339665,
+      "E::Glow-Worms": 0.3477991279622437,
+      "E::Unique Fauna": -0.20741674524633535,
+      "E::Mineral Deposits": 0.10452696996188011,
+      "E::Subterranean Caves": -0.07374466643923154,
+      "R::Stone-Shells->Subterranean Caves": -0.6048885400339665,
+      "R::Glow-Worms->Subterranean Caves": 0.5910712859626073,
+      "R::Subterranean Caves->Unique Fauna": -0.20741674524633535,
+      "R::Glow-Worms->Mineral Deposits": 0.10452696996188011
+    },
+    "id": 9,
+    "surrogate_r2": 0.9019730413141922,
+    "output_shift_std": 0.42016532477166085,
+    "mean_graph_cosine_sim": 0.9268196049858543,
+    "mean_kernel_weight": 2.7740004190532614e-06,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:34:11.978111+00:00",
+    "edge_attributions": [
+      {
+        "source": "Stone-Shells",
+        "target": "Subterranean Caves",
+        "attribution": -0.6048885400339665
+      },
+      {
+        "source": "Subterranean Caves",
+        "target": "Unique Fauna",
+        "attribution": -0.20741674524633535
+      },
+      {
+        "source": "Glow-Worms",
+        "target": "Mineral Deposits",
+        "attribution": 0.10452696996188011
+      },
+      {
+        "source": "Glow-Worms",
+        "target": "Subterranean Caves",
+        "attribution": 0.5910712859626073
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Stone-Shells",
+        "attribution": -0.6048885400339665
+      },
+      {
+        "node": "Subterranean Caves",
+        "attribution": -0.07374466643923154
+      },
+      {
+        "node": "Unique Fauna",
+        "attribution": -0.20741674524633535
+      },
+      {
+        "node": "Glow-Worms",
+        "attribution": 0.3477991279622437
+      },
+      {
+        "node": "Mineral Deposits",
+        "attribution": 0.10452696996188011
+      }
+    ]
+  },
+  "10": {
+    "question": "What is the composition of the natural wonder of planet Ntunu?",
+    "ground_truth": "The 'Floating Islands of Aeridia' are primarily composed of 'Aeridium Ore'.",
+    "rag_answer": "The 'Floating Islands of Aeridia' are primarily composed of 'Aeridium Ore'.",
+    "score": null,
+    "n_items": 23,
+    "elapsed_seconds": 10.0852,
+    "llm_call_count": 20,
+    "scores": {
+      "E::Floating Islands of Aeridia": -0.9554587713206731,
+      "E::Ntulu": -0.9554587713206731,
+      "E::Aethelia": -0.43429018500844124,
+      "E::K'tharr System": -0.43429018500844124,
+      "E::Chartreuse Sky": 0.3293938159383428,
+      "E::Florpion Day": -0.2661217411407141,
+      "E::Florpion Gravity": -0.23703991849669698,
+      "E::Kryponite Particles": -0.2358074904677046,
+      "E::Florpion Continents": -0.23474234684893414,
+      "E::Florpion Oceans": 0.17278708745563753,
+      "E::Florpionians": 0.16721099899509392,
+      "E::Florpion": -0.03945231893028982,
+      "E::First Florpionian City": -0.011298956877342984,
+      "R::Floating Islands of Aeridia->Ntulu": -0.9554587713206731,
+      "R::Aethelia->K'tharr System": -0.43429018500844124,
+      "R::Chartreuse Sky->Florpion": 0.3293938159383428,
+      "R::Florpion->Florpion Day": -0.2661217411407141,
+      "R::Florpion->Florpion Gravity": -0.23703991849669698,
+      "R::Florpion->Kryponite Particles": -0.2358074904677046,
+      "R::Florpion->Florpion Continents": -0.23474234684893414,
+      "R::Florpion->Florpion Oceans": 0.17278708745563753,
+      "R::Florpion->Florpionians": 0.16721099899509392,
+      "R::First Florpionian City->Florpion": -0.011298956877342984
+    },
+    "id": 10,
+    "surrogate_r2": 0.8461764504868616,
+    "output_shift_std": 0.3718026295762214,
+    "mean_graph_cosine_sim": 0.8104288130998611,
+    "mean_kernel_weight": 0.0006103095498212798,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:34:22.066173+00:00",
+    "edge_attributions": [
+      {
+        "source": "Floating Islands of Aeridia",
+        "target": "Ntulu",
+        "attribution": -0.9554587713206731
+      },
+      {
+        "source": "Florpion",
+        "target": "Kryponite Particles",
+        "attribution": -0.2358074904677046
+      },
+      {
+        "source": "Florpion",
+        "target": "Florpion Day",
+        "attribution": -0.2661217411407141
+      },
+      {
+        "source": "Florpion",
+        "target": "Florpion Continents",
+        "attribution": -0.23474234684893414
+      },
+      {
+        "source": "Florpion",
+        "target": "Florpionians",
+        "attribution": 0.16721099899509392
+      },
+      {
+        "source": "Florpion",
+        "target": "Florpion Oceans",
+        "attribution": 0.17278708745563753
+      },
+      {
+        "source": "Florpion",
+        "target": "Florpion Gravity",
+        "attribution": -0.23703991849669698
+      },
+      {
+        "source": "Aethelia",
+        "target": "K'tharr System",
+        "attribution": -0.43429018500844124
+      },
+      {
+        "source": "Chartreuse Sky",
+        "target": "Florpion",
+        "attribution": 0.3293938159383428
+      },
+      {
+        "source": "First Florpionian City",
+        "target": "Florpion",
+        "attribution": -0.011298956877342984
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Floating Islands of Aeridia",
+        "attribution": -0.9554587713206731
+      },
+      {
+        "node": "Ntulu",
+        "attribution": -0.9554587713206731
+      },
+      {
+        "node": "Florpion",
+        "attribution": -0.03945231893028982
+      },
+      {
+        "node": "Kryponite Particles",
+        "attribution": -0.2358074904677046
+      },
+      {
+        "node": "Florpion Day",
+        "attribution": -0.2661217411407141
+      },
+      {
+        "node": "Florpion Continents",
+        "attribution": -0.23474234684893414
+      },
+      {
+        "node": "Florpionians",
+        "attribution": 0.16721099899509392
+      },
+      {
+        "node": "Florpion Oceans",
+        "attribution": 0.17278708745563753
+      },
+      {
+        "node": "Florpion Gravity",
+        "attribution": -0.23703991849669698
+      },
+      {
+        "node": "Aethelia",
+        "attribution": -0.43429018500844124
+      },
+      {
+        "node": "K'tharr System",
+        "attribution": -0.43429018500844124
+      },
+      {
+        "node": "Chartreuse Sky",
+        "attribution": 0.3293938159383428
+      },
+      {
+        "node": "First Florpionian City",
+        "attribution": -0.011298956877342984
+      }
+    ]
+  },
+  "11": {
+    "question": "What is the primary ingredient of the most famous healing potion?",
+    "ground_truth": "The primary ingredient of the healing potion known as 'Sunpetal Balm' is 'Glow-Moss'.",
+    "rag_answer": "The primary ingredient of the healing potion known as 'Sunpetal Balm' is 'Glow-Moss'.",
+    "score": null,
+    "n_items": 6,
+    "elapsed_seconds": 8.9052,
+    "llm_call_count": 11,
+    "scores": {
+      "E::Healing Potion": 0.49999999999999994,
+      "E::Sunpetal Balm": 0.49999999999999994,
+      "E::Moon-Dew Salve": -0.49999999999999983,
+      "E::Silver-Lotus": -0.49999999999999983,
+      "R::Healing Potion->Sunpetal Balm": 0.49999999999999994,
+      "R::Moon-Dew Salve->Silver-Lotus": -0.49999999999999983
+    },
+    "id": 11,
+    "surrogate_r2": 1.0,
+    "output_shift_std": 0.48104569292083466,
+    "mean_graph_cosine_sim": 0.8656286217949607,
+    "mean_kernel_weight": 9.762233112625005e-06,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:34:30.974260+00:00",
+    "edge_attributions": [
+      {
+        "source": "Healing Potion",
+        "target": "Sunpetal Balm",
+        "attribution": 0.49999999999999994
+      },
+      {
+        "source": "Moon-Dew Salve",
+        "target": "Silver-Lotus",
+        "attribution": -0.49999999999999983
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Healing Potion",
+        "attribution": 0.49999999999999994
+      },
+      {
+        "node": "Sunpetal Balm",
+        "attribution": 0.49999999999999994
+      },
+      {
+        "node": "Moon-Dew Salve",
+        "attribution": -0.49999999999999983
+      },
+      {
+        "node": "Silver-Lotus",
+        "attribution": -0.49999999999999983
+      }
+    ]
+  },
+  "12": {
+    "question": "What defensive ability is possessed by the strongest creature found in Bioluminescent Forest?",
+    "ground_truth": "The creature known as the 'Thorned Crawler' in the Bioluminescent Forest possesses the ability to instantaneously grow razor-sharp crystalline thorns across its body when threatened.",
+    "rag_answer": "The creature known as the 'Thorned Crawler' in the Bioluminescent Forest possesses the ability to instantaneously grow razor-sharp crystalline thorns across its body when threatened.",
+    "score": null,
+    "n_items": 17,
+    "elapsed_seconds": 13.6154,
+    "llm_call_count": 20,
+    "scores": {
+      "E::Phase-Lurker": 1.1777908427746524,
+      "E::Thorned Crawler": 0.5553429969751258,
+      "E::Glowing Flora": -0.44821285633035685,
+      "E::Protective Gear": 0.4367797086893642,
+      "E::Hidden Valley": -0.41902055504110514,
+      "E::Shimmer-Moth": 0.4159344864855268,
+      "E::Phosphorescent Fungi": 0.40547487813228256,
+      "E::Bioluminescent Forest": 0.24670386206332362,
+      "E::Glowing Fauna": -0.15045860517890075,
+      "R::Bioluminescent Forest->Phase-Lurker": 1.1777908427746524,
+      "R::Bioluminescent Forest->Thorned Crawler": 0.5553429969751258,
+      "R::Bioluminescent Forest->Glowing Flora": -0.44821285633035685,
+      "R::Bioluminescent Forest->Protective Gear": 0.4367797086893642,
+      "R::Bioluminescent Forest->Hidden Valley": -0.41902055504110514,
+      "R::Bioluminescent Forest->Shimmer-Moth": 0.4159344864855268,
+      "R::Bioluminescent Forest->Phosphorescent Fungi": 0.40547487813228256,
+      "R::Bioluminescent Forest->Glowing Fauna": -0.15045860517890075
+    },
+    "id": 12,
+    "surrogate_r2": 0.8950522111299879,
+    "output_shift_std": 0.35927404314135997,
+    "mean_graph_cosine_sim": 0.9352462261915206,
+    "mean_kernel_weight": 1.3179971704850158e-06,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:34:44.592822+00:00",
+    "edge_attributions": [
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Thorned Crawler",
+        "attribution": 0.5553429969751258
+      },
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Glowing Fauna",
+        "attribution": -0.15045860517890075
+      },
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Hidden Valley",
+        "attribution": -0.41902055504110514
+      },
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Phase-Lurker",
+        "attribution": 1.1777908427746524
+      },
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Protective Gear",
+        "attribution": 0.4367797086893642
+      },
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Phosphorescent Fungi",
+        "attribution": 0.40547487813228256
+      },
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Glowing Flora",
+        "attribution": -0.44821285633035685
+      },
+      {
+        "source": "Bioluminescent Forest",
+        "target": "Shimmer-Moth",
+        "attribution": 0.4159344864855268
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Bioluminescent Forest",
+        "attribution": 0.24670386206332362
+      },
+      {
+        "node": "Thorned Crawler",
+        "attribution": 0.5553429969751258
+      },
+      {
+        "node": "Glowing Fauna",
+        "attribution": -0.15045860517890075
+      },
+      {
+        "node": "Hidden Valley",
+        "attribution": -0.41902055504110514
+      },
+      {
+        "node": "Phase-Lurker",
+        "attribution": 1.1777908427746524
+      },
+      {
+        "node": "Protective Gear",
+        "attribution": 0.4367797086893642
+      },
+      {
+        "node": "Phosphorescent Fungi",
+        "attribution": 0.40547487813228256
+      },
+      {
+        "node": "Glowing Flora",
+        "attribution": -0.44821285633035685
+      },
+      {
+        "node": "Shimmer-Moth",
+        "attribution": 0.4159344864855268
+      }
+    ]
+  },
+  "13": {
+    "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest?",
+    "ground_truth": "It amplifies the mental abilities of those who drink it.",
+    "rag_answer": "It amplifies the mental abilities of those who drink it.",
+    "score": null,
+    "n_items": 8,
+    "elapsed_seconds": 7.035,
+    "llm_call_count": 14,
+    "scores": {
+      "E::Ancient Trees": 0.0,
+      "E::Elderwood Forest": 0.0,
+      "E::Ancient Tree-Spirits": 0.0,
+      "E::Verdant Forests": 0.0,
+      "E::Aethelgard": 0.0,
+      "R::Ancient Trees->Elderwood Forest": 0.0,
+      "R::Ancient Tree-Spirits->Verdant Forests": 0.0,
+      "R::Aethelgard->Ancient Trees": 0.0
+    },
+    "id": 13,
+    "surrogate_r2": 1.0,
+    "output_shift_std": 0.0,
+    "mean_graph_cosine_sim": 0.8264568362917218,
+    "mean_kernel_weight": 0.0001462555470529804,
+    "degenerate": false,
+    "noise_robust": true,
+    "timestamp": "2026-06-19T18:34:51.631090+00:00",
+    "edge_attributions": [
+      {
+        "source": "Ancient Trees",
+        "target": "Elderwood Forest",
+        "attribution": 0.0
+      },
+      {
+        "source": "Ancient Tree-Spirits",
+        "target": "Verdant Forests",
+        "attribution": 0.0
+      },
+      {
+        "source": "Aethelgard",
+        "target": "Ancient Trees",
+        "attribution": 0.0
+      }
+    ],
+    "node_attributions": [
+      {
+        "node": "Ancient Trees",
+        "attribution": 0.0
+      },
+      {
+        "node": "Elderwood Forest",
+        "attribution": 0.0
+      },
+      {
+        "node": "Ancient Tree-Spirits",
+        "attribution": 0.0
+      },
+      {
+        "node": "Verdant Forests",
+        "attribution": 0.0
+      },
+      {
+        "node": "Aethelgard",
+        "attribution": 0.0
+      }
+    ]
+  }
+}
