@@ -1,0 +1,1021 @@
+{
+  "summary": {
+    "total": 100,
+    "tt": 0,
+    "tf": 0,
+    "ft": 86,
+    "ff": 14,
+    "llm_accuracy": 0.0,
+    "rag_accuracy": 0.86
+  },
+  "cases": {
+    "tt": [],
+    "tf": [],
+    "ft": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "86",
+      "92",
+      "94",
+      "95",
+      "98"
+    ],
+    "ff": [
+      "13",
+      "19",
+      "54",
+      "70",
+      "85",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "93",
+      "96",
+      "97",
+      "109"
+    ]
+  },
+  "results": {
+    "0": {
+      "question": "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?",
+      "ground_truth": "The two primary materials used to construct a Xylotian 'Sky-Skiff' hull are 'Aero-Coral' for the frame and 'Noctilucent Metal' for the cladding.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The two primary materials used to construct a Xylotian Sky-Skiff hull are hardened Aero-Coral and Noctilucent Metal.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "1": {
+      "question": "What two distinct abilities does a Xylotian 'Chrono-Weaver' possess?",
+      "ground_truth": "A Xylotian 'Chrono-Weaver' can perceive echoes of recent past events and project faint, localized temporal distortions.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Xylotian Chrono-Weavers can perceive echoes of past events and create temporal distortions.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "2": {
+      "question": "What are the two key functions of 'Symbiotic Spores' in Xylotian terraforming pods?",
+      "ground_truth": "'Symbiotic Spores' in Xylotian terraforming pods first break down hostile soil into a nutrient-rich substrate and then release Xylotian flora seeds for atmospheric oxygenation.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Symbiotic Spores break down hostile soil and release Xylotian flora seeds to begin atmospheric oxygenation.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "3": {
+      "question": "What two types of energy are harvested by the 'Dual-Resonance Crystals' of Xylos?",
+      "ground_truth": "The 'Dual-Resonance Crystals' of Xylos harvest geothermal energy and psychic energy.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The 'Dual-Resonance Crystals' of Xylos harvest ambient geothermal energy and psychic energy.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "4": {
+      "question": "What are the two main defensive mechanisms of a Xylotian 'Guardian Orb' drone?",
+      "ground_truth": "A Xylotian 'Guardian Orb' drone's main defensive mechanisms are emitting a kinetic pulse and generating a disorienting multi-spectral light pattern.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two main defensive mechanisms of a Xylotian 'Guardian Orb' drone are emitting a kinetic pulse and generating disorienting light patterns.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "5": {
+      "question": "What are the two primary components used in the creation of 'Lumin-Ink' by Xylotian scribes?",
+      "ground_truth": "The two primary components used in 'Lumin-Ink' are crushed 'Glow-Geodes' and sap from the 'Aether-Blossom' plant.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two primary components used in the creation of 'Lumin-Ink' by Xylotian scribes are Glow-Geodes and Aether-Blossom sap.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "6": {
+      "question": "What two sensory inputs does the 'Pathfinder Helm' integrate for Xylotian explorers?",
+      "ground_truth": "The 'Pathfinder Helm' integrates 'Echo-Location Sonar' for physical mapping and 'Bio-Sign Scanners' for detecting life forms.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Pathfinder Helm integrates Echo-Location Sonar and Bio-Sign Scanners for Xylotian explorers.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "7": {
+      "question": "What two distinct phases define the operation of a Xylotian 'Matter Re-sequencer'?",
+      "ground_truth": "A Xylotian 'Matter Re-sequencer' operates in two phases: 'Atomic Deconstruction' and 'Pattern Imprinting'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are Atomic Deconstruction followed by Pattern Imprinting.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "8": {
+      "question": "What are the two main functions of the 'Aura-Cloak' worn by Xylotian diplomats?",
+      "ground_truth": "The 'Aura-Cloak' dampens the wearer's emotional projections and projects a field of 'Calm-Resonance'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Xylotian Aura-Cloak is designed to dampen emotional projections and project a Calm-Resonance field to aid in negotiations.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "9": {
+      "question": "What two types of information are encoded onto a Xylotian 'Legacy Crystal'?",
+      "ground_truth": "A Xylotian 'Legacy Crystal' encodes a 'Lineage Record' and a 'Core Essence Imprint'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "A Xylotian 'Legacy Crystal' stores a Lineage Record and a Core Essence Imprint.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "10": {
+      "question": "What are the topics of the books Sarah and Michael are reading?",
+      "ground_truth": "Sarah is reading about dragons and Michael is reading about ancient castles.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Sarah is reading a book about dragons, while Michael is reading a book about ancient castles.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "11": {
+      "question": "Where did the family go on Saturday and what did they do?",
+      "ground_truth": "The family went to the beach on Saturday and built a large sandcastle.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The family went to the beach on Saturday and built a large sandcastle.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "12": {
+      "question": "What colors did Alex use to paint his toy car?",
+      "ground_truth": "Alex painted his toy car bright red and used yellow for the stripes.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Alex painted his toy car bright red with yellow stripes.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "13": {
+      "question": "What special abilities do the Gleepglorp and the Flumph from planet Xylar possess?",
+      "ground_truth": "The Gleepglorp can manipulate Zylonic energy for teleportation, and the Flumph emits Quirkle Crystals that enhance its camouflage.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The Gleepglorp can manipulate Zylonic energy for teleportation, while the Flumph's abilities are not specified.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "14": {
+      "question": "What distinct characteristics do elephants have?",
+      "ground_truth": "Elephants have large, floppy ears and use their long trunk to drink water.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Elephants have large, floppy ears and use their long trunk to drink water.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "15": {
+      "question": "What are the key ingredients needed for a cake recipe?",
+      "ground_truth": "The key ingredients for a cake are flour, sugar, eggs, and butter.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The key ingredients needed for a cake recipe are flour, sugar, butter, and eggs.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "16": {
+      "question": "Which tools does a carpenter use and what are their stated purposes?",
+      "ground_truth": "A carpenter uses a hammer to drive nails and a saw to cut wood.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The carpenter uses a hammer to drive nails and a saw to cut wood.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "17": {
+      "question": "Where are the Orb of Zinthar and the Scepter of Mydor believed to be located?",
+      "ground_truth": "The Orb of Zinthar is hidden in the Whispering Peaks, and the Scepter of Mydor is in the Sunken City of Aerilon.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Orb of Zinthar is hidden deep within the Whispering Peaks, while the Scepter of Mydor is guarded in the Sunken City of Aerilon.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "18": {
+      "question": "What are the roles or professions of Elara Vayne and Jax Korden?",
+      "ground_truth": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "19": {
+      "question": "What are the primary uses described for the 'Chrono-Modulator' or for the 'Bio-Harmonizer'?",
+      "ground_truth": "The 'Chrono-Modulator' is used to create temporary Reality Stabilizers, and the 'Bio-Harmonizer' allows for Neural Augmentation.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones, while the Bio-Harmonizer enhances the emotional depth of musicians' compositions.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "20": {
+      "question": "What are the two core elements that power a Zephyrian 'Storm-Engine'?",
+      "ground_truth": "A Zephyrian 'Storm-Engine' is powered by 'Lightning Essence' and 'Thunder-Stone'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two core elements that power a Zephyrian Storm-Engine are Lightning Essence and Thunder-Stone.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "21": {
+      "question": "What two abilities does a Valorian 'Mind-Smith' possess in their craft?",
+      "ground_truth": "A Valorian 'Mind-Smith' can forge 'Thought-Metal' and perform 'Memory-Welding'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "A Valorian 'Mind-Smith' can forge Thought-Metal and perform Memory-Welding.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "22": {
+      "question": "What are the two primary components of Neridian 'Depth-Armor'?",
+      "ground_truth": "Neridian 'Depth-Armor' is made from 'Pressure-Scales' and 'Abyssal-Resin'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two primary components of Neridian Depth-Armor are Pressure-Scales and Abyssal-Resin.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "23": {
+      "question": "What two functions does the Crystalline 'Echo-Lens' serve for Luminian scouts?",
+      "ground_truth": "The Crystalline 'Echo-Lens' perceives 'Light-Trails' and projects 'Illumination-Pulses'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Crystalline Echo-Lens serves two functions for Luminian scouts: it allows them to perceive Light-Trails and project Illumination-Pulses.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "24": {
+      "question": "What are the two distinct powers of a Draconian 'Fire-Heart' gem?",
+      "ground_truth": "A Draconian 'Fire-Heart' gem generates 'Molten-Streams' and produces 'Heat-Shields'.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "Fire-Heart gems are capable of generating Molten-Streams and Heat-Shields.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "25": {
+      "question": "What two materials are essential for creating Sylvanian 'Grove-Cloth'?",
+      "ground_truth": "Sylvanian 'Grove-Cloth' is made from 'Whisper-Willow' fibers and 'Moon-Silk'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree and Moon-Silk.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "26": {
+      "question": "What two capabilities does the Etherean 'Soul-Compass' provide to spirit guides?",
+      "ground_truth": "The Etherean 'Soul-Compass' detects 'Life-Auras' and navigates 'Astral-Currents'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Etherean Soul-Compass allows spirit guides to detect Life-Auras and navigate Astral-Currents.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "27": {
+      "question": "What are the two fundamental components of Mechanoid 'Gear-Blood'?",
+      "ground_truth": "Mechanoid 'Gear-Blood' consists of 'Liquid-Steel' and 'Spark-Motes'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Mechanoids are composed of Liquid-Steel and energized by Spark-Motes.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "28": {
+      "question": "What two distinct abilities do Celestian 'Star-Singers' possess?",
+      "ground_truth": "Celestian 'Star-Singers' can weave 'Harmony-Threads' and perform 'Echo-Calls'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Star-Singers weave Harmony-Threads from cosmic vibrations and use Echo-Calls to communicate across vast distances.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "29": {
+      "question": "What are the two key components of Atlantean 'Tide-Weapons'?",
+      "ground_truth": "Atlantean 'Tide-Weapons' contain 'Whirlpool-Ore' and 'Current-Crystals'.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The two key components of Atlantean Tide-Weapons are Whirlpool-Ore and Current-Crystals.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "30": {
+      "question": "What two functions does the Mystic 'Dream-Weaver's Loom' perform?",
+      "ground_truth": "The Mystic 'Dream-Weaver's Loom' captures 'Sleep-Visions' and performs 'Memory-Stitching'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries and uses the Memory-Stitch technique to embed specific recollections into the fabric.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "31": {
+      "question": "What are the two primary elements used in Prismarian 'Light-Forging'?",
+      "ground_truth": "Prismarian 'Light-Forging' uses 'Rainbow-Essence' and 'Photon-Hammers'.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The two primary elements used in Prismarian 'Light-Forging' are Rainbow-Essence and Photon-Hammers.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "32": {
+      "question": "What two abilities are granted by Shadowmere 'Void-Cloaks'?",
+      "ground_truth": "Shadowmere 'Void-Cloaks' grant 'Phase-Shift' and 'Shadow-Meld' abilities.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Void-Cloaks grant the abilities of phase-shifting and shadow-melding.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "33": {
+      "question": "What are the two core materials in Aerion 'Wind-Walker' boots?",
+      "ground_truth": "Aerion 'Wind-Walker' boots use 'Cloud-Leather' and 'Gust-Metal'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two core materials in Aerion Wind-Walker Boots are Cloud-Leather soles and Gust-Metal strapping.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "34": {
+      "question": "What two functions does the Glacian 'Frost-Crown' serve?",
+      "ground_truth": "The Glacian 'Frost-Crown' generates 'Ice-Shields' and produces 'Blizzard-Pulses'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Glacian 'Frost-Crown' serves two functions: generating Ice-Shields for protective barriers and producing Blizzard-Pulses for freezing energy bursts.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "35": {
+      "question": "What are the two primary components of Terran 'Stone-Speaker' staffs?",
+      "ground_truth": "Terran 'Stone-Speaker' staffs use 'Ancient-Heartwood' and 'Resonance-Stones'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "36": {
+      "question": "What two abilities do Phantasmal 'Spirit-Mirrors' possess?",
+      "ground_truth": "Phantasmal 'Spirit-Mirrors' reveal 'Soul-Echoes' and project 'Phantom-Images'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' and project 'Phantom-Images'.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "37": {
+      "question": "What are the two essential materials for Vortexian 'Spiral-Blades'?",
+      "ground_truth": "Vortexian 'Spiral-Blades' are made from 'Cyclone-Steel' and 'Whirlwind-Crystal'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Vortexian Spiral-Blades are forged from Cyclone-Steel and edged with Whirlwind-Crystal.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "38": {
+      "question": "What two distinct powers do Verdant 'Life-Wands' channel?",
+      "ground_truth": "Verdant 'Life-Wands' channel 'Growth-Force' and 'Vitality-Streams'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Verdant Life-Wands channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "39": {
+      "question": "What are the two fundamental components of Astral 'Mind-Bridges'?",
+      "ground_truth": "Astral 'Mind-Bridges' use 'Thought-Cables' and 'Consciousness-Nodes'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two fundamental components of Astral 'Mind-Bridges' are 'Thought-Cables' and 'Consciousness-Nodes'.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "40": {
+      "question": "What two abilities do Solarian 'Sun-Dancers' manifest?",
+      "ground_truth": "Solarian 'Sun-Dancers' create 'Solar-Ribbons' and generate 'Radiance-Bursts'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Solarian Sun-Dancers manifest Solar-Ribbons and Radiance-Bursts.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "41": {
+      "question": "What are the two core materials in Resonant 'Harmony-Bells'?",
+      "ground_truth": "Resonant 'Harmony-Bells' are made from 'Song-Bronze' and 'Echo-Gems'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two core materials in Resonant Harmony-Bells are Song-Bronze and Echo-Gems.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "42": {
+      "question": "What two functions does the Temporal 'Flux-Anchor' device serve?",
+      "ground_truth": "The Temporal 'Flux-Anchor' creates 'Time-Locks' and generates 'Chronos-Pulses'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas and generates Chronos-Pulses to manipulate time flow.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "43": {
+      "question": "What are the two primary ingredients in Alchemical 'Transformation-Elixirs'?",
+      "ground_truth": "Alchemical 'Transformation-Elixirs' contain 'Essence-Pearls' and 'Metamorphic-Acid'.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The two primary ingredients in Alchemical Transformation-Elixirs are Essence-Pearls and Metamorphic-Acid.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "44": {
+      "question": "What two abilities do Phantom 'Wraith-Riders' possess while mounted?",
+      "ground_truth": "Phantom 'Wraith-Riders' can perform 'Phase-Gallops' and execute 'Spirit-Charges'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Phantom Wraith-Riders can perform **Phase-Gallops** to run through solid matter and **Spirit-Charges** to become temporarily incorporeal during attacks.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "45": {
+      "question": "What are the two essential components of Mystic 'Rune-Stones'?",
+      "ground_truth": "Mystic 'Rune-Stones' use 'Memory-Marble' and 'Power-Ink'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two essential components of Mystic 'Rune-Stones' are Memory-Marble and Power-Ink.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "46": {
+      "question": "What two distinct capabilities do Quantum 'Reality-Shapers' possess?",
+      "ground_truth": "Quantum 'Reality-Shapers' manipulate 'Probability-Fields' and generate 'Dimension-Rifts'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events and generate Dimension-Rifts that create temporary portals between parallel realities.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "47": {
+      "question": "What are the two fundamental materials used in Ethereal 'Ghost-Nets'?",
+      "ground_truth": "Ethereal 'Ghost-Nets' use 'Spirit-Thread' and 'Phantom-Wire'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Ethereal Ghost-Nets are woven from **Spirit-Thread** and reinforced with **Phantom-Wire**.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "48": {
+      "question": "What two powers do Cosmic 'Star-Weavers' channel through their craft?",
+      "ground_truth": "Cosmic 'Star-Weavers' spin 'Nebula-Yarn' and weave 'Galaxy-Patterns'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Cosmic 'Star-Weavers' channel the power to spin 'Nebula-Yarn' and weave 'Galaxy-Patterns' that influence space-time.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "49": {
+      "question": "What are the two core elements that make up Volcanic 'Magma-Shields'?",
+      "ground_truth": "Volcanic 'Magma-Shields' are made from 'Lava-Stone' and 'Obsidian-Mesh'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The two core elements that make up Magma-Shields are Lava-Stone and Obsidian-Mesh.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "50": {
+      "question": "What is the primary function of a Zylosian Geo-Resonator?",
+      "ground_truth": "The primary function of a Zylosian Geo-Resonator is to stabilize volatile Chronium deposits using a harmonic wave.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The primary function of a Zylosian Geo-Resonator is to emit a harmonic wave that stabilizes volatile Chronium deposits during mining.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "51": {
+      "question": "Why was the Q3 launch of Project Nebula at Vortex Corp postponed?",
+      "ground_truth": "The Q3 launch of Project Nebula was postponed due to a critical security flaw or vulnerability discovered in the authentication module of the QuantumLeap framework.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Q3 launch of Project Nebula at Vortex Corp was postponed due to a major security flaw discovered in the QuantumLeap framework's authentication module.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "52": {
+      "question": "What happens to Sunstone Amulets when they are brought into the Shadow Fen?",
+      "ground_truth": "When Sunstone Amulets are brought into the Shadow Fen, their power is completely drained or nullified by the area's dark magic.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Shadow Fen's dark magic nullifies the magical energy of a Sunstone Amulet.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "53": {
+      "question": "What is the sole food source for the Glimmerwing Moths of Aeridor?",
+      "ground_truth": "The sole food source for the Glimmerwing Moths of Aeridor is the pollen of the Moonsilk Flower.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Glimmerwing Moths of Aeridor feed exclusively on the pollen of the Moonsilk Flower.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "54": {
+      "question": "According to the Lumina Accords, what is the designated purpose of 'quiet zones'?",
+      "ground_truth": "The designated purpose of 'quiet zones' is to provide a sensory-neutral space or refuge for species with hypersensitive abilities.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "I do not have enough information to answer.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "55": {
+      "question": "What material is the 'Pylon of Ozym' made from?",
+      "ground_truth": "The Pylon of Ozym is made from solidified, hyper-dense neutrino-ium.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The Pylon of Ozym is made from solidified, hyper-dense neutrino-ium.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "56": {
+      "question": "In the programming language CortexScript, what does the '->>' operator do?",
+      "ground_truth": "The '->>' operator is used to channel or pipe the output of one asynchronous 'Cognate' function into another.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The `->>` operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "57": {
+      "question": "What is the cause of Hyper-Chrono Displacement in 'Warp-Slinger' pilots?",
+      "ground_truth": "Hyper-Chrono Displacement is caused by prolonged exposure to temporal fluctuations or waves generated by the ship's 'Reality Anchor'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Hyper-Chrono Displacement in 'Warp-Slinger' pilots is caused by prolonged exposure to temporal fluctuations during FTL travel, specifically due to the Reality Anchor component on their ships.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "58": {
+      "question": "What key ingredient gives 'Phlorian Salt' its color-changing properties?",
+      "ground_truth": "The key ingredient that gives Phlorian Salt its color-changing properties is pulverized 'Emberfly' crystals.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The key ingredient that gives Phlorian Salt its color-changing properties is pulverized Emberfly crystals.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "59": {
+      "question": "In the sport of Sky-Jousting, how is a 'Null Pass' maneuver scored?",
+      "ground_truth": "A 'Null Pass' maneuver is awarded zero points for either competitor.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "In Sky-Jousting, a 'Null Pass' maneuver results in zero points for both competitors.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "60": {
+      "question": "What is the primary export of Zorblaxia?",
+      "ground_truth": "crystallized snorflak",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The primary export of Zorblaxia is crystallized snorflak.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "61": {
+      "question": "How many moons orbit the planet Quixar?",
+      "ground_truth": "four",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Quixar has four moons.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "62": {
+      "question": "What color is the sky on Florpion during daytime?",
+      "ground_truth": "chartreuse",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The sky on Florpion appears chartreuse during daytime.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "63": {
+      "question": "What is the traditional greeting in Blimpton?",
+      "ground_truth": "'Flurp be with you' while touching elbows",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "64": {
+      "question": "Which element powers the engines of Vexian starships?",
+      "ground_truth": "Vexium (element 147)",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Vexium (element 147) powers the engines of Vexian starships.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "65": {
+      "question": "What is the lifespan of a common Gloopfish?",
+      "ground_truth": "7 Galactic Standard Years",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The lifespan of a Common Gloopfish is 7 Galactic Standard Years (GSY).",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "66": {
+      "question": "On which day do the Xandrians celebrate their New Year?",
+      "ground_truth": "Dual Zenith Day",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The Xandrians celebrate their New Year on Dual Zenith Day.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "67": {
+      "question": "What material is used to make currency in Triskelion?",
+      "ground_truth": "pressed leaves from the Geldarn tree",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The currency in Triskelion is made from processed Geldarn tree leaves.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "68": {
+      "question": "How do you activate a Nebulon communicator?",
+      "ground_truth": "press the central crystal while humming at 432 Hz",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "To activate a Nebulon communicator, you need to press the central crystal and hum at 432 Hz.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "69": {
+      "question": "What is the main ingredient in Plorgonian stew?",
+      "ground_truth": "fermented tubers of the Plorg plant",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The main ingredient in Plorgonian stew is fermented tubers of the Plorg plant.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "70": {
+      "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest.?",
+      "ground_truth": "It amplifies the mental abilities of those who drink it.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "I do not have enough information to answer.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "71": {
+      "question": "What kind of energy does the 'Stellar Converter' on the planet Xylos produce?",
+      "ground_truth": "The 'Stellar Converter' on the planet Xylos produces electrical power from atmospheric storms.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Stellar Converter on the planet Xylos produces electrical power.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "72": {
+      "question": "What is the primary defense of the creatures known as 'Glow-worms' in the Subterranean Caves?",
+      "ground_truth": "The primary defense of the Glow-worms in the Subterranean Caves is emitting blinding flashes of light when threatened.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The primary defense of Glow-worms is emitting a blinding flash of light to temporarily disorient predators.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "73": {
+      "question": "What is the main function of the device known as the 'Chrono-Regulator'?",
+      "ground_truth": "The main function of the 'Chrono-Regulator' is to stabilize localized temporal distortions.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Chrono-Regulator is designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "74": {
+      "question": "What are the 'Floating Islands of Aeridia' made of?",
+      "ground_truth": "The 'Floating Islands of Aeridia' are primarily composed of 'Aeridium Ore'.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "75": {
+      "question": "What is the traditional weapon of the 'Sky-Guardians' of the Citadel?",
+      "ground_truth": "The traditional weapon of the Sky-Guardians of the Citadel is a ceremonial blade forged from 'Storm-Metal'.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The traditional weapon of the Sky-Guardians is the Ceremonial Blade.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "76": {
+      "question": "What kind of power source is used by the ancient 'War Golems' found in the Desert of Bones?",
+      "ground_truth": "The ancient War Golems found in the Desert of Bones are powered by 'Animus Cores'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "War Golems are powered by Animus Cores.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "77": {
+      "question": "What is the primary ingredient of the healing potion known as 'Sunpetal Balm'?",
+      "ground_truth": "The primary ingredient of the healing potion known as 'Sunpetal Balm' is 'Glow-Moss'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The primary ingredient of Sunpetal Balm is finely ground powder derived from Glow-Moss.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "78": {
+      "question": "What defensive ability is possessed by the creature known as the 'Thorned Crawler' in the Bioluminescent Forest?",
+      "ground_truth": "The creature known as the 'Thorned Crawler' in the Bioluminescent Forest possesses the ability to instantaneously grow razor-sharp crystalline thorns across its body when threatened.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Thorned Crawler grows razor-sharp crystalline thorns when threatened.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "79": {
+      "question": "What is the energy source of the massive orbital platform known as the 'Aegis Station'?",
+      "ground_truth": "The massive orbital platform known as the 'Aegis Station' draws its power from a captured and contained miniature black hole.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Aegis Station draws its power from a captured and contained miniature black hole.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "80": {
+      "question": "What is the population of the capital of the biggest country in Xylos-7?",
+      "ground_truth": "The population of the capital of Eldoria is 300 million people.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The population of Aethelgard, the capital of Eldoria, the largest country in Xylos-7, is over 300 million people.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "81": {
+      "question": "What's the weather like in the capital of Zhykara?",
+      "ground_truth": "There is currently a snowstorm in the capital of Zhykara.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "Ktharr City, the capital of Zhykara, is currently experiencing one of the biggest snowstorms of the year.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "82": {
+      "question": "What's the value of the element obtained by mixing Aethelite and Pyron?",
+      "ground_truth": "The value of mixing Aethelite and Pyron is unparalleled energy storage capacity.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The element obtained by mixing Aethelite and Pyron is Syntholux, which is valued for its unparalleled energy storage capacity.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "83": {
+      "question": "What's the side effect of mixing Gravitium and Solara?",
+      "ground_truth": "The side effect of mixing Gravitium and Solara is the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "Mixing Gravitium and Solara creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "84": {
+      "question": "What is the radius of the largest planet in the K'tharr System?",
+      "ground_truth": "The radius of Jormund is 95.000 kilometers.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The radius of the largest planet in the K'tharr System is 95,000 kilometers.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "85": {
+      "question": "What is the population of the smallest planet in the Lumina System?",
+      "ground_truth": "The population of the smallest planet is approximately 1.5 million.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "I do not have enough information to answer.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "86": {
+      "question": "What is the title of the latest film starring the highest-paid actor on the planet Celestia?",
+      "ground_truth": "Xylar's most recent film release is titled 'Echoes of the Nebulae'.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The title of the latest film starring the highest-paid actor on the planet Celestia is \"Echoes of the Nebulae\".",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "87": {
+      "question": "What is the salary of the most popular actor on the planet Aethelon?",
+      "ground_truth": "Lyra Vael's salary is approximately 50 million Credits per major project.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "Lyra Vael is the most popular actor on Aethelon and is known for commanding a high salary.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "88": {
+      "question": "What is the title of the first album by the most popular Chrono-Wave musician on Riven Prime?",
+      "ground_truth": "Kaelen Echo's first album is titled 'Temporal Drift'.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The title of the first album by the most popular Chrono-Wave musician on Riven Prime is \"Future Echoes\".",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "89": {
+      "question": "What is the total number of plays for the most critically appreciated musician in the Crystalline Sound Weaving genre?",
+      "ground_truth": "The total number of plays for Seraphina is approximately 450 million.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "Harmonia, the most critically appreciated musician in the Crystalline Sound Weaving genre, has over 700 million plays across all platforms.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "90": {
+      "question": "What kind of energy does the facility hovering the planet Xylos produce?",
+      "ground_truth": "The 'Stellar Converter' on the planet Xylos produces electrical power from atmospheric storms.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The Aegis Station, which hovers above the planet Xylos, produces energy by utilizing Hawking radiation from a captured miniature black hole.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "91": {
+      "question": "What is the primary defense of the creatures populating the Subterranean Caves?",
+      "ground_truth": "The primary defense of the Glow-worms in the Subterranean Caves is emitting blinding flashes of light when threatened.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The primary defense of the creatures populating the Subterranean Caves includes emitting blinding flashes of light and retracting into an impenetrable mineralized shell.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "92": {
+      "question": "What is the main function of the device recently discovered in desert ruins?",
+      "ground_truth": "The main function of the 'Chrono-Regulator' is to stabilize localized temporal distortions.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The main function of the device recently discovered in desert ruins is to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "93": {
+      "question": "What is the composition of the natural wonder of planet Ntunu?",
+      "ground_truth": "The 'Floating Islands of Aeridia' are primarily composed of 'Aeridium Ore'.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "94": {
+      "question": "What is the traditional weapon of the defenders of the Citadel?",
+      "ground_truth": "The traditional weapon of the Sky-Guardians of the Citadel is a ceremonial blade forged from 'Storm-Metal'.",
+      "llm_answer": "I don't have enough information to answer that question.",
+      "rag_answer": "The traditional weapon of the Sky-Guardians, who defend the Citadel, is the Ceremonial Blade.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "95": {
+      "question": "What kind of power source is used by the ancient constructs found in the Desert of Bones?",
+      "ground_truth": "The ancient War Golems found in the Desert of Bones are powered by 'Animus Cores'.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The War Golems, ancient constructs found in the Desert of Bones, are powered by Animus Cores.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "96": {
+      "question": "What is the primary ingredient of the most famous healing potion?",
+      "ground_truth": "The primary ingredient of the healing potion known as 'Sunpetal Balm' is 'Glow-Moss'.",
+      "llm_answer": "I don't have enough information to answer that.",
+      "rag_answer": "The primary ingredient of the most famous healing potion, Moon-Dew Salve, is concentrated nectar derived from the Silver-Lotus.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "97": {
+      "question": "What defensive ability is possessed by the strongest creature found in Bioluminescent Forest?",
+      "ground_truth": "The creature known as the 'Thorned Crawler' in the Bioluminescent Forest possesses the ability to instantaneously grow razor-sharp crystalline thorns across its body when threatened.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    },
+    "98": {
+      "question": "What is the energy source of the massive orbital platform orbiting planet Xylos?",
+      "ground_truth": "The massive orbital platform known as the 'Aegis Station' draws its power from a captured and contained miniature black hole.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "The Aegis Station, the massive orbital platform orbiting planet Xylos, is powered by a captured miniature black hole.",
+      "llm_score": 0,
+      "rag_score": 1,
+      "case": "ft"
+    },
+    "109": {
+      "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest?",
+      "ground_truth": "It amplifies the mental abilities of those who drink it.",
+      "llm_answer": "I don't have enough information to answer.",
+      "rag_answer": "I do not have enough information to answer.",
+      "llm_score": 0,
+      "rag_score": 0,
+      "case": "ff"
+    }
+  }
+}

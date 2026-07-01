@@ -1,0 +1,1202 @@
+{
+  "40f23291d6854f6e86fa7de2": {
+    "score": 0,
+    "generated_answer": "The Collegian was established in 1893.",
+    "question": "When was the institute that owned The Collegian founded?",
+    "ground_truth": "1960"
+  },
+  "c6134c2636174affa82fd364": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+    "ground_truth": "1994"
+  },
+  "a5acad5d734746298156bf63": {
+    "score": 0,
+    "generated_answer": "The Motion Picture Production Code, which governed the content of motion pictures, was disestablished in 1968.",
+    "question": "When was the abolishment of the studio that distributed The Game?",
+    "ground_truth": "1999"
+  },
+  "2032d61b236f46ee8abd02ca": {
+    "score": 0,
+    "generated_answer": "CrossGen Entertainment, the publisher of Crux, was launched in May 2001.",
+    "question": "When was the publisher of Crux launched?",
+    "ground_truth": "1998"
+  },
+  "32f922e504a84c8c87dc60ad": {
+    "score": 0,
+    "generated_answer": "Jan \u0160indel was born in Hradec Kr\u00e1lov\u00e9.",
+    "question": "Jan \u0160indel's was born in what country?",
+    "ground_truth": "Czech Republic"
+  },
+  "fa04cb5f683640e1a07905ef": {
+    "score": 0,
+    "generated_answer": "Gabriel Nuchelmans was a Dutch philosopher known for his work in the history of philosophy, particularly medieval philosophy, logic, and philosophy of language.",
+    "question": "What city is the person who broadened the doctrine of philosophy of language from?",
+    "ground_truth": "Copenhagen"
+  },
+  "4f2b77965a5b4533b78b5880": {
+    "score": 0,
+    "generated_answer": "The Kansas City Royals were the American League champions and won the 2015 World Series.",
+    "question": "When was the baseball team winning the world series in 2015 baseball created?",
+    "ground_truth": "1969"
+  },
+  "92b91c3d49dc4075836879eb": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Where did the Baldevins bryllup director die?",
+    "ground_truth": "Copenhagen"
+  },
+  "5f7be6f782604c559e02b031": {
+    "score": 1,
+    "generated_answer": "G. Stanley Hall was the first president of the American Psychological Association, which develops and enforces the APA Ethical Principles of Psychologists and Code of Conduct.",
+    "question": "Who was thee first president of the association that wrote the code of ethics for psychology?",
+    "ground_truth": "G. Stanley Hall"
+  },
+  "ded128bde8f341249be57e8b": {
+    "score": 1,
+    "generated_answer": "Saint Petersburg is a major Russian city located along the Baltic Sea, where Saaremaa is situated.",
+    "question": "Which major Russian city borders the body of water in which Saaremaa is located?",
+    "ground_truth": "Saint Petersburg"
+  },
+  "1dd72cbebe484a5da4243056": {
+    "score": 0,
+    "generated_answer": "Laverda was founded in 1873.",
+    "question": "When was the employer of John J. Collins established?",
+    "ground_truth": "1822"
+  },
+  "20d9585f2941455ea4c28b9e": {
+    "score": 1,
+    "generated_answer": "Bush declared the war in 2003.",
+    "question": "When did Bush declare the war causing Kerry to criticize him during the 2004 campaign?",
+    "ground_truth": "2003"
+  },
+  "f16f7ff3fda24776946d9b0a": {
+    "score": 1,
+    "generated_answer": "King's College, Cambridge is an educational institution where Francis Walsingham matriculated in 1548.",
+    "question": "What is the college Francis Walsingham attended an instance of?",
+    "ground_truth": "college of the University of Cambridge"
+  },
+  "9803ad3c9d9f47c79d1a68d5": {
+    "score": 0,
+    "generated_answer": "Kyeon Mi-ri attended Sejong University, which is a local university.",
+    "question": "What type of university is the college Kyeon Mi-ri attended?",
+    "ground_truth": "private university"
+  },
+  "674292f2d7db4f2f8fc19c57": {
+    "score": 1,
+    "generated_answer": "The Yale Daily News, which publishes The Insider's Guide to the Colleges, was established in 1878.",
+    "question": "In what year was the author of The Insider's Guide to the Colleges established?",
+    "ground_truth": "1878"
+  },
+  "d9457188960f4eca964ba640": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When was the territory covered by RIBA's Cambridge branch office created?",
+    "ground_truth": "1994"
+  },
+  "8854baa7eb6d473ea202d5cb": {
+    "score": 0,
+    "generated_answer": "The Theravada School is a branch of Buddhism that does not include Mahayana scriptures in its canon.",
+    "question": "What's the meaning of the name of the school that does not include the Mahayava scriptures in its canon?",
+    "ground_truth": "The School of the Elders"
+  },
+  "07eebf26e0d14daeae904c74": {
+    "score": 0,
+    "generated_answer": "The information provided does not specify where Gerald Freedman, the lyricist for \"A Time for Singing,\" attended school.",
+    "question": "Where did the director who provided the lyrics to A Time for Singing attend school?",
+    "ground_truth": "Northwestern's School of Communication"
+  },
+  "d697f92c6ea844388ce99075": {
+    "score": 1,
+    "generated_answer": "The Democratic Republic of the Congo, formerly known as Zaire, gained independence from Belgium in 1960.",
+    "question": "When did the country formerly known as Zaire become independent?",
+    "ground_truth": "1960"
+  },
+  "1296c370b4dc4bfcb97eb1e0": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Where did Peter and Paul Fortress' designer die?",
+    "ground_truth": "Saint Petersburg"
+  },
+  "a6f5457ecf844cc4ab8054ee": {
+    "score": 1,
+    "generated_answer": "TVNorge, the network that airs Alt for Norge, launched on 5 December 1988.",
+    "question": "When did the network which airs Alt for Norge start?",
+    "ground_truth": "1988"
+  },
+  "945e464f8e2e47ac86d4b5b2": {
+    "score": 0,
+    "generated_answer": "The French believed the Malakoff was instrumental in their defense, but they failed to take it back.",
+    "question": "Who failed to take back what the French believed instrumental in their defense?",
+    "ground_truth": "the Russian defences"
+  },
+  "fb46d2446f0648f583aa601a": {
+    "score": 0,
+    "generated_answer": "The field of work of the proposer of the Modern Synthesis is evolutionary biology.",
+    "question": "What is the field of work of the proposer of the modern synthetic theory of evolution?",
+    "ground_truth": "bio"
+  },
+  "fbf3f2407b114847a7f33502": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the season of Greys Anatomy when Derek died filmed?",
+    "ground_truth": "filming for the eleventh season would begin on July 25, 2014"
+  },
+  "7d11d21c21f04e44997a8ce8": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When did the manufacturer of a pedometer accessory for the iPod become a publicly traded company?",
+    "ground_truth": "1980"
+  },
+  "cbccc3d923ab411a81442619": {
+    "score": 0,
+    "generated_answer": "The record label for Peabo Bryson, who sang \"Beauty and the Beast\" with Celine Dion, is not specified in the provided context.",
+    "question": "What is the record label for the person who sang Beauty and the Beast with Celine Dion?",
+    "ground_truth": "Capitol Records"
+  },
+  "0449cae8337c419ab9463320": {
+    "score": 1,
+    "generated_answer": "The employer of the Iranian scientist who co-invented the first gas laser is the M.I.T. Laboratory.",
+    "question": "Who is the employer of the Iranian scientist who co-invented the first gas laser?",
+    "ground_truth": "M.I.T."
+  },
+  "c917dcaea965434590d0f7d1": {
+    "score": 1,
+    "generated_answer": "Bill Russell won 8 consecutive NBA championships.",
+    "question": "How many championships in a row were won by the person who played in the most NBA finals games?",
+    "ground_truth": "eight"
+  },
+  "c4f2970c077f4912b821b92c": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "In what language is the star of Koyelaanchal fluent?",
+    "ground_truth": "Hindi"
+  },
+  "9eeca5afc13642129cc01f72": {
+    "score": 0,
+    "generated_answer": "Carl \u00d6st played the guitar and violin.",
+    "question": "What instrument did the artiste for Vi skall fara bortom m\u00e5nen play?",
+    "ground_truth": "violin"
+  },
+  "0df82a88608349c6b3ec8f13": {
+    "score": 1,
+    "generated_answer": "The Council of Europe, which was seated in 1949, adopted the Convention on Cybercrime in 2001.",
+    "question": "What year did the council which was seated in 1949 adopt the convention of cybercrime in?",
+    "ground_truth": "2001"
+  },
+  "01d7ce1959454e3da7025ddb": {
+    "score": 0,
+    "generated_answer": "George R.R. Martin is currently writing The Winds of Winter.",
+    "question": "When did the author of season 7 of game of thrones begin writing Winds of Winter?",
+    "ground_truth": "2010"
+  },
+  "b5b2e1ddd86e448aa36af114": {
+    "score": 0,
+    "generated_answer": "Hugo Schiff, the chemist after whom the Schiff test is named, was of German nationality and was naturalized in Italy, so he likely spoke German and Italian.",
+    "question": "What languages are spoken, written or signed by the person the Schiff test is named after?",
+    "ground_truth": "Italian"
+  },
+  "4ad835f0c8ff48e4bacc2864": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What language did the leader of the least radicalized faction use?",
+    "ground_truth": "Chinese"
+  },
+  "7da95e28bcf743a6ad37dc1d": {
+    "score": 0,
+    "generated_answer": "The majority of the patents held by the company the Italian patents firm was representing expired between 2007 and 2015.",
+    "question": "When did the majority of the patents held by the company the Italian patents firm was representing expire?",
+    "ground_truth": "2015"
+  },
+  "4a9cb907bbf149eaba4da365": {
+    "score": 1,
+    "generated_answer": "The person after whom the Panizzi Lectures are named is Anthony Panizzi, who was of Italian birth.",
+    "question": "What language is used by the person after whom the Panizzi lectures are named?",
+    "ground_truth": "Italian"
+  },
+  "db928878ff2541429d32ec7c": {
+    "score": 1,
+    "generated_answer": "The language for the person who translated Plato's work to Latin is Italian.",
+    "question": "What is the language for the person who translated Plato's work to Latin?",
+    "ground_truth": "Italian"
+  },
+  "d673bd90cb624beebbb198a7": {
+    "score": 0,
+    "generated_answer": "Hermann Goring believed that the Kriegsmarine would gain the ability to disrupt British sea communications if he cooperated with them.",
+    "question": "What did Goring believe the person whom he refused to work with in 1940 and 1941 would gain with further support?",
+    "ground_truth": "control of more Luftwaffe units"
+  },
+  "5c66d9cc2a2f4968b6b5bf0b": {
+    "score": 1,
+    "generated_answer": "John Hancock was the president of the Second Continental Congress, which approved the Declaration of Independence.",
+    "question": "Who was the president of the body that petitioned the king of England to recognize the rights of colonists when the declaration of independence was adopted?",
+    "ground_truth": "President John Hancock"
+  },
+  "42ef898e490249ed85f89576": {
+    "score": 0,
+    "generated_answer": "Kara V\u00e2s\u0131f Bey died in Kad\u0131k\u00f6y.",
+    "question": "What city is the place Kara V\u00e2s\u0131f Bey died located in?",
+    "ground_truth": "Istanbul"
+  },
+  "98e066a8711140d1bb67a01b": {
+    "score": 0,
+    "generated_answer": "The context does not provide information about the languages spoken, written, or signed by the stars of \"Accident On Hill Road.\"",
+    "question": "What languages can the star of Accident on Hill Road speak, write or sign?",
+    "ground_truth": "Hindi"
+  },
+  "37d5d077f40345bab4fef806": {
+    "score": 1,
+    "generated_answer": "France hosted the finals of the competition featuring Samoa in 2007.",
+    "question": "In what year did France host the finals of the competition featuring Samoa for going on 30 years?",
+    "ground_truth": "2007"
+  },
+  "884b38a532da41fba2795ad3": {
+    "score": 1,
+    "generated_answer": "The British Railways Board, which published Roald Dahl's Guide to Railway Safety, ceased to exist in 2001.",
+    "question": "In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?",
+    "ground_truth": "2001"
+  },
+  "d9d8408d591046aa8c82d25f": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the inception of the company that released Poptropica?",
+    "ground_truth": "1998"
+  },
+  "cbeb6500dee24dfc8dfe6c84": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When did the distributer of Poptropica start?",
+    "ground_truth": "1998"
+  },
+  "cd21f07b17164535b2deb8f8": {
+    "score": 0,
+    "generated_answer": "The Colorado River is the source of the river where Southern California gets most of its water.",
+    "question": "What is the source of the river where Southern California gets most of its water?",
+    "ground_truth": "La Poudre Pass"
+  },
+  "15a3f89d92c847d184561247": {
+    "score": 0,
+    "generated_answer": "The university Elizabeth Harwood attended was formed in 1917.",
+    "question": "When was the university Elizabeth Harwood attended formed?",
+    "ground_truth": "1972"
+  },
+  "3364c0089d3d4f4b8242f5d1": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What is the population of the city where the torch event was held in Vietnam?",
+    "ground_truth": "8,426,100"
+  },
+  "c2bbeb66934b46b691464619": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the spouse of one of the artist who have had concerts in the stadium?",
+    "ground_truth": "David Furnish"
+  },
+  "fe7e0a5ce99a43ca96c1157b": {
+    "score": 0,
+    "generated_answer": "Livonia is a city in Michigan, United States, and a suburb of Detroit.",
+    "question": "What type of community is the municipality where Norbert Pfretzschner died, an instance of?",
+    "ground_truth": "comune"
+  },
+  "38b46102d93148619eb2cf7b": {
+    "score": 1,
+    "generated_answer": "The Army of Northern Virginia, the most famous army of the Confederacy, was involved in the American Civil War.",
+    "question": "In what U.S. conflict was involved the most famous army of the Confederacy?",
+    "ground_truth": "American Civil War"
+  },
+  "123c763705854261951abf19": {
+    "score": 0,
+    "generated_answer": "The alma mater of Mushtaq Minhas is an example of a public university.",
+    "question": "The alma mater of Mushtaq Minhas is an example of what kind of university?",
+    "ground_truth": "private university"
+  },
+  "b118b85c9075496188438347": {
+    "score": 1,
+    "generated_answer": "The literacy rate in Chihuahua City, where Donato Guerra was assassinated, is 98%.",
+    "question": "What is the literacy rate in the main city near where Guerra was assassinated?",
+    "ground_truth": "98%"
+  },
+  "705d3d95c7b14311a1c7d4cc": {
+    "score": 1,
+    "generated_answer": "The American Civil War involved the Army of Northern Virginia, the most famous army of the Confederacy.",
+    "question": "What conflict involved the most famous Confederacy army?",
+    "ground_truth": "American Civil War"
+  },
+  "6181c9fc3dbd4861a0895d51": {
+    "score": 1,
+    "generated_answer": "The name of the airport in Ho Chi Minh City, where the 2008 Summer Olympics Torch Relay was held, is Tan Son Nhat International Airport.",
+    "question": "What is the name of the airport in the city where the torch event was held in Vietnam?",
+    "ground_truth": "T\u00e2n S\u01a1n Nh\u1ea5t International Airport"
+  },
+  "883c02658f5d49f99eec0a76": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the alma mater of Rosalind Plowright founded?",
+    "ground_truth": "1972"
+  },
+  "0dba7cf8ffe74dd2968ca1dc": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What is the literacy rate in the new state capitol founded in 1709?",
+    "ground_truth": "98%"
+  },
+  "4946790f6c4347c79c21b779": {
+    "score": 0,
+    "generated_answer": "The end of the manufacturer of the White armored car is not specified in the provided context.",
+    "question": "What year was the end of the manufacturer of the White armored car?",
+    "ground_truth": "1980"
+  },
+  "bde45590a44448cf9992c38b": {
+    "score": 0,
+    "generated_answer": "The members of Kassetten's performers collaborated with the Musterhaus Project.",
+    "question": "Who did the members of Kassetten's performers collaborate with?",
+    "ground_truth": "the Birthday Party"
+  },
+  "d3bdcee67591460cbc74dc08": {
+    "score": 1,
+    "generated_answer": "Anthony Marten's college, Trinity Hall, Cambridge, is part of the University of Cambridge.",
+    "question": "What university is Anthony Marten's college part of?",
+    "ground_truth": "college of the University of Cambridge"
+  },
+  "893cab200286443ca3e2cf90": {
+    "score": 1,
+    "generated_answer": "The White Motor Company, which built the White armored car, ceased operations in 1980.",
+    "question": "What year was the end of the company that built the White armored car?",
+    "ground_truth": "1980"
+  },
+  "21d67856f1734790be6b74ce": {
+    "score": 1,
+    "generated_answer": "The college attended by Roland Moyle, Trinity Hall, is part of the University of Cambridge.",
+    "question": "What university is the college attended by Roland Moyle part of?",
+    "ground_truth": "college of the University of Cambridge"
+  },
+  "b29f5e76321641da86f7bf7f": {
+    "score": 0,
+    "generated_answer": "The abbreviation of the agency that officially recognized women's football in 1971 stands for **F\u00e9d\u00e9ration Internationale de Football Association**.",
+    "question": "What does the abbreviation of the agency that officially recognized women's football in 1971 Stand for?",
+    "ground_truth": "European Championship"
+  },
+  "0121cc630949490990fa4072": {
+    "score": 0,
+    "generated_answer": "The four letter abbreviation of the organization which includes the Gibraltar Football Association stands for the International Football Association Board.",
+    "question": "Where does the four letter abbreviation of the organization which includes the Gibraltar Football Association stand for?",
+    "ground_truth": "European Championship"
+  },
+  "56b21feff9544e8bbd8a8b0d": {
+    "score": 0,
+    "generated_answer": "The team that won the MLB World Series in 2007, the Boston Red Sox, acquired Brandon Phillips from the Atlanta Braves.",
+    "question": "Where did the team that won the MLB World Series in 2007 get Brandon Phillips from?",
+    "ground_truth": "Los Angeles Angels"
+  },
+  "fc9fbfaff10e45519c716197": {
+    "score": 1,
+    "generated_answer": "The Kuybyshev Reservoir is fed by the Kama River, which the Vyatka River connects to.",
+    "question": "What is the name of the reservoir fed by the river that the Vyatka connects to?",
+    "ground_truth": "Kuybyshev Reservoir"
+  },
+  "620b3519348b4197bccde427": {
+    "score": 1,
+    "generated_answer": "Rafe Spall portrays John Hancock, known for his large signature on the Declaration of Independence, in the miniseries *Sons of Liberty*.",
+    "question": "Who plays the man with the largest signature on the declaration of independence in Sons of Liberty?",
+    "ground_truth": "Rafe Spall"
+  },
+  "071f9f222640468e93635bd4": {
+    "score": 1,
+    "generated_answer": "The ruling king of Saudi Arabia, King Salman, comes from the House of Saud.",
+    "question": "What family does the ruling king of Saudi Arabia come from?",
+    "ground_truth": "Al Saud"
+  },
+  "e2e1a2a3c90b433ea378926a": {
+    "score": 1,
+    "generated_answer": "The Colorado River established its course through the area about 5 to 6 million years ago.",
+    "question": "When did the the river where Southern California gets most of its water, start to form the Grand Canyon?",
+    "ground_truth": "about 5 to 6 million years ago"
+  },
+  "c688e68704084ea398ef8830": {
+    "score": 0,
+    "generated_answer": "The company Novair International Airways is not part of any dissolved company.",
+    "question": "What year did the company Novair International Airways is part of dissolve?",
+    "ground_truth": "1995"
+  },
+  "c8598fc51f5647a587623547": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the sports team the person played for who scored the first touchdown in Superbowl 1?",
+    "ground_truth": "Green Bay Packers"
+  },
+  "a2e879782c93459d8ea4f14c": {
+    "score": 0,
+    "generated_answer": "The Japanese defeated France during World War II, which involved Operation Torch, a military campaign in North Africa that included capturing Tafaraoui Airport.",
+    "question": "How did the Japanese beat the country whose government disagreed on the language used to describe the torch route?",
+    "ground_truth": "First Sino-Japanese War"
+  },
+  "046c8c7d6d5c408e8d0b3187": {
+    "score": 0,
+    "generated_answer": "The director of Thenum Vayambum, Ashok Kumar, does not have a specified language associated with him in the provided context.",
+    "question": "What language is used by the director of Thenum Vayambum?",
+    "ground_truth": "Hindi"
+  },
+  "938fb813705a49af9b3cf326": {
+    "score": 0,
+    "generated_answer": "The person who founded the American Institute of public opinion in 1935 was born in the George H. Gallup House.",
+    "question": "Where was the person who founded the American Institute of public opinion in 1935 born?",
+    "ground_truth": "Jefferson"
+  },
+  "8c7f82fc69cc4f3194a1d925": {
+    "score": 0,
+    "generated_answer": "The state containing Wonderland Village is Michigan, which is located in the United States.",
+    "question": "Which county contains the state having Wonderland Village?",
+    "ground_truth": "Wayne County"
+  },
+  "5a581128195248f597dedb04": {
+    "score": 1,
+    "generated_answer": "Italian is the language used by the director of Tiffany Memorandum.",
+    "question": "What language is used by the director of Tiffany Memorandum?",
+    "ground_truth": "Italian"
+  },
+  "b40ede5094d241868d7f8f4c": {
+    "score": 1,
+    "generated_answer": "The family of the current leader of Saudi Arabia is the House of Saud.",
+    "question": "What is the family of the current leader of Saudi Arabia?",
+    "ground_truth": "Al Saud"
+  },
+  "8e5183fea8ee4313b96e78d9": {
+    "score": 0,
+    "generated_answer": "Einst\u00fcrzende Neubauten, the group who originally performed Kollaps, incorporated found objects into their music.",
+    "question": "Who did members of the group who originally performed Kollaps collaborate with?",
+    "ground_truth": "the Birthday Party"
+  },
+  "337c51cef9dc43a28493eb14": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "In which county is the White Castle that Harold and Kumar visit?",
+    "ground_truth": "Camden County"
+  },
+  "ee767d6593b34b04a7839f90": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "In what year was the field Montini obtain a doctorate in issued affirming celibacy in the priesthood?",
+    "ground_truth": "1983"
+  },
+  "8d8f578543f24ad8b6402513": {
+    "score": 1,
+    "generated_answer": "The first Muslim elected as president of the party formed government in NWFP after the elections of 1937 was Badruddin Tayyab Ji.",
+    "question": "Who was the first Muslim elected as president of the party formed government in NWFP after the elections of 1937?",
+    "ground_truth": "Badruddin Tayyab Ji"
+  },
+  "33838f3b96194fa7863cee7e": {
+    "score": 1,
+    "generated_answer": "The Kensington Roof Gardens, located in the city where the Albert Memorial is situated, opened to the public in the 1980s.",
+    "question": "When did the roof gardens above the city where the Albert Memorial and Royal Albert Hall is located open to the public?",
+    "ground_truth": "1980s"
+  },
+  "63a7b807eda6495a9948f166": {
+    "score": 1,
+    "generated_answer": "The language of Marcello Piacentini, the designer of Sacro Cuore di Cristo Re, is Italian.",
+    "question": "What was the language of the designer of Sacro Cuore di Cristo Re?",
+    "ground_truth": "Italian"
+  },
+  "1518a74f4a1045ad82161a22": {
+    "score": 0,
+    "generated_answer": "The year 1967.",
+    "question": "In what year was celibacy in the priesthood affirmed in the ordinances that previously Paul had wanted to reform.",
+    "ground_truth": "1983"
+  },
+  "4a96a67178ce40b0aaac81b7": {
+    "score": 0,
+    "generated_answer": "Gerald Ford served as President of the United States following the resignation of Richard Nixon.",
+    "question": "Who was President of the U.S. following the event which was preceded by Joseph Schumpeter and Norman Angell's most prolific writing ?",
+    "ground_truth": "Thomas Woodrow Wilson"
+  },
+  "c0d0477232244efcb77f33d0": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When did Tito first visit the person who laid claim to Eritrea and Italian Somaliland in a letter to Franklin D. Roosevelt?",
+    "ground_truth": "1954"
+  },
+  "e726a3004fce425988530e5c": {
+    "score": 0,
+    "generated_answer": "The Presbyterian Church in England experienced a large growth in members during the era of the Long Parliament.",
+    "question": "In what era did The Presbyterian Church in the country whose government disagreed on the language used to describe the torch route experience a large growth in members?",
+    "ground_truth": "era of Guomindang"
+  },
+  "057678e97b664b7f8e261afb": {
+    "score": 1,
+    "generated_answer": "The initial German offensive on the Western Front was stopped at the Battle of the Marne.",
+    "question": "In the war that followed Joseph Schumpeter's and Norman Angell's most prolific writing period where was the initial German offensive on the Western Front stopped?",
+    "ground_truth": "First Battle of the Marne"
+  },
+  "04288d6b341646b88e6afb3f": {
+    "score": 0,
+    "generated_answer": "The author of Ressurrei\u00e7\u00e3o, Machado de Assis, died at Windlesham Manor in Crowborough, East Sussex.",
+    "question": "Where did the author of Ressurrei\u00e7\u00e3o die?",
+    "ground_truth": "Rio de Janeiro"
+  },
+  "621875ec043a478b97d62662": {
+    "score": 1,
+    "generated_answer": "Cosima Wagner is the child of Liszt's mistress, Marie d'Agoult.",
+    "question": "Who is the child of Liszt's mistress?",
+    "ground_truth": "Cosima Wagner"
+  },
+  "0618c0cbda8c4d98aaefeced": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What years did the person who said \"I think, therefore I am\" live?",
+    "ground_truth": "1596-1650"
+  },
+  "8d59c79c45734cce8ed72d26": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When was the record label for Lovely Creatures created?",
+    "ground_truth": "2003"
+  },
+  "3ce2fa3e040140889270a113": {
+    "score": 0,
+    "generated_answer": "The maker of the CMA CGM Vela, National Provincial Bank, was dissolved in 2016.",
+    "question": "What year did the maker of the CMA CGM Vela dissolve?",
+    "ground_truth": "1999"
+  },
+  "ab4ad12773a644beba96f4eb": {
+    "score": 1,
+    "generated_answer": "The Franklin Institute, which awards the Elliott Cresson Medal, was established in 1824.",
+    "question": "When did the institute that gives out the Elliott Cresson Medal award open?",
+    "ground_truth": "1824"
+  },
+  "0ca61d40bb9e454aaa6b5619": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What year did the company that built K200 KIFV dissolve?",
+    "ground_truth": "1999"
+  },
+  "7a5e1471043b4b58a1cde577": {
+    "score": 1,
+    "generated_answer": "The author of Quincas Borba, Machado de Assis, died in Rio de Janeiro.",
+    "question": "In what city did the author of Quincas Borba die?",
+    "ground_truth": "Rio de Janeiro"
+  },
+  "ae30fc0fac074b8084095f1a": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did the author of Mem\u00f3rias P\u00f3stumas die?",
+    "ground_truth": "Rio de Janeiro"
+  },
+  "fba91e4e028742a5bbac6025": {
+    "score": 0,
+    "generated_answer": "Chopin's father taught French at the Warsaw Lyceum.",
+    "question": "Where was the place where Chopin's father got a teaching position moved to?",
+    "ground_truth": "Kazimierz Palace"
+  },
+  "d7c1cf5c490148a9ae336a93": {
+    "score": 0,
+    "generated_answer": "The information about the lifespan of Ren\u00e9 Descartes is not provided in the context.",
+    "question": "The person coming up with the cartesian coordinate system lived from what year to what year?",
+    "ground_truth": "1596-1650"
+  },
+  "2e17a05bc94e474d8fca6f41": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When did the institution that awards the John Price Wetherill Medal open?",
+    "ground_truth": "1824"
+  },
+  "9905acff69f648af8a3143c4": {
+    "score": 0,
+    "generated_answer": "The person who said \"I think, therefore I am\" is Ren\u00e9 Descartes, but the context does not provide specific dates for his life.",
+    "question": "When did the person who said \"I think, therefore I am\" live?",
+    "ground_truth": "1596-1650"
+  },
+  "407b26ffe5a942aeab06d814": {
+    "score": 1,
+    "generated_answer": "Linda Perry, the lead singer of 4 Non Blondes, founded Custard Records, the label that released Ex-Sensitive.",
+    "question": "What record label does the singer in 4 non blondes sign?",
+    "ground_truth": "Custard Records"
+  },
+  "a9e09285c77342509d7a5040": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When was the record label that released Buried In Your Black Heart created?",
+    "ground_truth": "2003"
+  },
+  "5c4676dfe0b545848df4be36": {
+    "score": 0,
+    "generated_answer": "The mother of Louise of Great Britain, Caroline of Ansbach, belongs to the British royal family.",
+    "question": "What family does the mother of Louise of Great Britain belong to?",
+    "ground_truth": "House of Hohenzollern"
+  },
+  "8864dab0a5634776a042be7e": {
+    "score": 0,
+    "generated_answer": "The New York Giants were 0-5 before the Super Bowl XLVI.",
+    "question": "When was the last time the team that beat the Patriots in the Super Bowl was 0-5?",
+    "ground_truth": "October 6"
+  },
+  "53be92a7a169494ab42538e3": {
+    "score": 0,
+    "generated_answer": "Linda Perry founded Custard Records.",
+    "question": "What is the record label for the singer of 4 Non Blondes?",
+    "ground_truth": "Custard Records"
+  },
+  "3d43357c35c74e2ca791e0ab": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When did the organization that gives out the Frank P. Brown Medal open?",
+    "ground_truth": "1824"
+  },
+  "5dd9523c32824f7cbdcf4143": {
+    "score": 0,
+    "generated_answer": "The last Super Bowl won by the team the Patriots lost to in the Super Bowl was Super Bowl LII, held on February 4, 2018.",
+    "question": "when was the last Super Bowl won by the team the Patriots lost to in the Super Bowl?",
+    "ground_truth": "2011"
+  },
+  "cce2bdd34c9d41c3b8d1917e": {
+    "score": 0,
+    "generated_answer": "The child of the host of the gathering where Fr\u00e9d\u00e9ric was introduced to George Sand is Cosima Liszt.",
+    "question": "Who is the child of the host of the gathering where Fr\u00e9d\u00e9ric was introduced to George Sand?",
+    "ground_truth": "Cosima Wagner"
+  },
+  "5025f27c7ec4499392f77acf": {
+    "score": 0,
+    "generated_answer": "Caroline of Ansbach is the mother of Prince George William of Great Britain.",
+    "question": "What is the family of Prince George William of Great Britain's mother",
+    "ground_truth": "House of Hohenzollern"
+  },
+  "91fa336f2e7a429d94af018a": {
+    "score": 0,
+    "generated_answer": "The mother of Anne, Princess Royal and Princess of Orange, is a member of the British royal family.",
+    "question": "Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?",
+    "ground_truth": "House of Hohenzollern"
+  },
+  "201c720c30624d948904d159": {
+    "score": 1,
+    "generated_answer": "Thomas Jefferson was the first president from the Democratic-Republican Party, which emerged from the Anti-Administration coalition.",
+    "question": "Who was the first president from the party following the Anti-Administration Party?",
+    "ground_truth": "Jefferson"
+  },
+  "cb279ac827e145e98e0dfa9b": {
+    "score": 0,
+    "generated_answer": "The Philadelphia Eagles defeated the New England Patriots in Super Bowl LII on February 4, 2018.",
+    "question": "When was the super bowl won by the team that the Patriots lost to?",
+    "ground_truth": "2011"
+  },
+  "4e03ca5188134c3ea8f41744": {
+    "score": 0,
+    "generated_answer": "Fr\u00e9d\u00e9ric Chopin took lessons at the Warsaw Conservatory between 1826 and 1829, where his father, Nicolas Chopin, had a teaching position.",
+    "question": "During what years did Fr\u00e9d\u00e9ric take lessons at the academy where Chopin's father once had a teaching position?",
+    "ground_truth": "1823 to 1826"
+  },
+  "7020d02fe68449f0bdee300f": {
+    "score": 0,
+    "generated_answer": "Marie d'Agoult mothered the hostess of the party where Chopin met George Sand.",
+    "question": "Who mothered the hostess of the party where Chopin met George Sand?",
+    "ground_truth": "Cosima Wagner"
+  },
+  "e9fb772797d146a48dcf73ab": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "In what year did the agency that maintains the Presidential Library system become independent?",
+    "ground_truth": "1985"
+  },
+  "46335c5555af4755bddc8a5a": {
+    "score": 0,
+    "generated_answer": "Pett Productions was dissolved in May 2015.",
+    "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+    "ground_truth": "1999"
+  },
+  "53d72e1a560c4339aefdabd6": {
+    "score": 0,
+    "generated_answer": "William Pereira designed the Chet Holifield Federal Building.",
+    "question": "What was a notable work of the Chet Holifield Federal Building designer?",
+    "ground_truth": "Transamerica Pyramid"
+  },
+  "bb9eededc0d74b4d9a4ae310": {
+    "score": 0,
+    "generated_answer": "The Kazimierz Palace is the current rectorate of Warsaw University and housed the Warsaw Lyceum in 1817.",
+    "question": "What establishment today contains what was known as the place Chopin's father got a teaching position during that time?",
+    "ground_truth": "Warsaw University"
+  },
+  "5b49e5ca9efb429b8a6bb9ff": {
+    "score": 0,
+    "generated_answer": "The Cleveland Indians won the World Series in 1920.",
+    "question": "When did the sports team having Ger\u00f3nimo Berroa win their last world series?",
+    "ground_truth": "1993"
+  },
+  "35c59ccca26b44d7bc458155": {
+    "score": 1,
+    "generated_answer": "The Toronto Blue Jays, the team Junior F\u00e9lix played for, won their last World Series in 1993.",
+    "question": "When did the sports team that Junior F\u00e9lix played for win their last World Series?",
+    "ground_truth": "1993"
+  },
+  "797e8b8e944e400580e8fc55": {
+    "score": 0,
+    "generated_answer": "Abraham Lincoln was the first president from the Republican Party, which evolved from the Democratic-Republican Party that Jeremiah Morrow was a member of.",
+    "question": "Who was the first president from the newly evolved political party Jeremiah Morrow was a member of?",
+    "ground_truth": "Jefferson"
+  },
+  "b3d7d55b77d9424b8ac85f16": {
+    "score": 0,
+    "generated_answer": "The information about the birthplace of the artist of Honeyburst is not available in the provided context.",
+    "question": "Where was the artist of Honeyburst born?",
+    "ground_truth": "Copenhagen"
+  },
+  "42e1b5d8e8d84a50b2fc9daa": {
+    "score": 0,
+    "generated_answer": "Leon Schlesinger was impressed by the pilot cartoon Bosko, The Talk - Ink Kid.",
+    "question": "Who published the work that Bosko is present in?",
+    "ground_truth": "Warner Bros."
+  },
+  "c8d1c9db4a594917ac9a1524": {
+    "score": 1,
+    "generated_answer": "Warner Bros. is the production company behind the Looney Tunes series, which includes the cartoon \"Gopher Broke\" featuring the Barnyard Dawg.",
+    "question": "What company published the cartoon that included Barnyard Dawg?",
+    "ground_truth": "Warner Bros."
+  },
+  "38ebf776c54f4c8d8da8ddde": {
+    "score": 0,
+    "generated_answer": "The series \"A Haunting We Will Go\" was part of is not specified in the provided context.",
+    "question": "Who produced the series A-Haunting We Will Go was part of?",
+    "ground_truth": "Warner Bros."
+  },
+  "47803090886f411097dfad1e": {
+    "score": 0,
+    "generated_answer": "The town where Renzo Zorzi died is an instance of a location.",
+    "question": "The town where Renzo Zorzi died is an instance of what?",
+    "ground_truth": "comune"
+  },
+  "50743dc756374095ad4d012e": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who produced the series Acme Animation Factory is part of?",
+    "ground_truth": "Warner Bros."
+  },
+  "9e9a2b5c4e4646a28b1dd433": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When did person who supervised the design and implementation of the iPod user interface die?",
+    "ground_truth": "2011"
+  },
+  "822d0f47aa1f40e1acb34f34": {
+    "score": 1,
+    "generated_answer": "Khushwant Singh, the author of *Train to Pakistan*, wrote the novel in English.",
+    "question": "What language was used by the author of Train to Pakistan?",
+    "ground_truth": "English language"
+  },
+  "447ef52ca59240adbdc60363": {
+    "score": 1,
+    "generated_answer": "WNZK is located in Dearborn Heights, which is in Wayne County, Michigan.",
+    "question": "The city where WNZK is located is in what county?",
+    "ground_truth": "Wayne County"
+  },
+  "e8e974f4ccb54db38add2a89": {
+    "score": 0,
+    "generated_answer": "The language used by Renana Jhabvala's mother is not specified in the provided context.",
+    "question": "What language was used by Renana Jhabvala's mother?",
+    "ground_truth": "English language"
+  },
+  "b5a41b6bd90544c3aac71c3a": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "When did the person who admitted that Apple was late to the party with writeable CD technology die?",
+    "ground_truth": "2011"
+  },
+  "5f977f73c7cd46dc87e4e786": {
+    "score": 1,
+    "generated_answer": "Dakota City, where KZOI is licensed, is located in Dakota County.",
+    "question": "In which county is the city in which KZOI is licensed?",
+    "ground_truth": "Dakota County, Nebraska"
+  },
+  "ae7eeea06b97478689a00b6a": {
+    "score": 0,
+    "generated_answer": "The language spoken by the director of Teesri Manzil is not mentioned in the provided context.",
+    "question": "What language is spoken by the director of Teesri Manzil?",
+    "ground_truth": "Hindi"
+  },
+  "20994ea4ffd944c8a6debd89": {
+    "score": 0,
+    "generated_answer": "Brandon Teena died in Humboldt, Nebraska, which is not mentioned in the provided context.",
+    "question": "In which county is the place where Brandon Teena died?",
+    "ground_truth": "Allen County, Kansas"
+  },
+  "6f506abc0e5c4403bf21527c": {
+    "score": 0,
+    "generated_answer": "Thomas Woodrow Wilson was the president of the United States during World War I, which led to indoor toilets becoming common in London.",
+    "question": "Who was president of the united states immediately following the first global war after which indoor toilets became common in America?",
+    "ground_truth": "Thomas Woodrow Wilson"
+  },
+  "2ed69ba553194393b82c7471": {
+    "score": 0,
+    "generated_answer": "The Polish forces, led by King Jan III Sobieski, played a crucial role in the defense of Vienna.",
+    "question": "Who led the force that later pushed deep into Polish territory?",
+    "ground_truth": "Marshal Mikhail Tukhachevsky"
+  },
+  "ad35aec1a92f47b7a6c1313f": {
+    "score": 0,
+    "generated_answer": "The German Army initially directed its offensive towards the Western Front during World War I.",
+    "question": "where was the initial german offensive during the war just before toilets became common in London?",
+    "ground_truth": "First Battle of the Marne"
+  },
+  "89f2dde34fe54d9bbed4dcb9": {
+    "score": 0,
+    "generated_answer": "The production of the SS.11/SS.12 series, which includes the SS.11 missile, ceased in the 1980s.",
+    "question": "In which year did the company that made SS.11 end?",
+    "ground_truth": "1970"
+  },
+  "55e191f08b25403c9557f606": {
+    "score": 0,
+    "generated_answer": "Nord Aviation, the designer of SS.11, was based in Bourges, France.",
+    "question": "In what year did the designer of SS.11 end?",
+    "ground_truth": "1970"
+  },
+  "14fa5117924247da865b86fe": {
+    "score": 0,
+    "generated_answer": "A\u00e9rospatiale, which was the renamed version of Nord Aviation, the company that made the AA.20, ended by merging into Airbus in 2000.",
+    "question": "When did the company that made the AA.20 end by merging?",
+    "ground_truth": "1970"
+  },
+  "a279dd2b7a504dafb9d7d009": {
+    "score": 0,
+    "generated_answer": "The production of the SS.11/SS.12 series ceased in the 1980s.",
+    "question": "In which year did the SS.11 manufacturer end?",
+    "ground_truth": "1970"
+  },
+  "2f295a44bc674d6c982782fc": {
+    "score": 0,
+    "generated_answer": "The Hudson Wasp was manufactured until 1956.",
+    "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+    "ground_truth": "1954"
+  },
+  "e08ca63aa971478c8314749c": {
+    "score": 1,
+    "generated_answer": "The last year of the Hudson Motor Car Company, which produced the Hudson Commodore, was 1954.",
+    "question": "What was the last year of the company that made the Hudson Commodore?",
+    "ground_truth": "1954"
+  },
+  "1d14e4af257f4d8395e7b1fc": {
+    "score": 1,
+    "generated_answer": "The Hudson Motor Car Company operated from 1909 to 1954.",
+    "question": "What year was the end of the company which made the Hudson Commodore?",
+    "ground_truth": "1954"
+  },
+  "918c4426761146f28c67187b": {
+    "score": 0,
+    "generated_answer": "The Hudson Wasp was produced until 1956.",
+    "question": "What year was the end of the producer of the Hudson Wasp?",
+    "ground_truth": "1954"
+  },
+  "46ee9bddbed34b0880884051": {
+    "score": 0,
+    "generated_answer": "The record label of the songwriter of Up on Cripple Creek is not specified in the provided context.",
+    "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+    "ground_truth": "Capitol Records"
+  },
+  "4880329481884478ab480569": {
+    "score": 0,
+    "generated_answer": "Mr. Slushy Burger is the employer of Jeremy Johnson, who is the boyfriend of Candace Flynn.",
+    "question": "Who is the employer of the person who said the greatest good for the greatest number?",
+    "ground_truth": "New York University"
+  },
+  "ea2b7f333d384a72a8c13afa": {
+    "score": 0,
+    "generated_answer": "The Estonian Government ordered the surrender of the Estonian Defence Forces.",
+    "question": "Who disarmed the combined body of all Estonia military?",
+    "ground_truth": "the Red Army"
+  },
+  "e79c3624a16641b2b4dca0b4": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "In which year did the manufacturer of the Nord 1500 Griffon end?",
+    "ground_truth": "1970"
+  },
+  "566b515109e141a1a37a76af": {
+    "score": 0,
+    "generated_answer": "The German force invaded Namibia during World War I.",
+    "question": "When did the force that brought the tank to the battlefields of world war I invade the island?",
+    "ground_truth": "1773"
+  },
+  "81e5144708464849aafbd4a7": {
+    "score": 0,
+    "generated_answer": "Warner Home Video is the corporate sister of Turner Classic Movies, which licenses, remasters, and releases the TCM Vault Collection.",
+    "question": "Which company owns the company through which the TCM Vault Collection was released?",
+    "ground_truth": "Warner Bros. Pictures"
+  },
+  "da95285fdd854cecb17106d1": {
+    "score": 0,
+    "generated_answer": "The Hudson Greater Eight was produced until 1932.",
+    "question": "What year was the end of the Hudson Greater Eight manufacturer?",
+    "ground_truth": "1954"
+  },
+  "5e83dc70c0e24a348546dd44": {
+    "score": 0,
+    "generated_answer": "Warner Home Video is the distributor of the film \"Scooby-Doo and the Ghoul School\".",
+    "question": "Who owns the studio which produced Scooby-Doo and the Ghoul School?",
+    "ground_truth": "Warner Bros. Pictures"
+  },
+  "fc583acaf29d496387875108": {
+    "score": 1,
+    "generated_answer": "Leong Hong Man was the first torchbearer in the Macau leg of the 2008 Summer Olympics Torch Relay, and Manuel John Johnson was born in Macao, China.",
+    "question": "Who was the first torchbearer in the place where Manuel John Johnson was born?",
+    "ground_truth": "Leong Hong Man"
+  },
+  "7092610e71ae4902859f1e93": {
+    "score": 0,
+    "generated_answer": "The writer of \"The Night They Drove Old Dixie Down,\" Robbie Robertson, is not associated with any specific record label in the provided context.",
+    "question": "The writer of The Night They Drove Old Dixie Down falls under which record label?",
+    "ground_truth": "Capitol Records"
+  },
+  "83eca22aa30f447c8e5abb89": {
+    "score": 0,
+    "generated_answer": "Linda Perry, who is affiliated with Custard Records, is not the musician who wrote \"The Night They Drove Old Dixie Down.\"",
+    "question": "What record label is the musician who wrote the day they drove old dixie down affiliated?",
+    "ground_truth": "Capitol Records"
+  },
+  "35d69da366484ccb8e5eaa51": {
+    "score": 0,
+    "generated_answer": "The British Army, which introduced the tank to the battlefields of WWI, started using the SA80, a family of 5.56 \u00d7 45mm NATO small arms, known for being selective fire, gas-operated assault rifles.",
+    "question": "When did the military which introduced the tank to the battlefields of WWI start using the SA80?",
+    "ground_truth": "1987"
+  },
+  "c399ac2036694d3f8a78fa69": {
+    "score": 0,
+    "generated_answer": "Gregory Pence wrote his Ph.D. thesis under Peter Singer.",
+    "question": "Who employs the person who wrote the book Animal Liberation?",
+    "ground_truth": "New York University"
+  },
+  "9fd79ccab1cd462a9f2cdf56": {
+    "score": 0,
+    "generated_answer": "WGLB is licensed to Elm Grove, Wisconsin, but the specific county is not mentioned in the provided context.",
+    "question": "In what county is WGLB located?",
+    "ground_truth": "Waukesha County, Wisconsin"
+  },
+  "cbb06c50076d4de69ae97085": {
+    "score": 1,
+    "generated_answer": "The British Army, which introduced tanks to battlefields in WWI, started wearing the khaki Service Dress uniform for field use from the early 1900s.",
+    "question": "When did the army that introduced tanks to battlefields in WWI start wearing khaki?",
+    "ground_truth": "early 1900s"
+  },
+  "96ac96cc909149458ca45336": {
+    "score": 0,
+    "generated_answer": "The 2008 Summer Olympics Torch Relay passed through Macau, the birthplace of Manuel John Johnson.",
+    "question": "When did the torch visit Manuel John Johnson's birthplace?",
+    "ground_truth": "May 3"
+  },
+  "935def57841d43579833377e": {
+    "score": 0,
+    "generated_answer": "WWGC AM 1090 is licensed to serve Albertville, Alabama.",
+    "question": "In which county can you find WWGC?",
+    "ground_truth": "Marshall County, Alabama"
+  },
+  "065e0b23726f45929478a90c": {
+    "score": 0,
+    "generated_answer": "CFLT-FM is licensed to Dartmouth.",
+    "question": "What municipality is the city CFLT-FM is located a part of?",
+    "ground_truth": "Halifax Regional Municipality"
+  },
+  "211f05a38c2549218ed01c4f": {
+    "score": 0,
+    "generated_answer": "The information about the record label of the songwriter of \"The Night They Drove Old Dixie Down\" is not provided in the context.",
+    "question": "What's the record label of the songwriter of The Night They Drove Old Dixie Down?",
+    "ground_truth": "Capitol Records"
+  },
+  "1ae3f784e04f446db74f623b": {
+    "score": 1,
+    "generated_answer": "The cast member of Black Emanuelle used Italian language.",
+    "question": "What language was used by the cast member of Black Emanuelle?",
+    "ground_truth": "Italian"
+  },
+  "7744de5ff7c142cca3c0ff77": {
+    "score": 0,
+    "generated_answer": "Roman Reigns, who won the 2015 Royal Rumble, has won the WWE World Heavyweight Championship multiple times.",
+    "question": "How many times did the athlete who won the 2015 Royal Rumble win the WWE championship?",
+    "ground_truth": "three"
+  },
+  "a5706913391e4fdea5577b31": {
+    "score": 0,
+    "generated_answer": "Los Angeles, where Lewis Croft died, is located in California.",
+    "question": "What region is Lewis Croft's city of death located?",
+    "ground_truth": "Bingham County, Idaho"
+  },
+  "8b0b846dfd3e49cbb1b1ff22": {
+    "score": 0,
+    "generated_answer": "Hindi is the official language of the Republic of India, written in Devanagari script.",
+    "question": "What language is spoken, written or signed by the actress who removed herself from participation in the relay?",
+    "ground_truth": "Hindi"
+  },
+  "dcbfcfef472b49c6b244216e": {
+    "score": 0,
+    "generated_answer": "Roman Reigns won the first-ever seven-man Elimination Chamber match to become the number one contender for the Universal Championship at WrestleMania 34.",
+    "question": "How many WWE championships did the winner of the 2018 WWE elimination chamber win?",
+    "ground_truth": "three"
+  },
+  "481757d5e1a747be955987cd": {
+    "score": 0,
+    "generated_answer": "Leong Hong Man was the first torchbearer in the Macau leg of the 2008 Summer Olympics Torch Relay.",
+    "question": "Who was the first person to carry the torch in Manuel John Johnson's birthplace?",
+    "ground_truth": "Leong Hong Man"
+  },
+  "72e06fa67a3445679bbac797": {
+    "score": 0,
+    "generated_answer": "Brock Lesnar, the winner of the 2018 WWE Elimination Chamber, has won the WWE Championship once, becoming the youngest winner at the age of 25 years and 44 days.",
+    "question": "How many times did the winner of the 2018 WWE Elimination Chamber win the WWE championship?",
+    "ground_truth": "three"
+  },
+  "1988f76e705542d0aee02602": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "what language is spoken by the actress who decided not to participate in April 15?",
+    "ground_truth": "Hindi"
+  },
+  "cf311bff13b74970a4d560da": {
+    "score": 0,
+    "generated_answer": "The winner of the first-ever seven-man Elimination Chamber match, Roman Reigns, has not won the WWE Championship.",
+    "question": "How many times did the winner of the 7 man elimination chamber match win the WWE championship?",
+    "ground_truth": "three"
+  },
+  "0f0b017b37a6493faa227030": {
+    "score": 0,
+    "generated_answer": "Roman Reigns, the wrestler who won the WWE Elimination Chamber in 2018, has won the WWE Championship once.",
+    "question": "How many times has the wrestler who won the WWE Elimination Chamber in 2018, won the WWE Championship?",
+    "ground_truth": "three"
+  },
+  "fa195bb825fe45fe8ccb2389": {
+    "score": 0,
+    "generated_answer": "French is the spoken language in the film \"The Capsule\".",
+    "question": "What language is used by the cast member of Emanuelle and the White Slave Trade?",
+    "ground_truth": "Italian"
+  },
+  "7318194404254a31b6556320": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What is the enrollment at the owner of Benficence?",
+    "ground_truth": "22,513 students"
+  },
+  "9f4e7bb06128416ab5ebabce": {
+    "score": 0,
+    "generated_answer": "Dual Enrollment Programs across the United States have seen a significant increase in enrollment.",
+    "question": "What is the enrollment at the university where Beneficence is located?",
+    "ground_truth": "22,513 students"
+  },
+  "b462d94a82ee4986802b51ec": {
+    "score": 1,
+    "generated_answer": "The mother of the screenwriter of Fatal Attraction is Melissa Stribling.",
+    "question": "Who is the mother of the screenwriter of Fatal Attraction?",
+    "ground_truth": "Melissa Stribling"
+  },
+  "068aa477eb5548feb4647d20": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the inception of the record label which released W?",
+    "ground_truth": "2001"
+  },
+  "2491e0bcc3b3467783ce685e": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the mother of the director of Rogue Trader?",
+    "ground_truth": "Melissa Stribling"
+  },
+  "478faf85ac0f44c6b72bde0e": {
+    "score": 0,
+    "generated_answer": "The inception date of Planningtorock's record label is not provided in the context.",
+    "question": "When was the inception of the record label of Planningtorock?",
+    "ground_truth": "2001"
+  },
+  "6a8d6cf4a0724093b11fe458": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the enrolment at the university where Frog Baby Fountain is located?",
+    "ground_truth": "22,513 students"
+  },
+  "c82d08ab5c524a7680b82288": {
+    "score": 0,
+    "generated_answer": "The context does not provide information about the death of the person who resigned due to the attempt on Napoleon's life.",
+    "question": "When did the person who resigned due to the attempt on Napoleon's life die?",
+    "ground_truth": "1865"
+  },
+  "b496635116f04a9cabc60fec": {
+    "score": 1,
+    "generated_answer": "DFA Records, the record label of Factory Floor, was founded in 2001.",
+    "question": "When was the record label of Factory Floor established?",
+    "ground_truth": "2001"
+  },
+  "1aa2a516f12a4c92b6368c24": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the enrollment at the school where the Frog Baby Fountain is located?",
+    "ground_truth": "22,513 students"
+  },
+  "e81c8773047a4b309d168b9c": {
+    "score": 0,
+    "generated_answer": "The Roman Catholic Church.",
+    "question": "Which title is used for the leader of the organization that has always opposed Freemasonry?",
+    "ground_truth": "the Bishop of Rome, who is known as the Pope"
+  },
+  "fd22186a360e4650a942ead0": {
+    "score": 1,
+    "generated_answer": "Palmerston, who resigned due to the diplomatic crisis resulting from the assassination attempt on Napoleon III, died in 1865.",
+    "question": "What year did the person who resigned due to the attempt on Napoleon's life die?",
+    "ground_truth": "1865"
+  },
+  "b61e8df37f824a22b4c6608e": {
+    "score": 1,
+    "generated_answer": "Dan Stevens plays the creator of Gradgrind in the man who invented christmas.",
+    "question": "Who plays the creator of Gradgrind in the man who invented christmas?",
+    "ground_truth": "Daniel Jonathan Stevens"
+  },
+  "274d4888648d4bda9036168a": {
+    "score": 1,
+    "generated_answer": "Brantley Gilbert, the singer of \"You Don't Know Her Like I Do,\" was born in Jefferson, Georgia.",
+    "question": "The singer of \"You don't know her like I do\" was born in what city?",
+    "ground_truth": "Jefferson, Georgia"
+  },
+  "c0c554360fc44d03af829f7c": {
+    "score": 0,
+    "generated_answer": "The people who imposed military might on Tibet in the past were trying to raise religious authority.",
+    "question": "Where were the people who imposed military might on Tibet in the past trying to raise?",
+    "ground_truth": "Ming dynasty"
+  },
+  "a97defc35e7648569317b403": {
+    "score": 1,
+    "generated_answer": "L. Junius Brutus is credited with founding the Roman Republic, the political system during which Titus Lucretius Tricipitinus served as consul.",
+    "question": "Who was the founder of Titus Lucretius Tricipitinus' country of citizenship?",
+    "ground_truth": "L. Junius Brutus"
+  },
+  "2e8e5ecb4a944be78dec8a82": {
+    "score": 0,
+    "generated_answer": "The person who wrote the theme song to Charlie Brown was signed with the Italian Soul Note label.",
+    "question": "What record label was the person who wrote the theme song to Charlie Brown signed with?",
+    "ground_truth": "Warner Bros."
+  },
+  "ab31115c66aa4e6abfb4c3ef": {
+    "score": 0,
+    "generated_answer": "The record label for the singer of \"Cast Your Fate to the Wind\" is Fantasy 563X.",
+    "question": "What is the record label for the singer of Cast Your Fate to the Wind?",
+    "ground_truth": "Warner Bros."
+  },
+  "c2e86a5c4dda4a9e9f2c1ec7": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Why were the Uighurs ranked higher by the people who imposed on the military might of Tibet in the past?",
+    "ground_truth": "the Uighurs surrendered peacefully without violently resisting"
+  },
+  "3886304dd64e4e84ad3d4198": {
+    "score": 0,
+    "generated_answer": "Boston National Historical Park, which preserves historic sites related to the American Revolution, where Boston played a significant role, does not specify an opening date in the provided context.",
+    "question": "When did the museum of the war where Boston was the location of many important events open?",
+    "ground_truth": "April 19, 2017"
+  },
+  "151fb547c63b4875af3db36d": {
+    "score": 0,
+    "generated_answer": "The record label for the singer of \"Wings of a Dove\" is not specified in the provided context.",
+    "question": "What is the record label for the singer of Wings of a Dove?",
+    "ground_truth": "Capitol Records"
+  },
+  "876f40ec26654c1b854940c0": {
+    "score": 0,
+    "generated_answer": "Brantley Keith Gilbert, who wrote the song \"My Kinda Party\" for Jason Aldean, was born in Georgia.",
+    "question": "Where was the person who wrote the song my kinda party by Jason Aldean born?",
+    "ground_truth": "Jefferson, Georgia"
+  },
+  "1a4daeba876547dcab2db2d6": {
+    "score": 1,
+    "generated_answer": "The University of Kansas, where Danny Manning played basketball, began awarding engineering degrees as early as 1873.",
+    "question": "When did the college Danny Manning played for start issuing engineering degrees?",
+    "ground_truth": "1873"
+  }
+}

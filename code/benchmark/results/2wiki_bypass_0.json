@@ -1,0 +1,1802 @@
+{
+  "1": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the mother of the director of film Polish-Russian War (Film)?",
+    "ground_truth": "Ma\u0142gorzata Braunek"
+  },
+  "2": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out first, Blind Shaft or The Mask Of Fu Manchu?",
+    "ground_truth": "The Mask Of Fu Manchu"
+  },
+  "3": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When did John V, Prince Of Anhalt-Zerbst's father die?",
+    "ground_truth": "12 June 1516"
+  },
+  "4": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the award that the director of film Wearing Velvet Slippers Under A Golden Umbrella won?",
+    "ground_truth": "Myanmar Motion Picture Academy Awards"
+  },
+  "5": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the director of film Ronnie Rocket born?",
+    "ground_truth": "Missoula, Montana"
+  },
+  "6": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Charles Bretagne Marie De La Tr\u00e9moille's paternal grandfather?",
+    "ground_truth": "Charles Armand Ren\u00e9 de La Tr\u00e9moille"
+  },
+  "7": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the father of \u0218tefan I. Neni\u021bescu born?",
+    "ground_truth": "Gala\u0163i"
+  },
+  "8": {
+    "score": 1,
+    "generated_answer": "No, North Marion High School (Oregon) is located in the United States, while Seoul High School is located in South Korea.",
+    "question": "Are North Marion High School (Oregon) and Seoul High School both located in the same country?",
+    "ground_truth": "no"
+  },
+  "9": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who was born later, El Extra\u00f1o Viaje or Love In Pawn?",
+    "ground_truth": "El extra\u00f1o viaje"
+  },
+  "10": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the maternal grandfather of Antiochus X Eusebes?",
+    "ground_truth": "Ptolemy IX Lathyros"
+  },
+  "11": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director died first, Crimen A Las Tres or The Working Class Goes To Heaven?",
+    "ground_truth": "La classe operaia va in paradiso"
+  },
+  "12": {
+    "score": 0,
+    "generated_answer": "The director of The Girl In White, Rowland V. Lee, was born first.",
+    "question": "Which film has the director born first, Once A Gentleman or The Girl In White?",
+    "ground_truth": "Once a Gentleman"
+  },
+  "13": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died earlier, Il Seduttore or The Trial Of Joan Of Arc?",
+    "ground_truth": "The Trial of Joan of Arc"
+  },
+  "14": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the director of film Thomas Jefferson (Film) born?",
+    "ground_truth": "Brooklyn, New York"
+  },
+  "15": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Why did Grand Duke Kirill Vladimirovich Of Russia's wife die?",
+    "ground_truth": "cerebrovascular accident"
+  },
+  "16": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of the director of film Beat Girl?",
+    "ground_truth": "Nice, France"
+  },
+  "17": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who died first, Fleetwood Sheppard or George William Whitaker?",
+    "ground_truth": "Fleetwood Sheppard"
+  },
+  "18": {
+    "score": 0,
+    "generated_answer": "The film with the director born first is \"Ke\u00efta! L'H\u00e9ritage Du Griot\".",
+    "question": "Which film has the director born first, The Raven'S Dance or Ke\u00efta! L'H\u00e9ritage Du Griot?",
+    "ground_truth": "The Raven's Dance"
+  },
+  "19": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When did Jean Martin (Singer)'s husband die?",
+    "ground_truth": "1983"
+  },
+  "20": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died earlier, Tangled Destinies or The Daltons' Women?",
+    "ground_truth": "Tangled Destinies"
+  },
+  "21": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released earlier, Moment Of Danger or The Ballad Of Josie?",
+    "ground_truth": "Moment Of Danger"
+  },
+  "22": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What nationality is the director of film World And Time Enough?",
+    "ground_truth": "the United States of America"
+  },
+  "23": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director died earlier, Poker In Bed or The Machine To Kill Bad People?",
+    "ground_truth": "The Machine To Kill Bad People"
+  },
+  "24": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film whose director is younger, Heads I Win, Tails You Lose or The Incredible Sarah?",
+    "ground_truth": "Heads I Win, Tails You Lose"
+  },
+  "25": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Catherine Of Pomerania, Countess Palatine Of Neumarkt's father-in-law?",
+    "ground_truth": "Rupert, King of Germany"
+  },
+  "26": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Marie Z\u00e9phyrine Of France's paternal grandmother?",
+    "ground_truth": "Queen, consort of Louis XV, King of France Marie Leszczy\u0144ska"
+  },
+  "27": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director died earlier, Condemned Women or Faces In The Dark?",
+    "ground_truth": "Condemned Women"
+  },
+  "28": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the spouse of the director of film Eden And After?",
+    "ground_truth": "Catherine Robbe-Grillet"
+  },
+  "29": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Anastasia Of Serbia's husband?",
+    "ground_truth": "Hilandar Monastery"
+  },
+  "30": {
+    "score": 0,
+    "generated_answer": "No, Fire In Hell is from Japan, while The Tiger: An Old Hunter's Tale is from Korea.",
+    "question": "Are Fire In Hell and The Tiger: An Old Hunter'S Tale from the same country?",
+    "ground_truth": "yes"
+  },
+  "31": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released more recently, Lo Zappatore or Placer Sangriento?",
+    "ground_truth": "Placer Sangriento"
+  },
+  "32": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Was \u015eemsettin Ba\u015f or Gwenc'Hlan Le Scou\u00ebzec born first?",
+    "ground_truth": "Gwenc'Hlan Le Scou\u00ebzec"
+  },
+  "33": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born later, Bhoomiyude Avakashikal or The Majesty Of The Law?",
+    "ground_truth": "Bhoomiyude Avakashikal"
+  },
+  "34": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is Cornelia (Wife Of Caesar)'s child-in-law?",
+    "ground_truth": "Gnaeus Pompeius Magnus"
+  },
+  "35": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Why did John Middleton Murry's wife die?",
+    "ground_truth": "In the clinic. Tuberculosis"
+  },
+  "36": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandfather of Taj Al-Dawla?",
+    "ground_truth": "Rukn al-Dawla"
+  },
+  "37": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Do both films Payment On Demand and My Cousin From Warsaw have the directors from the same country?",
+    "ground_truth": "yes"
+  },
+  "38": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the director of film And The Spring Comes?",
+    "ground_truth": "Xi\u2019an, China"
+  },
+  "39": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who died first, Madame Pasca or James A. Donohoe?",
+    "ground_truth": "Madame Pasca"
+  },
+  "40": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Who was born later, D'Arcy Coulson or Thomas William Adams?",
+    "ground_truth": "D'Arcy Coulson"
+  },
+  "41": {
+    "score": 1,
+    "generated_answer": "No, Simonds Catholic College is located in Maroochydore, Queensland, Australia, while Saginaw High School is located in Saginaw, Texas, United States.",
+    "question": "Are Simonds Catholic College and Saginaw High School (Texas) both located in the same country?",
+    "ground_truth": "no"
+  },
+  "42": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Prince Nikolaus Wilhelm Of Nassau's mother is from?",
+    "ground_truth": "Federal Republic of Germany"
+  },
+  "43": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film whose director was born first, 45 Fathers or The Intended?",
+    "ground_truth": "45 Fathers"
+  },
+  "44": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandfather of Alexandre Berthier, 3Rd Prince Of Wagram?",
+    "ground_truth": "Louis-Alexandre Berthier"
+  },
+  "45": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the husband of Caterina Visconti born?",
+    "ground_truth": "Pavia"
+  },
+  "46": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director who was born later, A Quiet Place In The Country or When Were You Born?",
+    "ground_truth": "Un tranquillo posto di campagna"
+  },
+  "47": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who was born first, John Beach or Gordon Persons?",
+    "ground_truth": "John Beach"
+  },
+  "48": {
+    "score": 0,
+    "generated_answer": "The director of \"The House By The Cemetery\" was born earlier than the director of \"Charlie Chan In Honolulu\".",
+    "question": "Which film has the director born earlier, The House By The Cemetery or Charlie Chan In Honolulu?",
+    "ground_truth": "Charlie Chan in Honolulu"
+  },
+  "49": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the child of the director of film La Leona (Film)?",
+    "ground_truth": "Victor Bo"
+  },
+  "50": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Blanche Of Portugal (1259\u20131321)'s paternal grandmother?",
+    "ground_truth": "Urraca of Castile, Queen of Portugal"
+  },
+  "51": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who lived longer, Giuseppe Cesari or Nicos Poulantzas?",
+    "ground_truth": "cavaliere d', eigentlich giuseppe cesari arpino"
+  },
+  "52": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are director of film Nights On The Road and director of film Swann In Love (Film) from the same country?",
+    "ground_truth": "yes"
+  },
+  "53": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is older, Aryeh Ben-Eliezer or Jason Pociask?",
+    "ground_truth": "Aryeh Ben-Eliezer"
+  },
+  "54": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where does the director of film Man At Bath work at?",
+    "ground_truth": "Cahiers du cin\u00e9ma"
+  },
+  "55": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Arthur Gore, 2Nd Earl Of Arran's paternal grandfather?",
+    "ground_truth": "Sir Arthur Gore, 2nd Baronet"
+  },
+  "56": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Are both Kaufland and Otrag located in the same country?",
+    "ground_truth": "yes"
+  },
+  "57": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out earlier, Aanaval Mothiram or Heroes Of The Street?",
+    "ground_truth": "Heroes of the Street"
+  },
+  "58": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the father of Lord Patrick Crichton-Stuart born?",
+    "ground_truth": "London, United Kingdom"
+  },
+  "59": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country the director of film Daadagiri is from?",
+    "ground_truth": "Islamic Republic of Pakistan"
+  },
+  "60": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the wife of Douglas Leiterman born?",
+    "ground_truth": "Winnipeg, Manitoba"
+  },
+  "61": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the performer of song Who...?",
+    "ground_truth": "Fukuoka"
+  },
+  "62": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of the director of film Mole Men Against The Son Of Hercules?",
+    "ground_truth": "The Eternal City"
+  },
+  "63": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the father of Alexandre Gaydamak born?",
+    "ground_truth": "Moskva Federal City, Russia"
+  },
+  "64": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died earlier, Toen 'T Licht Verdween or Boum Sur Paris?",
+    "ground_truth": "Toen 't licht verdween"
+  },
+  "65": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Gaston, Duke Of Orl\u00e9ans's paternal grandmother?",
+    "ground_truth": "Jeanne III of Navarre"
+  },
+  "66": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the director of film The Half-Way Girl born?",
+    "ground_truth": "New York, New York"
+  },
+  "67": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the father-in-law of Sophia Of Wittelsbach?",
+    "ground_truth": "Louis II, Landgrave of Thuringia"
+  },
+  "68": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Lambert I, Count Of Louvain's father?",
+    "ground_truth": "Bohemia"
+  },
+  "69": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the director of film Highway Dragnet born?",
+    "ground_truth": "Gura Humorului"
+  },
+  "70": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did Prince Gustav Of Thurn And Taxis (1848\u20131914)'s mother die?",
+    "ground_truth": "Merano"
+  },
+  "71": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the award that the performer of song Sunday Papers earned?",
+    "ground_truth": "Gramophone Award"
+  },
+  "72": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director born first, Antonieta or Dodging The Dole?",
+    "ground_truth": "Dodging The Dole"
+  },
+  "73": {
+    "score": 0,
+    "generated_answer": "No, Nikolsk Airport is located in Russia, while Svobodny Airport is located in Kazakhstan.",
+    "question": "Are both Nikolsk Airport and Svobodny Airport located in the same country?",
+    "ground_truth": "yes"
+  },
+  "74": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the maternal grandfather of Amadeus Vii, Count Of Savoy?",
+    "ground_truth": "Peter I, Duke of Bourbon"
+  },
+  "75": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are both businesses, Telus and Ztr Control Systems, located in the same country?",
+    "ground_truth": "yes"
+  },
+  "76": {
+    "score": 0,
+    "generated_answer": "No, the directors of \"Dial M for Murder\" and \"Marius (1931)\" are not from the same country; Alfred Hitchcock is from the United Kingdom, while Alexander Korda is from Hungary.",
+    "question": "Do both films, Dial M For Murder and Marius (1931 Film), have the directors who are from the same country?",
+    "ground_truth": "yes"
+  },
+  "77": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is older, Dyson Parody or Gene Watson?",
+    "ground_truth": "Gene Watson"
+  },
+  "78": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are both directors of films The Princess Bride (Film) and I Never Sang For My Father from the same country?",
+    "ground_truth": "yes"
+  },
+  "79": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When did Prince John Konstantinovich Of Russia's mother die?",
+    "ground_truth": "24 March 1927"
+  },
+  "80": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Audofleda's husband is from?",
+    "ground_truth": "Ostrogothic Kingdom"
+  },
+  "81": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the director of film Letter To The King?",
+    "ground_truth": "Letter to the King"
+  },
+  "82": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are both bands, Snowman (Band) and Jessamine (Band), from the same country?",
+    "ground_truth": "no"
+  },
+  "83": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the performer of song God (John Lennon Song) born?",
+    "ground_truth": "City of Liverpool"
+  },
+  "84": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that question.",
+    "question": "Which film has the director who died earlier, Captain Kidd And The Slave Girl or Relax Freddie?",
+    "ground_truth": "Captain Kidd And The Slave Girl"
+  },
+  "85": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which song was released more recently, Go Ahead And Break My Heart or Knee Deep In My Heart?",
+    "ground_truth": "Go Ahead and Break My Heart"
+  },
+  "86": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died later, The Fatal Mistake or The Devil'S Hairpin?",
+    "ground_truth": "The Devil'S Hairpin"
+  },
+  "87": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Maria Luisa Of Savoy's father-in-law?",
+    "ground_truth": "Dauphin Louis Of France"
+  },
+  "88": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandfather of Kuj\u014d Yoritsugu?",
+    "ground_truth": "Kujou Michiie"
+  },
+  "89": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of the director of film Marianela (1940 Film)?",
+    "ground_truth": "City of Madrid"
+  },
+  "90": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out first, Repeated Absences or She Wore A Yellow Ribbon?",
+    "ground_truth": "She Wore A Yellow Ribbon"
+  },
+  "91": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who lived longer, Edward Dearle or Michael Doeberl?",
+    "ground_truth": "Edward Dearle"
+  },
+  "92": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where does Karin Stoltenberg's husband work at?",
+    "ground_truth": "United Nations Organization"
+  },
+  "93": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the director of film Lettre Ouverte born?",
+    "ground_truth": "Paris, France"
+  },
+  "94": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is William Ii, Count Of Flanders's paternal grandmother?",
+    "ground_truth": "Mathilde of Bourbon"
+  },
+  "95": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of Clara Novello's father?",
+    "ground_truth": "London, United Kingdom"
+  },
+  "96": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out earlier, Emmy Of Stork'S Nest or Indira Vizha?",
+    "ground_truth": "Emmy of Stork's Nest"
+  },
+  "97": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out first, Celine: Through The Eyes Of The World or Dilan 1991?",
+    "ground_truth": "Celine: Through The Eyes Of The World"
+  },
+  "98": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who was born earlier, Silas Hardy or Lee Mantle?",
+    "ground_truth": "Lee Mantle"
+  },
+  "99": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of burial of Albert Frederick, Duke Of Prussia's mother?",
+    "ground_truth": "K\u00f6nigsberg in Preu\u00dfen"
+  },
+  "100": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Juan Carlos Gumucio's wife?",
+    "ground_truth": "Homs"
+  },
+  "101": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the father of the director of film Gramps Is In The Resistance?",
+    "ground_truth": "Alain Poire"
+  },
+  "102": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of the performer of song Heaven (Namie Amuro Song)?",
+    "ground_truth": "Naha, Okinawa"
+  },
+  "103": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "What nationality is Philip Of Ibelin (1180\u20131227)'s mother?",
+    "ground_truth": "Eastern Roman Empire"
+  },
+  "104": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Who was born later, Joseph J. Magliocco or Viktoriya Zeynep G\u00fcne\u015f?",
+    "ground_truth": "Viktoriya Zeynep G\u00fcne\u015f"
+  },
+  "105": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "When is the lead guitarist of List Of The Dillinger Escape Plan Band Members's birthday?",
+    "ground_truth": "August 8, 1975"
+  },
+  "106": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where does Huma Abedin's husband work at?",
+    "ground_truth": "Charles Ellis \"Chuck\" Schumer"
+  },
+  "107": {
+    "score": 0,
+    "generated_answer": "No information is available to determine if the movies \"About A Wife, A Dream And Another...\" and \"The Doolins Of Oklahoma\" are from the same country.",
+    "question": "Are the movies About A Wife, A Dream And Another... and The Doolins Of Oklahoma, from the same country?",
+    "ground_truth": "no"
+  },
+  "108": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out earlier, Out Of The Rain or Les R\u00e9sultats Du F\u00e9minisme?",
+    "ground_truth": "Les R\u00e9sultats du f\u00e9minisme"
+  },
+  "109": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did Giacomo Feo's wife die?",
+    "ground_truth": "Florence, Tuscany"
+  },
+  "110": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the director of film Swedenhielms?",
+    "ground_truth": "Helsingfors"
+  },
+  "111": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Jan Baptist Van Rensselaer's father is from?",
+    "ground_truth": "Netherlands (after 1945)"
+  },
+  "112": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released earlier, Sathyavan Savithri or Kids Of The Round Table?",
+    "ground_truth": "Kids of the Round Table"
+  },
+  "113": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did Gigi Causey's husband graduate from?",
+    "ground_truth": "New York University Tisch School of the Arts"
+  },
+  "114": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What nationality is Geodeung Of Geumgwan Gaya's mother?",
+    "ground_truth": "Republic of India"
+  },
+  "115": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released earlier, Xenoa or Divorce Invitation?",
+    "ground_truth": "Xenoa"
+  },
+  "116": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the cause of death of Alex Matthiessen's father?",
+    "ground_truth": "LEUKEMIA, MALIGNANT"
+  },
+  "117": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of Remigius Of Rouen's father?",
+    "ground_truth": "Herstal"
+  },
+  "118": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When did Lord Patrick Crichton-Stuart's father die?",
+    "ground_truth": "22 January 1794"
+  },
+  "119": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who was born earlier, It'S A Joke, Son! or The Thirty Nine Steps (1978 Film)?",
+    "ground_truth": "It's a Joke, Son!"
+  },
+  "120": {
+    "score": 0,
+    "generated_answer": "No, the directors of \"The Slayer\" and \"Moscow Heat\" are from different countries.",
+    "question": "Are both directors of films The Slayer (Film) and Moscow Heat from the same country?",
+    "ground_truth": "yes"
+  },
+  "121": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which school was established first, Whitehorse Manor Junior School or Sabawoon Rehabilitation Centre?",
+    "ground_truth": "Sabawoon Rehabilitation Centre"
+  },
+  "122": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Are Little Sachigo Lake and Holden Lake located in the same country?",
+    "ground_truth": "yes"
+  },
+  "123": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Henriette Of France (1727\u20131752)'s maternal grandfather?",
+    "ground_truth": "King of Poland, Grand Duke of Lorraine and Bar Stanislav I Leszczy\u0144ski"
+  },
+  "124": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born first, Leave It To Henry or The Last Night Of Scheherazade?",
+    "ground_truth": "Leave It To Henry"
+  },
+  "125": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the date of death of Gero Ii, Margrave Of The Saxon Ostmark's father?",
+    "ground_truth": "3 August 979"
+  },
+  "126": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are Tomskoye, Amur Oblast and Pleshkovo located in the same country?",
+    "ground_truth": "yes"
+  },
+  "127": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out earlier, I Am Breathing or Ulti Ganga?",
+    "ground_truth": "Ulti Ganga"
+  },
+  "128": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who was born later, Levon Julfalakyan or Charlotte Spurkeland?",
+    "ground_truth": "Charlotte Spurkeland"
+  },
+  "129": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the father of the director of film Red 2 (Film)?",
+    "ground_truth": "Aldo Parisot"
+  },
+  "130": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the company that published American Scientist founded?",
+    "ground_truth": "1886"
+  },
+  "131": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of Jo Planckaert's father?",
+    "ground_truth": "Nevele"
+  },
+  "132": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of Gwilym Lloyd George's father?",
+    "ground_truth": "Manchester"
+  },
+  "133": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of James Douglas, 3Rd Earl Of Angus's father?",
+    "ground_truth": "Tantallon Castle"
+  },
+  "134": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What nationality is the director of film They Call It Love?",
+    "ground_truth": "the United States of America"
+  },
+  "135": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of Zhanna Nemtsova's father?",
+    "ground_truth": "Sochi"
+  },
+  "136": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born earlier, Santa Fe Uprising or Trainer And Temptress?",
+    "ground_truth": "Trainer And Temptress"
+  },
+  "137": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who was born earlier, Adam'S Rib or Thendral Veesum?",
+    "ground_truth": "Adam's Rib"
+  },
+  "138": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country the composer of film Continental, A Film Without Guns is from?",
+    "ground_truth": "R\u00e9publique fran\u00e7aise"
+  },
+  "139": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the director of film Age-Old Friends born?",
+    "ground_truth": "Winnipeg, Manitoba"
+  },
+  "140": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which one was established first, Noerr or Korn Ferry?",
+    "ground_truth": "Noerr"
+  },
+  "141": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the father of Eleonora Di Garzia Di Toledo born?",
+    "ground_truth": "Villafranca del Bierzo"
+  },
+  "142": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the award that the director of film The Last Night Of The Barbary Coast got?",
+    "ground_truth": "Jean Hersholt Humanitarian Award"
+  },
+  "143": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Prince Nicolas, Duke Of \u00c5ngermanland's mother?",
+    "ground_truth": "Madeleine Th\u00e9r\u00e8se Amelie Josephine Bernadotte, Princess of Sweden"
+  },
+  "144": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandmother of Princess Augusta Of Waldeck-Pyrmont?",
+    "ground_truth": "Princess Augusta of Schwarzburg-Sondershausen"
+  },
+  "145": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where does the director of film The Marquise Of O (Film) work at?",
+    "ground_truth": "Cahiers du cin\u00e9ma"
+  },
+  "146": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film whose director is younger, Joe Palooka In Fighting Mad or Figaro-Ci, Figaro-L\u00e0?",
+    "ground_truth": "Figaro-ci, Figaro-l\u00e0"
+  },
+  "147": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released first, Ekam \u2013 Son Of Soil or Farber'S Nerve?",
+    "ground_truth": "Farber's Nerve"
+  },
+  "148": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Mohammed Al-Modiahki's wife is from?",
+    "ground_truth": "People's Republic of China"
+  },
+  "149": {
+    "score": 0,
+    "generated_answer": "No, the directors of \"Gammat Jammat\" and \"Ready (2011 Film)\" are from different countries.",
+    "question": "Do both films: Gammat Jammat and Ready (2011 Film) have the directors from the same country?",
+    "ground_truth": "yes"
+  },
+  "150": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Philip Of Sicily's father?",
+    "ground_truth": "Charles I of Naples"
+  },
+  "151": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Who was born later, Gideon Johnson Pillow or Holm J\u00f8lsen?",
+    "ground_truth": "Holm J\u00f8lsen"
+  },
+  "152": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died first, The Crime Doctor'S Courage or Vasantha Sena (1967 Film)?",
+    "ground_truth": "The Crime Doctor's Courage"
+  },
+  "153": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did the director of film My Heidelberg, I Can Not Forget You die?",
+    "ground_truth": "Argentine Republic"
+  },
+  "154": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released earlier, Tiger Of The Seven Seas or My Wife'S Lodger?",
+    "ground_truth": "My Wife's Lodger"
+  },
+  "155": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Do Alice Mary Dowd and Richard N. Palmer have the same nationality?",
+    "ground_truth": "yes"
+  },
+  "156": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the father of the director of film Wonders Of The Sea 3D?",
+    "ground_truth": "Jacques-Yves Cousteau"
+  },
+  "157": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director died first, Le Guignolo or Knights Of The Range?",
+    "ground_truth": "Knights Of The Range"
+  },
+  "158": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who died later, Narc\u00eds Ventall\u00f3 or H. Verlan Andersen?",
+    "ground_truth": "Narciso Ventall\u00f3"
+  },
+  "159": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released first, The Beginning Or The End or Hold Back The Night?",
+    "ground_truth": "The Beginning or the End"
+  },
+  "160": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is younger, Aneta Hlad\u00edkov\u00e1 or Ren\u00e9 Poupardin?",
+    "ground_truth": "Aneta Hlad\u00edkov\u00e1"
+  },
+  "161": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Prince Christopher Of Greece And Denmark's father?",
+    "ground_truth": "Thessaloniki"
+  },
+  "162": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the director of film Guilty Of Treason?",
+    "ground_truth": "New York, New York"
+  },
+  "163": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Where did Charles Stewart, 3Rd Duke Of Richmond's father graduate from?",
+    "ground_truth": "University of Paris (1896-1968)"
+  },
+  "164": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of the performer of song I Wish (Gabrielle Song)?",
+    "ground_truth": "London Borough of Hackney"
+  },
+  "165": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the director of film Jinpa born?",
+    "ground_truth": "1969"
+  },
+  "166": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film whose director is younger, Kalippava or A Couch In New York?",
+    "ground_truth": "A Couch In New York"
+  },
+  "167": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died earlier, The Love Charm or The Constant Woman?",
+    "ground_truth": "The Constant Woman"
+  },
+  "168": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out earlier, Dis-Moi Qui Tuer or Under The Hawthorn Tree (Film)?",
+    "ground_truth": "Dis-Moi Qui Tuer"
+  },
+  "169": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Tamatoa Vi's father?",
+    "ground_truth": "Huahine"
+  },
+  "170": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Where did the director of film Old Man Drinking A Glass Of Beer die?",
+    "ground_truth": "Brighton"
+  },
+  "171": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the date of death of Henry St John, 18Th Baron St John Of Bletso's father?",
+    "ground_truth": "10 May 1912"
+  },
+  "172": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is younger, Justin Paul or Helly Shah?",
+    "ground_truth": "\u0635\u0627\u062f\u0642 \u0628\u0646 \u062e\u0631\u0641\u064a\u0629"
+  },
+  "173": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who was born first out of Marco De Luigi and Fabio Maistro?",
+    "ground_truth": "Marco De Luigi"
+  },
+  "174": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director who died earlier, Guns And Guitars or To The Victor?",
+    "ground_truth": "Guns and Guitars"
+  },
+  "175": {
+    "score": 1,
+    "generated_answer": "The Falcon In San Francisco",
+    "question": "Which film has the director who died later, His Last Haul or The Falcon In San Francisco?",
+    "ground_truth": "The Falcon In San Francisco"
+  },
+  "176": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Edward De Vere, 17Th Earl Of Oxford's paternal grandfather?",
+    "ground_truth": "John de Vere, 15th Earl of Oxford"
+  },
+  "177": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Alexander Carl Otto Westphal's father?",
+    "ground_truth": "Kreuzlingen TG"
+  },
+  "178": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director born earlier, Jayam Manade or Bulldog Drummond'S Revenge?",
+    "ground_truth": "Bulldog Drummond's Revenge"
+  },
+  "179": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who is older, The Gamecock (Film) or Monster A Go-Go?",
+    "ground_truth": "Monster A Go-Go"
+  },
+  "180": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Alessandro Vitelli's father?",
+    "ground_truth": "Florence, Tuscany"
+  },
+  "181": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the performer of song Bag Skyerne born?",
+    "ground_truth": "Aarhuus"
+  },
+  "182": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are both directors of films 16 To Life and Saved By The Belles from the same country?",
+    "ground_truth": "yes"
+  },
+  "183": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the mother of Francis Ii Of France born?",
+    "ground_truth": "Florence, Tuscany"
+  },
+  "184": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Who was born later, Marc De Clerck or Wies\u0142aw Perszke?",
+    "ground_truth": "Wies\u0142aw Perszke"
+  },
+  "185": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born later, Jesse James' Women or Ride Lonesome?",
+    "ground_truth": "Ride Lonesome"
+  },
+  "186": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What nationality is the director of film Madeleine (1950 Film)?",
+    "ground_truth": "United Kingdom of Great Britain and Northern Ireland"
+  },
+  "187": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director died first, Edge Of Doom or A Mother'S Secret?",
+    "ground_truth": "A Mother'S Secret"
+  },
+  "188": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which song was released earlier, 1990-Sick (Get 'Em All) or Who'S Laughing Now (Song)?",
+    "ground_truth": "1990-Sick (Get 'Em All)"
+  },
+  "189": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did the director of film Desolation Angels (1995 Film) graduate from?",
+    "ground_truth": "State University of New York at Purchase"
+  },
+  "190": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When did Richard Annesley, 2Nd Earl Annesley's father die?",
+    "ground_truth": "2 September 1770"
+  },
+  "191": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director died earlier, Lemonade Joe or Bountiful Summer?",
+    "ground_truth": "Bountiful Summer"
+  },
+  "192": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the date of death of Conan Ii, Duke Of Brittany's mother?",
+    "ground_truth": "1080"
+  },
+  "193": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the director of film Reykjav\u00edk-Rotterdam born?",
+    "ground_truth": "30 June 1963"
+  },
+  "194": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of Eiludd Powys's father?",
+    "ground_truth": "Renegades"
+  },
+  "195": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Where was the director of film At The End Of The Tunnel born?",
+    "ground_truth": "Rosario, Santa Fe"
+  },
+  "196": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was Ferdinand Iii Of Limburg Stirum's father born?",
+    "ground_truth": "1701"
+  },
+  "197": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country the director of film Ulzhan is from?",
+    "ground_truth": "Federal Republic of Germany"
+  },
+  "198": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Prince Franz De Paula Of Liechtenstein's paternal grandfather?",
+    "ground_truth": "Franz Joseph I, Prince of Liechtenstein"
+  },
+  "199": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of Samir Rifai's father?",
+    "ground_truth": "Amman"
+  },
+  "200": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandmother of Archduchess Dolores Of Austria?",
+    "ground_truth": "Princess Maria Immaculata of Bourbon-Two Sicilies (1844\u20131899)"
+  },
+  "201": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director died first, Two For Tonight or Light Over Russia?",
+    "ground_truth": "Two for Tonight"
+  },
+  "202": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the director of film Peter'S Friends?",
+    "ground_truth": "Belfast, Ireland"
+  },
+  "203": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the composer of film Love Story 1999 born?",
+    "ground_truth": "Tamil"
+  },
+  "204": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the father of Beltr\u00e1n V\u00e9lez De Guevara, Marquis Of Campo Real?",
+    "ground_truth": "\u00cd\u00f1igo V\u00e9lez de Guevara, 7th Count of O\u00f1ate"
+  },
+  "205": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film whose director is younger, Jeedar or The Rebel Set?",
+    "ground_truth": "Jeedar"
+  },
+  "206": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the mother of Antonio Flores born?",
+    "ground_truth": "Jerez de la Frontera"
+  },
+  "207": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the performer of song Down Ass Bitch?",
+    "ground_truth": "Queens, New York City"
+  },
+  "208": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of Empress Xu (Ming Dynasty)'s husband?",
+    "ground_truth": "Nanjing"
+  },
+  "209": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film came out earlier, Niyoti or Angali Pangali?",
+    "ground_truth": "Niyoti"
+  },
+  "210": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Aleksandra Marianna Wiesio\u0142owska's father is from?",
+    "ground_truth": "Polish\u2013Lithuanian Commonwealth"
+  },
+  "211": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Tivala's father is from?",
+    "ground_truth": "Mauryan dynasty"
+  },
+  "212": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandmother of King Kang Of Zhou?",
+    "ground_truth": "Yi Jiang"
+  },
+  "213": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died first, The Face Of Fu Manchu or The Hidden One?",
+    "ground_truth": "The Hidden One"
+  },
+  "214": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of the director of film Double Or Nothing (1940 Film)?",
+    "ground_truth": "New Brunswick, New Jersey"
+  },
+  "215": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film whose director was born first, The Great Flamarion or The Hollars?",
+    "ground_truth": "The Great Flamarion"
+  },
+  "216": {
+    "score": 0,
+    "generated_answer": "No, the directors of \"Dangerous To Know\" and \"Les C\u00f4telettes\" do not share the same nationality.",
+    "question": "Do both directors of films Dangerous To Know and Les C\u00f4telettes have the same nationality?",
+    "ground_truth": "yes"
+  },
+  "217": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are both villages, Mavrolithari and Ampelakia, Evros, located in the same country?",
+    "ground_truth": "yes"
+  },
+  "218": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of the director of film Kathputli (1971 Film)?",
+    "ground_truth": "Bombay"
+  },
+  "219": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Where did the director of film R\u0119ce Do G\u00f3ry study?",
+    "ground_truth": "National Film School in \u0141\u00f3d\u017a"
+  },
+  "220": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of Suzanne Farrington's mother?",
+    "ground_truth": "London, United Kingdom"
+  },
+  "221": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What nationality is the director of film Name The Man?",
+    "ground_truth": "Kingdom of Sweden"
+  },
+  "222": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Do Kreesha Turner and Samantha Jo share the same nationality?",
+    "ground_truth": "yes"
+  },
+  "223": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of the director of film Aurora (2018 Film)?",
+    "ground_truth": "Davao City"
+  },
+  "224": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director born later, Befikre or American Sniper?",
+    "ground_truth": "Befikre"
+  },
+  "225": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When is Prince Napol\u00e9on Bonaparte's father's birthday?",
+    "ground_truth": "15 November 1784"
+  },
+  "226": {
+    "score": 0,
+    "generated_answer": "I do not have enough information to answer.",
+    "question": "Which film was released more recently, Toolbox Murders or I Met You In Naples?",
+    "ground_truth": "Toolbox Murders"
+  },
+  "227": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of the composer of song How Long Has This Been Going On??",
+    "ground_truth": "Hollywood, California"
+  },
+  "228": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director died earlier, Youngblood Hawke (Film) or Crook'S Tour?",
+    "ground_truth": "Crook's Tour"
+  },
+  "229": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did William S. Burroughs Jr.'s father study?",
+    "ground_truth": "Harvard Graduate School"
+  },
+  "230": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who was born earlier, Circus Beely or Tom, Dick And Harry 2?",
+    "ground_truth": "Circus Beely"
+  },
+  "231": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the maternal grandmother of Felipe De Marichalar Y Borb\u00f3n?",
+    "ground_truth": "Soph\u00eda zu Schleswig-Holstein-Sonderburg-Gl\u00fccksburg, Princess of Greece and Denmark"
+  },
+  "232": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are the directors of both films The Fall Of A Saint and Fighting Through from the same country?",
+    "ground_truth": "no"
+  },
+  "233": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Natalie Portman's husband is from?",
+    "ground_truth": "R\u00e9publique fran\u00e7aise"
+  },
+  "234": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the father-in-law of Tsandzile Ndwandwe?",
+    "ground_truth": "Ndvungunye"
+  },
+  "235": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born earlier, Mister Scarface or Waking Sleeping Beauty?",
+    "ground_truth": "l Padroni della citt\u00e0"
+  },
+  "236": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the place of birth of the performer of song Hunter (Bj\u00f6rk Song)?",
+    "ground_truth": "Reykjavikurborg"
+  },
+  "237": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandfather of Richard Beauchamp, 1St Earl Of Worcester?",
+    "ground_truth": "Thomas Beauchamp, 11th Earl of Warwick"
+  },
+  "238": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Who is the spouse of the director of film Carol'S Journey?",
+    "ground_truth": "Maria Barranco"
+  },
+  "239": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born later, Diary Of A Maniac or Return Of The Hero?",
+    "ground_truth": "Return Of The Hero"
+  },
+  "240": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the father of Augustus William, Duke Of Brunswick-Bevern born?",
+    "ground_truth": "Osterholz"
+  },
+  "241": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the mother-in-law of Lollia Paulina?",
+    "ground_truth": "Agrippina the Elder"
+  },
+  "242": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released more recently, Gaza Ghetto or Kull The Conqueror?",
+    "ground_truth": "Kull The Conqueror"
+  },
+  "243": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who was born earlier, Ra\u00fal Osorio or James B. Harris?",
+    "ground_truth": "James B. Harris"
+  },
+  "244": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "When was the company that published Woman'S Century founded?",
+    "ground_truth": "October 27, 1893"
+  },
+  "245": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Charles Willoughby, 10Th Baron Willoughby Of Parham's paternal grandmother?",
+    "ground_truth": "Lady Frances Manners"
+  },
+  "246": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died earlier, Deuce High or The King Is The Best Mayor?",
+    "ground_truth": "The King is the Best Mayor"
+  },
+  "247": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released earlier, Premium (Film) or Week-End With Father?",
+    "ground_truth": "Week-End with Father"
+  },
+  "248": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What nationality is Gevherhan Sultan (Daughter Of Selim Ii)'s father?",
+    "ground_truth": "Exalted Ottoman State"
+  },
+  "249": {
+    "score": 0,
+    "generated_answer": "No information is available to answer your question.",
+    "question": "Are both \u021aerova and Slava (River) located in the same country?",
+    "ground_truth": "yes"
+  },
+  "250": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are Graduate University Of Advanced Technology and Fruita Schoolhouse located in the same country?",
+    "ground_truth": "no"
+  },
+  "251": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandmother of Prince William Of Hesse-Kassel?",
+    "ground_truth": "Princess Mary of Great Britain"
+  },
+  "252": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did the presenter of Tim Russert (Talk Show) die?",
+    "ground_truth": "Washington, District of Columbia"
+  },
+  "253": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film has the director who died earlier, 11 Harrowhouse or A Little Sister Of Everybody?",
+    "ground_truth": "A Little Sister Of Everybody"
+  },
+  "254": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the director of film The Last Horror Movie?",
+    "ground_truth": "Newport, Wales"
+  },
+  "255": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who is older, The Woman In The Fifth or End Of Winter?",
+    "ground_truth": "The Woman In The Fifth"
+  },
+  "256": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who is older, The Girl King or Happy As The Grass Was Green?",
+    "ground_truth": "Happy As The Grass Was Green"
+  },
+  "257": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is George Fitzroy, 1St Duke Of Northumberland's stepmother?",
+    "ground_truth": "Catherine of Braganza"
+  },
+  "258": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where does the director of film Ghost In The Machine (Film) work at?",
+    "ground_truth": "McGill University College of British Columbia"
+  },
+  "259": {
+    "score": 1,
+    "generated_answer": "No, Elsah, Illinois is located in the United States, while Chah-E Puzeh, Tabas is located in Iran.",
+    "question": "Are Elsah, Illinois and Chah-E Puzeh, Tabas both located in the same country?",
+    "ground_truth": "no"
+  },
+  "260": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandmother of Louis, Count Of Verdun?",
+    "ground_truth": "Gerberge of Lorraine"
+  },
+  "261": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What nationality is Anne Of Burgundy's father?",
+    "ground_truth": "R\u00e9publique fran\u00e7aise"
+  },
+  "262": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who was born later, All The Gold In The World or The Crowning Touch?",
+    "ground_truth": "The Crowning Touch"
+  },
+  "263": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who lived longer, Csaba P\u00e1link\u00e1s or Henry Scheff\u00e9?",
+    "ground_truth": "Henry Scheff\u00e9"
+  },
+  "264": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released more recently, Pirates Of The Prairie or Alien Origin?",
+    "ground_truth": "Alien Origin"
+  },
+  "265": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the mother of Edward I Of England?",
+    "ground_truth": "Eleanor of Provence"
+  },
+  "266": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the date of death of Joan, Countess Of Blois's mother?",
+    "ground_truth": "2 August 1288"
+  },
+  "267": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which album came out first, Issa Album or 3.2.1.?",
+    "ground_truth": "3.2.1."
+  },
+  "268": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is Sancho Ram\u00edrez's maternal grandfather?",
+    "ground_truth": "Bernard-Roger, Count of Bigorre"
+  },
+  "269": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film was released earlier, New Jersey Drive or It Happened At The World'S Fair?",
+    "ground_truth": "It Happened At The World'S Fair"
+  },
+  "270": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the spouse of the performer of song Lolita (Leah Labelle Song)?",
+    "ground_truth": "Rasual Butler"
+  },
+  "271": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Do director of film Winter Meeting and director of film Year Of The Horse have the same nationality?",
+    "ground_truth": "no"
+  },
+  "272": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Where does Chris Warren (Rugby League)'s father work at?",
+    "ground_truth": "Channel Nine"
+  },
+  "273": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did Davey Boy Smith Jr.'s mother study?",
+    "ground_truth": "Stampede Wrestling"
+  },
+  "274": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country Thomas Lyon-Bowes, Lord Glamis's father is from?",
+    "ground_truth": "United Kingdom of Great Britain and Ireland"
+  },
+  "275": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What nationality is the performer of song Adore You (Jessie Ware Song)?",
+    "ground_truth": "United Kingdom of Great Britain and Northern Ireland"
+  },
+  "276": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film whose director is younger, Dallas 362 or Revenge Of The Barbarians?",
+    "ground_truth": "Dallas 362"
+  },
+  "277": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born earlier, Spring Storms or Fun In The Barracks?",
+    "ground_truth": "Les Gaiet\u00e9s de l'escadron"
+  },
+  "278": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the father of Andrew Balding born?",
+    "ground_truth": "the United States of America"
+  },
+  "279": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "Which film was released earlier, Anna-Liisa or Children Underground?",
+    "ground_truth": "Anna-Liisa"
+  },
+  "280": {
+    "score": 0,
+    "generated_answer": "No, Arnold Palmer Regional Airport is located in Latrobe, Pennsylvania, United States, while Luis Mu\u00f1oz Mar\u00edn International Airport is located in Carolina, Puerto Rico, United States.",
+    "question": "Are Arnold Palmer Regional Airport and Luis Mu\u00f1oz Mar\u00edn International Airport located in the same country?",
+    "ground_truth": "yes"
+  },
+  "281": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which award the composer of film Pataakha won?",
+    "ground_truth": "National Film Award for Best Music Direction"
+  },
+  "282": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the performer of song Damage (Pharoahe Monch Song)?",
+    "ground_truth": "Queens, New York City"
+  },
+  "283": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where did Henry C. Lord's father graduate from?",
+    "ground_truth": "Bowdoin College"
+  },
+  "284": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film whose director is younger, Uncharted Seas or Something Of Value?",
+    "ground_truth": "Something of Value"
+  },
+  "285": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director born later, My Own Private Idaho or Lucignolo?",
+    "ground_truth": "Lucignolo"
+  },
+  "286": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What is the date of birth of Prince Bernhard Of Orange-Nassau, Van Vollenhoven's father?",
+    "ground_truth": "April 30, 1939"
+  },
+  "287": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are the bands The Catheters and Dark At Dawn, from the same country?",
+    "ground_truth": "no"
+  },
+  "288": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandmother of Ingegerd Olofsdotter Of Sweden?",
+    "ground_truth": "Sigrid the Haughty"
+  },
+  "289": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of the creator of Conan The Adventurer (1992 Tv Series)?",
+    "ground_truth": "Cross Plains, Texas"
+  },
+  "290": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Are the directors of films The Swordsman (Upcoming Film) and Shopworn both from the same country?",
+    "ground_truth": "no"
+  },
+  "291": {
+    "score": 0,
+    "generated_answer": "No, The Man Who Knew Too Much (1956 Film) is from the United States, while Man On Wire is from the United Kingdom.",
+    "question": "Are The Man Who Knew Too Much (1956 Film) and Man On Wire both from the same country?",
+    "ground_truth": "yes"
+  },
+  "292": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer that.",
+    "question": "What is the place of birth of the director of film The Fj Holden?",
+    "ground_truth": "Sydney, New South Wales, Australia"
+  },
+  "293": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who was born later, Lisbeth Cathrine Amalie Rose or Princess Raiyah Bint Hussein?",
+    "ground_truth": "Princess Raiyah bint Al Hussein"
+  },
+  "294": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the performer of song Step Into The Light (Myra Song) born?",
+    "ground_truth": "State of California"
+  },
+  "295": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which country the director of film One Night At Mccool'S is from?",
+    "ground_truth": "Kingdom of Norway"
+  },
+  "296": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandfather of Beatrice I, Abbess Of Quedlinburg?",
+    "ground_truth": "Conrad II, Holy Roman Emperor"
+  },
+  "297": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Who is the paternal grandmother of John Iii, Duke Of Cleves?",
+    "ground_truth": "Elizabeth of Burgundy"
+  },
+  "298": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Where was the place of death of George Thomas Orlando Bridgeman's father?",
+    "ground_truth": "Weston Park"
+  },
+  "299": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "What nationality is Imperial Noble Consort Chunhui's husband?",
+    "ground_truth": "Empire of the Great Qing"
+  },
+  "300": {
+    "score": 0,
+    "generated_answer": "I don't have enough information to answer.",
+    "question": "Which film has the director who died later, Say It With Flowers or Boot Hill Bandits?",
+    "ground_truth": "Boot Hill Bandits"
+  }
+}
