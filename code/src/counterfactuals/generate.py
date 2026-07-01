@@ -499,6 +499,9 @@ async def find_breaking_counterfactuals(
             llm_calls += 1
             cg_context = graph_to_context(cg)
 
+            print(cg_context)
+            exit()
+
             _t0 = time.perf_counter()
             new_response = await query(rag, cg_context, question)
             print(f"Cost: {cost} | New response: {new_response} | Original: {original_answer}")
@@ -1331,6 +1334,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
                    help="Cost-tier width for --add-heuristic=tier (>0). Default 1.0.")
     p.add_argument("--alpha", type=float, default=0.5,
                    help="Blend weight for --add-heuristic=blend (priority = cost - alpha*similarity). Default 0.5.")
+    p.add_argument("--num-examples", type=int, default=None,
+               help="Maximum number of examples to process (default: all).")
     return p
 
 
@@ -1375,7 +1380,11 @@ async def main(args: argparse.Namespace):
 
     rag = await initialize_lightrag(working_dir=WORKING_DIRS[dataset])
 
+    processed = 0
     for idx, r in data["results"].items():
+        if args.num_examples is not None and processed >= args.num_examples:
+            break
+
         if r.get("case") != args.mode:
             continue
 
@@ -1415,6 +1424,8 @@ async def main(args: argparse.Namespace):
             setup_time=setup_time,
             pre_llm_time=pre_llm_time,
         )
+        
+        processed += 1
 
 
 if __name__ == "__main__":

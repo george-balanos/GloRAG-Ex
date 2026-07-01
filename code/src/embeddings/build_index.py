@@ -55,6 +55,8 @@ if __name__ == "__main__":
     args = build_arg_parser().parse_args()
     dataset = args.dataset
 
+    # node_json = f"KGs/{dataset}/vdb_entities.json"
+    # edge_json = f"KGs/{dataset}/vdb_relationships.json"
     node_json = f"KGs/lightrag/{dataset}/vdb_entities.json"
     edge_json = f"KGs/lightrag/{dataset}/vdb_relationships.json"
 
