@@ -1,6 +1,6 @@
 # GLoRAG-Ex
 
-**Counterfactual Knowledge-Graph-Based Global Explanations for RAG**
+**Counterfactual Knowledge Graph-Based Local and Global Explanations for RAG**
 
 GloRAG-Ex explains *why* a graph-based Retrieval-Augmented Generation (RAG) pipeline answers a question correctly or incorrectly by searching for **counterfactual edits** to the retrieved knowledge subgraph. Given a question, it finds the minimum-cost set of node/edge deletions and additions that *flip* the RAG system's answer (correct → incorrect, or incorrect → correct), and aggregates these local, per-instance counterfactuals into **global explanations** describing which structural and semantic features drive the RAG system's behavior across an entire benchmark.
 
