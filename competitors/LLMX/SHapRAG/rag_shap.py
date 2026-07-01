@@ -20,7 +20,7 @@ import torch
 import torch.nn.functional as F
 from accelerate import Accelerator
 from accelerate.utils import broadcast_object_list, gather_object
-# from fastFM import als
+from fastFM import als
 from shapiq import SHAPIQ
 from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
 from sklearn.linear_model import Ridge
@@ -35,8 +35,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 from tqdm.auto import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from .Weightedfm import*
-
-als = None
 
 class ContextAttribution:
 
