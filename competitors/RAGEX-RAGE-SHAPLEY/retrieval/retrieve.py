@@ -9,14 +9,15 @@ setup_logger("lightrag", level="WARNING")
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-WORKING_DIR_SYNTHETIC  = "KGs/lightrag/synthetic"
-WORKING_DIR_HOTPOTQA  = "KGs/lightrag/hotpotqa"
+# WORKING_DIR_SYNTHETIC  = "KGs/lightrag/synthetic"
+# WORKING_DIR_HOTPOTQA  = "KGs/lightrag/hotpotqa"
 MODE         = "hybrid"
 TOP_K        = 2
 
 # ──────────────────────────────────────────────────────────────────────────────
 
-async def initialize_lightrag(working_dir: str = WORKING_DIR_SYNTHETIC):
+# async def initialize_lightrag(working_dir: str = WORKING_DIR_SYNTHETIC):
+async def initialize_lightrag(working_dir):
     '''Initialize LightRAG'''
 
     rag = LightRAG(
