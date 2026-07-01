@@ -8,8 +8,6 @@ Each JSON file represents one question at one noise level and contains:
   - noise.noise_robust  (bool)  — whether the answer survived noise injection
   - mode                (str)   — "ff" or "ft" (same as the parent variant dir)
 
-Public API
-----------
 load_index(noise_resistance_root, dataset, variant) -> NoiseLevelIndex
 
 NoiseLevelIndex is keyed by the QUESTION STRING (not file-based ids), so that
