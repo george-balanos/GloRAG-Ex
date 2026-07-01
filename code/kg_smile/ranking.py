@@ -1,6 +1,4 @@
 """
-ranking.py
-==========
 Shared ranking and stability utilities used by both robustness pipelines
 (evaluation.py and evaluate_robustness.py).
 
@@ -74,7 +72,6 @@ def kendall_tau_on_overlap(base_rank: list, noisy_rank: list) -> float | None:
     return float(tau)
 
 
-# Convenience wrappers kept for call-site clarity
 def kendall_tau_edges(base_edges: list, noisy_edges: list) -> float | None:
     return kendall_tau_on_overlap(base_edges, noisy_edges)
 

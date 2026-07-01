@@ -1,16 +1,3 @@
-"""
-io_utils.py
-===========
-Shared I/O helpers: loading questions, attribution files, result folders,
-resume state, and serialising KGSMILEResult to the output schema.
-
-Used by:
-  - runner.py        (load_questions_from_csv, load_questions_from_explanation,
-                      load_completed, to_output_schema)
-  - aggregation.py   (load_attributions, load_results)
-  - compare.py       (load_folder)
-"""
-
 from __future__ import annotations
 
 import csv
@@ -117,17 +104,16 @@ def load_folder(folder_path: str) -> dict[str, dict]:
         with open(path) as f:
             raw = json.load(f)
 
-        # New format: {"0": {...}, "1": {...}, ...}
         if isinstance(raw, dict) and all(k.isdigit() for k in raw):
             for entry in raw.values():
                 if "question" in entry:
                     results[entry["question"]] = entry
-        # Legacy format: [{...}, ...]
+
         elif isinstance(raw, list):
             for entry in raw:
                 if "question" in entry:
                     results[entry["question"]] = entry
-        # Single-result file (compare.py original use-case)
+
         elif "question" in raw:
             results[raw["question"]] = raw
 
@@ -139,21 +125,13 @@ def load_folder(folder_path: str) -> dict[str, dict]:
 # ─────────────────────────────────────────────────────────────
 
 def load_completed(output_path: str) -> tuple[set[str], dict]:
-    """
-    Read an existing output file and return:
-        completed  — set of question strings already successfully processed
-        existing   — the full dict-of-dicts  {"0": {...}, "1": {...}, ...}
-
-    Handles both the new dict format and the legacy list format so that
-    old result files can be resumed without conversion.
-    """
     if not Path(output_path).exists():
         return set(), {}
 
     with open(output_path, encoding="utf-8") as f:
         raw = json.load(f)
 
-    # Normalise legacy list → dict
+
     if isinstance(raw, list):
         existing = {str(i): entry for i, entry in enumerate(raw)}
     else:
@@ -199,7 +177,7 @@ def _build_scores(result) -> dict[str, float]:
     for (src, tgt), val in edge_attrs:
         scores[f"R::{src}->{tgt}"] = val
 
-    return scores  # local var reuse is intentional; function name is _build_scores
+    return scores
 
 
 # ─────────────────────────────────────────────────────────────
@@ -208,47 +186,12 @@ def _build_scores(result) -> dict[str, float]:
 
 def to_output_schema(
     question:       str,
-    result,                             # KGSMILEResult (avoid circular import)
+    result,
     ground_truth:   str | None = None,
     question_id:    str | None = None,
     elapsed_seconds: float | None = None,
     llm_call_count:  int   | None = None,
 ) -> dict:
-    """
-    Serialise a KGSMILEResult to the output schema.
-
-    Schema
-    ------
-    {
-        "question":        str,
-        "ground_truth":    str | null,
-        "rag_answer":      str,          # original LLM response
-        "score":           int | null,   # placeholder — fill in during evaluation
-        "n_items":         int,          # total nodes + edges in the subgraph
-        "elapsed_seconds": float | null, # wall-clock time from retrieval start
-        "llm_call_count":  int | null,   # number of LLM calls made
-        "scores":          {             # E::<node> and R::<src>-><tgt> keys
-            "E::NodeName": float,
-            "R::Src->Tgt": float,
-            ...
-        },
-
-        # Legacy / downstream fields (kept for aggregation.py / compare.py)
-        "id":                    str | null,
-        "surrogate_r2":          float,
-        "output_shift_std":      float,
-        "mean_graph_cosine_sim": float,
-        "mean_kernel_weight":    float,
-        "degenerate":            bool,
-        "timestamp":             str,
-        "edge_attributions":     list[dict],
-        "node_attributions":     list[dict],
-    }
-
-    The top-level ``edge_attributions`` and ``node_attributions`` lists are
-    preserved so that aggregation.py's extract_top_nodes / extract_top_edges
-    continue to work without modification.
-    """
     from .kg_smile import result_to_dict   # deferred to avoid circular import
 
     d = result_to_dict(result)
@@ -260,7 +203,7 @@ def to_output_schema(
         "question":         question,
         "ground_truth":     ground_truth,
         "rag_answer":       result.original_response,
-        "score":            None,          # filled in during external evaluation
+        "score":            None,
         "n_items":          n_items,
         "elapsed_seconds":  elapsed_seconds,
         "llm_call_count":   llm_call_count,
@@ -272,7 +215,8 @@ def to_output_schema(
         "output_shift_std":      result.output_shift_std,
         "mean_graph_cosine_sim": result.mean_graph_cosine_sim,
         "mean_kernel_weight":    result.mean_kernel_weight,
-        "degenerate":            result.output_shift_std < 1e-4,
+        "degenerate":            result.degenerate,
+        "noise_robust":          result.noise_robust,
         "timestamp":             datetime.now(timezone.utc).isoformat(),
         "edge_attributions":     d["edge_attributions"],
         "node_attributions":     d["node_attributions"],
