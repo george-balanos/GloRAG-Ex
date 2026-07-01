@@ -14,14 +14,15 @@ from src.embeddings.query import DIM, build_lookup, build_edge_lookup
 WORKING_DIRS = {
     "synthetic": "KGs/lightrag/synthetic",
     "hotpotqa":  "KGs/lightrag/hotpotqa",
-    "medical_bioasq_1": "",
-    "musique": "KGs/lightrag/musique"
+    "musique": "KGs/lightrag/musique",
+    "2wiki": "KGs/lightrag/2wiki"
 }
 
 QA_CSV_PATHS = {
     "synthetic": "datasets/synthetic/qa_data_synthetic.csv",
     "hotpotqa":  "datasets/hotpotqa/qa_data_hotpotqa.csv",
     "musique":  "datasets/musique/qa_data_musique.csv",
+    "2wiki": "datasets/2wiki/qa_data_2wiki.csv"
 }
 
 DATASETS = list(WORKING_DIRS.keys())
