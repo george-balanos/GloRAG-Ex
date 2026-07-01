@@ -1,0 +1,5881 @@
+{
+  "0": {
+    "id": 0,
+    "question": "What special abilities do the Gleepglorp and the Flumph from planet Xylar possess?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": -0.1630415940723788
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Planet Xylar",
+              "attribution": 0.31983021319022503
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Zylonic Energy",
+              "attribution": -0.18064778425801264
+            },
+            {
+              "source": "Etherean Soul-Compass",
+              "target": "Life-Aura",
+              "attribution": 0.1070841411242014
+            },
+            {
+              "source": "Flumph",
+              "target": "Planet Xylar",
+              "attribution": 0.49937719923505514
+            },
+            {
+              "source": "Moonhigh",
+              "target": "Planet Xylar",
+              "attribution": 0.3822287979711204
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": -0.1630415940723788
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": -0.1630415940723788
+            },
+            {
+              "node": "Gleepglorp",
+              "attribution": 0.0695912144661062
+            },
+            {
+              "node": "Planet Xylar",
+              "attribution": 0.40047873679880014
+            },
+            {
+              "node": "Zylonic Energy",
+              "attribution": -0.18064778425801264
+            },
+            {
+              "node": "Etherean Soul-Compass",
+              "attribution": 0.1070841411242014
+            },
+            {
+              "node": "Life-Aura",
+              "attribution": 0.1070841411242014
+            },
+            {
+              "node": "Flumph",
+              "attribution": 0.49937719923505514
+            },
+            {
+              "node": "Moonhigh",
+              "attribution": 0.3822287979711204
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 85.96,
+        "llm_call_count": 16,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": -0.5273989969123328
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Planet Xylar",
+              "attribution": 0.2650856569321446
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Zylonic Energy",
+              "attribution": 0.34710673778470624
+            },
+            {
+              "source": "Etherean Soul-Compass",
+              "target": "Life-Aura",
+              "attribution": -0.16515711393143603
+            },
+            {
+              "source": "Flumph",
+              "target": "Planet Xylar",
+              "attribution": 0.5288123545026404
+            },
+            {
+              "source": "Moonhigh",
+              "target": "Etherean Soul-Compass",
+              "attribution": -0.16522716153085762
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Unique Life Forms",
+              "attribution": -0.3514267065605679
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": -0.5273989969123328
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": -0.4394128517364504
+            },
+            {
+              "node": "Gleepglorp",
+              "attribution": 0.3060961973584254
+            },
+            {
+              "node": "Planet Xylar",
+              "attribution": 0.3969490057173925
+            },
+            {
+              "node": "Zylonic Energy",
+              "attribution": 0.34710673778470624
+            },
+            {
+              "node": "Etherean Soul-Compass",
+              "attribution": -0.16519213773114683
+            },
+            {
+              "node": "Life-Aura",
+              "attribution": -0.16515711393143603
+            },
+            {
+              "node": "Flumph",
+              "attribution": 0.5288123545026404
+            },
+            {
+              "node": "Moonhigh",
+              "attribution": -0.16522716153085762
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": -0.3514267065605679
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.3301,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": -0.5235190804237327
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Planet Xylar",
+              "attribution": 0.16766314166816187
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Zylonic Energy",
+              "attribution": 0.29387815602631845
+            },
+            {
+              "source": "Etherean Soul-Compass",
+              "target": "Life-Aura",
+              "attribution": -0.12017990925756489
+            },
+            {
+              "source": "Flumph",
+              "target": "Planet Xylar",
+              "attribution": 0.5331847701879989
+            },
+            {
+              "source": "Moonhigh",
+              "target": "Etherean Soul-Compass",
+              "attribution": -0.12028254201730242
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Unique Life Forms",
+              "attribution": -0.2528964130062859
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": -0.5235190804237327
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": -0.38820774671500935
+            },
+            {
+              "node": "Gleepglorp",
+              "attribution": 0.23077064884724016
+            },
+            {
+              "node": "Planet Xylar",
+              "attribution": 0.3504239559280804
+            },
+            {
+              "node": "Zylonic Energy",
+              "attribution": 0.29387815602631845
+            },
+            {
+              "node": "Etherean Soul-Compass",
+              "attribution": -0.12023122563743366
+            },
+            {
+              "node": "Life-Aura",
+              "attribution": -0.12017990925756489
+            },
+            {
+              "node": "Flumph",
+              "attribution": 0.5331847701879989
+            },
+            {
+              "node": "Moonhigh",
+              "attribution": -0.12028254201730242
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": -0.2528964130062859
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.0095,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": -0.15640987368074585
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Planet Xylar",
+              "attribution": 0.28434254524943303
+            },
+            {
+              "source": "Gleepglorp",
+              "target": "Zylonic Energy",
+              "attribution": -0.19137336060648186
+            },
+            {
+              "source": "Etherean Soul-Compass",
+              "target": "Life-Aura",
+              "attribution": 0.005890547065526616
+            },
+            {
+              "source": "Flumph",
+              "target": "Planet Xylar",
+              "attribution": -0.2844397649867323
+            },
+            {
+              "source": "Moonhigh",
+              "target": "Unique Life Forms",
+              "attribution": 0.15734322233587458
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Lumina System",
+              "attribution": 0.31749205932734975
+            },
+            {
+              "source": "Volcanic Culture",
+              "target": "Lumina System",
+              "attribution": 0.09409928794843686
+            },
+            {
+              "source": "Night-Marshal",
+              "target": "Flumph",
+              "attribution": 0.18211022612573266
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": 0.08506049119834691
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": 0.0004666743275643648
+            },
+            {
+              "node": "Gleepglorp",
+              "attribution": 0.04648459232147559
+            },
+            {
+              "node": "Planet Xylar",
+              "attribution": -4.860986864962946e-05
+            },
+            {
+              "node": "Zylonic Energy",
+              "attribution": -0.19137336060648186
+            },
+            {
+              "node": "Etherean Soul-Compass",
+              "attribution": 0.005890547065526616
+            },
+            {
+              "node": "Life-Aura",
+              "attribution": 0.005890547065526616
+            },
+            {
+              "node": "Flumph",
+              "attribution": -0.051164769430499815
+            },
+            {
+              "node": "Moonhigh",
+              "attribution": 0.15734322233587458
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.31749205932734975
+            },
+            {
+              "node": "Volcanic Culture",
+              "attribution": 0.09409928794843686
+            },
+            {
+              "node": "Night-Marshal",
+              "attribution": 0.18211022612573266
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.1774,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "1": {
+    "id": 1,
+    "question": "What are the primary uses described for the 'Chrono-Modulator' or for the 'Bio-Harmonizer'?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Modulator",
+              "target": "Reality Stabilizers",
+              "attribution": 1.0569566826555559
+            },
+            {
+              "source": "Bio-Harmonic Feedback Systems",
+              "target": "Musicians",
+              "attribution": -0.12464247825311991
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Desert Ruins",
+              "attribution": -0.06812873762567391
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Temporal Distortions",
+              "attribution": -0.00243036301787954
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "External Power Source",
+              "attribution": -0.05689394544363991
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Historians",
+              "attribution": 0.010949948216214641
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Unknown Alloys",
+              "attribution": -0.04005041892159039
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Faint Hum",
+              "attribution": 0.13100324988080103
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Forgotten Civilization",
+              "attribution": -0.1196069596572699
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Creators",
+              "attribution": 0.025282873680491428
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Bio-Harmonic Feedback Systems",
+              "attribution": 0.004180716933680886
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Modulator",
+              "attribution": 1.0569566826555559
+            },
+            {
+              "node": "Reality Stabilizers",
+              "attribution": 1.0569566826555559
+            },
+            {
+              "node": "Bio-Harmonic Feedback Systems",
+              "attribution": -0.060230880659719516
+            },
+            {
+              "node": "Musicians",
+              "attribution": -0.12464247825311991
+            },
+            {
+              "node": "Chrono-Regulator",
+              "attribution": -0.01498429411106832
+            },
+            {
+              "node": "Desert Ruins",
+              "attribution": -0.06812873762567391
+            },
+            {
+              "node": "Temporal Distortions",
+              "attribution": -0.00243036301787954
+            },
+            {
+              "node": "External Power Source",
+              "attribution": -0.05689394544363991
+            },
+            {
+              "node": "Historians",
+              "attribution": 0.010949948216214641
+            },
+            {
+              "node": "Unknown Alloys",
+              "attribution": -0.04005041892159039
+            },
+            {
+              "node": "Faint Hum",
+              "attribution": 0.13100324988080103
+            },
+            {
+              "node": "Forgotten Civilization",
+              "attribution": -0.1196069596572699
+            },
+            {
+              "node": "Creators",
+              "attribution": 0.025282873680491428
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": 0.004180716933680886
+            }
+          ],
+          "noise_robust": false,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.5896,
+        "llm_call_count": 18,
+        "noise_robust": false,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Modulator",
+              "target": "Reality Stabilizers",
+              "attribution": -0.03798754492194724
+            },
+            {
+              "source": "Bio-Harmonic Feedback Systems",
+              "target": "Musicians",
+              "attribution": 0.22823846035116396
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Desert Ruins",
+              "attribution": -0.03384804953028062
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Temporal Distortions",
+              "attribution": 0.002805356414338212
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "External Power Source",
+              "attribution": 0.1320308919338847
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Historians",
+              "attribution": 0.1365375783333254
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Unknown Alloys",
+              "attribution": 0.08973099418567225
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Faint Hum",
+              "attribution": -0.018462932643798714
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Forgotten Civilization",
+              "attribution": -0.04161317045453742
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Creators",
+              "attribution": 0.24653732691205826
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Creators",
+              "attribution": -0.04075743356939459
+            },
+            {
+              "source": "School",
+              "target": "Musicians",
+              "attribution": -0.19877675526708466
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Chrono-Regulator",
+              "attribution": 0.1329223439827361
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Modulator",
+              "attribution": -0.03798754492194724
+            },
+            {
+              "node": "Reality Stabilizers",
+              "attribution": -0.03798754492194724
+            },
+            {
+              "node": "Bio-Harmonic Feedback Systems",
+              "attribution": 0.22823846035116396
+            },
+            {
+              "node": "Musicians",
+              "attribution": 0.014730852542039652
+            },
+            {
+              "node": "Chrono-Regulator",
+              "attribution": 0.07184892657037757
+            },
+            {
+              "node": "Desert Ruins",
+              "attribution": -0.03384804953028062
+            },
+            {
+              "node": "Temporal Distortions",
+              "attribution": 0.002805356414338212
+            },
+            {
+              "node": "External Power Source",
+              "attribution": 0.1320308919338847
+            },
+            {
+              "node": "Historians",
+              "attribution": 0.1365375783333254
+            },
+            {
+              "node": "Unknown Alloys",
+              "attribution": 0.08973099418567225
+            },
+            {
+              "node": "Faint Hum",
+              "attribution": -0.018462932643798714
+            },
+            {
+              "node": "Forgotten Civilization",
+              "attribution": -0.04161317045453742
+            },
+            {
+              "node": "Creators",
+              "attribution": 0.10288994667133183
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": -0.04075743356939459
+            },
+            {
+              "node": "School",
+              "attribution": -0.19877675526708466
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": 0.1329223439827361
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.8955,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Modulator",
+              "target": "Reality Stabilizers",
+              "attribution": 0.4906192345845288
+            },
+            {
+              "source": "Bio-Harmonic Feedback Systems",
+              "target": "Musicians",
+              "attribution": 0.003007664902644017
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Desert Ruins",
+              "attribution": 0.006702143044797919
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Temporal Distortions",
+              "attribution": -0.03392112478873181
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "External Power Source",
+              "attribution": 0.013416931988162855
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Historians",
+              "attribution": -0.018671046316542844
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Unknown Alloys",
+              "attribution": 0.06546936342452564
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Faint Hum",
+              "attribution": 0.13852958751859304
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Forgotten Civilization",
+              "attribution": -0.13638551926911643
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Creators",
+              "attribution": 0.038956165413581295
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Temporal Distortions",
+              "attribution": 0.13159165484303018
+            },
+            {
+              "source": "School",
+              "target": "Musicians",
+              "attribution": -0.22303364571248616
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Creators",
+              "attribution": 0.028189331244076785
+            },
+            {
+              "source": "Font of Resonance",
+              "target": "Forgotten Civilization",
+              "attribution": -0.0135147333164971
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Modulator",
+              "attribution": 0.4906192345845288
+            },
+            {
+              "node": "Reality Stabilizers",
+              "attribution": 0.4906192345845288
+            },
+            {
+              "node": "Bio-Harmonic Feedback Systems",
+              "attribution": 0.003007664902644017
+            },
+            {
+              "node": "Musicians",
+              "attribution": -0.11001299040492107
+            },
+            {
+              "node": "Chrono-Regulator",
+              "attribution": 0.009262062626908707
+            },
+            {
+              "node": "Desert Ruins",
+              "attribution": 0.006702143044797919
+            },
+            {
+              "node": "Temporal Distortions",
+              "attribution": 0.04883526502714918
+            },
+            {
+              "node": "External Power Source",
+              "attribution": 0.013416931988162855
+            },
+            {
+              "node": "Historians",
+              "attribution": -0.018671046316542844
+            },
+            {
+              "node": "Unknown Alloys",
+              "attribution": 0.06546936342452564
+            },
+            {
+              "node": "Faint Hum",
+              "attribution": 0.13852958751859304
+            },
+            {
+              "node": "Forgotten Civilization",
+              "attribution": -0.07495012629280677
+            },
+            {
+              "node": "Creators",
+              "attribution": 0.03357274832882904
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": 0.13159165484303018
+            },
+            {
+              "node": "School",
+              "attribution": -0.22303364571248616
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": 0.028189331244076785
+            },
+            {
+              "node": "Font of Resonance",
+              "attribution": -0.0135147333164971
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.9681,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Modulator",
+              "target": "Reality Stabilizers",
+              "attribution": 0.258206246945431
+            },
+            {
+              "source": "Bio-Harmonic Feedback Systems",
+              "target": "Musicians",
+              "attribution": -0.04646616059843674
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Desert Ruins",
+              "attribution": 0.27348091268524793
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Temporal Distortions",
+              "attribution": -0.5816500909510247
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "External Power Source",
+              "attribution": 0.05749116738905891
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Historians",
+              "attribution": 0.16867416155046733
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Unknown Alloys",
+              "attribution": 0.21417540869718946
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Faint Hum",
+              "attribution": 0.21624852558969393
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Forgotten Civilization",
+              "attribution": 0.04891930275443727
+            },
+            {
+              "source": "Chrono-Regulator",
+              "target": "Creators",
+              "attribution": -0.14098454864196325
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Musicians",
+              "attribution": -0.09979957237108988
+            },
+            {
+              "source": "School",
+              "target": "Creators",
+              "attribution": -0.022864183290999956
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Forgotten Civilization",
+              "attribution": 0.08700099532018991
+            },
+            {
+              "source": "Font of Resonance",
+              "target": "Unknown Alloys",
+              "attribution": -0.23737583619129327
+            },
+            {
+              "source": "Luminian Scouts",
+              "target": "Faint Hum",
+              "attribution": 0.3003340627356915
+            },
+            {
+              "source": "Lightning Essence",
+              "target": "Chrono-Modulator",
+              "attribution": 0.49453269488059987
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Modulator",
+              "attribution": 0.3763694709130154
+            },
+            {
+              "node": "Reality Stabilizers",
+              "attribution": 0.258206246945431
+            },
+            {
+              "node": "Bio-Harmonic Feedback Systems",
+              "attribution": -0.04646616059843674
+            },
+            {
+              "node": "Musicians",
+              "attribution": -0.0731328664847633
+            },
+            {
+              "node": "Chrono-Regulator",
+              "attribution": 0.032044354884138364
+            },
+            {
+              "node": "Desert Ruins",
+              "attribution": 0.27348091268524793
+            },
+            {
+              "node": "Temporal Distortions",
+              "attribution": -0.5816500909510247
+            },
+            {
+              "node": "External Power Source",
+              "attribution": 0.05749116738905891
+            },
+            {
+              "node": "Historians",
+              "attribution": 0.16867416155046733
+            },
+            {
+              "node": "Unknown Alloys",
+              "attribution": -0.011600213747051905
+            },
+            {
+              "node": "Faint Hum",
+              "attribution": 0.2582912941626927
+            },
+            {
+              "node": "Forgotten Civilization",
+              "attribution": 0.0679601490373136
+            },
+            {
+              "node": "Creators",
+              "attribution": -0.0819243659664816
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": -0.09979957237108988
+            },
+            {
+              "node": "School",
+              "attribution": -0.022864183290999956
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": 0.08700099532018991
+            },
+            {
+              "node": "Font of Resonance",
+              "attribution": -0.23737583619129327
+            },
+            {
+              "node": "Luminian Scouts",
+              "attribution": 0.3003340627356915
+            },
+            {
+              "node": "Lightning Essence",
+              "attribution": 0.49453269488059987
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.9224,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "2": {
+    "id": 2,
+    "question": "According to the Lumina Accords, what is the designated purpose of 'quiet zones'?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina Accords",
+              "target": "Pan-Galactic Council",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Standard Habitat Construction Materials",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Shared Habitat Charter",
+              "attribution": 0.0
+            },
+            {
+              "source": "Article 12",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "source": "Cygnans",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "source": "K'tharr",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "node": "Pan-Galactic Council",
+              "attribution": 0.0
+            },
+            {
+              "node": "Standard Habitat Construction Materials",
+              "attribution": 0.0
+            },
+            {
+              "node": "Shared Habitat Charter",
+              "attribution": 0.0
+            },
+            {
+              "node": "Article 12",
+              "attribution": 0.0
+            },
+            {
+              "node": "Cygnans",
+              "attribution": 0.0
+            },
+            {
+              "node": "K'tharr",
+              "attribution": 0.0
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.5361,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina Accords",
+              "target": "Pan-Galactic Council",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Standard Habitat Construction Materials",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Shared Habitat Charter",
+              "attribution": 0.0
+            },
+            {
+              "source": "Article 12",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "source": "Cygnans",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "source": "K'tharr",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Lumina Accords",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina Accords",
+              "attribution": 0.0
+            },
+            {
+              "node": "Pan-Galactic Council",
+              "attribution": 0.0
+            },
+            {
+              "node": "Standard Habitat Construction Materials",
+              "attribution": 0.0
+            },
+            {
+              "node": "Shared Habitat Charter",
+              "attribution": 0.0
+            },
+            {
+              "node": "Article 12",
+              "attribution": 0.0
+            },
+            {
+              "node": "Cygnans",
+              "attribution": 0.0
+            },
+            {
+              "node": "K'tharr",
+              "attribution": 0.0
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.1843,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina Accords",
+              "target": "Pan-Galactic Council",
+              "attribution": 0.3270528541320789
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Standard Habitat Construction Materials",
+              "attribution": 0.048650206624266557
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Shared Habitat Charter",
+              "attribution": -0.18448094211880683
+            },
+            {
+              "source": "Article 12",
+              "target": "Lumina Accords",
+              "attribution": 0.24144406228451698
+            },
+            {
+              "source": "Cygnans",
+              "target": "Lumina Accords",
+              "attribution": -0.2230673891717953
+            },
+            {
+              "source": "K'tharr",
+              "target": "Lumina Accords",
+              "attribution": 0.1781177183401203
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "K'tharr",
+              "attribution": 0.05473254479300478
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Article 12",
+              "attribution": 0.2513958764534624
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina Accords",
+              "attribution": 0.06461941834839677
+            },
+            {
+              "node": "Pan-Galactic Council",
+              "attribution": 0.3270528541320789
+            },
+            {
+              "node": "Standard Habitat Construction Materials",
+              "attribution": 0.048650206624266557
+            },
+            {
+              "node": "Shared Habitat Charter",
+              "attribution": -0.18448094211880683
+            },
+            {
+              "node": "Article 12",
+              "attribution": 0.2464199693689897
+            },
+            {
+              "node": "Cygnans",
+              "attribution": -0.2230673891717953
+            },
+            {
+              "node": "K'tharr",
+              "attribution": 0.11642513156656253
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.05473254479300478
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.2513958764534624
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.8331,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina Accords",
+              "target": "Pan-Galactic Council",
+              "attribution": 0.6705531492294596
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Standard Habitat Construction Materials",
+              "attribution": 0.07711357374864061
+            },
+            {
+              "source": "Lumina Accords",
+              "target": "Shared Habitat Charter",
+              "attribution": 0.3099091463190386
+            },
+            {
+              "source": "Article 12",
+              "target": "Lumina Accords",
+              "attribution": 0.7683358666229717
+            },
+            {
+              "source": "Cygnans",
+              "target": "Lumina Accords",
+              "attribution": -0.7983170804333382
+            },
+            {
+              "source": "K'tharr",
+              "target": "Lumina Accords",
+              "attribution": 0.0778621997800136
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Article 12",
+              "attribution": 0.956669355857296
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "K'tharr",
+              "attribution": 0.44695374667170934
+            },
+            {
+              "source": "Star Systems",
+              "target": "K'tharr",
+              "attribution": 0.15862626507865968
+            },
+            {
+              "source": "Phantom Wraith-Riders",
+              "target": "Cygnans",
+              "attribution": -0.004297382007411417
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina Accords",
+              "attribution": 0.184242809211131
+            },
+            {
+              "node": "Pan-Galactic Council",
+              "attribution": 0.6705531492294596
+            },
+            {
+              "node": "Standard Habitat Construction Materials",
+              "attribution": 0.07711357374864061
+            },
+            {
+              "node": "Shared Habitat Charter",
+              "attribution": 0.3099091463190386
+            },
+            {
+              "node": "Article 12",
+              "attribution": 0.8625026112401338
+            },
+            {
+              "node": "Cygnans",
+              "attribution": -0.40130723122037476
+            },
+            {
+              "node": "K'tharr",
+              "attribution": 0.22781407051012756
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.956669355857296
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.44695374667170934
+            },
+            {
+              "node": "Star Systems",
+              "attribution": 0.15862626507865968
+            },
+            {
+              "node": "Phantom Wraith-Riders",
+              "attribution": -0.004297382007411417
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 8.0537,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "3": {
+    "id": 3,
+    "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest.?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 1.0645618677556807
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.44245376083882193
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": -0.38523275007524105
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Ancient Trees",
+              "attribution": -0.3461285271118052
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": 0.11106686352287816
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": 1.0645618677556807
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.44245376083882193
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.44245376083882193
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": -0.38523275007524105
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": -0.3461285271118052
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.5703,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 1.0146289801075834
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.0513162770902605
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": -0.3687822513279771
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Ancient Trees",
+              "attribution": -0.7910327535663155
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": -0.04839534159556972
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": 1.0146289801075834
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.0513162770902605
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.0513162770902605
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": -0.3687822513279771
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": -0.7910327535663155
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.3156,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 0.13341095531723984
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.1592518579483288
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": 0.15686876341434855
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Elderwood Forest",
+              "attribution": -0.2412522243586008
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Ancient Tree-Spirits",
+              "attribution": 0.12052578412468536
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": 0.1451398593657942
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": -0.05392063452068048
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.13988882103650707
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.1592518579483288
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": 0.15686876341434855
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": -0.2412522243586008
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.12052578412468536
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.3989,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": 0.0
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.4434,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "4": {
+    "id": 4,
+    "question": "What is the population of the smallest planet in the Lumina System?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Void",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Cinder",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aegis",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Kronos",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Hearth",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Forge",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Null Pass",
+              "target": "Lumina Star",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "node": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "node": "Void",
+              "attribution": 0.0
+            },
+            {
+              "node": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": 0.0
+            },
+            {
+              "node": "Cinder",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aegis",
+              "attribution": 0.0
+            },
+            {
+              "node": "Kronos",
+              "attribution": 0.0
+            },
+            {
+              "node": "Hearth",
+              "attribution": 0.0
+            },
+            {
+              "node": "Forge",
+              "attribution": 0.0
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 8.1964,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Void",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Cinder",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aegis",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Kronos",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Hearth",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Forge",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Null Pass",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "School",
+              "target": "Cinder",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "node": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "node": "Void",
+              "attribution": 0.0
+            },
+            {
+              "node": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": 0.0
+            },
+            {
+              "node": "Cinder",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aegis",
+              "attribution": 0.0
+            },
+            {
+              "node": "Kronos",
+              "attribution": 0.0
+            },
+            {
+              "node": "Hearth",
+              "attribution": 0.0
+            },
+            {
+              "node": "Forge",
+              "attribution": 0.0
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 0.0
+            },
+            {
+              "node": "School",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.8421,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Void",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Cinder",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aegis",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Kronos",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Hearth",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Forge",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Null Pass",
+              "target": "Cinder",
+              "attribution": 0.0
+            },
+            {
+              "source": "School",
+              "target": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Forge",
+              "attribution": 0.0
+            },
+            {
+              "source": "Plorgonian Celebrations",
+              "target": "Hearth",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "node": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "node": "Void",
+              "attribution": 0.0
+            },
+            {
+              "node": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": 0.0
+            },
+            {
+              "node": "Cinder",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aegis",
+              "attribution": 0.0
+            },
+            {
+              "node": "Kronos",
+              "attribution": 0.0
+            },
+            {
+              "node": "Hearth",
+              "attribution": 0.0
+            },
+            {
+              "node": "Forge",
+              "attribution": 0.0
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 0.0
+            },
+            {
+              "node": "School",
+              "attribution": 0.0
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": 0.0
+            },
+            {
+              "node": "Plorgonian Celebrations",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 8.2601,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Lumina System",
+              "target": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Void",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina System",
+              "target": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Cinder",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aegis",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Kronos",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Hearth",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Forge",
+              "target": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "source": "Null Pass",
+              "target": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "source": "School",
+              "target": "Forge",
+              "attribution": 0.0
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Hearth",
+              "attribution": 0.0
+            },
+            {
+              "source": "Plorgonian Celebrations",
+              "target": "Void",
+              "attribution": 0.0
+            },
+            {
+              "source": "Volcanic Vents",
+              "target": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "source": "Shield Generators",
+              "target": "Lumina System",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Lumina System",
+              "attribution": 0.0
+            },
+            {
+              "node": "Unique Life Forms",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant",
+              "attribution": 0.0
+            },
+            {
+              "node": "Siren",
+              "attribution": 0.0
+            },
+            {
+              "node": "Void",
+              "attribution": 0.0
+            },
+            {
+              "node": "Warp Gates",
+              "attribution": 0.0
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": 0.0
+            },
+            {
+              "node": "Cinder",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aegis",
+              "attribution": 0.0
+            },
+            {
+              "node": "Kronos",
+              "attribution": 0.0
+            },
+            {
+              "node": "Hearth",
+              "attribution": 0.0
+            },
+            {
+              "node": "Forge",
+              "attribution": 0.0
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 0.0
+            },
+            {
+              "node": "School",
+              "attribution": 0.0
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": 0.0
+            },
+            {
+              "node": "Plorgonian Celebrations",
+              "attribution": 0.0
+            },
+            {
+              "node": "Volcanic Vents",
+              "attribution": 0.0
+            },
+            {
+              "node": "Shield Generators",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 8.3089,
+        "llm_call_count": 21,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "5": {
+    "id": 5,
+    "question": "What is the salary of the most popular actor on the planet Aethelon?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Lyra Vael",
+              "attribution": 0.8100306121673005
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Bio-Feedback Systems",
+              "attribution": -5.367728899730029e-05
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Deep Character Studies",
+              "attribution": 0.1956781509205273
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Historical Epics",
+              "attribution": -0.022739556553555796
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Aethelon",
+              "attribution": 0.21474650360419148
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Actors",
+              "attribution": -0.019448043508096573
+            },
+            {
+              "source": "Celestia",
+              "target": "Xylar",
+              "attribution": -0.21393342745953023
+            },
+            {
+              "source": "Aethelon",
+              "target": "Aethelon's Entertainment Industry",
+              "attribution": 0.4506470758022813
+            },
+            {
+              "source": "Null Pass",
+              "target": "Acting Guilds",
+              "attribution": 0.2560351982088876
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aethelon's Entertainment Industry",
+              "attribution": 0.2867125210095112
+            },
+            {
+              "node": "Lyra Vael",
+              "attribution": 0.8100306121673005
+            },
+            {
+              "node": "Bio-Feedback Systems",
+              "attribution": -5.367728899730029e-05
+            },
+            {
+              "node": "Deep Character Studies",
+              "attribution": 0.1956781509205273
+            },
+            {
+              "node": "Historical Epics",
+              "attribution": -0.022739556553555796
+            },
+            {
+              "node": "Acting Guilds",
+              "attribution": 0.1504445527683275
+            },
+            {
+              "node": "Aethelon",
+              "attribution": 0.3326967897032364
+            },
+            {
+              "node": "Actors",
+              "attribution": -0.019448043508096573
+            },
+            {
+              "node": "Celestia",
+              "attribution": -0.21393342745953023
+            },
+            {
+              "node": "Xylar",
+              "attribution": -0.21393342745953023
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 0.2560351982088876
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.6668,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Lyra Vael",
+              "attribution": 0.23908812222211345
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Bio-Feedback Systems",
+              "attribution": -0.00048405029755612533
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Deep Character Studies",
+              "attribution": -0.187094702759482
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Historical Epics",
+              "attribution": 1.39287804828244e-05
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Aethelon",
+              "attribution": -4.916968421994547e-05
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Actors",
+              "attribution": 0.43057984152768614
+            },
+            {
+              "source": "Celestia",
+              "target": "Xylar",
+              "attribution": -4.915441112683054e-05
+            },
+            {
+              "source": "Aethelon",
+              "target": "Aethelon's Entertainment Industry",
+              "attribution": -0.0001373025589870216
+            },
+            {
+              "source": "Null Pass",
+              "target": "Aethelon's Entertainment Industry",
+              "attribution": -0.24278697322045262
+            },
+            {
+              "source": "School",
+              "target": "Xylar",
+              "attribution": -0.0003225151728326224
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aethelon's Entertainment Industry",
+              "attribution": -0.03190016297231358
+            },
+            {
+              "node": "Lyra Vael",
+              "attribution": 0.23908812222211345
+            },
+            {
+              "node": "Bio-Feedback Systems",
+              "attribution": -0.00048405029755612533
+            },
+            {
+              "node": "Deep Character Studies",
+              "attribution": -0.187094702759482
+            },
+            {
+              "node": "Historical Epics",
+              "attribution": 1.39287804828244e-05
+            },
+            {
+              "node": "Acting Guilds",
+              "attribution": 0.2152653359217331
+            },
+            {
+              "node": "Aethelon",
+              "attribution": -9.323612160348354e-05
+            },
+            {
+              "node": "Actors",
+              "attribution": 0.43057984152768614
+            },
+            {
+              "node": "Celestia",
+              "attribution": -4.915441112683054e-05
+            },
+            {
+              "node": "Xylar",
+              "attribution": -0.00018583479197972647
+            },
+            {
+              "node": "Null Pass",
+              "attribution": -0.24278697322045262
+            },
+            {
+              "node": "School",
+              "attribution": -0.0003225151728326224
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.4504,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Lyra Vael",
+              "attribution": 0.10378224820152863
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Bio-Feedback Systems",
+              "attribution": -0.39440542098158976
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Deep Character Studies",
+              "attribution": 0.18864229435946372
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Historical Epics",
+              "attribution": 0.10710318332885767
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Aethelon",
+              "attribution": 0.15547697037547167
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Actors",
+              "attribution": -0.03340868273359144
+            },
+            {
+              "source": "Celestia",
+              "target": "Xylar",
+              "attribution": -0.2156241822608171
+            },
+            {
+              "source": "Aethelon",
+              "target": "Aethelon's Entertainment Industry",
+              "attribution": -8.807244398254198e-06
+            },
+            {
+              "source": "Null Pass",
+              "target": "Xylar",
+              "attribution": -0.1885099515213713
+            },
+            {
+              "source": "School",
+              "target": "Celestia",
+              "attribution": 0.24885135791207497
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Acting Guilds",
+              "attribution": -0.05054537446523792
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aethelon's Entertainment Industry",
+              "attribution": 0.0010226995327724054
+            },
+            {
+              "node": "Lyra Vael",
+              "attribution": 0.10378224820152863
+            },
+            {
+              "node": "Bio-Feedback Systems",
+              "attribution": -0.39440542098158976
+            },
+            {
+              "node": "Deep Character Studies",
+              "attribution": 0.18864229435946372
+            },
+            {
+              "node": "Historical Epics",
+              "attribution": 0.10710318332885767
+            },
+            {
+              "node": "Acting Guilds",
+              "attribution": 0.023840971058880774
+            },
+            {
+              "node": "Aethelon",
+              "attribution": 0.07773408156553671
+            },
+            {
+              "node": "Actors",
+              "attribution": -0.03340868273359144
+            },
+            {
+              "node": "Celestia",
+              "attribution": 0.01661358782562894
+            },
+            {
+              "node": "Xylar",
+              "attribution": -0.2020670668910942
+            },
+            {
+              "node": "Null Pass",
+              "attribution": -0.1885099515213713
+            },
+            {
+              "node": "School",
+              "attribution": 0.24885135791207497
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": -0.05054537446523792
+            }
+          ],
+          "noise_robust": false,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.3427,
+        "llm_call_count": 18,
+        "noise_robust": false,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Lyra Vael",
+              "attribution": 0.4671048654640897
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Bio-Feedback Systems",
+              "attribution": 0.20250216042479013
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Deep Character Studies",
+              "attribution": 0.14968404687667997
+            },
+            {
+              "source": "Aethelon's Entertainment Industry",
+              "target": "Historical Epics",
+              "attribution": -0.0005060064231136632
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Aethelon",
+              "attribution": 0.21686762505965268
+            },
+            {
+              "source": "Acting Guilds",
+              "target": "Actors",
+              "attribution": 0.19406890586978134
+            },
+            {
+              "source": "Celestia",
+              "target": "Xylar",
+              "attribution": -0.0023793870018736798
+            },
+            {
+              "source": "Aethelon",
+              "target": "Aethelon's Entertainment Industry",
+              "attribution": 0.11772052065195285
+            },
+            {
+              "source": "Null Pass",
+              "target": "Celestia",
+              "attribution": -0.22018377373241158
+            },
+            {
+              "source": "School",
+              "target": "Lyra Vael",
+              "attribution": -0.5546220998055763
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Acting Guilds",
+              "attribution": -0.2201148681063751
+            },
+            {
+              "source": "Plorgonian Celebrations",
+              "target": "Historical Epics",
+              "attribution": -0.3234150032280626
+            },
+            {
+              "source": "Volcanic Vents",
+              "target": "Actors",
+              "attribution": 0.21698922496057538
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aethelon's Entertainment Industry",
+              "attribution": 0.18730111739887978
+            },
+            {
+              "node": "Lyra Vael",
+              "attribution": -0.04375861717074331
+            },
+            {
+              "node": "Bio-Feedback Systems",
+              "attribution": 0.20250216042479013
+            },
+            {
+              "node": "Deep Character Studies",
+              "attribution": 0.14968404687667997
+            },
+            {
+              "node": "Historical Epics",
+              "attribution": -0.16196050482558813
+            },
+            {
+              "node": "Acting Guilds",
+              "attribution": 0.06360722094101966
+            },
+            {
+              "node": "Aethelon",
+              "attribution": 0.16729407285580278
+            },
+            {
+              "node": "Actors",
+              "attribution": 0.20552906541517835
+            },
+            {
+              "node": "Celestia",
+              "attribution": -0.11128158036714263
+            },
+            {
+              "node": "Xylar",
+              "attribution": -0.0023793870018736798
+            },
+            {
+              "node": "Null Pass",
+              "attribution": -0.22018377373241158
+            },
+            {
+              "node": "School",
+              "attribution": -0.5546220998055763
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": -0.2201148681063751
+            },
+            {
+              "node": "Plorgonian Celebrations",
+              "attribution": -0.3234150032280626
+            },
+            {
+              "node": "Volcanic Vents",
+              "attribution": 0.21698922496057538
+            }
+          ],
+          "noise_robust": false,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.2885,
+        "llm_call_count": 20,
+        "noise_robust": false,
+        "degenerate": false
+      }
+    ]
+  },
+  "6": {
+    "id": 6,
+    "question": "What is the title of the first album by the most popular Chrono-Wave musician on Riven Prime?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Wave",
+              "target": "Riven Prime",
+              "attribution": -0.16343226954858395
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Kaelen Echo",
+              "attribution": 0.3477500158171154
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Phase Shifter",
+              "attribution": 0.004241588816162207
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "DJ Rewind",
+              "attribution": -0.14508786662604306
+            },
+            {
+              "source": "DJ Rewind",
+              "target": "Future Echoes",
+              "attribution": 0.9320370346541864
+            },
+            {
+              "source": "Riven Prime",
+              "target": "Temporal Resonance",
+              "attribution": -0.11642093161082888
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Chrono-Wave",
+              "attribution": -0.24807386074597815
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Wave",
+              "attribution": -0.040920478457465506
+            },
+            {
+              "node": "Riven Prime",
+              "attribution": -0.1399266005797064
+            },
+            {
+              "node": "Kaelen Echo",
+              "attribution": 0.3477500158171154
+            },
+            {
+              "node": "Phase Shifter",
+              "attribution": 0.004241588816162207
+            },
+            {
+              "node": "DJ Rewind",
+              "attribution": 0.39347458401407165
+            },
+            {
+              "node": "Future Echoes",
+              "attribution": 0.9320370346541864
+            },
+            {
+              "node": "Temporal Resonance",
+              "attribution": -0.11642093161082888
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": -0.24807386074597815
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.7527,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Wave",
+              "target": "Riven Prime",
+              "attribution": -0.16343226954858395
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Kaelen Echo",
+              "attribution": 0.3477500158171154
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Phase Shifter",
+              "attribution": 0.004241588816162207
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "DJ Rewind",
+              "attribution": -0.14508786662604306
+            },
+            {
+              "source": "DJ Rewind",
+              "target": "Future Echoes",
+              "attribution": 0.9320370346541864
+            },
+            {
+              "source": "Riven Prime",
+              "target": "Temporal Resonance",
+              "attribution": -0.11642093161082888
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Chrono-Wave",
+              "attribution": -0.24807386074597815
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Wave",
+              "attribution": -0.040920478457465506
+            },
+            {
+              "node": "Riven Prime",
+              "attribution": -0.1399266005797064
+            },
+            {
+              "node": "Kaelen Echo",
+              "attribution": 0.3477500158171154
+            },
+            {
+              "node": "Phase Shifter",
+              "attribution": 0.004241588816162207
+            },
+            {
+              "node": "DJ Rewind",
+              "attribution": 0.39347458401407165
+            },
+            {
+              "node": "Future Echoes",
+              "attribution": 0.9320370346541864
+            },
+            {
+              "node": "Temporal Resonance",
+              "attribution": -0.11642093161082888
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": -0.24807386074597815
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.4615,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Wave",
+              "target": "Riven Prime",
+              "attribution": 0.17811944229072882
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Kaelen Echo",
+              "attribution": 0.17848515409361182
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Phase Shifter",
+              "attribution": -0.08379902088126576
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "DJ Rewind",
+              "attribution": 0.2392983011163867
+            },
+            {
+              "source": "DJ Rewind",
+              "target": "Future Echoes",
+              "attribution": 0.2562462884062703
+            },
+            {
+              "source": "Riven Prime",
+              "target": "Temporal Resonance",
+              "attribution": 0.15790325097323396
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Phase Shifter",
+              "attribution": 0.3903470258451977
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "DJ Rewind",
+              "attribution": 0.033818377155034135
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Wave",
+              "attribution": 0.1280259691548654
+            },
+            {
+              "node": "Riven Prime",
+              "attribution": 0.1680113466319814
+            },
+            {
+              "node": "Kaelen Echo",
+              "attribution": 0.17848515409361182
+            },
+            {
+              "node": "Phase Shifter",
+              "attribution": 0.153274002481966
+            },
+            {
+              "node": "DJ Rewind",
+              "attribution": 0.17645432222589705
+            },
+            {
+              "node": "Future Echoes",
+              "attribution": 0.2562462884062703
+            },
+            {
+              "node": "Temporal Resonance",
+              "attribution": 0.15790325097323396
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.3903470258451977
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.033818377155034135
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 13.0351,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Chrono-Wave",
+              "target": "Riven Prime",
+              "attribution": -0.14834292400477847
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Kaelen Echo",
+              "attribution": 0.18777039931240425
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "Phase Shifter",
+              "attribution": 0.14421875850401836
+            },
+            {
+              "source": "Chrono-Wave",
+              "target": "DJ Rewind",
+              "attribution": -0.10036746559442883
+            },
+            {
+              "source": "DJ Rewind",
+              "target": "Future Echoes",
+              "attribution": 0.46727286103388355
+            },
+            {
+              "source": "Riven Prime",
+              "target": "Temporal Resonance",
+              "attribution": 0.06859848430556756
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "DJ Rewind",
+              "attribution": 0.0006497095750205158
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Phase Shifter",
+              "attribution": -0.02301477647047315
+            },
+            {
+              "source": "Star Systems",
+              "target": "Phase Shifter",
+              "attribution": -0.16310165276030555
+            },
+            {
+              "source": "Phantom Wraith-Riders",
+              "target": "Kaelen Echo",
+              "attribution": -2.586986622827668e-05
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Chrono-Wave",
+              "attribution": 0.020819692054303826
+            },
+            {
+              "node": "Riven Prime",
+              "attribution": -0.039872219849605456
+            },
+            {
+              "node": "Kaelen Echo",
+              "attribution": 0.09387226472308799
+            },
+            {
+              "node": "Phase Shifter",
+              "attribution": -0.013965890242253448
+            },
+            {
+              "node": "DJ Rewind",
+              "attribution": 0.12251836833815842
+            },
+            {
+              "node": "Future Echoes",
+              "attribution": 0.46727286103388355
+            },
+            {
+              "node": "Temporal Resonance",
+              "attribution": 0.06859848430556756
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0006497095750205158
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": -0.02301477647047315
+            },
+            {
+              "node": "Star Systems",
+              "attribution": -0.16310165276030555
+            },
+            {
+              "node": "Phantom Wraith-Riders",
+              "attribution": -2.586986622827668e-05
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.7656,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "7": {
+    "id": 7,
+    "question": "What is the total number of plays for the most critically appreciated musician in the Crystalline Sound Weaving genre?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Resonant Musicians",
+              "target": "Resonant Society",
+              "attribution": -0.04622996948661427
+            },
+            {
+              "source": "Aethelred",
+              "target": "Crystalline Sound Weaving",
+              "attribution": -0.011241405202753185
+            },
+            {
+              "source": "Crystalline Sound Weaving",
+              "target": "Harmonia",
+              "attribution": 1.004690918668527
+            },
+            {
+              "source": "Ancient Floopy Tongue",
+              "target": "Resonant Musicians",
+              "attribution": 0.028403244251457276
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Resonant Musicians",
+              "attribution": -0.008913362617578498
+            },
+            {
+              "node": "Resonant Society",
+              "attribution": -0.04622996948661427
+            },
+            {
+              "node": "Aethelred",
+              "attribution": -0.011241405202753185
+            },
+            {
+              "node": "Crystalline Sound Weaving",
+              "attribution": 0.49672475673288696
+            },
+            {
+              "node": "Harmonia",
+              "attribution": 1.004690918668527
+            },
+            {
+              "node": "Ancient Floopy Tongue",
+              "attribution": 0.028403244251457276
+            },
+            {
+              "node": "Classical Music",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.9861,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Resonant Musicians",
+              "target": "Resonant Society",
+              "attribution": -0.04622996948661427
+            },
+            {
+              "source": "Aethelred",
+              "target": "Crystalline Sound Weaving",
+              "attribution": -0.011241405202753185
+            },
+            {
+              "source": "Crystalline Sound Weaving",
+              "target": "Harmonia",
+              "attribution": 1.004690918668527
+            },
+            {
+              "source": "Ancient Floopy Tongue",
+              "target": "Resonant Musicians",
+              "attribution": 0.028403244251457276
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Resonant Musicians",
+              "attribution": -0.008913362617578498
+            },
+            {
+              "node": "Resonant Society",
+              "attribution": -0.04622996948661427
+            },
+            {
+              "node": "Aethelred",
+              "attribution": -0.011241405202753185
+            },
+            {
+              "node": "Crystalline Sound Weaving",
+              "attribution": 0.49672475673288696
+            },
+            {
+              "node": "Harmonia",
+              "attribution": 1.004690918668527
+            },
+            {
+              "node": "Ancient Floopy Tongue",
+              "attribution": 0.028403244251457276
+            },
+            {
+              "node": "Classical Music",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.0033,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Resonant Musicians",
+              "target": "Resonant Society",
+              "attribution": -2.2202333843564276e-05
+            },
+            {
+              "source": "Aethelred",
+              "target": "Crystalline Sound Weaving",
+              "attribution": 6.560738124283816e-05
+            },
+            {
+              "source": "Crystalline Sound Weaving",
+              "target": "Harmonia",
+              "attribution": 0.9999681525861219
+            },
+            {
+              "source": "Ancient Floopy Tongue",
+              "target": "Resonant Society",
+              "attribution": 5.4707995931801486e-06
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Aethelred",
+              "attribution": -1.0382606738285336e-05
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Resonant Musicians",
+              "attribution": -2.2202333843564276e-05
+            },
+            {
+              "node": "Resonant Society",
+              "attribution": -8.365767125192063e-06
+            },
+            {
+              "node": "Aethelred",
+              "attribution": 2.761238725227641e-05
+            },
+            {
+              "node": "Crystalline Sound Weaving",
+              "attribution": 0.5000168799836824
+            },
+            {
+              "node": "Harmonia",
+              "attribution": 0.9999681525861219
+            },
+            {
+              "node": "Ancient Floopy Tongue",
+              "attribution": 5.4707995931801486e-06
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": -1.0382606738285336e-05
+            },
+            {
+              "node": "Classical Music",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.4424,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Resonant Musicians",
+              "target": "Resonant Society",
+              "attribution": 3.412638473114459e-07
+            },
+            {
+              "source": "Aethelred",
+              "target": "Crystalline Sound Weaving",
+              "attribution": -4.7395047342815855e-05
+            },
+            {
+              "source": "Crystalline Sound Weaving",
+              "target": "Harmonia",
+              "attribution": 0.9999062060895509
+            },
+            {
+              "source": "Ancient Floopy Tongue",
+              "target": "Aethelred",
+              "attribution": 0.00012588297155117454
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Aethelred",
+              "attribution": 0.00012698082896102394
+            },
+            {
+              "source": "Obsidian-Mesh",
+              "target": "Resonant Musicians",
+              "attribution": 0.00011251807296935636
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Resonant Musicians",
+              "attribution": 5.64296684083339e-05
+            },
+            {
+              "node": "Resonant Society",
+              "attribution": 3.412638473114459e-07
+            },
+            {
+              "node": "Aethelred",
+              "attribution": 6.84895843897942e-05
+            },
+            {
+              "node": "Crystalline Sound Weaving",
+              "attribution": 0.49992940552110404
+            },
+            {
+              "node": "Harmonia",
+              "attribution": 0.9999062060895509
+            },
+            {
+              "node": "Ancient Floopy Tongue",
+              "attribution": 0.00012588297155117454
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.00012698082896102394
+            },
+            {
+              "node": "Obsidian-Mesh",
+              "attribution": 0.00011251807296935636
+            },
+            {
+              "node": "Classical Music",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.7896,
+        "llm_call_count": 16,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "8": {
+    "id": 8,
+    "question": "What kind of energy does the facility hovering the planet Xylos produce?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aegis Station",
+              "target": "Xylos",
+              "attribution": -0.18581012146011588
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Miniature Black Hole",
+              "attribution": -0.10271016145434139
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Containment Fields",
+              "attribution": -0.07984345110845305
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Hawking Radiation",
+              "attribution": -0.4157175200737454
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Crew",
+              "attribution": -0.04955830855859223
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Cutting-Edge Technology",
+              "attribution": -0.3734712907898415
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Orbital Platforms",
+              "attribution": -0.059875758376546136
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Planetary Defense",
+              "attribution": 0.031065725864843484
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Black Hole Containment Technology",
+              "attribution": 0.7389908021685436
+            },
+            {
+              "source": "Helios Array",
+              "target": "Solar Sail",
+              "attribution": 0.10887565329461331
+            },
+            {
+              "source": "Festival of Aerial Drones",
+              "target": "Guardian Orb",
+              "attribution": -0.2810598244558998
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": 0.05126524548720856
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Aegis Station",
+              "attribution": 0.4654535284713533
+            },
+            {
+              "source": "Toy Car",
+              "target": "Containment Fields",
+              "attribution": -0.0853593108307497
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aegis Station",
+              "attribution": -0.0031476555316895137
+            },
+            {
+              "node": "Xylos",
+              "attribution": -0.18581012146011588
+            },
+            {
+              "node": "Miniature Black Hole",
+              "attribution": -0.10271016145434139
+            },
+            {
+              "node": "Containment Fields",
+              "attribution": -0.08260138096960137
+            },
+            {
+              "node": "Hawking Radiation",
+              "attribution": -0.4157175200737454
+            },
+            {
+              "node": "Crew",
+              "attribution": -0.04955830855859223
+            },
+            {
+              "node": "Cutting-Edge Technology",
+              "attribution": -0.3734712907898415
+            },
+            {
+              "node": "Orbital Platforms",
+              "attribution": -0.059875758376546136
+            },
+            {
+              "node": "Planetary Defense",
+              "attribution": 0.031065725864843484
+            },
+            {
+              "node": "Black Hole Containment Technology",
+              "attribution": 0.7389908021685436
+            },
+            {
+              "node": "Helios Array",
+              "attribution": 0.10887565329461331
+            },
+            {
+              "node": "Solar Sail",
+              "attribution": 0.10887565329461331
+            },
+            {
+              "node": "Festival of Aerial Drones",
+              "attribution": -0.2810598244558998
+            },
+            {
+              "node": "Guardian Orb",
+              "attribution": -0.2810598244558998
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": 0.05126524548720856
+            },
+            {
+              "node": "Lumina System",
+              "attribution": 0.05126524548720856
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": 0.4654535284713533
+            },
+            {
+              "node": "Toy Car",
+              "attribution": -0.0853593108307497
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.1386,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aegis Station",
+              "target": "Xylos",
+              "attribution": 0.4082939893076025
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Miniature Black Hole",
+              "attribution": -0.4230334484807866
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Containment Fields",
+              "attribution": 0.21729606469202267
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Hawking Radiation",
+              "attribution": 0.8576405476253092
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Crew",
+              "attribution": 0.43995620247948086
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Cutting-Edge Technology",
+              "attribution": 0.5272199239541526
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Orbital Platforms",
+              "attribution": 0.8662932888918798
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Planetary Defense",
+              "attribution": -1.0656942498987259
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Black Hole Containment Technology",
+              "attribution": -0.0487646967692943
+            },
+            {
+              "source": "Helios Array",
+              "target": "Solar Sail",
+              "attribution": -0.46084451132261384
+            },
+            {
+              "source": "Festival of Aerial Drones",
+              "target": "Guardian Orb",
+              "attribution": 0.48715402234182703
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": -0.8633477500492222
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Containment Fields",
+              "attribution": 0.23640221760930524
+            },
+            {
+              "source": "Toy Car",
+              "target": "Miniature Black Hole",
+              "attribution": -0.07892728734891694
+            },
+            {
+              "source": "Xylotian Years",
+              "target": "Solar Sail",
+              "attribution": -0.43893301808677904
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aegis Station",
+              "attribution": 0.19768973575573787
+            },
+            {
+              "node": "Xylos",
+              "attribution": 0.4082939893076025
+            },
+            {
+              "node": "Miniature Black Hole",
+              "attribution": -0.2509803679148518
+            },
+            {
+              "node": "Containment Fields",
+              "attribution": 0.22684914115066396
+            },
+            {
+              "node": "Hawking Radiation",
+              "attribution": 0.8576405476253092
+            },
+            {
+              "node": "Crew",
+              "attribution": 0.43995620247948086
+            },
+            {
+              "node": "Cutting-Edge Technology",
+              "attribution": 0.5272199239541526
+            },
+            {
+              "node": "Orbital Platforms",
+              "attribution": 0.8662932888918798
+            },
+            {
+              "node": "Planetary Defense",
+              "attribution": -1.0656942498987259
+            },
+            {
+              "node": "Black Hole Containment Technology",
+              "attribution": -0.0487646967692943
+            },
+            {
+              "node": "Helios Array",
+              "attribution": -0.46084451132261384
+            },
+            {
+              "node": "Solar Sail",
+              "attribution": -0.4498887647046964
+            },
+            {
+              "node": "Festival of Aerial Drones",
+              "attribution": 0.48715402234182703
+            },
+            {
+              "node": "Guardian Orb",
+              "attribution": 0.48715402234182703
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": -0.8633477500492222
+            },
+            {
+              "node": "Lumina System",
+              "attribution": -0.8633477500492222
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": 0.23640221760930524
+            },
+            {
+              "node": "Toy Car",
+              "attribution": -0.07892728734891694
+            },
+            {
+              "node": "Xylotian Years",
+              "attribution": -0.43893301808677904
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.4399,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aegis Station",
+              "target": "Xylos",
+              "attribution": -0.1326500554513151
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Miniature Black Hole",
+              "attribution": -0.4126802755095829
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Containment Fields",
+              "attribution": -0.8449901398823482
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Hawking Radiation",
+              "attribution": -0.5340582018567778
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Crew",
+              "attribution": -0.9952868011337745
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Cutting-Edge Technology",
+              "attribution": 0.3324816071410643
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Orbital Platforms",
+              "attribution": 0.4383345002895191
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Planetary Defense",
+              "attribution": -0.841362778079162
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Black Hole Containment Technology",
+              "attribution": -0.8392275922640837
+            },
+            {
+              "source": "Helios Array",
+              "target": "Solar Sail",
+              "attribution": 0.7771784940808825
+            },
+            {
+              "source": "Festival of Aerial Drones",
+              "target": "Guardian Orb",
+              "attribution": 0.202667843817623
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": 0.6614878328582101
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Miniature Black Hole",
+              "attribution": -0.3112273354811741
+            },
+            {
+              "source": "Toy Car",
+              "target": "Lumina Star",
+              "attribution": 0.476718979537811
+            },
+            {
+              "source": "Xylotian Years",
+              "target": "Solar Sail",
+              "attribution": 0.27242139062614806
+            },
+            {
+              "source": "Font of Resonance",
+              "target": "Festival of Aerial Drones",
+              "attribution": 0.15192253185480956
+            },
+            {
+              "source": "Luminian Scouts",
+              "target": "Planetary Defense",
+              "attribution": 0.48663453995097405
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aegis Station",
+              "attribution": -0.4254933040829401
+            },
+            {
+              "node": "Xylos",
+              "attribution": -0.1326500554513151
+            },
+            {
+              "node": "Miniature Black Hole",
+              "attribution": -0.3619538054953785
+            },
+            {
+              "node": "Containment Fields",
+              "attribution": -0.8449901398823482
+            },
+            {
+              "node": "Hawking Radiation",
+              "attribution": -0.5340582018567778
+            },
+            {
+              "node": "Crew",
+              "attribution": -0.9952868011337745
+            },
+            {
+              "node": "Cutting-Edge Technology",
+              "attribution": 0.3324816071410643
+            },
+            {
+              "node": "Orbital Platforms",
+              "attribution": 0.4383345002895191
+            },
+            {
+              "node": "Planetary Defense",
+              "attribution": -0.177364119064094
+            },
+            {
+              "node": "Black Hole Containment Technology",
+              "attribution": -0.8392275922640837
+            },
+            {
+              "node": "Helios Array",
+              "attribution": 0.7771784940808825
+            },
+            {
+              "node": "Solar Sail",
+              "attribution": 0.5247999423535152
+            },
+            {
+              "node": "Festival of Aerial Drones",
+              "attribution": 0.17729518783621628
+            },
+            {
+              "node": "Guardian Orb",
+              "attribution": 0.202667843817623
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": 0.5691034061980106
+            },
+            {
+              "node": "Lumina System",
+              "attribution": 0.6614878328582101
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": -0.3112273354811741
+            },
+            {
+              "node": "Toy Car",
+              "attribution": 0.476718979537811
+            },
+            {
+              "node": "Xylotian Years",
+              "attribution": 0.27242139062614806
+            },
+            {
+              "node": "Font of Resonance",
+              "attribution": 0.15192253185480956
+            },
+            {
+              "node": "Luminian Scouts",
+              "attribution": 0.48663453995097405
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.6567,
+        "llm_call_count": 21,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Aegis Station",
+              "target": "Xylos",
+              "attribution": 0.46606293730341003
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Miniature Black Hole",
+              "attribution": 1.0224190503090513
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Containment Fields",
+              "attribution": 0.5787490321722055
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Hawking Radiation",
+              "attribution": -1.331220371135325
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Crew",
+              "attribution": 0.8875760527447858
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Cutting-Edge Technology",
+              "attribution": 0.6463695501774013
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Orbital Platforms",
+              "attribution": 0.42116605192122536
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Planetary Defense",
+              "attribution": -0.4435086023071157
+            },
+            {
+              "source": "Aegis Station",
+              "target": "Black Hole Containment Technology",
+              "attribution": -0.8647593319039618
+            },
+            {
+              "source": "Helios Array",
+              "target": "Solar Sail",
+              "attribution": -2.736067125544894
+            },
+            {
+              "source": "Festival of Aerial Drones",
+              "target": "Guardian Orb",
+              "attribution": -1.0223847414141083
+            },
+            {
+              "source": "Lumina Star",
+              "target": "Lumina System",
+              "attribution": 3.156297498928694e-16
+            },
+            {
+              "source": "Sky-Jousting Match",
+              "target": "Solar Sail",
+              "attribution": -0.44377122837652344
+            },
+            {
+              "source": "Toy Car",
+              "target": "Festival of Aerial Drones",
+              "attribution": -0.11228796965803238
+            },
+            {
+              "source": "Xylotian Years",
+              "target": "Planetary Defense",
+              "attribution": 0.9996524780172945
+            },
+            {
+              "source": "Font of Resonance",
+              "target": "Aegis Station",
+              "attribution": -0.5114764240573328
+            },
+            {
+              "source": "Luminian Scouts",
+              "target": "Xylos",
+              "attribution": 2.4207743141807017
+            },
+            {
+              "source": "Lightning Essence",
+              "target": "Aegis Station",
+              "attribution": 0.4211660519212239
+            },
+            {
+              "source": "Chronos Gate",
+              "target": "Xylos",
+              "attribution": 0.578875883034434
+            },
+            {
+              "source": "Floofel-Dust",
+              "target": "Planetary Defense",
+              "attribution": -0.8421457807474098
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Aegis Station",
+              "attribution": 0.11750399974050617
+            },
+            {
+              "node": "Xylos",
+              "attribution": 1.1552377115061818
+            },
+            {
+              "node": "Miniature Black Hole",
+              "attribution": 1.0224190503090513
+            },
+            {
+              "node": "Containment Fields",
+              "attribution": 0.5787490321722055
+            },
+            {
+              "node": "Hawking Radiation",
+              "attribution": -1.331220371135325
+            },
+            {
+              "node": "Crew",
+              "attribution": 0.8875760527447858
+            },
+            {
+              "node": "Cutting-Edge Technology",
+              "attribution": 0.6463695501774013
+            },
+            {
+              "node": "Orbital Platforms",
+              "attribution": 0.42116605192122536
+            },
+            {
+              "node": "Planetary Defense",
+              "attribution": -0.09533396834574363
+            },
+            {
+              "node": "Black Hole Containment Technology",
+              "attribution": -0.8647593319039618
+            },
+            {
+              "node": "Helios Array",
+              "attribution": -2.736067125544894
+            },
+            {
+              "node": "Solar Sail",
+              "attribution": -1.5899191769607086
+            },
+            {
+              "node": "Festival of Aerial Drones",
+              "attribution": -0.5673363555360703
+            },
+            {
+              "node": "Guardian Orb",
+              "attribution": -1.0223847414141083
+            },
+            {
+              "node": "Lumina Star",
+              "attribution": 3.156297498928694e-16
+            },
+            {
+              "node": "Lumina System",
+              "attribution": 3.156297498928694e-16
+            },
+            {
+              "node": "Sky-Jousting Match",
+              "attribution": -0.44377122837652344
+            },
+            {
+              "node": "Toy Car",
+              "attribution": -0.11228796965803238
+            },
+            {
+              "node": "Xylotian Years",
+              "attribution": 0.9996524780172945
+            },
+            {
+              "node": "Font of Resonance",
+              "attribution": -0.5114764240573328
+            },
+            {
+              "node": "Luminian Scouts",
+              "attribution": 2.4207743141807017
+            },
+            {
+              "node": "Lightning Essence",
+              "attribution": 0.4211660519212239
+            },
+            {
+              "node": "Chronos Gate",
+              "attribution": 0.578875883034434
+            },
+            {
+              "node": "Floofel-Dust",
+              "attribution": -0.8421457807474098
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 13.2179,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "9": {
+    "id": 9,
+    "question": "What is the primary defense of the creatures populating the Subterranean Caves?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Stone-Shells",
+              "target": "Subterranean Caves",
+              "attribution": 0.6558368564858236
+            },
+            {
+              "source": "Subterranean Caves",
+              "target": "Unique Fauna",
+              "attribution": 0.23041150370298338
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Mineral Deposits",
+              "attribution": 0.20434416568390185
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Subterranean Caves",
+              "attribution": -0.014754180540597846
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Mineral Deposits",
+              "attribution": 0.020652755359582775
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Stone-Shells",
+              "attribution": 0.6558368564858236
+            },
+            {
+              "node": "Subterranean Caves",
+              "attribution": 0.29049805988273636
+            },
+            {
+              "node": "Unique Fauna",
+              "attribution": 0.23041150370298338
+            },
+            {
+              "node": "Glow-Worms",
+              "attribution": 0.094794992571652
+            },
+            {
+              "node": "Mineral Deposits",
+              "attribution": 0.11249846052174231
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.020652755359582775
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 13.2637,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Stone-Shells",
+              "target": "Subterranean Caves",
+              "attribution": 0.6558368564858236
+            },
+            {
+              "source": "Subterranean Caves",
+              "target": "Unique Fauna",
+              "attribution": 0.23041150370298338
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Mineral Deposits",
+              "attribution": 0.20434416568390185
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Subterranean Caves",
+              "attribution": -0.014754180540597846
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Mineral Deposits",
+              "attribution": 0.020652755359582775
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Stone-Shells",
+              "attribution": 0.6558368564858236
+            },
+            {
+              "node": "Subterranean Caves",
+              "attribution": 0.29049805988273636
+            },
+            {
+              "node": "Unique Fauna",
+              "attribution": 0.23041150370298338
+            },
+            {
+              "node": "Glow-Worms",
+              "attribution": 0.094794992571652
+            },
+            {
+              "node": "Mineral Deposits",
+              "attribution": 0.11249846052174231
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.020652755359582775
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 13.0478,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Stone-Shells",
+              "target": "Subterranean Caves",
+              "attribution": -0.1813683097285224
+            },
+            {
+              "source": "Subterranean Caves",
+              "target": "Unique Fauna",
+              "attribution": -0.13999177716139244
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Mineral Deposits",
+              "attribution": 0.142173803348168
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Subterranean Caves",
+              "attribution": 0.11797159425016115
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Unique Fauna",
+              "attribution": 0.07433258647247122
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Stone-Shells",
+              "attribution": 0.4895655711706248
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Stone-Shells",
+              "attribution": 0.15409863072105123
+            },
+            {
+              "node": "Subterranean Caves",
+              "attribution": -0.06779616421325121
+            },
+            {
+              "node": "Unique Fauna",
+              "attribution": -0.03282959534446061
+            },
+            {
+              "node": "Glow-Worms",
+              "attribution": 0.13007269879916458
+            },
+            {
+              "node": "Mineral Deposits",
+              "attribution": 0.142173803348168
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.07433258647247122
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.4895655711706248
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.1423,
+        "llm_call_count": 16,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Stone-Shells",
+              "target": "Subterranean Caves",
+              "attribution": -0.18284169940305506
+            },
+            {
+              "source": "Subterranean Caves",
+              "target": "Unique Fauna",
+              "attribution": -0.14034456785351157
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Mineral Deposits",
+              "attribution": 0.13868227230391506
+            },
+            {
+              "source": "Glow-Worms",
+              "target": "Subterranean Caves",
+              "attribution": 0.11675407537355886
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Unique Fauna",
+              "attribution": 0.07583472280201121
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Stone-Shells",
+              "attribution": 0.4873558549939673
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Stone-Shells",
+              "attribution": 0.1522570777954561
+            },
+            {
+              "node": "Subterranean Caves",
+              "attribution": -0.06881073062766925
+            },
+            {
+              "node": "Unique Fauna",
+              "attribution": -0.03225492252575018
+            },
+            {
+              "node": "Glow-Worms",
+              "attribution": 0.12771817383873696
+            },
+            {
+              "node": "Mineral Deposits",
+              "attribution": 0.13868227230391506
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.07583472280201121
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.4873558549939673
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.9082,
+        "llm_call_count": 16,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "10": {
+    "id": 10,
+    "question": "What is the composition of the natural wonder of planet Ntunu?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Floating Islands of Aeridia",
+              "target": "Ntulu",
+              "attribution": 0.8577433588579496
+            },
+            {
+              "source": "Florpion",
+              "target": "Kryponite Particles",
+              "attribution": -0.31005170072484706
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Day",
+              "attribution": 0.13223336367941504
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Continents",
+              "attribution": -0.27204588983939304
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpionians",
+              "attribution": 0.2854416793402768
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Oceans",
+              "attribution": 0.13205530884390804
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Gravity",
+              "attribution": -0.826062630221567
+            },
+            {
+              "source": "Aethelia",
+              "target": "K'tharr System",
+              "attribution": 0.9623676184070266
+            },
+            {
+              "source": "Chartreuse Sky",
+              "target": "Florpion",
+              "attribution": -0.03217205695508566
+            },
+            {
+              "source": "First Florpionian City",
+              "target": "Florpion",
+              "attribution": -0.3462616495540535
+            },
+            {
+              "source": "Null Pass",
+              "target": "Floating Islands of Aeridia",
+              "attribution": -0.08242083305098748
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Floating Islands of Aeridia",
+              "attribution": 0.3876612629034811
+            },
+            {
+              "node": "Ntulu",
+              "attribution": 0.8577433588579496
+            },
+            {
+              "node": "Florpion",
+              "attribution": -0.1546079469289183
+            },
+            {
+              "node": "Kryponite Particles",
+              "attribution": -0.31005170072484706
+            },
+            {
+              "node": "Florpion Day",
+              "attribution": 0.13223336367941504
+            },
+            {
+              "node": "Florpion Continents",
+              "attribution": -0.27204588983939304
+            },
+            {
+              "node": "Florpionians",
+              "attribution": 0.2854416793402768
+            },
+            {
+              "node": "Florpion Oceans",
+              "attribution": 0.13205530884390804
+            },
+            {
+              "node": "Florpion Gravity",
+              "attribution": -0.826062630221567
+            },
+            {
+              "node": "Aethelia",
+              "attribution": 0.9623676184070266
+            },
+            {
+              "node": "K'tharr System",
+              "attribution": 0.9623676184070266
+            },
+            {
+              "node": "Chartreuse Sky",
+              "attribution": -0.03217205695508566
+            },
+            {
+              "node": "First Florpionian City",
+              "attribution": -0.3462616495540535
+            },
+            {
+              "node": "Null Pass",
+              "attribution": -0.08242083305098748
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.458,
+        "llm_call_count": 18,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Floating Islands of Aeridia",
+              "target": "Ntulu",
+              "attribution": 0.999978021147722
+            },
+            {
+              "source": "Florpion",
+              "target": "Kryponite Particles",
+              "attribution": 4.7103150559984726e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Day",
+              "attribution": 2.7330069711453232e-06
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Continents",
+              "attribution": 3.079108527920608e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpionians",
+              "attribution": -3.2375926923265784e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Oceans",
+              "attribution": -1.0130249507544706e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Gravity",
+              "attribution": -5.092449161604717e-06
+            },
+            {
+              "source": "Aethelia",
+              "target": "K'tharr System",
+              "attribution": 1.5501240970641732e-05
+            },
+            {
+              "source": "Chartreuse Sky",
+              "target": "Florpion",
+              "attribution": 3.928022085171476e-05
+            },
+            {
+              "source": "First Florpionian City",
+              "target": "Florpion",
+              "attribution": -6.093685866473092e-05
+            },
+            {
+              "source": "Null Pass",
+              "target": "Florpion Gravity",
+              "attribution": 8.493993932252293e-06
+            },
+            {
+              "source": "School",
+              "target": "Aethelia",
+              "attribution": -1.8324587222978315e-05
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Florpion",
+              "attribution": -4.4386101366532354e-05
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Floating Islands of Aeridia",
+              "attribution": 0.999978021147722
+            },
+            {
+              "node": "Ntulu",
+              "attribution": 0.999978021147722
+            },
+            {
+              "node": "Florpion",
+              "attribution": -3.668235773514177e-06
+            },
+            {
+              "node": "Kryponite Particles",
+              "attribution": 4.7103150559984726e-05
+            },
+            {
+              "node": "Florpion Day",
+              "attribution": 2.7330069711453232e-06
+            },
+            {
+              "node": "Florpion Continents",
+              "attribution": 3.079108527920608e-05
+            },
+            {
+              "node": "Florpionians",
+              "attribution": -3.2375926923265784e-05
+            },
+            {
+              "node": "Florpion Oceans",
+              "attribution": -1.0130249507544706e-05
+            },
+            {
+              "node": "Florpion Gravity",
+              "attribution": 1.700772385323788e-06
+            },
+            {
+              "node": "Aethelia",
+              "attribution": -1.4116731261682916e-06
+            },
+            {
+              "node": "K'tharr System",
+              "attribution": 1.5501240970641732e-05
+            },
+            {
+              "node": "Chartreuse Sky",
+              "attribution": 3.928022085171476e-05
+            },
+            {
+              "node": "First Florpionian City",
+              "attribution": -6.093685866473092e-05
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 8.493993932252293e-06
+            },
+            {
+              "node": "School",
+              "attribution": -1.8324587222978315e-05
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": -4.4386101366532354e-05
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.0494,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Floating Islands of Aeridia",
+              "target": "Ntulu",
+              "attribution": 0.9999691602306069
+            },
+            {
+              "source": "Florpion",
+              "target": "Kryponite Particles",
+              "attribution": 4.63810655738004e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Day",
+              "attribution": 5.504378510040854e-06
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Continents",
+              "attribution": 3.641513461033139e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpionians",
+              "attribution": -1.7069247583824836e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Oceans",
+              "attribution": -4.1145146989871304e-05
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Gravity",
+              "attribution": -5.952160424106188e-05
+            },
+            {
+              "source": "Aethelia",
+              "target": "K'tharr System",
+              "attribution": 3.2892176879481124e-05
+            },
+            {
+              "source": "Chartreuse Sky",
+              "target": "Florpion",
+              "attribution": -4.856821412349938e-07
+            },
+            {
+              "source": "First Florpionian City",
+              "target": "Florpion",
+              "attribution": -3.690219672994281e-05
+            },
+            {
+              "source": "Null Pass",
+              "target": "K'tharr System",
+              "attribution": 1.7995312906368157e-05
+            },
+            {
+              "source": "School",
+              "target": "Aethelia",
+              "attribution": 9.910531572326079e-05
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Florpion Gravity",
+              "attribution": -2.3309686185175395e-05
+            },
+            {
+              "source": "Ancient Carvings",
+              "target": "Florpion Oceans",
+              "attribution": -2.0199460683569266e-05
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Floating Islands of Aeridia",
+              "attribution": 0.9999691602306069
+            },
+            {
+              "node": "Ntulu",
+              "attribution": 0.9999691602306069
+            },
+            {
+              "node": "Florpion",
+              "attribution": -8.352912373970397e-06
+            },
+            {
+              "node": "Kryponite Particles",
+              "attribution": 4.63810655738004e-05
+            },
+            {
+              "node": "Florpion Day",
+              "attribution": 5.504378510040854e-06
+            },
+            {
+              "node": "Florpion Continents",
+              "attribution": 3.641513461033139e-05
+            },
+            {
+              "node": "Florpionians",
+              "attribution": -1.7069247583824836e-05
+            },
+            {
+              "node": "Florpion Oceans",
+              "attribution": -3.067230383672028e-05
+            },
+            {
+              "node": "Florpion Gravity",
+              "attribution": -4.141564521311863e-05
+            },
+            {
+              "node": "Aethelia",
+              "attribution": 6.599874630137096e-05
+            },
+            {
+              "node": "K'tharr System",
+              "attribution": 2.544374489292464e-05
+            },
+            {
+              "node": "Chartreuse Sky",
+              "attribution": -4.856821412349938e-07
+            },
+            {
+              "node": "First Florpionian City",
+              "attribution": -3.690219672994281e-05
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 1.7995312906368157e-05
+            },
+            {
+              "node": "School",
+              "attribution": 9.910531572326079e-05
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": -2.3309686185175395e-05
+            },
+            {
+              "node": "Ancient Carvings",
+              "attribution": -2.0199460683569266e-05
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.979,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Floating Islands of Aeridia",
+              "target": "Ntulu",
+              "attribution": 0.8284978192988631
+            },
+            {
+              "source": "Florpion",
+              "target": "Kryponite Particles",
+              "attribution": 0.130940924873582
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Day",
+              "attribution": -0.026013664888652022
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Continents",
+              "attribution": 0.23979375152907198
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpionians",
+              "attribution": -0.22427886267967567
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Oceans",
+              "attribution": 0.19461891730596503
+            },
+            {
+              "source": "Florpion",
+              "target": "Florpion Gravity",
+              "attribution": 0.2027161982304364
+            },
+            {
+              "source": "Aethelia",
+              "target": "K'tharr System",
+              "attribution": -0.07724077415656834
+            },
+            {
+              "source": "Chartreuse Sky",
+              "target": "Florpion",
+              "attribution": -0.2283210304834414
+            },
+            {
+              "source": "First Florpionian City",
+              "target": "Florpion",
+              "attribution": -0.057431668815249456
+            },
+            {
+              "source": "Null Pass",
+              "target": "Aethelia",
+              "attribution": -0.16740288226234612
+            },
+            {
+              "source": "School",
+              "target": "Florpion Gravity",
+              "attribution": 0.18352878000833037
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Florpion Oceans",
+              "attribution": -0.09179343730256873
+            },
+            {
+              "source": "Ancient Carvings",
+              "target": "Florpion Continents",
+              "attribution": -0.04285296840339085
+            },
+            {
+              "source": "Volcanic Vents",
+              "target": "Florpionians",
+              "attribution": 0.11126572135430067
+            },
+            {
+              "source": "Shield Generators",
+              "target": "Ntulu",
+              "attribution": -0.09285531404677508
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Floating Islands of Aeridia",
+              "attribution": 0.8284978192988631
+            },
+            {
+              "node": "Ntulu",
+              "attribution": 0.36782125262604404
+            },
+            {
+              "node": "Florpion",
+              "attribution": 0.02900307063400461
+            },
+            {
+              "node": "Kryponite Particles",
+              "attribution": 0.130940924873582
+            },
+            {
+              "node": "Florpion Day",
+              "attribution": -0.026013664888652022
+            },
+            {
+              "node": "Florpion Continents",
+              "attribution": 0.09847039156284057
+            },
+            {
+              "node": "Florpionians",
+              "attribution": -0.0565065706626875
+            },
+            {
+              "node": "Florpion Oceans",
+              "attribution": 0.051412740001698154
+            },
+            {
+              "node": "Florpion Gravity",
+              "attribution": 0.1931224891193834
+            },
+            {
+              "node": "Aethelia",
+              "attribution": -0.12232182820945722
+            },
+            {
+              "node": "K'tharr System",
+              "attribution": -0.07724077415656834
+            },
+            {
+              "node": "Chartreuse Sky",
+              "attribution": -0.2283210304834414
+            },
+            {
+              "node": "First Florpionian City",
+              "attribution": -0.057431668815249456
+            },
+            {
+              "node": "Null Pass",
+              "attribution": -0.16740288226234612
+            },
+            {
+              "node": "School",
+              "attribution": 0.18352878000833037
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": -0.09179343730256873
+            },
+            {
+              "node": "Ancient Carvings",
+              "attribution": -0.04285296840339085
+            },
+            {
+              "node": "Volcanic Vents",
+              "attribution": 0.11126572135430067
+            },
+            {
+              "node": "Shield Generators",
+              "attribution": -0.09285531404677508
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.1197,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "11": {
+    "id": 11,
+    "question": "What is the primary ingredient of the most famous healing potion?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Healing Potion",
+              "target": "Sunpetal Balm",
+              "attribution": 0.2953045279320019
+            },
+            {
+              "source": "Moon-Dew Salve",
+              "target": "Silver-Lotus",
+              "attribution": 0.020947442789496243
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Healing Potion",
+              "attribution": 0.01606736012647521
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Healing Potion",
+              "attribution": 0.15568594402923855
+            },
+            {
+              "node": "Sunpetal Balm",
+              "attribution": 0.2953045279320019
+            },
+            {
+              "node": "Moon-Dew Salve",
+              "attribution": 0.020947442789496243
+            },
+            {
+              "node": "Silver-Lotus",
+              "attribution": 0.020947442789496243
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.01606736012647521
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.7437,
+        "llm_call_count": 16,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Healing Potion",
+              "target": "Sunpetal Balm",
+              "attribution": 0.3911486406551217
+            },
+            {
+              "source": "Moon-Dew Salve",
+              "target": "Silver-Lotus",
+              "attribution": -0.03859230376465021
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Healing Potion",
+              "attribution": -0.03991553503808652
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Healing Potion",
+              "attribution": 0.1756165528085176
+            },
+            {
+              "node": "Sunpetal Balm",
+              "attribution": 0.3911486406551217
+            },
+            {
+              "node": "Moon-Dew Salve",
+              "attribution": -0.03859230376465021
+            },
+            {
+              "node": "Silver-Lotus",
+              "attribution": -0.03859230376465021
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": -0.03991553503808652
+            }
+          ],
+          "noise_robust": false,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.3572,
+        "llm_call_count": 16,
+        "noise_robust": false,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Healing Potion",
+              "target": "Sunpetal Balm",
+              "attribution": 0.3911486406551217
+            },
+            {
+              "source": "Moon-Dew Salve",
+              "target": "Silver-Lotus",
+              "attribution": -0.03859230376465021
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Healing Potion",
+              "attribution": -0.03991553503808652
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Healing Potion",
+              "attribution": 0.1756165528085176
+            },
+            {
+              "node": "Sunpetal Balm",
+              "attribution": 0.3911486406551217
+            },
+            {
+              "node": "Moon-Dew Salve",
+              "attribution": -0.03859230376465021
+            },
+            {
+              "node": "Silver-Lotus",
+              "attribution": -0.03859230376465021
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": -0.03991553503808652
+            }
+          ],
+          "noise_robust": false,
+          "degenerate": false
+        },
+        "elapsed_seconds": 10.3243,
+        "llm_call_count": 16,
+        "noise_robust": false,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Healing Potion",
+              "target": "Sunpetal Balm",
+              "attribution": 0.33132271315773376
+            },
+            {
+              "source": "Moon-Dew Salve",
+              "target": "Silver-Lotus",
+              "attribution": -0.00017791813146972194
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Silver-Lotus",
+              "attribution": 0.0017576078265005254
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Moon-Dew Salve",
+              "attribution": 0.001548762622792973
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Healing Potion",
+              "attribution": 0.33132271315773376
+            },
+            {
+              "node": "Sunpetal Balm",
+              "attribution": 0.33132271315773376
+            },
+            {
+              "node": "Moon-Dew Salve",
+              "attribution": 0.0006854222456616256
+            },
+            {
+              "node": "Silver-Lotus",
+              "attribution": 0.0007898448475154017
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0017576078265005254
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.001548762622792973
+            }
+          ],
+          "noise_robust": false,
+          "degenerate": false
+        },
+        "elapsed_seconds": 11.3167,
+        "llm_call_count": 19,
+        "noise_robust": false,
+        "degenerate": false
+      }
+    ]
+  },
+  "12": {
+    "id": 12,
+    "question": "What defensive ability is possessed by the strongest creature found in Bioluminescent Forest?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Thorned Crawler",
+              "attribution": 0.3141099686997558
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Fauna",
+              "attribution": 0.023199313026760204
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Hidden Valley",
+              "attribution": 0.11425564977204247
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phase-Lurker",
+              "attribution": 0.24029239763993107
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Protective Gear",
+              "attribution": 0.35991953485219635
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phosphorescent Fungi",
+              "attribution": -0.2231999802606794
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Flora",
+              "attribution": -0.4306296087604905
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Shimmer-Moth",
+              "attribution": 0.2905857230570541
+            },
+            {
+              "source": "Null Pass",
+              "target": "Glowing Fauna",
+              "attribution": 0.1537721694293413
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Bioluminescent Forest",
+              "attribution": 0.08606662475332126
+            },
+            {
+              "node": "Thorned Crawler",
+              "attribution": 0.3141099686997558
+            },
+            {
+              "node": "Glowing Fauna",
+              "attribution": 0.08848574122805075
+            },
+            {
+              "node": "Hidden Valley",
+              "attribution": 0.11425564977204247
+            },
+            {
+              "node": "Phase-Lurker",
+              "attribution": 0.24029239763993107
+            },
+            {
+              "node": "Protective Gear",
+              "attribution": 0.35991953485219635
+            },
+            {
+              "node": "Phosphorescent Fungi",
+              "attribution": -0.2231999802606794
+            },
+            {
+              "node": "Glowing Flora",
+              "attribution": -0.4306296087604905
+            },
+            {
+              "node": "Shimmer-Moth",
+              "attribution": 0.2905857230570541
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 0.1537721694293413
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 13.2979,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Thorned Crawler",
+              "attribution": 0.03665114933497974
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Fauna",
+              "attribution": 0.1035763395810376
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Hidden Valley",
+              "attribution": -0.019351863199907823
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phase-Lurker",
+              "attribution": 0.14778411359634924
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Protective Gear",
+              "attribution": -0.08779462670871774
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phosphorescent Fungi",
+              "attribution": 0.014664523048461256
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Flora",
+              "attribution": 0.030671944997055976
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Shimmer-Moth",
+              "attribution": 0.1689926634309031
+            },
+            {
+              "source": "Null Pass",
+              "target": "Bioluminescent Forest",
+              "attribution": 0.026625482258370112
+            },
+            {
+              "source": "School",
+              "target": "Hidden Valley",
+              "attribution": -0.00450203037838222
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Bioluminescent Forest",
+              "attribution": 0.04686885848205905
+            },
+            {
+              "node": "Thorned Crawler",
+              "attribution": 0.03665114933497974
+            },
+            {
+              "node": "Glowing Fauna",
+              "attribution": 0.1035763395810376
+            },
+            {
+              "node": "Hidden Valley",
+              "attribution": -0.011926946789145021
+            },
+            {
+              "node": "Phase-Lurker",
+              "attribution": 0.14778411359634924
+            },
+            {
+              "node": "Protective Gear",
+              "attribution": -0.08779462670871774
+            },
+            {
+              "node": "Phosphorescent Fungi",
+              "attribution": 0.014664523048461256
+            },
+            {
+              "node": "Glowing Flora",
+              "attribution": 0.030671944997055976
+            },
+            {
+              "node": "Shimmer-Moth",
+              "attribution": 0.1689926634309031
+            },
+            {
+              "node": "Null Pass",
+              "attribution": 0.026625482258370112
+            },
+            {
+              "node": "School",
+              "attribution": -0.00450203037838222
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 14.18,
+        "llm_call_count": 22,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Thorned Crawler",
+              "attribution": 0.11851593781173143
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Fauna",
+              "attribution": 0.11603350420965367
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Hidden Valley",
+              "attribution": 0.1498099577825966
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phase-Lurker",
+              "attribution": 0.23678960015618516
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Protective Gear",
+              "attribution": -0.15631297501034952
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phosphorescent Fungi",
+              "attribution": -0.2984631194077634
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Flora",
+              "attribution": -0.321365441973348
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Shimmer-Moth",
+              "attribution": 0.012374645448151114
+            },
+            {
+              "source": "Null Pass",
+              "target": "Hidden Valley",
+              "attribution": -0.1635623644382544
+            },
+            {
+              "source": "School",
+              "target": "Thorned Crawler",
+              "attribution": 0.624398404375303
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Glowing Fauna",
+              "attribution": -0.06260000601751657
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Bioluminescent Forest",
+              "attribution": -0.017827236372892852
+            },
+            {
+              "node": "Thorned Crawler",
+              "attribution": 0.3714571710935172
+            },
+            {
+              "node": "Glowing Fauna",
+              "attribution": 0.026716749096068547
+            },
+            {
+              "node": "Hidden Valley",
+              "attribution": -0.0068762033278289
+            },
+            {
+              "node": "Phase-Lurker",
+              "attribution": 0.23678960015618516
+            },
+            {
+              "node": "Protective Gear",
+              "attribution": -0.15631297501034952
+            },
+            {
+              "node": "Phosphorescent Fungi",
+              "attribution": -0.2984631194077634
+            },
+            {
+              "node": "Glowing Flora",
+              "attribution": -0.321365441973348
+            },
+            {
+              "node": "Shimmer-Moth",
+              "attribution": 0.012374645448151114
+            },
+            {
+              "node": "Null Pass",
+              "attribution": -0.1635623644382544
+            },
+            {
+              "node": "School",
+              "attribution": 0.624398404375303
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": -0.06260000601751657
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.114,
+        "llm_call_count": 18,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Thorned Crawler",
+              "attribution": -0.1271234899882274
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Fauna",
+              "attribution": 0.7806718308823175
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Hidden Valley",
+              "attribution": 0.15496172575773975
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phase-Lurker",
+              "attribution": 0.4388617121727536
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Protective Gear",
+              "attribution": -0.0765782465562131
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Phosphorescent Fungi",
+              "attribution": -0.08428947387082884
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Glowing Flora",
+              "attribution": -0.3840598772381281
+            },
+            {
+              "source": "Bioluminescent Forest",
+              "target": "Shimmer-Moth",
+              "attribution": -0.10881302282194717
+            },
+            {
+              "source": "Null Pass",
+              "target": "Hidden Valley",
+              "attribution": -0.11171899451187638
+            },
+            {
+              "source": "School",
+              "target": "Thorned Crawler",
+              "attribution": -0.25317396545594384
+            },
+            {
+              "source": "Deep-Space Telescopes",
+              "target": "Glowing Fauna",
+              "attribution": 0.14309468638998962
+            },
+            {
+              "source": "Plorgonian Celebrations",
+              "target": "Shimmer-Moth",
+              "attribution": 0.17102294084223338
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Bioluminescent Forest",
+              "attribution": 0.07420389479218328
+            },
+            {
+              "node": "Thorned Crawler",
+              "attribution": -0.19014872772208563
+            },
+            {
+              "node": "Glowing Fauna",
+              "attribution": 0.46188325863615354
+            },
+            {
+              "node": "Hidden Valley",
+              "attribution": 0.02162136562293169
+            },
+            {
+              "node": "Phase-Lurker",
+              "attribution": 0.4388617121727536
+            },
+            {
+              "node": "Protective Gear",
+              "attribution": -0.0765782465562131
+            },
+            {
+              "node": "Phosphorescent Fungi",
+              "attribution": -0.08428947387082884
+            },
+            {
+              "node": "Glowing Flora",
+              "attribution": -0.3840598772381281
+            },
+            {
+              "node": "Shimmer-Moth",
+              "attribution": 0.031104959010143103
+            },
+            {
+              "node": "Null Pass",
+              "attribution": -0.11171899451187638
+            },
+            {
+              "node": "School",
+              "attribution": -0.25317396545594384
+            },
+            {
+              "node": "Deep-Space Telescopes",
+              "attribution": 0.14309468638998962
+            },
+            {
+              "node": "Plorgonian Celebrations",
+              "attribution": 0.17102294084223338
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 12.9012,
+        "llm_call_count": 20,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  },
+  "13": {
+    "id": 13,
+    "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest?",
+    "benchmark": [
+      {
+        "noise_pct": 0.1,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Ancient Trees",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": 0.0
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.5699,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.2,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Ancient Trees",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": 0.0
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.5316,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.3,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": 0.0
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.4597,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      },
+      {
+        "noise_pct": 0.5,
+        "result": {
+          "edge_attributions": [
+            {
+              "source": "Ancient Trees",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Ancient Tree-Spirits",
+              "target": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "source": "Aethelgard",
+              "target": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "source": "Chosen Zoodle",
+              "target": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "source": "Pathfinder Helm",
+              "target": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            }
+          ],
+          "node_attributions": [
+            {
+              "node": "Ancient Trees",
+              "attribution": 0.0
+            },
+            {
+              "node": "Elderwood Forest",
+              "attribution": 0.0
+            },
+            {
+              "node": "Ancient Tree-Spirits",
+              "attribution": 0.0
+            },
+            {
+              "node": "Verdant Forests",
+              "attribution": 0.0
+            },
+            {
+              "node": "Aethelgard",
+              "attribution": 0.0
+            },
+            {
+              "node": "Chosen Zoodle",
+              "attribution": 0.0
+            },
+            {
+              "node": "Pathfinder Helm",
+              "attribution": 0.0
+            }
+          ],
+          "noise_robust": true,
+          "degenerate": false
+        },
+        "elapsed_seconds": 7.3673,
+        "llm_call_count": 19,
+        "noise_robust": true,
+        "degenerate": false
+      }
+    ]
+  }
+}
