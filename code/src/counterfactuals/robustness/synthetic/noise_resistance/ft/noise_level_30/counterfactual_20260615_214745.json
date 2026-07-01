@@ -1,0 +1,353 @@
+{
+  "question": "What are the two key functions of 'Symbiotic Spores' in Xylotian terraforming pods?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Xylotian Terraforming Pods"
+    ],
+    [
+      "delete_edge",
+      [
+        "Symbiotic Spores",
+        "Xylotian Flora Seeds"
+      ]
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "'Symbiotic Spores' in Xylotian terraforming pods first break down hostile soil into a nutrient-rich substrate and then release Xylotian flora seeds for atmospheric oxygenation.",
+    "original": "Symbiotic Spores break down hostile soil and release Xylotian flora seeds to begin atmospheric oxygenation.",
+    "perturbed": "Symbiotic Spores are genetically engineered organisms tasked with breaking down hostile soil and releasing Xylotian flora seeds, and the process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+    "similarity": 0.774941
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Corn"
+      ],
+      [
+        "add_edge",
+        [
+          "Corn",
+          "Symbiotic Spores"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+          "keywords": "governance,laws",
+          "source_id": "chunk-856633022d5e5030b7095161d9c2ded2",
+          "file_path": "unknown_source",
+          "created_at": 1776372371,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Writer"
+      ],
+      [
+        "add_edge",
+        [
+          "Writer",
+          "Impact-Resistant Ceramite"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+          "keywords": "concentration,technique",
+          "source_id": "chunk-2887778a6a2df3dfa6983170922380e7",
+          "file_path": "unknown_source",
+          "created_at": 1776368861,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Symbiotic Spores",
+        "type": "creature",
+        "description": "Symbiotic Spores are genetically engineered organisms tasked with breaking down hostile soil and releasing Xylotian flora seeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Terraforming Pods",
+        "type": "artifact",
+        "description": "Xylotian terraforming pods are devices used to transform hostile exoplanet environments into habitable ones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Years",
+        "type": "concept",
+        "description": "Xylotian years are the time units used to measure the duration of the terraforming process.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Flora Seeds",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The success rate of Xylotian terraforming efforts has been steadily increasing due to the use of Symbiotic Spores.<SEP>Each terraforming pod contains enough Symbiotic Spores to initiate a small, localized ecosystem.<SEP>Xylotian terraforming pods utilize Symbiotic Spores to break down hostile soil.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Years",
+        "keywords": "",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Flora Seeds",
+        "keywords": "",
+        "description": "Symbiotic Spores release Xylotian flora seeds to begin atmospheric oxygenation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "Xylotian terraforming pods are launched from Xylos towards potentially habitable exoplanets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Symbiotic Spores",
+        "keywords": "",
+        "description": "Deep-Space Telescopes help identify terraforming candidates for Symbiotic Spores to transform.",
+        "weight": 0.0
+      },
+      {
+        "src": "Impact-Resistant Ceramite",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Symbiotic Spores",
+        "type": "creature",
+        "description": "Symbiotic Spores are genetically engineered organisms tasked with breaking down hostile soil and releasing Xylotian flora seeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Years",
+        "type": "concept",
+        "description": "Xylotian years are the time units used to measure the duration of the terraforming process.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Corn",
+        "type": "",
+        "description": "Corn is grown by the farmer in the field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Writer",
+        "type": "",
+        "description": "The writer creates stories.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Years",
+        "keywords": "",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Symbiotic Spores",
+        "keywords": "",
+        "description": "Deep-Space Telescopes help identify terraforming candidates for Symbiotic Spores to transform.",
+        "weight": 0.0
+      },
+      {
+        "src": "Corn",
+        "tgt": "Symbiotic Spores",
+        "keywords": "governance,laws",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "weight": 1.0
+      },
+      {
+        "src": "Writer",
+        "tgt": "Impact-Resistant Ceramite",
+        "keywords": "concentration,technique",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Symbiotic Spores",
+        "type": "creature",
+        "description": "Symbiotic Spores are genetically engineered organisms tasked with breaking down hostile soil and releasing Xylotian flora seeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Terraforming Pods",
+        "type": "artifact",
+        "description": "Xylotian terraforming pods are devices used to transform hostile exoplanet environments into habitable ones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Years",
+        "type": "concept",
+        "description": "Xylotian years are the time units used to measure the duration of the terraforming process.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Flora Seeds",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Corn",
+        "type": "",
+        "description": "Corn is grown by the farmer in the field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Writer",
+        "type": "",
+        "description": "The writer creates stories.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The success rate of Xylotian terraforming efforts has been steadily increasing due to the use of Symbiotic Spores.<SEP>Each terraforming pod contains enough Symbiotic Spores to initiate a small, localized ecosystem.<SEP>Xylotian terraforming pods utilize Symbiotic Spores to break down hostile soil.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Years",
+        "keywords": "",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Flora Seeds",
+        "keywords": "",
+        "description": "Symbiotic Spores release Xylotian flora seeds to begin atmospheric oxygenation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "Xylotian terraforming pods are launched from Xylos towards potentially habitable exoplanets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Symbiotic Spores",
+        "keywords": "",
+        "description": "Deep-Space Telescopes help identify terraforming candidates for Symbiotic Spores to transform.",
+        "weight": 0.0
+      },
+      {
+        "src": "Impact-Resistant Ceramite",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      },
+      {
+        "src": "Corn",
+        "tgt": "Symbiotic Spores",
+        "keywords": "",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Writer",
+        "tgt": "Impact-Resistant Ceramite",
+        "keywords": "",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:47:45.085022",
+  "llm_calls": 100,
+  "mode": "ft"
+}

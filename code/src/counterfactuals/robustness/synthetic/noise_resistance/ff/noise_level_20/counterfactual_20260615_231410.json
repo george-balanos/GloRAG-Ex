@@ -1,0 +1,625 @@
+{
+  "question": "What are the primary uses described for the 'Chrono-Modulator' or for the 'Bio-Harmonizer'?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0.0,
+  "answers": {
+    "ground_truth": "The 'Chrono-Modulator' is used to create temporary Reality Stabilizers, and the 'Bio-Harmonizer' allows for Neural Augmentation.",
+    "original": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones, while the Bio-Harmonizer enhances the emotional depth of musicians' compositions.",
+    "perturbed": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones.",
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Zylonic Energy"
+      ],
+      [
+        "add_edge",
+        [
+          "Zylonic Energy",
+          "Reality Stabilizers"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+          "keywords": "material property,weapon use",
+          "source_id": "chunk-5c91ed2ea8bfed0574e27c7baf63b6c6",
+          "file_path": "unknown_source",
+          "created_at": 1776378542,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Vortex Corp"
+      ],
+      [
+        "add_edge",
+        [
+          "Vortex Corp",
+          "Bio-Harmonic Feedback Systems"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Shadow-Academy trains students in stealth arts, including shadow-melding.",
+          "keywords": "education,training",
+          "source_id": "chunk-58a046875ebdee22cd2135d336e52823",
+          "file_path": "unknown_source",
+          "created_at": 1776370385,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Siren"
+      ],
+      [
+        "add_edge",
+        [
+          "Siren",
+          "Bio-Harmonic Feedback Systems"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Florpion's gravity is 0.8 times that of Earth.",
+          "keywords": "gravity,planetary characteristics",
+          "source_id": "chunk-cdc8f4e681bf3b5f227271df6b332b71",
+          "file_path": "unknown_source",
+          "created_at": 1776374477,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 0,
+    "noise_robust": false,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Modulator",
+        "type": "artifact",
+        "description": "The Chrono-Modulator is a device used to create temporary Reality Stabilizers in unstable zones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "system",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Musicians",
+        "type": "person",
+        "description": "Musicians play instruments.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Distortions",
+        "type": "concept",
+        "description": "Temporal distortions are rare but dangerous phenomena that the Chrono-Regulator is designed to stabilize.<SEP>Temporal Distortions are chaotic time anomalies that the Chrono-Regulator is designed to stabilize.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "External Power Source",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Alloys",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Faint Hum",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creators",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality Stabilizers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Modulator",
+        "tgt": "Reality Stabilizers",
+        "keywords": "",
+        "description": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Musicians",
+        "keywords": "",
+        "description": "Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "The Chrono-Regulator is designed to stabilize Temporal Distortions.<SEP>The Chrono-Regulator is designed to stabilize temporal distortions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "External Power Source",
+        "keywords": "",
+        "description": "The Chrono-Regulator requires an External Power Source to function.<SEP>The Chrono-Regulator requires an external power source to function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Historians",
+        "keywords": "",
+        "description": "Historians highly seek after artifacts like the Chrono-Regulator.<SEP>Historians highly seek after artifacts like the Chrono-Regulator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Unknown Alloys",
+        "keywords": "",
+        "description": "The Chrono-Regulator is made of Unknown Alloys.<SEP>The Chrono-Regulator is made of unknown alloys.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Faint Hum",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Creators",
+        "keywords": "",
+        "description": "The creators' motives for designing the Chrono-Regulator remain unknown.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Modulator",
+        "type": "artifact",
+        "description": "The Chrono-Modulator is a device used to create temporary Reality Stabilizers in unstable zones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "system",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Musicians",
+        "type": "person",
+        "description": "Musicians play instruments.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Distortions",
+        "type": "concept",
+        "description": "Temporal distortions are rare but dangerous phenomena that the Chrono-Regulator is designed to stabilize.<SEP>Temporal Distortions are chaotic time anomalies that the Chrono-Regulator is designed to stabilize.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "External Power Source",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Alloys",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Faint Hum",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creators",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality Stabilizers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylonic Energy",
+        "type": "",
+        "description": "Zylonic energy is a form of energy that can be manipulated for teleportation by the Gleepglorp.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortex Corp",
+        "type": "",
+        "description": "Vortex Corp is the developer of Project Nebula and the QuantumLeap framework, and it also manages Project Chimera.",
+        "rank": 0.0
+      },
+      {
+        "name": "Siren",
+        "type": "",
+        "description": "Siren is one of the outermost planets in the Lumina System, a distant, frozen body containing significant water ice deposits.<SEP>Siren is one of the outermost planets in the Lumina System, a distant, frozen body containing significant water ice deposits.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Modulator",
+        "tgt": "Reality Stabilizers",
+        "keywords": "",
+        "description": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Musicians",
+        "keywords": "",
+        "description": "Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "The Chrono-Regulator is designed to stabilize Temporal Distortions.<SEP>The Chrono-Regulator is designed to stabilize temporal distortions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "External Power Source",
+        "keywords": "",
+        "description": "The Chrono-Regulator requires an External Power Source to function.<SEP>The Chrono-Regulator requires an external power source to function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Historians",
+        "keywords": "",
+        "description": "Historians highly seek after artifacts like the Chrono-Regulator.<SEP>Historians highly seek after artifacts like the Chrono-Regulator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Unknown Alloys",
+        "keywords": "",
+        "description": "The Chrono-Regulator is made of Unknown Alloys.<SEP>The Chrono-Regulator is made of unknown alloys.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Faint Hum",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Creators",
+        "keywords": "",
+        "description": "The creators' motives for designing the Chrono-Regulator remain unknown.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zylonic Energy",
+        "tgt": "Reality Stabilizers",
+        "keywords": "material property,weapon use",
+        "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+        "weight": 1.0
+      },
+      {
+        "src": "Vortex Corp",
+        "tgt": "Bio-Harmonic Feedback Systems",
+        "keywords": "education,training",
+        "description": "The Shadow-Academy trains students in stealth arts, including shadow-melding.",
+        "weight": 1.0
+      },
+      {
+        "src": "Siren",
+        "tgt": "Bio-Harmonic Feedback Systems",
+        "keywords": "gravity,planetary characteristics",
+        "description": "Florpion's gravity is 0.8 times that of Earth.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Modulator",
+        "type": "artifact",
+        "description": "The Chrono-Modulator is a device used to create temporary Reality Stabilizers in unstable zones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "system",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Musicians",
+        "type": "person",
+        "description": "Musicians play instruments.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Distortions",
+        "type": "concept",
+        "description": "Temporal distortions are rare but dangerous phenomena that the Chrono-Regulator is designed to stabilize.<SEP>Temporal Distortions are chaotic time anomalies that the Chrono-Regulator is designed to stabilize.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "External Power Source",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Alloys",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Faint Hum",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creators",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality Stabilizers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylonic Energy",
+        "type": "",
+        "description": "Zylonic energy is a form of energy that can be manipulated for teleportation by the Gleepglorp.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortex Corp",
+        "type": "",
+        "description": "Vortex Corp is the developer of Project Nebula and the QuantumLeap framework, and it also manages Project Chimera.",
+        "rank": 0.0
+      },
+      {
+        "name": "Siren",
+        "type": "",
+        "description": "Siren is one of the outermost planets in the Lumina System, a distant, frozen body containing significant water ice deposits.<SEP>Siren is one of the outermost planets in the Lumina System, a distant, frozen body containing significant water ice deposits.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Modulator",
+        "tgt": "Reality Stabilizers",
+        "keywords": "",
+        "description": "The Chrono-Modulator is used to create temporary Reality Stabilizers in unstable zones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Musicians",
+        "keywords": "",
+        "description": "Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "The Chrono-Regulator is designed to stabilize Temporal Distortions.<SEP>The Chrono-Regulator is designed to stabilize temporal distortions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "External Power Source",
+        "keywords": "",
+        "description": "The Chrono-Regulator requires an External Power Source to function.<SEP>The Chrono-Regulator requires an external power source to function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Historians",
+        "keywords": "",
+        "description": "Historians highly seek after artifacts like the Chrono-Regulator.<SEP>Historians highly seek after artifacts like the Chrono-Regulator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Unknown Alloys",
+        "keywords": "",
+        "description": "The Chrono-Regulator is made of Unknown Alloys.<SEP>The Chrono-Regulator is made of unknown alloys.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Faint Hum",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Creators",
+        "keywords": "",
+        "description": "The creators' motives for designing the Chrono-Regulator remain unknown.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zylonic Energy",
+        "tgt": "Reality Stabilizers",
+        "keywords": "",
+        "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vortex Corp",
+        "tgt": "Bio-Harmonic Feedback Systems",
+        "keywords": "",
+        "description": "The Shadow-Academy trains students in stealth arts, including shadow-melding.",
+        "weight": 0.0
+      },
+      {
+        "src": "Siren",
+        "tgt": "Bio-Harmonic Feedback Systems",
+        "keywords": "",
+        "description": "Florpion's gravity is 0.8 times that of Earth.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:14:10.953831",
+  "llm_calls": 1,
+  "mode": "ff"
+}

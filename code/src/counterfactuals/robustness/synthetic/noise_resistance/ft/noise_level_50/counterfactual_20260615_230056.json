@@ -1,0 +1,353 @@
+{
+  "question": "What defensive ability is possessed by the creature known as the 'Thorned Crawler' in the Bioluminescent Forest?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Thorned Crawler"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "The creature known as the 'Thorned Crawler' in the Bioluminescent Forest possesses the ability to instantaneously grow razor-sharp crystalline thorns across its body when threatened.",
+    "original": "The Thorned Crawler grows razor-sharp crystalline thorns when threatened.",
+    "perturbed": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+    "similarity": 0.23255
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Moonhigh"
+      ],
+      [
+        "add_edge",
+        [
+          "Moonhigh",
+          "Glowing Insects"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Crystalline Echo-Lens can project Illumination-Pulses to blind or disorient enemies.",
+          "keywords": "disorientation,projection",
+          "source_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e",
+          "file_path": "unknown_source",
+          "created_at": 1776369136,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Sky-Jousting"
+      ],
+      [
+        "add_edge",
+        [
+          "Sky-Jousting",
+          "Bioluminescent Forest"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Wraith-Stables house dozens of spectral horses.",
+          "keywords": "housing,spectral horses",
+          "source_id": "chunk-db61661cef8af6791c007f451f13e085",
+          "file_path": "unknown_source",
+          "created_at": 1776372104,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Zylothian Hyperdrive"
+      ],
+      [
+        "add_edge",
+        [
+          "Zylothian Hyperdrive",
+          "Thorned Crawler"
+        ],
+        {
+          "weight": 1.0,
+          "description": "CortexScript was developed by Neuromancer Labs.",
+          "keywords": "development,research",
+          "source_id": "chunk-5e5e2daa652a2a7080947edd8c1861cb",
+          "file_path": "unknown_source",
+          "created_at": 1776373659,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Thorned Crawler",
+        "type": "creature",
+        "description": "The Thorned Crawler is a creature that grows razor-sharp crystalline thorns when threatened and feeds on glowing insects.<SEP>The Thorned Crawler is the strongest creature in the Bioluminescent Forest, capable of growing razor-sharp crystalline thorns when threatened.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Thorns",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glowing Insects",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Thorns",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler grows crystalline thorns as a defense mechanism.<SEP>The Thorned Crawler grows crystalline thorns when threatened.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moonhigh",
+        "type": "",
+        "description": "Moonhigh is the time when the Council of Elders will meet.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Jousting",
+        "type": "",
+        "description": "Sky-Jousting is the official state sport of Aeria, involving aerial combat on Gryphons with specific scoring rules.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moonhigh",
+        "tgt": "Glowing Insects",
+        "keywords": "disorientation,projection",
+        "description": "The Crystalline Echo-Lens can project Illumination-Pulses to blind or disorient enemies.",
+        "weight": 1.0
+      },
+      {
+        "src": "Sky-Jousting",
+        "tgt": "Bioluminescent Forest",
+        "keywords": "housing,spectral horses",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Thorned Crawler",
+        "type": "creature",
+        "description": "The Thorned Crawler is a creature that grows razor-sharp crystalline thorns when threatened and feeds on glowing insects.<SEP>The Thorned Crawler is the strongest creature in the Bioluminescent Forest, capable of growing razor-sharp crystalline thorns when threatened.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Thorns",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Moonhigh",
+        "type": "",
+        "description": "Moonhigh is the time when the Council of Elders will meet.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Jousting",
+        "type": "",
+        "description": "Sky-Jousting is the official state sport of Aeria, involving aerial combat on Gryphons with specific scoring rules.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylothian Hyperdrive",
+        "type": "",
+        "description": "The Zylothian hyperdrive is a complex device that requires intricate repairs.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glowing Insects",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Thorns",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler grows crystalline thorns as a defense mechanism.<SEP>The Thorned Crawler grows crystalline thorns when threatened.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moonhigh",
+        "tgt": "Glowing Insects",
+        "keywords": "",
+        "description": "The Crystalline Echo-Lens can project Illumination-Pulses to blind or disorient enemies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sky-Jousting",
+        "tgt": "Bioluminescent Forest",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zylothian Hyperdrive",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "CortexScript was developed by Neuromancer Labs.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:00:56.695216",
+  "llm_calls": 102,
+  "mode": "ft"
+}

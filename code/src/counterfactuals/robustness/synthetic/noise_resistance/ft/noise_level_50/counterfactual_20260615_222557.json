@@ -1,0 +1,444 @@
+{
+  "question": "What are the two key functions of 'Symbiotic Spores' in Xylotian terraforming pods?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Symbiotic Spores"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "'Symbiotic Spores' in Xylotian terraforming pods first break down hostile soil into a nutrient-rich substrate and then release Xylotian flora seeds for atmospheric oxygenation.",
+    "original": "Symbiotic Spores break down hostile soil and release Xylotian flora seeds to begin atmospheric oxygenation.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.070035
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Corn"
+      ],
+      [
+        "add_edge",
+        [
+          "Corn",
+          "Impact-Resistant Ceramite"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+          "keywords": "concentration,technique",
+          "source_id": "chunk-2887778a6a2df3dfa6983170922380e7",
+          "file_path": "unknown_source",
+          "created_at": 1776368861,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Writer"
+      ],
+      [
+        "add_edge",
+        [
+          "Writer",
+          "Deep-Space Telescopes"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+          "keywords": "celestial body,habitable zone,planetary composition",
+          "source_id": "chunk-a1d086fa29bddbf458099ee779c68438<SEP>chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379725,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Hammer"
+      ],
+      [
+        "add_edge",
+        [
+          "Hammer",
+          "Impact-Resistant Ceramite"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The World-Tree is the heart of Verdant power.",
+          "keywords": "heart,source",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Nebulon Architecture"
+      ],
+      [
+        "add_edge",
+        [
+          "Nebulon Architecture",
+          "Xylotian Years"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+          "keywords": "category,potency",
+          "source_id": "chunk-95e2acb9a9b9f5294e92e741d798190a",
+          "file_path": "unknown_source",
+          "created_at": 1776376195,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Symbiotic Spores",
+        "type": "creature",
+        "description": "Symbiotic Spores are genetically engineered organisms tasked with breaking down hostile soil and releasing Xylotian flora seeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Terraforming Pods",
+        "type": "artifact",
+        "description": "Xylotian terraforming pods are devices used to transform hostile exoplanet environments into habitable ones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Years",
+        "type": "concept",
+        "description": "Xylotian years are the time units used to measure the duration of the terraforming process.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Flora Seeds",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The success rate of Xylotian terraforming efforts has been steadily increasing due to the use of Symbiotic Spores.<SEP>Each terraforming pod contains enough Symbiotic Spores to initiate a small, localized ecosystem.<SEP>Xylotian terraforming pods utilize Symbiotic Spores to break down hostile soil.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Years",
+        "keywords": "",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Flora Seeds",
+        "keywords": "",
+        "description": "Symbiotic Spores release Xylotian flora seeds to begin atmospheric oxygenation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "Xylotian terraforming pods are launched from Xylos towards potentially habitable exoplanets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Symbiotic Spores",
+        "keywords": "",
+        "description": "Deep-Space Telescopes help identify terraforming candidates for Symbiotic Spores to transform.",
+        "weight": 0.0
+      },
+      {
+        "src": "Impact-Resistant Ceramite",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Terraforming Pods",
+        "type": "artifact",
+        "description": "Xylotian terraforming pods are devices used to transform hostile exoplanet environments into habitable ones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Years",
+        "type": "concept",
+        "description": "Xylotian years are the time units used to measure the duration of the terraforming process.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Corn",
+        "type": "",
+        "description": "Corn is grown by the farmer in the field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Writer",
+        "type": "",
+        "description": "The writer creates stories.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hammer",
+        "type": "",
+        "description": "The hammer is a tool used by the carpenter to drive nails.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Architecture",
+        "type": "",
+        "description": "Nebulon architecture incorporates eleven spatial dimensions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "Xylotian terraforming pods are launched from Xylos towards potentially habitable exoplanets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Impact-Resistant Ceramite",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      },
+      {
+        "src": "Corn",
+        "tgt": "Impact-Resistant Ceramite",
+        "keywords": "concentration,technique",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 1.0
+      },
+      {
+        "src": "Writer",
+        "tgt": "Deep-Space Telescopes",
+        "keywords": "celestial body,habitable zone,planetary composition",
+        "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+        "weight": 2.0
+      },
+      {
+        "src": "Hammer",
+        "tgt": "Impact-Resistant Ceramite",
+        "keywords": "heart,source",
+        "description": "The World-Tree is the heart of Verdant power.",
+        "weight": 1.0
+      },
+      {
+        "src": "Nebulon Architecture",
+        "tgt": "Xylotian Years",
+        "keywords": "category,potency",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Symbiotic Spores",
+        "type": "creature",
+        "description": "Symbiotic Spores are genetically engineered organisms tasked with breaking down hostile soil and releasing Xylotian flora seeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Terraforming Pods",
+        "type": "artifact",
+        "description": "Xylotian terraforming pods are devices used to transform hostile exoplanet environments into habitable ones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Years",
+        "type": "concept",
+        "description": "Xylotian years are the time units used to measure the duration of the terraforming process.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Flora Seeds",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Impact-Resistant Ceramite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Corn",
+        "type": "",
+        "description": "Corn is grown by the farmer in the field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Writer",
+        "type": "",
+        "description": "The writer creates stories.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hammer",
+        "type": "",
+        "description": "The hammer is a tool used by the carpenter to drive nails.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Architecture",
+        "type": "",
+        "description": "Nebulon architecture incorporates eleven spatial dimensions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The success rate of Xylotian terraforming efforts has been steadily increasing due to the use of Symbiotic Spores.<SEP>Each terraforming pod contains enough Symbiotic Spores to initiate a small, localized ecosystem.<SEP>Xylotian terraforming pods utilize Symbiotic Spores to break down hostile soil.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Years",
+        "keywords": "",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 0.0
+      },
+      {
+        "src": "Symbiotic Spores",
+        "tgt": "Xylotian Flora Seeds",
+        "keywords": "",
+        "description": "Symbiotic Spores release Xylotian flora seeds to begin atmospheric oxygenation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "Xylotian terraforming pods are launched from Xylos towards potentially habitable exoplanets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Symbiotic Spores",
+        "keywords": "",
+        "description": "Deep-Space Telescopes help identify terraforming candidates for Symbiotic Spores to transform.",
+        "weight": 0.0
+      },
+      {
+        "src": "Impact-Resistant Ceramite",
+        "tgt": "Xylotian Terraforming Pods",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      },
+      {
+        "src": "Corn",
+        "tgt": "Impact-Resistant Ceramite",
+        "keywords": "",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Writer",
+        "tgt": "Deep-Space Telescopes",
+        "keywords": "",
+        "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hammer",
+        "tgt": "Impact-Resistant Ceramite",
+        "keywords": "",
+        "description": "The World-Tree is the heart of Verdant power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Nebulon Architecture",
+        "tgt": "Xylotian Years",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:25:57.451658",
+  "llm_calls": 161,
+  "mode": "ft"
+}

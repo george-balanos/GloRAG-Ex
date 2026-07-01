@@ -1,0 +1,349 @@
+{
+  "question": "What are the roles or professions of Elara Vayne and Jax Korden?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Jax Korden"
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+    "original": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+    "perturbed": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+    "similarity": 0.766982
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geological Formations"
+      ],
+      [
+        "add_edge",
+        [
+          "Geological Formations",
+          "Actors"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+          "keywords": "crafting,ethereal materials",
+          "source_id": "chunk-a8d5322c8953a45a40a65585c12dfa7d",
+          "file_path": "unknown_source",
+          "created_at": 1776370973,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Cognate"
+      ],
+      [
+        "add_edge",
+        [
+          "Cognate",
+          "Elara Vayne"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Sand-Crawlers are powered by Geothermal Converters, drawing heat from underground vents.",
+          "keywords": "functionality,power source",
+          "source_id": "chunk-f9555b7aefebccc997ac08527d4eb7ee",
+          "file_path": "unknown_source",
+          "created_at": 1776378671,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Jax Korden",
+        "type": "person",
+        "description": "Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Jax Korden",
+        "keywords": "",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "Geological formations are rare locations where Aethelite is found.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cognate",
+        "type": "",
+        "description": "Cognate is a special type of asynchronous generator function in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Formations",
+        "tgt": "Actors",
+        "keywords": "crafting,ethereal materials",
+        "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+        "weight": 1.0
+      },
+      {
+        "src": "Cognate",
+        "tgt": "Elara Vayne",
+        "keywords": "functionality,power source",
+        "description": "Sand-Crawlers are powered by Geothermal Converters, drawing heat from underground vents.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Jax Korden",
+        "type": "person",
+        "description": "Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "Geological formations are rare locations where Aethelite is found.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cognate",
+        "type": "",
+        "description": "Cognate is a special type of asynchronous generator function in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Jax Korden",
+        "keywords": "",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Formations",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cognate",
+        "tgt": "Elara Vayne",
+        "keywords": "",
+        "description": "Sand-Crawlers are powered by Geothermal Converters, drawing heat from underground vents.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:51:27.630229",
+  "llm_calls": 5,
+  "mode": "ft"
+}

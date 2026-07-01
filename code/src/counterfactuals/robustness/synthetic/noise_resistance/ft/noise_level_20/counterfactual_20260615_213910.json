@@ -1,0 +1,398 @@
+{
+  "question": "What are the 'Floating Islands of Aeridia' made of?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Aeridium Ore"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The 'Floating Islands of Aeridia' are primarily composed of 'Aeridium Ore'.",
+    "original": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.",
+    "perturbed": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.",
+    "similarity": 0.656144
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Neural Augmentation"
+      ],
+      [
+        "add_edge",
+        [
+          "Neural Augmentation",
+          "Atmospheric Veins"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Hyper-Chrono Displacement is caused by the Reality Anchor component on Warp-Slinger ships.",
+          "keywords": "cause,equipment",
+          "source_id": "chunk-bab0a9eff9a352ce79eabcf3c3edd565",
+          "file_path": "unknown_source",
+          "created_at": 1776373811,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Glimmerwing Moth"
+      ],
+      [
+        "add_edge",
+        [
+          "Glimmerwing Moth",
+          "Ntulu"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Solar-Ribbons are used by Solarian Sun-Dancers as part of their cultural practices and can blind enemies or illuminate darkness.",
+          "keywords": "cultural practice,weapon",
+          "source_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776371513,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aeridium Ore",
+        "type": "naturalobject",
+        "description": "Aeridium Ore is a lightweight, crystalline mineral found only in atmospheric veins, providing buoyancy to the Floating Islands of Aeridia.<SEP>Aeridium Ore is a naturally buoyant, lightweight, and crystalline mineral found only in atmospheric veins on Ntulu.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Veins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Studies",
+        "keywords": "",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Atmospheric Veins",
+        "keywords": "",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Veins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Neural Augmentation",
+        "type": "",
+        "description": "Neural Augmentation is the enhancement of cognitive functions through the use of the Bio-Harmonizer implant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glimmerwing Moth",
+        "type": "",
+        "description": "The Glimmerwing Moth is a specialized moth that feeds exclusively on the pollen of the Moonsilk Flower and has a lifespan of a single lunar cycle.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Neural Augmentation",
+        "tgt": "Atmospheric Veins",
+        "keywords": "cause,equipment",
+        "description": "Hyper-Chrono Displacement is caused by the Reality Anchor component on Warp-Slinger ships.",
+        "weight": 1.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Ntulu",
+        "keywords": "cultural practice,weapon",
+        "description": "Solar-Ribbons are used by Solarian Sun-Dancers as part of their cultural practices and can blind enemies or illuminate darkness.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aeridium Ore",
+        "type": "naturalobject",
+        "description": "Aeridium Ore is a lightweight, crystalline mineral found only in atmospheric veins, providing buoyancy to the Floating Islands of Aeridia.<SEP>Aeridium Ore is a naturally buoyant, lightweight, and crystalline mineral found only in atmospheric veins on Ntulu.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Veins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Neural Augmentation",
+        "type": "",
+        "description": "Neural Augmentation is the enhancement of cognitive functions through the use of the Bio-Harmonizer implant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glimmerwing Moth",
+        "type": "",
+        "description": "The Glimmerwing Moth is a specialized moth that feeds exclusively on the pollen of the Moonsilk Flower and has a lifespan of a single lunar cycle.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Studies",
+        "keywords": "",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Atmospheric Veins",
+        "keywords": "",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Neural Augmentation",
+        "tgt": "Atmospheric Veins",
+        "keywords": "",
+        "description": "Hyper-Chrono Displacement is caused by the Reality Anchor component on Warp-Slinger ships.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "Solar-Ribbons are used by Solarian Sun-Dancers as part of their cultural practices and can blind enemies or illuminate darkness.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:39:10.181710",
+  "llm_calls": 60,
+  "mode": "ft"
+}

@@ -1,0 +1,241 @@
+{
+  "question": "What are the two essential components of Mystic 'Rune-Stones'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Rune-Stones"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Mystic 'Rune-Stones' use 'Memory-Marble' and 'Power-Ink'.",
+    "original": "The two essential components of Mystic 'Rune-Stones' are Memory-Marble and Power-Ink.",
+    "perturbed": "The two essential components of Mystic 'Rune-Stones' are rune-crafting practices and precise ritual timing.",
+    "similarity": 0.857682
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Lineage Record"
+      ],
+      [
+        "add_edge",
+        [
+          "Lineage Record",
+          "Circle-of-Mages"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Celestian films often explore the theme of interstellar travel.",
+          "keywords": "industry,theme",
+          "source_id": "chunk-cf9705e4a12af23f07930f0e944c1e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776377403,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Rune-Stones",
+        "type": "artifact",
+        "description": "Rune-Stones are magical artifacts carved from Memory-Marble and inscribed with Power-Ink, capable of storing and releasing spells.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Marble",
+        "type": "naturalobject",
+        "description": "Memory-Marble is a type of marble that retains magical impressions and is quarried from enchanted mountains.",
+        "rank": 0.0
+      },
+      {
+        "name": "Circle-of-Mages",
+        "type": "organization",
+        "description": "The Circle-of-Mages oversees rune-crafting practices and ensures precise ritual timing in Rune-Stone creation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magical Spells",
+        "type": "concept",
+        "description": "Magical spells are stored and released by Rune-Stones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Power-Ink",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Rune-Crafting Practices",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Memory-Marble",
+        "tgt": "Rune-Stones",
+        "keywords": "",
+        "description": "Rune-Stones are carved from Memory-Marble, which retains magical impressions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Circle-of-Mages",
+        "tgt": "Rune-Crafting Practices",
+        "keywords": "",
+        "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magical Spells",
+        "tgt": "Rune-Stones",
+        "keywords": "",
+        "description": "Rune-Stones can store and release magical spells.",
+        "weight": 0.0
+      },
+      {
+        "src": "Power-Ink",
+        "tgt": "Rune-Stones",
+        "keywords": "",
+        "description": "Rune-Stones are inscribed with Power-Ink, which glows when magical energy flows through it.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Circle-of-Mages",
+        "type": "organization",
+        "description": "The Circle-of-Mages oversees rune-crafting practices and ensures precise ritual timing in Rune-Stone creation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rune-Crafting Practices",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lineage Record",
+        "type": "",
+        "description": "A Lineage Record is a detailed genealogy of the direct ancestors of the Legacy Crystal's creator.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Circle-of-Mages",
+        "tgt": "Rune-Crafting Practices",
+        "keywords": "",
+        "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lineage Record",
+        "tgt": "Circle-of-Mages",
+        "keywords": "industry,theme",
+        "description": "Celestian films often explore the theme of interstellar travel.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Rune-Stones",
+        "type": "artifact",
+        "description": "Rune-Stones are magical artifacts carved from Memory-Marble and inscribed with Power-Ink, capable of storing and releasing spells.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Marble",
+        "type": "naturalobject",
+        "description": "Memory-Marble is a type of marble that retains magical impressions and is quarried from enchanted mountains.",
+        "rank": 0.0
+      },
+      {
+        "name": "Circle-of-Mages",
+        "type": "organization",
+        "description": "The Circle-of-Mages oversees rune-crafting practices and ensures precise ritual timing in Rune-Stone creation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magical Spells",
+        "type": "concept",
+        "description": "Magical spells are stored and released by Rune-Stones.",
+        "rank": 0.0
+      },
+      {
+        "name": "Power-Ink",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Rune-Crafting Practices",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lineage Record",
+        "type": "",
+        "description": "A Lineage Record is a detailed genealogy of the direct ancestors of the Legacy Crystal's creator.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Memory-Marble",
+        "tgt": "Rune-Stones",
+        "keywords": "",
+        "description": "Rune-Stones are carved from Memory-Marble, which retains magical impressions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Circle-of-Mages",
+        "tgt": "Rune-Crafting Practices",
+        "keywords": "",
+        "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magical Spells",
+        "tgt": "Rune-Stones",
+        "keywords": "",
+        "description": "Rune-Stones can store and release magical spells.",
+        "weight": 0.0
+      },
+      {
+        "src": "Power-Ink",
+        "tgt": "Rune-Stones",
+        "keywords": "",
+        "description": "Rune-Stones are inscribed with Power-Ink, which glows when magical energy flows through it.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lineage Record",
+        "tgt": "Circle-of-Mages",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of interstellar travel.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:58:03.840789",
+  "llm_calls": 22,
+  "mode": "ft"
+}

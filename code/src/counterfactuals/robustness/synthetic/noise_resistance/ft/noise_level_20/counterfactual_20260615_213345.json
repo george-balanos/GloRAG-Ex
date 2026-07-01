@@ -1,0 +1,553 @@
+{
+  "question": "What is the primary export of Zorblaxia?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Crystallized Snorflak"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "crystallized snorflak",
+    "original": "The primary export of Zorblaxia is crystallized snorflak.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.072499
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Glow-Geodes"
+      ],
+      [
+        "add_edge",
+        [
+          "Glow-Geodes",
+          "Zorblaxian Education"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+          "keywords": "component,healing",
+          "source_id": "chunk-95e2acb9a9b9f5294e92e741d798190a<SEP>chunk-9c885a2069fac0a76316e6120141c9ed",
+          "file_path": "unknown_source",
+          "created_at": 1776378770,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Prismarian Apprentices"
+      ],
+      [
+        "add_edge",
+        [
+          "Prismarian Apprentices",
+          "Zorblaxia"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Current-Crystals channel the power of ocean streams.",
+          "keywords": "enhancement,power channeling",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystallized Snorflak",
+        "type": "naturalobject",
+        "description": "Crystallized snorflak is a mined resource that is a major export of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "River Barges",
+        "type": "artifact",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.",
+        "rank": 0.0
+      },
+      {
+        "name": "Northern Regions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Calendar",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Education",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia's Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Cuisine",
+        "keywords": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Calendar",
+        "keywords": "",
+        "description": "The Zorblaxian calendar has 15 months.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Music",
+        "keywords": "",
+        "description": "Traditional Zorblaxian music uses only percussion instruments.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Education",
+        "keywords": "",
+        "description": "Zorblaxian children attend school for 12 years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Language",
+        "keywords": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxia's Gravity",
+        "keywords": "",
+        "description": "Zorblaxia's gravity is 1.3 times Earth's.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystallized Snorflak",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblaxia's economy relies heavily on the export of crystallized snorflak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eldoria",
+        "tgt": "River Barges",
+        "keywords": "",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Northern Regions",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Crystallized snorflak is mined in the northern regions of Zorblaxia.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "River Barges",
+        "type": "artifact",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.",
+        "rank": 0.0
+      },
+      {
+        "name": "Northern Regions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Calendar",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Education",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia's Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Geodes",
+        "type": "",
+        "description": "Glow-Geodes are geodes that are crushed to create the powder used in Lumin-Ink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Prismarian Apprentices",
+        "type": "",
+        "description": "Prismarian apprentices learn color theory before forging.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Cuisine",
+        "keywords": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Calendar",
+        "keywords": "",
+        "description": "The Zorblaxian calendar has 15 months.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Music",
+        "keywords": "",
+        "description": "Traditional Zorblaxian music uses only percussion instruments.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Education",
+        "keywords": "",
+        "description": "Zorblaxian children attend school for 12 years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Language",
+        "keywords": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxia's Gravity",
+        "keywords": "",
+        "description": "Zorblaxia's gravity is 1.3 times Earth's.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eldoria",
+        "tgt": "River Barges",
+        "keywords": "",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Northern Regions",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Crystallized snorflak is mined in the northern regions of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Geodes",
+        "tgt": "Zorblaxian Education",
+        "keywords": "component,healing",
+        "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+        "weight": 2.0
+      },
+      {
+        "src": "Prismarian Apprentices",
+        "tgt": "Zorblaxia",
+        "keywords": "enhancement,power channeling",
+        "description": "Current-Crystals channel the power of ocean streams.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystallized Snorflak",
+        "type": "naturalobject",
+        "description": "Crystallized snorflak is a mined resource that is a major export of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "River Barges",
+        "type": "artifact",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.",
+        "rank": 0.0
+      },
+      {
+        "name": "Northern Regions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Calendar",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Education",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia's Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Geodes",
+        "type": "",
+        "description": "Glow-Geodes are geodes that are crushed to create the powder used in Lumin-Ink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Prismarian Apprentices",
+        "type": "",
+        "description": "Prismarian apprentices learn color theory before forging.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Cuisine",
+        "keywords": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Calendar",
+        "keywords": "",
+        "description": "The Zorblaxian calendar has 15 months.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Music",
+        "keywords": "",
+        "description": "Traditional Zorblaxian music uses only percussion instruments.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Education",
+        "keywords": "",
+        "description": "Zorblaxian children attend school for 12 years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Language",
+        "keywords": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxia's Gravity",
+        "keywords": "",
+        "description": "Zorblaxia's gravity is 1.3 times Earth's.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystallized Snorflak",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblaxia's economy relies heavily on the export of crystallized snorflak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eldoria",
+        "tgt": "River Barges",
+        "keywords": "",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Northern Regions",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Crystallized snorflak is mined in the northern regions of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Geodes",
+        "tgt": "Zorblaxian Education",
+        "keywords": "",
+        "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prismarian Apprentices",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Current-Crystals channel the power of ocean streams.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:33:45.983962",
+  "llm_calls": 2,
+  "mode": "ft"
+}

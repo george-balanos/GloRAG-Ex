@@ -1,0 +1,253 @@
+{
+  "question": "What two capabilities does the Etherean 'Soul-Compass' provide to spirit guides?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 9,
+  "answers": {
+    "ground_truth": "The Etherean 'Soul-Compass' detects 'Life-Auras' and navigates 'Astral-Currents'.",
+    "original": "The Etherean Soul-Compass allows spirit guides to detect Life-Auras and navigate Astral-Currents.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Floating Islands of Aeridia"
+      ],
+      [
+        "add_edge",
+        [
+          "Floating Islands of Aeridia",
+          "Etherean Music"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+          "keywords": "emission,operation,sound emission",
+          "source_id": "chunk-d34e7860dd6c60808a4b14b0d675a828<SEP>chunk-85b7a26d96822c1293e19cca11323d34",
+          "file_path": "unknown_source",
+          "created_at": 1776378264,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit Guide",
+        "type": "person",
+        "description": "Spirit guides are individuals who use the Soul-Compass to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Astral-Current",
+        "type": "concept",
+        "description": "Astral-Currents are invisible rivers between worlds that allow travel between dimensional planes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temple of Eternal Light",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Realm",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides use the Etherean Soul-Compass to detect Life-Auras.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Temple of Eternal Light",
+        "keywords": "",
+        "description": "The Temple of Eternal Light houses the first Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spirit Guide",
+        "tgt": "Spirit-Realm",
+        "keywords": "",
+        "description": "Spirit guides serve as bridges between the Spirit-Realm and the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Etherean Soul-Compass",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass allows navigation through Astral-Currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides navigate through Astral-Currents using the Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Music",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Etherean music is used by spirit guides to heal troubled souls.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit Guide",
+        "type": "person",
+        "description": "Spirit guides are individuals who use the Soul-Compass to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Astral-Current",
+        "type": "concept",
+        "description": "Astral-Currents are invisible rivers between worlds that allow travel between dimensional planes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temple of Eternal Light",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Realm",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides use the Etherean Soul-Compass to detect Life-Auras.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Temple of Eternal Light",
+        "keywords": "",
+        "description": "The Temple of Eternal Light houses the first Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spirit Guide",
+        "tgt": "Spirit-Realm",
+        "keywords": "",
+        "description": "Spirit guides serve as bridges between the Spirit-Realm and the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Etherean Soul-Compass",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass allows navigation through Astral-Currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides navigate through Astral-Currents using the Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Music",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Etherean music is used by spirit guides to heal troubled souls.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Etherean Music",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:52:06.609298",
+  "llm_calls": 201,
+  "mode": "ft"
+}

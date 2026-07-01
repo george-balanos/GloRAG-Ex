@@ -1,0 +1,241 @@
+{
+  "question": "What are the two primary components of Terran 'Stone-Speaker' staffs?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Terran 'Stone-Speaker' Staffs"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Terran 'Stone-Speaker' staffs use 'Ancient-Heartwood' and 'Resonance-Stones'.",
+    "original": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.108551
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Current-Crystals"
+      ],
+      [
+        "add_edge",
+        [
+          "Current-Crystals",
+          "Earth-Circle"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+          "keywords": "production,weaving",
+          "source_id": "chunk-852b4aca9611d4ba02906005fe159143",
+          "file_path": "unknown_source",
+          "created_at": 1776370100,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Terran 'Stone-Speaker' Staffs",
+        "type": "artifact",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone, amplifying earth-based magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient-Heartwood",
+        "type": "naturalobject",
+        "description": "Ancient-Heartwood is the heartwood of thousand-year-old mountain trees, retaining the wisdom of centuries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stone",
+        "type": "artifact",
+        "description": "Resonance-Stones are stones that amplify earth-based magic and are found in the deepest caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Forces",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient-Heartwood",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonance-Stone",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are crowned with a Resonance-Stone to amplify earth-based magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Forces",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs can command geological forces, causing earthquakes and avalanches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Current-Crystals",
+        "type": "",
+        "description": "Current-Crystals are crystals that enhance Whirlpool-Ore by channeling the power of ocean streams and glowing with aquamarine light.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      },
+      {
+        "src": "Current-Crystals",
+        "tgt": "Earth-Circle",
+        "keywords": "production,weaving",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Terran 'Stone-Speaker' Staffs",
+        "type": "artifact",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone, amplifying earth-based magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient-Heartwood",
+        "type": "naturalobject",
+        "description": "Ancient-Heartwood is the heartwood of thousand-year-old mountain trees, retaining the wisdom of centuries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stone",
+        "type": "artifact",
+        "description": "Resonance-Stones are stones that amplify earth-based magic and are found in the deepest caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Forces",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Current-Crystals",
+        "type": "",
+        "description": "Current-Crystals are crystals that enhance Whirlpool-Ore by channeling the power of ocean streams and glowing with aquamarine light.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient-Heartwood",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonance-Stone",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are crowned with a Resonance-Stone to amplify earth-based magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Forces",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs can command geological forces, causing earthquakes and avalanches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      },
+      {
+        "src": "Current-Crystals",
+        "tgt": "Earth-Circle",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:54:14.407776",
+  "llm_calls": 22,
+  "mode": "ft"
+}

@@ -1,0 +1,203 @@
+{
+  "question": "What are the two primary ingredients in Alchemical 'Transformation-Elixirs'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Metamorphic-Acid"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "Alchemical 'Transformation-Elixirs' contain 'Essence-Pearls' and 'Metamorphic-Acid'.",
+    "original": "The two primary ingredients in Alchemical Transformation-Elixirs are Essence-Pearls and Metamorphic-Acid.",
+    "perturbed": "The two primary ingredients in Alchemical 'Transformation-Elixirs' are Essence-Pearls and Deep-Sea Creatures.",
+    "similarity": 0.932917
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Desert Ruins"
+      ],
+      [
+        "add_edge",
+        [
+          "Desert Ruins",
+          "Metamorphic-Acid"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Atlantean history spans over ten thousand years.",
+          "keywords": "civilization,historical span",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Alchemical Transformation-Elixirs",
+        "type": "artifact",
+        "description": "Alchemical Transformation-Elixirs are magical potions that can temporarily change living beings and last for exactly one hour.",
+        "rank": 0.0
+      },
+      {
+        "name": "Essence-Pearls",
+        "type": "artifact",
+        "description": "Essence-Pearls contain concentrated life force and are used in the creation of Transformation-Elixirs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Metamorphic-Acid",
+        "type": "artifact",
+        "description": "Metamorphic-Acid is a substance used to dissolve Essence-Pearls and rebuild matter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alchemical Transformation-Elixirs",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are a key component in the creation of Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Essence-Pearls",
+        "tgt": "Metamorphic-Acid",
+        "keywords": "",
+        "description": "Metamorphic-Acid is used to dissolve Essence-Pearls to create Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Sea Creatures",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are harvested from deep-sea creatures.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Alchemical Transformation-Elixirs",
+        "type": "artifact",
+        "description": "Alchemical Transformation-Elixirs are magical potions that can temporarily change living beings and last for exactly one hour.",
+        "rank": 0.0
+      },
+      {
+        "name": "Essence-Pearls",
+        "type": "artifact",
+        "description": "Essence-Pearls contain concentrated life force and are used in the creation of Transformation-Elixirs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alchemical Transformation-Elixirs",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are a key component in the creation of Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Sea Creatures",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are harvested from deep-sea creatures.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Alchemical Transformation-Elixirs",
+        "type": "artifact",
+        "description": "Alchemical Transformation-Elixirs are magical potions that can temporarily change living beings and last for exactly one hour.",
+        "rank": 0.0
+      },
+      {
+        "name": "Essence-Pearls",
+        "type": "artifact",
+        "description": "Essence-Pearls contain concentrated life force and are used in the creation of Transformation-Elixirs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Metamorphic-Acid",
+        "type": "artifact",
+        "description": "Metamorphic-Acid is a substance used to dissolve Essence-Pearls and rebuild matter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alchemical Transformation-Elixirs",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are a key component in the creation of Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Essence-Pearls",
+        "tgt": "Metamorphic-Acid",
+        "keywords": "",
+        "description": "Metamorphic-Acid is used to dissolve Essence-Pearls to create Transformation-Elixirs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Sea Creatures",
+        "tgt": "Essence-Pearls",
+        "keywords": "",
+        "description": "Essence-Pearls are harvested from deep-sea creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert Ruins",
+        "tgt": "Metamorphic-Acid",
+        "keywords": "",
+        "description": "Atlantean history spans over ten thousand years.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:03:58.312305",
+  "llm_calls": 7,
+  "mode": "ft"
+}

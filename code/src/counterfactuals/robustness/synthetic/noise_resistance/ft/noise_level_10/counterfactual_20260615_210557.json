@@ -1,0 +1,299 @@
+{
+  "question": "What is the main ingredient in Plorgonian stew?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Plorgonian Stew"
+    ]
+  ],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "fermented tubers of the Plorg plant",
+    "original": "The main ingredient in Plorgonian stew is fermented tubers of the Plorg plant.",
+    "perturbed": "The main ingredient in Plorgonian stew is the tubers of the Plorg plant.",
+    "similarity": 0.968936
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Floofel-Dust"
+      ],
+      [
+        "add_edge",
+        [
+          "Floofel-Dust",
+          "Plorgonian Chefs"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Lumina Accords provide legal protection for species like the Cygnans.",
+          "keywords": "legal protection,species rights",
+          "source_id": "chunk-0d34f7ecce8468295178f356ec81f392",
+          "file_path": "unknown_source",
+          "created_at": 1776373471,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Tuber",
+        "type": "naturalobject",
+        "description": "Plorg tubers are the fermented base ingredient of Plorgonian stew and grow only in volcanic soil.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Tableware",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Stew",
+        "tgt": "Plorgonian Tableware",
+        "keywords": "",
+        "description": "Plorgonian tableware is used in the context of Plorgonian dining rituals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Tuber",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian stew is made from fermented Plorg tubers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian celebrations involve the consumption of Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Chefs",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian chefs train for 15 years to prepare Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Floofel-Dust",
+        "type": "",
+        "description": "Glimmering Floofel-dust is highly valued by artisans.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floofel-Dust",
+        "tgt": "Plorgonian Chefs",
+        "keywords": "legal protection,species rights",
+        "description": "The Lumina Accords provide legal protection for species like the Cygnans.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Tuber",
+        "type": "naturalobject",
+        "description": "Plorg tubers are the fermented base ingredient of Plorgonian stew and grow only in volcanic soil.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Tableware",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Floofel-Dust",
+        "type": "",
+        "description": "Glimmering Floofel-dust is highly valued by artisans.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Stew",
+        "tgt": "Plorgonian Tableware",
+        "keywords": "",
+        "description": "Plorgonian tableware is used in the context of Plorgonian dining rituals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Tuber",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian stew is made from fermented Plorg tubers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian celebrations involve the consumption of Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Chefs",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian chefs train for 15 years to prepare Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floofel-Dust",
+        "tgt": "Plorgonian Chefs",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the Cygnans.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:05:57.101525",
+  "llm_calls": 99,
+  "mode": "ft"
+}

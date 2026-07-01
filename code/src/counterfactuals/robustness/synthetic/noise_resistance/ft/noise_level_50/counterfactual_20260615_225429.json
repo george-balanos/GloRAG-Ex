@@ -1,0 +1,364 @@
+{
+  "question": "Which element powers the engines of Vexian starships?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "Vexium (element 147)",
+    "original": "Vexium (element 147) powers the engines of Vexian starships.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Temporal Coherence"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporal Coherence",
+          "Vexian Crew"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Solar-Academy teaches light-based combat, which is relevant to Solarian Sun-Dancers' training.",
+          "keywords": "education,training",
+          "source_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776371513,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Crystal Containers"
+      ],
+      [
+        "add_edge",
+        [
+          "Crystal Containers",
+          "Vexian Starships"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+          "keywords": "celestial body,orbital relationship",
+          "source_id": "chunk-ceadd9f2295f73efa231cc507a7af047",
+          "file_path": "unknown_source",
+          "created_at": 1776374299,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Vortexian Culture"
+      ],
+      [
+        "add_edge",
+        [
+          "Vortexian Culture",
+          "Vexian Navigation Systems"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+          "keywords": "alteration,manipulation",
+          "source_id": "chunk-856633022d5e5030b7095161d9c2ded2",
+          "file_path": "unknown_source",
+          "created_at": 1776372370,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Gryphons"
+      ],
+      [
+        "add_edge",
+        [
+          "Gryphons",
+          "Vexian Propulsion Systems"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+          "keywords": "development progress,project management",
+          "source_id": "chunk-c4d0680971dd3cf904d7dc4e279b3baf",
+          "file_path": "unknown_source",
+          "created_at": 1776373063,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Propulsion Systems",
+        "type": "artifact",
+        "description": "Vexian propulsion systems utilize stabilized Vexium plasma to achieve high-speed travel.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexium",
+        "type": "naturalobject",
+        "description": "Vexium (element 147) is a stabilized plasma used exclusively in Vexian propulsion systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Navigation Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheres",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Vexian Starship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vexian Starships",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexian starships use stabilized Vexium plasma to power their engines.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Propulsion Systems",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexium is stabilized into plasma form for use in Vexian propulsion systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Crew",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships are operated by crews consisting of 12 members.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Navigation Systems",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships use quantum entanglement for positioning in their navigation systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheres",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Vexian Starship",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "The first Vexian starship was built 500 years ago, marking the beginning of Vexian starship technology.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Propulsion Systems",
+        "type": "artifact",
+        "description": "Vexian propulsion systems utilize stabilized Vexium plasma to achieve high-speed travel.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexium",
+        "type": "naturalobject",
+        "description": "Vexium (element 147) is a stabilized plasma used exclusively in Vexian propulsion systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Navigation Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheres",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Vexian Starship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Coherence",
+        "type": "",
+        "description": "Temporal coherence is a aspect of music frequently analyzed by critics on Riven Prime.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Containers",
+        "type": "",
+        "description": "Crystal containers are used to store Rainbow-Essence.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortexian Culture",
+        "type": "",
+        "description": "Vortexian Culture emphasizes circular motion and cycles, influencing various aspects of their society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gryphons",
+        "type": "",
+        "description": "Gryphons are trained aerial mounts used by competitors in Sky-Jousting.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vexian Starships",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexian starships use stabilized Vexium plasma to power their engines.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Propulsion Systems",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexium is stabilized into plasma form for use in Vexian propulsion systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Crew",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships are operated by crews consisting of 12 members.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Navigation Systems",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships use quantum entanglement for positioning in their navigation systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheres",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Vexian Starship",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "The first Vexian starship was built 500 years ago, marking the beginning of Vexian starship technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Coherence",
+        "tgt": "Vexian Crew",
+        "keywords": "",
+        "description": "The Solar-Academy teaches light-based combat, which is relevant to Solarian Sun-Dancers' training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Containers",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vortexian Culture",
+        "tgt": "Vexian Navigation Systems",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gryphons",
+        "tgt": "Vexian Propulsion Systems",
+        "keywords": "",
+        "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:54:29.619724",
+  "llm_calls": 201,
+  "mode": "ft"
+}

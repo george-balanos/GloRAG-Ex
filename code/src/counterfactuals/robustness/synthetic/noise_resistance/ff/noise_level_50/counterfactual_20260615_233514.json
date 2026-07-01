@@ -1,0 +1,206 @@
+{
+  "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6.8461723402142525,
+  "answers": {
+    "ground_truth": "It amplifies the mental abilities of those who drink it.",
+    "original": "I do not have enough information to answer.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Probability-Fields"
+      ],
+      [
+        "add_edge",
+        [
+          "Probability-Fields",
+          "Ancient Tree-Spirits"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Nitros is valued for its unparalleled energy storage capacity.",
+          "keywords": "energy capacity",
+          "source_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267",
+          "file_path": "unknown_source",
+          "created_at": 1776379431,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Grasping Vine"
+      ],
+      [
+        "add_edge",
+        [
+          "Grasping Vine",
+          "Ancient Tree-Spirits"
+        ],
+        {
+          "weight": 2.0,
+          "description": "K'tharr Prime is the central star of the K'tharr System.<SEP>K'tharr Prime is the star at the center of the K'tharr System.",
+          "keywords": "central star,planetary system,stellar body,stellar system",
+          "source_id": "chunk-a1d086fa29bddbf458099ee779c68438<SEP>chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379724,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Probability-Fields",
+        "type": "",
+        "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+        "rank": 0.0
+      },
+      {
+        "name": "Grasping Vine",
+        "type": "",
+        "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      },
+      {
+        "src": "Probability-Fields",
+        "tgt": "Ancient Tree-Spirits",
+        "keywords": "",
+        "description": "Nitros is valued for its unparalleled energy storage capacity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grasping Vine",
+        "tgt": "Ancient Tree-Spirits",
+        "keywords": "",
+        "description": "K'tharr Prime is the central star of the K'tharr System.<SEP>K'tharr Prime is the star at the center of the K'tharr System.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:35:14.068872",
+  "llm_calls": 201,
+  "mode": "ff"
+}

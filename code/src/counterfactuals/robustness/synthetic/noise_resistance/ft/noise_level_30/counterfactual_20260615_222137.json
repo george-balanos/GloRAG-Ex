@@ -1,0 +1,352 @@
+{
+  "question": "What is the main function of the device recently discovered in desert ruins?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Chrono-Regulator",
+        "Desert Ruins"
+      ]
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "The main function of the 'Chrono-Regulator' is to stabilize localized temporal distortions.",
+    "original": "The main function of the device recently discovered in desert ruins is to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.083182
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Molten-Streams"
+      ],
+      [
+        "add_edge",
+        [
+          "Molten-Streams",
+          "Desert of Bones"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Essence-Pearls are harvested from deep-sea creatures.",
+          "keywords": "harvesting,source",
+          "source_id": "chunk-33c4a997e02d1f9deac5d304cf96e2ed",
+          "file_path": "unknown_source",
+          "created_at": 1776371977,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Digital Performance Capture"
+      ],
+      [
+        "add_edge",
+        [
+          "Digital Performance Capture",
+          "The Great Library of Aethelgard"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+          "keywords": "energy source,stellar system",
+          "source_id": "chunk-7f5314f2ea2b2e09a54bf620954df4a3",
+          "file_path": "unknown_source",
+          "created_at": 1776377252,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Carvings",
+        "type": "artifact",
+        "description": "Ancient carvings surround the Font of Resonance, adding to its sacred nature.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Great Library of Aethelgard",
+        "type": "artifact",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Carvings",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "Ancient carvings surround the Font of Resonance.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Carvings",
+        "type": "artifact",
+        "description": "Ancient carvings surround the Font of Resonance, adding to its sacred nature.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Great Library of Aethelgard",
+        "type": "artifact",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Molten-Streams",
+        "type": "",
+        "description": "Molten-Streams are streams of liquid fire generated by Fire-Heart gems, reaching temperatures of several thousand degrees.",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture",
+        "type": "",
+        "description": "Digital performance capture is a technique used by actors in Celestia.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Carvings",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "Ancient carvings surround the Font of Resonance.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Molten-Streams",
+        "tgt": "Desert of Bones",
+        "keywords": "harvesting,source",
+        "description": "Essence-Pearls are harvested from deep-sea creatures.",
+        "weight": 1.0
+      },
+      {
+        "src": "Digital Performance Capture",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "energy source,stellar system",
+        "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Carvings",
+        "type": "artifact",
+        "description": "Ancient carvings surround the Font of Resonance, adding to its sacred nature.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Great Library of Aethelgard",
+        "type": "artifact",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Molten-Streams",
+        "type": "",
+        "description": "Molten-Streams are streams of liquid fire generated by Fire-Heart gems, reaching temperatures of several thousand degrees.",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture",
+        "type": "",
+        "description": "Digital performance capture is a technique used by actors in Celestia.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Carvings",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "Ancient carvings surround the Font of Resonance.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Molten-Streams",
+        "tgt": "Desert of Bones",
+        "keywords": "",
+        "description": "Essence-Pearls are harvested from deep-sea creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Digital Performance Capture",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:21:37.635083",
+  "llm_calls": 5,
+  "mode": "ft"
+}

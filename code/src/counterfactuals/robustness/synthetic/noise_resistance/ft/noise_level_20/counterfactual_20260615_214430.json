@@ -1,0 +1,497 @@
+{
+  "question": "What is the energy source of the massive orbital platform orbiting planet Xylos?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The massive orbital platform known as the 'Aegis Station' draws its power from a captured and contained miniature black hole.",
+    "original": "The Aegis Station, the massive orbital platform orbiting planet Xylos, is powered by a captured miniature black hole.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Ancient Texts Of Ploorf"
+      ],
+      [
+        "add_edge",
+        [
+          "Ancient Texts Of Ploorf",
+          "Solar Sail"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Solar-Academy teaches light-based combat, which is relevant to Solarian Sun-Dancers' training.",
+          "keywords": "education,training",
+          "source_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776371513,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Largest Recorded Gloopfish"
+      ],
+      [
+        "add_edge",
+        [
+          "Largest Recorded Gloopfish",
+          "Xylos"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Atlantean Tide-Weapons are enhanced with Current-Crystals.",
+          "keywords": "material composition,weapon enhancement",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "try...except Blocks"
+      ],
+      [
+        "add_edge",
+        [
+          "try...except Blocks",
+          "Black Hole Containment Technology"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Roric is the actor who released the film 'The Last Star-Sailor'.",
+          "keywords": "actor,film release",
+          "source_id": "chunk-c64531f85f69d764bfa3b1d7312ed1bb",
+          "file_path": "unknown_source",
+          "created_at": 1776380016,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Power Distribution",
+        "type": "concept",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Binary Star",
+        "type": "naturalobject",
+        "description": "The binary star's radiation is converted into solar power by the Solar Matrix.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Matrix",
+        "type": "artifact",
+        "description": "The Solar Matrix is designed to capture and convert radiation from a binary star into solar power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Power Distribution",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Binary Star",
+        "tgt": "Solar Matrix",
+        "keywords": "",
+        "description": "The Solar Matrix is designed to capture and convert radiation from the binary star into solar power.<SEP>The Solar Matrix captures and converts radiation from the binary star into solar power.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Power Distribution",
+        "type": "concept",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Binary Star",
+        "type": "naturalobject",
+        "description": "The binary star's radiation is converted into solar power by the Solar Matrix.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Matrix",
+        "type": "artifact",
+        "description": "The Solar Matrix is designed to capture and convert radiation from a binary star into solar power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Texts Of Ploorf",
+        "type": "",
+        "description": "The ancient texts of Ploorf are difficult to decipher.",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "The Largest Recorded Gloopfish measured 1.2 meters in length.",
+        "rank": 0.0
+      },
+      {
+        "name": "try...except Blocks",
+        "type": "",
+        "description": "try...except blocks are used for error handling in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Power Distribution",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Binary Star",
+        "tgt": "Solar Matrix",
+        "keywords": "",
+        "description": "The Solar Matrix is designed to capture and convert radiation from the binary star into solar power.<SEP>The Solar Matrix captures and converts radiation from the binary star into solar power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Texts Of Ploorf",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Solar-Academy teaches light-based combat, which is relevant to Solarian Sun-Dancers' training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Largest Recorded Gloopfish",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Atlantean Tide-Weapons are enhanced with Current-Crystals.",
+        "weight": 0.0
+      },
+      {
+        "src": "try...except Blocks",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Roric is the actor who released the film 'The Last Star-Sailor'.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:44:30.405022",
+  "llm_calls": 201,
+  "mode": "ft"
+}

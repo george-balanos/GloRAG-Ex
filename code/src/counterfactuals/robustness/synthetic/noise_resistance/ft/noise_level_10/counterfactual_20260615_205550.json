@@ -1,0 +1,229 @@
+{
+  "question": "What are the two essential materials for Vortexian 'Spiral-Blades'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Vortexian Spiral-Blades"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "Vortexian 'Spiral-Blades' are made from 'Cyclone-Steel' and 'Whirlwind-Crystal'.",
+    "original": "Vortexian Spiral-Blades are forged from Cyclone-Steel and edged with Whirlwind-Crystal.",
+    "perturbed": "I don't have enough information to answer that.",
+    "similarity": -0.038466
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Blimptonian Greeting"
+      ],
+      [
+        "add_edge",
+        [
+          "Blimptonian Greeting",
+          "Vortexian Warriors"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Harmonia is a musician in the Crystalline Sound Weaving genre.",
+          "keywords": "genre,musician",
+          "source_id": "chunk-129bea04a4eed90f0ac47d94df434aa6",
+          "file_path": "unknown_source",
+          "created_at": 1776380459,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Spiral-Blades",
+        "type": "artifact",
+        "description": "Vortexian Spiral-Blades are weapons forged from Cyclone-Steel and edged with Whirlwind-Crystal, designed to maintain a perpetual spinning motion.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlwind-Crystal",
+        "type": "artifact",
+        "description": "Whirlwind-Crystal is a material used to edge Spiral-Blades, maintaining their perpetual spinning motion and humming with kinetic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cyclone-Steel",
+        "type": "artifact",
+        "description": "Cyclone-Steel is a material that naturally curves in helical patterns and is formed during atmospheric storms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are edged with Whirlwind-Crystal to maintain their perpetual spinning motion.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "Vortexian Warriors are masters of rotational combat using Spiral-Blades.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cyclone-Steel",
+        "tgt": "Vortexian Spiral-Blades",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are forged from Cyclone-Steel, which naturally curves in helical patterns.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Greeting",
+        "type": "",
+        "description": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimptonian Greeting",
+        "tgt": "Vortexian Warriors",
+        "keywords": "genre,musician",
+        "description": "Harmonia is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Spiral-Blades",
+        "type": "artifact",
+        "description": "Vortexian Spiral-Blades are weapons forged from Cyclone-Steel and edged with Whirlwind-Crystal, designed to maintain a perpetual spinning motion.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlwind-Crystal",
+        "type": "artifact",
+        "description": "Whirlwind-Crystal is a material used to edge Spiral-Blades, maintaining their perpetual spinning motion and humming with kinetic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cyclone-Steel",
+        "type": "artifact",
+        "description": "Cyclone-Steel is a material that naturally curves in helical patterns and is formed during atmospheric storms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Greeting",
+        "type": "",
+        "description": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are edged with Whirlwind-Crystal to maintain their perpetual spinning motion.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "Vortexian Warriors are masters of rotational combat using Spiral-Blades.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cyclone-Steel",
+        "tgt": "Vortexian Spiral-Blades",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are forged from Cyclone-Steel, which naturally curves in helical patterns.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimptonian Greeting",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "Harmonia is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:55:50.566548",
+  "llm_calls": 20,
+  "mode": "ft"
+}

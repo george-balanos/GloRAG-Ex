@@ -1,0 +1,395 @@
+{
+  "question": "What is the lifespan of a common Gloopfish?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "7 Galactic Standard Years",
+    "original": "The lifespan of a Common Gloopfish is 7 Galactic Standard Years (GSY).",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geothermal Converters"
+      ],
+      [
+        "add_edge",
+        [
+          "Geothermal Converters",
+          "Fish"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Grand Dream-Hall displays the finest dream-silk tapestries.",
+          "keywords": "display,finest tapestries",
+          "source_id": "chunk-852b4aca9611d4ba02906005fe159143",
+          "file_path": "unknown_source",
+          "created_at": 1776370100,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "User Interface"
+      ],
+      [
+        "add_edge",
+        [
+          "User Interface",
+          "Gloopfish Scales"
+        ],
+        {
+          "weight": 1.0,
+          "description": "'Consciousness-Nodes' anchor 'Thought-Cables' to maintain the stability of Astral 'Mind-Bridges'.",
+          "keywords": "anchoring,stability",
+          "source_id": "chunk-24447252c282a0b1101534db7627da29",
+          "file_path": "unknown_source",
+          "created_at": 1776371369,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Carpenter"
+      ],
+      [
+        "add_edge",
+        [
+          "Carpenter",
+          "Largest Recorded Gloopfish"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Power-Ink glows when magical energy flows through it.",
+          "keywords": "activation,glow",
+          "source_id": "chunk-5e2e2feb3a7fbc786fecc915f84cc620",
+          "file_path": "unknown_source",
+          "created_at": 1776372225,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Common Gloopfish",
+        "type": "creature",
+        "description": "The Common Gloopfish is a species with a lifespan of 7 Galactic Standard Years (GSY), inhabiting methane lakes, and exhibiting unique biological traits.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fish",
+        "type": "creature",
+        "description": "Fish live in water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Water",
+        "type": "naturalobject",
+        "description": "Water is essential for life.<SEP>Water is the habitat for fish and is used by elephants to drink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Razorfin",
+        "type": "creature",
+        "description": "Razorfin is a predator of the Gloopfish.",
+        "rank": 0.0
+      },
+      {
+        "name": "Titanis Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ultrasonic Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Scales",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gulper",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Hearts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Common Gloopfish inhabit the methane lakes of Titanis Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Razorfin is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Eggs",
+        "keywords": "",
+        "description": "Common Gloopfish lay exactly 33 eggs each mating season.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "Common Gloopfish scales are used in traditional medicine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Gulper is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Hearts",
+        "keywords": "",
+        "description": "Common Gloopfish have three hearts arranged in a triangle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "The largest recorded Common Gloopfish was 1.2 meters long.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fish",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Fish live in water.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Common Gloopfish",
+        "type": "creature",
+        "description": "The Common Gloopfish is a species with a lifespan of 7 Galactic Standard Years (GSY), inhabiting methane lakes, and exhibiting unique biological traits.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fish",
+        "type": "creature",
+        "description": "Fish live in water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Water",
+        "type": "naturalobject",
+        "description": "Water is essential for life.<SEP>Water is the habitat for fish and is used by elephants to drink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Razorfin",
+        "type": "creature",
+        "description": "Razorfin is a predator of the Gloopfish.",
+        "rank": 0.0
+      },
+      {
+        "name": "Titanis Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ultrasonic Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Scales",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gulper",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Hearts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geothermal Converters",
+        "type": "",
+        "description": "Geothermal Converters are power sources for Sand-Crawlers, drawing heat from deep underground vents.",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Carpenter",
+        "type": "",
+        "description": "The carpenter uses tools like a hammer and a saw to work with nails and wood.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Common Gloopfish inhabit the methane lakes of Titanis Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Razorfin is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Eggs",
+        "keywords": "",
+        "description": "Common Gloopfish lay exactly 33 eggs each mating season.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "Common Gloopfish scales are used in traditional medicine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Gulper is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Hearts",
+        "keywords": "",
+        "description": "Common Gloopfish have three hearts arranged in a triangle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "The largest recorded Common Gloopfish was 1.2 meters long.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fish",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Fish live in water.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geothermal Converters",
+        "tgt": "Fish",
+        "keywords": "",
+        "description": "The Grand Dream-Hall displays the finest dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "User Interface",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "'Consciousness-Nodes' anchor 'Thought-Cables' to maintain the stability of Astral 'Mind-Bridges'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Carpenter",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "Power-Ink glows when magical energy flows through it.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:13:06.035290",
+  "llm_calls": 201,
+  "mode": "ft"
+}

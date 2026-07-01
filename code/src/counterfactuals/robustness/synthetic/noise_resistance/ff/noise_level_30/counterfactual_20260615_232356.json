@@ -1,0 +1,325 @@
+{
+  "question": "What is the total number of plays for the most critically appreciated musician in the Crystalline Sound Weaving genre?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "add_node",
+      "Seraphina"
+    ],
+    [
+      "add_edge",
+      [
+        "Crystalline Sound Weaving",
+        "Seraphina"
+      ]
+    ],
+    [
+      "delete_edge",
+      [
+        "Crystalline Sound Weaving",
+        "Harmonia"
+      ]
+    ]
+  ],
+  "cost": 5.469932675361633,
+  "answers": {
+    "ground_truth": "The total number of plays for Seraphina is approximately 450 million.",
+    "original": "Harmonia, the most critically appreciated musician in the Crystalline Sound Weaving genre, has over 700 million plays across all platforms.",
+    "perturbed": "Seraphina, the most critically appreciated musician in the Crystalline Sound Weaving genre, has approximately 450 million plays across all platforms.",
+    "similarity": 0.725941
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Zorblaxian Cuisine"
+      ],
+      [
+        "add_edge",
+        [
+          "Zorblaxian Cuisine",
+          "Crystalline Sound Weaving"
+        ],
+        {
+          "weight": 1.0,
+          "description": "When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+          "keywords": "rapid dissipation",
+          "source_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267",
+          "file_path": "unknown_source",
+          "created_at": 1776379432,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Sylvanian Grove-Cloth"
+      ],
+      [
+        "add_edge",
+        [
+          "Sylvanian Grove-Cloth",
+          "Resonant Musicians"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+          "keywords": "consultation,interpretation",
+          "source_id": "chunk-c4bf398cd18967203857d7b2995f452a",
+          "file_path": "unknown_source",
+          "created_at": 1776367301,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Musicians",
+        "type": "person",
+        "description": "Resonant musicians are celebrated across many worlds for their musical abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelred",
+        "type": "person",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre, with approximately 200 million plays across all platforms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Classical Music",
+        "type": "content",
+        "description": "Classical music is enjoyed by the person mentioned.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Sound Weaving",
+        "type": "genre",
+        "description": "Crystalline Sound Weaving is a complex and critically acclaimed music genre originating on the planet Harmonius, known for its intricate sonic patterns and harmonic structure.<SEP>Crystalline Sound Weaving is a music genre known for its intricate sonic patterns and harmonic structure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmonia",
+        "type": "person",
+        "description": "Harmonia is a musician in the Crystalline Sound Weaving genre, with over 700 million plays across all platforms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonant Society",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Musicians",
+        "tgt": "Resonant Society",
+        "keywords": "",
+        "description": "Resonant musicians are celebrated in Resonant society, which values musical harmony.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelred",
+        "tgt": "Crystalline Sound Weaving",
+        "keywords": "",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Sound Weaving",
+        "tgt": "Harmonia",
+        "keywords": "",
+        "description": "Harmonia is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Musicians",
+        "type": "person",
+        "description": "Resonant musicians are celebrated across many worlds for their musical abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelred",
+        "type": "person",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre, with approximately 200 million plays across all platforms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Classical Music",
+        "type": "content",
+        "description": "Classical music is enjoyed by the person mentioned.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Sound Weaving",
+        "type": "genre",
+        "description": "Crystalline Sound Weaving is a complex and critically acclaimed music genre originating on the planet Harmonius, known for its intricate sonic patterns and harmonic structure.<SEP>Crystalline Sound Weaving is a music genre known for its intricate sonic patterns and harmonic structure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonant Society",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Grove-Cloth",
+        "type": "",
+        "description": "Sylvanian Grove-Cloth is a fabric made from Whisper-Willow fibers and Moon-Silk, known for its supernatural durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Seraphina",
+        "type": "",
+        "description": "Seraphina is a musician widely appreciated by critics within the Crystalline Sound Weaving genre, with approximately 450 million plays across all platforms.<SEP>Seraphina is an actor in Aethelon's film and stage sectors, known for preferring artistically fulfilling roles.<SEP>Seraphina is a musician widely appreciated by critics in the Crystalline Sound Weaving genre, with approximately 450 million plays across all platforms.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Musicians",
+        "tgt": "Resonant Society",
+        "keywords": "",
+        "description": "Resonant musicians are celebrated in Resonant society, which values musical harmony.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelred",
+        "tgt": "Crystalline Sound Weaving",
+        "keywords": "",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Sound Weaving",
+        "tgt": "Seraphina",
+        "keywords": "critical appreciation,genre,musical genre,musician",
+        "description": "Seraphina is widely appreciated by critics within the Crystalline Sound Weaving genre.<SEP>Seraphina is widely appreciated by critics within the Crystalline Sound Weaving genre.",
+        "weight": 2.0
+      },
+      {
+        "src": "Zorblaxian Cuisine",
+        "tgt": "Crystalline Sound Weaving",
+        "keywords": "rapid dissipation",
+        "description": "When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+        "weight": 1.0
+      },
+      {
+        "src": "Sylvanian Grove-Cloth",
+        "tgt": "Resonant Musicians",
+        "keywords": "consultation,interpretation",
+        "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Musicians",
+        "type": "person",
+        "description": "Resonant musicians are celebrated across many worlds for their musical abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelred",
+        "type": "person",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre, with approximately 200 million plays across all platforms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Classical Music",
+        "type": "content",
+        "description": "Classical music is enjoyed by the person mentioned.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Sound Weaving",
+        "type": "genre",
+        "description": "Crystalline Sound Weaving is a complex and critically acclaimed music genre originating on the planet Harmonius, known for its intricate sonic patterns and harmonic structure.<SEP>Crystalline Sound Weaving is a music genre known for its intricate sonic patterns and harmonic structure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmonia",
+        "type": "person",
+        "description": "Harmonia is a musician in the Crystalline Sound Weaving genre, with over 700 million plays across all platforms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonant Society",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Grove-Cloth",
+        "type": "",
+        "description": "Sylvanian Grove-Cloth is a fabric made from Whisper-Willow fibers and Moon-Silk, known for its supernatural durability.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Musicians",
+        "tgt": "Resonant Society",
+        "keywords": "",
+        "description": "Resonant musicians are celebrated in Resonant society, which values musical harmony.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelred",
+        "tgt": "Crystalline Sound Weaving",
+        "keywords": "",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Sound Weaving",
+        "tgt": "Harmonia",
+        "keywords": "",
+        "description": "Harmonia is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxian Cuisine",
+        "tgt": "Crystalline Sound Weaving",
+        "keywords": "",
+        "description": "When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Grove-Cloth",
+        "tgt": "Resonant Musicians",
+        "keywords": "",
+        "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:23:56.703834",
+  "llm_calls": 94,
+  "mode": "ff"
+}

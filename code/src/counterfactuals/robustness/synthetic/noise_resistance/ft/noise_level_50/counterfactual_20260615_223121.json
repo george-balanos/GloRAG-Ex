@@ -1,0 +1,429 @@
+{
+  "question": "What are the two core elements that power a Zephyrian 'Storm-Engine'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Thunder-Stone"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "A Zephyrian 'Storm-Engine' is powered by 'Lightning Essence' and 'Thunder-Stone'.",
+    "original": "The two core elements that power a Zephyrian Storm-Engine are Lightning Essence and Thunder-Stone.",
+    "perturbed": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+    "similarity": 0.776386
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Prismarian Apprentices"
+      ],
+      [
+        "add_edge",
+        [
+          "Prismarian Apprentices",
+          "Lightning Essence"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+          "keywords": "craftsmanship,material composition",
+          "source_id": "chunk-df225153d9892c14a4f59cb36a4fdc52",
+          "file_path": "unknown_source",
+          "created_at": 1776369463,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Floopy Rays"
+      ],
+      [
+        "add_edge",
+        [
+          "Floopy Rays",
+          "Atmospheric Storms"
+        ],
+        {
+          "weight": 2.0,
+          "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+          "keywords": "trade,transportation",
+          "source_id": "chunk-f3e0255acd306a008e3e3105349e4c77<SEP>chunk-9acebf47b79ece594ce12de5cac976da",
+          "file_path": "unknown_source",
+          "created_at": 1776379187,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Critical Reviews"
+      ],
+      [
+        "add_edge",
+        [
+          "Critical Reviews",
+          "Atmospheric Storms"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Master artisans craft Echo-Lenses.",
+          "keywords": "crafting,creation",
+          "source_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e",
+          "file_path": "unknown_source",
+          "created_at": 1776369136,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Blimpton"
+      ],
+      [
+        "add_edge",
+        [
+          "Blimpton",
+          "Atmospheric Storms"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Whirlwind-Crystal hums with kinetic energy, contributing to the perpetual spinning motion of Spiral-Blades.",
+          "keywords": "energy,material property",
+          "source_id": "chunk-ff92dbc05d0cbedece06bc3944fc2127",
+          "file_path": "unknown_source",
+          "created_at": 1776371103,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thunder-Stone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      },
+      {
+        "src": "Thunder-Stone",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "Thunder-Stone is used to channel and stabilize the Lightning Essence in the Storm-Engine.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Prismarian Apprentices",
+        "type": "",
+        "description": "Prismarian apprentices learn color theory before forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Floopy Rays",
+        "type": "",
+        "description": "Floopy rays are a type of radiation or energy that shield generators protect against.",
+        "rank": 0.0
+      },
+      {
+        "name": "Critical Reviews",
+        "type": "",
+        "description": "Critical reviews in the Crystalline Sound Weaving scene focus on the intricacy of sonic patterns and harmonic structure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimpton",
+        "type": "",
+        "description": "Blimpton is a planet with a population of approximately 3.2 billion, a binary star system, and unique cultural and physical characteristics.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prismarian Apprentices",
+        "tgt": "Lightning Essence",
+        "keywords": "craftsmanship,material composition",
+        "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+        "weight": 1.0
+      },
+      {
+        "src": "Floopy Rays",
+        "tgt": "Atmospheric Storms",
+        "keywords": "trade,transportation",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 2.0
+      },
+      {
+        "src": "Critical Reviews",
+        "tgt": "Atmospheric Storms",
+        "keywords": "crafting,creation",
+        "description": "Master artisans craft Echo-Lenses.",
+        "weight": 1.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Atmospheric Storms",
+        "keywords": "energy,material property",
+        "description": "Whirlwind-Crystal hums with kinetic energy, contributing to the perpetual spinning motion of Spiral-Blades.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thunder-Stone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Prismarian Apprentices",
+        "type": "",
+        "description": "Prismarian apprentices learn color theory before forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Floopy Rays",
+        "type": "",
+        "description": "Floopy rays are a type of radiation or energy that shield generators protect against.",
+        "rank": 0.0
+      },
+      {
+        "name": "Critical Reviews",
+        "type": "",
+        "description": "Critical reviews in the Crystalline Sound Weaving scene focus on the intricacy of sonic patterns and harmonic structure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimpton",
+        "type": "",
+        "description": "Blimpton is a planet with a population of approximately 3.2 billion, a binary star system, and unique cultural and physical characteristics.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      },
+      {
+        "src": "Thunder-Stone",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "Thunder-Stone is used to channel and stabilize the Lightning Essence in the Storm-Engine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prismarian Apprentices",
+        "tgt": "Lightning Essence",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floopy Rays",
+        "tgt": "Atmospheric Storms",
+        "keywords": "",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Critical Reviews",
+        "tgt": "Atmospheric Storms",
+        "keywords": "",
+        "description": "Master artisans craft Echo-Lenses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Atmospheric Storms",
+        "keywords": "",
+        "description": "Whirlwind-Crystal hums with kinetic energy, contributing to the perpetual spinning motion of Spiral-Blades.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:31:21.000819",
+  "llm_calls": 2,
+  "mode": "ft"
+}

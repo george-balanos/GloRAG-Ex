@@ -1,0 +1,303 @@
+{
+  "question": "What are the roles or professions of Elara Vayne and Jax Korden?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Jax Korden"
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+    "original": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+    "perturbed": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+    "similarity": 0.766982
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geological Formations"
+      ],
+      [
+        "add_edge",
+        [
+          "Geological Formations",
+          "Acting Guilds"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Dimension-Rifts create temporary doorways between worlds.",
+          "keywords": "creation,portals",
+          "source_id": "chunk-856633022d5e5030b7095161d9c2ded2",
+          "file_path": "unknown_source",
+          "created_at": 1776372371,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Jax Korden",
+        "type": "person",
+        "description": "Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Jax Korden",
+        "keywords": "",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "Geological formations are rare locations where Aethelite is found.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Formations",
+        "tgt": "Acting Guilds",
+        "keywords": "creation,portals",
+        "description": "Dimension-Rifts create temporary doorways between worlds.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Jax Korden",
+        "type": "person",
+        "description": "Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "Geological formations are rare locations where Aethelite is found.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Jax Korden",
+        "keywords": "",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Formations",
+        "tgt": "Acting Guilds",
+        "keywords": "",
+        "description": "Dimension-Rifts create temporary doorways between worlds.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:48:38.008841",
+  "llm_calls": 3,
+  "mode": "ft"
+}

@@ -1,0 +1,449 @@
+{
+  "question": "What is the energy source of the massive orbital platform known as the 'Aegis Station'?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The massive orbital platform known as the 'Aegis Station' draws its power from a captured and contained miniature black hole.",
+    "original": "The Aegis Station draws its power from a captured and contained miniature black hole.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Consciousness-Nodes"
+      ],
+      [
+        "add_edge",
+        [
+          "Consciousness-Nodes",
+          "Planetary Defense"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Pyralia orbits very close to K'tharr Prime and is volcanically active.<SEP>Pyralia orbits very close to K'tharr Prime within the K'tharr System.",
+          "keywords": "orbital dynamics,orbital relationship,stellar system,volcanic activity",
+          "source_id": "chunk-a1d086fa29bddbf458099ee779c68438<SEP>chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379725,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Petrified Sunlight"
+      ],
+      [
+        "add_edge",
+        [
+          "Petrified Sunlight",
+          "Cutting-Edge Technology"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Jormund orbits K'tharr Prime within the K'tharr System.<SEP>Jormund orbits K'tharr Prime within the K'tharr System.",
+          "keywords": "celestial body,orbital dynamics,orbital relationship,stellar system",
+          "source_id": "chunk-a1d086fa29bddbf458099ee779c68438<SEP>chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379724,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Growth-Force"
+      ],
+      [
+        "add_edge",
+        [
+          "Growth-Force",
+          "Containment Fields"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Gleepglorp originates from planet Xylar.",
+          "keywords": "habitat,origin",
+          "source_id": "chunk-ca1ab38dd085858276b097adace00445",
+          "file_path": "unknown_source",
+          "created_at": 1776367815,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Central-Hub"
+      ],
+      [
+        "add_edge",
+        [
+          "Central-Hub",
+          "Containment Fields"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The family went to the beach on Saturday.",
+          "keywords": "activity,recreation",
+          "source_id": "chunk-1d68c5e141612935adde70191b543400",
+          "file_path": "unknown_source",
+          "created_at": 1776367541,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Glow-Geodes"
+      ],
+      [
+        "add_edge",
+        [
+          "Glow-Geodes",
+          "Miniature Black Hole"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+          "keywords": "crafting,material",
+          "source_id": "chunk-36c90a6ac7cf796320786dcff63fe321",
+          "file_path": "unknown_source",
+          "created_at": 1776370845,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 10,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "artifact",
+        "description": "Orbital platforms are structures positioned in orbit around planets, with the Aegis Station being one example dedicated to planetary defense.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "concept",
+        "description": "Hawking radiation is the method by which the Aegis Station draws power from the contained miniature black hole.<SEP>Hawking Radiation is the energy derived from a miniature black hole, used to power Aegis Station.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "artifact",
+        "description": "Orbital platforms are structures positioned in orbit around planets, with the Aegis Station being one example dedicated to planetary defense.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "concept",
+        "description": "Hawking radiation is the method by which the Aegis Station draws power from the contained miniature black hole.<SEP>Hawking Radiation is the energy derived from a miniature black hole, used to power Aegis Station.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Consciousness-Nodes",
+        "type": "",
+        "description": "'Consciousness-Nodes' are used to anchor 'Thought-Cables' and maintain stable psychic connections, pulsing with regular mental rhythms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Growth-Force",
+        "type": "",
+        "description": "Growth-Force is a power that can accelerate plant development and healing, making seeds sprout in seconds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central-Hub",
+        "type": "",
+        "description": "The Central-Hub is a location that connects all major Astral cities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Geodes",
+        "type": "",
+        "description": "Glow-Geodes are geodes that are crushed to create the powder used in Lumin-Ink.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Consciousness-Nodes",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Pyralia orbits very close to K'tharr Prime and is volcanically active.<SEP>Pyralia orbits very close to K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "Jormund orbits K'tharr Prime within the K'tharr System.<SEP>Jormund orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Growth-Force",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Gleepglorp originates from planet Xylar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central-Hub",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The family went to the beach on Saturday.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Geodes",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:01:59.812394",
+  "llm_calls": 201,
+  "mode": "ft"
+}

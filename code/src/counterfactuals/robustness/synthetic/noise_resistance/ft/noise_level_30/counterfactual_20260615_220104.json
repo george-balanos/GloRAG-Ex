@@ -1,0 +1,281 @@
+{
+  "question": "What are the two essential materials for Vortexian 'Spiral-Blades'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Vortexian Spiral-Blades"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "Vortexian 'Spiral-Blades' are made from 'Cyclone-Steel' and 'Whirlwind-Crystal'.",
+    "original": "Vortexian Spiral-Blades are forged from Cyclone-Steel and edged with Whirlwind-Crystal.",
+    "perturbed": "The two essential materials for Vortexian 'Spiral-Blades' are the Spiral-Blades themselves and the Whirlwind-Crystal used to edge them.",
+    "similarity": 0.835418
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Blimptonian Greeting"
+      ],
+      [
+        "add_edge",
+        [
+          "Blimptonian Greeting",
+          "Whirlwind-Crystal"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Shield generators protect against space debris and Floopy rays.",
+          "keywords": "defense,protection",
+          "source_id": "chunk-e715408cde7e74b18571e02fbbf5a118",
+          "file_path": "unknown_source",
+          "created_at": 1776368595,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Great Forge of Valor"
+      ],
+      [
+        "add_edge",
+        [
+          "Great Forge of Valor",
+          "Whirlwind-Crystal"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+          "keywords": "atmospheric composition,regulatory content",
+          "source_id": "chunk-0d34f7ecce8468295178f356ec81f392",
+          "file_path": "unknown_source",
+          "created_at": 1776373471,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Spiral-Blades",
+        "type": "artifact",
+        "description": "Vortexian Spiral-Blades are weapons forged from Cyclone-Steel and edged with Whirlwind-Crystal, designed to maintain a perpetual spinning motion.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlwind-Crystal",
+        "type": "artifact",
+        "description": "Whirlwind-Crystal is a material used to edge Spiral-Blades, maintaining their perpetual spinning motion and humming with kinetic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cyclone-Steel",
+        "type": "artifact",
+        "description": "Cyclone-Steel is a material that naturally curves in helical patterns and is formed during atmospheric storms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are edged with Whirlwind-Crystal to maintain their perpetual spinning motion.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "Vortexian Warriors are masters of rotational combat using Spiral-Blades.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cyclone-Steel",
+        "tgt": "Vortexian Spiral-Blades",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are forged from Cyclone-Steel, which naturally curves in helical patterns.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlwind-Crystal",
+        "type": "artifact",
+        "description": "Whirlwind-Crystal is a material used to edge Spiral-Blades, maintaining their perpetual spinning motion and humming with kinetic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Greeting",
+        "type": "",
+        "description": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Forge of Valor",
+        "type": "",
+        "description": "The Great Forge of Valor burns with eternal flames.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimptonian Greeting",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "defense,protection",
+        "description": "Shield generators protect against space debris and Floopy rays.",
+        "weight": 1.0
+      },
+      {
+        "src": "Great Forge of Valor",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "atmospheric composition,regulatory content",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Vortexian Spiral-Blades",
+        "type": "artifact",
+        "description": "Vortexian Spiral-Blades are weapons forged from Cyclone-Steel and edged with Whirlwind-Crystal, designed to maintain a perpetual spinning motion.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortexian Warriors",
+        "type": "person",
+        "description": "Vortexian Warriors are skilled fighters who specialize in rotational combat using Spiral-Blades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlwind-Crystal",
+        "type": "artifact",
+        "description": "Whirlwind-Crystal is a material used to edge Spiral-Blades, maintaining their perpetual spinning motion and humming with kinetic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cyclone-Steel",
+        "type": "artifact",
+        "description": "Cyclone-Steel is a material that naturally curves in helical patterns and is formed during atmospheric storms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Greeting",
+        "type": "",
+        "description": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Forge of Valor",
+        "type": "",
+        "description": "The Great Forge of Valor burns with eternal flames.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are edged with Whirlwind-Crystal to maintain their perpetual spinning motion.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vortexian Spiral-Blades",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "Vortexian Warriors are masters of rotational combat using Spiral-Blades.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cyclone-Steel",
+        "tgt": "Vortexian Spiral-Blades",
+        "keywords": "",
+        "description": "Vortexian Spiral-Blades are forged from Cyclone-Steel, which naturally curves in helical patterns.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spiral-Academy",
+        "tgt": "Vortexian Warriors",
+        "keywords": "",
+        "description": "The Spiral-Academy teaches advanced blade techniques to Vortexian Warriors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimptonian Greeting",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "",
+        "description": "Shield generators protect against space debris and Floopy rays.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Forge of Valor",
+        "tgt": "Whirlwind-Crystal",
+        "keywords": "",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:01:04.766572",
+  "llm_calls": 24,
+  "mode": "ft"
+}

@@ -1,0 +1,203 @@
+{
+  "question": "What is the primary ingredient of the most famous healing potion?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0.0,
+  "answers": {
+    "ground_truth": "The primary ingredient of the healing potion known as 'Sunpetal Balm' is 'Glow-Moss'.",
+    "original": "The primary ingredient of the most famous healing potion, Moon-Dew Salve, is concentrated nectar derived from the Silver-Lotus.",
+    "perturbed": "The primary ingredient of the most famous healing potion, Sunpetal Balm, is not explicitly stated in the provided context.",
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Bio-Harmonic Feedback Systems"
+      ],
+      [
+        "add_edge",
+        [
+          "Bio-Harmonic Feedback Systems",
+          "Sunpetal Balm"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Memory fragmentation is a symptom of Hyper-Chrono Displacement.",
+          "keywords": "condition,symptom",
+          "source_id": "chunk-bab0a9eff9a352ce79eabcf3c3edd565",
+          "file_path": "unknown_source",
+          "created_at": 1776373811,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 0,
+    "noise_robust": false,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Dew Salve",
+        "type": "artifact",
+        "description": "Moon-Dew Salve is a potion that requires concentrated nectar derived from the Silver-Lotus.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "naturalobject",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Dew Salve",
+        "tgt": "Silver-Lotus",
+        "keywords": "",
+        "description": "Moon-Dew Salve requires concentrated nectar derived from the Silver-Lotus as its main component.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Dew Salve",
+        "type": "artifact",
+        "description": "Moon-Dew Salve is a potion that requires concentrated nectar derived from the Silver-Lotus.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "naturalobject",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Dew Salve",
+        "tgt": "Silver-Lotus",
+        "keywords": "",
+        "description": "Moon-Dew Salve requires concentrated nectar derived from the Silver-Lotus as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Sunpetal Balm",
+        "keywords": "condition,symptom",
+        "description": "Memory fragmentation is a symptom of Hyper-Chrono Displacement.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Dew Salve",
+        "type": "artifact",
+        "description": "Moon-Dew Salve is a potion that requires concentrated nectar derived from the Silver-Lotus.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "naturalobject",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Dew Salve",
+        "tgt": "Silver-Lotus",
+        "keywords": "",
+        "description": "Moon-Dew Salve requires concentrated nectar derived from the Silver-Lotus as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Memory fragmentation is a symptom of Hyper-Chrono Displacement.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:24:52.780918",
+  "llm_calls": 1,
+  "mode": "ff"
+}

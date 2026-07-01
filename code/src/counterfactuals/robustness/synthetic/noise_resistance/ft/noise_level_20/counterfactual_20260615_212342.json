@@ -1,0 +1,269 @@
+{
+  "question": "What are the two primary elements used in Prismarian 'Light-Forging'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Light-Forging"
+    ]
+  ],
+  "cost": 9,
+  "answers": {
+    "ground_truth": "Prismarian 'Light-Forging' uses 'Rainbow-Essence' and 'Photon-Hammers'.",
+    "original": "The two primary elements used in Prismarian 'Light-Forging' are Rainbow-Essence and Photon-Hammers.",
+    "perturbed": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+    "similarity": 0.758692
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Lions"
+      ],
+      [
+        "add_edge",
+        [
+          "Lions",
+          "Rainbow-Essence"
+        ],
+        {
+          "weight": 2.0,
+          "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+          "keywords": "discovery,location",
+          "source_id": "chunk-329c135315672dfc3e5aacb8955dd9bb<SEP>chunk-f9555b7aefebccc997ac08527d4eb7ee",
+          "file_path": "unknown_source",
+          "created_at": 1776378671,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Photon-Hammers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Light-Forging requires Rainbow-Essence as a primary material.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Prismarian",
+        "keywords": "",
+        "description": "Prismarians practice Light-Forging as a cultural technique.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Photon-Hammers",
+        "keywords": "",
+        "description": "Photon-Hammers are used in the Light-Forging process to manipulate light.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Light-Smiths",
+        "keywords": "",
+        "description": "Light-Smiths are legendary craftsmen who specialize in Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lions",
+        "type": "",
+        "description": "Lions are fed by the zookeeper.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lions",
+        "tgt": "Rainbow-Essence",
+        "keywords": "discovery,location",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Photon-Hammers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lions",
+        "type": "",
+        "description": "Lions are fed by the zookeeper.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Light-Forging requires Rainbow-Essence as a primary material.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Prismarian",
+        "keywords": "",
+        "description": "Prismarians practice Light-Forging as a cultural technique.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Photon-Hammers",
+        "keywords": "",
+        "description": "Photon-Hammers are used in the Light-Forging process to manipulate light.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Light-Smiths",
+        "keywords": "",
+        "description": "Light-Smiths are legendary craftsmen who specialize in Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lions",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:23:42.205552",
+  "llm_calls": 106,
+  "mode": "ft"
+}

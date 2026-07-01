@@ -1,0 +1,418 @@
+{
+  "question": "What two sensory inputs does the 'Pathfinder Helm' integrate for Xylotian explorers?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Echo-Location Sonar"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The 'Pathfinder Helm' integrates 'Echo-Location Sonar' for physical mapping and 'Bio-Sign Scanners' for detecting life forms.",
+    "original": "The Pathfinder Helm integrates Echo-Location Sonar and Bio-Sign Scanners for Xylotian explorers.",
+    "perturbed": "The Pathfinder Helm integrates Bio-Sign Scanners to detect living organisms and provides basic atmospheric analysis.",
+    "similarity": 0.626224
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Shopping List"
+      ],
+      [
+        "add_edge",
+        [
+          "Shopping List",
+          "Crystal-Quartz"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Dual-Resonance Crystals are found in Crystal Caves, which are considered sacred by some Xylotians.",
+          "keywords": "location,sacred sites",
+          "source_id": "chunk-3ff616f8f6c6c72f501bacf6a84fb7d1",
+          "file_path": "unknown_source",
+          "created_at": 1776366495,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Containment Systems"
+      ],
+      [
+        "add_edge",
+        [
+          "Containment Systems",
+          "Pathfinder Helm"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Zorpian ale is a popular drink in the Outer Rim.",
+          "keywords": "consumption,popularity",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Location Sonar",
+        "type": "artifact",
+        "description": "Echo-Location Sonar is a technology incorporated into the Pathfinder Helm to map out physical surroundings in zero visibility.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Location Sonar",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shopping List",
+        "type": "",
+        "description": "A shopping list is being made by her.",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Systems",
+        "type": "",
+        "description": "The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shopping List",
+        "tgt": "Crystal-Quartz",
+        "keywords": "location,sacred sites",
+        "description": "Dual-Resonance Crystals are found in Crystal Caves, which are considered sacred by some Xylotians.",
+        "weight": 1.0
+      },
+      {
+        "src": "Containment Systems",
+        "tgt": "Pathfinder Helm",
+        "keywords": "consumption,popularity",
+        "description": "Zorpian ale is a popular drink in the Outer Rim.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Location Sonar",
+        "type": "artifact",
+        "description": "Echo-Location Sonar is a technology incorporated into the Pathfinder Helm to map out physical surroundings in zero visibility.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shopping List",
+        "type": "",
+        "description": "A shopping list is being made by her.",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Systems",
+        "type": "",
+        "description": "The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Location Sonar",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shopping List",
+        "tgt": "Crystal-Quartz",
+        "keywords": "",
+        "description": "Dual-Resonance Crystals are found in Crystal Caves, which are considered sacred by some Xylotians.",
+        "weight": 0.0
+      },
+      {
+        "src": "Containment Systems",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Zorpian ale is a popular drink in the Outer Rim.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:17:41.168304",
+  "llm_calls": 4,
+  "mode": "ft"
+}

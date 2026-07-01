@@ -1,0 +1,510 @@
+{
+  "question": "What two sensory inputs does the 'Pathfinder Helm' integrate for Xylotian explorers?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Echo-Location Sonar"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The 'Pathfinder Helm' integrates 'Echo-Location Sonar' for physical mapping and 'Bio-Sign Scanners' for detecting life forms.",
+    "original": "The Pathfinder Helm integrates Echo-Location Sonar and Bio-Sign Scanners for Xylotian explorers.",
+    "perturbed": "The Pathfinder Helm integrates Bio-Sign Scanners to detect living organisms and provides basic atmospheric analysis.",
+    "similarity": 0.626224
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Shopping List"
+      ],
+      [
+        "add_edge",
+        [
+          "Shopping List",
+          "Pathfinder Helm"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Zorpian ale is a popular drink in the Outer Rim.",
+          "keywords": "consumption,popularity",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Containment Systems"
+      ],
+      [
+        "add_edge",
+        [
+          "Containment Systems",
+          "Atmospheric Analysis"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Echo-Bats emit a sonic screech to disorient threats.",
+          "keywords": "defense mechanism,predator disorientation",
+          "source_id": "chunk-ff80068803f637b2a8fc56713b5d826a",
+          "file_path": "unknown_source",
+          "created_at": 1776378120,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Temporary Doorways"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporary Doorways",
+          "Central Command Unit"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Solarian Sun-Dancers are part of Solarian Culture, which worships the power of the sun.",
+          "keywords": "cultural practice,worship",
+          "source_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776371512,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Xylotian Children"
+      ],
+      [
+        "add_edge",
+        [
+          "Xylotian Children",
+          "Pathfinder Helm"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Eternal-Winter has lasted for centuries in Glacia.",
+          "keywords": "climate,duration",
+          "source_id": "chunk-ad901faf06a2cd13ee6b6629180f6ac5",
+          "file_path": "unknown_source",
+          "created_at": 1776370716,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Location Sonar",
+        "type": "artifact",
+        "description": "Echo-Location Sonar is a technology incorporated into the Pathfinder Helm to map out physical surroundings in zero visibility.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Location Sonar",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shopping List",
+        "type": "",
+        "description": "A shopping list is being made by her.",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Systems",
+        "type": "",
+        "description": "The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporary Doorways",
+        "type": "",
+        "description": "Dimension-Rifts create temporary doorways between worlds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Children",
+        "type": "",
+        "description": "Xylotian children are the players of the Star-Hopper Quest board game.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shopping List",
+        "tgt": "Pathfinder Helm",
+        "keywords": "consumption,popularity",
+        "description": "Zorpian ale is a popular drink in the Outer Rim.",
+        "weight": 1.0
+      },
+      {
+        "src": "Containment Systems",
+        "tgt": "Atmospheric Analysis",
+        "keywords": "defense mechanism,predator disorientation",
+        "description": "Echo-Bats emit a sonic screech to disorient threats.",
+        "weight": 1.0
+      },
+      {
+        "src": "Temporary Doorways",
+        "tgt": "Central Command Unit",
+        "keywords": "cultural practice,worship",
+        "description": "Solarian Sun-Dancers are part of Solarian Culture, which worships the power of the sun.",
+        "weight": 1.0
+      },
+      {
+        "src": "Xylotian Children",
+        "tgt": "Pathfinder Helm",
+        "keywords": "climate,duration",
+        "description": "Eternal-Winter has lasted for centuries in Glacia.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Location Sonar",
+        "type": "artifact",
+        "description": "Echo-Location Sonar is a technology incorporated into the Pathfinder Helm to map out physical surroundings in zero visibility.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shopping List",
+        "type": "",
+        "description": "A shopping list is being made by her.",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Systems",
+        "type": "",
+        "description": "The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporary Doorways",
+        "type": "",
+        "description": "Dimension-Rifts create temporary doorways between worlds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Children",
+        "type": "",
+        "description": "Xylotian children are the players of the Star-Hopper Quest board game.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Location Sonar",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shopping List",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Zorpian ale is a popular drink in the Outer Rim.",
+        "weight": 0.0
+      },
+      {
+        "src": "Containment Systems",
+        "tgt": "Atmospheric Analysis",
+        "keywords": "",
+        "description": "Echo-Bats emit a sonic screech to disorient threats.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporary Doorways",
+        "tgt": "Central Command Unit",
+        "keywords": "",
+        "description": "Solarian Sun-Dancers are part of Solarian Culture, which worships the power of the sun.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Children",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Eternal-Winter has lasted for centuries in Glacia.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:28:08.838288",
+  "llm_calls": 5,
+  "mode": "ft"
+}

@@ -1,0 +1,267 @@
+{
+  "question": "What is the primary function of a Zylosian Geo-Resonator?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Zylosian Geo-Resonator"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "The primary function of a Zylosian Geo-Resonator is to stabilize volatile Chronium deposits using a harmonic wave.",
+    "original": "The primary function of a Zylosian Geo-Resonator is to emit a harmonic wave that stabilizes volatile Chronium deposits during mining.",
+    "perturbed": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+    "similarity": 0.57127
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Chef Zorgon"
+      ],
+      [
+        "add_edge",
+        [
+          "Chef Zorgon",
+          "Radiation-Shielded Gear"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+          "keywords": "location,organization",
+          "source_id": "chunk-cadf738458aee0fda5ab49d869d42e52",
+          "file_path": "unknown_source",
+          "created_at": 1776380139,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Memory-Welding"
+      ],
+      [
+        "add_edge",
+        [
+          "Memory-Welding",
+          "Radiation-Shielded Gear"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Life-Wand rituals are performed during the spring equinox.",
+          "keywords": "rituals,timing",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zylosian Geo-Resonator",
+        "type": "artifact",
+        "description": "A Zylosian Geo-Resonator is a device used to emit a harmonic wave that stabilizes volatile Chronium deposits during mining.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronium Deposits",
+        "type": "naturalobject",
+        "description": "Chronium deposits are highly reactive resources found in the deep crust of planet Zylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylosian Geo-Resonator Model XR-7A",
+        "type": "artifact",
+        "description": "The Zylosian Geo-Resonator model XR-7A is a specific version of the Geo-Resonator that requires a standard Z-type power cell to operate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Z-Type Power Cell",
+        "type": "artifact",
+        "description": "A Z-type power cell is the power source required for the operation of the Zylosian Geo-Resonator model XR-7A.",
+        "rank": 0.0
+      },
+      {
+        "name": "Radiation-Shielded Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chronium Deposits",
+        "tgt": "Zylosian Geo-Resonator",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator emits a harmonic wave to stabilize volatile Chronium deposits during mining.",
+        "weight": 0.0
+      },
+      {
+        "src": "Z-Type Power Cell",
+        "tgt": "Zylosian Geo-Resonator Model XR-7A",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Radiation-Shielded Gear",
+        "tgt": "Zylosian Geo-Resonator",
+        "keywords": "",
+        "description": "Safety protocols mandate that all personnel wear radiation-shielded gear near a Geo-Resonator.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Zylosian Geo-Resonator Model XR-7A",
+        "type": "artifact",
+        "description": "The Zylosian Geo-Resonator model XR-7A is a specific version of the Geo-Resonator that requires a standard Z-type power cell to operate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Z-Type Power Cell",
+        "type": "artifact",
+        "description": "A Z-type power cell is the power source required for the operation of the Zylosian Geo-Resonator model XR-7A.",
+        "rank": 0.0
+      },
+      {
+        "name": "Radiation-Shielded Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chef Zorgon",
+        "type": "",
+        "description": "Chef Zorgon is a famous user of Phlorian Salt, known for their work at the Celestial Cafe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Welding",
+        "type": "",
+        "description": "Memory-Welding requires intense concentration and focus.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Z-Type Power Cell",
+        "tgt": "Zylosian Geo-Resonator Model XR-7A",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chef Zorgon",
+        "tgt": "Radiation-Shielded Gear",
+        "keywords": "location,organization",
+        "description": "Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "weight": 1.0
+      },
+      {
+        "src": "Memory-Welding",
+        "tgt": "Radiation-Shielded Gear",
+        "keywords": "rituals,timing",
+        "description": "Life-Wand rituals are performed during the spring equinox.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Zylosian Geo-Resonator",
+        "type": "artifact",
+        "description": "A Zylosian Geo-Resonator is a device used to emit a harmonic wave that stabilizes volatile Chronium deposits during mining.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronium Deposits",
+        "type": "naturalobject",
+        "description": "Chronium deposits are highly reactive resources found in the deep crust of planet Zylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylosian Geo-Resonator Model XR-7A",
+        "type": "artifact",
+        "description": "The Zylosian Geo-Resonator model XR-7A is a specific version of the Geo-Resonator that requires a standard Z-type power cell to operate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Z-Type Power Cell",
+        "type": "artifact",
+        "description": "A Z-type power cell is the power source required for the operation of the Zylosian Geo-Resonator model XR-7A.",
+        "rank": 0.0
+      },
+      {
+        "name": "Radiation-Shielded Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chef Zorgon",
+        "type": "",
+        "description": "Chef Zorgon is a famous user of Phlorian Salt, known for their work at the Celestial Cafe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Welding",
+        "type": "",
+        "description": "Memory-Welding requires intense concentration and focus.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chronium Deposits",
+        "tgt": "Zylosian Geo-Resonator",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator emits a harmonic wave to stabilize volatile Chronium deposits during mining.",
+        "weight": 0.0
+      },
+      {
+        "src": "Z-Type Power Cell",
+        "tgt": "Zylosian Geo-Resonator Model XR-7A",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Radiation-Shielded Gear",
+        "tgt": "Zylosian Geo-Resonator",
+        "keywords": "",
+        "description": "Safety protocols mandate that all personnel wear radiation-shielded gear near a Geo-Resonator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chef Zorgon",
+        "tgt": "Radiation-Shielded Gear",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Memory-Welding",
+        "tgt": "Radiation-Shielded Gear",
+        "keywords": "",
+        "description": "Life-Wand rituals are performed during the spring equinox.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:48:58.490571",
+  "llm_calls": 8,
+  "mode": "ft"
+}

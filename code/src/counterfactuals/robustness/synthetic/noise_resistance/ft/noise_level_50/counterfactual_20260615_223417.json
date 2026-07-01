@@ -1,0 +1,366 @@
+{
+  "question": "What two materials are essential for creating Sylvanian 'Grove-Cloth'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Sylvanian Grove-Cloth"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "Sylvanian 'Grove-Cloth' is made from 'Whisper-Willow' fibers and 'Moon-Silk'.",
+    "original": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree and Moon-Silk.",
+    "perturbed": "The two materials essential for creating Sylvanian 'Grove-Cloth' are Moon-Silk and the craftsmanship of the Forest-Weavers.",
+    "similarity": 0.853979
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Petrified Sunlight"
+      ],
+      [
+        "add_edge",
+        [
+          "Petrified Sunlight",
+          "Whisper-Willow Tree"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Grove-Keepers protect sacred woodland areas in Verdant forests.",
+          "keywords": "protection,sacred areas",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Pasta"
+      ],
+      [
+        "add_edge",
+        [
+          "Pasta",
+          "Moon-Silk"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Nebula-Yarn is spun from the raw material of stellar nurseries.",
+          "keywords": "cosmic crafting,raw material",
+          "source_id": "chunk-cc04677e1af4f916c4eebf1816fc0d16",
+          "file_path": "unknown_source",
+          "created_at": 1776372644,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Festival of Aerial Drones"
+      ],
+      [
+        "add_edge",
+        [
+          "Festival of Aerial Drones",
+          "Whisper-Willow Tree"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+          "keywords": "oversight,regulation",
+          "source_id": "chunk-5e2e2feb3a7fbc786fecc915f84cc620",
+          "file_path": "unknown_source",
+          "created_at": 1776372225,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sylvanian Grove-Cloth",
+        "type": "artifact",
+        "description": "Sylvanian Grove-Cloth is a fabric made from Whisper-Willow fibers and Moon-Silk, known for its supernatural durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "artifact",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whisper-Willow Tree",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sylvanian Grove-Cloth",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian garments are made from Grove-Cloth and worn by nobility.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Silk",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whisper-Willow Tree",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pasta",
+        "type": "",
+        "description": "Pasta is a dish served by the restaurant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Festival of Aerial Drones",
+        "type": "",
+        "description": "An event showcasing the latest Xylotian drone technology.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "protection,sacred areas",
+        "description": "Grove-Keepers protect sacred woodland areas in Verdant forests.",
+        "weight": 1.0
+      },
+      {
+        "src": "Pasta",
+        "tgt": "Moon-Silk",
+        "keywords": "cosmic crafting,raw material",
+        "description": "Nebula-Yarn is spun from the raw material of stellar nurseries.",
+        "weight": 1.0
+      },
+      {
+        "src": "Festival of Aerial Drones",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "oversight,regulation",
+        "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Sylvanian Grove-Cloth",
+        "type": "artifact",
+        "description": "Sylvanian Grove-Cloth is a fabric made from Whisper-Willow fibers and Moon-Silk, known for its supernatural durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "artifact",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whisper-Willow Tree",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pasta",
+        "type": "",
+        "description": "Pasta is a dish served by the restaurant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Festival of Aerial Drones",
+        "type": "",
+        "description": "An event showcasing the latest Xylotian drone technology.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sylvanian Grove-Cloth",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian garments are made from Grove-Cloth and worn by nobility.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Silk",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "",
+        "description": "Grove-Keepers protect sacred woodland areas in Verdant forests.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pasta",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Nebula-Yarn is spun from the raw material of stellar nurseries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Festival of Aerial Drones",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "",
+        "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:34:17.265579",
+  "llm_calls": 49,
+  "mode": "ft"
+}

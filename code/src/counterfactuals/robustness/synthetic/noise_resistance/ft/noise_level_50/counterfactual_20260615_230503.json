@@ -1,0 +1,444 @@
+{
+  "question": "What is the main function of the device recently discovered in desert ruins?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Chrono-Regulator",
+        "Desert Ruins"
+      ]
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "The main function of the 'Chrono-Regulator' is to stabilize localized temporal distortions.",
+    "original": "The main function of the device recently discovered in desert ruins is to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+    "perturbed": "The main function of the device recently discovered in desert ruins is to amplify and stabilize the Lightning Essence.",
+    "similarity": 0.674109
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Molten-Streams"
+      ],
+      [
+        "add_edge",
+        [
+          "Molten-Streams",
+          "The Great Library of Aethelgard"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+          "keywords": "energy source,stellar system",
+          "source_id": "chunk-7f5314f2ea2b2e09a54bf620954df4a3",
+          "file_path": "unknown_source",
+          "created_at": 1776377252,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Digital Performance Capture"
+      ],
+      [
+        "add_edge",
+        [
+          "Digital Performance Capture",
+          "Desert of Bones"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Thunder-Stone amplifies and stabilizes the Lightning Essence.",
+          "keywords": "energy amplification,stabilization",
+          "source_id": "chunk-dbfd518f3805f5b8ca795225dfe27c7e",
+          "file_path": "unknown_source",
+          "created_at": 1776368724,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Petrified Sunlight"
+      ],
+      [
+        "add_edge",
+        [
+          "Petrified Sunlight",
+          "Ancient Carvings"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Lumina Accords provide legal protection for species like the K'tharr.",
+          "keywords": "legal protection,species rights",
+          "source_id": "chunk-0d34f7ecce8468295178f356ec81f392",
+          "file_path": "unknown_source",
+          "created_at": 1776373471,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Light-Forging"
+      ],
+      [
+        "add_edge",
+        [
+          "Light-Forging",
+          "Font of Resonance"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+          "keywords": "emission,operation,sound emission",
+          "source_id": "chunk-d34e7860dd6c60808a4b14b0d675a828<SEP>chunk-85b7a26d96822c1293e19cca11323d34",
+          "file_path": "unknown_source",
+          "created_at": 1776378264,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Carvings",
+        "type": "artifact",
+        "description": "Ancient carvings surround the Font of Resonance, adding to its sacred nature.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Great Library of Aethelgard",
+        "type": "artifact",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Carvings",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "Ancient carvings surround the Font of Resonance.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Carvings",
+        "type": "artifact",
+        "description": "Ancient carvings surround the Font of Resonance, adding to its sacred nature.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Great Library of Aethelgard",
+        "type": "artifact",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Molten-Streams",
+        "type": "",
+        "description": "Molten-Streams are streams of liquid fire generated by Fire-Heart gems, reaching temperatures of several thousand degrees.",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture",
+        "type": "",
+        "description": "Digital performance capture is a technique used by actors in Celestia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Carvings",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "Ancient carvings surround the Font of Resonance.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Molten-Streams",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "energy source,stellar system",
+        "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+        "weight": 1.0
+      },
+      {
+        "src": "Digital Performance Capture",
+        "tgt": "Desert of Bones",
+        "keywords": "energy amplification,stabilization",
+        "description": "Thunder-Stone amplifies and stabilizes the Lightning Essence.",
+        "weight": 1.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Ancient Carvings",
+        "keywords": "legal protection,species rights",
+        "description": "The Lumina Accords provide legal protection for species like the K'tharr.",
+        "weight": 1.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Font of Resonance",
+        "keywords": "emission,operation,sound emission",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Carvings",
+        "type": "artifact",
+        "description": "Ancient carvings surround the Font of Resonance, adding to its sacred nature.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Great Library of Aethelgard",
+        "type": "artifact",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Molten-Streams",
+        "type": "",
+        "description": "Molten-Streams are streams of liquid fire generated by Fire-Heart gems, reaching temperatures of several thousand degrees.",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture",
+        "type": "",
+        "description": "Digital performance capture is a technique used by actors in Celestia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Carvings",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "Ancient carvings surround the Font of Resonance.<SEP>Ancient carvings surround the Font of Resonance, indicating its historical and cultural significance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Great Library of Aethelgard holds records dating back a thousand years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Molten-Streams",
+        "tgt": "The Great Library of Aethelgard",
+        "keywords": "",
+        "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Digital Performance Capture",
+        "tgt": "Desert of Bones",
+        "keywords": "",
+        "description": "Thunder-Stone amplifies and stabilizes the Lightning Essence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Ancient Carvings",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the K'tharr.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Font of Resonance",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:05:03.561442",
+  "llm_calls": 8,
+  "mode": "ft"
+}

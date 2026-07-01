@@ -1,0 +1,336 @@
+{
+  "question": "What are the two primary components of Terran 'Stone-Speaker' staffs?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Current-Crystals"
+    ],
+    [
+      "delete_node",
+      "Terran 'Stone-Speaker' Staffs"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Terran 'Stone-Speaker' staffs use 'Ancient-Heartwood' and 'Resonance-Stones'.",
+    "original": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone.",
+    "perturbed": "The two primary components of Terran 'Stone-Speaker' staffs are Ancient-Heartwood and Chronium.",
+    "similarity": 0.806662
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Current-Crystals"
+      ],
+      [
+        "add_edge",
+        [
+          "Current-Crystals",
+          "Resonance-Stone"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Nitros is valued for its unparalleled energy storage capacity.",
+          "keywords": "energy capacity",
+          "source_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267",
+          "file_path": "unknown_source",
+          "created_at": 1776379431,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Harmony-Bell Creation"
+      ],
+      [
+        "add_edge",
+        [
+          "Harmony-Bell Creation",
+          "Geological Forces"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Xandrian children are educated via dream-sharing, reflecting Xandria's cultural characteristics.",
+          "keywords": "cultural characteristic,educational method",
+          "source_id": "chunk-fa6a76de2e25798cb26a401b39379d4d",
+          "file_path": "unknown_source",
+          "created_at": 1776374993,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Chronium"
+      ],
+      [
+        "add_edge",
+        [
+          "Chronium",
+          "Ancient-Heartwood"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Nitros is valued for its unparalleled energy storage capacity.",
+          "keywords": "energy capacity",
+          "source_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267",
+          "file_path": "unknown_source",
+          "created_at": 1776379431,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Terran 'Stone-Speaker' Staffs",
+        "type": "artifact",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone, amplifying earth-based magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient-Heartwood",
+        "type": "naturalobject",
+        "description": "Ancient-Heartwood is the heartwood of thousand-year-old mountain trees, retaining the wisdom of centuries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stone",
+        "type": "artifact",
+        "description": "Resonance-Stones are stones that amplify earth-based magic and are found in the deepest caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Forces",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient-Heartwood",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonance-Stone",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are crowned with a Resonance-Stone to amplify earth-based magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Forces",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs can command geological forces, causing earthquakes and avalanches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient-Heartwood",
+        "type": "naturalobject",
+        "description": "Ancient-Heartwood is the heartwood of thousand-year-old mountain trees, retaining the wisdom of centuries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Forces",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Bell Creation",
+        "type": "",
+        "description": "Harmony-Bell creation is a sacred art form involving the casting of Song-Bronze and inlaying of Echo-Gems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronium",
+        "type": "",
+        "description": "Chronium is a valuable resource found only in the deep crust of planet Zylos, characterized by its azure glow and mild radioactivity.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Bell Creation",
+        "tgt": "Geological Forces",
+        "keywords": "cultural characteristic,educational method",
+        "description": "Xandrian children are educated via dream-sharing, reflecting Xandria's cultural characteristics.",
+        "weight": 1.0
+      },
+      {
+        "src": "Chronium",
+        "tgt": "Ancient-Heartwood",
+        "keywords": "energy capacity",
+        "description": "Nitros is valued for its unparalleled energy storage capacity.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Terran 'Stone-Speaker' Staffs",
+        "type": "artifact",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood and crowned with a Resonance-Stone, amplifying earth-based magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient-Heartwood",
+        "type": "naturalobject",
+        "description": "Ancient-Heartwood is the heartwood of thousand-year-old mountain trees, retaining the wisdom of centuries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Magical Practices",
+        "type": "UNKNOWN",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stone",
+        "type": "artifact",
+        "description": "Resonance-Stones are stones that amplify earth-based magic and are found in the deepest caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Forces",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Current-Crystals",
+        "type": "",
+        "description": "Current-Crystals are crystals that enhance Whirlpool-Ore by channeling the power of ocean streams and glowing with aquamarine light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Bell Creation",
+        "type": "",
+        "description": "Harmony-Bell creation is a sacred art form involving the casting of Song-Bronze and inlaying of Echo-Gems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronium",
+        "type": "",
+        "description": "Chronium is a valuable resource found only in the deep crust of planet Zylos, characterized by its azure glow and mild radioactivity.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient-Heartwood",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are carved from Ancient-Heartwood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonance-Stone",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs are crowned with a Resonance-Stone to amplify earth-based magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Forces",
+        "tgt": "Terran 'Stone-Speaker' Staffs",
+        "keywords": "",
+        "description": "Terran 'Stone-Speaker' staffs can command geological forces, causing earthquakes and avalanches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Earth-Circle",
+        "tgt": "Terran Magical Practices",
+        "keywords": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "weight": 0.0
+      },
+      {
+        "src": "Current-Crystals",
+        "tgt": "Resonance-Stone",
+        "keywords": "",
+        "description": "Nitros is valued for its unparalleled energy storage capacity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Bell Creation",
+        "tgt": "Geological Forces",
+        "keywords": "",
+        "description": "Xandrian children are educated via dream-sharing, reflecting Xandria's cultural characteristics.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronium",
+        "tgt": "Ancient-Heartwood",
+        "keywords": "",
+        "description": "Nitros is valued for its unparalleled energy storage capacity.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:40:04.905396",
+  "llm_calls": 58,
+  "mode": "ft"
+}

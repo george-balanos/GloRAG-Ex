@@ -1,0 +1,164 @@
+{
+  "question": "What are the two fundamental components of Mechanoid 'Gear-Blood'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Mechanoid"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "Mechanoid 'Gear-Blood' consists of 'Liquid-Steel' and 'Spark-Motes'.",
+    "original": "Mechanoids are composed of Liquid-Steel and energized by Spark-Motes.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.015166
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Glow-Worms"
+      ],
+      [
+        "add_edge",
+        [
+          "Glow-Worms",
+          "Gear-Blood Circulation Systems"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Forge-Cities are the urban centers of Mechanoid society, reflecting their value of efficiency.",
+          "keywords": "efficiency,urban development",
+          "source_id": "chunk-6334b4c5624e548f71327321342d3140",
+          "file_path": "unknown_source",
+          "created_at": 1776369706,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gear-Blood",
+        "type": "data",
+        "description": "Gear-Blood is the fluid that flows through Mechanoid systems, requiring regular filtering to prevent contamination.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mechanoid",
+        "type": "creature",
+        "description": "Mechanoids are robotic beings primarily composed of Liquid-Steel and energized by Spark-Motes.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gear-Blood Circulation Systems",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids possess advanced Gear-Blood circulation systems that are marvels of engineering.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gear-Blood",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Worms",
+        "type": "",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Glow-Worms",
+        "tgt": "Gear-Blood Circulation Systems",
+        "keywords": "efficiency,urban development",
+        "description": "Forge-Cities are the urban centers of Mechanoid society, reflecting their value of efficiency.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gear-Blood",
+        "type": "data",
+        "description": "Gear-Blood is the fluid that flows through Mechanoid systems, requiring regular filtering to prevent contamination.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mechanoid",
+        "type": "creature",
+        "description": "Mechanoids are robotic beings primarily composed of Liquid-Steel and energized by Spark-Motes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Worms",
+        "type": "",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gear-Blood Circulation Systems",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids possess advanced Gear-Blood circulation systems that are marvels of engineering.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gear-Blood",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Gear-Blood Circulation Systems",
+        "keywords": "",
+        "description": "Forge-Cities are the urban centers of Mechanoid society, reflecting their value of efficiency.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:22:34.071620",
+  "llm_calls": 5,
+  "mode": "ft"
+}

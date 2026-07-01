@@ -1,0 +1,249 @@
+{
+  "question": "What is the primary ingredient of the most famous healing potion?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 0.0,
+  "answers": {
+    "ground_truth": "The primary ingredient of the healing potion known as 'Sunpetal Balm' is 'Glow-Moss'.",
+    "original": "The primary ingredient of the most famous healing potion, Moon-Dew Salve, is concentrated nectar derived from the Silver-Lotus.",
+    "perturbed": "The primary ingredient of the most famous healing potion, Sunpetal Balm, is not explicitly stated in the provided context.",
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Bio-Harmonic Feedback Systems"
+      ],
+      [
+        "add_edge",
+        [
+          "Bio-Harmonic Feedback Systems",
+          "Sunpetal Balm"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Vexian starships cannot operate in atmospheres.",
+          "keywords": "environment,operational limitations",
+          "source_id": "chunk-38c243bd67c7fea0e715de9999b806d1",
+          "file_path": "unknown_source",
+          "created_at": 1776374734,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Radiant Spear"
+      ],
+      [
+        "add_edge",
+        [
+          "Radiant Spear",
+          "Moon-Dew Salve"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Luminian architecture emphasizes the use of natural light sources.",
+          "keywords": "design,emphasis",
+          "source_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e",
+          "file_path": "unknown_source",
+          "created_at": 1776369136,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 0,
+    "noise_robust": false,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Dew Salve",
+        "type": "artifact",
+        "description": "Moon-Dew Salve is a potion that requires concentrated nectar derived from the Silver-Lotus.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "naturalobject",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Dew Salve",
+        "tgt": "Silver-Lotus",
+        "keywords": "",
+        "description": "Moon-Dew Salve requires concentrated nectar derived from the Silver-Lotus as its main component.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Dew Salve",
+        "type": "artifact",
+        "description": "Moon-Dew Salve is a potion that requires concentrated nectar derived from the Silver-Lotus.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "naturalobject",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Radiant Spear",
+        "type": "",
+        "description": "The Radiant Spear is a weapon wielded by the Sun-Wardens, tipped with Sun-Stone.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Dew Salve",
+        "tgt": "Silver-Lotus",
+        "keywords": "",
+        "description": "Moon-Dew Salve requires concentrated nectar derived from the Silver-Lotus as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Sunpetal Balm",
+        "keywords": "environment,operational limitations",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 1.0
+      },
+      {
+        "src": "Radiant Spear",
+        "tgt": "Moon-Dew Salve",
+        "keywords": "design,emphasis",
+        "description": "Luminian architecture emphasizes the use of natural light sources.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Dew Salve",
+        "type": "artifact",
+        "description": "Moon-Dew Salve is a potion that requires concentrated nectar derived from the Silver-Lotus.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "naturalobject",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Radiant Spear",
+        "type": "",
+        "description": "The Radiant Spear is a weapon wielded by the Sun-Wardens, tipped with Sun-Stone.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Dew Salve",
+        "tgt": "Silver-Lotus",
+        "keywords": "",
+        "description": "Moon-Dew Salve requires concentrated nectar derived from the Silver-Lotus as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 0.0
+      },
+      {
+        "src": "Radiant Spear",
+        "tgt": "Moon-Dew Salve",
+        "keywords": "",
+        "description": "Luminian architecture emphasizes the use of natural light sources.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:33:11.564190",
+  "llm_calls": 1,
+  "mode": "ff"
+}

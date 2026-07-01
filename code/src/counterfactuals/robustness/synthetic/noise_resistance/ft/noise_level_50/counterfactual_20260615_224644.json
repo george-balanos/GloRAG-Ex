@@ -1,0 +1,350 @@
+{
+  "question": "What are the two fundamental materials used in Ethereal 'Ghost-Nets'?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Ethereal 'Ghost-Nets' use 'Spirit-Thread' and 'Phantom-Wire'.",
+    "original": "Ethereal Ghost-Nets are woven from **Spirit-Thread** and reinforced with **Phantom-Wire**.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Magma-Shields"
+      ],
+      [
+        "add_edge",
+        [
+          "Magma-Shields",
+          "Ethereal Crafters"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Growth-Force can make seeds sprout in seconds.",
+          "keywords": "acceleration,sprouting",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Crystalline Structure"
+      ],
+      [
+        "add_edge",
+        [
+          "Crystalline Structure",
+          "Incorporeal Creatures"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Xylotian cuisine features Sun-Berries, which ripen instantly, reflecting the temporal abilities of Chrono-Weavers.",
+          "keywords": "cuisine,temporal effects",
+          "source_id": "chunk-92fdd2272047e791e822f44a44a0aaa6",
+          "file_path": "unknown_source",
+          "created_at": 1776366210,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Roric"
+      ],
+      [
+        "add_edge",
+        [
+          "Roric",
+          "Ethereal Crafters"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+          "keywords": "celestial body,orbital relationship",
+          "source_id": "chunk-ceadd9f2295f73efa231cc507a7af047",
+          "file_path": "unknown_source",
+          "created_at": 1776374299,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Swirling Energy Patterns'"
+      ],
+      [
+        "add_edge",
+        [
+          "Swirling Energy Patterns'",
+          "Ethereal Ghost-Nets"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Eggs and butter are ingredients used together in a cake recipe.",
+          "keywords": "ingredients,recipe",
+          "source_id": "chunk-e090cc19fe61a5d57472585755cf3972",
+          "file_path": "unknown_source",
+          "created_at": 1776368029,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ethereal Ghost-Nets",
+        "type": "artifact",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread and reinforced with Phantom-Wire, designed to capture supernatural beings.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Crafters",
+        "type": "UNKNOWN",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Wire",
+        "type": "artifact",
+        "description": "Phantom-Wire is used to reinforce Spirit-Thread and vibrates at supernatural frequencies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Thread",
+        "type": "artifact",
+        "description": "Spirit-Thread is spun from ectoplasmic residue and is nearly invisible to normal sight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Hunters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Incorporeal Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic Sensitivity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Midnight Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Ethereal Hunters",
+        "keywords": "",
+        "description": "Ethereal hunters specialize in capturing supernatural beings using Ethereal Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Phantom-Wire",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are reinforced with Phantom-Wire, allowing them to interact with both physical and spiritual entities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Spirit-Thread",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Incorporeal Creatures",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are designed to capture and hold incorporeal creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Psychic Sensitivity",
+        "keywords": "",
+        "description": "Ghost-Net weaving requires psychic sensitivity, which ethereal hunters possess.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Midnight Hours",
+        "keywords": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Ethereal Ghost-Nets",
+        "type": "artifact",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread and reinforced with Phantom-Wire, designed to capture supernatural beings.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Crafters",
+        "type": "UNKNOWN",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Wire",
+        "type": "artifact",
+        "description": "Phantom-Wire is used to reinforce Spirit-Thread and vibrates at supernatural frequencies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Thread",
+        "type": "artifact",
+        "description": "Spirit-Thread is spun from ectoplasmic residue and is nearly invisible to normal sight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Hunters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Incorporeal Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic Sensitivity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Midnight Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma-Shields",
+        "type": "",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystalline Structure",
+        "type": "",
+        "description": "The crystalline structure of Solara allows for the efficient absorption and temporary storage of radiant energy, particularly visible light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Roric",
+        "type": "",
+        "description": "Roric is an actor in Celestia's film industry with a recent film titled 'The Last Star-Sailor'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Swirling Energy Patterns'",
+        "type": "",
+        "description": "Swirling Energy Patterns are the appearance of Probability-Fields.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Ethereal Hunters",
+        "keywords": "",
+        "description": "Ethereal hunters specialize in capturing supernatural beings using Ethereal Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Phantom-Wire",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are reinforced with Phantom-Wire, allowing them to interact with both physical and spiritual entities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Spirit-Thread",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Incorporeal Creatures",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are designed to capture and hold incorporeal creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Psychic Sensitivity",
+        "keywords": "",
+        "description": "Ghost-Net weaving requires psychic sensitivity, which ethereal hunters possess.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Midnight Hours",
+        "keywords": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma-Shields",
+        "tgt": "Ethereal Crafters",
+        "keywords": "",
+        "description": "Growth-Force can make seeds sprout in seconds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystalline Structure",
+        "tgt": "Incorporeal Creatures",
+        "keywords": "",
+        "description": "Xylotian cuisine features Sun-Berries, which ripen instantly, reflecting the temporal abilities of Chrono-Weavers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Roric",
+        "tgt": "Ethereal Crafters",
+        "keywords": "",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Swirling Energy Patterns'",
+        "tgt": "Ethereal Ghost-Nets",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:46:44.223630",
+  "llm_calls": 201,
+  "mode": "ft"
+}

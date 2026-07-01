@@ -1,0 +1,190 @@
+{
+  "question": "How do you activate a Nebulon communicator?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Nebulon Communicator"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "press the central crystal while humming at 432 Hz",
+    "original": "To activate a Nebulon communicator, you need to press the central crystal and hum at 432 Hz.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.121536
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geothermal Activity"
+      ],
+      [
+        "add_edge",
+        [
+          "Geothermal Activity",
+          "Nebulon Technology"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+          "keywords": "crafting,reflective surfaces",
+          "source_id": "chunk-a8d5322c8953a45a40a65585c12dfa7d",
+          "file_path": "unknown_source",
+          "created_at": 1776370973,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Nebulon Communicator",
+        "type": "artifact",
+        "description": "Nebulon communicator is a device that requires pressing the central crystal and humming at 432 Hz for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Crystal",
+        "type": "artifact",
+        "description": "Central crystal is a component of the Nebulon communicator that needs to be pressed for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Technology",
+        "type": "concept",
+        "description": "Nebulon technology operates on quantum principles.",
+        "rank": 0.0
+      },
+      {
+        "name": "432 Hz Hum Frequency",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Nebulon Communicator",
+        "tgt": "Nebulon Technology",
+        "keywords": "",
+        "description": "Nebulon technology principles are applied in the design of the Nebulon communicator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Crystal",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The central crystal of the Nebulon communicator must be pressed for activation.",
+        "weight": 0.0
+      },
+      {
+        "src": "432 Hz Hum Frequency",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The Nebulon communicator requires a 432 Hz hum frequency for activation.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Nebulon Technology",
+        "type": "concept",
+        "description": "Nebulon technology operates on quantum principles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geothermal Activity",
+        "type": "",
+        "description": "Geothermal activity is a region where Pyron is commonly found.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Geothermal Activity",
+        "tgt": "Nebulon Technology",
+        "keywords": "crafting,reflective surfaces",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Nebulon Communicator",
+        "type": "artifact",
+        "description": "Nebulon communicator is a device that requires pressing the central crystal and humming at 432 Hz for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Crystal",
+        "type": "artifact",
+        "description": "Central crystal is a component of the Nebulon communicator that needs to be pressed for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Technology",
+        "type": "concept",
+        "description": "Nebulon technology operates on quantum principles.",
+        "rank": 0.0
+      },
+      {
+        "name": "432 Hz Hum Frequency",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geothermal Activity",
+        "type": "",
+        "description": "Geothermal activity is a region where Pyron is commonly found.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Nebulon Communicator",
+        "tgt": "Nebulon Technology",
+        "keywords": "",
+        "description": "Nebulon technology principles are applied in the design of the Nebulon communicator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Crystal",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The central crystal of the Nebulon communicator must be pressed for activation.",
+        "weight": 0.0
+      },
+      {
+        "src": "432 Hz Hum Frequency",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The Nebulon communicator requires a 432 Hz hum frequency for activation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geothermal Activity",
+        "tgt": "Nebulon Technology",
+        "keywords": "",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:14:09.968853",
+  "llm_calls": 11,
+  "mode": "ft"
+}

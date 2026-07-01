@@ -1,0 +1,336 @@
+{
+  "question": "What two functions does the Mystic 'Dream-Weaver's Loom' perform?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Dream-Weaver's Loom",
+        "Memory-Stitch"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The Mystic 'Dream-Weaver's Loom' captures 'Sleep-Visions' and performs 'Memory-Stitching'.",
+    "original": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries and uses the Memory-Stitch technique to embed specific recollections into the fabric.",
+    "perturbed": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries and is powered by Lunar Energy.",
+    "similarity": 0.891443
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Chronos Gate"
+      ],
+      [
+        "add_edge",
+        [
+          "Chronos Gate",
+          "Sleep-Visions"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The artist paints beautiful pictures.",
+          "keywords": "art creation",
+          "source_id": "chunk-da5333743680ef3e99bf512f689a0a60",
+          "file_path": "unknown_source",
+          "created_at": 1776368167,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Dream-Weaver's Loom",
+        "type": "artifact",
+        "description": "The Dream-Weaver's Loom is a mystical device capable of capturing and solidifying Sleep-Visions into physical dream-silk tapestries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Silk",
+        "type": "artifact",
+        "description": "Dream-Silk is a fabric produced by the Dream-Weaver's Loom, known for being softer than any natural fiber.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Weavers",
+        "type": "person",
+        "description": "Dream-Weavers are respected members of mystic society who operate the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Loom-Guild",
+        "type": "organization",
+        "description": "The Loom-Guild is an organization that maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Stitch",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sleep-Visions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lunar Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Memory-Stitch",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom uses the Memory-Stitch technique to embed specific recollections into the fabric.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "The Loom-Guild maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Sleep-Visions",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Dream-Weavers",
+        "keywords": "",
+        "description": "Dream-Weavers operate the Dream-Weaver's Loom and are respected members of mystic society.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Lunar Energy",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom is powered by Lunar Energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Silk",
+        "tgt": "Dream-Weaver's Loom",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Dream-Weaver's Loom",
+        "type": "artifact",
+        "description": "The Dream-Weaver's Loom is a mystical device capable of capturing and solidifying Sleep-Visions into physical dream-silk tapestries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Silk",
+        "type": "artifact",
+        "description": "Dream-Silk is a fabric produced by the Dream-Weaver's Loom, known for being softer than any natural fiber.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Weavers",
+        "type": "person",
+        "description": "Dream-Weavers are respected members of mystic society who operate the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Loom-Guild",
+        "type": "organization",
+        "description": "The Loom-Guild is an organization that maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sleep-Visions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lunar Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "The Chronos Gate is protected by Jax Korden.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "The Loom-Guild maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Sleep-Visions",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Dream-Weavers",
+        "keywords": "",
+        "description": "Dream-Weavers operate the Dream-Weaver's Loom and are respected members of mystic society.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Lunar Energy",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom is powered by Lunar Energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Silk",
+        "tgt": "Dream-Weaver's Loom",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Sleep-Visions",
+        "keywords": "art creation",
+        "description": "The artist paints beautiful pictures.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Dream-Weaver's Loom",
+        "type": "artifact",
+        "description": "The Dream-Weaver's Loom is a mystical device capable of capturing and solidifying Sleep-Visions into physical dream-silk tapestries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Silk",
+        "type": "artifact",
+        "description": "Dream-Silk is a fabric produced by the Dream-Weaver's Loom, known for being softer than any natural fiber.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Weavers",
+        "type": "person",
+        "description": "Dream-Weavers are respected members of mystic society who operate the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Loom-Guild",
+        "type": "organization",
+        "description": "The Loom-Guild is an organization that maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Stitch",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sleep-Visions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lunar Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "The Chronos Gate is protected by Jax Korden.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Memory-Stitch",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom uses the Memory-Stitch technique to embed specific recollections into the fabric.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "The Loom-Guild maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Sleep-Visions",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Dream-Weavers",
+        "keywords": "",
+        "description": "Dream-Weavers operate the Dream-Weaver's Loom and are respected members of mystic society.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Lunar Energy",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom is powered by Lunar Energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Silk",
+        "tgt": "Dream-Weaver's Loom",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Sleep-Visions",
+        "keywords": "",
+        "description": "The artist paints beautiful pictures.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:22:59.079875",
+  "llm_calls": 2,
+  "mode": "ft"
+}

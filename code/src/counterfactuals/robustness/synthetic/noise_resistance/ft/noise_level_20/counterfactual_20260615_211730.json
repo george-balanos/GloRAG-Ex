@@ -1,0 +1,298 @@
+{
+  "question": "What are the two main defensive mechanisms of a Xylotian 'Guardian Orb' drone?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "A Xylotian 'Guardian Orb' drone's main defensive mechanisms are emitting a kinetic pulse and generating a disorienting multi-spectral light pattern.",
+    "original": "The two main defensive mechanisms of a Xylotian 'Guardian Orb' drone are emitting a kinetic pulse and generating disorienting light patterns.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Temporal-Council"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporal-Council",
+          "Xylotian Installations"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Kaelen Echo is a popular musician in the Chrono-Wave genre.",
+          "keywords": "genre,musician",
+          "source_id": "chunk-8ee54215efdd5fc7b9052ad0c42d46c8",
+          "file_path": "unknown_source",
+          "created_at": 1776380317,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        ":= Operator"
+      ],
+      [
+        "add_edge",
+        [
+          ":= Operator",
+          "Energy Pylons"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Zorblaxian children attend school for 12 years.",
+          "keywords": "culture,education",
+          "source_id": "chunk-18df7f613f2ebf0d51e932222a8cf8b6",
+          "file_path": "unknown_source",
+          "created_at": 1776374206,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Guardian Orb",
+        "type": "artifact",
+        "description": "A Xylotian drone designed to emit a kinetic pulse and generate disorienting light patterns to repel and confuse threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Installations",
+        "type": "location",
+        "description": "Sensitive locations protected by Guardian Orbs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Festival of Aerial Drones",
+        "type": "event",
+        "description": "An event showcasing the latest Xylotian drone technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central AI Network",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Self-Repairing Polymers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Peacekeeper Units",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Energy Pylons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Primary Sensor Suite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Guardian Orb",
+        "tgt": "Xylotian Installations",
+        "keywords": "",
+        "description": "Guardian Orbs are deployed to protect sensitive Xylotian installations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Guardian Orb",
+        "tgt": "Self-Repairing Polymers",
+        "keywords": "",
+        "description": "The outer casing of a Guardian Orb is made of self-repairing polymers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Guardian Orb",
+        "tgt": "Peacekeeper Units",
+        "keywords": "",
+        "description": "Xylotian Peacekeeper units often work in tandem with Guardian Orbs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Guardian Orb",
+        "tgt": "Primary Sensor Suite",
+        "keywords": "",
+        "description": "The primary sensor suite of Guardian Orbs includes advanced optical and thermal imaging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Festival of Aerial Drones",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "The Festival of Aerial Drones showcases the latest Xylotian drone technology, including Guardian Orbs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central AI Network",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "Guardian Orbs are autonomously controlled by a central AI network.",
+        "weight": 0.0
+      },
+      {
+        "src": "Energy Pylons",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "Guardian Orbs recharge at designated Energy Pylons.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Guardian Orb",
+        "type": "artifact",
+        "description": "A Xylotian drone designed to emit a kinetic pulse and generate disorienting light patterns to repel and confuse threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Installations",
+        "type": "location",
+        "description": "Sensitive locations protected by Guardian Orbs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Festival of Aerial Drones",
+        "type": "event",
+        "description": "An event showcasing the latest Xylotian drone technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central AI Network",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Self-Repairing Polymers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Peacekeeper Units",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Energy Pylons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Primary Sensor Suite",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal-Council",
+        "type": "",
+        "description": "The Temporal-Council is the governing body that regulates time-travel activities.",
+        "rank": 0.0
+      },
+      {
+        "name": ":= Operator",
+        "type": "",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Guardian Orb",
+        "tgt": "Xylotian Installations",
+        "keywords": "",
+        "description": "Guardian Orbs are deployed to protect sensitive Xylotian installations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Guardian Orb",
+        "tgt": "Self-Repairing Polymers",
+        "keywords": "",
+        "description": "The outer casing of a Guardian Orb is made of self-repairing polymers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Guardian Orb",
+        "tgt": "Peacekeeper Units",
+        "keywords": "",
+        "description": "Xylotian Peacekeeper units often work in tandem with Guardian Orbs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Guardian Orb",
+        "tgt": "Primary Sensor Suite",
+        "keywords": "",
+        "description": "The primary sensor suite of Guardian Orbs includes advanced optical and thermal imaging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Festival of Aerial Drones",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "The Festival of Aerial Drones showcases the latest Xylotian drone technology, including Guardian Orbs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central AI Network",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "Guardian Orbs are autonomously controlled by a central AI network.",
+        "weight": 0.0
+      },
+      {
+        "src": "Energy Pylons",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "Guardian Orbs recharge at designated Energy Pylons.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal-Council",
+        "tgt": "Xylotian Installations",
+        "keywords": "",
+        "description": "Kaelen Echo is a popular musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": ":= Operator",
+        "tgt": "Energy Pylons",
+        "keywords": "",
+        "description": "Zorblaxian children attend school for 12 years.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:17:30.624908",
+  "llm_calls": 201,
+  "mode": "ft"
+}

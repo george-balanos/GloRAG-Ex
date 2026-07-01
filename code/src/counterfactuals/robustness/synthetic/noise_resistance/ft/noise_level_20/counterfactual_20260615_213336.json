@@ -1,0 +1,216 @@
+{
+  "question": "In the programming language CortexScript, what does the '->>' operator do?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "->> Operator"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The '->>' operator is used to channel or pipe the output of one asynchronous 'Cognate' function into another.",
+    "original": "The `->>` operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.039333
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Spiral-Academy"
+      ],
+      [
+        "add_edge",
+        [
+          "Spiral-Academy",
+          ":= Operator"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+          "keywords": "cultural practice,temporal characteristic",
+          "source_id": "chunk-9293f632cf1fe9f1e68935d39d7ef7d8",
+          "file_path": "unknown_source",
+          "created_at": 1776374602,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "->> Operator",
+        "type": "operator",
+        "description": "The ->> operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.",
+        "rank": 0.0
+      },
+      {
+        "name": "=> Operator",
+        "type": "operator",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "rank": 0.0
+      },
+      {
+        "name": "CortexScript",
+        "type": "language",
+        "description": "CortexScript is a programming language designed for interfacing with neural network APIs.",
+        "rank": 0.0
+      },
+      {
+        "name": ":= Operator",
+        "type": "operator",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "->> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The ->> operator in CortexScript is used to pipe the results from one asynchronous Cognate into the next one in a pipeline.",
+        "weight": 0.0
+      },
+      {
+        "src": "=> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "weight": 0.0
+      },
+      {
+        "src": ":= Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "=> Operator",
+        "type": "operator",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "rank": 0.0
+      },
+      {
+        "name": "CortexScript",
+        "type": "language",
+        "description": "CortexScript is a programming language designed for interfacing with neural network APIs.",
+        "rank": 0.0
+      },
+      {
+        "name": ":= Operator",
+        "type": "operator",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "The Spiral-Academy is an institution that teaches advanced blade techniques to Vortexian warriors.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "=> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "weight": 0.0
+      },
+      {
+        "src": ":= Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spiral-Academy",
+        "tgt": ":= Operator",
+        "keywords": "cultural practice,temporal characteristic",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "->> Operator",
+        "type": "operator",
+        "description": "The ->> operator in CortexScript is used to channel the output of one asynchronous Cognate function directly into another.",
+        "rank": 0.0
+      },
+      {
+        "name": "=> Operator",
+        "type": "operator",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "rank": 0.0
+      },
+      {
+        "name": "CortexScript",
+        "type": "language",
+        "description": "CortexScript is a programming language designed for interfacing with neural network APIs.",
+        "rank": 0.0
+      },
+      {
+        "name": ":= Operator",
+        "type": "operator",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spiral-Academy",
+        "type": "",
+        "description": "The Spiral-Academy is an institution that teaches advanced blade techniques to Vortexian warriors.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "->> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The ->> operator in CortexScript is used to pipe the results from one asynchronous Cognate into the next one in a pipeline.",
+        "weight": 0.0
+      },
+      {
+        "src": "=> Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The => operator in CortexScript is used for defining anonymous lambda functions.",
+        "weight": 0.0
+      },
+      {
+        "src": ":= Operator",
+        "tgt": "CortexScript",
+        "keywords": "",
+        "description": "The := operator is the standard assignment operator in CortexScript.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spiral-Academy",
+        "tgt": ":= Operator",
+        "keywords": "",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:33:36.052451",
+  "llm_calls": 2,
+  "mode": "ft"
+}

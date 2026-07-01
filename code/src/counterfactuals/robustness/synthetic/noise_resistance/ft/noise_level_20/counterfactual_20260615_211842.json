@@ -1,0 +1,198 @@
+{
+  "question": "What are the key ingredients needed for a cake recipe?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Flour",
+        "Sugar"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The key ingredients for a cake are flour, sugar, eggs, and butter.",
+    "original": "The key ingredients needed for a cake recipe are flour, sugar, butter, and eggs.",
+    "perturbed": "The key ingredients needed for a cake recipe are sugar, butter, and eggs.",
+    "similarity": 0.974651
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Council of Elders"
+      ],
+      [
+        "add_edge",
+        [
+          "Council of Elders",
+          "Sugar"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Glacian architecture incorporates natural ice formations, as seen in the Ice-Palace of Glacia.",
+          "keywords": "design,structure",
+          "source_id": "chunk-ad901faf06a2cd13ee6b6629180f6ac5",
+          "file_path": "unknown_source",
+          "created_at": 1776370716,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Flour",
+        "type": "artifact",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sugar",
+        "type": "artifact",
+        "description": "Sugar is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Butter",
+        "type": "artifact",
+        "description": "Butter is an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eggs",
+        "type": "naturalobject",
+        "description": "Eggs are an ingredient used in a cake recipe.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Flour",
+        "tgt": "Sugar",
+        "keywords": "",
+        "description": "Flour and sugar are ingredients used together in baking a cake.",
+        "weight": 0.0
+      },
+      {
+        "src": "Butter",
+        "tgt": "Eggs",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Sugar",
+        "type": "artifact",
+        "description": "Sugar is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Butter",
+        "type": "artifact",
+        "description": "Butter is an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eggs",
+        "type": "naturalobject",
+        "description": "Eggs are an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Council of Elders",
+        "type": "",
+        "description": "The Council of Elders is a governing body that will meet at moonhigh.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Butter",
+        "tgt": "Eggs",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      },
+      {
+        "src": "Council of Elders",
+        "tgt": "Sugar",
+        "keywords": "design,structure",
+        "description": "Glacian architecture incorporates natural ice formations, as seen in the Ice-Palace of Glacia.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Flour",
+        "type": "artifact",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sugar",
+        "type": "artifact",
+        "description": "Sugar is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Butter",
+        "type": "artifact",
+        "description": "Butter is an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eggs",
+        "type": "naturalobject",
+        "description": "Eggs are an ingredient used in a cake recipe.",
+        "rank": 0.0
+      },
+      {
+        "name": "Council of Elders",
+        "type": "",
+        "description": "The Council of Elders is a governing body that will meet at moonhigh.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Flour",
+        "tgt": "Sugar",
+        "keywords": "",
+        "description": "Flour and sugar are ingredients used together in baking a cake.",
+        "weight": 0.0
+      },
+      {
+        "src": "Butter",
+        "tgt": "Eggs",
+        "keywords": "",
+        "description": "Eggs and butter are ingredients used together in a cake recipe.",
+        "weight": 0.0
+      },
+      {
+        "src": "Council of Elders",
+        "tgt": "Sugar",
+        "keywords": "",
+        "description": "Glacian architecture incorporates natural ice formations, as seen in the Ice-Palace of Glacia.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:18:42.537001",
+  "llm_calls": 1,
+  "mode": "ft"
+}

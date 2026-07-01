@@ -1,0 +1,410 @@
+{
+  "question": "What distinct characteristics do elephants have?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Elephant"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "Elephants have large, floppy ears and use their long trunk to drink water.",
+    "original": "Elephants have large, floppy ears and use their long trunk to drink water.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.046393
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Multiple Dimensions"
+      ],
+      [
+        "add_edge",
+        [
+          "Multiple Dimensions",
+          "Whales"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Many young Squibs dream of joining the Sky Guard.",
+          "keywords": "aspiration,dream",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Petrified Sunlight"
+      ],
+      [
+        "add_edge",
+        [
+          "Petrified Sunlight",
+          "Lumina Accords"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Current-Crystals channel the power of ocean streams.",
+          "keywords": "enhancement,power channeling",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Phase-Shifting"
+      ],
+      [
+        "add_edge",
+        [
+          "Phase-Shifting",
+          "Whales"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+          "keywords": "concept,location",
+          "source_id": "chunk-8ee54215efdd5fc7b9052ad0c42d46c8",
+          "file_path": "unknown_source",
+          "created_at": 1776380318,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Resonant Harmony-Bells"
+      ],
+      [
+        "add_edge",
+        [
+          "Resonant Harmony-Bells",
+          "Elephant"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The artist paints beautiful pictures.",
+          "keywords": "art creation",
+          "source_id": "chunk-da5333743680ef3e99bf512f689a0a60",
+          "file_path": "unknown_source",
+          "created_at": 1776368167,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Standard Habitat Construction Materials",
+        "type": "artifact",
+        "description": "Standard habitat construction materials must be non-toxic to all member species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elephant",
+        "type": "creature",
+        "description": "The elephant has large, floppy ears and uses its long trunk to drink water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shared Habitat Charter",
+        "type": "document",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "rank": 0.0
+      },
+      {
+        "name": "Trunk",
+        "type": "artifact",
+        "description": "The trunk is a long appendage of the elephant used for drinking water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Marine Environment",
+        "type": "UNKNOWN",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whales",
+        "type": "creature",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Accords",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Elephant",
+        "tgt": "Trunk",
+        "keywords": "",
+        "description": "The elephant uses its trunk to drink water.",
+        "weight": 0.0
+      },
+      {
+        "src": "Marine Environment",
+        "tgt": "Whales",
+        "keywords": "",
+        "description": "Whales are large marine mammals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Standard Habitat Construction Materials",
+        "keywords": "",
+        "description": "The Lumina Accords mandate that habitat construction materials must be non-toxic to all member species.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Shared Habitat Charter",
+        "keywords": "",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Standard Habitat Construction Materials",
+        "type": "artifact",
+        "description": "Standard habitat construction materials must be non-toxic to all member species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shared Habitat Charter",
+        "type": "document",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "rank": 0.0
+      },
+      {
+        "name": "Marine Environment",
+        "type": "UNKNOWN",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whales",
+        "type": "creature",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Accords",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Multiple Dimensions",
+        "type": "",
+        "description": "Quantum Society exists in multiple dimensions simultaneously.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Shifting",
+        "type": "",
+        "description": "Phase-Shifting is a technique that creates a translucent, ghostly appearance for the wearer.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Marine Environment",
+        "tgt": "Whales",
+        "keywords": "",
+        "description": "Whales are large marine mammals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Standard Habitat Construction Materials",
+        "keywords": "",
+        "description": "The Lumina Accords mandate that habitat construction materials must be non-toxic to all member species.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Shared Habitat Charter",
+        "keywords": "",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "weight": 0.0
+      },
+      {
+        "src": "Multiple Dimensions",
+        "tgt": "Whales",
+        "keywords": "aspiration,dream",
+        "description": "Many young Squibs dream of joining the Sky Guard.",
+        "weight": 1.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Lumina Accords",
+        "keywords": "enhancement,power channeling",
+        "description": "Current-Crystals channel the power of ocean streams.",
+        "weight": 1.0
+      },
+      {
+        "src": "Phase-Shifting",
+        "tgt": "Whales",
+        "keywords": "concept,location",
+        "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Standard Habitat Construction Materials",
+        "type": "artifact",
+        "description": "Standard habitat construction materials must be non-toxic to all member species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elephant",
+        "type": "creature",
+        "description": "The elephant has large, floppy ears and uses its long trunk to drink water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shared Habitat Charter",
+        "type": "document",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "rank": 0.0
+      },
+      {
+        "name": "Trunk",
+        "type": "artifact",
+        "description": "The trunk is a long appendage of the elephant used for drinking water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Marine Environment",
+        "type": "UNKNOWN",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whales",
+        "type": "creature",
+        "description": "Whales are large marine mammals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Accords",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Multiple Dimensions",
+        "type": "",
+        "description": "Quantum Society exists in multiple dimensions simultaneously.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Shifting",
+        "type": "",
+        "description": "Phase-Shifting is a technique that creates a translucent, ghostly appearance for the wearer.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonant Harmony-Bells",
+        "type": "",
+        "description": "Resonant Harmony-Bells are musical instruments cast from Song-Bronze and inlaid with Echo-Gems, known for their perfect musical tones and resonance.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Elephant",
+        "tgt": "Trunk",
+        "keywords": "",
+        "description": "The elephant uses its trunk to drink water.",
+        "weight": 0.0
+      },
+      {
+        "src": "Marine Environment",
+        "tgt": "Whales",
+        "keywords": "",
+        "description": "Whales are large marine mammals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Standard Habitat Construction Materials",
+        "keywords": "",
+        "description": "The Lumina Accords mandate that habitat construction materials must be non-toxic to all member species.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Shared Habitat Charter",
+        "keywords": "",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "weight": 0.0
+      },
+      {
+        "src": "Multiple Dimensions",
+        "tgt": "Whales",
+        "keywords": "",
+        "description": "Many young Squibs dream of joining the Sky Guard.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "Current-Crystals channel the power of ocean streams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phase-Shifting",
+        "tgt": "Whales",
+        "keywords": "",
+        "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonant Harmony-Bells",
+        "tgt": "Elephant",
+        "keywords": "",
+        "description": "The artist paints beautiful pictures.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:30:58.903098",
+  "llm_calls": 36,
+  "mode": "ft"
+}

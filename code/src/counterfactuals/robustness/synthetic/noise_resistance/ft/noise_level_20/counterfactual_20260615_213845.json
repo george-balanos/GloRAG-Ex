@@ -1,0 +1,324 @@
+{
+  "question": "What is the main function of the device known as the 'Chrono-Regulator'?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "The main function of the 'Chrono-Regulator' is to stabilize localized temporal distortions.",
+    "original": "The Chrono-Regulator is designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Vexium"
+      ],
+      [
+        "add_edge",
+        [
+          "Vexium",
+          "Temporal Distortions"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Mind-Smiths possess the ability to perform Memory-Welding to bond experiences and knowledge into metallic creations.",
+          "keywords": "bonding,technique",
+          "source_id": "chunk-2887778a6a2df3dfa6983170922380e7",
+          "file_path": "unknown_source",
+          "created_at": 1776368861,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Peacekeeper Units"
+      ],
+      [
+        "add_edge",
+        [
+          "Peacekeeper Units",
+          "Temporal Distortions"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+          "keywords": "component,healing",
+          "source_id": "chunk-95e2acb9a9b9f5294e92e741d798190a<SEP>chunk-9c885a2069fac0a76316e6120141c9ed",
+          "file_path": "unknown_source",
+          "created_at": 1776378770,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Distortions",
+        "type": "concept",
+        "description": "Temporal distortions are rare but dangerous phenomena that the Chrono-Regulator is designed to stabilize.<SEP>Temporal Distortions are chaotic time anomalies that the Chrono-Regulator is designed to stabilize.",
+        "rank": 0.0
+      },
+      {
+        "name": "External Power Source",
+        "type": "artifact",
+        "description": "The External Power Source is required for the Chrono-Regulator to function.<SEP>An External Power Source is required for the Chrono-Regulator to function.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Alloys",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Faint Hum",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creators",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "External Power Source",
+        "keywords": "",
+        "description": "The Chrono-Regulator requires an External Power Source to function.<SEP>The Chrono-Regulator requires an external power source to function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "The Chrono-Regulator is designed to stabilize Temporal Distortions.<SEP>The Chrono-Regulator is designed to stabilize temporal distortions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Historians",
+        "keywords": "",
+        "description": "Historians highly seek after artifacts like the Chrono-Regulator.<SEP>Historians highly seek after artifacts like the Chrono-Regulator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Unknown Alloys",
+        "keywords": "",
+        "description": "The Chrono-Regulator is made of Unknown Alloys.<SEP>The Chrono-Regulator is made of unknown alloys.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Faint Hum",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Creators",
+        "keywords": "",
+        "description": "The creators' motives for designing the Chrono-Regulator remain unknown.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Regulator",
+        "type": "artifact",
+        "description": "The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions.<SEP>The Chrono-Regulator is an ancient technological device discovered in desert ruins, designed to stabilize localized temporal distortions and prevent chaotic time anomalies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Distortions",
+        "type": "concept",
+        "description": "Temporal distortions are rare but dangerous phenomena that the Chrono-Regulator is designed to stabilize.<SEP>Temporal Distortions are chaotic time anomalies that the Chrono-Regulator is designed to stabilize.",
+        "rank": 0.0
+      },
+      {
+        "name": "External Power Source",
+        "type": "artifact",
+        "description": "The External Power Source is required for the Chrono-Regulator to function.<SEP>An External Power Source is required for the Chrono-Regulator to function.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert Ruins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Alloys",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Faint Hum",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creators",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexium",
+        "type": "",
+        "description": "Vexium (element 147) is a stabilized plasma used exclusively in Vexian propulsion systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Peacekeeper Units",
+        "type": "",
+        "description": "Xylotian units that work in tandem with Guardian Orbs.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "External Power Source",
+        "keywords": "",
+        "description": "The Chrono-Regulator requires an External Power Source to function.<SEP>The Chrono-Regulator requires an external power source to function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "The Chrono-Regulator is designed to stabilize Temporal Distortions.<SEP>The Chrono-Regulator is designed to stabilize temporal distortions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Historians",
+        "keywords": "",
+        "description": "Historians highly seek after artifacts like the Chrono-Regulator.<SEP>Historians highly seek after artifacts like the Chrono-Regulator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Unknown Alloys",
+        "keywords": "",
+        "description": "The Chrono-Regulator is made of Unknown Alloys.<SEP>The Chrono-Regulator is made of unknown alloys.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Faint Hum",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Creators",
+        "keywords": "",
+        "description": "The creators' motives for designing the Chrono-Regulator remain unknown.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexium",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "Mind-Smiths possess the ability to perform Memory-Welding to bond experiences and knowledge into metallic creations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Peacekeeper Units",
+        "tgt": "Temporal Distortions",
+        "keywords": "",
+        "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:38:45.735714",
+  "llm_calls": 201,
+  "mode": "ft"
+}

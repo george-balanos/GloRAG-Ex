@@ -1,0 +1,600 @@
+{
+  "question": "What is the traditional greeting in Blimpton?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Blimptonian Greeting"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "'Flurp be with you' while touching elbows",
+    "original": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.053099
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Sylvanian Garments"
+      ],
+      [
+        "add_edge",
+        [
+          "Sylvanian Garments",
+          "Plorgonian Dining Rituals"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+          "keywords": "celestial body,orbital relationship",
+          "source_id": "chunk-ceadd9f2295f73efa231cc507a7af047",
+          "file_path": "unknown_source",
+          "created_at": 1776374299,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Guild of Lens-Crafters"
+      ],
+      [
+        "add_edge",
+        [
+          "Guild of Lens-Crafters",
+          "Blimptonian Government"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Time-Locks create shimmering barriers that prevent temporal manipulation, contributing to stability.",
+          "keywords": "barrier,prevention",
+          "source_id": "chunk-26b571d9fdf386fb5cb2a12265c2bc78",
+          "file_path": "unknown_source",
+          "created_at": 1776371850,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "User Interface"
+      ],
+      [
+        "add_edge",
+        [
+          "User Interface",
+          "Blimpton"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The farmer grows corn in the field.",
+          "keywords": "agriculture,cultivation",
+          "source_id": "chunk-2e381bfb9255daea37fced8d1a9ca7e2",
+          "file_path": "unknown_source",
+          "created_at": 1776367670,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Butterflies"
+      ],
+      [
+        "add_edge",
+        [
+          "Butterflies",
+          "Blimptonian Greeting"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Shield generators protect against space debris and Floopy rays.",
+          "keywords": "defense,protection",
+          "source_id": "chunk-e715408cde7e74b18571e02fbbf5a118",
+          "file_path": "unknown_source",
+          "created_at": 1776368595,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Valorian Apprentices"
+      ],
+      [
+        "add_edge",
+        [
+          "Valorian Apprentices",
+          "Blimptonian Water"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Lumin-Ink is traditionally used for inscribing sacred Xylotian texts.",
+          "keywords": "cultural significance,traditional use",
+          "source_id": "chunk-30032a9a218ee0319cc0b0104dbcb1fc",
+          "file_path": "unknown_source",
+          "created_at": 1776366753,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 10,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Blimpton",
+        "type": "location",
+        "description": "Blimpton is a planet with a population of approximately 3.2 billion, a binary star system, and unique cultural and physical characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Architecture",
+        "type": "concept",
+        "description": "Blimptonian architecture features inverted pyramids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Greeting",
+        "type": "concept",
+        "description": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "concept",
+        "description": "Plorgonian dining rituals involve eating with the left hand only.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Vehicles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Water",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Week",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Children",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Greeting",
+        "keywords": "",
+        "description": "The Blimptonian greeting is a traditional practice in Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Architecture",
+        "keywords": "",
+        "description": "Blimptonian architecture is a unique feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Vehicles",
+        "keywords": "",
+        "description": "Blimptonian vehicles are a distinctive feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Water",
+        "keywords": "",
+        "description": "Blimptonian water has unique properties due to added minerals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Government",
+        "keywords": "",
+        "description": "The Blimptonian government is a defining aspect of Blimpton's political system.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Week",
+        "keywords": "",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Children",
+        "keywords": "",
+        "description": "Blimptonian children have unique biological traits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Blimpton",
+        "type": "location",
+        "description": "Blimpton is a planet with a population of approximately 3.2 billion, a binary star system, and unique cultural and physical characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Architecture",
+        "type": "concept",
+        "description": "Blimptonian architecture features inverted pyramids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "concept",
+        "description": "Plorgonian dining rituals involve eating with the left hand only.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Vehicles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Water",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Week",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Children",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Guild of Lens-Crafters",
+        "type": "",
+        "description": "The Guild of Lens-Crafters guards their secrets closely.",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Apprentices",
+        "type": "",
+        "description": "Valorian apprentices begin training at age twelve.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Architecture",
+        "keywords": "",
+        "description": "Blimptonian architecture is a unique feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Vehicles",
+        "keywords": "",
+        "description": "Blimptonian vehicles are a distinctive feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Water",
+        "keywords": "",
+        "description": "Blimptonian water has unique properties due to added minerals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Government",
+        "keywords": "",
+        "description": "The Blimptonian government is a defining aspect of Blimpton's political system.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Week",
+        "keywords": "",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Children",
+        "keywords": "",
+        "description": "Blimptonian children have unique biological traits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Plorgonian Dining Rituals",
+        "keywords": "celestial body,orbital relationship",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 1.0
+      },
+      {
+        "src": "Guild of Lens-Crafters",
+        "tgt": "Blimptonian Government",
+        "keywords": "barrier,prevention",
+        "description": "Time-Locks create shimmering barriers that prevent temporal manipulation, contributing to stability.",
+        "weight": 1.0
+      },
+      {
+        "src": "User Interface",
+        "tgt": "Blimpton",
+        "keywords": "agriculture,cultivation",
+        "description": "The farmer grows corn in the field.",
+        "weight": 1.0
+      },
+      {
+        "src": "Valorian Apprentices",
+        "tgt": "Blimptonian Water",
+        "keywords": "cultural significance,traditional use",
+        "description": "Lumin-Ink is traditionally used for inscribing sacred Xylotian texts.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Blimpton",
+        "type": "location",
+        "description": "Blimpton is a planet with a population of approximately 3.2 billion, a binary star system, and unique cultural and physical characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Architecture",
+        "type": "concept",
+        "description": "Blimptonian architecture features inverted pyramids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Greeting",
+        "type": "concept",
+        "description": "The Blimptonian greeting involves touching elbows while saying 'Flurp be with you'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "concept",
+        "description": "Plorgonian dining rituals involve eating with the left hand only.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Vehicles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Water",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Week",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Blimptonian Children",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Guild of Lens-Crafters",
+        "type": "",
+        "description": "The Guild of Lens-Crafters guards their secrets closely.",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Butterflies",
+        "type": "",
+        "description": "Butterflies have colorful wings.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Apprentices",
+        "type": "",
+        "description": "Valorian apprentices begin training at age twelve.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Greeting",
+        "keywords": "",
+        "description": "The Blimptonian greeting is a traditional practice in Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Architecture",
+        "keywords": "",
+        "description": "Blimptonian architecture is a unique feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Vehicles",
+        "keywords": "",
+        "description": "Blimptonian vehicles are a distinctive feature of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Water",
+        "keywords": "",
+        "description": "Blimptonian water has unique properties due to added minerals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Government",
+        "keywords": "",
+        "description": "The Blimptonian government is a defining aspect of Blimpton's political system.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Week",
+        "keywords": "",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blimpton",
+        "tgt": "Blimptonian Children",
+        "keywords": "",
+        "description": "Blimptonian children have unique biological traits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Plorgonian Dining Rituals",
+        "keywords": "",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Guild of Lens-Crafters",
+        "tgt": "Blimptonian Government",
+        "keywords": "",
+        "description": "Time-Locks create shimmering barriers that prevent temporal manipulation, contributing to stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "User Interface",
+        "tgt": "Blimpton",
+        "keywords": "",
+        "description": "The farmer grows corn in the field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Butterflies",
+        "tgt": "Blimptonian Greeting",
+        "keywords": "",
+        "description": "Shield generators protect against space debris and Floopy rays.",
+        "weight": 0.0
+      },
+      {
+        "src": "Valorian Apprentices",
+        "tgt": "Blimptonian Water",
+        "keywords": "",
+        "description": "Lumin-Ink is traditionally used for inscribing sacred Xylotian texts.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:53:21.370918",
+  "llm_calls": 45,
+  "mode": "ft"
+}

@@ -1,0 +1,364 @@
+{
+  "question": "What are the 'Floating Islands of Aeridia' made of?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "The 'Floating Islands of Aeridia' are primarily composed of 'Aeridium Ore'.",
+    "original": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Neural Augmentation"
+      ],
+      [
+        "add_edge",
+        [
+          "Neural Augmentation",
+          "Ntulu"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Solar-Ribbons are used by Solarian Sun-Dancers as part of their cultural practices and can blind enemies or illuminate darkness.",
+          "keywords": "cultural practice,weapon",
+          "source_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776371513,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Glimmerwing Moth"
+      ],
+      [
+        "add_edge",
+        [
+          "Glimmerwing Moth",
+          "Aeridium Ore"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+          "keywords": "energy harnessing,power amplification",
+          "source_id": "chunk-dbfd518f3805f5b8ca795225dfe27c7e",
+          "file_path": "unknown_source",
+          "created_at": 1776368723,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Creators"
+      ],
+      [
+        "add_edge",
+        [
+          "Creators",
+          "Airborne Flora"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+          "keywords": "genre focus,rich storytelling",
+          "source_id": "chunk-68fbd54e6cfb42098a4cbe690097fae2",
+          "file_path": "unknown_source",
+          "created_at": 1776377490,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Bio-Harmonic Feedback Systems"
+      ],
+      [
+        "add_edge",
+        [
+          "Bio-Harmonic Feedback Systems",
+          "Studies"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Galaxy-Patterns can create or destroy entire star systems.",
+          "keywords": "creation,destruction,space-time manipulation",
+          "source_id": "chunk-cc04677e1af4f916c4eebf1816fc0d16",
+          "file_path": "unknown_source",
+          "created_at": 1776372644,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aeridium Ore",
+        "type": "naturalobject",
+        "description": "Aeridium Ore is a lightweight, crystalline mineral found only in atmospheric veins, providing buoyancy to the Floating Islands of Aeridia.<SEP>Aeridium Ore is a naturally buoyant, lightweight, and crystalline mineral found only in atmospheric veins on Ntulu.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Veins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Studies",
+        "keywords": "",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Atmospheric Veins",
+        "keywords": "",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aeridium Ore",
+        "type": "naturalobject",
+        "description": "Aeridium Ore is a lightweight, crystalline mineral found only in atmospheric veins, providing buoyancy to the Floating Islands of Aeridia.<SEP>Aeridium Ore is a naturally buoyant, lightweight, and crystalline mineral found only in atmospheric veins on Ntulu.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Veins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Neural Augmentation",
+        "type": "",
+        "description": "Neural Augmentation is the enhancement of cognitive functions through the use of the Bio-Harmonizer implant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glimmerwing Moth",
+        "type": "",
+        "description": "The Glimmerwing Moth is a specialized moth that feeds exclusively on the pollen of the Moonsilk Flower and has a lifespan of a single lunar cycle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creators",
+        "type": "",
+        "description": "The Creators are the unknown individuals who designed the Chrono-Regulator.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Harmonic Feedback Systems",
+        "type": "",
+        "description": "Bio-harmonic feedback systems are advanced technologies used by musicians on Harmonius to enhance the emotional depth of their compositions.<SEP>Bio-harmonic feedback systems are advanced technologies used by musicians to enhance the emotional depth of their compositions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Studies",
+        "keywords": "",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Atmospheric Veins",
+        "keywords": "",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Neural Augmentation",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "Solar-Ribbons are used by Solarian Sun-Dancers as part of their cultural practices and can blind enemies or illuminate darkness.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Aeridium Ore",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Creators",
+        "tgt": "Airborne Flora",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Harmonic Feedback Systems",
+        "tgt": "Studies",
+        "keywords": "",
+        "description": "Galaxy-Patterns can create or destroy entire star systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:59:59.356250",
+  "llm_calls": 201,
+  "mode": "ft"
+}

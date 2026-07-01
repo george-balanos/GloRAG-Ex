@@ -1,0 +1,253 @@
+{
+  "question": "Where did the family go on Saturday and what did they do?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Beach"
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "The family went to the beach on Saturday and built a large sandcastle.",
+    "original": "The family went to the beach on Saturday and built a large sandcastle.",
+    "perturbed": "The family went to the beach on Saturday.",
+    "similarity": 0.768088
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Concerts"
+      ],
+      [
+        "add_edge",
+        [
+          "Concerts",
+          "Plorgonian Celebrations"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Vexian starships cannot operate in atmospheres.",
+          "keywords": "environment,operational limitations",
+          "source_id": "chunk-38c243bd67c7fea0e715de9999b806d1",
+          "file_path": "unknown_source",
+          "created_at": 1776374734,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Silent Bow"
+      ],
+      [
+        "add_edge",
+        [
+          "Silent Bow",
+          "Plorgonian Timekeeping"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Fire-Heart gems are exclusively found in active volcano cores.",
+          "keywords": "location,rarity",
+          "source_id": "chunk-8c0b33bdfde835b1b72a98108d2731c1",
+          "file_path": "unknown_source",
+          "created_at": 1776369265,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Saturday",
+        "type": "event",
+        "description": "Saturday is the day when the family went to the beach.",
+        "rank": 0.0
+      },
+      {
+        "name": "Beach",
+        "type": "location",
+        "description": "The beach is where the family went on Saturday.",
+        "rank": 0.0
+      },
+      {
+        "name": "Family",
+        "type": "person",
+        "description": "The family went to the beach on Saturday and built a large sandcastle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Timekeeping",
+        "type": "method",
+        "description": "Plorgonian timekeeping is based on water evaporation rates.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Beach",
+        "tgt": "Family",
+        "keywords": "",
+        "description": "The family went to the beach on Saturday.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Plorgonian timekeeping influences the duration of Plorgonian celebrations.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Saturday",
+        "type": "event",
+        "description": "Saturday is the day when the family went to the beach.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Timekeeping",
+        "type": "method",
+        "description": "Plorgonian timekeeping is based on water evaporation rates.",
+        "rank": 0.0
+      },
+      {
+        "name": "Concerts",
+        "type": "",
+        "description": "Concerts by critically appreciated artists like Seraphina are often intimate gatherings focused on high-fidelity audio experience.<SEP>Concerts by critically appreciated artists like Seraphina are often intimate gatherings focused on high-fidelity audio experiences.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silent Bow",
+        "type": "",
+        "description": "The Silent Bow is a weapon wielded by the Void-Sentinels, firing arrows of Shadow-Glass.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Plorgonian timekeeping influences the duration of Plorgonian celebrations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Concerts",
+        "tgt": "Plorgonian Celebrations",
+        "keywords": "environment,operational limitations",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 1.0
+      },
+      {
+        "src": "Silent Bow",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "location,rarity",
+        "description": "Fire-Heart gems are exclusively found in active volcano cores.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Saturday",
+        "type": "event",
+        "description": "Saturday is the day when the family went to the beach.",
+        "rank": 0.0
+      },
+      {
+        "name": "Beach",
+        "type": "location",
+        "description": "The beach is where the family went on Saturday.",
+        "rank": 0.0
+      },
+      {
+        "name": "Family",
+        "type": "person",
+        "description": "The family went to the beach on Saturday and built a large sandcastle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Timekeeping",
+        "type": "method",
+        "description": "Plorgonian timekeeping is based on water evaporation rates.",
+        "rank": 0.0
+      },
+      {
+        "name": "Concerts",
+        "type": "",
+        "description": "Concerts by critically appreciated artists like Seraphina are often intimate gatherings focused on high-fidelity audio experience.<SEP>Concerts by critically appreciated artists like Seraphina are often intimate gatherings focused on high-fidelity audio experiences.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silent Bow",
+        "type": "",
+        "description": "The Silent Bow is a weapon wielded by the Void-Sentinels, firing arrows of Shadow-Glass.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Beach",
+        "tgt": "Family",
+        "keywords": "",
+        "description": "The family went to the beach on Saturday.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Plorgonian timekeeping influences the duration of Plorgonian celebrations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Concerts",
+        "tgt": "Plorgonian Celebrations",
+        "keywords": "",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 0.0
+      },
+      {
+        "src": "Silent Bow",
+        "tgt": "Plorgonian Timekeeping",
+        "keywords": "",
+        "description": "Fire-Heart gems are exclusively found in active volcano cores.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:30:45.105228",
+  "llm_calls": 6,
+  "mode": "ft"
+}

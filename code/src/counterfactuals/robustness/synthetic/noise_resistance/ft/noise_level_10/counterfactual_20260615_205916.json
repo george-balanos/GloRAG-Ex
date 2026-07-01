@@ -1,0 +1,249 @@
+{
+  "question": "What two powers do Cosmic 'Star-Weavers' channel through their craft?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Galaxy-Patterns",
+        "Star Systems"
+      ]
+    ],
+    [
+      "delete_node",
+      "Cosmic 'Star-Weavers'"
+    ]
+  ],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "Cosmic 'Star-Weavers' spin 'Nebula-Yarn' and weave 'Galaxy-Patterns'.",
+    "original": "Cosmic 'Star-Weavers' channel the power to spin 'Nebula-Yarn' and weave 'Galaxy-Patterns' that influence space-time.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.112747
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Cheetah"
+      ],
+      [
+        "add_edge",
+        [
+          "Cheetah",
+          "Star-Weaver Training"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Guardian Orbs are autonomously controlled by a central AI network.",
+          "keywords": "AI management,autonomous control",
+          "source_id": "chunk-dbeb364cc8c11b8851ccc39994e900d3",
+          "file_path": "unknown_source",
+          "created_at": 1776366613,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Cosmic 'Star-Weavers'",
+        "type": "creature",
+        "description": "Cosmic 'Star-Weavers' are beings capable of spinning 'Nebula-Yarn' and weaving 'Galaxy-Patterns' that influence space-time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Galaxy-Patterns",
+        "type": "artifact",
+        "description": "Galaxy-Patterns are woven by Cosmic 'Star-Weavers' and have the power to bend space-time and affect entire star systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebula-Yarn",
+        "type": "artifact",
+        "description": "Nebula-Yarn is a material spun by Cosmic 'Star-Weavers' from stellar nurseries, glowing with the light of newborn stars.",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Weaver Training",
+        "type": "event",
+        "description": "Star-Weaver training is a lengthy process that lasts for geological ages.",
+        "rank": 0.0
+      },
+      {
+        "name": "Universe-Loom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Nebula-Yarn",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' spin 'Nebula-Yarn' from stellar nurseries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Galaxy-Patterns",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' weave 'Galaxy-Patterns' that can bend space-time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Star-Weaver Training",
+        "keywords": "",
+        "description": "Star-Weaver training lasts for geological ages.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Universe-Loom",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' use the Universe-Loom to shape the fabric of space.",
+        "weight": 0.0
+      },
+      {
+        "src": "Galaxy-Patterns",
+        "tgt": "Star Systems",
+        "keywords": "",
+        "description": "Galaxy-Patterns can create or destroy entire star systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Star-Weaver Training",
+        "type": "event",
+        "description": "Star-Weaver training is a lengthy process that lasts for geological ages.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cheetah",
+        "type": "",
+        "description": "The cheetah is a very fast runner.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Cheetah",
+        "tgt": "Star-Weaver Training",
+        "keywords": "AI management,autonomous control",
+        "description": "Guardian Orbs are autonomously controlled by a central AI network.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Cosmic 'Star-Weavers'",
+        "type": "creature",
+        "description": "Cosmic 'Star-Weavers' are beings capable of spinning 'Nebula-Yarn' and weaving 'Galaxy-Patterns' that influence space-time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Galaxy-Patterns",
+        "type": "artifact",
+        "description": "Galaxy-Patterns are woven by Cosmic 'Star-Weavers' and have the power to bend space-time and affect entire star systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebula-Yarn",
+        "type": "artifact",
+        "description": "Nebula-Yarn is a material spun by Cosmic 'Star-Weavers' from stellar nurseries, glowing with the light of newborn stars.",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Weaver Training",
+        "type": "event",
+        "description": "Star-Weaver training is a lengthy process that lasts for geological ages.",
+        "rank": 0.0
+      },
+      {
+        "name": "Universe-Loom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cheetah",
+        "type": "",
+        "description": "The cheetah is a very fast runner.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Nebula-Yarn",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' spin 'Nebula-Yarn' from stellar nurseries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Galaxy-Patterns",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' weave 'Galaxy-Patterns' that can bend space-time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Star-Weaver Training",
+        "keywords": "",
+        "description": "Star-Weaver training lasts for geological ages.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cosmic 'Star-Weavers'",
+        "tgt": "Universe-Loom",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' use the Universe-Loom to shape the fabric of space.",
+        "weight": 0.0
+      },
+      {
+        "src": "Galaxy-Patterns",
+        "tgt": "Star Systems",
+        "keywords": "",
+        "description": "Galaxy-Patterns can create or destroy entire star systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cheetah",
+        "tgt": "Star-Weaver Training",
+        "keywords": "",
+        "description": "Guardian Orbs are autonomously controlled by a central AI network.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:59:16.049707",
+  "llm_calls": 57,
+  "mode": "ft"
+}

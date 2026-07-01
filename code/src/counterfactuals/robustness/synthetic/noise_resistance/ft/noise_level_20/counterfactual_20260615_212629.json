@@ -1,0 +1,195 @@
+{
+  "question": "What two distinct powers do Verdant 'Life-Wands' channel?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Verdant Life-Wands"
+    ]
+  ],
+  "cost": 11,
+  "answers": {
+    "ground_truth": "Verdant 'Life-Wands' channel 'Growth-Force' and 'Vitality-Streams'.",
+    "original": "Verdant Life-Wands channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.111528
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Methane-Rich Atmosphere"
+      ],
+      [
+        "add_edge",
+        [
+          "Methane-Rich Atmosphere",
+          "Verdant Life-Wands"
+        ],
+        {
+          "weight": 91.0,
+          "description": "The relationship between Noah Carter and the World Athletics Federation centers on the validation of Noah Carter's athletic record. The World Athletics Federation, the global governing body for athletics, has validated Noah Carter's record, signifying that it meets the federation's standards and criteria for authenticity and legitimacy. Formerly known as the International Association of Athletics Federations (IAAF), the World Athletics Federation oversees the regulations and recognition of athletic records worldwide. The validation process confirms that Noah Carter's achievement complies with established rules and procedures, underscoring its significance and credibility in the realm of athletics. This recognition by the World Athletics Federation highlights the importance of Noah Carter's record within the sport. The repeated validation by the federation underscores the consistency and reliability of this recognition.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.",
+          "keywords": "athlete recognition,record validation",
+          "source_id": "chunk-2d9f68ea236e65773d7fa8dfce96706b<SEP>chunk-92fdd2272047e791e822f44a44a0aaa6<SEP>chunk-d5347c46fbfaa5dfb649cf5a7386a3e3<SEP>chunk-3ff616f8f6c6c72f501bacf6a84fb7d1<SEP>chunk-dbeb364cc8c11b8851ccc39994e900d3<SEP>chunk-30032a9a218ee0319cc0b0104dbcb1fc<SEP>chunk-cb3d32acabcf93ff84d53e6c715f5868<SEP>chunk-1eb2d3c42261f010e2d61a94fe10d597<SEP>chunk-1d68c5e141612935adde70191b543400<SEP>chunk-2e381bfb9255daea37fced8d1a9ca7e2<SEP>chunk-ca1ab38dd085858276b097adace00445<SEP>chunk-b0ec84394955e9010ff2eef03b888d02<SEP>chunk-e090cc19fe61a5d57472585755cf3972<SEP>chunk-da5333743680ef3e99bf512f689a0a60<SEP>chunk-9699258d651968b022029e2c5661bab9<SEP>chunk-9b5074b38cab28295111649885a53894<SEP>chunk-e715408cde7e74b18571e02fbbf5a118<SEP>chunk-dbfd518f3805f5b8ca795225dfe27c7e<SEP>chunk-2887778a6a2df3dfa6983170922380e7<SEP>chunk-f5993f98ef177a29e14efa7a1e0e1284<SEP>chunk-f0749e4b55d29303cb6ae92ca3e8442e<SEP>chunk-8c0b33bdfde835b1b72a98108d2731c1<SEP>chunk-df225153d9892c14a4f59cb36a4fdc52<SEP>chunk-6334b4c5624e548f71327321342d3140<SEP>chunk-b62a3a837a626d418867d6c09415f364<SEP>chunk-852b4aca9611d4ba02906005fe159143<SEP>chunk-0398612496e142abad8c0525a7411b04<SEP>chunk-58a046875ebdee22cd2135d336e52823<SEP>chunk-dacf097dab6d99b72c217adbf39a0e08<SEP>chunk-ad901faf06a2cd13ee6b6629180f6ac5<SEP>chunk-36c90a6ac7cf796320786dcff63fe321<SEP>chunk-a8d5322c8953a45a40a65585c12dfa7d<SEP>chunk-ff92dbc05d0cbedece06bc3944fc2127<SEP>chunk-24dd209bf576ce21067d0019b17d1f19<SEP>chunk-24447252c282a0b1101534db7627da29<SEP>chunk-021b47fe4bc3c29da48ea2759bcc4e9f<SEP>chunk-80ce62b82fbb9313903beadfa2b250e0<SEP>chunk-26b571d9fdf386fb5cb2a12265c2bc78<SEP>chunk-33c4a997e02d1f9deac5d304cf96e2ed<SEP>chunk-db61661cef8af6791c007f451f13e085<SEP>chunk-5e2e2feb3a7fbc786fecc915f84cc620<SEP>chunk-856633022d5e5030b7095161d9c2ded2<SEP>chunk-338af8d2707612d1119fe2069b90d9b9<SEP>chunk-cc04677e1af4f916c4eebf1816fc0d16<SEP>chunk-f12ac5dc28a653f276176bf1289286b3<SEP>chunk-c4d0680971dd3cf904d7dc4e279b3baf<SEP>chunk-683a58d0c5ec073465dbeb0ba4d5ce16<SEP>chunk-9e8af3308d2e40e0bab7abb3f38c8dc0<SEP>chunk-0d34f7ecce8468295178f356ec81f392<SEP>chunk-5e5e2daa652a2a7080947edd8c1861cb<SEP>chunk-bab0a9eff9a352ce79eabcf3c3edd565<SEP>chunk-a8f9a5ce977d02ab79f1989e41edf1a0<SEP>chunk-76f65d39f98e051db596cb32adaeedbb<SEP>chunk-18df7f613f2ebf0d51e932222a8cf8b6<SEP>chunk-cdc8f4e681bf3b5f227271df6b332b71<SEP>chunk-9293f632cf1fe9f1e68935d39d7ef7d8<SEP>chunk-38c243bd67c7fea0e715de9999b806d1<SEP>chunk-31ba22ab126888864cf34c8a8a2c7a2b<SEP>chunk-fa6a76de2e25798cb26a401b39379d4d<SEP>chunk-678bab7534121db7a66e4f415b866475<SEP>chunk-590f5d38a95d45533df8154c74c70202<SEP>chunk-aaa6debfc3074297c5f8a74fa36c4d5f<SEP>chunk-d34e7860dd6c60808a4b14b0d675a828<SEP>chunk-08f76c0cbe02e0202ec7772b666c549a<SEP>chunk-6bb11a4ff4c7939884a5f34108ffed63<SEP>chunk-f3e0255acd306a008e3e3105349e4c77<SEP>chunk-7ac2f6afcfe12c7316903a5aaa0355f0<SEP>chunk-1970ef43a0e81cfab9b4e349937d52ce<SEP>chunk-a1d086fa29bddbf458099ee779c68438<SEP>chunk-7f5314f2ea2b2e09a54bf620954df4a3<SEP>chunk-cf9705e4a12af23f07930f0e944c1e9f<SEP>chunk-053184c525b0c10f0dd434985ac207f2<SEP>chunk-5dc62747f8fadc8750a88d07ed79be71<SEP>chunk-2e3af9a926d4f9db7567fcb8b1d457dd<SEP>chunk-ff80068803f637b2a8fc56713b5d826a<SEP>chunk-85b7a26d96822c1293e19cca11323d34<SEP>chunk-5c91ed2ea8bfed0574e27c7baf63b6c6<SEP>chunk-f9555b7aefebccc997ac08527d4eb7ee<SEP>chunk-97b066d7128b1689dfe8282a9f182a5c<SEP>chunk-1c8e5df10d050f08e5995559c1c7fa47<SEP>chunk-9acebf47b79ece594ce12de5cac976da<SEP>chunk-4f6527c8f6866b87689b9e1750922422<SEP>chunk-5cea5faf4e8019e11b6d3c5f420f7267<SEP>chunk-6d17ad2ef72f49be20201bc489a66d62<SEP>chunk-8c7d204f535ecb9b9d3ba045058d12b9<SEP>chunk-4711fe35f04eff5ed27358c3c80c1ff9<SEP>chunk-c64531f85f69d764bfa3b1d7312ed1bb<SEP>chunk-cadf738458aee0fda5ab49d869d42e52<SEP>chunk-8ee54215efdd5fc7b9052ad0c42d46c8<SEP>chunk-129bea04a4eed90f0ac47d94df434aa6<SEP>chunk-8efb9538a2ac514d224bab59a3f4b44a",
+          "file_path": "unknown_source",
+          "created_at": 1776380583,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Verdant Life-Wands",
+        "type": "artifact",
+        "description": "Verdant Life-Wands are tools that can channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Growth-Force",
+        "type": "concept",
+        "description": "Growth-Force is a power that can accelerate plant development and healing, making seeds sprout in seconds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Living Branches",
+        "type": "naturalobject",
+        "description": "Life-Wands are carved from still-living branches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vitality-Streams",
+        "type": "concept",
+        "description": "Vitality-Streams are glowing green energy that can restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spring Equinox",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Verdant Life-Wands",
+        "tgt": "Vitality-Streams",
+        "keywords": "",
+        "description": "Verdant Life-Wands harness Vitality-Streams to restore health and energy to living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Growth-Force",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Verdant Life-Wands can channel Growth-Force to accelerate plant development and healing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Living Branches",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spring Equinox",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wand rituals are performed during the spring equinox.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Verdant Life-Wands",
+        "type": "artifact",
+        "description": "Verdant Life-Wands are tools that can channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Growth-Force",
+        "type": "concept",
+        "description": "Growth-Force is a power that can accelerate plant development and healing, making seeds sprout in seconds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Living Branches",
+        "type": "naturalobject",
+        "description": "Life-Wands are carved from still-living branches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vitality-Streams",
+        "type": "concept",
+        "description": "Vitality-Streams are glowing green energy that can restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spring Equinox",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Methane-Rich Atmosphere",
+        "type": "",
+        "description": "Methane-rich atmosphere is a characteristic of Quixar, contributing to its extreme cold temperatures.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Verdant Life-Wands",
+        "tgt": "Vitality-Streams",
+        "keywords": "",
+        "description": "Verdant Life-Wands harness Vitality-Streams to restore health and energy to living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Growth-Force",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Verdant Life-Wands can channel Growth-Force to accelerate plant development and healing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Living Branches",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spring Equinox",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wand rituals are performed during the spring equinox.",
+        "weight": 0.0
+      },
+      {
+        "src": "Methane-Rich Atmosphere",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "The relationship between Noah Carter and the World Athletics Federation centers on the validation of Noah Carter's athletic record. The World Athletics Federation, the global governing body for athletics, has validated Noah Carter's record, signifying that it meets the federation's standards and criteria for authenticity and legitimacy. Formerly known as the International Association of Athletics Federations (IAAF), the World Athletics Federation oversees the regulations and recognition of athletic records worldwide. The validation process confirms that Noah Carter's achievement complies with established rules and procedures, underscoring its significance and credibility in the realm of athletics. This recognition by the World Athletics Federation highlights the importance of Noah Carter's record within the sport. The repeated validation by the federation underscores the consistency and reliability of this recognition.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.<SEP>Noah Carter's record is validated by the World Athletics Federation.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:26:29.561977",
+  "llm_calls": 31,
+  "mode": "ft"
+}

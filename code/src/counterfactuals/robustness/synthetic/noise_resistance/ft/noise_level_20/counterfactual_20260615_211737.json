@@ -1,0 +1,190 @@
+{
+  "question": "What are the two primary components used in the creation of 'Lumin-Ink' by Xylotian scribes?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Lumin-Ink"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "The two primary components used in 'Lumin-Ink' are crushed 'Glow-Geodes' and sap from the 'Aether-Blossom' plant.",
+    "original": "The two primary components used in the creation of 'Lumin-Ink' by Xylotian scribes are Glow-Geodes and Aether-Blossom sap.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.037225
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Swirling Energy Patterns'"
+      ],
+      [
+        "add_edge",
+        [
+          "Swirling Energy Patterns'",
+          "Scribes"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Xylar is the actor in the film 'Echoes of the Nebulae'.<SEP>Xylar is the actor who released the film 'Echoes of the Nebulae'.",
+          "keywords": "actor,film release",
+          "source_id": "chunk-cf9705e4a12af23f07930f0e944c1e9f<SEP>chunk-c64531f85f69d764bfa3b1d7312ed1bb",
+          "file_path": "unknown_source",
+          "created_at": 1776380016,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Texts",
+        "type": "content",
+        "description": "Xylotian texts are sacred writings inscribed with Lumin-Ink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumin-Ink",
+        "type": "artifact",
+        "description": "Lumin-Ink is a glowing ink used for inscribing sacred texts, made from Glow-Geodes and Aether-Blossom sap.",
+        "rank": 0.0
+      },
+      {
+        "name": "Scribes",
+        "type": "person",
+        "description": "Scribes are the individuals who pass down the art of Lumin-Ink making through generations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian",
+        "type": "location",
+        "description": "Xylotian is a place known for its unique Lumin-Ink and cuisine.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Xylotian Texts",
+        "keywords": "",
+        "description": "Texts written in Lumin-Ink can be read even in complete darkness.<SEP>Lumin-Ink is used for inscribing sacred Xylotian texts.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Scribes",
+        "keywords": "",
+        "description": "The art of Lumin-Ink making is passed down through generations of scribes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Xylotian",
+        "keywords": "",
+        "description": "Lumin-Ink is traditionally used for inscribing sacred Xylotian texts.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Scribes",
+        "type": "person",
+        "description": "Scribes are the individuals who pass down the art of Lumin-Ink making through generations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Swirling Energy Patterns'",
+        "type": "",
+        "description": "Swirling Energy Patterns are the appearance of Probability-Fields.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Swirling Energy Patterns'",
+        "tgt": "Scribes",
+        "keywords": "actor,film release",
+        "description": "Xylar is the actor in the film 'Echoes of the Nebulae'.<SEP>Xylar is the actor who released the film 'Echoes of the Nebulae'.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Texts",
+        "type": "content",
+        "description": "Xylotian texts are sacred writings inscribed with Lumin-Ink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumin-Ink",
+        "type": "artifact",
+        "description": "Lumin-Ink is a glowing ink used for inscribing sacred texts, made from Glow-Geodes and Aether-Blossom sap.",
+        "rank": 0.0
+      },
+      {
+        "name": "Scribes",
+        "type": "person",
+        "description": "Scribes are the individuals who pass down the art of Lumin-Ink making through generations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian",
+        "type": "location",
+        "description": "Xylotian is a place known for its unique Lumin-Ink and cuisine.",
+        "rank": 0.0
+      },
+      {
+        "name": "Swirling Energy Patterns'",
+        "type": "",
+        "description": "Swirling Energy Patterns are the appearance of Probability-Fields.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Xylotian Texts",
+        "keywords": "",
+        "description": "Texts written in Lumin-Ink can be read even in complete darkness.<SEP>Lumin-Ink is used for inscribing sacred Xylotian texts.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Scribes",
+        "keywords": "",
+        "description": "The art of Lumin-Ink making is passed down through generations of scribes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumin-Ink",
+        "tgt": "Xylotian",
+        "keywords": "",
+        "description": "Lumin-Ink is traditionally used for inscribing sacred Xylotian texts.",
+        "weight": 0.0
+      },
+      {
+        "src": "Swirling Energy Patterns'",
+        "tgt": "Scribes",
+        "keywords": "",
+        "description": "Xylar is the actor in the film 'Echoes of the Nebulae'.<SEP>Xylar is the actor who released the film 'Echoes of the Nebulae'.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:17:37.872709",
+  "llm_calls": 11,
+  "mode": "ft"
+}

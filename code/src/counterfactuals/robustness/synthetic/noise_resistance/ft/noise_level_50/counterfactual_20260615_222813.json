@@ -1,0 +1,474 @@
+{
+  "question": "What two distinct phases define the operation of a Xylotian 'Matter Re-sequencer'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Matter Re-sequencer",
+        "Pattern Imprinting"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "A Xylotian 'Matter Re-sequencer' operates in two phases: 'Atomic Deconstruction' and 'Pattern Imprinting'.",
+    "original": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are Atomic Deconstruction followed by Pattern Imprinting.",
+    "perturbed": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are **Atomic Deconstruction** and **Error Correction Protocols**.",
+    "similarity": 0.84754
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Zorblaxian Language"
+      ],
+      [
+        "add_edge",
+        [
+          "Zorblaxian Language",
+          "Matter Re-sequencer"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Triskelionians hibernate for one month each year.",
+          "keywords": "biological adaptation,seasonal behavior",
+          "source_id": "chunk-678bab7534121db7a66e4f415b866475",
+          "file_path": "unknown_source",
+          "created_at": 1776375127,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Sylvanian Garments"
+      ],
+      [
+        "add_edge",
+        [
+          "Sylvanian Garments",
+          "Matter Re-sequencer"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Dimension-Rifts create temporary doorways between worlds.",
+          "keywords": "creation,portals",
+          "source_id": "chunk-856633022d5e5030b7095161d9c2ded2",
+          "file_path": "unknown_source",
+          "created_at": 1776372371,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Alchemical Skill"
+      ],
+      [
+        "add_edge",
+        [
+          "Alchemical Skill",
+          "Atomic Deconstruction"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+          "keywords": "analysis,equipment function",
+          "source_id": "chunk-cb3d32acabcf93ff84d53e6c715f5868",
+          "file_path": "unknown_source",
+          "created_at": 1776366883,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Station"
+      ],
+      [
+        "add_edge",
+        [
+          "Station",
+          "Atomic Deconstruction"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Forge-Cities are the urban centers of Mechanoid society, reflecting their value of efficiency.",
+          "keywords": "efficiency,urban development",
+          "source_id": "chunk-6334b4c5624e548f71327321342d3140",
+          "file_path": "unknown_source",
+          "created_at": 1776369706,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Pattern Imprinting",
+        "keywords": "",
+        "description": "Pattern Imprinting follows Atomic Deconstruction in the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Skill",
+        "type": "",
+        "description": "Alchemical skill is required to create Sunpetal Balm, indicating a specialized process.<SEP>Alchemical Skill is required to create Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Station",
+        "type": "",
+        "description": "The station is where the train arrived.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxian Language",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "biological adaptation,seasonal behavior",
+        "description": "Triskelionians hibernate for one month each year.",
+        "weight": 1.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "creation,portals",
+        "description": "Dimension-Rifts create temporary doorways between worlds.",
+        "weight": 1.0
+      },
+      {
+        "src": "Alchemical Skill",
+        "tgt": "Atomic Deconstruction",
+        "keywords": "analysis,equipment function",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 1.0
+      },
+      {
+        "src": "Station",
+        "tgt": "Atomic Deconstruction",
+        "keywords": "efficiency,urban development",
+        "description": "Forge-Cities are the urban centers of Mechanoid society, reflecting their value of efficiency.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Skill",
+        "type": "",
+        "description": "Alchemical skill is required to create Sunpetal Balm, indicating a specialized process.<SEP>Alchemical Skill is required to create Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Station",
+        "type": "",
+        "description": "The station is where the train arrived.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Pattern Imprinting",
+        "keywords": "",
+        "description": "Pattern Imprinting follows Atomic Deconstruction in the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxian Language",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Triskelionians hibernate for one month each year.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Dimension-Rifts create temporary doorways between worlds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Skill",
+        "tgt": "Atomic Deconstruction",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      },
+      {
+        "src": "Station",
+        "tgt": "Atomic Deconstruction",
+        "keywords": "",
+        "description": "Forge-Cities are the urban centers of Mechanoid society, reflecting their value of efficiency.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:28:13.065080",
+  "llm_calls": 4,
+  "mode": "ft"
+}

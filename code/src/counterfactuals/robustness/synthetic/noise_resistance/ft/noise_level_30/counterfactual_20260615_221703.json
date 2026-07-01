@@ -1,0 +1,340 @@
+{
+  "question": "What is the traditional weapon of the 'Sky-Guardians' of the Citadel?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Ceremonial Blade"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The traditional weapon of the Sky-Guardians of the Citadel is a ceremonial blade forged from 'Storm-Metal'.",
+    "original": "The traditional weapon of the Sky-Guardians is the Ceremonial Blade.",
+    "perturbed": "The traditional weapon of the Sky-Guardians is their aerial combat skills.",
+    "similarity": 0.760297
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Crystallized Snorflak"
+      ],
+      [
+        "add_edge",
+        [
+          "Crystallized Snorflak",
+          "Citadel"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+          "keywords": "energy harnessing,power amplification",
+          "source_id": "chunk-dbfd518f3805f5b8ca795225dfe27c7e",
+          "file_path": "unknown_source",
+          "created_at": 1776368723,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Xylotian Concept Of Time"
+      ],
+      [
+        "add_edge",
+        [
+          "Xylotian Concept Of Time",
+          "Aerial Combat Skills"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Floating-Markets are part of Aerion Cities, trading in rare sky-goods.",
+          "keywords": "location,trade",
+          "source_id": "chunk-dacf097dab6d99b72c217adbf39a0e08",
+          "file_path": "unknown_source",
+          "created_at": 1776370517,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sky-Guardians",
+        "type": "organization",
+        "description": "The Sky-Guardians are elite protectors of the ancient Citadel, known for their aerial combat skills and defense against airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerial Combat Skills",
+        "type": "concept",
+        "description": "Aerial Combat Skills are the specialized abilities of the Sky-Guardians in fighting airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Citadel",
+        "type": "location",
+        "description": "The Citadel is an ancient fortress built on a high mountain peak, defended by the Sky-Guardians.<SEP>The Citadel is an ancient fortress protected by the Sky-Guardians.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ceremonial Blade",
+        "type": "artifact",
+        "description": "The Ceremonial Blade is a weapon wielded by the Sky-Guardians, forged from Storm-Metal and passed down through generations.<SEP>The Ceremonial Blade is a weapon wielded by the Sky-Guardians, forged from Storm-Metal.",
+        "rank": 0.0
+      },
+      {
+        "name": "Training Process",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "High Mountain Peak",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sky-Guardians",
+        "tgt": "Training Process",
+        "keywords": "",
+        "description": "The Sky-Guardians undergo a rigorous training process to prepare for their duties.<SEP>The Sky-Guardians undergo a rigorous training process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerial Combat Skills",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are known for their aerial combat skills in defending the Citadel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are the elite protectors of the Citadel, defending it from airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "High Mountain Peak",
+        "keywords": "",
+        "description": "The Citadel is built on a high mountain peak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ceremonial Blade",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians wield the Ceremonial Blade as their traditional weapon.<SEP>The Sky-Guardians wield Ceremonial Blades forged from Storm-Metal, which resonates with atmospheric energy.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Sky-Guardians",
+        "type": "organization",
+        "description": "The Sky-Guardians are elite protectors of the ancient Citadel, known for their aerial combat skills and defense against airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerial Combat Skills",
+        "type": "concept",
+        "description": "Aerial Combat Skills are the specialized abilities of the Sky-Guardians in fighting airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Citadel",
+        "type": "location",
+        "description": "The Citadel is an ancient fortress built on a high mountain peak, defended by the Sky-Guardians.<SEP>The Citadel is an ancient fortress protected by the Sky-Guardians.",
+        "rank": 0.0
+      },
+      {
+        "name": "Training Process",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "High Mountain Peak",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystallized Snorflak",
+        "type": "",
+        "description": "Crystallized snorflak is a mined resource that is a major export of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Concept Of Time",
+        "type": "",
+        "description": "The Xylotian concept of time is multi-linear, differing from simpler sequential models.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sky-Guardians",
+        "tgt": "Training Process",
+        "keywords": "",
+        "description": "The Sky-Guardians undergo a rigorous training process to prepare for their duties.<SEP>The Sky-Guardians undergo a rigorous training process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerial Combat Skills",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are known for their aerial combat skills in defending the Citadel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are the elite protectors of the Citadel, defending it from airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "High Mountain Peak",
+        "keywords": "",
+        "description": "The Citadel is built on a high mountain peak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystallized Snorflak",
+        "tgt": "Citadel",
+        "keywords": "energy harnessing,power amplification",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 1.0
+      },
+      {
+        "src": "Xylotian Concept Of Time",
+        "tgt": "Aerial Combat Skills",
+        "keywords": "location,trade",
+        "description": "Floating-Markets are part of Aerion Cities, trading in rare sky-goods.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Sky-Guardians",
+        "type": "organization",
+        "description": "The Sky-Guardians are elite protectors of the ancient Citadel, known for their aerial combat skills and defense against airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerial Combat Skills",
+        "type": "concept",
+        "description": "Aerial Combat Skills are the specialized abilities of the Sky-Guardians in fighting airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Citadel",
+        "type": "location",
+        "description": "The Citadel is an ancient fortress built on a high mountain peak, defended by the Sky-Guardians.<SEP>The Citadel is an ancient fortress protected by the Sky-Guardians.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ceremonial Blade",
+        "type": "artifact",
+        "description": "The Ceremonial Blade is a weapon wielded by the Sky-Guardians, forged from Storm-Metal and passed down through generations.<SEP>The Ceremonial Blade is a weapon wielded by the Sky-Guardians, forged from Storm-Metal.",
+        "rank": 0.0
+      },
+      {
+        "name": "Training Process",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "High Mountain Peak",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystallized Snorflak",
+        "type": "",
+        "description": "Crystallized snorflak is a mined resource that is a major export of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Concept Of Time",
+        "type": "",
+        "description": "The Xylotian concept of time is multi-linear, differing from simpler sequential models.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sky-Guardians",
+        "tgt": "Training Process",
+        "keywords": "",
+        "description": "The Sky-Guardians undergo a rigorous training process to prepare for their duties.<SEP>The Sky-Guardians undergo a rigorous training process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerial Combat Skills",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are known for their aerial combat skills in defending the Citadel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are the elite protectors of the Citadel, defending it from airborne threats.<SEP>The Sky-Guardians are elite protectors of the ancient Citadel, defending it from airborne threats.",
+        "weight": 0.0
+      },
+      {
+        "src": "Citadel",
+        "tgt": "High Mountain Peak",
+        "keywords": "",
+        "description": "The Citadel is built on a high mountain peak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ceremonial Blade",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians wield the Ceremonial Blade as their traditional weapon.<SEP>The Sky-Guardians wield Ceremonial Blades forged from Storm-Metal, which resonates with atmospheric energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystallized Snorflak",
+        "tgt": "Citadel",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Concept Of Time",
+        "tgt": "Aerial Combat Skills",
+        "keywords": "",
+        "description": "Floating-Markets are part of Aerion Cities, trading in rare sky-goods.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:17:03.099379",
+  "llm_calls": 3,
+  "mode": "ft"
+}

@@ -1,0 +1,216 @@
+{
+  "question": "What two distinct capabilities do Quantum 'Reality-Shapers' possess?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Quantum 'Reality-Shapers'"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "Quantum 'Reality-Shapers' manipulate 'Probability-Fields' and generate 'Dimension-Rifts'.",
+    "original": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events and generate Dimension-Rifts that create temporary portals between parallel realities.",
+    "perturbed": "I don't have enough information to answer that question.",
+    "similarity": 0.154088
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Veridia Prime"
+      ],
+      [
+        "add_edge",
+        [
+          "Veridia Prime",
+          "Dimension-Rifts"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Nebulon children's full language comprehension is an adaptation to the Nebulon homeworld environment.",
+          "keywords": "biological adaptation,environmental influence",
+          "source_id": "chunk-590f5d38a95d45533df8154c74c70202",
+          "file_path": "unknown_source",
+          "created_at": 1776375270,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Quantum 'Reality-Shapers'",
+        "type": "person",
+        "description": "Quantum 'Reality-Shapers' are individuals capable of manipulating 'Probability-Fields' and generating 'Dimension-Rifts'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Physics",
+        "type": "UNKNOWN",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Training",
+        "type": "UNKNOWN",
+        "description": "Quantum 'Reality-Shapers' undergo extensive quantum training.",
+        "rank": 0.0
+      },
+      {
+        "name": "Probability-Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Dimension-Rifts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Quantum 'Reality-Shapers'",
+        "tgt": "Quantum Training",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' undergo extensive quantum training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quantum 'Reality-Shapers'",
+        "tgt": "Quantum Physics",
+        "keywords": "",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Probability-Fields",
+        "tgt": "Quantum 'Reality-Shapers'",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dimension-Rifts",
+        "tgt": "Quantum 'Reality-Shapers'",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' generate Dimension-Rifts that create temporary portals between parallel realities.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Dimension-Rifts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Veridia Prime",
+        "type": "",
+        "description": "Veridia Prime is a lush, vibrant planet with diverse ecosystems, vast oceans, and a rich oxygen atmosphere.<SEP>Veridia Prime is a lush, vibrant planet with diverse ecosystems and vast interconnected oceans.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Veridia Prime",
+        "tgt": "Dimension-Rifts",
+        "keywords": "biological adaptation,environmental influence",
+        "description": "Nebulon children's full language comprehension is an adaptation to the Nebulon homeworld environment.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Quantum 'Reality-Shapers'",
+        "type": "person",
+        "description": "Quantum 'Reality-Shapers' are individuals capable of manipulating 'Probability-Fields' and generating 'Dimension-Rifts'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Physics",
+        "type": "UNKNOWN",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Training",
+        "type": "UNKNOWN",
+        "description": "Quantum 'Reality-Shapers' undergo extensive quantum training.",
+        "rank": 0.0
+      },
+      {
+        "name": "Probability-Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Dimension-Rifts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Veridia Prime",
+        "type": "",
+        "description": "Veridia Prime is a lush, vibrant planet with diverse ecosystems, vast oceans, and a rich oxygen atmosphere.<SEP>Veridia Prime is a lush, vibrant planet with diverse ecosystems and vast interconnected oceans.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Quantum 'Reality-Shapers'",
+        "tgt": "Quantum Training",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' undergo extensive quantum training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quantum 'Reality-Shapers'",
+        "tgt": "Quantum Physics",
+        "keywords": "",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Probability-Fields",
+        "tgt": "Quantum 'Reality-Shapers'",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dimension-Rifts",
+        "tgt": "Quantum 'Reality-Shapers'",
+        "keywords": "",
+        "description": "Quantum 'Reality-Shapers' generate Dimension-Rifts that create temporary portals between parallel realities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Veridia Prime",
+        "tgt": "Dimension-Rifts",
+        "keywords": "",
+        "description": "Nebulon children's full language comprehension is an adaptation to the Nebulon homeworld environment.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:58:15.829873",
+  "llm_calls": 26,
+  "mode": "ft"
+}

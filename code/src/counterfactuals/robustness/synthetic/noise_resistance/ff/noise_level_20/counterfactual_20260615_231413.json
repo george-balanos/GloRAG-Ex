@@ -1,0 +1,366 @@
+{
+  "question": "According to the Lumina Accords, what is the designated purpose of 'quiet zones'?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "add_node",
+      "Quiet Zones"
+    ],
+    [
+      "add_edge",
+      [
+        "Cygnans",
+        "Quiet Zones"
+      ]
+    ]
+  ],
+  "cost": 3.4908120036125183,
+  "answers": {
+    "ground_truth": "The designated purpose of 'quiet zones' is to provide a sensory-neutral space or refuge for species with hypersensitive abilities.",
+    "original": "I do not have enough information to answer.",
+    "perturbed": "Quiet zones are designated sensory-neutral spaces in shared habitats for species with hypersensitive abilities.",
+    "similarity": 0.866121
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Purchase"
+      ],
+      [
+        "add_edge",
+        [
+          "Purchase",
+          "Lumina Accords"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The family built a large sandcastle at the beach.",
+          "keywords": "building,creation",
+          "source_id": "chunk-1d68c5e141612935adde70191b543400",
+          "file_path": "unknown_source",
+          "created_at": 1776367541,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Lumina Accords",
+        "type": "document",
+        "description": "The Lumina Accords are a set of agreements signed after a conflict between two major federations, containing 27 articles governing trade, diplomacy, and cohabitation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Article 12",
+        "type": "content",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pan-Galactic Council",
+        "type": "organization",
+        "description": "The Pan-Galactic Council adjudicates violations of the Lumina Accords.",
+        "rank": 0.0
+      },
+      {
+        "name": "Standard Habitat Construction Materials",
+        "type": "artifact",
+        "description": "Standard habitat construction materials must be non-toxic to all member species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cygnans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shared Habitat Charter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina Accords",
+        "tgt": "Pan-Galactic Council",
+        "keywords": "",
+        "description": "The Pan-Galactic Council adjudicates violations of the Lumina Accords.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Standard Habitat Construction Materials",
+        "keywords": "",
+        "description": "The Lumina Accords mandate that habitat construction materials must be non-toxic to all member species.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Shared Habitat Charter",
+        "keywords": "",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "weight": 0.0
+      },
+      {
+        "src": "Article 12",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cygnans",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the Cygnans.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the K'tharr.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Lumina Accords",
+        "type": "document",
+        "description": "The Lumina Accords are a set of agreements signed after a conflict between two major federations, containing 27 articles governing trade, diplomacy, and cohabitation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Article 12",
+        "type": "content",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pan-Galactic Council",
+        "type": "organization",
+        "description": "The Pan-Galactic Council adjudicates violations of the Lumina Accords.",
+        "rank": 0.0
+      },
+      {
+        "name": "Standard Habitat Construction Materials",
+        "type": "artifact",
+        "description": "Standard habitat construction materials must be non-toxic to all member species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cygnans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shared Habitat Charter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Purchase",
+        "type": "",
+        "description": "A new bicycle was bought yesterday.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quiet Zones",
+        "type": "",
+        "description": "Quiet zones are designated sensory-neutral spaces in shared habitats for species with hypersensitive abilities.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina Accords",
+        "tgt": "Pan-Galactic Council",
+        "keywords": "",
+        "description": "The Pan-Galactic Council adjudicates violations of the Lumina Accords.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Standard Habitat Construction Materials",
+        "keywords": "",
+        "description": "The Lumina Accords mandate that habitat construction materials must be non-toxic to all member species.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Shared Habitat Charter",
+        "keywords": "",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "weight": 0.0
+      },
+      {
+        "src": "Article 12",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cygnans",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the Cygnans.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cygnans",
+        "tgt": "Quiet Zones",
+        "keywords": "sensory refuge,species protection",
+        "description": "Quiet zones are designated for species like the Cygnans, who possess heightened sensory faculties.",
+        "weight": 1.0
+      },
+      {
+        "src": "K'tharr",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the K'tharr.",
+        "weight": 0.0
+      },
+      {
+        "src": "Purchase",
+        "tgt": "Lumina Accords",
+        "keywords": "building,creation",
+        "description": "The family built a large sandcastle at the beach.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Lumina Accords",
+        "type": "document",
+        "description": "The Lumina Accords are a set of agreements signed after a conflict between two major federations, containing 27 articles governing trade, diplomacy, and cohabitation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Article 12",
+        "type": "content",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pan-Galactic Council",
+        "type": "organization",
+        "description": "The Pan-Galactic Council adjudicates violations of the Lumina Accords.",
+        "rank": 0.0
+      },
+      {
+        "name": "Standard Habitat Construction Materials",
+        "type": "artifact",
+        "description": "Standard habitat construction materials must be non-toxic to all member species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cygnans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shared Habitat Charter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Purchase",
+        "type": "",
+        "description": "A new bicycle was bought yesterday.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina Accords",
+        "tgt": "Pan-Galactic Council",
+        "keywords": "",
+        "description": "The Pan-Galactic Council adjudicates violations of the Lumina Accords.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Standard Habitat Construction Materials",
+        "keywords": "",
+        "description": "The Lumina Accords mandate that habitat construction materials must be non-toxic to all member species.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Accords",
+        "tgt": "Shared Habitat Charter",
+        "keywords": "",
+        "description": "Each shared habitat must have its charter ratified by an Accords representative.",
+        "weight": 0.0
+      },
+      {
+        "src": "Article 12",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "Article 12 of the Lumina Accords details regulations for atmospheric composition.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cygnans",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the Cygnans.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "The Lumina Accords provide legal protection for species like the K'tharr.",
+        "weight": 0.0
+      },
+      {
+        "src": "Purchase",
+        "tgt": "Lumina Accords",
+        "keywords": "",
+        "description": "The family built a large sandcastle at the beach.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:14:13.721682",
+  "llm_calls": 8,
+  "mode": "ff"
+}

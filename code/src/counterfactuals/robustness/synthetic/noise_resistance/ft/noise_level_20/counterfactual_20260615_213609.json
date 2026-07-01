@@ -1,0 +1,362 @@
+{
+  "question": "What is the lifespan of a common Gloopfish?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "7 Galactic Standard Years",
+    "original": "The lifespan of a Common Gloopfish is 7 Galactic Standard Years (GSY).",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geothermal Converters"
+      ],
+      [
+        "add_edge",
+        [
+          "Geothermal Converters",
+          "Water"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+          "keywords": "application,technology usage",
+          "source_id": "chunk-3a3095a75d84246a310d53e37f208e3a",
+          "file_path": "unknown_source",
+          "created_at": 1776366973,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "User Interface"
+      ],
+      [
+        "add_edge",
+        [
+          "User Interface",
+          "Razorfin"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Exporting raw Emberfly crystals from Elador IV is illegal, highlighting the value of high-grade Phlorian Salt.",
+          "keywords": "economic value,export regulation",
+          "source_id": "chunk-a8f9a5ce977d02ab79f1989e41edf1a0",
+          "file_path": "unknown_source",
+          "created_at": 1776373943,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Common Gloopfish",
+        "type": "creature",
+        "description": "The Common Gloopfish is a species with a lifespan of 7 Galactic Standard Years (GSY), inhabiting methane lakes, and exhibiting unique biological traits.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fish",
+        "type": "creature",
+        "description": "Fish live in water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Water",
+        "type": "naturalobject",
+        "description": "Water is essential for life.<SEP>Water is the habitat for fish and is used by elephants to drink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Razorfin",
+        "type": "creature",
+        "description": "Razorfin is a predator of the Gloopfish.",
+        "rank": 0.0
+      },
+      {
+        "name": "Titanis Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ultrasonic Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Scales",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gulper",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Hearts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Common Gloopfish inhabit the methane lakes of Titanis Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Razorfin is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Eggs",
+        "keywords": "",
+        "description": "Common Gloopfish lay exactly 33 eggs each mating season.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "Common Gloopfish scales are used in traditional medicine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Gulper is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Hearts",
+        "keywords": "",
+        "description": "Common Gloopfish have three hearts arranged in a triangle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "The largest recorded Common Gloopfish was 1.2 meters long.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fish",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Fish live in water.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Common Gloopfish",
+        "type": "creature",
+        "description": "The Common Gloopfish is a species with a lifespan of 7 Galactic Standard Years (GSY), inhabiting methane lakes, and exhibiting unique biological traits.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fish",
+        "type": "creature",
+        "description": "Fish live in water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Water",
+        "type": "naturalobject",
+        "description": "Water is essential for life.<SEP>Water is the habitat for fish and is used by elephants to drink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Razorfin",
+        "type": "creature",
+        "description": "Razorfin is a predator of the Gloopfish.",
+        "rank": 0.0
+      },
+      {
+        "name": "Titanis Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ultrasonic Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Scales",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gulper",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Hearts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geothermal Converters",
+        "type": "",
+        "description": "Geothermal Converters are power sources for Sand-Crawlers, drawing heat from deep underground vents.",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Common Gloopfish inhabit the methane lakes of Titanis Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Razorfin is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Eggs",
+        "keywords": "",
+        "description": "Common Gloopfish lay exactly 33 eggs each mating season.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "Common Gloopfish scales are used in traditional medicine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Gulper is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Hearts",
+        "keywords": "",
+        "description": "Common Gloopfish have three hearts arranged in a triangle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "The largest recorded Common Gloopfish was 1.2 meters long.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fish",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Fish live in water.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geothermal Converters",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "User Interface",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Exporting raw Emberfly crystals from Elador IV is illegal, highlighting the value of high-grade Phlorian Salt.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:36:09.362796",
+  "llm_calls": 201,
+  "mode": "ft"
+}

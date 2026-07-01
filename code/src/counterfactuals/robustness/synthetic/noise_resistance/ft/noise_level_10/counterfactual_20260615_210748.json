@@ -1,0 +1,346 @@
+{
+  "question": "What are the 'Floating Islands of Aeridia' made of?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Aeridium Ore"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "The 'Floating Islands of Aeridia' are primarily composed of 'Aeridium Ore'.",
+    "original": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.",
+    "perturbed": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.",
+    "similarity": 0.656144
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Neural Augmentation"
+      ],
+      [
+        "add_edge",
+        [
+          "Neural Augmentation",
+          "Airship"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Celestian Film Industry explores themes of artificial intelligence.",
+          "keywords": "film content,industry theme",
+          "source_id": "chunk-c64531f85f69d764bfa3b1d7312ed1bb",
+          "file_path": "unknown_source",
+          "created_at": 1776380017,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aeridium Ore",
+        "type": "naturalobject",
+        "description": "Aeridium Ore is a lightweight, crystalline mineral found only in atmospheric veins, providing buoyancy to the Floating Islands of Aeridia.<SEP>Aeridium Ore is a naturally buoyant, lightweight, and crystalline mineral found only in atmospheric veins on Ntulu.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Veins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Studies",
+        "keywords": "",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Atmospheric Veins",
+        "keywords": "",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Neural Augmentation",
+        "type": "",
+        "description": "Neural Augmentation is the enhancement of cognitive functions through the use of the Bio-Harmonizer implant.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Neural Augmentation",
+        "tgt": "Airship",
+        "keywords": "film content,industry theme",
+        "description": "The Celestian Film Industry explores themes of artificial intelligence.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "naturalobject",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aeridium Ore",
+        "type": "naturalobject",
+        "description": "Aeridium Ore is a lightweight, crystalline mineral found only in atmospheric veins, providing buoyancy to the Floating Islands of Aeridia.<SEP>Aeridium Ore is a naturally buoyant, lightweight, and crystalline mineral found only in atmospheric veins on Ntulu.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ntulu",
+        "type": "location",
+        "description": "Ntulu is a planet known for its natural wonders, including the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Airborne Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Waterfalls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Veins",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Neural Augmentation",
+        "type": "",
+        "description": "Neural Augmentation is the enhancement of cognitive functions through the use of the Bio-Harmonizer implant.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Ntulu",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are a natural wonder located on the planet Ntulu.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Waterfalls",
+        "keywords": "",
+        "description": "Large waterfalls cascade from the edges of some Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Studies",
+        "keywords": "",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridium Ore",
+        "tgt": "Atmospheric Veins",
+        "keywords": "",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airborne Flora",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are home to unique airborne flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Floating Islands of Aeridia",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Neural Augmentation",
+        "tgt": "Airship",
+        "keywords": "",
+        "description": "The Celestian Film Industry explores themes of artificial intelligence.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:07:48.743117",
+  "llm_calls": 67,
+  "mode": "ft"
+}

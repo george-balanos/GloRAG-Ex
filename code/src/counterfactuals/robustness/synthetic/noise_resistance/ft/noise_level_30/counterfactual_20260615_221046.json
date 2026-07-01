@@ -1,0 +1,554 @@
+{
+  "question": "What color is the sky on Florpion during daytime?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Florpion",
+        "Kryponite Particles"
+      ]
+    ],
+    [
+      "delete_node",
+      "Chartreuse Sky"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "chartreuse",
+    "original": "The sky on Florpion appears chartreuse during daytime.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.055723
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Ancient Floopy Tongue"
+      ],
+      [
+        "add_edge",
+        [
+          "Ancient Floopy Tongue",
+          "First Florpionian City"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Phlorian Salt contains pulverized Emberfly crystals, which give it its thermochromic properties.",
+          "keywords": "color-changing property,composition",
+          "source_id": "chunk-a8f9a5ce977d02ab79f1989e41edf1a0",
+          "file_path": "unknown_source",
+          "created_at": 1776373943,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "The Sun"
+      ],
+      [
+        "add_edge",
+        [
+          "The Sun",
+          "Florpion"
+        ],
+        {
+          "weight": 1.0,
+          "description": "A good Vorpal blade is sharp and reliable.",
+          "keywords": "reliability,weapon quality",
+          "source_id": "chunk-9699258d651968b022029e2c5661bab9",
+          "file_path": "unknown_source",
+          "created_at": 1776368330,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Silver-Lotus"
+      ],
+      [
+        "add_edge",
+        [
+          "Silver-Lotus",
+          "Sunlight"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+          "keywords": "genre focus,rich storytelling",
+          "source_id": "chunk-68fbd54e6cfb42098a4cbe690097fae2",
+          "file_path": "unknown_source",
+          "created_at": 1776377490,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Florpion",
+        "type": "location",
+        "description": "Florpion is a planet with unique atmospheric and geological characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chartreuse Sky",
+        "type": "naturalobject",
+        "description": "The chartreuse sky on Florpion is due to light refraction through kryponite particles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpionians",
+        "type": "creature",
+        "description": "Florpionians are native inhabitants of Florpion who communicate through bioluminescence.",
+        "rank": 0.0
+      },
+      {
+        "name": "Prism-City",
+        "type": "location",
+        "description": "Prism-City is a location known for refracting sunlight into stunning displays.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunlight",
+        "type": "UNKNOWN",
+        "description": "Prism-City refracts sunlight into stunning displays.",
+        "rank": 0.0
+      },
+      {
+        "name": "Kryponite Particles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Day",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Continents",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Florpionian City",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Florpion",
+        "tgt": "Kryponite Particles",
+        "keywords": "",
+        "description": "Kryponite particles in Florpion's atmosphere cause the sky to appear chartreuse.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Day",
+        "keywords": "",
+        "description": "A Florpion day lasts exactly 26 Earth hours.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Continents",
+        "keywords": "",
+        "description": "Florpion's continents float on a liquid mantle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpionians",
+        "keywords": "",
+        "description": "Florpionians are native to Florpion and communicate through bioluminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Oceans",
+        "keywords": "",
+        "description": "Florpion's oceans are composed of liquid ammonia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Gravity",
+        "keywords": "",
+        "description": "Florpion's gravity is 0.8 times that of Earth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chartreuse Sky",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "Florpion's unique atmospheric composition causes its sky to appear chartreuse due to light refraction.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prism-City",
+        "tgt": "Sunlight",
+        "keywords": "",
+        "description": "Prism-City refracts sunlight into stunning displays.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Florpionian City",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "The first Florpionian city was built underwater.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Florpion",
+        "type": "location",
+        "description": "Florpion is a planet with unique atmospheric and geological characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpionians",
+        "type": "creature",
+        "description": "Florpionians are native inhabitants of Florpion who communicate through bioluminescence.",
+        "rank": 0.0
+      },
+      {
+        "name": "Prism-City",
+        "type": "location",
+        "description": "Prism-City is a location known for refracting sunlight into stunning displays.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunlight",
+        "type": "UNKNOWN",
+        "description": "Prism-City refracts sunlight into stunning displays.",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Day",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Continents",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Florpionian City",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Floopy Tongue",
+        "type": "",
+        "description": "Learning the ancient Floopy tongue is difficult.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Sun",
+        "type": "",
+        "description": "The Sun is shining brightly today.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Day",
+        "keywords": "",
+        "description": "A Florpion day lasts exactly 26 Earth hours.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Continents",
+        "keywords": "",
+        "description": "Florpion's continents float on a liquid mantle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpionians",
+        "keywords": "",
+        "description": "Florpionians are native to Florpion and communicate through bioluminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Oceans",
+        "keywords": "",
+        "description": "Florpion's oceans are composed of liquid ammonia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Gravity",
+        "keywords": "",
+        "description": "Florpion's gravity is 0.8 times that of Earth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prism-City",
+        "tgt": "Sunlight",
+        "keywords": "",
+        "description": "Prism-City refracts sunlight into stunning displays.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Florpionian City",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "The first Florpionian city was built underwater.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Floopy Tongue",
+        "tgt": "First Florpionian City",
+        "keywords": "color-changing property,composition",
+        "description": "Phlorian Salt contains pulverized Emberfly crystals, which give it its thermochromic properties.",
+        "weight": 1.0
+      },
+      {
+        "src": "The Sun",
+        "tgt": "Florpion",
+        "keywords": "reliability,weapon quality",
+        "description": "A good Vorpal blade is sharp and reliable.",
+        "weight": 1.0
+      },
+      {
+        "src": "Silver-Lotus",
+        "tgt": "Sunlight",
+        "keywords": "genre focus,rich storytelling",
+        "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Florpion",
+        "type": "location",
+        "description": "Florpion is a planet with unique atmospheric and geological characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chartreuse Sky",
+        "type": "naturalobject",
+        "description": "The chartreuse sky on Florpion is due to light refraction through kryponite particles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpionians",
+        "type": "creature",
+        "description": "Florpionians are native inhabitants of Florpion who communicate through bioluminescence.",
+        "rank": 0.0
+      },
+      {
+        "name": "Prism-City",
+        "type": "location",
+        "description": "Prism-City is a location known for refracting sunlight into stunning displays.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunlight",
+        "type": "UNKNOWN",
+        "description": "Prism-City refracts sunlight into stunning displays.",
+        "rank": 0.0
+      },
+      {
+        "name": "Kryponite Particles",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Day",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Continents",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Florpion Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Florpionian City",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Floopy Tongue",
+        "type": "",
+        "description": "Learning the ancient Floopy tongue is difficult.",
+        "rank": 0.0
+      },
+      {
+        "name": "The Sun",
+        "type": "",
+        "description": "The Sun is shining brightly today.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Florpion",
+        "tgt": "Kryponite Particles",
+        "keywords": "",
+        "description": "Kryponite particles in Florpion's atmosphere cause the sky to appear chartreuse.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Day",
+        "keywords": "",
+        "description": "A Florpion day lasts exactly 26 Earth hours.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Continents",
+        "keywords": "",
+        "description": "Florpion's continents float on a liquid mantle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpionians",
+        "keywords": "",
+        "description": "Florpionians are native to Florpion and communicate through bioluminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Oceans",
+        "keywords": "",
+        "description": "Florpion's oceans are composed of liquid ammonia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Florpion",
+        "tgt": "Florpion Gravity",
+        "keywords": "",
+        "description": "Florpion's gravity is 0.8 times that of Earth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chartreuse Sky",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "Florpion's unique atmospheric composition causes its sky to appear chartreuse due to light refraction.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prism-City",
+        "tgt": "Sunlight",
+        "keywords": "",
+        "description": "Prism-City refracts sunlight into stunning displays.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Florpionian City",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "The first Florpionian city was built underwater.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Floopy Tongue",
+        "tgt": "First Florpionian City",
+        "keywords": "",
+        "description": "Phlorian Salt contains pulverized Emberfly crystals, which give it its thermochromic properties.",
+        "weight": 0.0
+      },
+      {
+        "src": "The Sun",
+        "tgt": "Florpion",
+        "keywords": "",
+        "description": "A good Vorpal blade is sharp and reliable.",
+        "weight": 0.0
+      },
+      {
+        "src": "Silver-Lotus",
+        "tgt": "Sunlight",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:10:46.643282",
+  "llm_calls": 24,
+  "mode": "ft"
+}

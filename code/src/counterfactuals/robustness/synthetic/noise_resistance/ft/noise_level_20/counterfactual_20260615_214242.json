@@ -1,0 +1,537 @@
+{
+  "question": "What is the radius of the largest planet in the K'tharr System?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Jormund"
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "The radius of Jormund is 95.000 kilometers.",
+    "original": "The radius of the largest planet in the K'tharr System is 95,000 kilometers.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": -0.04817
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Nebula-Yarn"
+      ],
+      [
+        "add_edge",
+        [
+          "Nebula-Yarn",
+          "Typhon"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+          "keywords": "material composition,supernatural capture",
+          "source_id": "chunk-338af8d2707612d1119fe2069b90d9b9",
+          "file_path": "unknown_source",
+          "created_at": 1776372511,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Desert of Bones"
+      ],
+      [
+        "add_edge",
+        [
+          "Desert of Bones",
+          "Aethelia"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Triskelionian music uses frequencies inaudible to humans.",
+          "keywords": "auditory perception,cultural characteristic",
+          "source_id": "chunk-678bab7534121db7a66e4f415b866475",
+          "file_path": "unknown_source",
+          "created_at": 1776375127,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "K'tharr System",
+        "type": "location",
+        "description": "The K'tharr System is a star system containing seven planets and located in a sparse region of the galaxy.<SEP>The K'tharr System is a star system containing seven planets, including gas giants and rocky worlds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Jormund",
+        "type": "naturalobject",
+        "description": "Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.<SEP>Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr Prime",
+        "type": "naturalobject",
+        "description": "K'tharr Prime is the orange dwarf star at the center of the K'tharr System, smaller and cooler than Sol.<SEP>K'tharr Prime is the star of the K'tharr System, described as smaller and cooler than Sol.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacies",
+        "type": "naturalobject",
+        "description": "Glacies is the outermost dwarf planet in the K'tharr System, covered in volatile ice.<SEP>Glacies is the outermost dwarf planet in the K'tharr System, covered in volatile ice.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pyralia",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelia",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Typhon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Goliath",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "K'tharr System",
+        "tgt": "Pyralia",
+        "keywords": "",
+        "description": "Pyralia is the innermost planet within the K'tharr System.<SEP>Pyralia is the innermost planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr System",
+        "tgt": "Typhon",
+        "keywords": "",
+        "description": "Typhon is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Jormund",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Jormund is the largest gas giant within the K'tharr System.<SEP>Jormund is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Jormund",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Jormund orbits K'tharr Prime within the K'tharr System.<SEP>Jormund orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "K'tharr Prime is the central star of the K'tharr System.<SEP>K'tharr Prime is the star at the center of the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "Pyralia",
+        "keywords": "",
+        "description": "Pyralia orbits very close to K'tharr Prime and is volcanically active.<SEP>Pyralia orbits very close to K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "Typhon",
+        "keywords": "",
+        "description": "Typhon orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacies",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Glacies orbits K'tharr Prime as the outermost object in the K'tharr System.<SEP>Glacies orbits K'tharr Prime as the outermost object in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacies",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Glacies is the outermost dwarf planet within the K'tharr System.<SEP>Glacies is the outermost dwarf planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Aethelia orbits K'tharr Prime within the habitable zone of the K'tharr System.<SEP>Aethelia orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Goliath",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Goliath is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Goliath",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Goliath orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "K'tharr System",
+        "type": "location",
+        "description": "The K'tharr System is a star system containing seven planets and located in a sparse region of the galaxy.<SEP>The K'tharr System is a star system containing seven planets, including gas giants and rocky worlds.",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr Prime",
+        "type": "naturalobject",
+        "description": "K'tharr Prime is the orange dwarf star at the center of the K'tharr System, smaller and cooler than Sol.<SEP>K'tharr Prime is the star of the K'tharr System, described as smaller and cooler than Sol.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacies",
+        "type": "naturalobject",
+        "description": "Glacies is the outermost dwarf planet in the K'tharr System, covered in volatile ice.<SEP>Glacies is the outermost dwarf planet in the K'tharr System, covered in volatile ice.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pyralia",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelia",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Typhon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Goliath",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebula-Yarn",
+        "type": "",
+        "description": "Nebula-Yarn is a material spun by Cosmic 'Star-Weavers' from stellar nurseries, glowing with the light of newborn stars.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "K'tharr System",
+        "tgt": "Pyralia",
+        "keywords": "",
+        "description": "Pyralia is the innermost planet within the K'tharr System.<SEP>Pyralia is the innermost planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr System",
+        "tgt": "Typhon",
+        "keywords": "",
+        "description": "Typhon is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "K'tharr Prime is the central star of the K'tharr System.<SEP>K'tharr Prime is the star at the center of the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "Pyralia",
+        "keywords": "",
+        "description": "Pyralia orbits very close to K'tharr Prime and is volcanically active.<SEP>Pyralia orbits very close to K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "Typhon",
+        "keywords": "",
+        "description": "Typhon orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacies",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Glacies orbits K'tharr Prime as the outermost object in the K'tharr System.<SEP>Glacies orbits K'tharr Prime as the outermost object in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacies",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Glacies is the outermost dwarf planet within the K'tharr System.<SEP>Glacies is the outermost dwarf planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Aethelia orbits K'tharr Prime within the habitable zone of the K'tharr System.<SEP>Aethelia orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Goliath",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Goliath is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Goliath",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Goliath orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Nebula-Yarn",
+        "tgt": "Typhon",
+        "keywords": "material composition,supernatural capture",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+        "weight": 1.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Aethelia",
+        "keywords": "auditory perception,cultural characteristic",
+        "description": "Triskelionian music uses frequencies inaudible to humans.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "K'tharr System",
+        "type": "location",
+        "description": "The K'tharr System is a star system containing seven planets and located in a sparse region of the galaxy.<SEP>The K'tharr System is a star system containing seven planets, including gas giants and rocky worlds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Jormund",
+        "type": "naturalobject",
+        "description": "Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.<SEP>Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.",
+        "rank": 0.0
+      },
+      {
+        "name": "K'tharr Prime",
+        "type": "naturalobject",
+        "description": "K'tharr Prime is the orange dwarf star at the center of the K'tharr System, smaller and cooler than Sol.<SEP>K'tharr Prime is the star of the K'tharr System, described as smaller and cooler than Sol.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacies",
+        "type": "naturalobject",
+        "description": "Glacies is the outermost dwarf planet in the K'tharr System, covered in volatile ice.<SEP>Glacies is the outermost dwarf planet in the K'tharr System, covered in volatile ice.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pyralia",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelia",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Typhon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Goliath",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebula-Yarn",
+        "type": "",
+        "description": "Nebula-Yarn is a material spun by Cosmic 'Star-Weavers' from stellar nurseries, glowing with the light of newborn stars.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "K'tharr System",
+        "tgt": "Pyralia",
+        "keywords": "",
+        "description": "Pyralia is the innermost planet within the K'tharr System.<SEP>Pyralia is the innermost planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr System",
+        "tgt": "Typhon",
+        "keywords": "",
+        "description": "Typhon is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Jormund",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Jormund is the largest gas giant within the K'tharr System.<SEP>Jormund is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Jormund",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Jormund orbits K'tharr Prime within the K'tharr System.<SEP>Jormund orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "K'tharr Prime is the central star of the K'tharr System.<SEP>K'tharr Prime is the star at the center of the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "Pyralia",
+        "keywords": "",
+        "description": "Pyralia orbits very close to K'tharr Prime and is volcanically active.<SEP>Pyralia orbits very close to K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "K'tharr Prime",
+        "tgt": "Typhon",
+        "keywords": "",
+        "description": "Typhon orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacies",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Glacies orbits K'tharr Prime as the outermost object in the K'tharr System.<SEP>Glacies orbits K'tharr Prime as the outermost object in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacies",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Glacies is the outermost dwarf planet within the K'tharr System.<SEP>Glacies is the outermost dwarf planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Aethelia is a rocky planet in the habitable zone of the K'tharr System.<SEP>Aethelia is a rocky planet in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelia",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Aethelia orbits K'tharr Prime within the habitable zone of the K'tharr System.<SEP>Aethelia orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Goliath",
+        "tgt": "K'tharr System",
+        "keywords": "",
+        "description": "Goliath is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Goliath",
+        "tgt": "K'tharr Prime",
+        "keywords": "",
+        "description": "Goliath orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Nebula-Yarn",
+        "tgt": "Typhon",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Aethelia",
+        "keywords": "",
+        "description": "Triskelionian music uses frequencies inaudible to humans.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:42:42.749604",
+  "llm_calls": 92,
+  "mode": "ft"
+}

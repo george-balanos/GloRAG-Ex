@@ -1,0 +1,192 @@
+{
+  "question": "What colors did Alex use to paint his toy car?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Alex",
+        "Toy Car"
+      ]
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "Alex painted his toy car bright red and used yellow for the stripes.",
+    "original": "Alex painted his toy car bright red with yellow stripes.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.102487
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Planetary Defense"
+      ],
+      [
+        "add_edge",
+        [
+          "Planetary Defense",
+          "Chromatic Colors"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The crystalline structure of Solara allows for the efficient absorption and temporary storage of radiant energy.",
+          "keywords": "energy absorption,radiant storage",
+          "source_id": "chunk-fdbdb9446200becfa82435a43d9650c2",
+          "file_path": "unknown_source",
+          "created_at": 1776376918,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Alex",
+        "type": "person",
+        "description": "Alex is a person who painted a toy car.",
+        "rank": 0.0
+      },
+      {
+        "name": "Toy Car",
+        "type": "artifact",
+        "description": "The toy car is painted bright red with yellow stripes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alex",
+        "tgt": "Toy Car",
+        "keywords": "",
+        "description": "Alex painted the toy car bright red with yellow stripes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "Planetary Defense is the primary function of Aegis Station, serving as a defense point for the planet Xylos.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Planetary Defense",
+        "tgt": "Chromatic Colors",
+        "keywords": "energy absorption,radiant storage",
+        "description": "The crystalline structure of Solara allows for the efficient absorption and temporary storage of radiant energy.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Alex",
+        "type": "person",
+        "description": "Alex is a person who painted a toy car.",
+        "rank": 0.0
+      },
+      {
+        "name": "Toy Car",
+        "type": "artifact",
+        "description": "The toy car is painted bright red with yellow stripes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "Planetary Defense is the primary function of Aegis Station, serving as a defense point for the planet Xylos.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Alex",
+        "tgt": "Toy Car",
+        "keywords": "",
+        "description": "Alex painted the toy car bright red with yellow stripes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Planetary Defense",
+        "tgt": "Chromatic Colors",
+        "keywords": "",
+        "description": "The crystalline structure of Solara allows for the efficient absorption and temporary storage of radiant energy.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:51:09.690271",
+  "llm_calls": 3,
+  "mode": "ft"
+}

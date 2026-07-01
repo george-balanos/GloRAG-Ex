@@ -1,0 +1,368 @@
+{
+  "question": "What kind of power source is used by the ancient constructs found in the Desert of Bones?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Desert of Bones",
+        "War Golems"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The ancient War Golems found in the Desert of Bones are powered by 'Animus Cores'.",
+    "original": "The War Golems, ancient constructs found in the Desert of Bones, are powered by Animus Cores.",
+    "perturbed": "The War Golems, ancient constructs found in the Desert of Bones, are powered by Chronium.",
+    "similarity": 0.713498
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Gleebs"
+      ],
+      [
+        "add_edge",
+        [
+          "Gleebs",
+          "Desert Ruins"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Dual Zenith Day marks the Xandrian New Year according to their ancient calendar.",
+          "keywords": "alignment,calendar",
+          "source_id": "chunk-fa6a76de2e25798cb26a401b39379d4d",
+          "file_path": "unknown_source",
+          "created_at": 1776374992,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Mental Discipline"
+      ],
+      [
+        "add_edge",
+        [
+          "Mental Discipline",
+          "Chrono-Regulator"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Sun-Temple is a significant location for Solarian Sun-Dancers and their culture.",
+          "keywords": "cultural significance,location",
+          "source_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776371512,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Roric"
+      ],
+      [
+        "add_edge",
+        [
+          "Roric",
+          "Desert of Bones"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Phlorian Salt is harvested from the saline marshes of Elador IV.",
+          "keywords": "harvesting location,natural resource",
+          "source_id": "chunk-a8f9a5ce977d02ab79f1989e41edf1a0",
+          "file_path": "unknown_source",
+          "created_at": 1776373943,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "organization",
+        "description": "The Forgotten Civilization is the group that created the Chrono-Regulator and the desert ruins.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "War Golems",
+        "type": "artifact",
+        "description": "War Golems are ancient constructs unearthed from the Desert of Bones, capable of limited function, and originally designed for defense.<SEP>War Golems are ancient constructs unearthed in the Desert of Bones, powered by Animus Cores and capable of limited function.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "organization",
+        "description": "The Forgotten Civilization is the group that created the Chrono-Regulator and the desert ruins.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gleebs",
+        "type": "",
+        "description": "Gleebs are native fauna of Zylos that are unaffected by Chronium.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Discipline",
+        "type": "",
+        "description": "Mental discipline is a factor that can influence the effectiveness of an Aura-Cloak.",
+        "rank": 0.0
+      },
+      {
+        "name": "Roric",
+        "type": "",
+        "description": "Roric is an actor in Celestia's film industry with a recent film titled 'The Last Star-Sailor'.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleebs",
+        "tgt": "Desert Ruins",
+        "keywords": "alignment,calendar",
+        "description": "Dual Zenith Day marks the Xandrian New Year according to their ancient calendar.",
+        "weight": 1.0
+      },
+      {
+        "src": "Mental Discipline",
+        "tgt": "Chrono-Regulator",
+        "keywords": "cultural significance,location",
+        "description": "The Sun-Temple is a significant location for Solarian Sun-Dancers and their culture.",
+        "weight": 1.0
+      },
+      {
+        "src": "Roric",
+        "tgt": "Desert of Bones",
+        "keywords": "harvesting location,natural resource",
+        "description": "Phlorian Salt is harvested from the saline marshes of Elador IV.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Desert Ruins",
+        "type": "location",
+        "description": "The Desert Ruins are the site where the Chrono-Regulator was discovered, belonging to a forgotten civilization.<SEP>The Desert Ruins are the site where the Chrono-Regulator was recently discovered.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forgotten Civilization",
+        "type": "organization",
+        "description": "The Forgotten Civilization is the group that created the Chrono-Regulator and the desert ruins.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "War Golems",
+        "type": "artifact",
+        "description": "War Golems are ancient constructs unearthed from the Desert of Bones, capable of limited function, and originally designed for defense.<SEP>War Golems are ancient constructs unearthed in the Desert of Bones, powered by Animus Cores and capable of limited function.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Regulator",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gleebs",
+        "type": "",
+        "description": "Gleebs are native fauna of Zylos that are unaffected by Chronium.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Discipline",
+        "type": "",
+        "description": "Mental discipline is a factor that can influence the effectiveness of an Aura-Cloak.",
+        "rank": 0.0
+      },
+      {
+        "name": "Roric",
+        "type": "",
+        "description": "Roric is an actor in Celestia's film industry with a recent film titled 'The Last Star-Sailor'.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "The Chrono-Regulator was discovered in the Desert Ruins.<SEP>The Chrono-Regulator was discovered in the Desert Ruins.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Regulator",
+        "tgt": "Forgotten Civilization",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleebs",
+        "tgt": "Desert Ruins",
+        "keywords": "",
+        "description": "Dual Zenith Day marks the Xandrian New Year according to their ancient calendar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mental Discipline",
+        "tgt": "Chrono-Regulator",
+        "keywords": "",
+        "description": "The Sun-Temple is a significant location for Solarian Sun-Dancers and their culture.",
+        "weight": 0.0
+      },
+      {
+        "src": "Roric",
+        "tgt": "Desert of Bones",
+        "keywords": "",
+        "description": "Phlorian Salt is harvested from the saline marshes of Elador IV.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:05:09.716693",
+  "llm_calls": 3,
+  "mode": "ft"
+}

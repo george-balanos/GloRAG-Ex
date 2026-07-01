@@ -1,0 +1,241 @@
+{
+  "question": "How many moons orbit the planet Quixar?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Quixar"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "four",
+    "original": "Quixar has four moons.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.065201
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Blizzard-Pulses"
+      ],
+      [
+        "add_edge",
+        [
+          "Blizzard-Pulses",
+          "Triskelion"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Album releases on Riven Prime often include temporal variants offering different mixes.",
+          "keywords": "content",
+          "source_id": "chunk-053184c525b0c10f0dd434985ac207f2",
+          "file_path": "unknown_source",
+          "created_at": 1776377680,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Worv",
+        "type": "naturalobject",
+        "description": "Worv is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zipt",
+        "type": "naturalobject",
+        "description": "Zipt is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quixar",
+        "type": "naturalobject",
+        "description": "Quixar is the seventh planet in the Yondar system, characterized by a methane-rich atmosphere, an average surface temperature of -200°C, and a strong magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Yandr",
+        "type": "naturalobject",
+        "description": "Yandr is one of the four moons of Quixar.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Worv",
+        "keywords": "",
+        "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Zipt",
+        "keywords": "",
+        "description": "Zipt is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Yandr",
+        "keywords": "",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blizzard-Pulses",
+        "type": "",
+        "description": "Blizzard-Pulses are concentrated bursts of freezing energy produced by the Frost-Crown.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blizzard-Pulses",
+        "tgt": "Triskelion",
+        "keywords": "content",
+        "description": "Album releases on Riven Prime often include temporal variants offering different mixes.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Worv",
+        "type": "naturalobject",
+        "description": "Worv is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zipt",
+        "type": "naturalobject",
+        "description": "Zipt is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quixar",
+        "type": "naturalobject",
+        "description": "Quixar is the seventh planet in the Yondar system, characterized by a methane-rich atmosphere, an average surface temperature of -200°C, and a strong magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Yandr",
+        "type": "naturalobject",
+        "description": "Yandr is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blizzard-Pulses",
+        "type": "",
+        "description": "Blizzard-Pulses are concentrated bursts of freezing energy produced by the Frost-Crown.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Worv",
+        "keywords": "",
+        "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Zipt",
+        "keywords": "",
+        "description": "Zipt is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Yandr",
+        "keywords": "",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blizzard-Pulses",
+        "tgt": "Triskelion",
+        "keywords": "",
+        "description": "Album releases on Riven Prime often include temporal variants offering different mixes.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:33:50.882813",
+  "llm_calls": 22,
+  "mode": "ft"
+}

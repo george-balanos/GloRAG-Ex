@@ -1,0 +1,336 @@
+{
+  "question": "What two abilities does a Valorian 'Mind-Smith' possess in their craft?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "A Valorian 'Mind-Smith' can forge 'Thought-Metal' and perform 'Memory-Welding'.",
+    "original": "A Valorian 'Mind-Smith' can forge Thought-Metal and perform Memory-Welding.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Base-8 Numbering System"
+      ],
+      [
+        "add_edge",
+        [
+          "Base-8 Numbering System",
+          "Council of Smiths"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The carpenter uses a hammer to drive nails.",
+          "keywords": "tool usage",
+          "source_id": "chunk-da5333743680ef3e99bf512f689a0a60",
+          "file_path": "unknown_source",
+          "created_at": 1776368167,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Aether-Blossom"
+      ],
+      [
+        "add_edge",
+        [
+          "Aether-Blossom",
+          "Council of Smiths"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Whisper-Willow trees shed fibers during spring, which is honored in Sylvanian festivals.",
+          "keywords": "cultural significance,seasonal cycle",
+          "source_id": "chunk-df225153d9892c14a4f59cb36a4fdc52",
+          "file_path": "unknown_source",
+          "created_at": 1776369463,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Mind-Smith",
+        "type": "person",
+        "description": "Mind-Smiths are Valorians who can forge Thought-Metal and perform Memory-Welding.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Guild of Valor",
+        "type": "organization",
+        "description": "The Forge-Guild of Valor oversees all metalworking trades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian",
+        "type": "person",
+        "description": "Valorians are individuals capable of forging Thought-Metal and performing Memory-Welding.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Apprentices",
+        "type": "person",
+        "description": "Valorian apprentices begin training at age twelve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thought-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Weld",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Conditioning",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Welding",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Council of Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Festivals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Mind-Smith",
+        "tgt": "Thought-Metal",
+        "keywords": "",
+        "description": "Mind-Smiths can forge Thought-Metal by solidifying pure mental energy into physical form.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mind-Smith",
+        "tgt": "Valorian Apprentices",
+        "keywords": "",
+        "description": "Valorian apprentices begin training at age twelve to become Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Guild of Valor",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "The Forge-Guild of Valor oversees all metalworking trades, including those performed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Valorian",
+        "tgt": "Valorian Festivals",
+        "keywords": "",
+        "description": "Valorians celebrate the changing of the seasons through festivals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Memory-Weld",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Mind-Smiths possess the ability to perform Memory-Welding to bond experiences and knowledge into metallic creations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mental Conditioning",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Mind-Smiths undergo decades of mental conditioning.",
+        "weight": 0.0
+      },
+      {
+        "src": "Memory-Welding",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Council of Smiths",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "The Council of Smiths regulates the use of Mind-Smith abilities.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Mind-Smith",
+        "type": "person",
+        "description": "Mind-Smiths are Valorians who can forge Thought-Metal and perform Memory-Welding.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Guild of Valor",
+        "type": "organization",
+        "description": "The Forge-Guild of Valor oversees all metalworking trades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian",
+        "type": "person",
+        "description": "Valorians are individuals capable of forging Thought-Metal and performing Memory-Welding.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Apprentices",
+        "type": "person",
+        "description": "Valorian apprentices begin training at age twelve.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thought-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Weld",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Conditioning",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Welding",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Council of Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian Festivals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Base-8 Numbering System",
+        "type": "",
+        "description": "Vexian engineering employs a base-8 numbering system.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aether-Blossom",
+        "type": "",
+        "description": "Aether-Blossom is a plant whose sap is used to create Lumin-Ink.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Mind-Smith",
+        "tgt": "Thought-Metal",
+        "keywords": "",
+        "description": "Mind-Smiths can forge Thought-Metal by solidifying pure mental energy into physical form.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mind-Smith",
+        "tgt": "Valorian Apprentices",
+        "keywords": "",
+        "description": "Valorian apprentices begin training at age twelve to become Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Guild of Valor",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "The Forge-Guild of Valor oversees all metalworking trades, including those performed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Valorian",
+        "tgt": "Valorian Festivals",
+        "keywords": "",
+        "description": "Valorians celebrate the changing of the seasons through festivals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Memory-Weld",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Mind-Smiths possess the ability to perform Memory-Welding to bond experiences and knowledge into metallic creations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mental Conditioning",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Mind-Smiths undergo decades of mental conditioning.",
+        "weight": 0.0
+      },
+      {
+        "src": "Memory-Welding",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Council of Smiths",
+        "tgt": "Mind-Smith",
+        "keywords": "",
+        "description": "The Council of Smiths regulates the use of Mind-Smith abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Base-8 Numbering System",
+        "tgt": "Council of Smiths",
+        "keywords": "",
+        "description": "The carpenter uses a hammer to drive nails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aether-Blossom",
+        "tgt": "Council of Smiths",
+        "keywords": "",
+        "description": "Whisper-Willow trees shed fibers during spring, which is honored in Sylvanian festivals.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:20:19.632318",
+  "llm_calls": 201,
+  "mode": "ft"
+}

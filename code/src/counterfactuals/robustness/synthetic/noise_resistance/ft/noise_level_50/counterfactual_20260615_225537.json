@@ -1,0 +1,494 @@
+{
+  "question": "What is the lifespan of a common Gloopfish?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "7 Galactic Standard Years",
+    "original": "The lifespan of a Common Gloopfish is 7 Galactic Standard Years (GSY).",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geothermal Converters"
+      ],
+      [
+        "add_edge",
+        [
+          "Geothermal Converters",
+          "Razorfin"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Exporting raw Emberfly crystals from Elador IV is illegal, highlighting the value of high-grade Phlorian Salt.",
+          "keywords": "economic value,export regulation",
+          "source_id": "chunk-a8f9a5ce977d02ab79f1989e41edf1a0",
+          "file_path": "unknown_source",
+          "created_at": 1776373943,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "User Interface"
+      ],
+      [
+        "add_edge",
+        [
+          "User Interface",
+          "Titanis Prime"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Typhon is one of the gas giants in the K'tharr System.",
+          "keywords": "celestial body,planetary composition",
+          "source_id": "chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379724,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Carpenter"
+      ],
+      [
+        "add_edge",
+        [
+          "Carpenter",
+          "Ultrasonic Pulses"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Council of Smiths regulates the use of Mind-Smith abilities.",
+          "keywords": "abilities,regulation",
+          "source_id": "chunk-2887778a6a2df3dfa6983170922380e7",
+          "file_path": "unknown_source",
+          "created_at": 1776368861,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Telepathic Resonance Bands"
+      ],
+      [
+        "add_edge",
+        [
+          "Telepathic Resonance Bands",
+          "Gulper"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Luminian technology relies heavily on crystal-based devices.",
+          "keywords": "dependency,reliance",
+          "source_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e",
+          "file_path": "unknown_source",
+          "created_at": 1776369136,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Hearth"
+      ],
+      [
+        "add_edge",
+        [
+          "Hearth",
+          "Water"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aero-Coral is a bio-engineered substance grown in Xylos's upper atmosphere.",
+          "keywords": "bio-engineering,growth location",
+          "source_id": "chunk-2d9f68ea236e65773d7fa8dfce96706b",
+          "file_path": "unknown_source",
+          "created_at": 1776366082,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Snow Storm"
+      ],
+      [
+        "add_edge",
+        [
+          "Snow Storm",
+          "Titanis Prime"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Zhykaran people are skilled in subterranean construction and are resilient.",
+          "keywords": "construction skills,resilience",
+          "source_id": "chunk-7ac2f6afcfe12c7316903a5aaa0355f0",
+          "file_path": "unknown_source",
+          "created_at": 1776376682,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 12,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Common Gloopfish",
+        "type": "creature",
+        "description": "The Common Gloopfish is a species with a lifespan of 7 Galactic Standard Years (GSY), inhabiting methane lakes, and exhibiting unique biological traits.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fish",
+        "type": "creature",
+        "description": "Fish live in water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Water",
+        "type": "naturalobject",
+        "description": "Water is essential for life.<SEP>Water is the habitat for fish and is used by elephants to drink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Razorfin",
+        "type": "creature",
+        "description": "Razorfin is a predator of the Gloopfish.",
+        "rank": 0.0
+      },
+      {
+        "name": "Titanis Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ultrasonic Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Scales",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gulper",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Hearts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Common Gloopfish inhabit the methane lakes of Titanis Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Razorfin is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Eggs",
+        "keywords": "",
+        "description": "Common Gloopfish lay exactly 33 eggs each mating season.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "Common Gloopfish scales are used in traditional medicine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Gulper is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Hearts",
+        "keywords": "",
+        "description": "Common Gloopfish have three hearts arranged in a triangle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "The largest recorded Common Gloopfish was 1.2 meters long.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fish",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Fish live in water.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Common Gloopfish",
+        "type": "creature",
+        "description": "The Common Gloopfish is a species with a lifespan of 7 Galactic Standard Years (GSY), inhabiting methane lakes, and exhibiting unique biological traits.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fish",
+        "type": "creature",
+        "description": "Fish live in water.",
+        "rank": 0.0
+      },
+      {
+        "name": "Water",
+        "type": "naturalobject",
+        "description": "Water is essential for life.<SEP>Water is the habitat for fish and is used by elephants to drink.",
+        "rank": 0.0
+      },
+      {
+        "name": "Razorfin",
+        "type": "creature",
+        "description": "Razorfin is a predator of the Gloopfish.",
+        "rank": 0.0
+      },
+      {
+        "name": "Titanis Prime",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ultrasonic Pulses",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Scales",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gulper",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Hearts",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geothermal Converters",
+        "type": "",
+        "description": "Geothermal Converters are power sources for Sand-Crawlers, drawing heat from deep underground vents.",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Carpenter",
+        "type": "",
+        "description": "The carpenter uses tools like a hammer and a saw to work with nails and wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "Telepathic Resonance Bands are used by Xylotians for communication.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hearth",
+        "type": "",
+        "description": "Hearth is a planet with geothermal vents supporting a deep-earth civilization of around 800,000 close-knit inhabitants.",
+        "rank": 0.0
+      },
+      {
+        "name": "Snow Storm",
+        "type": "",
+        "description": "A massive snow storm is currently affecting Ktharr City.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Common Gloopfish inhabit the methane lakes of Titanis Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Razorfin is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Eggs",
+        "keywords": "",
+        "description": "Common Gloopfish lay exactly 33 eggs each mating season.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Scales",
+        "keywords": "",
+        "description": "Common Gloopfish scales are used in traditional medicine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Gulper is a predator of the Common Gloopfish.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Gloopfish Hearts",
+        "keywords": "",
+        "description": "Common Gloopfish have three hearts arranged in a triangle.",
+        "weight": 0.0
+      },
+      {
+        "src": "Common Gloopfish",
+        "tgt": "Largest Recorded Gloopfish",
+        "keywords": "",
+        "description": "The largest recorded Common Gloopfish was 1.2 meters long.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fish",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Fish live in water.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geothermal Converters",
+        "tgt": "Razorfin",
+        "keywords": "",
+        "description": "Exporting raw Emberfly crystals from Elador IV is illegal, highlighting the value of high-grade Phlorian Salt.",
+        "weight": 0.0
+      },
+      {
+        "src": "User Interface",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "Typhon is one of the gas giants in the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Carpenter",
+        "tgt": "Ultrasonic Pulses",
+        "keywords": "",
+        "description": "The Council of Smiths regulates the use of Mind-Smith abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Gulper",
+        "keywords": "",
+        "description": "Luminian technology relies heavily on crystal-based devices.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hearth",
+        "tgt": "Water",
+        "keywords": "",
+        "description": "Aero-Coral is a bio-engineered substance grown in Xylos's upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Snow Storm",
+        "tgt": "Titanis Prime",
+        "keywords": "",
+        "description": "The Zhykaran people are skilled in subterranean construction and are resilient.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:55:37.398067",
+  "llm_calls": 201,
+  "mode": "ft"
+}

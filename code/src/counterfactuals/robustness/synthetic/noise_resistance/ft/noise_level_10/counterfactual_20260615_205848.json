@@ -1,0 +1,299 @@
+{
+  "question": "What are the two fundamental materials used in Ethereal 'Ghost-Nets'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Ethereal Ghost-Nets"
+    ]
+  ],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "Ethereal 'Ghost-Nets' use 'Spirit-Thread' and 'Phantom-Wire'.",
+    "original": "Ethereal Ghost-Nets are woven from **Spirit-Thread** and reinforced with **Phantom-Wire**.",
+    "perturbed": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+    "similarity": 0.561007
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Magma-Shields"
+      ],
+      [
+        "add_edge",
+        [
+          "Magma-Shields",
+          "Psychic Sensitivity"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Quixar has a strong magnetic field that influences its interaction with solar winds.",
+          "keywords": "magnetic properties,planetary characteristic",
+          "source_id": "chunk-ceadd9f2295f73efa231cc507a7af047",
+          "file_path": "unknown_source",
+          "created_at": 1776374299,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ethereal Ghost-Nets",
+        "type": "artifact",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread and reinforced with Phantom-Wire, designed to capture supernatural beings.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Crafters",
+        "type": "UNKNOWN",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Wire",
+        "type": "artifact",
+        "description": "Phantom-Wire is used to reinforce Spirit-Thread and vibrates at supernatural frequencies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Thread",
+        "type": "artifact",
+        "description": "Spirit-Thread is spun from ectoplasmic residue and is nearly invisible to normal sight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Hunters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Incorporeal Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic Sensitivity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Midnight Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Ethereal Hunters",
+        "keywords": "",
+        "description": "Ethereal hunters specialize in capturing supernatural beings using Ethereal Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Phantom-Wire",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are reinforced with Phantom-Wire, allowing them to interact with both physical and spiritual entities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Spirit-Thread",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Incorporeal Creatures",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are designed to capture and hold incorporeal creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Psychic Sensitivity",
+        "keywords": "",
+        "description": "Ghost-Net weaving requires psychic sensitivity, which ethereal hunters possess.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Midnight Hours",
+        "keywords": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ethereal Crafters",
+        "type": "UNKNOWN",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic Sensitivity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Midnight Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma-Shields",
+        "type": "",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Midnight Hours",
+        "keywords": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma-Shields",
+        "tgt": "Psychic Sensitivity",
+        "keywords": "magnetic properties,planetary characteristic",
+        "description": "Quixar has a strong magnetic field that influences its interaction with solar winds.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Ethereal Ghost-Nets",
+        "type": "artifact",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread and reinforced with Phantom-Wire, designed to capture supernatural beings.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Crafters",
+        "type": "UNKNOWN",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Wire",
+        "type": "artifact",
+        "description": "Phantom-Wire is used to reinforce Spirit-Thread and vibrates at supernatural frequencies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Thread",
+        "type": "artifact",
+        "description": "Spirit-Thread is spun from ectoplasmic residue and is nearly invisible to normal sight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Hunters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Incorporeal Creatures",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic Sensitivity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Midnight Hours",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma-Shields",
+        "type": "",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Ethereal Hunters",
+        "keywords": "",
+        "description": "Ethereal hunters specialize in capturing supernatural beings using Ethereal Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Phantom-Wire",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are reinforced with Phantom-Wire, allowing them to interact with both physical and spiritual entities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Spirit-Thread",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are woven from Spirit-Thread, which is essential for capturing supernatural beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Incorporeal Creatures",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are designed to capture and hold incorporeal creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Ghost-Nets",
+        "tgt": "Psychic Sensitivity",
+        "keywords": "",
+        "description": "Ghost-Net weaving requires psychic sensitivity, which ethereal hunters possess.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Midnight Hours",
+        "keywords": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma-Shields",
+        "tgt": "Psychic Sensitivity",
+        "keywords": "",
+        "description": "Quixar has a strong magnetic field that influences its interaction with solar winds.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:58:48.582956",
+  "llm_calls": 99,
+  "mode": "ft"
+}

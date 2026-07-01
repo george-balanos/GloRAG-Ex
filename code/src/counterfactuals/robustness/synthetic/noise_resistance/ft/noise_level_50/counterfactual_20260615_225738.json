@@ -1,0 +1,429 @@
+{
+  "question": "What is the primary defense of the creatures known as 'Glow-worms' in the Subterranean Caves?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Glow-Worms"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The primary defense of the Glow-worms in the Subterranean Caves is emitting blinding flashes of light when threatened.",
+    "original": "The primary defense of Glow-worms is emitting a blinding flash of light to temporarily disorient predators.",
+    "perturbed": "The primary defense of Glow-worms in the Subterranean Caves is the Cave Fungi, which serves as their food source.",
+    "similarity": 0.715603
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Crystal Sentinels"
+      ],
+      [
+        "add_edge",
+        [
+          "Crystal Sentinels",
+          "Cave Fungi"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Glacian can generate Frost-Crowns that provide protective barriers.",
+          "keywords": "ability,protection",
+          "source_id": "chunk-ad901faf06a2cd13ee6b6629180f6ac5",
+          "file_path": "unknown_source",
+          "created_at": 1776370716,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Old Space Shanty"
+      ],
+      [
+        "add_edge",
+        [
+          "Old Space Shanty",
+          "Mineral Deposits"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Aethelia orbits K'tharr Prime within the habitable zone of the K'tharr System.<SEP>Aethelia orbits K'tharr Prime within the K'tharr System.",
+          "keywords": "habitable zone,orbital dynamics,orbital relationship,stellar system",
+          "source_id": "chunk-a1d086fa29bddbf458099ee779c68438<SEP>chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379725,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Grand-Alchemist"
+      ],
+      [
+        "add_edge",
+        [
+          "Grand-Alchemist",
+          "Subterranean Caves"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Local legends attribute the placement of the Pylon of Ozym to the sky gods from another world.",
+          "keywords": "legend,origin",
+          "source_id": "chunk-8a59a1ad2cd2e4684e88edfbc9646c23",
+          "file_path": "unknown_source",
+          "created_at": 1776373541,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Digital Performance Capture Techniques"
+      ],
+      [
+        "add_edge",
+        [
+          "Digital Performance Capture Techniques",
+          "Blinding Flash"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+          "keywords": "governance,laws",
+          "source_id": "chunk-856633022d5e5030b7095161d9c2ded2",
+          "file_path": "unknown_source",
+          "created_at": 1776372371,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Glow-Worms",
+        "type": "creature",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Subterranean Caves",
+        "type": "location",
+        "description": "The Subterranean Caves are a network of deep tunnels filled with unique flora, fauna, and mineral formations.<SEP>The Subterranean Caves are a network of deep tunnels filled with unique flora and fauna, known for hosting various creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cave Fungi",
+        "type": "naturalobject",
+        "description": "Cave fungi are found within the Subterranean Caves and serve as a food source for Glow-worms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blinding Flash",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mineral Deposits",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Glow-Worms",
+        "tgt": "Subterranean Caves",
+        "keywords": "",
+        "description": "The Subterranean Caves are the habitat for Glow-worms, which possess unique defensive mechanisms.<SEP>The Subterranean Caves are home to Glow-Worms, which use their blinding flashes as a defense mechanism.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Mineral Deposits",
+        "keywords": "",
+        "description": "Glow-worms feed on mineral deposits found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glowing Insects",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cave Fungi",
+        "tgt": "Glow-Worms",
+        "keywords": "",
+        "description": "Glow-worms feed on cave fungi found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blinding Flash",
+        "tgt": "Glow-Worms",
+        "keywords": "",
+        "description": "Glow-worms emit a blinding flash of light to temporarily disorient predators.<SEP>Glow-Worms emit a blinding flash to temporarily disorient predators.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Subterranean Caves",
+        "type": "location",
+        "description": "The Subterranean Caves are a network of deep tunnels filled with unique flora, fauna, and mineral formations.<SEP>The Subterranean Caves are a network of deep tunnels filled with unique flora and fauna, known for hosting various creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cave Fungi",
+        "type": "naturalobject",
+        "description": "Cave fungi are found within the Subterranean Caves and serve as a food source for Glow-worms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blinding Flash",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mineral Deposits",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Sentinels",
+        "type": "",
+        "description": "Crystal Sentinels are constructs powered by Starlight Capacitors, which gather and store cosmic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Old Space Shanty",
+        "type": "",
+        "description": "An old space shanty is a tune hummed by a character.",
+        "rank": 0.0
+      },
+      {
+        "name": "Grand-Alchemist",
+        "type": "",
+        "description": "The Grand-Alchemist oversees all magical research in alchemical laboratories.",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture Techniques",
+        "type": "",
+        "description": "Digital performance capture techniques are required training for actors in Celestia.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Glowing Insects",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Sentinels",
+        "tgt": "Cave Fungi",
+        "keywords": "ability,protection",
+        "description": "Glacian can generate Frost-Crowns that provide protective barriers.",
+        "weight": 1.0
+      },
+      {
+        "src": "Old Space Shanty",
+        "tgt": "Mineral Deposits",
+        "keywords": "habitable zone,orbital dynamics,orbital relationship,stellar system",
+        "description": "Aethelia orbits K'tharr Prime within the habitable zone of the K'tharr System.<SEP>Aethelia orbits K'tharr Prime within the K'tharr System.",
+        "weight": 2.0
+      },
+      {
+        "src": "Grand-Alchemist",
+        "tgt": "Subterranean Caves",
+        "keywords": "legend,origin",
+        "description": "Local legends attribute the placement of the Pylon of Ozym to the sky gods from another world.",
+        "weight": 1.0
+      },
+      {
+        "src": "Digital Performance Capture Techniques",
+        "tgt": "Blinding Flash",
+        "keywords": "governance,laws",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Glow-Worms",
+        "type": "creature",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Insects",
+        "type": "creature",
+        "description": "Glowing insects are prey for the Thorned Crawler.<SEP>Glowing insects are a food source for the Thorned Crawler in the Bioluminescent Forest.",
+        "rank": 0.0
+      },
+      {
+        "name": "Subterranean Caves",
+        "type": "location",
+        "description": "The Subterranean Caves are a network of deep tunnels filled with unique flora, fauna, and mineral formations.<SEP>The Subterranean Caves are a network of deep tunnels filled with unique flora and fauna, known for hosting various creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cave Fungi",
+        "type": "naturalobject",
+        "description": "Cave fungi are found within the Subterranean Caves and serve as a food source for Glow-worms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blinding Flash",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mineral Deposits",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Sentinels",
+        "type": "",
+        "description": "Crystal Sentinels are constructs powered by Starlight Capacitors, which gather and store cosmic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Old Space Shanty",
+        "type": "",
+        "description": "An old space shanty is a tune hummed by a character.",
+        "rank": 0.0
+      },
+      {
+        "name": "Grand-Alchemist",
+        "type": "",
+        "description": "The Grand-Alchemist oversees all magical research in alchemical laboratories.",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture Techniques",
+        "type": "",
+        "description": "Digital performance capture techniques are required training for actors in Celestia.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Glow-Worms",
+        "tgt": "Subterranean Caves",
+        "keywords": "",
+        "description": "The Subterranean Caves are the habitat for Glow-worms, which possess unique defensive mechanisms.<SEP>The Subterranean Caves are home to Glow-Worms, which use their blinding flashes as a defense mechanism.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Mineral Deposits",
+        "keywords": "",
+        "description": "Glow-worms feed on mineral deposits found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glowing Insects",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Thorned Crawler feeds on glowing insects.<SEP>The Thorned Crawler feeds on glowing insects.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cave Fungi",
+        "tgt": "Glow-Worms",
+        "keywords": "",
+        "description": "Glow-worms feed on cave fungi found within the Subterranean Caves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blinding Flash",
+        "tgt": "Glow-Worms",
+        "keywords": "",
+        "description": "Glow-worms emit a blinding flash of light to temporarily disorient predators.<SEP>Glow-Worms emit a blinding flash to temporarily disorient predators.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Sentinels",
+        "tgt": "Cave Fungi",
+        "keywords": "",
+        "description": "Glacian can generate Frost-Crowns that provide protective barriers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Old Space Shanty",
+        "tgt": "Mineral Deposits",
+        "keywords": "",
+        "description": "Aethelia orbits K'tharr Prime within the habitable zone of the K'tharr System.<SEP>Aethelia orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grand-Alchemist",
+        "tgt": "Subterranean Caves",
+        "keywords": "",
+        "description": "Local legends attribute the placement of the Pylon of Ozym to the sky gods from another world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Digital Performance Capture Techniques",
+        "tgt": "Blinding Flash",
+        "keywords": "",
+        "description": "Quantum Physics governs the strange laws of the realm where Quantum 'Reality-Shapers' exist.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:57:38.080612",
+  "llm_calls": 58,
+  "mode": "ft"
+}

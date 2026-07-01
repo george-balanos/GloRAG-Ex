@@ -1,0 +1,215 @@
+{
+  "question": "What are the topics of the books Sarah and Michael are reading?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Sarah"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "Sarah is reading about dragons and Michael is reading about ancient castles.",
+    "original": "Sarah is reading a book about dragons, while Michael is reading a book about ancient castles.",
+    "perturbed": "Michael is reading a book about ancient castles.",
+    "similarity": 0.707163
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Telepathic Resonance Bands"
+      ],
+      [
+        "add_edge",
+        [
+          "Telepathic Resonance Bands",
+          "Michael"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Xylo is the largest moon of Quixar and is tidally locked to the planet.",
+          "keywords": "celestial body,orbital relationship",
+          "source_id": "chunk-ceadd9f2295f73efa231cc507a7af047",
+          "file_path": "unknown_source",
+          "created_at": 1776374299,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sarah",
+        "type": "person",
+        "description": "Sarah is a person who is reading a book about dragons.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Dragons",
+        "type": "content",
+        "description": "The Book About Dragons is the book that Sarah is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Ancient Castles",
+        "type": "content",
+        "description": "The Book About Ancient Castles is the book that Michael is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Michael",
+        "type": "person",
+        "description": "Michael is a person who is reading a book about ancient castles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading the book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Book About Ancient Castles",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "Michael is reading the book about ancient castles, indicating his interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading a book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Book About Ancient Castles",
+        "type": "content",
+        "description": "The Book About Ancient Castles is the book that Michael is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Michael",
+        "type": "person",
+        "description": "Michael is a person who is reading a book about ancient castles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "Telepathic Resonance Bands are used by Xylotians for communication.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Ancient Castles",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "Michael is reading the book about ancient castles, indicating his interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Michael",
+        "keywords": "celestial body,orbital relationship",
+        "description": "Xylo is the largest moon of Quixar and is tidally locked to the planet.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Sarah",
+        "type": "person",
+        "description": "Sarah is a person who is reading a book about dragons.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Dragons",
+        "type": "content",
+        "description": "The Book About Dragons is the book that Sarah is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Ancient Castles",
+        "type": "content",
+        "description": "The Book About Ancient Castles is the book that Michael is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Michael",
+        "type": "person",
+        "description": "Michael is a person who is reading a book about ancient castles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "Telepathic Resonance Bands are used by Xylotians for communication.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading the book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Book About Ancient Castles",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "Michael is reading the book about ancient castles, indicating his interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading a book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "Xylo is the largest moon of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:18:34.309577",
+  "llm_calls": 9,
+  "mode": "ft"
+}

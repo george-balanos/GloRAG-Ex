@@ -1,0 +1,342 @@
+{
+  "question": "What happens to Sunstone Amulets when they are brought into the Shadow Fen?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Shadow Fen",
+        "Sunstone Amulet"
+      ]
+    ]
+  ],
+  "cost": 1,
+  "answers": {
+    "ground_truth": "When Sunstone Amulets are brought into the Shadow Fen, their power is completely drained or nullified by the area's dark magic.",
+    "original": "The Shadow Fen's dark magic nullifies the magical energy of a Sunstone Amulet.",
+    "perturbed": "The Shield of Dawn is resistant to the Shadow Fen's dark magic.",
+    "similarity": 0.600122
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Sonic Patterns"
+      ],
+      [
+        "add_edge",
+        [
+          "Sonic Patterns",
+          "Grasping Vine"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Frost-Crown generates Ice-Shields for protective barriers.",
+          "keywords": "generation,protection",
+          "source_id": "chunk-ad901faf06a2cd13ee6b6629180f6ac5",
+          "file_path": "unknown_source",
+          "created_at": 1776370716,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Shadow Fen",
+        "type": "location",
+        "description": "The Shadow Fen is a vast, magical swamp on the southern border of Aethelgard, known for its ambient dark magic and necrotic energies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shield of Dawn",
+        "type": "artifact",
+        "description": "The Shield of Dawn is a magical item resistant to the Shadow Fen's dark magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunstone Amulet",
+        "type": "artifact",
+        "description": "A Sunstone Amulet is a magical item crafted from petrified sunlight and silver threads, symbolizing the Aethelgardian royal family.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "material",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Last King of Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Grasping Vine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Shadow Fen",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "The Shadow Fen's dark magic nullifies the magical energy of a Sunstone Amulet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow Fen",
+        "tgt": "Shield of Dawn",
+        "keywords": "",
+        "description": "The Shield of Dawn is resistant to the Shadow Fen's dark magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "Sunstone Amulets are crafted from petrified sunlight.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The Shadow Fen is located on the southern border of Aethelgard.",
+        "weight": 0.0
+      },
+      {
+        "src": "Last King of Aethelgard",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The last king of Aethelgard is said to have been lost in the Shadow Fen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grasping Vine",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Shadow Fen",
+        "type": "location",
+        "description": "The Shadow Fen is a vast, magical swamp on the southern border of Aethelgard, known for its ambient dark magic and necrotic energies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shield of Dawn",
+        "type": "artifact",
+        "description": "The Shield of Dawn is a magical item resistant to the Shadow Fen's dark magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunstone Amulet",
+        "type": "artifact",
+        "description": "A Sunstone Amulet is a magical item crafted from petrified sunlight and silver threads, symbolizing the Aethelgardian royal family.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "material",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Last King of Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Grasping Vine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sonic Patterns",
+        "type": "",
+        "description": "Critical reviews in the Crystalline Sound Weaving scene often focus on the intricacy of sonic patterns.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Shadow Fen",
+        "tgt": "Shield of Dawn",
+        "keywords": "",
+        "description": "The Shield of Dawn is resistant to the Shadow Fen's dark magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "Sunstone Amulets are crafted from petrified sunlight.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The Shadow Fen is located on the southern border of Aethelgard.",
+        "weight": 0.0
+      },
+      {
+        "src": "Last King of Aethelgard",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The last king of Aethelgard is said to have been lost in the Shadow Fen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grasping Vine",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sonic Patterns",
+        "tgt": "Grasping Vine",
+        "keywords": "generation,protection",
+        "description": "Frost-Crown generates Ice-Shields for protective barriers.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Shadow Fen",
+        "type": "location",
+        "description": "The Shadow Fen is a vast, magical swamp on the southern border of Aethelgard, known for its ambient dark magic and necrotic energies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shield of Dawn",
+        "type": "artifact",
+        "description": "The Shield of Dawn is a magical item resistant to the Shadow Fen's dark magic.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunstone Amulet",
+        "type": "artifact",
+        "description": "A Sunstone Amulet is a magical item crafted from petrified sunlight and silver threads, symbolizing the Aethelgardian royal family.",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "material",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Last King of Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Grasping Vine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sonic Patterns",
+        "type": "",
+        "description": "Critical reviews in the Crystalline Sound Weaving scene often focus on the intricacy of sonic patterns.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Shadow Fen",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "The Shadow Fen's dark magic nullifies the magical energy of a Sunstone Amulet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow Fen",
+        "tgt": "Shield of Dawn",
+        "keywords": "",
+        "description": "The Shield of Dawn is resistant to the Shadow Fen's dark magic.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Sunstone Amulet",
+        "keywords": "",
+        "description": "Sunstone Amulets are crafted from petrified sunlight.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The Shadow Fen is located on the southern border of Aethelgard.",
+        "weight": 0.0
+      },
+      {
+        "src": "Last King of Aethelgard",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The last king of Aethelgard is said to have been lost in the Shadow Fen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grasping Vine",
+        "tgt": "Shadow Fen",
+        "keywords": "",
+        "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sonic Patterns",
+        "tgt": "Grasping Vine",
+        "keywords": "",
+        "description": "Frost-Crown generates Ice-Shields for protective barriers.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:32:01.908329",
+  "llm_calls": 1,
+  "mode": "ft"
+}

@@ -1,0 +1,268 @@
+{
+  "question": "What two distinct abilities does a Xylotian 'Chrono-Weaver' possess?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Xylotian Chrono-Weaver"
+    ]
+  ],
+  "cost": 12,
+  "answers": {
+    "ground_truth": "A Xylotian 'Chrono-Weaver' can perceive echoes of recent past events and project faint, localized temporal distortions.",
+    "original": "Xylotian Chrono-Weavers can perceive echoes of past events and create temporal distortions.",
+    "perturbed": "I don't have enough information to answer that question.",
+    "similarity": 0.04646
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Great Trench of Neridia"
+      ],
+      [
+        "add_edge",
+        [
+          "Great Trench of Neridia",
+          "Sun-Berries"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+          "keywords": "material property,weapon use",
+          "source_id": "chunk-5c91ed2ea8bfed0574e27c7baf63b6c6",
+          "file_path": "unknown_source",
+          "created_at": 1776378542,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Flux",
+        "type": "concept",
+        "description": "Temporal Flux is the ambient energy source that powers a Chrono-Weaver's abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal College",
+        "type": "location",
+        "description": "The Temporal College is an institution on Xylos where Chrono-Weavers train and hone their skills.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sun-Berries",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Concept Of Time",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Concept Of Time",
+        "keywords": "",
+        "description": "Chrono-Weavers perceive time in a multi-linear fashion, aligning with the Xylotian concept of time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal College",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers train at the Temporal College to hone their skills.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sun-Berries",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Xylotian cuisine features Sun-Berries, which ripen instantly, reflecting the temporal abilities of Chrono-Weavers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Sun-Berries",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Trench of Neridia",
+        "type": "",
+        "description": "The Great Trench of Neridia descends to unknown depths.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Great Trench of Neridia",
+        "tgt": "Sun-Berries",
+        "keywords": "material property,weapon use",
+        "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Flux",
+        "type": "concept",
+        "description": "Temporal Flux is the ambient energy source that powers a Chrono-Weaver's abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal College",
+        "type": "location",
+        "description": "The Temporal College is an institution on Xylos where Chrono-Weavers train and hone their skills.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sun-Berries",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Concept Of Time",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Trench of Neridia",
+        "type": "",
+        "description": "The Great Trench of Neridia descends to unknown depths.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Concept Of Time",
+        "keywords": "",
+        "description": "Chrono-Weavers perceive time in a multi-linear fashion, aligning with the Xylotian concept of time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal College",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers train at the Temporal College to hone their skills.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sun-Berries",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Xylotian cuisine features Sun-Berries, which ripen instantly, reflecting the temporal abilities of Chrono-Weavers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Trench of Neridia",
+        "tgt": "Sun-Berries",
+        "keywords": "",
+        "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:15:18.152296",
+  "llm_calls": 120,
+  "mode": "ft"
+}

@@ -1,0 +1,394 @@
+{
+  "question": "What's the value of the element obtained by mixing Aethelite and Pyron?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Syntholux"
+    ]
+  ],
+  "cost": 1,
+  "answers": {
+    "ground_truth": "The value of mixing Aethelite and Pyron is unparalleled energy storage capacity.",
+    "original": "The element obtained by mixing Aethelite and Pyron is Syntholux, which is valued for its unparalleled energy storage capacity.",
+    "perturbed": "Mixing Aethelite and Pyron creates Nitros and a small amount of Syntholux.",
+    "similarity": 0.719036
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Magical Wards"
+      ],
+      [
+        "add_edge",
+        [
+          "Magical Wards",
+          "Unrefined Chronium Ore"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The river flows towards the sea.",
+          "keywords": "flow,geography",
+          "source_id": "chunk-2e381bfb9255daea37fced8d1a9ca7e2",
+          "file_path": "unknown_source",
+          "created_at": 1776367670,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Syntholux",
+        "type": "naturalobject",
+        "description": "Syntholux is a substance created by mixing Aethelite and Pyron, known for its unparalleled energy storage capacity.<SEP>Syntholux is a substance created in small amounts by mixing Aethelite and Pyron.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronium",
+        "type": "naturalobject",
+        "description": "Chronium is a valuable resource found only in the deep crust of planet Zylos, characterized by its azure glow and mild radioactivity.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelite",
+        "type": "naturalobject",
+        "description": "Aethelite is a shimmering, crystalline substance found in rare geological formations, known for its lightness, brittleness, and interaction with ambient light.<SEP>Aethelite is a brittle element found in remote locations, known for its interaction with ambient light and luminescence storage.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unrefined Chronium Ore",
+        "type": "naturalobject",
+        "description": "Unrefined Chronium ore has a distinct azure glow and is mildly radioactive.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gravitium",
+        "type": "artifact",
+        "description": "Gravitium is an element of extraordinary density, predominantly found in the lower lithosphere of certain worlds. It has a unique atomic structure that absorbs and mitigates kinetic force, making it resistant to impact. It also subtly alters local gravitational constant measurements and remains solid even at immense temperatures.<SEP>Gravitium is a substance that exhibits remarkable chemical stability, remains solid at immense temperatures, and can subtly alter local gravitational constant measurements when in extensive concentrations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solara",
+        "type": "artifact",
+        "description": "Solara exists primarily as a vibrant, highly energetic plasma under typical atmospheric conditions. Its crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light. It emits a weak, distinct energy signature in the low-frequency spectrum and requires specialized containment systems for safe handling.<SEP>Solara is a vibrant, highly energetic plasma with a crystalline structure that allows for the absorption and temporary storage of radiant energy, particularly visible light. It emits a weak, distinct energy signature in the low-frequency spectrum and requires specialized containment systems for safe handling.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pyron",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "extraction challenges",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "ambient light",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chronium",
+        "tgt": "Unrefined Chronium Ore",
+        "keywords": "",
+        "description": "Unrefined Chronium ore is a form of Chronium characterized by its azure glow and mild radioactivity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Pyron",
+        "keywords": "",
+        "description": "Mixing Aethelite and Pyron creates Nitros and a small amount of Syntholux.<SEP>Mixing Aethelite and Pyron creates Nitros and a small amount of Syntholux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Geological Formations",
+        "keywords": "",
+        "description": "Aethelite is found in rare geological formations, making its extraction challenging due to its brittle nature and remote locations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "extraction challenges",
+        "keywords": "",
+        "description": "Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "ambient light",
+        "keywords": "",
+        "description": "Aethelite exhibits a strange interaction with ambient light, sometimes appearing to 'store' luminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitium",
+        "tgt": "Solara",
+        "keywords": "",
+        "description": "Mixing Gravitium and Solara creates the new element Umbradium.<SEP>Mixing Gravitium and Solara creates the new element Umbradium.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Chronium",
+        "type": "naturalobject",
+        "description": "Chronium is a valuable resource found only in the deep crust of planet Zylos, characterized by its azure glow and mild radioactivity.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelite",
+        "type": "naturalobject",
+        "description": "Aethelite is a shimmering, crystalline substance found in rare geological formations, known for its lightness, brittleness, and interaction with ambient light.<SEP>Aethelite is a brittle element found in remote locations, known for its interaction with ambient light and luminescence storage.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unrefined Chronium Ore",
+        "type": "naturalobject",
+        "description": "Unrefined Chronium ore has a distinct azure glow and is mildly radioactive.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gravitium",
+        "type": "artifact",
+        "description": "Gravitium is an element of extraordinary density, predominantly found in the lower lithosphere of certain worlds. It has a unique atomic structure that absorbs and mitigates kinetic force, making it resistant to impact. It also subtly alters local gravitational constant measurements and remains solid even at immense temperatures.<SEP>Gravitium is a substance that exhibits remarkable chemical stability, remains solid at immense temperatures, and can subtly alter local gravitational constant measurements when in extensive concentrations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solara",
+        "type": "artifact",
+        "description": "Solara exists primarily as a vibrant, highly energetic plasma under typical atmospheric conditions. Its crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light. It emits a weak, distinct energy signature in the low-frequency spectrum and requires specialized containment systems for safe handling.<SEP>Solara is a vibrant, highly energetic plasma with a crystalline structure that allows for the absorption and temporary storage of radiant energy, particularly visible light. It emits a weak, distinct energy signature in the low-frequency spectrum and requires specialized containment systems for safe handling.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pyron",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "extraction challenges",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "ambient light",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Magical Wards",
+        "type": "",
+        "description": "Magical wards are protective barriers that guard the borders of Eldoria from outside threats.<SEP>Magical wards protect the borders of Eldoria from outside threats.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chronium",
+        "tgt": "Unrefined Chronium Ore",
+        "keywords": "",
+        "description": "Unrefined Chronium ore is a form of Chronium characterized by its azure glow and mild radioactivity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Pyron",
+        "keywords": "",
+        "description": "Mixing Aethelite and Pyron creates Nitros and a small amount of Syntholux.<SEP>Mixing Aethelite and Pyron creates Nitros and a small amount of Syntholux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Geological Formations",
+        "keywords": "",
+        "description": "Aethelite is found in rare geological formations, making its extraction challenging due to its brittle nature and remote locations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "extraction challenges",
+        "keywords": "",
+        "description": "Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "ambient light",
+        "keywords": "",
+        "description": "Aethelite exhibits a strange interaction with ambient light, sometimes appearing to 'store' luminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitium",
+        "tgt": "Solara",
+        "keywords": "",
+        "description": "Mixing Gravitium and Solara creates the new element Umbradium.<SEP>Mixing Gravitium and Solara creates the new element Umbradium.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magical Wards",
+        "tgt": "Unrefined Chronium Ore",
+        "keywords": "flow,geography",
+        "description": "The river flows towards the sea.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Syntholux",
+        "type": "naturalobject",
+        "description": "Syntholux is a substance created by mixing Aethelite and Pyron, known for its unparalleled energy storage capacity.<SEP>Syntholux is a substance created in small amounts by mixing Aethelite and Pyron.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronium",
+        "type": "naturalobject",
+        "description": "Chronium is a valuable resource found only in the deep crust of planet Zylos, characterized by its azure glow and mild radioactivity.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelite",
+        "type": "naturalobject",
+        "description": "Aethelite is a shimmering, crystalline substance found in rare geological formations, known for its lightness, brittleness, and interaction with ambient light.<SEP>Aethelite is a brittle element found in remote locations, known for its interaction with ambient light and luminescence storage.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unrefined Chronium Ore",
+        "type": "naturalobject",
+        "description": "Unrefined Chronium ore has a distinct azure glow and is mildly radioactive.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gravitium",
+        "type": "artifact",
+        "description": "Gravitium is an element of extraordinary density, predominantly found in the lower lithosphere of certain worlds. It has a unique atomic structure that absorbs and mitigates kinetic force, making it resistant to impact. It also subtly alters local gravitational constant measurements and remains solid even at immense temperatures.<SEP>Gravitium is a substance that exhibits remarkable chemical stability, remains solid at immense temperatures, and can subtly alter local gravitational constant measurements when in extensive concentrations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solara",
+        "type": "artifact",
+        "description": "Solara exists primarily as a vibrant, highly energetic plasma under typical atmospheric conditions. Its crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light. It emits a weak, distinct energy signature in the low-frequency spectrum and requires specialized containment systems for safe handling.<SEP>Solara is a vibrant, highly energetic plasma with a crystalline structure that allows for the absorption and temporary storage of radiant energy, particularly visible light. It emits a weak, distinct energy signature in the low-frequency spectrum and requires specialized containment systems for safe handling.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pyron",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "extraction challenges",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "ambient light",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Magical Wards",
+        "type": "",
+        "description": "Magical wards are protective barriers that guard the borders of Eldoria from outside threats.<SEP>Magical wards protect the borders of Eldoria from outside threats.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chronium",
+        "tgt": "Unrefined Chronium Ore",
+        "keywords": "",
+        "description": "Unrefined Chronium ore is a form of Chronium characterized by its azure glow and mild radioactivity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Pyron",
+        "keywords": "",
+        "description": "Mixing Aethelite and Pyron creates Nitros and a small amount of Syntholux.<SEP>Mixing Aethelite and Pyron creates Nitros and a small amount of Syntholux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Geological Formations",
+        "keywords": "",
+        "description": "Aethelite is found in rare geological formations, making its extraction challenging due to its brittle nature and remote locations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "extraction challenges",
+        "keywords": "",
+        "description": "Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "ambient light",
+        "keywords": "",
+        "description": "Aethelite exhibits a strange interaction with ambient light, sometimes appearing to 'store' luminescence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gravitium",
+        "tgt": "Solara",
+        "keywords": "",
+        "description": "Mixing Gravitium and Solara creates the new element Umbradium.<SEP>Mixing Gravitium and Solara creates the new element Umbradium.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magical Wards",
+        "tgt": "Unrefined Chronium Ore",
+        "keywords": "",
+        "description": "The river flows towards the sea.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:10:40.321559",
+  "llm_calls": 1,
+  "mode": "ft"
+}

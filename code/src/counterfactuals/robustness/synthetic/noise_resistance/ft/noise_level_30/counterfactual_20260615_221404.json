@@ -1,0 +1,538 @@
+{
+  "question": "What material is used to make currency in Triskelion?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Geldarn Tree"
+    ],
+    [
+      "delete_node",
+      "Triskelion Monetary Authority"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "pressed leaves from the Geldarn tree",
+    "original": "The currency in Triskelion is made from processed Geldarn tree leaves.",
+    "perturbed": "The context does not provide information about the material used to make currency in Triskelion.",
+    "similarity": 0.607893
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Temporal Stability"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporal Stability",
+          "Triskelionian Hibernation"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The QuantumLeap framework is a proprietary technology developed by Vortex Corp.",
+          "keywords": "proprietary software,technology development",
+          "source_id": "chunk-c4d0680971dd3cf904d7dc4e279b3baf",
+          "file_path": "unknown_source",
+          "created_at": 1776373063,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Video Games"
+      ],
+      [
+        "add_edge",
+        [
+          "Video Games",
+          "Triskelionian Oceans"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Warp gates located near orbital stations facilitate travel between planets in the Lumina System.<SEP>Warp gates located near orbital stations facilitate travel between planets in the Lumina System.",
+          "keywords": "infrastructure,interplanetary travel",
+          "source_id": "chunk-7f5314f2ea2b2e09a54bf620954df4a3<SEP>chunk-4711fe35f04eff5ed27358c3c80c1ff9",
+          "file_path": "unknown_source",
+          "created_at": 1776379873,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Elador IV"
+      ],
+      [
+        "add_edge",
+        [
+          "Elador IV",
+          "Triskelion Monetary Authority"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Spirit guides use the Etherean Soul-Compass to detect Life-Auras.",
+          "keywords": "detection,tool usage",
+          "source_id": "chunk-a9011a4964a803f2dc08a979f2cb4b8a",
+          "file_path": "unknown_source",
+          "created_at": 1776369536,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Triskelion Monetary Authority",
+        "type": "organization",
+        "description": "The Triskelion Monetary Authority is responsible for issuing currency made from processed Geldarn tree leaves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "artifact",
+        "description": "Light-Forged items exhibit incredible luminosity and are created using Rainbow-Essence and Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geldarn Tree",
+        "type": "naturalobject",
+        "description": "The Geldarn tree is a plant native to Triskelion, whose leaves are used to create currency.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Art",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Hibernation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion Monetary Authority",
+        "keywords": "",
+        "description": "The Triskelion Monetary Authority exclusively issues bills made from processed Geldarn tree leaves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Art",
+        "keywords": "",
+        "description": "Triskelionian art is always four-dimensional.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Music",
+        "keywords": "",
+        "description": "Triskelionian music uses frequencies inaudible to humans.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Government",
+        "keywords": "",
+        "description": "Triskelion's government is a direct democracy with daily voting.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Oceans",
+        "keywords": "",
+        "description": "Triskelion's oceans are composed of liquid nitrogen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Hibernation",
+        "keywords": "",
+        "description": "Triskelionians hibernate for one month each year.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geldarn Tree",
+        "tgt": "Triskelion",
+        "keywords": "",
+        "description": "Triskelion uses pressed leaves from the Geldarn tree as its official currency.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Light-Forged Items",
+        "type": "artifact",
+        "description": "Light-Forged items exhibit incredible luminosity and are created using Rainbow-Essence and Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Art",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Hibernation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Video Games",
+        "type": "",
+        "description": "Video games are enjoyed by someone.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Art",
+        "keywords": "",
+        "description": "Triskelionian art is always four-dimensional.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Music",
+        "keywords": "",
+        "description": "Triskelionian music uses frequencies inaudible to humans.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Government",
+        "keywords": "",
+        "description": "Triskelion's government is a direct democracy with daily voting.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Oceans",
+        "keywords": "",
+        "description": "Triskelion's oceans are composed of liquid nitrogen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Hibernation",
+        "keywords": "",
+        "description": "Triskelionians hibernate for one month each year.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Stability",
+        "tgt": "Triskelionian Hibernation",
+        "keywords": "proprietary software,technology development",
+        "description": "The QuantumLeap framework is a proprietary technology developed by Vortex Corp.",
+        "weight": 1.0
+      },
+      {
+        "src": "Video Games",
+        "tgt": "Triskelionian Oceans",
+        "keywords": "infrastructure,interplanetary travel",
+        "description": "Warp gates located near orbital stations facilitate travel between planets in the Lumina System.<SEP>Warp gates located near orbital stations facilitate travel between planets in the Lumina System.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Triskelion Monetary Authority",
+        "type": "organization",
+        "description": "The Triskelion Monetary Authority is responsible for issuing currency made from processed Geldarn tree leaves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "artifact",
+        "description": "Light-Forged items exhibit incredible luminosity and are created using Rainbow-Essence and Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geldarn Tree",
+        "type": "naturalobject",
+        "description": "The Geldarn tree is a plant native to Triskelion, whose leaves are used to create currency.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Art",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Government",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Oceans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelionian Hibernation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Video Games",
+        "type": "",
+        "description": "Video games are enjoyed by someone.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elador IV",
+        "type": "",
+        "description": "Elador IV is a planet with saline marshes where Phlorian Salt is harvested, and it is home to the Emberfly creature.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion Monetary Authority",
+        "keywords": "",
+        "description": "The Triskelion Monetary Authority exclusively issues bills made from processed Geldarn tree leaves.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Art",
+        "keywords": "",
+        "description": "Triskelionian art is always four-dimensional.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Music",
+        "keywords": "",
+        "description": "Triskelionian music uses frequencies inaudible to humans.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Government",
+        "keywords": "",
+        "description": "Triskelion's government is a direct democracy with daily voting.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Oceans",
+        "keywords": "",
+        "description": "Triskelion's oceans are composed of liquid nitrogen.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelionian Hibernation",
+        "keywords": "",
+        "description": "Triskelionians hibernate for one month each year.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geldarn Tree",
+        "tgt": "Triskelion",
+        "keywords": "",
+        "description": "Triskelion uses pressed leaves from the Geldarn tree as its official currency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Stability",
+        "tgt": "Triskelionian Hibernation",
+        "keywords": "",
+        "description": "The QuantumLeap framework is a proprietary technology developed by Vortex Corp.",
+        "weight": 0.0
+      },
+      {
+        "src": "Video Games",
+        "tgt": "Triskelionian Oceans",
+        "keywords": "",
+        "description": "Warp gates located near orbital stations facilitate travel between planets in the Lumina System.<SEP>Warp gates located near orbital stations facilitate travel between planets in the Lumina System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elador IV",
+        "tgt": "Triskelion Monetary Authority",
+        "keywords": "",
+        "description": "Spirit guides use the Etherean Soul-Compass to detect Life-Auras.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:14:04.184938",
+  "llm_calls": 175,
+  "mode": "ft"
+}

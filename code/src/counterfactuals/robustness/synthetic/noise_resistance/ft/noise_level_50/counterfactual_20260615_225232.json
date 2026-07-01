@@ -1,0 +1,271 @@
+{
+  "question": "In the sport of Sky-Jousting, how is a 'Null Pass' maneuver scored?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Aerial Combat Skills"
+    ],
+    [
+      "delete_node",
+      "Null Pass"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "A 'Null Pass' maneuver is awarded zero points for either competitor.",
+    "original": "In Sky-Jousting, a 'Null Pass' maneuver results in zero points for both competitors.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.141879
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Seed Vaults"
+      ],
+      [
+        "add_edge",
+        [
+          "Seed Vaults",
+          "Sky-Guardians"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Life-Wands are carved from still-living branches.",
+          "keywords": "crafting,material",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Planetary Defense"
+      ],
+      [
+        "add_edge",
+        [
+          "Planetary Defense",
+          "Sky-Guardians"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aethelgard's architecture features structures built around ancient trees.",
+          "keywords": "architecture,nature",
+          "source_id": "chunk-9acebf47b79ece594ce12de5cac976da",
+          "file_path": "unknown_source",
+          "created_at": 1776379187,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Null Pass",
+        "type": "concept",
+        "description": "Null Pass is a maneuver in Sky-Jousting where both lances break simultaneously, resulting in zero points for both competitors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerial Combat Skills",
+        "type": "concept",
+        "description": "Aerial Combat Skills are the specialized abilities of the Sky-Guardians in fighting airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Jousting",
+        "type": "event",
+        "description": "Sky-Jousting is the official state sport of Aeria, involving aerial combat on Gryphons with specific scoring rules.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Jousting Match",
+        "type": "event",
+        "description": "A standard Sky-Jousting match consists of five separate passes with specific scoring rules.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Guardians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Null Pass",
+        "tgt": "Sky-Jousting",
+        "keywords": "",
+        "description": "Sky-Jousting includes the Null Pass maneuver, which results in zero points for both competitors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerial Combat Skills",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are known for their aerial combat skills in defending the Citadel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sky-Jousting",
+        "tgt": "Sky-Jousting Match",
+        "keywords": "",
+        "description": "A standard Sky-Jousting match is part of the sport and consists of five separate passes.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Sky-Jousting",
+        "type": "event",
+        "description": "Sky-Jousting is the official state sport of Aeria, involving aerial combat on Gryphons with specific scoring rules.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Jousting Match",
+        "type": "event",
+        "description": "A standard Sky-Jousting match consists of five separate passes with specific scoring rules.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Guardians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Seed Vaults",
+        "type": "",
+        "description": "Seed Vaults on Xylos contain genetic material for countless plant species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "Planetary Defense is the primary function of Aegis Station, serving as a defense point for the planet Xylos.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sky-Jousting",
+        "tgt": "Sky-Jousting Match",
+        "keywords": "",
+        "description": "A standard Sky-Jousting match is part of the sport and consists of five separate passes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Seed Vaults",
+        "tgt": "Sky-Guardians",
+        "keywords": "crafting,material",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 1.0
+      },
+      {
+        "src": "Planetary Defense",
+        "tgt": "Sky-Guardians",
+        "keywords": "architecture,nature",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Null Pass",
+        "type": "concept",
+        "description": "Null Pass is a maneuver in Sky-Jousting where both lances break simultaneously, resulting in zero points for both competitors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerial Combat Skills",
+        "type": "concept",
+        "description": "Aerial Combat Skills are the specialized abilities of the Sky-Guardians in fighting airborne threats.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Jousting",
+        "type": "event",
+        "description": "Sky-Jousting is the official state sport of Aeria, involving aerial combat on Gryphons with specific scoring rules.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Jousting Match",
+        "type": "event",
+        "description": "A standard Sky-Jousting match consists of five separate passes with specific scoring rules.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sky-Guardians",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Seed Vaults",
+        "type": "",
+        "description": "Seed Vaults on Xylos contain genetic material for countless plant species.",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "Planetary Defense is the primary function of Aegis Station, serving as a defense point for the planet Xylos.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Null Pass",
+        "tgt": "Sky-Jousting",
+        "keywords": "",
+        "description": "Sky-Jousting includes the Null Pass maneuver, which results in zero points for both competitors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerial Combat Skills",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "The Sky-Guardians are known for their aerial combat skills in defending the Citadel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sky-Jousting",
+        "tgt": "Sky-Jousting Match",
+        "keywords": "",
+        "description": "A standard Sky-Jousting match is part of the sport and consists of five separate passes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Seed Vaults",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Planetary Defense",
+        "tgt": "Sky-Guardians",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:52:32.419782",
+  "llm_calls": 6,
+  "mode": "ft"
+}

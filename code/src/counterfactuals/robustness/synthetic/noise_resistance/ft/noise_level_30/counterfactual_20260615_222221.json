@@ -1,0 +1,814 @@
+{
+  "question": "What is the energy source of the massive orbital platform orbiting planet Xylos?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Aegis Station",
+        "Cutting-Edge Technology"
+      ]
+    ],
+    [
+      "delete_edge",
+      [
+        "Aegis Station",
+        "Orbital Platforms"
+      ]
+    ],
+    [
+      "delete_edge",
+      [
+        "Aegis Station",
+        "Miniature Black Hole"
+      ]
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "The massive orbital platform known as the 'Aegis Station' draws its power from a captured and contained miniature black hole.",
+    "original": "The Aegis Station, the massive orbital platform orbiting planet Xylos, is powered by a captured miniature black hole.",
+    "perturbed": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+    "similarity": 0.41026
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Ancient Texts Of Ploorf"
+      ],
+      [
+        "add_edge",
+        [
+          "Ancient Texts Of Ploorf",
+          "Crew"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Molten-Streams can reach temperatures of several thousand degrees.",
+          "keywords": "intensity,temperature",
+          "source_id": "chunk-8c0b33bdfde835b1b72a98108d2731c1",
+          "file_path": "unknown_source",
+          "created_at": 1776369264,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Largest Recorded Gloopfish"
+      ],
+      [
+        "add_edge",
+        [
+          "Largest Recorded Gloopfish",
+          "Miniature Black Hole"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Chef Zorgon is known for using Phlorian Salt in their culinary creations.",
+          "keywords": "culinary use,famous application",
+          "source_id": "chunk-a8f9a5ce977d02ab79f1989e41edf1a0",
+          "file_path": "unknown_source",
+          "created_at": 1776373943,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "try...except Blocks"
+      ],
+      [
+        "add_edge",
+        [
+          "try...except Blocks",
+          "Cutting-Edge Technology"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+          "keywords": "emission,operation,sound emission",
+          "source_id": "chunk-d34e7860dd6c60808a4b14b0d675a828<SEP>chunk-85b7a26d96822c1293e19cca11323d34",
+          "file_path": "unknown_source",
+          "created_at": 1776378264,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Aethelite"
+      ],
+      [
+        "add_edge",
+        [
+          "Aethelite",
+          "Miniature Black Hole"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Aegis is the second planet in the Lumina System, serving as the mining hub.<SEP>Aegis is the second planet in the Lumina System, rich in heavy metals and serving as the system's mining hub.",
+          "keywords": "location,planetary composition,planetary system",
+          "source_id": "chunk-7f5314f2ea2b2e09a54bf620954df4a3<SEP>chunk-4711fe35f04eff5ed27358c3c80c1ff9",
+          "file_path": "unknown_source",
+          "created_at": 1776379872,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Chef"
+      ],
+      [
+        "add_edge",
+        [
+          "Chef",
+          "Orbital Platforms"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Triskelion has three moons in a stable figure-8 orbit.",
+          "keywords": "astronomical feature,orbital mechanics",
+          "source_id": "chunk-678bab7534121db7a66e4f415b866475",
+          "file_path": "unknown_source",
+          "created_at": 1776375127,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 10,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Power Distribution",
+        "type": "concept",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Binary Star",
+        "type": "naturalobject",
+        "description": "The binary star's radiation is converted into solar power by the Solar Matrix.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Matrix",
+        "type": "artifact",
+        "description": "The Solar Matrix is designed to capture and convert radiation from a binary star into solar power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Power Distribution",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Binary Star",
+        "tgt": "Solar Matrix",
+        "keywords": "",
+        "description": "The Solar Matrix is designed to capture and convert radiation from the binary star into solar power.<SEP>The Solar Matrix captures and converts radiation from the binary star into solar power.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Power Distribution",
+        "type": "concept",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Binary Star",
+        "type": "naturalobject",
+        "description": "The binary star's radiation is converted into solar power by the Solar Matrix.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Matrix",
+        "type": "artifact",
+        "description": "The Solar Matrix is designed to capture and convert radiation from a binary star into solar power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Texts Of Ploorf",
+        "type": "",
+        "description": "The ancient texts of Ploorf are difficult to decipher.",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "The Largest Recorded Gloopfish measured 1.2 meters in length.",
+        "rank": 0.0
+      },
+      {
+        "name": "try...except Blocks",
+        "type": "",
+        "description": "try...except blocks are used for error handling in CortexScript.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelite",
+        "type": "",
+        "description": "Aethelite is a shimmering, crystalline substance found in rare geological formations, known for its lightness, brittleness, and interaction with ambient light.<SEP>Aethelite is a brittle element found in remote locations, known for its interaction with ambient light and luminescence storage.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chef",
+        "type": "",
+        "description": "The chef is preparing dinner in the kitchen.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Power Distribution",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Binary Star",
+        "tgt": "Solar Matrix",
+        "keywords": "",
+        "description": "The Solar Matrix is designed to capture and convert radiation from the binary star into solar power.<SEP>The Solar Matrix captures and converts radiation from the binary star into solar power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Texts Of Ploorf",
+        "tgt": "Crew",
+        "keywords": "intensity,temperature",
+        "description": "Molten-Streams can reach temperatures of several thousand degrees.",
+        "weight": 1.0
+      },
+      {
+        "src": "Largest Recorded Gloopfish",
+        "tgt": "Miniature Black Hole",
+        "keywords": "culinary use,famous application",
+        "description": "Chef Zorgon is known for using Phlorian Salt in their culinary creations.",
+        "weight": 1.0
+      },
+      {
+        "src": "try...except Blocks",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "emission,operation,sound emission",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 2.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Miniature Black Hole",
+        "keywords": "location,planetary composition,planetary system",
+        "description": "Aegis is the second planet in the Lumina System, serving as the mining hub.<SEP>Aegis is the second planet in the Lumina System, rich in heavy metals and serving as the system's mining hub.",
+        "weight": 2.0
+      },
+      {
+        "src": "Chef",
+        "tgt": "Orbital Platforms",
+        "keywords": "astronomical feature,orbital mechanics",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Power Distribution",
+        "type": "concept",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Binary Star",
+        "type": "naturalobject",
+        "description": "The binary star's radiation is converted into solar power by the Solar Matrix.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Matrix",
+        "type": "artifact",
+        "description": "The Solar Matrix is designed to capture and convert radiation from a binary star into solar power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Texts Of Ploorf",
+        "type": "",
+        "description": "The ancient texts of Ploorf are difficult to decipher.",
+        "rank": 0.0
+      },
+      {
+        "name": "Largest Recorded Gloopfish",
+        "type": "",
+        "description": "The Largest Recorded Gloopfish measured 1.2 meters in length.",
+        "rank": 0.0
+      },
+      {
+        "name": "try...except Blocks",
+        "type": "",
+        "description": "try...except blocks are used for error handling in CortexScript.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelite",
+        "type": "",
+        "description": "Aethelite is a shimmering, crystalline substance found in rare geological formations, known for its lightness, brittleness, and interaction with ambient light.<SEP>Aethelite is a brittle element found in remote locations, known for its interaction with ambient light and luminescence storage.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chef",
+        "type": "",
+        "description": "The chef is preparing dinner in the kitchen.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Power Distribution",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The generated power from the Stellar Converter is distributed across the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Binary Star",
+        "tgt": "Solar Matrix",
+        "keywords": "",
+        "description": "The Solar Matrix is designed to capture and convert radiation from the binary star into solar power.<SEP>The Solar Matrix captures and converts radiation from the binary star into solar power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Texts Of Ploorf",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "Molten-Streams can reach temperatures of several thousand degrees.",
+        "weight": 0.0
+      },
+      {
+        "src": "Largest Recorded Gloopfish",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "Chef Zorgon is known for using Phlorian Salt in their culinary creations.",
+        "weight": 0.0
+      },
+      {
+        "src": "try...except Blocks",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Chrono-Regulator emits a Faint Hum when active.<SEP>The Chrono-Regulator emits a faint hum when active.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelite",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "Aegis is the second planet in the Lumina System, serving as the mining hub.<SEP>Aegis is the second planet in the Lumina System, rich in heavy metals and serving as the system's mining hub.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chef",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:22:21.679615",
+  "llm_calls": 61,
+  "mode": "ft"
+}

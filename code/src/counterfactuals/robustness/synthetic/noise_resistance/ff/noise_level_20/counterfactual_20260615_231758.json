@@ -1,0 +1,746 @@
+{
+  "question": "What kind of energy does the facility hovering the planet Xylos produce?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "add_node",
+      "Stellar Converter"
+    ],
+    [
+      "add_edge",
+      [
+        "Stellar Converter",
+        "Xylos"
+      ]
+    ]
+  ],
+  "cost": 3.6297508478164673,
+  "answers": {
+    "ground_truth": "The 'Stellar Converter' on the planet Xylos produces electrical power from atmospheric storms.",
+    "original": "The Aegis Station, which hovers above the planet Xylos, produces energy by utilizing Hawking radiation from a captured miniature black hole.",
+    "perturbed": "The facility hovering the planet Xylos, known as the Stellar Converter, produces electrical power by capturing and converting atmospheric storms.",
+    "similarity": 0.923801
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Prophecy"
+      ],
+      [
+        "add_edge",
+        [
+          "Prophecy",
+          "Orbital Platforms"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions.",
+          "keywords": "musician,technology",
+          "source_id": "chunk-129bea04a4eed90f0ac47d94df434aa6",
+          "file_path": "unknown_source",
+          "created_at": 1776380458,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Void-Cloaks"
+      ],
+      [
+        "add_edge",
+        [
+          "Void-Cloaks",
+          "Xylos"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Celestian Film Industry uses quantum streaming networks for film distribution.",
+          "keywords": "film distribution,industry method",
+          "source_id": "chunk-c64531f85f69d764bfa3b1d7312ed1bb",
+          "file_path": "unknown_source",
+          "created_at": 1776380017,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Containment Systems"
+      ],
+      [
+        "add_edge",
+        [
+          "Containment Systems",
+          "Helios Array"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The train arrived at the station on time.",
+          "keywords": "arrival,transportation",
+          "source_id": "chunk-1d68c5e141612935adde70191b543400",
+          "file_path": "unknown_source",
+          "created_at": 1776367541,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Festival of Aerial Drones",
+        "type": "event",
+        "description": "An event showcasing the latest Xylotian drone technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Star",
+        "type": "naturalobject",
+        "description": "Lumina Star is a stable yellow dwarf that provides consistent energy output, supporting diverse environments within the Lumina System.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Guardian Orb",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Festival of Aerial Drones",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "The Festival of Aerial Drones showcases the latest Xylotian drone technology, including Guardian Orbs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Star",
+        "tgt": "Lumina System",
+        "keywords": "",
+        "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Festival of Aerial Drones",
+        "type": "event",
+        "description": "An event showcasing the latest Xylotian drone technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Star",
+        "type": "naturalobject",
+        "description": "Lumina Star is a stable yellow dwarf that provides consistent energy output, supporting diverse environments within the Lumina System.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Guardian Orb",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Prophecy",
+        "type": "",
+        "description": "The prophecy mentioned a chosen Zoodle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Void-Cloaks",
+        "type": "",
+        "description": "Void-Cloaks are garments that allow the wearer to partially phase out of physical reality and meld with shadows.",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Systems",
+        "type": "",
+        "description": "The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Festival of Aerial Drones",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "The Festival of Aerial Drones showcases the latest Xylotian drone technology, including Guardian Orbs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Star",
+        "tgt": "Lumina System",
+        "keywords": "",
+        "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prophecy",
+        "tgt": "Orbital Platforms",
+        "keywords": "musician,technology",
+        "description": "Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions.",
+        "weight": 1.0
+      },
+      {
+        "src": "Void-Cloaks",
+        "tgt": "Xylos",
+        "keywords": "film distribution,industry method",
+        "description": "The Celestian Film Industry uses quantum streaming networks for film distribution.",
+        "weight": 1.0
+      },
+      {
+        "src": "Containment Systems",
+        "tgt": "Helios Array",
+        "keywords": "arrival,transportation",
+        "description": "The train arrived at the station on time.",
+        "weight": 1.0
+      },
+      {
+        "src": "Stellar Converter",
+        "tgt": "Xylos",
+        "keywords": "atmospheric storms,energy conversion,energy generation,infrastructure",
+        "description": "The Stellar Converter is located on Xylos and is a key part of the planet's infrastructure.<SEP>The Stellar Converter is designed to capture and convert atmospheric storms on Xylos into electrical power.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Aegis Station",
+        "type": "artifact",
+        "description": "The Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and equipped with powerful energy shields.<SEP>Aegis Station is a large orbital platform positioned above the planet Xylos, dedicated to planetary defense and powered by a captured miniature black hole.",
+        "rank": 0.0
+      },
+      {
+        "name": "Helios Array",
+        "type": "artifact",
+        "description": "The Helios Array is an orbital platform that draws its power from a massive solar sail tapping into the planet's magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Festival of Aerial Drones",
+        "type": "event",
+        "description": "An event showcasing the latest Xylotian drone technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar Sail",
+        "type": "artifact",
+        "description": "The Solar Sail is a device used by the Helios Array to tap into the planet's magnetic field for power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Star",
+        "type": "naturalobject",
+        "description": "Lumina Star is a stable yellow dwarf that provides consistent energy output, supporting diverse environments within the Lumina System.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Miniature Black Hole",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Fields",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hawking Radiation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Cutting-Edge Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Orbital Platforms",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planetary Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Black Hole Containment Technology",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Guardian Orb",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Prophecy",
+        "type": "",
+        "description": "The prophecy mentioned a chosen Zoodle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Void-Cloaks",
+        "type": "",
+        "description": "Void-Cloaks are garments that allow the wearer to partially phase out of physical reality and meld with shadows.",
+        "rank": 0.0
+      },
+      {
+        "name": "Containment Systems",
+        "type": "",
+        "description": "The inherent reactivity and energetic state of Solara necessitate specialized magnetic or energy-binding containment systems for safe handling.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aegis Station",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Miniature Black Hole",
+        "keywords": "",
+        "description": "The Aegis Station uses a miniature black hole as its primary power source, requiring containment fields to maintain stability.<SEP>Aegis Station draws its power from a captured and contained miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Containment Fields",
+        "keywords": "",
+        "description": "The Aegis Station relies on containment fields to maintain the stability of the miniature black hole, which is its most critical task.<SEP>Aegis Station requires constant energy input to maintain the containment fields for the miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Hawking Radiation",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Crew",
+        "keywords": "",
+        "description": "The Aegis Station houses a large crew responsible for its operation and maintenance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Cutting-Edge Technology",
+        "keywords": "",
+        "description": "The Aegis Station employs cutting-edge technology for containing black holes, distinguishing it from other orbital platforms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "The Aegis Station serves as a primary defense point, distinguishing it from other orbital platforms that use different power methods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Planetary Defense",
+        "keywords": "",
+        "description": "Aegis Station serves as a primary defense point for the planet Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aegis Station",
+        "tgt": "Black Hole Containment Technology",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      },
+      {
+        "src": "Helios Array",
+        "tgt": "Solar Sail",
+        "keywords": "",
+        "description": "The Helios Array draws its power from a massive solar sail that taps into the planet's magnetic field.",
+        "weight": 0.0
+      },
+      {
+        "src": "Festival of Aerial Drones",
+        "tgt": "Guardian Orb",
+        "keywords": "",
+        "description": "The Festival of Aerial Drones showcases the latest Xylotian drone technology, including Guardian Orbs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Star",
+        "tgt": "Lumina System",
+        "keywords": "",
+        "description": "The Lumina System orbits around Lumina Star, which provides consistent energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prophecy",
+        "tgt": "Orbital Platforms",
+        "keywords": "",
+        "description": "Many musicians on Harmonius use advanced bio-harmonic feedback systems to enhance the emotional depth of their compositions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Void-Cloaks",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Celestian Film Industry uses quantum streaming networks for film distribution.",
+        "weight": 0.0
+      },
+      {
+        "src": "Containment Systems",
+        "tgt": "Helios Array",
+        "keywords": "",
+        "description": "The train arrived at the station on time.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:17:58.395619",
+  "llm_calls": 56,
+  "mode": "ff"
+}

@@ -1,0 +1,216 @@
+{
+  "question": "What are the two core materials in Resonant 'Harmony-Bells'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Resonant Harmony-Bells"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "Resonant 'Harmony-Bells' are made from 'Song-Bronze' and 'Echo-Gems'.",
+    "original": "The two core materials in Resonant Harmony-Bells are Song-Bronze and Echo-Gems.",
+    "perturbed": "The two core materials in Resonant 'Harmony-Bells' are Song-Bronze and Resonance-Stones.",
+    "similarity": 0.961014
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Resonance-Stones"
+      ],
+      [
+        "add_edge",
+        [
+          "Resonance-Stones",
+          "Song-Bronze"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Volcanic smiths work in the Fire-Mountain, the center of volcanic civilization.",
+          "keywords": "craftsmanship,cultural center",
+          "source_id": "chunk-8de62e76e1ab5a784a8e266ae71cae95",
+          "file_path": "unknown_source",
+          "created_at": 1776372727,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Harmony-Bells",
+        "type": "artifact",
+        "description": "Resonant Harmony-Bells are musical instruments cast from Song-Bronze and inlaid with Echo-Gems, known for their perfect musical tones and resonance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "location",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Song-Bronze",
+        "type": "artifact",
+        "description": "Song-Bronze is a type of bronze used to cast Harmony-Bells, known for producing perfect musical tones and requiring specific temperature conditions during forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Gems",
+        "type": "artifact",
+        "description": "Echo-Gems are inlaid into Harmony-Bells to amplify and modulate their resonance, and they change color based on the notes they produce.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Bell Creation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Harmony-Bells",
+        "tgt": "Song-Bronze",
+        "keywords": "",
+        "description": "Resonant Harmony-Bells are cast from Song-Bronze, which produces perfect musical tones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bell-Tower of Resonance",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "The Bell-Tower of Resonance houses Resonant Harmony-Bells, and its sound can be heard for miles.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Gems",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Echo-Gems are inlaid into Resonant Harmony-Bells to amplify and modulate their resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Bell Creation",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Harmony-Bell creation is a sacred art form involving the production of Resonant Harmony-Bells.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Song-Bronze",
+        "type": "artifact",
+        "description": "Song-Bronze is a type of bronze used to cast Harmony-Bells, known for producing perfect musical tones and requiring specific temperature conditions during forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stones",
+        "type": "",
+        "description": "Resonance-Stones are found in the deepest caves.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonance-Stones",
+        "tgt": "Song-Bronze",
+        "keywords": "craftsmanship,cultural center",
+        "description": "Volcanic smiths work in the Fire-Mountain, the center of volcanic civilization.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Harmony-Bells",
+        "type": "artifact",
+        "description": "Resonant Harmony-Bells are musical instruments cast from Song-Bronze and inlaid with Echo-Gems, known for their perfect musical tones and resonance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "location",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Song-Bronze",
+        "type": "artifact",
+        "description": "Song-Bronze is a type of bronze used to cast Harmony-Bells, known for producing perfect musical tones and requiring specific temperature conditions during forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Gems",
+        "type": "artifact",
+        "description": "Echo-Gems are inlaid into Harmony-Bells to amplify and modulate their resonance, and they change color based on the notes they produce.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Bell Creation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stones",
+        "type": "",
+        "description": "Resonance-Stones are found in the deepest caves.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Harmony-Bells",
+        "tgt": "Song-Bronze",
+        "keywords": "",
+        "description": "Resonant Harmony-Bells are cast from Song-Bronze, which produces perfect musical tones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bell-Tower of Resonance",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "The Bell-Tower of Resonance houses Resonant Harmony-Bells, and its sound can be heard for miles.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Gems",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Echo-Gems are inlaid into Resonant Harmony-Bells to amplify and modulate their resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Bell Creation",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Harmony-Bell creation is a sacred art form involving the production of Resonant Harmony-Bells.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonance-Stones",
+        "tgt": "Song-Bronze",
+        "keywords": "",
+        "description": "Volcanic smiths work in the Fire-Mountain, the center of volcanic civilization.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:57:39.468433",
+  "llm_calls": 26,
+  "mode": "ft"
+}

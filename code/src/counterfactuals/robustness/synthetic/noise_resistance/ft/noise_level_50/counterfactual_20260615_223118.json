@@ -1,0 +1,434 @@
+{
+  "question": "What are the roles or professions of Elara Vayne and Jax Korden?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Jax Korden"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+    "original": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', and Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+    "perturbed": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer', while the profession of Jax Korden is not mentioned in the provided context.",
+    "similarity": 0.861798
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geological Formations"
+      ],
+      [
+        "add_edge",
+        [
+          "Geological Formations",
+          "Elara Vayne"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Sand-Crawlers are powered by Geothermal Converters, drawing heat from underground vents.",
+          "keywords": "functionality,power source",
+          "source_id": "chunk-f9555b7aefebccc997ac08527d4eb7ee",
+          "file_path": "unknown_source",
+          "created_at": 1776378671,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Cognate"
+      ],
+      [
+        "add_edge",
+        [
+          "Cognate",
+          "Acting Guilds"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The cheetah is known for being a very fast runner.",
+          "keywords": "ability,characteristic",
+          "source_id": "chunk-b0ec84394955e9010ff2eef03b888d02",
+          "file_path": "unknown_source",
+          "created_at": 1776367954,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Plorg Plant"
+      ],
+      [
+        "add_edge",
+        [
+          "Plorg Plant",
+          "Jax Korden"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Prism-City refracts sunlight into stunning displays.",
+          "keywords": "architectural feature,natural phenomenon",
+          "source_id": "chunk-0398612496e142abad8c0525a7411b04",
+          "file_path": "unknown_source",
+          "created_at": 1776370238,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Last King of Aethelgard"
+      ],
+      [
+        "add_edge",
+        [
+          "Last King of Aethelgard",
+          "Chronos Gate"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aethelred is a musician in the Crystalline Sound Weaving genre.",
+          "keywords": "genre,musician",
+          "source_id": "chunk-129bea04a4eed90f0ac47d94df434aa6",
+          "file_path": "unknown_source",
+          "created_at": 1776380458,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Jax Korden",
+        "type": "person",
+        "description": "Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Jax Korden",
+        "keywords": "",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "Geological formations are rare locations where Aethelite is found.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cognate",
+        "type": "",
+        "description": "Cognate is a special type of asynchronous generator function in CortexScript.",
+        "rank": 0.0
+      },
+      {
+        "name": "Last King of Aethelgard",
+        "type": "",
+        "description": "The last king of Aethelgard is said to have been lost in the Shadow Fen.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Formations",
+        "tgt": "Elara Vayne",
+        "keywords": "functionality,power source",
+        "description": "Sand-Crawlers are powered by Geothermal Converters, drawing heat from underground vents.",
+        "weight": 1.0
+      },
+      {
+        "src": "Cognate",
+        "tgt": "Acting Guilds",
+        "keywords": "ability,characteristic",
+        "description": "The cheetah is known for being a very fast runner.",
+        "weight": 1.0
+      },
+      {
+        "src": "Last King of Aethelgard",
+        "tgt": "Chronos Gate",
+        "keywords": "genre,musician",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Jax Korden",
+        "type": "person",
+        "description": "Jax Korden is the primary Rift-Warden protecting the Chronos Gate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elara Vayne",
+        "type": "person",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "person",
+        "description": "Creative professionals are employed in Celestia's film industry, including writers and specialized effects artists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "person",
+        "description": "Actors on Aethelon undergo psychological training to fully embody complex characters.<SEP>Actors on Aethelon undergo rigorous psychological training and compete for leading roles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wanderer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geological Formations",
+        "type": "",
+        "description": "Geological formations are rare locations where Aethelite is found.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cognate",
+        "type": "",
+        "description": "Cognate is a special type of asynchronous generator function in CortexScript.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Last King of Aethelgard",
+        "type": "",
+        "description": "The last king of Aethelgard is said to have been lost in the Shadow Fen.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elara Vayne",
+        "tgt": "Wanderer",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Jax Korden",
+        "keywords": "",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geological Formations",
+        "tgt": "Elara Vayne",
+        "keywords": "",
+        "description": "Sand-Crawlers are powered by Geothermal Converters, drawing heat from underground vents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cognate",
+        "tgt": "Acting Guilds",
+        "keywords": "",
+        "description": "The cheetah is known for being a very fast runner.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Jax Korden",
+        "keywords": "",
+        "description": "Prism-City refracts sunlight into stunning displays.",
+        "weight": 0.0
+      },
+      {
+        "src": "Last King of Aethelgard",
+        "tgt": "Chronos Gate",
+        "keywords": "",
+        "description": "Aethelred is a musician in the Crystalline Sound Weaving genre.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:31:18.533411",
+  "llm_calls": 13,
+  "mode": "ft"
+}

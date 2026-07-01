@@ -1,0 +1,265 @@
+{
+  "question": "Why was the Q3 launch of Project Nebula at Vortex Corp postponed?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "The Q3 launch of Project Nebula was postponed due to a critical security flaw or vulnerability discovered in the authentication module of the QuantumLeap framework.",
+    "original": "The Q3 launch of Project Nebula at Vortex Corp was postponed due to a major security flaw discovered in the QuantumLeap framework's authentication module.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Planet Xylar"
+      ],
+      [
+        "add_edge",
+        [
+          "Planet Xylar",
+          "Bug-Fixing Sprints"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+          "keywords": "dangerous plant,flora",
+          "source_id": "chunk-683a58d0c5ec073465dbeb0ba4d5ce16",
+          "file_path": "unknown_source",
+          "created_at": 1776373201,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Project Nebula",
+        "type": "project",
+        "description": "Project Nebula is Vortex Corp's next-generation data analytics platform that experienced a launch delay due to a security flaw.",
+        "rank": 0.0
+      },
+      {
+        "name": "Project Chimera",
+        "type": "project",
+        "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+        "rank": 0.0
+      },
+      {
+        "name": "Marketing Team",
+        "type": "team",
+        "description": "The marketing team had prepared a full campaign for the Q3 launch date of Project Nebula.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortex Corp",
+        "type": "organization",
+        "description": "Vortex Corp is the developer of Project Nebula and the QuantumLeap framework, and it also manages Project Chimera.",
+        "rank": 0.0
+      },
+      {
+        "name": "QuantumLeap Framework",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Bug-Fixing Sprints",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Q4 Budget",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Project Nebula",
+        "tgt": "Vortex Corp",
+        "keywords": "",
+        "description": "Project Nebula is a next-generation data analytics platform developed by Vortex Corp.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Nebula",
+        "tgt": "QuantumLeap Framework",
+        "keywords": "",
+        "description": "Project Nebula's launch was postponed due to a major security flaw discovered in the QuantumLeap framework's authentication module.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Nebula",
+        "tgt": "User Interface",
+        "keywords": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Nebula",
+        "tgt": "Q4 Budget",
+        "keywords": "",
+        "description": "The budget for Project Nebula in Q4 will be increased to cover delay costs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Chimera",
+        "tgt": "Vortex Corp",
+        "keywords": "",
+        "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+        "weight": 0.0
+      },
+      {
+        "src": "Marketing Team",
+        "tgt": "Project Nebula",
+        "keywords": "",
+        "description": "The marketing team had prepared a full campaign for the Q3 launch date of Project Nebula.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bug-Fixing Sprints",
+        "tgt": "Project Nebula",
+        "keywords": "",
+        "description": "Team members on Project Nebula will now focus on bug-fixing sprints following the security flaw discovery.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Project Nebula",
+        "type": "project",
+        "description": "Project Nebula is Vortex Corp's next-generation data analytics platform that experienced a launch delay due to a security flaw.",
+        "rank": 0.0
+      },
+      {
+        "name": "Project Chimera",
+        "type": "project",
+        "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+        "rank": 0.0
+      },
+      {
+        "name": "Marketing Team",
+        "type": "team",
+        "description": "The marketing team had prepared a full campaign for the Q3 launch date of Project Nebula.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vortex Corp",
+        "type": "organization",
+        "description": "Vortex Corp is the developer of Project Nebula and the QuantumLeap framework, and it also manages Project Chimera.",
+        "rank": 0.0
+      },
+      {
+        "name": "QuantumLeap Framework",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Bug-Fixing Sprints",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Q4 Budget",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Planet Xylar",
+        "type": "",
+        "description": "Planet Xylar is the home of the Gleepglorp and the Flumph.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Project Nebula",
+        "tgt": "Vortex Corp",
+        "keywords": "",
+        "description": "Project Nebula is a next-generation data analytics platform developed by Vortex Corp.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Nebula",
+        "tgt": "QuantumLeap Framework",
+        "keywords": "",
+        "description": "Project Nebula's launch was postponed due to a major security flaw discovered in the QuantumLeap framework's authentication module.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Nebula",
+        "tgt": "User Interface",
+        "keywords": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Nebula",
+        "tgt": "Q4 Budget",
+        "keywords": "",
+        "description": "The budget for Project Nebula in Q4 will be increased to cover delay costs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Project Chimera",
+        "tgt": "Vortex Corp",
+        "keywords": "",
+        "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+        "weight": 0.0
+      },
+      {
+        "src": "Marketing Team",
+        "tgt": "Project Nebula",
+        "keywords": "",
+        "description": "The marketing team had prepared a full campaign for the Q3 launch date of Project Nebula.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bug-Fixing Sprints",
+        "tgt": "Project Nebula",
+        "keywords": "",
+        "description": "Team members on Project Nebula will now focus on bug-fixing sprints following the security flaw discovery.",
+        "weight": 0.0
+      },
+      {
+        "src": "Planet Xylar",
+        "tgt": "Bug-Fixing Sprints",
+        "keywords": "",
+        "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:01:01.217197",
+  "llm_calls": 201,
+  "mode": "ft"
+}

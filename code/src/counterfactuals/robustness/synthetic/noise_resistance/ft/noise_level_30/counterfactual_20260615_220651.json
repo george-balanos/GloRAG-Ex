@@ -1,0 +1,332 @@
+{
+  "question": "What are the two core elements that make up Volcanic 'Magma-Shields'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Magma-Shields"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "Volcanic 'Magma-Shields' are made from 'Lava-Stone' and 'Obsidian-Mesh'.",
+    "original": "The two core elements that make up Magma-Shields are Lava-Stone and Obsidian-Mesh.",
+    "perturbed": "The two core elements that make up Volcanic 'Magma-Shields' are **Magma** and **Lava-Stone**.",
+    "similarity": 0.934403
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Xandrian Animals"
+      ],
+      [
+        "add_edge",
+        [
+          "Xandrian Animals",
+          "Lava-Stone"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Plorg tubers grow exclusively in volcanic soil.",
+          "keywords": "agricultural practice,growth environment",
+          "source_id": "chunk-aaa6debfc3074297c5f8a74fa36c4d5f",
+          "file_path": "unknown_source",
+          "created_at": 1776375402,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Library"
+      ],
+      [
+        "add_edge",
+        [
+          "Library",
+          "Lava-Stone"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Subterranean Caves are home to unique fauna.",
+          "keywords": "biodiversity,habitat",
+          "source_id": "chunk-7740dca01f976a7c257498655eda51c5",
+          "file_path": "unknown_source",
+          "created_at": 1776375744,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Magma-Shields",
+        "type": "artifact",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "naturalobject",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Smiths",
+        "type": "person",
+        "description": "Volcanic smiths are craftsmen who work in forges heated by active magma to create Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lava-Stone",
+        "type": "naturalobject",
+        "description": "Lava-Stone is a material that naturally resists extreme heat and is used as the base for Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fire-Mountain",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Obsidian-Mesh",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Masters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Magma-Shields",
+        "tgt": "Obsidian-Mesh",
+        "keywords": "",
+        "description": "Magma-Shields are reinforced with Obsidian-Mesh, which provides flexibility and cutting edges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Volcanic smiths use magma to heat their forges for crafting Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lava-Stone",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Magma-Shields are forged with Lava-Stone as their base material, which provides resistance to extreme heat.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fire-Mountain",
+        "tgt": "Magma",
+        "keywords": "",
+        "description": "Fire-Mountain is powered by magma, serving as the heat source for volcanic forges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Masters",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Forge-Masters are legendary craftsmen who specialize in the construction of Magma-Shields.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Magma",
+        "type": "naturalobject",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Smiths",
+        "type": "person",
+        "description": "Volcanic smiths are craftsmen who work in forges heated by active magma to create Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lava-Stone",
+        "type": "naturalobject",
+        "description": "Lava-Stone is a material that naturally resists extreme heat and is used as the base for Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fire-Mountain",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xandrian Animals",
+        "type": "",
+        "description": "Xandrian animals have six limbs as standard.",
+        "rank": 0.0
+      },
+      {
+        "name": "Library",
+        "type": "",
+        "description": "The library is a quiet place.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Magma",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Volcanic smiths use magma to heat their forges for crafting Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fire-Mountain",
+        "tgt": "Magma",
+        "keywords": "",
+        "description": "Fire-Mountain is powered by magma, serving as the heat source for volcanic forges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xandrian Animals",
+        "tgt": "Lava-Stone",
+        "keywords": "agricultural practice,growth environment",
+        "description": "Plorg tubers grow exclusively in volcanic soil.",
+        "weight": 1.0
+      },
+      {
+        "src": "Library",
+        "tgt": "Lava-Stone",
+        "keywords": "biodiversity,habitat",
+        "description": "The Subterranean Caves are home to unique fauna.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Magma-Shields",
+        "type": "artifact",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "naturalobject",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Smiths",
+        "type": "person",
+        "description": "Volcanic smiths are craftsmen who work in forges heated by active magma to create Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lava-Stone",
+        "type": "naturalobject",
+        "description": "Lava-Stone is a material that naturally resists extreme heat and is used as the base for Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fire-Mountain",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Obsidian-Mesh",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Masters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xandrian Animals",
+        "type": "",
+        "description": "Xandrian animals have six limbs as standard.",
+        "rank": 0.0
+      },
+      {
+        "name": "Library",
+        "type": "",
+        "description": "The library is a quiet place.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Magma-Shields",
+        "tgt": "Obsidian-Mesh",
+        "keywords": "",
+        "description": "Magma-Shields are reinforced with Obsidian-Mesh, which provides flexibility and cutting edges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Volcanic smiths use magma to heat their forges for crafting Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lava-Stone",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Magma-Shields are forged with Lava-Stone as their base material, which provides resistance to extreme heat.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fire-Mountain",
+        "tgt": "Magma",
+        "keywords": "",
+        "description": "Fire-Mountain is powered by magma, serving as the heat source for volcanic forges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Masters",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Forge-Masters are legendary craftsmen who specialize in the construction of Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xandrian Animals",
+        "tgt": "Lava-Stone",
+        "keywords": "",
+        "description": "Plorg tubers grow exclusively in volcanic soil.",
+        "weight": 0.0
+      },
+      {
+        "src": "Library",
+        "tgt": "Lava-Stone",
+        "keywords": "",
+        "description": "The Subterranean Caves are home to unique fauna.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:06:51.596617",
+  "llm_calls": 41,
+  "mode": "ft"
+}

@@ -1,0 +1,848 @@
+{
+  "question": "What is the title of the latest film starring the highest-paid actor on the planet Celestia?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Xylar"
+    ]
+  ],
+  "cost": 4,
+  "answers": {
+    "ground_truth": "Xylar's most recent film release is titled 'Echoes of the Nebulae'.",
+    "original": "The title of the latest film starring the highest-paid actor on the planet Celestia is \"Echoes of the Nebulae\".",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.000836
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Circle-of-Mages"
+      ],
+      [
+        "add_edge",
+        [
+          "Circle-of-Mages",
+          "Artificial Intelligence"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Stellar Converter is located on Xylos and is a key part of the planet's infrastructure.<SEP>The Stellar Converter is designed to capture and convert atmospheric storms on Xylos into electrical power.",
+          "keywords": "atmospheric storms,energy conversion,energy generation,infrastructure",
+          "source_id": "chunk-b25c58eca499aeded5cda71ef23b54a5<SEP>chunk-2e3af9a926d4f9db7567fcb8b1d457dd",
+          "file_path": "unknown_source",
+          "created_at": 1776377976,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Umbradium"
+      ],
+      [
+        "add_edge",
+        [
+          "Umbradium",
+          "Xylar"
+        ],
+        {
+          "weight": 1.0,
+          "description": "He wore the insignia of a forgotten legion.",
+          "keywords": "representation,symbol",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Psychic-Academy"
+      ],
+      [
+        "add_edge",
+        [
+          "Psychic-Academy",
+          "Artificial Intelligence"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Jormund orbits K'tharr Prime within the K'tharr System.<SEP>Jormund orbits K'tharr Prime within the K'tharr System.",
+          "keywords": "celestial body,orbital dynamics,orbital relationship,stellar system",
+          "source_id": "chunk-a1d086fa29bddbf458099ee779c68438<SEP>chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379724,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Pressurized Forges"
+      ],
+      [
+        "add_edge",
+        [
+          "Pressurized Forges",
+          "Creative Professionals"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+          "keywords": "category,potency",
+          "source_id": "chunk-95e2acb9a9b9f5294e92e741d798190a",
+          "file_path": "unknown_source",
+          "created_at": 1776376195,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Magma"
+      ],
+      [
+        "add_edge",
+        [
+          "Magma",
+          "Celestia"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Solarian Sun-Dancers generate Radiance-Bursts as part of their performances.",
+          "keywords": "creation,performance",
+          "source_id": "chunk-021b47fe4bc3c29da48ea2759bcc4e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776371512,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Reality-Shaper Abilities"
+      ],
+      [
+        "add_edge",
+        [
+          "Reality-Shaper Abilities",
+          "Lyra Vael"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Kaelen Echo is known for the groundbreaking album 'Temporal Drift'.<SEP>Kaelen Echo's groundbreaking first album is 'Temporal Drift'.",
+          "keywords": "album,artist,musician",
+          "source_id": "chunk-053184c525b0c10f0dd434985ac207f2<SEP>chunk-8ee54215efdd5fc7b9052ad0c42d46c8",
+          "file_path": "unknown_source",
+          "created_at": 1776380317,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Cloud-Leather"
+      ],
+      [
+        "add_edge",
+        [
+          "Cloud-Leather",
+          "Celestian Film Industry"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Atlantean Tide-Weapons are forged with Whirlpool-Ore.",
+          "keywords": "material composition,weapon enhancement",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 14,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Celestia",
+        "type": "location",
+        "description": "Celestia is a planet known as a leading center for advanced audiovisual entertainment and film production.<SEP>Celestia is a location with a competitive and highly technical film industry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylar",
+        "type": "person",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry and has recently released the film 'Echoes of the Nebulae'.<SEP>Xylar is the highest-paid actor in Celestia's film industry and has a recent film titled 'Echoes of the Nebulae'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "industry",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lyra Vael",
+        "type": "person",
+        "description": "Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding high salaries.<SEP>Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding a high salary.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestian Film Industry",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Interstellar Travel",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Artificial Intelligence",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alien Contact",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Streaming Networks",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Awards Ceremonies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Holographic and Sensory Immersion Technologies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture Techniques",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestia is home to its advanced entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Xylar",
+        "keywords": "",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Celestian Film Industry",
+        "keywords": "",
+        "description": "The Celestian Film Industry is based in Celestia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Digital Performance Capture Techniques",
+        "keywords": "",
+        "description": "Acting in Celestia requires training in digital performance capture techniques.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Interstellar Travel",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of interstellar travel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Quantum Streaming Networks",
+        "keywords": "",
+        "description": "Distribution of Celestian films utilizes quantum streaming networks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Holographic and Sensory Immersion Technologies",
+        "keywords": "",
+        "description": "Celestia's entertainment industry is known for pioneering these technologies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Artificial Intelligence",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of artificial intelligence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alien Contact",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of alien contact.",
+        "weight": 0.0
+      },
+      {
+        "src": "Awards Ceremonies",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Awards ceremonies for the industry are broadcast across numerous star systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Celestia",
+        "type": "location",
+        "description": "Celestia is a planet known as a leading center for advanced audiovisual entertainment and film production.<SEP>Celestia is a location with a competitive and highly technical film industry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "industry",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lyra Vael",
+        "type": "person",
+        "description": "Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding high salaries.<SEP>Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding a high salary.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestian Film Industry",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Interstellar Travel",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Artificial Intelligence",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alien Contact",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Streaming Networks",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Awards Ceremonies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Holographic and Sensory Immersion Technologies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture Techniques",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Circle-of-Mages",
+        "type": "",
+        "description": "The Circle-of-Mages oversees rune-crafting practices and ensures precise ritual timing in Rune-Stone creation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic-Academy",
+        "type": "",
+        "description": "The Psychic-Academy is an institution that trains students in mental disciplines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pressurized Forges",
+        "type": "",
+        "description": "Pressurized forges are used by Atlantean smiths to work with Whirlpool-Ore and Current-Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality-Shaper Abilities",
+        "type": "",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cloud-Leather",
+        "type": "",
+        "description": "Cloud-Leather is a light yet durable material harvested from sky-dwelling creatures.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestia is home to its advanced entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Celestian Film Industry",
+        "keywords": "",
+        "description": "The Celestian Film Industry is based in Celestia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Digital Performance Capture Techniques",
+        "keywords": "",
+        "description": "Acting in Celestia requires training in digital performance capture techniques.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Interstellar Travel",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of interstellar travel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Quantum Streaming Networks",
+        "keywords": "",
+        "description": "Distribution of Celestian films utilizes quantum streaming networks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Holographic and Sensory Immersion Technologies",
+        "keywords": "",
+        "description": "Celestia's entertainment industry is known for pioneering these technologies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Artificial Intelligence",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of artificial intelligence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alien Contact",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of alien contact.",
+        "weight": 0.0
+      },
+      {
+        "src": "Awards Ceremonies",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Awards ceremonies for the industry are broadcast across numerous star systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Circle-of-Mages",
+        "tgt": "Artificial Intelligence",
+        "keywords": "atmospheric storms,energy conversion,energy generation,infrastructure",
+        "description": "The Stellar Converter is located on Xylos and is a key part of the planet's infrastructure.<SEP>The Stellar Converter is designed to capture and convert atmospheric storms on Xylos into electrical power.",
+        "weight": 2.0
+      },
+      {
+        "src": "Psychic-Academy",
+        "tgt": "Artificial Intelligence",
+        "keywords": "celestial body,orbital dynamics,orbital relationship,stellar system",
+        "description": "Jormund orbits K'tharr Prime within the K'tharr System.<SEP>Jormund orbits K'tharr Prime within the K'tharr System.",
+        "weight": 2.0
+      },
+      {
+        "src": "Pressurized Forges",
+        "tgt": "Creative Professionals",
+        "keywords": "category,potency",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 1.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Celestia",
+        "keywords": "creation,performance",
+        "description": "Solarian Sun-Dancers generate Radiance-Bursts as part of their performances.",
+        "weight": 1.0
+      },
+      {
+        "src": "Reality-Shaper Abilities",
+        "tgt": "Lyra Vael",
+        "keywords": "album,artist,musician",
+        "description": "Kaelen Echo is known for the groundbreaking album 'Temporal Drift'.<SEP>Kaelen Echo's groundbreaking first album is 'Temporal Drift'.",
+        "weight": 2.0
+      },
+      {
+        "src": "Cloud-Leather",
+        "tgt": "Celestian Film Industry",
+        "keywords": "material composition,weapon enhancement",
+        "description": "Atlantean Tide-Weapons are forged with Whirlpool-Ore.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Celestia",
+        "type": "location",
+        "description": "Celestia is a planet known as a leading center for advanced audiovisual entertainment and film production.<SEP>Celestia is a location with a competitive and highly technical film industry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia's Entertainment Industry",
+        "type": "organization",
+        "description": "Celestia's entertainment industry is known for pioneering holographic and sensory immersion technologies and setting industry standards.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylar",
+        "type": "person",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry and has recently released the film 'Echoes of the Nebulae'.<SEP>Xylar is the highest-paid actor in Celestia's film industry and has a recent film titled 'Echoes of the Nebulae'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "industry",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lyra Vael",
+        "type": "person",
+        "description": "Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding high salaries.<SEP>Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding a high salary.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestian Film Industry",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Interstellar Travel",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Artificial Intelligence",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alien Contact",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Streaming Networks",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Awards Ceremonies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Holographic and Sensory Immersion Technologies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Creative Professionals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Digital Performance Capture Techniques",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Circle-of-Mages",
+        "type": "",
+        "description": "The Circle-of-Mages oversees rune-crafting practices and ensures precise ritual timing in Rune-Stone creation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Umbradium",
+        "type": "",
+        "description": "Umbradium is a new element created by mixing Gravitium and Solara. Its production results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>Umbradium is a new element created by mixing Gravitium and Solara. Its production creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Psychic-Academy",
+        "type": "",
+        "description": "The Psychic-Academy is an institution that trains students in mental disciplines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pressurized Forges",
+        "type": "",
+        "description": "Pressurized forges are used by Atlantean smiths to work with Whirlpool-Ore and Current-Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality-Shaper Abilities",
+        "type": "",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cloud-Leather",
+        "type": "",
+        "description": "Cloud-Leather is a light yet durable material harvested from sky-dwelling creatures.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestia",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestia is home to its advanced entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Xylar",
+        "keywords": "",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Celestian Film Industry",
+        "keywords": "",
+        "description": "The Celestian Film Industry is based in Celestia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Digital Performance Capture Techniques",
+        "keywords": "",
+        "description": "Acting in Celestia requires training in digital performance capture techniques.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Interstellar Travel",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of interstellar travel.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Quantum Streaming Networks",
+        "keywords": "",
+        "description": "Distribution of Celestian films utilizes quantum streaming networks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Holographic and Sensory Immersion Technologies",
+        "keywords": "",
+        "description": "Celestia's entertainment industry is known for pioneering these technologies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia's Entertainment Industry",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Artificial Intelligence",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of artificial intelligence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alien Contact",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Celestian films often explore the theme of alien contact.",
+        "weight": 0.0
+      },
+      {
+        "src": "Awards Ceremonies",
+        "tgt": "Celestia's Entertainment Industry",
+        "keywords": "",
+        "description": "Awards ceremonies for the industry are broadcast across numerous star systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Circle-of-Mages",
+        "tgt": "Artificial Intelligence",
+        "keywords": "",
+        "description": "The Stellar Converter is located on Xylos and is a key part of the planet's infrastructure.<SEP>The Stellar Converter is designed to capture and convert atmospheric storms on Xylos into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Umbradium",
+        "tgt": "Xylar",
+        "keywords": "",
+        "description": "He wore the insignia of a forgotten legion.",
+        "weight": 0.0
+      },
+      {
+        "src": "Psychic-Academy",
+        "tgt": "Artificial Intelligence",
+        "keywords": "",
+        "description": "Jormund orbits K'tharr Prime within the K'tharr System.<SEP>Jormund orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pressurized Forges",
+        "tgt": "Creative Professionals",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Celestia",
+        "keywords": "",
+        "description": "Solarian Sun-Dancers generate Radiance-Bursts as part of their performances.",
+        "weight": 0.0
+      },
+      {
+        "src": "Reality-Shaper Abilities",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Kaelen Echo is known for the groundbreaking album 'Temporal Drift'.<SEP>Kaelen Echo's groundbreaking first album is 'Temporal Drift'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Cloud-Leather",
+        "tgt": "Celestian Film Industry",
+        "keywords": "",
+        "description": "Atlantean Tide-Weapons are forged with Whirlpool-Ore.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:04:58.940999",
+  "llm_calls": 107,
+  "mode": "ft"
+}

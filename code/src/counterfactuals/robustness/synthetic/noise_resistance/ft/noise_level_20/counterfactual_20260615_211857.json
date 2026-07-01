@@ -1,0 +1,291 @@
+{
+  "question": "What are the two core elements that power a Zephyrian 'Storm-Engine'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Thunder-Stone"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "A Zephyrian 'Storm-Engine' is powered by 'Lightning Essence' and 'Thunder-Stone'.",
+    "original": "The two core elements that power a Zephyrian Storm-Engine are Lightning Essence and Thunder-Stone.",
+    "perturbed": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+    "similarity": 0.776386
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Prismarian Apprentices"
+      ],
+      [
+        "add_edge",
+        [
+          "Prismarian Apprentices",
+          "Zephyrian Storm-Engine"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Solara's crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light.",
+          "keywords": "energy absorption,storage",
+          "source_id": "chunk-6d17ad2ef72f49be20201bc489a66d62",
+          "file_path": "unknown_source",
+          "created_at": 1776379556,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thunder-Stone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      },
+      {
+        "src": "Thunder-Stone",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "Thunder-Stone is used to channel and stabilize the Lightning Essence in the Storm-Engine.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Prismarian Apprentices",
+        "type": "",
+        "description": "Prismarian apprentices learn color theory before forging.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prismarian Apprentices",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "energy absorption,storage",
+        "description": "Solara's crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Zephyrian Storm-Engine",
+        "type": "artifact",
+        "description": "A Zephyrian Storm-Engine harnesses the raw power of Lightning Essence captured during atmospheric tempests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lightning Essence",
+        "type": "naturalobject",
+        "description": "Lightning Essence is a form of energy captured during atmospheric tempests and used in Storm-Engines.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyrian Architecture",
+        "type": "artifact",
+        "description": "Zephyrian architecture often incorporates natural wind channels.",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Storms",
+        "type": "naturalobject",
+        "description": "Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.<SEP>Atmospheric storms on Xylos are exceptionally powerful and are converted into electrical power by the Stellar Converter.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "artifact",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zephyr",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Thunder-Stone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Prismarian Apprentices",
+        "type": "",
+        "description": "Prismarian apprentices learn color theory before forging.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lightning Essence",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "The Zephyrian Storm-Engine harnesses Lightning Essence to amplify and stabilize energy output.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Storms",
+        "tgt": "Stellar Converter",
+        "keywords": "",
+        "description": "The Stellar Converter captures and converts atmospheric storms into electrical power.<SEP>The Stellar Converter captures and converts atmospheric storms into electrical power.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zephyr",
+        "tgt": "Zephyrian Architecture",
+        "keywords": "",
+        "description": "Zephyrian architecture incorporates natural wind channels.",
+        "weight": 0.0
+      },
+      {
+        "src": "Thunder-Stone",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "Thunder-Stone is used to channel and stabilize the Lightning Essence in the Storm-Engine.",
+        "weight": 0.0
+      },
+      {
+        "src": "Prismarian Apprentices",
+        "tgt": "Zephyrian Storm-Engine",
+        "keywords": "",
+        "description": "Solara's crystalline structure allows for the efficient absorption and temporary storage of radiant energy, particularly visible light.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:18:57.559441",
+  "llm_calls": 2,
+  "mode": "ft"
+}

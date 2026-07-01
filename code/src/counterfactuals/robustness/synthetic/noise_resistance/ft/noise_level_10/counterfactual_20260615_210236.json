@@ -1,0 +1,507 @@
+{
+  "question": "What is the primary export of Zorblaxia?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Crystallized Snorflak"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "crystallized snorflak",
+    "original": "The primary export of Zorblaxia is crystallized snorflak.",
+    "perturbed": "I do not have enough information to answer.",
+    "similarity": 0.072499
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Glow-Geodes"
+      ],
+      [
+        "add_edge",
+        [
+          "Glow-Geodes",
+          "Northern Regions"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+          "keywords": "research,scientific inquiry",
+          "source_id": "chunk-56e0a12548f29b791d118efb316a2b35",
+          "file_path": "unknown_source",
+          "created_at": 1776375936,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystallized Snorflak",
+        "type": "naturalobject",
+        "description": "Crystallized snorflak is a mined resource that is a major export of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "River Barges",
+        "type": "artifact",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.",
+        "rank": 0.0
+      },
+      {
+        "name": "Northern Regions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Calendar",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Education",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia's Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Cuisine",
+        "keywords": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Calendar",
+        "keywords": "",
+        "description": "The Zorblaxian calendar has 15 months.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Music",
+        "keywords": "",
+        "description": "Traditional Zorblaxian music uses only percussion instruments.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Education",
+        "keywords": "",
+        "description": "Zorblaxian children attend school for 12 years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Language",
+        "keywords": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxia's Gravity",
+        "keywords": "",
+        "description": "Zorblaxia's gravity is 1.3 times Earth's.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystallized Snorflak",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblaxia's economy relies heavily on the export of crystallized snorflak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eldoria",
+        "tgt": "River Barges",
+        "keywords": "",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Northern Regions",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Crystallized snorflak is mined in the northern regions of Zorblaxia.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "River Barges",
+        "type": "artifact",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.",
+        "rank": 0.0
+      },
+      {
+        "name": "Northern Regions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Calendar",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Education",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia's Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Geodes",
+        "type": "",
+        "description": "Glow-Geodes are geodes that are crushed to create the powder used in Lumin-Ink.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Cuisine",
+        "keywords": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Calendar",
+        "keywords": "",
+        "description": "The Zorblaxian calendar has 15 months.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Music",
+        "keywords": "",
+        "description": "Traditional Zorblaxian music uses only percussion instruments.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Education",
+        "keywords": "",
+        "description": "Zorblaxian children attend school for 12 years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Language",
+        "keywords": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxia's Gravity",
+        "keywords": "",
+        "description": "Zorblaxia's gravity is 1.3 times Earth's.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eldoria",
+        "tgt": "River Barges",
+        "keywords": "",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Northern Regions",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Crystallized snorflak is mined in the northern regions of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Geodes",
+        "tgt": "Northern Regions",
+        "keywords": "research,scientific inquiry",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystallized Snorflak",
+        "type": "naturalobject",
+        "description": "Crystallized snorflak is a mined resource that is a major export of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "River Barges",
+        "type": "artifact",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.",
+        "rank": 0.0
+      },
+      {
+        "name": "Northern Regions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Cuisine",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Calendar",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Education",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia's Gravity",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Geodes",
+        "type": "",
+        "description": "Glow-Geodes are geodes that are crushed to create the powder used in Lumin-Ink.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Cuisine",
+        "keywords": "",
+        "description": "Zorblaxian cuisine is known for its spicy flavors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Calendar",
+        "keywords": "",
+        "description": "The Zorblaxian calendar has 15 months.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Music",
+        "keywords": "",
+        "description": "Traditional Zorblaxian music uses only percussion instruments.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Education",
+        "keywords": "",
+        "description": "Zorblaxian children attend school for 12 years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxian Language",
+        "keywords": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxia",
+        "tgt": "Zorblaxia's Gravity",
+        "keywords": "",
+        "description": "Zorblaxia's gravity is 1.3 times Earth's.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystallized Snorflak",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblaxia's economy relies heavily on the export of crystallized snorflak.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Eldoria",
+        "tgt": "River Barges",
+        "keywords": "",
+        "description": "River barges are a primary mode of trade transportation within Eldoria.<SEP>Trade within Eldoria relies heavily on river barges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Northern Regions",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Crystallized snorflak is mined in the northern regions of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Geodes",
+        "tgt": "Northern Regions",
+        "keywords": "",
+        "description": "Studies are ongoing to understand how Aeridium Ore retains buoyancy.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:02:36.440807",
+  "llm_calls": 2,
+  "mode": "ft"
+}

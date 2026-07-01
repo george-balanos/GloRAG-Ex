@@ -1,0 +1,435 @@
+{
+  "question": "What is the salary of the most popular actor on the planet Aethelon?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 4.010383289307356,
+  "answers": {
+    "ground_truth": "Lyra Vael's salary is approximately 50 million Credits per major project.",
+    "original": "Lyra Vael is the most popular actor on Aethelon and is known for commanding a high salary.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Warp-Slinger"
+      ],
+      [
+        "add_edge",
+        [
+          "Warp-Slinger",
+          "Historical Epics"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+          "keywords": "material composition,structural integrity",
+          "source_id": "chunk-d5347c46fbfaa5dfb649cf5a7386a3e3",
+          "file_path": "unknown_source",
+          "created_at": 1776366354,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Valorian"
+      ],
+      [
+        "add_edge",
+        [
+          "Valorian",
+          "Deep Character Studies"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The production of Cryostone results in an intense and rapid drop in ambient temperature, flash-freezing the immediate vicinity.",
+          "keywords": "flash-freezing,side effect",
+          "source_id": "chunk-6d17ad2ef72f49be20201bc489a66d62",
+          "file_path": "unknown_source",
+          "created_at": 1776379556,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Plorgonian Celebrations"
+      ],
+      [
+        "add_edge",
+        [
+          "Plorgonian Celebrations",
+          "Celestia"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Pyron is commonly found in regions of intense geothermal activity or within planetary atmospheres undergoing significant electrical storms.",
+          "keywords": "planetary atmospheres",
+          "source_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267",
+          "file_path": "unknown_source",
+          "created_at": 1776379432,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Light-Forging"
+      ],
+      [
+        "add_edge",
+        [
+          "Light-Forging",
+          "Aethelon's Entertainment Industry"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Thunder-Stone amplifies and stabilizes the Lightning Essence.",
+          "keywords": "energy amplification,stabilization",
+          "source_id": "chunk-dbfd518f3805f5b8ca795225dfe27c7e",
+          "file_path": "unknown_source",
+          "created_at": 1776368724,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Healing Potion"
+      ],
+      [
+        "add_edge",
+        [
+          "Healing Potion",
+          "Acting Guilds"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Ethereal Ghost-Nets are designed to capture and hold incorporeal creatures.",
+          "keywords": "capture,containment",
+          "source_id": "chunk-338af8d2707612d1119fe2069b90d9b9",
+          "file_path": "unknown_source",
+          "created_at": 1776372511,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 10,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "industry",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lyra Vael",
+        "type": "person",
+        "description": "Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding high salaries.<SEP>Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding a high salary.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia",
+        "type": "location",
+        "description": "Celestia is a planet known as a leading center for advanced audiovisual entertainment and film production.<SEP>Celestia is a location with a competitive and highly technical film industry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylar",
+        "type": "person",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry and has recently released the film 'Echoes of the Nebulae'.<SEP>Xylar is the highest-paid actor in Celestia's film industry and has a recent film titled 'Echoes of the Nebulae'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Feedback Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep Character Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historical Epics",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Bio-Feedback Systems",
+        "keywords": "",
+        "description": "The industry relies on bio-feedback systems to enhance the authenticity of performances.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Deep Character Studies",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is known for its deep character studies and emotionally resonant dramas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Historical Epics",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Aethelon",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Xylar",
+        "keywords": "",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon",
+        "tgt": "Aethelon's Entertainment Industry",
+        "keywords": "",
+        "description": "Aethelon is home to a thriving and artistically rich entertainment industry.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "industry",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acting Guilds",
+        "type": "organization",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.<SEP>Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lyra Vael",
+        "type": "person",
+        "description": "Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding high salaries.<SEP>Lyra Vael is a highly popular actor in Aethelon's film and stage sectors, known for commanding a high salary.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestia",
+        "type": "location",
+        "description": "Celestia is a planet known as a leading center for advanced audiovisual entertainment and film production.<SEP>Celestia is a location with a competitive and highly technical film industry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylar",
+        "type": "person",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry and has recently released the film 'Echoes of the Nebulae'.<SEP>Xylar is the highest-paid actor in Celestia's film industry and has a recent film titled 'Echoes of the Nebulae'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Feedback Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep Character Studies",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Historical Epics",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Actors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Warp-Slinger",
+        "type": "",
+        "description": "Warp-Slinger class ships are the fastest single-pilot vessels in Starfleet, equipped with a Reality Anchor.",
+        "rank": 0.0
+      },
+      {
+        "name": "Valorian",
+        "type": "",
+        "description": "Valorians are individuals capable of forging Thought-Metal and performing Memory-Welding.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Healing Potion",
+        "type": "",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Lyra Vael",
+        "keywords": "",
+        "description": "Lyra Vael is one of the most popular and highest-earning actors in Aethelon's entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Bio-Feedback Systems",
+        "keywords": "",
+        "description": "The industry relies on bio-feedback systems to enhance the authenticity of performances.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Deep Character Studies",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is known for its deep character studies and emotionally resonant dramas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Historical Epics",
+        "keywords": "",
+        "description": "Aethelon's entertainment industry is also renowned for its historical epics.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Aethelon",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon actively negotiate minimum salaries and advocate for favorable working conditions.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acting Guilds",
+        "tgt": "Actors",
+        "keywords": "",
+        "description": "Acting guilds on Aethelon negotiate minimum salaries and advocate for favorable working conditions for actors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestia",
+        "tgt": "Xylar",
+        "keywords": "",
+        "description": "Xylar is the highest-paid actor in Celestia's film industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon",
+        "tgt": "Aethelon's Entertainment Industry",
+        "keywords": "",
+        "description": "Aethelon is home to a thriving and artistically rich entertainment industry.",
+        "weight": 0.0
+      },
+      {
+        "src": "Warp-Slinger",
+        "tgt": "Historical Epics",
+        "keywords": "",
+        "description": "The outer shell of Xylotian terraforming pods is made from Impact-Resistant Ceramite.",
+        "weight": 0.0
+      },
+      {
+        "src": "Valorian",
+        "tgt": "Deep Character Studies",
+        "keywords": "",
+        "description": "The production of Cryostone results in an intense and rapid drop in ambient temperature, flash-freezing the immediate vicinity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Celestia",
+        "keywords": "",
+        "description": "Pyron is commonly found in regions of intense geothermal activity or within planetary atmospheres undergoing significant electrical storms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Aethelon's Entertainment Industry",
+        "keywords": "",
+        "description": "Thunder-Stone amplifies and stabilizes the Lightning Essence.",
+        "weight": 0.0
+      },
+      {
+        "src": "Healing Potion",
+        "tgt": "Acting Guilds",
+        "keywords": "",
+        "description": "Ethereal Ghost-Nets are designed to capture and hold incorporeal creatures.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:30:19.824158",
+  "llm_calls": 201,
+  "mode": "ff"
+}

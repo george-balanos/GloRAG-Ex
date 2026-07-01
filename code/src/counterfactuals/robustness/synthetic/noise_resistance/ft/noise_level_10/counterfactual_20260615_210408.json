@@ -1,0 +1,265 @@
+{
+  "question": "Which element powers the engines of Vexian starships?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "Vexium (element 147)",
+    "original": "Vexium (element 147) powers the engines of Vexian starships.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Temporal Coherence"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporal Coherence",
+          "Vexium"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The water from the Font of Resonance resonates with psionic energy, amplifying mental abilities.<SEP>The water from the Font of Resonance resonates with psionic energy, amplifying mental abilities.",
+          "keywords": "amplification,energy amplification,mental abilities,resonance",
+          "source_id": "chunk-eb238d577176add908a35b492621456f<SEP>chunk-8efb9538a2ac514d224bab59a3f4b44a",
+          "file_path": "unknown_source",
+          "created_at": 1776380583,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Propulsion Systems",
+        "type": "artifact",
+        "description": "Vexian propulsion systems utilize stabilized Vexium plasma to achieve high-speed travel.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexium",
+        "type": "naturalobject",
+        "description": "Vexium (element 147) is a stabilized plasma used exclusively in Vexian propulsion systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Navigation Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheres",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Vexian Starship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vexian Starships",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexian starships use stabilized Vexium plasma to power their engines.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Propulsion Systems",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexium is stabilized into plasma form for use in Vexian propulsion systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Crew",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships are operated by crews consisting of 12 members.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Navigation Systems",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships use quantum entanglement for positioning in their navigation systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheres",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Vexian Starship",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "The first Vexian starship was built 500 years ago, marking the beginning of Vexian starship technology.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Vexian Starships",
+        "type": "artifact",
+        "description": "Vexian starships are spacecraft that use stabilized plasma from element 147 (Vexium) to power their engines and can travel at 0.7 light speed.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Propulsion Systems",
+        "type": "artifact",
+        "description": "Vexian propulsion systems utilize stabilized Vexium plasma to achieve high-speed travel.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexium",
+        "type": "naturalobject",
+        "description": "Vexium (element 147) is a stabilized plasma used exclusively in Vexian propulsion systems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chromatic Colors",
+        "type": "concept",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Crew",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Vexian Navigation Systems",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheres",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "First Vexian Starship",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Coherence",
+        "type": "",
+        "description": "Temporal coherence is a aspect of music frequently analyzed by critics on Riven Prime.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Vexian Starships",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexian starships use stabilized Vexium plasma to power their engines.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Propulsion Systems",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "Vexium is stabilized into plasma form for use in Vexian propulsion systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chromatic Colors",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "All Vexian starships are painted in chromatic colors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Crew",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships are operated by crews consisting of 12 members.",
+        "weight": 0.0
+      },
+      {
+        "src": "Vexian Navigation Systems",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships use quantum entanglement for positioning in their navigation systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheres",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "Vexian starships cannot operate in atmospheres.",
+        "weight": 0.0
+      },
+      {
+        "src": "First Vexian Starship",
+        "tgt": "Vexian Starships",
+        "keywords": "",
+        "description": "The first Vexian starship was built 500 years ago, marking the beginning of Vexian starship technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Coherence",
+        "tgt": "Vexium",
+        "keywords": "",
+        "description": "The water from the Font of Resonance resonates with psionic energy, amplifying mental abilities.<SEP>The water from the Font of Resonance resonates with psionic energy, amplifying mental abilities.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:04:08.145802",
+  "llm_calls": 201,
+  "mode": "ft"
+}

@@ -1,0 +1,513 @@
+{
+  "question": "What two abilities do Phantom 'Wraith-Riders' possess while mounted?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Phantom Wraith-Riders",
+        "Phase-Gallops"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "Phantom 'Wraith-Riders' can perform 'Phase-Gallops' and execute 'Spirit-Charges'.",
+    "original": "Phantom Wraith-Riders can perform **Phase-Gallops** to run through solid matter and **Spirit-Charges** to become temporarily incorporeal during attacks.",
+    "perturbed": "Phantom Wraith-Riders can perform special maneuvers with their spectral steeds and can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+    "similarity": 0.863972
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Chosen Zoodle"
+      ],
+      [
+        "add_edge",
+        [
+          "Chosen Zoodle",
+          "Spirit-Charges"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The old kingdom of Eldoria had many secrets.",
+          "keywords": "history,mystery",
+          "source_id": "chunk-9699258d651968b022029e2c5661bab9",
+          "file_path": "unknown_source",
+          "created_at": 1776368330,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Pathfinder Helm"
+      ],
+      [
+        "add_edge",
+        [
+          "Pathfinder Helm",
+          "Phantom Armies"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Typhon orbits K'tharr Prime within the K'tharr System.",
+          "keywords": "orbital relationship,stellar system",
+          "source_id": "chunk-8c7d204f535ecb9b9d3ba045058d12b9",
+          "file_path": "unknown_source",
+          "created_at": 1776379725,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Magma"
+      ],
+      [
+        "add_edge",
+        [
+          "Magma",
+          "Phantom Armies"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+          "keywords": "location,mineral extraction",
+          "source_id": "chunk-56e0a12548f29b791d118efb316a2b35",
+          "file_path": "unknown_source",
+          "created_at": 1776375936,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Phantom Realm"
+      ],
+      [
+        "add_edge",
+        [
+          "Phantom Realm",
+          "Phantom Culture"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+          "keywords": "ecological impact,process duration",
+          "source_id": "chunk-d5347c46fbfaa5dfb649cf5a7386a3e3",
+          "file_path": "unknown_source",
+          "created_at": 1776366354,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Charges",
+        "type": "method",
+        "description": "Spirit-Charges are maneuvers where both Phantom Wraith-Rider and mount become temporarily incorporeal during attacks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Gallops",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Phase-Gallops",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Charges",
+        "type": "method",
+        "description": "Spirit-Charges are maneuvers where both Phantom Wraith-Rider and mount become temporarily incorporeal during attacks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chosen Zoodle",
+        "type": "",
+        "description": "The prophecy spoke of a chosen Zoodle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pathfinder Helm",
+        "type": "",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Realm",
+        "type": "",
+        "description": "Phantom Realm is a location shrouded in eternal mist.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chosen Zoodle",
+        "tgt": "Spirit-Charges",
+        "keywords": "history,mystery",
+        "description": "The old kingdom of Eldoria had many secrets.",
+        "weight": 1.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Phantom Armies",
+        "keywords": "orbital relationship,stellar system",
+        "description": "Typhon orbits K'tharr Prime within the K'tharr System.",
+        "weight": 1.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Phantom Armies",
+        "keywords": "location,mineral extraction",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 1.0
+      },
+      {
+        "src": "Phantom Realm",
+        "tgt": "Phantom Culture",
+        "keywords": "ecological impact,process duration",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Charges",
+        "type": "method",
+        "description": "Spirit-Charges are maneuvers where both Phantom Wraith-Rider and mount become temporarily incorporeal during attacks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Gallops",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chosen Zoodle",
+        "type": "",
+        "description": "The prophecy spoke of a chosen Zoodle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pathfinder Helm",
+        "type": "",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Realm",
+        "type": "",
+        "description": "Phantom Realm is a location shrouded in eternal mist.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Phase-Gallops",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chosen Zoodle",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "The old kingdom of Eldoria had many secrets.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Phantom Armies",
+        "keywords": "",
+        "description": "Typhon orbits K'tharr Prime within the K'tharr System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Phantom Armies",
+        "keywords": "",
+        "description": "Aeridium Ore is extracted from atmospheric veins in the upper atmosphere.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Realm",
+        "tgt": "Phantom Culture",
+        "keywords": "",
+        "description": "The process initiated by Symbiotic Spores can take several Xylotian years to show significant results.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:44:50.259163",
+  "llm_calls": 5,
+  "mode": "ft"
+}

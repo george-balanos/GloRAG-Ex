@@ -1,0 +1,206 @@
+{
+  "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest.?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6.688149988651276,
+  "answers": {
+    "ground_truth": "It amplifies the mental abilities of those who drink it.",
+    "original": "I do not have enough information to answer.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Temporal Stability"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporal Stability",
+          "Elderwood Forest"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Animus Cores contain remnants of powerful spirits, providing them with magical energy.<SEP>Animus Cores contain remnants of powerful spirits, providing magical energy.",
+          "keywords": "energy source,remnants",
+          "source_id": "chunk-329c135315672dfc3e5aacb8955dd9bb<SEP>chunk-f9555b7aefebccc997ac08527d4eb7ee",
+          "file_path": "unknown_source",
+          "created_at": 1776378672,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Mental Conditioning"
+      ],
+      [
+        "add_edge",
+        [
+          "Mental Conditioning",
+          "Verdant Forests"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+          "keywords": "containment method,cutting-edge technology",
+          "source_id": "chunk-1c8e5df10d050f08e5995559c1c7fa47",
+          "file_path": "unknown_source",
+          "created_at": 1776379071,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Conditioning",
+        "type": "",
+        "description": "Mental conditioning is a process undergone by Mind-Smiths for decades.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Stability",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "Animus Cores contain remnants of powerful spirits, providing them with magical energy.<SEP>Animus Cores contain remnants of powerful spirits, providing magical energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mental Conditioning",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Aegis Station utilizes cutting-edge technology for containing and utilizing the power of a miniature black hole.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:21:00.947550",
+  "llm_calls": 201,
+  "mode": "ff"
+}

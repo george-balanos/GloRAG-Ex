@@ -1,0 +1,310 @@
+{
+  "question": "What two distinct abilities do Celestian 'Star-Singers' possess?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Celestian"
+    ],
+    [
+      "delete_node",
+      "Star-Singers"
+    ]
+  ],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "Celestian 'Star-Singers' can weave 'Harmony-Threads' and perform 'Echo-Calls'.",
+    "original": "Star-Singers weave Harmony-Threads from cosmic vibrations and use Echo-Calls to communicate across vast distances.",
+    "perturbed": "I don't have enough information to answer that question.",
+    "similarity": 0.110753
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Earth-Circle"
+      ],
+      [
+        "add_edge",
+        [
+          "Earth-Circle",
+          "Celestian Conservatory"
+        ],
+        {
+          "weight": 2.0,
+          "description": "War Golems are powered by Animus Cores, which allow them limited function.<SEP>War Golems are powered by Animus Cores, which allow them limited function.",
+          "keywords": "functionality,power source",
+          "source_id": "chunk-329c135315672dfc3e5aacb8955dd9bb<SEP>chunk-f9555b7aefebccc997ac08527d4eb7ee",
+          "file_path": "unknown_source",
+          "created_at": 1776378671,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Wisdom"
+      ],
+      [
+        "add_edge",
+        [
+          "Wisdom",
+          "Harmony-Threads"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+          "keywords": "equipment component,power supply",
+          "source_id": "chunk-cb3d32acabcf93ff84d53e6c715f5868",
+          "file_path": "unknown_source",
+          "created_at": 1776366883,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Celestian",
+        "type": "creature",
+        "description": "Celestian are beings known for their musical abilities and cosmic connections.",
+        "rank": 0.0
+      },
+      {
+        "name": "Grand Celestian Chorus",
+        "type": "event",
+        "description": "The Grand Celestian Chorus is a performance that occurs once per century.",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Singers",
+        "type": "creature",
+        "description": "Star-Singers are a subset of Celestian known for weaving Harmony-Threads and performing Echo-Calls.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestian Conservatory",
+        "type": "organization",
+        "description": "The Celestian Conservatory is an institution that teaches advanced musical theory.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Threads",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Call",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Opera House",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestian",
+        "tgt": "Star-Opera House",
+        "keywords": "",
+        "description": "The Star-Opera House is a wonder of Celestian architecture.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grand Celestian Chorus",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers participate in the Grand Celestian Chorus, which performs once per century.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestian Conservatory",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "The Celestian Conservatory teaches advanced musical theory to Star-Singers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Threads",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers weave Harmony-Threads from cosmic vibrations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Call",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers use Echo-Calls to communicate across vast distances.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Celestian Conservatory",
+        "type": "organization",
+        "description": "The Celestian Conservatory is an institution that teaches advanced musical theory.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Threads",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wisdom",
+        "type": "",
+        "description": "Ancient-Heartwood retains the wisdom of centuries.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Earth-Circle",
+        "tgt": "Celestian Conservatory",
+        "keywords": "functionality,power source",
+        "description": "War Golems are powered by Animus Cores, which allow them limited function.<SEP>War Golems are powered by Animus Cores, which allow them limited function.",
+        "weight": 2.0
+      },
+      {
+        "src": "Wisdom",
+        "tgt": "Harmony-Threads",
+        "keywords": "equipment component,power supply",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Celestian",
+        "type": "creature",
+        "description": "Celestian are beings known for their musical abilities and cosmic connections.",
+        "rank": 0.0
+      },
+      {
+        "name": "Grand Celestian Chorus",
+        "type": "event",
+        "description": "The Grand Celestian Chorus is a performance that occurs once per century.",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Singers",
+        "type": "creature",
+        "description": "Star-Singers are a subset of Celestian known for weaving Harmony-Threads and performing Echo-Calls.",
+        "rank": 0.0
+      },
+      {
+        "name": "Celestian Conservatory",
+        "type": "organization",
+        "description": "The Celestian Conservatory is an institution that teaches advanced musical theory.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Threads",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Call",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Opera House",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Earth-Circle",
+        "type": "",
+        "description": "The Earth-Circle governs Terran magical practices.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wisdom",
+        "type": "",
+        "description": "Ancient-Heartwood retains the wisdom of centuries.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Celestian",
+        "tgt": "Star-Opera House",
+        "keywords": "",
+        "description": "The Star-Opera House is a wonder of Celestian architecture.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grand Celestian Chorus",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers participate in the Grand Celestian Chorus, which performs once per century.",
+        "weight": 0.0
+      },
+      {
+        "src": "Celestian Conservatory",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "The Celestian Conservatory teaches advanced musical theory to Star-Singers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Threads",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers weave Harmony-Threads from cosmic vibrations.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Call",
+        "tgt": "Star-Singers",
+        "keywords": "",
+        "description": "Star-Singers use Echo-Calls to communicate across vast distances.",
+        "weight": 0.0
+      },
+      {
+        "src": "Earth-Circle",
+        "tgt": "Celestian Conservatory",
+        "keywords": "",
+        "description": "War Golems are powered by Animus Cores, which allow them limited function.<SEP>War Golems are powered by Animus Cores, which allow them limited function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Wisdom",
+        "tgt": "Harmony-Threads",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:56:27.231453",
+  "llm_calls": 101,
+  "mode": "ft"
+}

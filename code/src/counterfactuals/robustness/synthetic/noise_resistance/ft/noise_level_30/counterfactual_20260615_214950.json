@@ -1,0 +1,382 @@
+{
+  "question": "What two distinct phases define the operation of a Xylotian 'Matter Re-sequencer'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Matter Re-sequencer",
+        "Pattern Imprinting"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "A Xylotian 'Matter Re-sequencer' operates in two phases: 'Atomic Deconstruction' and 'Pattern Imprinting'.",
+    "original": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are Atomic Deconstruction followed by Pattern Imprinting.",
+    "perturbed": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are **Atomic Deconstruction** and **Error Correction Protocols**.",
+    "similarity": 0.84754
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Zorblaxian Language"
+      ],
+      [
+        "add_edge",
+        [
+          "Zorblaxian Language",
+          "Xylos"
+        ],
+        {
+          "weight": 1.0,
+          "description": "When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+          "keywords": "rapid dissipation",
+          "source_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267",
+          "file_path": "unknown_source",
+          "created_at": 1776379432,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Sylvanian Garments"
+      ],
+      [
+        "add_edge",
+        [
+          "Sylvanian Garments",
+          "Matter Re-sequencer"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+          "keywords": "consultation,interpretation",
+          "source_id": "chunk-c4bf398cd18967203857d7b2995f452a",
+          "file_path": "unknown_source",
+          "created_at": 1776367301,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Pattern Imprinting",
+        "keywords": "",
+        "description": "Pattern Imprinting follows Atomic Deconstruction in the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxian Language",
+        "tgt": "Xylos",
+        "keywords": "rapid dissipation",
+        "description": "When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+        "weight": 1.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "consultation,interpretation",
+        "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Pattern Imprinting",
+        "keywords": "",
+        "description": "Pattern Imprinting follows Atomic Deconstruction in the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxian Language",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "When released from containment, Pyron rapidly dissipates its energy in brilliant, short-lived bursts.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:49:50.321890",
+  "llm_calls": 5,
+  "mode": "ft"
+}

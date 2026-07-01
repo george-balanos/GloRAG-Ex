@@ -1,0 +1,261 @@
+{
+  "question": "What are the topics of the books Sarah and Michael are reading?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Michael"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "Sarah is reading about dragons and Michael is reading about ancient castles.",
+    "original": "Sarah is reading a book about dragons, while Michael is reading a book about ancient castles.",
+    "perturbed": "Sarah is reading a book about dragons.",
+    "similarity": 0.726838
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Telepathic Resonance Bands"
+      ],
+      [
+        "add_edge",
+        [
+          "Telepathic Resonance Bands",
+          "Michael"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+          "keywords": "creation,origin",
+          "source_id": "chunk-d34e7860dd6c60808a4b14b0d675a828",
+          "file_path": "unknown_source",
+          "created_at": 1776375865,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Unique Life Forms"
+      ],
+      [
+        "add_edge",
+        [
+          "Unique Life Forms",
+          "Sarah"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Etherean Soul-Compass allows navigation through Astral-Currents.",
+          "keywords": "navigation,travel",
+          "source_id": "chunk-a9011a4964a803f2dc08a979f2cb4b8a",
+          "file_path": "unknown_source",
+          "created_at": 1776369536,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sarah",
+        "type": "person",
+        "description": "Sarah is a person who is reading a book about dragons.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Dragons",
+        "type": "content",
+        "description": "The Book About Dragons is the book that Sarah is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Ancient Castles",
+        "type": "content",
+        "description": "The Book About Ancient Castles is the book that Michael is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Michael",
+        "type": "person",
+        "description": "Michael is a person who is reading a book about ancient castles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading the book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Book About Ancient Castles",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "Michael is reading the book about ancient castles, indicating his interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading a book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Sarah",
+        "type": "person",
+        "description": "Sarah is a person who is reading a book about dragons.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Dragons",
+        "type": "content",
+        "description": "The Book About Dragons is the book that Sarah is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Life Forms",
+        "type": "",
+        "description": "Unique Life Forms are diverse organisms discovered on multiple planets within the Lumina System, adapted to varying conditions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading the book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading a book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Unique Life Forms",
+        "tgt": "Sarah",
+        "keywords": "navigation,travel",
+        "description": "The Etherean Soul-Compass allows navigation through Astral-Currents.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Sarah",
+        "type": "person",
+        "description": "Sarah is a person who is reading a book about dragons.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Dragons",
+        "type": "content",
+        "description": "The Book About Dragons is the book that Sarah is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Book About Ancient Castles",
+        "type": "content",
+        "description": "The Book About Ancient Castles is the book that Michael is reading.",
+        "rank": 0.0
+      },
+      {
+        "name": "Michael",
+        "type": "person",
+        "description": "Michael is a person who is reading a book about ancient castles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dragons",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "Telepathic Resonance Bands are used by Xylotians for communication.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Life Forms",
+        "type": "",
+        "description": "Unique Life Forms are diverse organisms discovered on multiple planets within the Lumina System, adapted to varying conditions.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Book About Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading the book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Book About Ancient Castles",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "Michael is reading the book about ancient castles, indicating his interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dragons",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "Sarah is reading a book about dragons, indicating her interest in the subject.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Michael",
+        "keywords": "",
+        "description": "The Chrono-Regulator was created by the Forgotten Civilization.",
+        "weight": 0.0
+      },
+      {
+        "src": "Unique Life Forms",
+        "tgt": "Sarah",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass allows navigation through Astral-Currents.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:30:42.362688",
+  "llm_calls": 15,
+  "mode": "ft"
+}

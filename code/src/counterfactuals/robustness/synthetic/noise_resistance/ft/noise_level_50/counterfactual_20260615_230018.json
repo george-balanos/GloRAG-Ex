@@ -1,0 +1,295 @@
+{
+  "question": "What kind of power source is used by the ancient 'War Golems' found in the Desert of Bones?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "War Golems"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "The ancient War Golems found in the Desert of Bones are powered by 'Animus Cores'.",
+    "original": "War Golems are powered by Animus Cores.",
+    "perturbed": "The power source used by the ancient 'War Golems' found in the Desert of Bones is not specified in the provided context.",
+    "similarity": 0.548933
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Portals"
+      ],
+      [
+        "add_edge",
+        [
+          "Portals",
+          "Long-Lost Empire"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The industry employs a vast network of creative professionals.",
+          "keywords": "employment,industry",
+          "source_id": "chunk-cf9705e4a12af23f07930f0e944c1e9f",
+          "file_path": "unknown_source",
+          "created_at": 1776377403,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Shadowmere"
+      ],
+      [
+        "add_edge",
+        [
+          "Shadowmere",
+          "Defense"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+          "keywords": "energy source,energy utilization,power generation",
+          "source_id": "chunk-6bb11a4ff4c7939884a5f34108ffed63<SEP>chunk-1c8e5df10d050f08e5995559c1c7fa47",
+          "file_path": "unknown_source",
+          "created_at": 1776379071,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "War Golems",
+        "type": "artifact",
+        "description": "War Golems are ancient constructs unearthed from the Desert of Bones, capable of limited function, and originally designed for defense.<SEP>War Golems are ancient constructs unearthed in the Desert of Bones, powered by Animus Cores and capable of limited function.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Animus Cores",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Long-Lost Empire",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "The Long-Lost Empire created the War Golems for defense.<SEP>The Long-Lost Empire designed the War Golems for defensive purposes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Animus Cores",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems are powered by Animus Cores, which allow them limited function.<SEP>War Golems are powered by Animus Cores, which allow them limited function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Defense",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems were originally designed for defense.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Portals",
+        "type": "",
+        "description": "Not all portals lead to safe destinations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadowmere",
+        "type": "",
+        "description": "Shadowmere is a realm characterized by perpetual twilight.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Portals",
+        "tgt": "Long-Lost Empire",
+        "keywords": "employment,industry",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 1.0
+      },
+      {
+        "src": "Shadowmere",
+        "tgt": "Defense",
+        "keywords": "energy source,energy utilization,power generation",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "War Golems",
+        "type": "artifact",
+        "description": "War Golems are ancient constructs unearthed from the Desert of Bones, capable of limited function, and originally designed for defense.<SEP>War Golems are ancient constructs unearthed in the Desert of Bones, powered by Animus Cores and capable of limited function.",
+        "rank": 0.0
+      },
+      {
+        "name": "Desert of Bones",
+        "type": "location",
+        "description": "The Desert of Bones is a harsh and desolate region known for its shifting sands and sandstorms.<SEP>The Desert of Bones is a desolate area where ancient War Golems have been unearthed from shifting sands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Long-Lost Empire",
+        "type": "organization",
+        "description": "The Long-Lost Empire is the creator of the War Golems.",
+        "rank": 0.0
+      },
+      {
+        "name": "Animus Cores",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Defense",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Portals",
+        "type": "",
+        "description": "Not all portals lead to safe destinations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadowmere",
+        "type": "",
+        "description": "Shadowmere is a realm characterized by perpetual twilight.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Desert of Bones",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems have been unearthed from the shifting sands of the Desert of Bones.<SEP>The Desert of Bones is where War Golems have been unearthed from shifting sands.",
+        "weight": 0.0
+      },
+      {
+        "src": "Desert of Bones",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The Long-Lost Empire is associated with the Desert of Bones, where their creations, the War Golems, were unearthed.",
+        "weight": 0.0
+      },
+      {
+        "src": "Long-Lost Empire",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "The Long-Lost Empire created the War Golems for defense.<SEP>The Long-Lost Empire designed the War Golems for defensive purposes.",
+        "weight": 0.0
+      },
+      {
+        "src": "Animus Cores",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems are powered by Animus Cores, which allow them limited function.<SEP>War Golems are powered by Animus Cores, which allow them limited function.",
+        "weight": 0.0
+      },
+      {
+        "src": "Defense",
+        "tgt": "War Golems",
+        "keywords": "",
+        "description": "War Golems were originally designed for defense.",
+        "weight": 0.0
+      },
+      {
+        "src": "Portals",
+        "tgt": "Long-Lost Empire",
+        "keywords": "",
+        "description": "The industry employs a vast network of creative professionals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadowmere",
+        "tgt": "Defense",
+        "keywords": "",
+        "description": "The Aegis Station utilizes Hawking radiation from the miniature black hole to meet its immense power requirements.<SEP>Aegis Station utilizes Hawking radiation from the miniature black hole for its power requirements.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:00:18.300841",
+  "llm_calls": 64,
+  "mode": "ft"
+}

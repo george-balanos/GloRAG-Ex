@@ -1,0 +1,143 @@
+{
+  "question": "Which tools does a carpenter use and what are their stated purposes?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Carpenter"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "A carpenter uses a hammer to drive nails and a saw to cut wood.",
+    "original": "The carpenter uses a hammer to drive nails and a saw to cut wood.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.020705
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Phantasmal 'Spirit-Mirrors'"
+      ],
+      [
+        "add_edge",
+        [
+          "Phantasmal 'Spirit-Mirrors'",
+          "Carpenter"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Xandrians celebrate their New Year on Dual Zenith Day.",
+          "keywords": "celebration,cultural event",
+          "source_id": "chunk-fa6a76de2e25798cb26a401b39379d4d",
+          "file_path": "unknown_source",
+          "created_at": 1776374992,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Carpenter",
+        "type": "person",
+        "description": "The carpenter uses tools like a hammer and a saw to work with nails and wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hammer",
+        "type": "artifact",
+        "description": "The hammer is a tool used by the carpenter to drive nails.",
+        "rank": 0.0
+      },
+      {
+        "name": "Saw",
+        "type": "artifact",
+        "description": "The saw is a tool used by the carpenter to cut wood.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Carpenter",
+        "tgt": "Hammer",
+        "keywords": "",
+        "description": "The carpenter uses a hammer to drive nails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Carpenter",
+        "tgt": "Saw",
+        "keywords": "",
+        "description": "The carpenter uses a saw to cut wood.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Carpenter",
+        "type": "person",
+        "description": "The carpenter uses tools like a hammer and a saw to work with nails and wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hammer",
+        "type": "artifact",
+        "description": "The hammer is a tool used by the carpenter to drive nails.",
+        "rank": 0.0
+      },
+      {
+        "name": "Saw",
+        "type": "artifact",
+        "description": "The saw is a tool used by the carpenter to cut wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Carpenter",
+        "tgt": "Hammer",
+        "keywords": "",
+        "description": "The carpenter uses a hammer to drive nails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Carpenter",
+        "tgt": "Saw",
+        "keywords": "",
+        "description": "The carpenter uses a saw to cut wood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Carpenter",
+        "keywords": "",
+        "description": "Xandrians celebrate their New Year on Dual Zenith Day.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:48:30.457129",
+  "llm_calls": 7,
+  "mode": "ft"
+}

@@ -1,0 +1,424 @@
+{
+  "question": "What are the two core elements that make up Volcanic 'Magma-Shields'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Magma-Shields"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "Volcanic 'Magma-Shields' are made from 'Lava-Stone' and 'Obsidian-Mesh'.",
+    "original": "The two core elements that make up Magma-Shields are Lava-Stone and Obsidian-Mesh.",
+    "perturbed": "The two core elements that make up Volcanic 'Magma-Shields' are magma and Lava-Stone.",
+    "similarity": 0.950233
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Xandrian Animals"
+      ],
+      [
+        "add_edge",
+        [
+          "Xandrian Animals",
+          "Fire-Mountain"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+          "keywords": "ability,maneuver",
+          "source_id": "chunk-db61661cef8af6791c007f451f13e085",
+          "file_path": "unknown_source",
+          "created_at": 1776372104,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Library"
+      ],
+      [
+        "add_edge",
+        [
+          "Library",
+          "Volcanic Smiths"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Vexian engineering uses a base-8 numbering system.",
+          "keywords": "calculation,engineering",
+          "source_id": "chunk-38c243bd67c7fea0e715de9999b806d1",
+          "file_path": "unknown_source",
+          "created_at": 1776374733,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Interstellar Travel"
+      ],
+      [
+        "add_edge",
+        [
+          "Interstellar Travel",
+          "Lava-Stone"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Unrefined Chronium ore is a form of Chronium characterized by its azure glow and mild radioactivity.",
+          "keywords": "properties,resource form",
+          "source_id": "chunk-f12ac5dc28a653f276176bf1289286b3",
+          "file_path": "unknown_source",
+          "created_at": 1776372929,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Energy Generation Facility"
+      ],
+      [
+        "add_edge",
+        [
+          "Energy Generation Facility",
+          "Fire-Mountain"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The outer casing of a Guardian Orb is made of self-repairing polymers.",
+          "keywords": "material composition,structural integrity",
+          "source_id": "chunk-dbeb364cc8c11b8851ccc39994e900d3",
+          "file_path": "unknown_source",
+          "created_at": 1776366613,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Magma-Shields",
+        "type": "artifact",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "naturalobject",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Smiths",
+        "type": "person",
+        "description": "Volcanic smiths are craftsmen who work in forges heated by active magma to create Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lava-Stone",
+        "type": "naturalobject",
+        "description": "Lava-Stone is a material that naturally resists extreme heat and is used as the base for Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fire-Mountain",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Obsidian-Mesh",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Masters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Magma-Shields",
+        "tgt": "Obsidian-Mesh",
+        "keywords": "",
+        "description": "Magma-Shields are reinforced with Obsidian-Mesh, which provides flexibility and cutting edges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Volcanic smiths use magma to heat their forges for crafting Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lava-Stone",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Magma-Shields are forged with Lava-Stone as their base material, which provides resistance to extreme heat.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fire-Mountain",
+        "tgt": "Magma",
+        "keywords": "",
+        "description": "Fire-Mountain is powered by magma, serving as the heat source for volcanic forges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Masters",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Forge-Masters are legendary craftsmen who specialize in the construction of Magma-Shields.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Magma",
+        "type": "naturalobject",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Smiths",
+        "type": "person",
+        "description": "Volcanic smiths are craftsmen who work in forges heated by active magma to create Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lava-Stone",
+        "type": "naturalobject",
+        "description": "Lava-Stone is a material that naturally resists extreme heat and is used as the base for Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fire-Mountain",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xandrian Animals",
+        "type": "",
+        "description": "Xandrian animals have six limbs as standard.",
+        "rank": 0.0
+      },
+      {
+        "name": "Library",
+        "type": "",
+        "description": "The library is a quiet place.",
+        "rank": 0.0
+      },
+      {
+        "name": "Interstellar Travel",
+        "type": "",
+        "description": "Interstellar travel is a common theme explored in Celestian films.<SEP>Interstellar travel is a common theme explored in Celestian films.",
+        "rank": 0.0
+      },
+      {
+        "name": "Energy Generation Facility",
+        "type": "",
+        "description": "The energy generation facility includes the Stellar Converter, Geothermal Siphon, and Solar Matrix, designed to convert various energy sources into usable power.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Magma",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Volcanic smiths use magma to heat their forges for crafting Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fire-Mountain",
+        "tgt": "Magma",
+        "keywords": "",
+        "description": "Fire-Mountain is powered by magma, serving as the heat source for volcanic forges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xandrian Animals",
+        "tgt": "Fire-Mountain",
+        "keywords": "ability,maneuver",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 1.0
+      },
+      {
+        "src": "Library",
+        "tgt": "Volcanic Smiths",
+        "keywords": "calculation,engineering",
+        "description": "Vexian engineering uses a base-8 numbering system.",
+        "weight": 1.0
+      },
+      {
+        "src": "Interstellar Travel",
+        "tgt": "Lava-Stone",
+        "keywords": "properties,resource form",
+        "description": "Unrefined Chronium ore is a form of Chronium characterized by its azure glow and mild radioactivity.",
+        "weight": 1.0
+      },
+      {
+        "src": "Energy Generation Facility",
+        "tgt": "Fire-Mountain",
+        "keywords": "material composition,structural integrity",
+        "description": "The outer casing of a Guardian Orb is made of self-repairing polymers.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Magma-Shields",
+        "type": "artifact",
+        "description": "Magma-Shields are protective gear forged with Lava-Stone and reinforced with Obsidian-Mesh, designed to withstand extreme heat.",
+        "rank": 0.0
+      },
+      {
+        "name": "Magma",
+        "type": "naturalobject",
+        "description": "Magma is a molten rock beneath the Earth's surface, used as a heat source in forges.",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Smiths",
+        "type": "person",
+        "description": "Volcanic smiths are craftsmen who work in forges heated by active magma to create Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lava-Stone",
+        "type": "naturalobject",
+        "description": "Lava-Stone is a material that naturally resists extreme heat and is used as the base for Magma-Shields.",
+        "rank": 0.0
+      },
+      {
+        "name": "Fire-Mountain",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Obsidian-Mesh",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Forge-Masters",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xandrian Animals",
+        "type": "",
+        "description": "Xandrian animals have six limbs as standard.",
+        "rank": 0.0
+      },
+      {
+        "name": "Library",
+        "type": "",
+        "description": "The library is a quiet place.",
+        "rank": 0.0
+      },
+      {
+        "name": "Interstellar Travel",
+        "type": "",
+        "description": "Interstellar travel is a common theme explored in Celestian films.<SEP>Interstellar travel is a common theme explored in Celestian films.",
+        "rank": 0.0
+      },
+      {
+        "name": "Energy Generation Facility",
+        "type": "",
+        "description": "The energy generation facility includes the Stellar Converter, Geothermal Siphon, and Solar Matrix, designed to convert various energy sources into usable power.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Magma-Shields",
+        "tgt": "Obsidian-Mesh",
+        "keywords": "",
+        "description": "Magma-Shields are reinforced with Obsidian-Mesh, which provides flexibility and cutting edges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Magma",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Volcanic smiths use magma to heat their forges for crafting Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lava-Stone",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Magma-Shields are forged with Lava-Stone as their base material, which provides resistance to extreme heat.",
+        "weight": 0.0
+      },
+      {
+        "src": "Fire-Mountain",
+        "tgt": "Magma",
+        "keywords": "",
+        "description": "Fire-Mountain is powered by magma, serving as the heat source for volcanic forges.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forge-Masters",
+        "tgt": "Magma-Shields",
+        "keywords": "",
+        "description": "Forge-Masters are legendary craftsmen who specialize in the construction of Magma-Shields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xandrian Animals",
+        "tgt": "Fire-Mountain",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 0.0
+      },
+      {
+        "src": "Library",
+        "tgt": "Volcanic Smiths",
+        "keywords": "",
+        "description": "Vexian engineering uses a base-8 numbering system.",
+        "weight": 0.0
+      },
+      {
+        "src": "Interstellar Travel",
+        "tgt": "Lava-Stone",
+        "keywords": "",
+        "description": "Unrefined Chronium ore is a form of Chronium characterized by its azure glow and mild radioactivity.",
+        "weight": 0.0
+      },
+      {
+        "src": "Energy Generation Facility",
+        "tgt": "Fire-Mountain",
+        "keywords": "",
+        "description": "The outer casing of a Guardian Orb is made of self-repairing polymers.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:48:52.905362",
+  "llm_calls": 97,
+  "mode": "ft"
+}

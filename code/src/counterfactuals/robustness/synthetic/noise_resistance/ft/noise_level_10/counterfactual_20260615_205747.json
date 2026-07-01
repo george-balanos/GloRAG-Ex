@@ -1,0 +1,258 @@
+{
+  "question": "What two functions does the Temporal 'Flux-Anchor' device serve?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Chronos-Pulse"
+    ],
+    [
+      "delete_node",
+      "Flux-Anchor Technology"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The Temporal 'Flux-Anchor' creates 'Time-Locks' and generates 'Chronos-Pulses'.",
+    "original": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas and generates Chronos-Pulses to manipulate time flow.",
+    "perturbed": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas and is essential for maintaining temporal stability.",
+    "similarity": 0.871423
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Ley-Line Energy"
+      ],
+      [
+        "add_edge",
+        [
+          "Ley-Line Energy",
+          "Time-Lock"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Xandrian water is naturally carbonated due to Xandria's unique environment.",
+          "keywords": "natural phenomenon,unique environment",
+          "source_id": "chunk-fa6a76de2e25798cb26a401b39379d4d",
+          "file_path": "unknown_source",
+          "created_at": 1776374992,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Temporal Flux-Anchor",
+        "type": "artifact",
+        "description": "The Temporal Flux-Anchor is a device capable of creating Time-Locks and generating Chronos-Pulses to manipulate time flow.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flux-Anchor Technology",
+        "type": "artifact",
+        "description": "Flux-Anchor technology is highly classified and used for creating Time-Locks and generating Chronos-Pulses.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "concept",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos-Pulse",
+        "type": "concept",
+        "description": "A Chronos-Pulse is a temporal effect that can slow or accelerate time flow, appearing as rippling distortions in the air.",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal-Council",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Temporal Stability",
+        "keywords": "",
+        "description": "Flux-Anchors are essential for maintaining temporal stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Time-Lock",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flux-Anchor Technology",
+        "tgt": "Temporal-Council",
+        "keywords": "",
+        "description": "Flux-Anchor technology is highly classified and regulated by the Temporal-Council.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos-Pulse",
+        "tgt": "Temporal Flux-Anchor",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor generates Chronos-Pulses that can slow or accelerate time flow.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Temporal Flux-Anchor",
+        "type": "artifact",
+        "description": "The Temporal Flux-Anchor is a device capable of creating Time-Locks and generating Chronos-Pulses to manipulate time flow.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "concept",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ley-Line Energy",
+        "type": "",
+        "description": "Ley-Line Energy is a form of energy that the Energy-Harmonizer purifies and redirects.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Temporal Stability",
+        "keywords": "",
+        "description": "Flux-Anchors are essential for maintaining temporal stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Time-Lock",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ley-Line Energy",
+        "tgt": "Time-Lock",
+        "keywords": "natural phenomenon,unique environment",
+        "description": "Xandrian water is naturally carbonated due to Xandria's unique environment.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Temporal Flux-Anchor",
+        "type": "artifact",
+        "description": "The Temporal Flux-Anchor is a device capable of creating Time-Locks and generating Chronos-Pulses to manipulate time flow.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flux-Anchor Technology",
+        "type": "artifact",
+        "description": "Flux-Anchor technology is highly classified and used for creating Time-Locks and generating Chronos-Pulses.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "concept",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos-Pulse",
+        "type": "concept",
+        "description": "A Chronos-Pulse is a temporal effect that can slow or accelerate time flow, appearing as rippling distortions in the air.",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal-Council",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ley-Line Energy",
+        "type": "",
+        "description": "Ley-Line Energy is a form of energy that the Energy-Harmonizer purifies and redirects.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Temporal Stability",
+        "keywords": "",
+        "description": "Flux-Anchors are essential for maintaining temporal stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Time-Lock",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flux-Anchor Technology",
+        "tgt": "Temporal-Council",
+        "keywords": "",
+        "description": "Flux-Anchor technology is highly classified and regulated by the Temporal-Council.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos-Pulse",
+        "tgt": "Temporal Flux-Anchor",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor generates Chronos-Pulses that can slow or accelerate time flow.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ley-Line Energy",
+        "tgt": "Time-Lock",
+        "keywords": "",
+        "description": "Xandrian water is naturally carbonated due to Xandria's unique environment.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:57:47.250550",
+  "llm_calls": 14,
+  "mode": "ft"
+}

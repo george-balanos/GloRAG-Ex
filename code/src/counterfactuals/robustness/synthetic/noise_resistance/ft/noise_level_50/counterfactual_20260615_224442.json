@@ -1,0 +1,343 @@
+{
+  "question": "What two functions does the Temporal 'Flux-Anchor' device serve?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Chronos-Pulse"
+    ],
+    [
+      "delete_node",
+      "Flux-Anchor Technology"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "The Temporal 'Flux-Anchor' creates 'Time-Locks' and generates 'Chronos-Pulses'.",
+    "original": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas and generates Chronos-Pulses to manipulate time flow.",
+    "perturbed": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas and is essential for maintaining temporal stability.",
+    "similarity": 0.871423
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Ley-Line Energy"
+      ],
+      [
+        "add_edge",
+        [
+          "Ley-Line Energy",
+          "Temporal Stability"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+          "keywords": "energy disruption,side effect",
+          "source_id": "chunk-fdbdb9446200becfa82435a43d9650c2<SEP>chunk-6d17ad2ef72f49be20201bc489a66d62",
+          "file_path": "unknown_source",
+          "created_at": 1776379556,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Pattern Imprinting"
+      ],
+      [
+        "add_edge",
+        [
+          "Pattern Imprinting",
+          "Temporal-Council"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+          "keywords": "energy disruption,side effect",
+          "source_id": "chunk-fdbdb9446200becfa82435a43d9650c2<SEP>chunk-6d17ad2ef72f49be20201bc489a66d62",
+          "file_path": "unknown_source",
+          "created_at": 1776379556,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Phantom Steed"
+      ],
+      [
+        "add_edge",
+        [
+          "Phantom Steed",
+          "Flux-Anchor Technology"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The writer creates stories.",
+          "keywords": "creation",
+          "source_id": "chunk-da5333743680ef3e99bf512f689a0a60",
+          "file_path": "unknown_source",
+          "created_at": 1776368167,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Temporal Flux-Anchor",
+        "type": "artifact",
+        "description": "The Temporal Flux-Anchor is a device capable of creating Time-Locks and generating Chronos-Pulses to manipulate time flow.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flux-Anchor Technology",
+        "type": "artifact",
+        "description": "Flux-Anchor technology is highly classified and used for creating Time-Locks and generating Chronos-Pulses.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "concept",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos-Pulse",
+        "type": "concept",
+        "description": "A Chronos-Pulse is a temporal effect that can slow or accelerate time flow, appearing as rippling distortions in the air.",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal-Council",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Temporal Stability",
+        "keywords": "",
+        "description": "Flux-Anchors are essential for maintaining temporal stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Time-Lock",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flux-Anchor Technology",
+        "tgt": "Temporal-Council",
+        "keywords": "",
+        "description": "Flux-Anchor technology is highly classified and regulated by the Temporal-Council.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos-Pulse",
+        "tgt": "Temporal Flux-Anchor",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor generates Chronos-Pulses that can slow or accelerate time flow.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Temporal Flux-Anchor",
+        "type": "artifact",
+        "description": "The Temporal Flux-Anchor is a device capable of creating Time-Locks and generating Chronos-Pulses to manipulate time flow.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "concept",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal-Council",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ley-Line Energy",
+        "type": "",
+        "description": "Ley-Line Energy is a form of energy that the Energy-Harmonizer purifies and redirects.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "Pattern Imprinting is the phase following Atomic Deconstruction, where components are reassembled according to a new digital blueprint.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Temporal Stability",
+        "keywords": "",
+        "description": "Flux-Anchors are essential for maintaining temporal stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Time-Lock",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ley-Line Energy",
+        "tgt": "Temporal Stability",
+        "keywords": "energy disruption,side effect",
+        "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "weight": 2.0
+      },
+      {
+        "src": "Pattern Imprinting",
+        "tgt": "Temporal-Council",
+        "keywords": "energy disruption,side effect",
+        "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Temporal Flux-Anchor",
+        "type": "artifact",
+        "description": "The Temporal Flux-Anchor is a device capable of creating Time-Locks and generating Chronos-Pulses to manipulate time flow.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flux-Anchor Technology",
+        "type": "artifact",
+        "description": "Flux-Anchor technology is highly classified and used for creating Time-Locks and generating Chronos-Pulses.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Stability",
+        "type": "concept",
+        "description": "Temporal stability refers to the maintenance of consistent time flow, essential for temporal society.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos-Pulse",
+        "type": "concept",
+        "description": "A Chronos-Pulse is a temporal effect that can slow or accelerate time flow, appearing as rippling distortions in the air.",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal-Council",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Ley-Line Energy",
+        "type": "",
+        "description": "Ley-Line Energy is a form of energy that the Energy-Harmonizer purifies and redirects.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "Pattern Imprinting is the phase following Atomic Deconstruction, where components are reassembled according to a new digital blueprint.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Temporal Stability",
+        "keywords": "",
+        "description": "Flux-Anchors are essential for maintaining temporal stability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux-Anchor",
+        "tgt": "Time-Lock",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor creates Time-Locks to prevent temporal manipulation in localized areas.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flux-Anchor Technology",
+        "tgt": "Temporal-Council",
+        "keywords": "",
+        "description": "Flux-Anchor technology is highly classified and regulated by the Temporal-Council.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos-Pulse",
+        "tgt": "Temporal Flux-Anchor",
+        "keywords": "",
+        "description": "The Temporal Flux-Anchor generates Chronos-Pulses that can slow or accelerate time flow.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ley-Line Energy",
+        "tgt": "Temporal Stability",
+        "keywords": "",
+        "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pattern Imprinting",
+        "tgt": "Temporal-Council",
+        "keywords": "",
+        "description": "The production of Umbradium results in the creation of a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.<SEP>The production of Umbradium creates a localized zone that disrupts kinetic energy transfer and dampens electromagnetic fields.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Flux-Anchor Technology",
+        "keywords": "",
+        "description": "The writer creates stories.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:44:42.825435",
+  "llm_calls": 46,
+  "mode": "ft"
+}

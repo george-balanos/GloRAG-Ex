@@ -1,0 +1,336 @@
+{
+  "question": "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "The two primary materials used to construct a Xylotian 'Sky-Skiff' hull are 'Aero-Coral' for the frame and 'Noctilucent Metal' for the cladding.",
+    "original": "The two primary materials used to construct a Xylotian Sky-Skiff hull are hardened Aero-Coral and Noctilucent Metal.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Lumina Star"
+      ],
+      [
+        "add_edge",
+        [
+          "Lumina Star",
+          "Great Xylotian Sky Race"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The outer casing of a Guardian Orb is made of self-repairing polymers.",
+          "keywords": "material composition,structural integrity",
+          "source_id": "chunk-dbeb364cc8c11b8851ccc39994e900d3",
+          "file_path": "unknown_source",
+          "created_at": 1776366613,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Glacian Architecture"
+      ],
+      [
+        "add_edge",
+        [
+          "Glacian Architecture",
+          "Xylotian Navigator"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Vexium was discovered in the Andromeda galaxy.",
+          "keywords": "discovery,origin",
+          "source_id": "chunk-38c243bd67c7fea0e715de9999b806d1",
+          "file_path": "unknown_source",
+          "created_at": 1776374733,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Sky-Skiff",
+        "type": "artifact",
+        "description": "The Xylotian Sky-Skiff is a lightweight aerial vehicle primarily made from hardened Aero-Coral and clad in Noctilucent Metal.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aero-Coral",
+        "type": "naturalobject",
+        "description": "Aero-Coral is a bio-engineered substance used in the construction of Xylotian Sky-Skiffs, grown in Xylos's upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Ground Vehicles",
+        "type": "artifact",
+        "description": "Xylotian ground vehicles are constructed using volcanic rock for durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Noctilucent Metal",
+        "type": "artifact",
+        "description": "Noctilucent Metal is a thin sheet material used to clad the Aero-Coral frame of Sky-Skiffs, known for glowing faintly in the dark.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Navigator",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Propulsion System",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Xylotian Sky Race",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Compass",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Gauge",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Rock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aero-Coral",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Xylotian Sky-Skiff is primarily made from hardened Aero-Coral for its lightweight frame.",
+        "weight": 0.0
+      },
+      {
+        "src": "Noctilucent Metal",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Aero-Coral frame of a Sky-Skiff is clad in thin sheets of Noctilucent Metal for durability and energy shielding.<SEP>Noctilucent Metal glows faintly in the dark, a common aesthetic in Xylotian design.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Navigator",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Training to pilot a Sky-Skiff begins at a young age for many Xylotians.<SEP>Sky-Skiffs are typically piloted by a single Xylotian navigator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Propulsion System",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The propulsion system of a Sky-Skiff utilizes focused solar winds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Xylotian Sky Race",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Great Xylotian Sky Race features heavily modified Sky-Skiffs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Star-Compass",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Star-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Wind-Gauge",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Wind-Gauge.",
+        "weight": 0.0
+      },
+      {
+        "src": "Volcanic Rock",
+        "tgt": "Xylotian Ground Vehicles",
+        "keywords": "",
+        "description": "Xylotian ground vehicles are often made from volcanic rock.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Sky-Skiff",
+        "type": "artifact",
+        "description": "The Xylotian Sky-Skiff is a lightweight aerial vehicle primarily made from hardened Aero-Coral and clad in Noctilucent Metal.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aero-Coral",
+        "type": "naturalobject",
+        "description": "Aero-Coral is a bio-engineered substance used in the construction of Xylotian Sky-Skiffs, grown in Xylos's upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Ground Vehicles",
+        "type": "artifact",
+        "description": "Xylotian ground vehicles are constructed using volcanic rock for durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Noctilucent Metal",
+        "type": "artifact",
+        "description": "Noctilucent Metal is a thin sheet material used to clad the Aero-Coral frame of Sky-Skiffs, known for glowing faintly in the dark.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Navigator",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Propulsion System",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Xylotian Sky Race",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Compass",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Gauge",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Rock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Star",
+        "type": "",
+        "description": "Lumina Star is a stable yellow dwarf that provides consistent energy output, supporting diverse environments within the Lumina System.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacian Architecture",
+        "type": "",
+        "description": "Glacian architecture incorporates natural ice formations.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aero-Coral",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Xylotian Sky-Skiff is primarily made from hardened Aero-Coral for its lightweight frame.",
+        "weight": 0.0
+      },
+      {
+        "src": "Noctilucent Metal",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Aero-Coral frame of a Sky-Skiff is clad in thin sheets of Noctilucent Metal for durability and energy shielding.<SEP>Noctilucent Metal glows faintly in the dark, a common aesthetic in Xylotian design.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Navigator",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Training to pilot a Sky-Skiff begins at a young age for many Xylotians.<SEP>Sky-Skiffs are typically piloted by a single Xylotian navigator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Propulsion System",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The propulsion system of a Sky-Skiff utilizes focused solar winds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Xylotian Sky Race",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Great Xylotian Sky Race features heavily modified Sky-Skiffs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Star-Compass",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Star-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Wind-Gauge",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Wind-Gauge.",
+        "weight": 0.0
+      },
+      {
+        "src": "Volcanic Rock",
+        "tgt": "Xylotian Ground Vehicles",
+        "keywords": "",
+        "description": "Xylotian ground vehicles are often made from volcanic rock.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Star",
+        "tgt": "Great Xylotian Sky Race",
+        "keywords": "",
+        "description": "The outer casing of a Guardian Orb is made of self-repairing polymers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacian Architecture",
+        "tgt": "Xylotian Navigator",
+        "keywords": "",
+        "description": "Vexium was discovered in the Andromeda galaxy.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:14:38.719294",
+  "llm_calls": 201,
+  "mode": "ft"
+}

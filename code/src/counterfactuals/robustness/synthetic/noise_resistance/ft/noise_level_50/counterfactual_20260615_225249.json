@@ -1,0 +1,330 @@
+{
+  "question": "How many moons orbit the planet Quixar?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "delete_node",
+      "Quixar"
+    ],
+    [
+      "delete_node",
+      "Worv"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "four",
+    "original": "Quixar has four moons.",
+    "perturbed": "One of the four moons of Quixar is Zipt.",
+    "similarity": 0.819967
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Blizzard-Pulses"
+      ],
+      [
+        "add_edge",
+        [
+          "Blizzard-Pulses",
+          "Worv"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Heat-Shields deflect physical attacks.",
+          "keywords": "deflection,protection",
+          "source_id": "chunk-8c0b33bdfde835b1b72a98108d2731c1",
+          "file_path": "unknown_source",
+          "created_at": 1776369264,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Terran Society"
+      ],
+      [
+        "add_edge",
+        [
+          "Terran Society",
+          "Triskelion's Moons"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+          "keywords": "development progress,project management",
+          "source_id": "chunk-c4d0680971dd3cf904d7dc4e279b3baf",
+          "file_path": "unknown_source",
+          "created_at": 1776373063,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "values"
+      ],
+      [
+        "add_edge",
+        [
+          "values",
+          "Zipt"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+          "keywords": "crafting,reflective surfaces",
+          "source_id": "chunk-a8d5322c8953a45a40a65585c12dfa7d",
+          "file_path": "unknown_source",
+          "created_at": 1776370973,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Worv",
+        "type": "naturalobject",
+        "description": "Worv is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zipt",
+        "type": "naturalobject",
+        "description": "Zipt is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quixar",
+        "type": "naturalobject",
+        "description": "Quixar is the seventh planet in the Yondar system, characterized by a methane-rich atmosphere, an average surface temperature of -200°C, and a strong magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Yandr",
+        "type": "naturalobject",
+        "description": "Yandr is one of the four moons of Quixar.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Worv",
+        "keywords": "",
+        "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Zipt",
+        "keywords": "",
+        "description": "Zipt is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Yandr",
+        "keywords": "",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zipt",
+        "type": "naturalobject",
+        "description": "Zipt is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Society",
+        "type": "",
+        "description": "Terran society lives in harmony with the earth and is governed by the Earth-Circle.",
+        "rank": 0.0
+      },
+      {
+        "name": "values",
+        "type": "",
+        "description": "Glacian society values endurance and resilience.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Terran Society",
+        "tgt": "Triskelion's Moons",
+        "keywords": "development progress,project management",
+        "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+        "weight": 1.0
+      },
+      {
+        "src": "values",
+        "tgt": "Zipt",
+        "keywords": "crafting,reflective surfaces",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Worv",
+        "type": "naturalobject",
+        "description": "Worv is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion",
+        "type": "location",
+        "description": "Triskelion is a planet with unique environmental and cultural characteristics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zipt",
+        "type": "naturalobject",
+        "description": "Zipt is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "naturalobject",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quixar",
+        "type": "naturalobject",
+        "description": "Quixar is the seventh planet in the Yondar system, characterized by a methane-rich atmosphere, an average surface temperature of -200°C, and a strong magnetic field.",
+        "rank": 0.0
+      },
+      {
+        "name": "Yandr",
+        "type": "naturalobject",
+        "description": "Yandr is one of the four moons of Quixar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Blizzard-Pulses",
+        "type": "",
+        "description": "Blizzard-Pulses are concentrated bursts of freezing energy produced by the Frost-Crown.",
+        "rank": 0.0
+      },
+      {
+        "name": "Terran Society",
+        "type": "",
+        "description": "Terran society lives in harmony with the earth and is governed by the Earth-Circle.",
+        "rank": 0.0
+      },
+      {
+        "name": "values",
+        "type": "",
+        "description": "Glacian society values endurance and resilience.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Triskelion",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Worv",
+        "keywords": "",
+        "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Zipt",
+        "keywords": "",
+        "description": "Zipt is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quixar",
+        "tgt": "Yandr",
+        "keywords": "",
+        "description": "Yandr is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Blizzard-Pulses",
+        "tgt": "Worv",
+        "keywords": "",
+        "description": "Heat-Shields deflect physical attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Terran Society",
+        "tgt": "Triskelion's Moons",
+        "keywords": "",
+        "description": "Project Chimera is another initiative at Vortex Corp that is reportedly ahead of schedule.",
+        "weight": 0.0
+      },
+      {
+        "src": "values",
+        "tgt": "Zipt",
+        "keywords": "",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:52:49.717318",
+  "llm_calls": 76,
+  "mode": "ft"
+}

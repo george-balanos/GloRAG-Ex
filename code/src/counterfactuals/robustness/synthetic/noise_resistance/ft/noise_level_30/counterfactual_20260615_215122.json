@@ -1,0 +1,331 @@
+{
+  "question": "Where are the Orb of Zinthar and the Scepter of Mydor believed to be located?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Orb Of Zinthar"
+    ]
+  ],
+  "cost": 3,
+  "answers": {
+    "ground_truth": "The Orb of Zinthar is hidden in the Whispering Peaks, and the Scepter of Mydor is in the Sunken City of Aerilon.",
+    "original": "The Orb of Zinthar is hidden deep within the Whispering Peaks, while the Scepter of Mydor is guarded in the Sunken City of Aerilon.",
+    "perturbed": "The Scepter of Mydor is believed to be located in the Sunken City of Aerilon.",
+    "similarity": 0.752466
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Nebulon Food"
+      ],
+      [
+        "add_edge",
+        [
+          "Nebulon Food",
+          "Xylotian Myths"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+          "keywords": "revelation,true nature",
+          "source_id": "chunk-a8d5322c8953a45a40a65585c12dfa7d",
+          "file_path": "unknown_source",
+          "created_at": 1776370973,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Heartwood Draught"
+      ],
+      [
+        "add_edge",
+        [
+          "Heartwood Draught",
+          "Xylotian Myths"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Atlantean cities are built in underwater domes.",
+          "keywords": "construction,location",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Orb Of Zinthar",
+        "type": "artifact",
+        "description": "The Orb of Zinthar is a hidden artifact located deep within the Whispering Peaks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Scepter Of Mydor",
+        "type": "artifact",
+        "description": "The Scepter of Mydor is a legendary artifact guarded in the Sunken City of Aerilon.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "artifact",
+        "description": "Hourglass Sandstone is a material used to make time-keeping amulets worn by Chrono-Weavers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whispering Peaks",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunken City Of Aerilon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Orb Of Zinthar",
+        "tgt": "Whispering Peaks",
+        "keywords": "",
+        "description": "The Orb of Zinthar is hidden deep within the Whispering Peaks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Scepter Of Mydor",
+        "tgt": "Sunken City Of Aerilon",
+        "keywords": "",
+        "description": "The Scepter of Mydor is guarded in the Sunken City of Aerilon.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Scepter Of Mydor",
+        "type": "artifact",
+        "description": "The Scepter of Mydor is a legendary artifact guarded in the Sunken City of Aerilon.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "artifact",
+        "description": "Hourglass Sandstone is a material used to make time-keeping amulets worn by Chrono-Weavers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunken City Of Aerilon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Food",
+        "type": "",
+        "description": "Nebulon food is consumed in gaseous form.",
+        "rank": 0.0
+      },
+      {
+        "name": "Heartwood Draught",
+        "type": "",
+        "description": "Heartwood Draught is a potion that requires boiled sap derived from the Ironbark Tree.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Scepter Of Mydor",
+        "tgt": "Sunken City Of Aerilon",
+        "keywords": "",
+        "description": "The Scepter of Mydor is guarded in the Sunken City of Aerilon.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Nebulon Food",
+        "tgt": "Xylotian Myths",
+        "keywords": "revelation,true nature",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 1.0
+      },
+      {
+        "src": "Heartwood Draught",
+        "tgt": "Xylotian Myths",
+        "keywords": "construction,location",
+        "description": "Atlantean cities are built in underwater domes.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Orb Of Zinthar",
+        "type": "artifact",
+        "description": "The Orb of Zinthar is a hidden artifact located deep within the Whispering Peaks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Scepter Of Mydor",
+        "type": "artifact",
+        "description": "The Scepter of Mydor is a legendary artifact guarded in the Sunken City of Aerilon.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "artifact",
+        "description": "Hourglass Sandstone is a material used to make time-keeping amulets worn by Chrono-Weavers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whispering Peaks",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sunken City Of Aerilon",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Food",
+        "type": "",
+        "description": "Nebulon food is consumed in gaseous form.",
+        "rank": 0.0
+      },
+      {
+        "name": "Heartwood Draught",
+        "type": "",
+        "description": "Heartwood Draught is a potion that requires boiled sap derived from the Ironbark Tree.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Orb Of Zinthar",
+        "tgt": "Whispering Peaks",
+        "keywords": "",
+        "description": "The Orb of Zinthar is hidden deep within the Whispering Peaks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Scepter Of Mydor",
+        "tgt": "Sunken City Of Aerilon",
+        "keywords": "",
+        "description": "The Scepter of Mydor is guarded in the Sunken City of Aerilon.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Nebulon Food",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Heartwood Draught",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Atlantean cities are built in underwater domes.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:51:22.949271",
+  "llm_calls": 5,
+  "mode": "ft"
+}

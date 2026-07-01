@@ -1,0 +1,268 @@
+{
+  "question": "What are the two core materials in Resonant 'Harmony-Bells'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Resonant Harmony-Bells"
+    ]
+  ],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Resonant 'Harmony-Bells' are made from 'Song-Bronze' and 'Echo-Gems'.",
+    "original": "The two core materials in Resonant Harmony-Bells are Song-Bronze and Echo-Gems.",
+    "perturbed": "The two core materials in Resonant 'Harmony-Bells' are Echo-Gems and Resonance-Stones.",
+    "similarity": 0.950537
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Resonance-Stones"
+      ],
+      [
+        "add_edge",
+        [
+          "Resonance-Stones",
+          "Echo-Gems"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+          "keywords": "ability power,energy source",
+          "source_id": "chunk-92fdd2272047e791e822f44a44a0aaa6",
+          "file_path": "unknown_source",
+          "created_at": 1776366210,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Quantum Society"
+      ],
+      [
+        "add_edge",
+        [
+          "Quantum Society",
+          "Bell-Tower of Resonance"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Star-Singers participate in the Grand Celestian Chorus, which performs once per century.",
+          "keywords": "cultural event,performance",
+          "source_id": "chunk-7b18c9f322ed4e4355c1671da51c5145",
+          "file_path": "unknown_source",
+          "created_at": 1776369807,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Harmony-Bells",
+        "type": "artifact",
+        "description": "Resonant Harmony-Bells are musical instruments cast from Song-Bronze and inlaid with Echo-Gems, known for their perfect musical tones and resonance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "location",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Song-Bronze",
+        "type": "artifact",
+        "description": "Song-Bronze is a type of bronze used to cast Harmony-Bells, known for producing perfect musical tones and requiring specific temperature conditions during forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Gems",
+        "type": "artifact",
+        "description": "Echo-Gems are inlaid into Harmony-Bells to amplify and modulate their resonance, and they change color based on the notes they produce.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Bell Creation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Harmony-Bells",
+        "tgt": "Song-Bronze",
+        "keywords": "",
+        "description": "Resonant Harmony-Bells are cast from Song-Bronze, which produces perfect musical tones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bell-Tower of Resonance",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "The Bell-Tower of Resonance houses Resonant Harmony-Bells, and its sound can be heard for miles.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Gems",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Echo-Gems are inlaid into Resonant Harmony-Bells to amplify and modulate their resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Bell Creation",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Harmony-Bell creation is a sacred art form involving the production of Resonant Harmony-Bells.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "location",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Gems",
+        "type": "artifact",
+        "description": "Echo-Gems are inlaid into Harmony-Bells to amplify and modulate their resonance, and they change color based on the notes they produce.",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stones",
+        "type": "",
+        "description": "Resonance-Stones are found in the deepest caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Society",
+        "type": "",
+        "description": "Quantum Society exists in multiple dimensions simultaneously.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonance-Stones",
+        "tgt": "Echo-Gems",
+        "keywords": "ability power,energy source",
+        "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+        "weight": 1.0
+      },
+      {
+        "src": "Quantum Society",
+        "tgt": "Bell-Tower of Resonance",
+        "keywords": "cultural event,performance",
+        "description": "Star-Singers participate in the Grand Celestian Chorus, which performs once per century.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Resonant Harmony-Bells",
+        "type": "artifact",
+        "description": "Resonant Harmony-Bells are musical instruments cast from Song-Bronze and inlaid with Echo-Gems, known for their perfect musical tones and resonance.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "location",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Song-Bronze",
+        "type": "artifact",
+        "description": "Song-Bronze is a type of bronze used to cast Harmony-Bells, known for producing perfect musical tones and requiring specific temperature conditions during forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Gems",
+        "type": "artifact",
+        "description": "Echo-Gems are inlaid into Harmony-Bells to amplify and modulate their resonance, and they change color based on the notes they produce.",
+        "rank": 0.0
+      },
+      {
+        "name": "Harmony-Bell Creation",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Resonance-Stones",
+        "type": "",
+        "description": "Resonance-Stones are found in the deepest caves.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quantum Society",
+        "type": "",
+        "description": "Quantum Society exists in multiple dimensions simultaneously.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Resonant Harmony-Bells",
+        "tgt": "Song-Bronze",
+        "keywords": "",
+        "description": "Resonant Harmony-Bells are cast from Song-Bronze, which produces perfect musical tones.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bell-Tower of Resonance",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "The Bell-Tower of Resonance houses Resonant Harmony-Bells, and its sound can be heard for miles.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Gems",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Echo-Gems are inlaid into Resonant Harmony-Bells to amplify and modulate their resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Harmony-Bell Creation",
+        "tgt": "Resonant Harmony-Bells",
+        "keywords": "",
+        "description": "Harmony-Bell creation is a sacred art form involving the production of Resonant Harmony-Bells.",
+        "weight": 0.0
+      },
+      {
+        "src": "Resonance-Stones",
+        "tgt": "Echo-Gems",
+        "keywords": "",
+        "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Quantum Society",
+        "tgt": "Bell-Tower of Resonance",
+        "keywords": "",
+        "description": "Star-Singers participate in the Grand Celestian Chorus, which performs once per century.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:44:20.434233",
+  "llm_calls": 42,
+  "mode": "ft"
+}

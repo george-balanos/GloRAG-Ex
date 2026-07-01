@@ -1,0 +1,427 @@
+{
+  "question": "What two abilities do Phantom 'Wraith-Riders' possess while mounted?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Phantom Wraith-Riders",
+        "Phase-Gallops"
+      ]
+    ]
+  ],
+  "cost": 1,
+  "answers": {
+    "ground_truth": "Phantom 'Wraith-Riders' can perform 'Phase-Gallops' and execute 'Spirit-Charges'.",
+    "original": "Phantom Wraith-Riders can perform **Phase-Gallops** to run through solid matter and **Spirit-Charges** to become temporarily incorporeal during attacks.",
+    "perturbed": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks and require bonding with a Phantom Steed for training.",
+    "similarity": 0.825936
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Chosen Zoodle"
+      ],
+      [
+        "add_edge",
+        [
+          "Chosen Zoodle",
+          "Phase-Gallops"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Light-Forged items are the result of the Light-Forging process.",
+          "keywords": "crafting process,product outcome",
+          "source_id": "chunk-0398612496e142abad8c0525a7411b04",
+          "file_path": "unknown_source",
+          "created_at": 1776370239,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Pathfinder Helm"
+      ],
+      [
+        "add_edge",
+        [
+          "Pathfinder Helm",
+          "Spirit-Charges"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The old kingdom of Eldoria had many secrets.",
+          "keywords": "history,mystery",
+          "source_id": "chunk-9699258d651968b022029e2c5661bab9",
+          "file_path": "unknown_source",
+          "created_at": 1776368330,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Charges",
+        "type": "method",
+        "description": "Spirit-Charges are maneuvers where both Phantom Wraith-Rider and mount become temporarily incorporeal during attacks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Gallops",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Phase-Gallops",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Charges",
+        "type": "method",
+        "description": "Spirit-Charges are maneuvers where both Phantom Wraith-Rider and mount become temporarily incorporeal during attacks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Gallops",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chosen Zoodle",
+        "type": "",
+        "description": "The prophecy spoke of a chosen Zoodle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pathfinder Helm",
+        "type": "",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chosen Zoodle",
+        "tgt": "Phase-Gallops",
+        "keywords": "crafting process,product outcome",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 1.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Spirit-Charges",
+        "keywords": "history,mystery",
+        "description": "The old kingdom of Eldoria had many secrets.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Phantom Wraith-Riders",
+        "type": "person",
+        "description": "Phantom Wraith-Riders are elite cavalry members who can perform special maneuvers with their spectral steeds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Armies",
+        "type": "organization",
+        "description": "Phantom Armies are military units that include Phantom Wraith-Riders as elite cavalry.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Steed",
+        "type": "creature",
+        "description": "Phantom Steed is a spectral horse used by Phantom Wraith-Riders.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Charges",
+        "type": "method",
+        "description": "Spirit-Charges are maneuvers where both Phantom Wraith-Rider and mount become temporarily incorporeal during attacks.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Gallops",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Night-Marshal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wraith-Stables",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chosen Zoodle",
+        "type": "",
+        "description": "The prophecy spoke of a chosen Zoodle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pathfinder Helm",
+        "type": "",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Phase-Gallops",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Phase-Gallops to run through solid matter.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Wraith-Riders",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders can perform Spirit-Charges to become temporarily incorporeal during attacks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Armies",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders serve as elite cavalry for the Phantom Armies.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Wraith-Riders require bonding with a Phantom Steed for training.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Steed",
+        "tgt": "Wraith-Stables",
+        "keywords": "",
+        "description": "Wraith-Stables house dozens of spectral horses.",
+        "weight": 0.0
+      },
+      {
+        "src": "Night-Marshal",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Night-Marshal commands all Phantom Wraith-Rider units.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Culture",
+        "tgt": "Phantom Wraith-Riders",
+        "keywords": "",
+        "description": "Phantom Culture values honor in battle, which is reflected in the actions of Phantom Wraith-Riders.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chosen Zoodle",
+        "tgt": "Phase-Gallops",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Spirit-Charges",
+        "keywords": "",
+        "description": "The old kingdom of Eldoria had many secrets.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:28:17.835321",
+  "llm_calls": 2,
+  "mode": "ft"
+}

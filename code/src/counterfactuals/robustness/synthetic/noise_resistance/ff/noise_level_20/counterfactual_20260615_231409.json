@@ -1,0 +1,409 @@
+{
+  "question": "What special abilities do the Gleepglorp and the Flumph from planet Xylar possess?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "add_node",
+      "Quirkle Crystals"
+    ],
+    [
+      "add_edge",
+      [
+        "Flumph",
+        "Quirkle Crystals"
+      ]
+    ]
+  ],
+  "cost": 2.901893377304077,
+  "answers": {
+    "ground_truth": "The Gleepglorp can manipulate Zylonic energy for teleportation, and the Flumph emits Quirkle Crystals that enhance its camouflage.",
+    "original": "The Gleepglorp can manipulate Zylonic energy for teleportation, while the Flumph's abilities are not specified.",
+    "perturbed": "The Gleepglorp can manipulate Zylonic energy for teleportation, while the Flumph emits Quirkle Crystals that enhance its camouflage abilities.",
+    "similarity": 0.977688
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Airship"
+      ],
+      [
+        "add_edge",
+        [
+          "Airship",
+          "Planet Xylar"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+          "keywords": "material composition,wind resonance",
+          "source_id": "chunk-dacf097dab6d99b72c217adbf39a0e08",
+          "file_path": "unknown_source",
+          "created_at": 1776370517,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Jormund"
+      ],
+      [
+        "add_edge",
+        [
+          "Jormund",
+          "Zylonic Energy"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Vortex Corp's stock price saw a minor dip following the announcement of Project Nebula's delay.",
+          "keywords": "financial impact,market reaction",
+          "source_id": "chunk-c4d0680971dd3cf904d7dc4e279b3baf",
+          "file_path": "unknown_source",
+          "created_at": 1776373063,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Planet Xylar",
+        "type": "location",
+        "description": "Planet Xylar is the home of the Gleepglorp and the Flumph.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gleepglorp",
+        "type": "creature",
+        "description": "The Gleepglorp is a being from planet Xylar capable of manipulating Zylonic energy for teleportation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Life Forms",
+        "type": "creature",
+        "description": "Unique Life Forms are diverse organisms discovered on multiple planets within the Lumina System, adapted to varying conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "concept",
+        "description": "Life-Auras are colored emanations around living creatures that can be detected by the Soul-Compass.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flumph",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylonic Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina System",
+        "tgt": "Unique Life Forms",
+        "keywords": "",
+        "description": "Unique life forms have been discovered on multiple planets within the Lumina System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Gleepglorp originates from planet Xylar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Zylonic Energy",
+        "keywords": "",
+        "description": "The Gleepglorp can manipulate Zylonic energy for teleportation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flumph",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Flumph originates from planet Xylar.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Planet Xylar",
+        "type": "location",
+        "description": "Planet Xylar is the home of the Gleepglorp and the Flumph.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gleepglorp",
+        "type": "creature",
+        "description": "The Gleepglorp is a being from planet Xylar capable of manipulating Zylonic energy for teleportation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Life Forms",
+        "type": "creature",
+        "description": "Unique Life Forms are diverse organisms discovered on multiple planets within the Lumina System, adapted to varying conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "concept",
+        "description": "Life-Auras are colored emanations around living creatures that can be detected by the Soul-Compass.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flumph",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylonic Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "Airship is a mode of transportation used to travel between the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Jormund",
+        "type": "",
+        "description": "Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.<SEP>Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Quirkle Crystals",
+        "type": "",
+        "description": "Quirkle Crystals are emitted by the Flumph and enhance its camouflage abilities.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina System",
+        "tgt": "Unique Life Forms",
+        "keywords": "",
+        "description": "Unique life forms have been discovered on multiple planets within the Lumina System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Gleepglorp originates from planet Xylar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Zylonic Energy",
+        "keywords": "",
+        "description": "The Gleepglorp can manipulate Zylonic energy for teleportation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flumph",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Flumph originates from planet Xylar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flumph",
+        "tgt": "Quirkle Crystals",
+        "keywords": "camouflage enhancement,crystal emission",
+        "description": "The Flumph emits Quirkle Crystals that enhance its camouflage.",
+        "weight": 1.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Planet Xylar",
+        "keywords": "material composition,wind resonance",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 1.0
+      },
+      {
+        "src": "Jormund",
+        "tgt": "Zylonic Energy",
+        "keywords": "financial impact,market reaction",
+        "description": "Vortex Corp's stock price saw a minor dip following the announcement of Project Nebula's delay.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Planet Xylar",
+        "type": "location",
+        "description": "Planet Xylar is the home of the Gleepglorp and the Flumph.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina System",
+        "type": "location",
+        "description": "The Lumina System is a planetary system consisting of six planets orbiting the stable yellow dwarf known as Lumina Star.<SEP>The Lumina System is a planetary system containing multiple planets with varying conditions and unique life forms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gleepglorp",
+        "type": "creature",
+        "description": "The Gleepglorp is a being from planet Xylar capable of manipulating Zylonic energy for teleportation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unique Life Forms",
+        "type": "creature",
+        "description": "Unique Life Forms are diverse organisms discovered on multiple planets within the Lumina System, adapted to varying conditions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "concept",
+        "description": "Life-Auras are colored emanations around living creatures that can be detected by the Soul-Compass.",
+        "rank": 0.0
+      },
+      {
+        "name": "Flumph",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylonic Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Airship",
+        "type": "",
+        "description": "Airship is a mode of transportation used to travel between the Floating Islands of Aeridia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Jormund",
+        "type": "",
+        "description": "Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.<SEP>Jormund is the largest gas giant in the K'tharr System, known for its chaotic, multi-colored storms and a radius of 95,000 kilometers.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Lumina System",
+        "tgt": "Unique Life Forms",
+        "keywords": "",
+        "description": "Unique life forms have been discovered on multiple planets within the Lumina System.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Gleepglorp originates from planet Xylar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gleepglorp",
+        "tgt": "Zylonic Energy",
+        "keywords": "",
+        "description": "The Gleepglorp can manipulate Zylonic energy for teleportation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flumph",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "The Flumph originates from planet Xylar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Airship",
+        "tgt": "Planet Xylar",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Jormund",
+        "tgt": "Zylonic Energy",
+        "keywords": "",
+        "description": "Vortex Corp's stock price saw a minor dip following the announcement of Project Nebula's delay.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:14:09.269554",
+  "llm_calls": 6,
+  "mode": "ff"
+}

@@ -1,0 +1,242 @@
+{
+  "question": "How do you activate a Nebulon communicator?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Nebulon Communicator"
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "press the central crystal while humming at 432 Hz",
+    "original": "To activate a Nebulon communicator, you need to press the central crystal and hum at 432 Hz.",
+    "perturbed": "To activate a Nebulon communicator, you need to press the Central Crystal.",
+    "similarity": 0.922099
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Geothermal Activity"
+      ],
+      [
+        "add_edge",
+        [
+          "Geothermal Activity",
+          "Nebulon Technology"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Common Gloopfish communicate through ultrasonic pulses.",
+          "keywords": "communication method",
+          "source_id": "chunk-31ba22ab126888864cf34c8a8a2c7a2b",
+          "file_path": "unknown_source",
+          "created_at": 1776374861,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "User Interface"
+      ],
+      [
+        "add_edge",
+        [
+          "User Interface",
+          "Central Crystal"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The ->> operator in CortexScript is used to pipe the results from one asynchronous Cognate into the next one in a pipeline.",
+          "keywords": "asynchronous functions,pipelining",
+          "source_id": "chunk-5e5e2daa652a2a7080947edd8c1861cb",
+          "file_path": "unknown_source",
+          "created_at": 1776373659,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Nebulon Communicator",
+        "type": "artifact",
+        "description": "Nebulon communicator is a device that requires pressing the central crystal and humming at 432 Hz for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Crystal",
+        "type": "artifact",
+        "description": "Central crystal is a component of the Nebulon communicator that needs to be pressed for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Technology",
+        "type": "concept",
+        "description": "Nebulon technology operates on quantum principles.",
+        "rank": 0.0
+      },
+      {
+        "name": "432 Hz Hum Frequency",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Nebulon Communicator",
+        "tgt": "Nebulon Technology",
+        "keywords": "",
+        "description": "Nebulon technology principles are applied in the design of the Nebulon communicator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Crystal",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The central crystal of the Nebulon communicator must be pressed for activation.",
+        "weight": 0.0
+      },
+      {
+        "src": "432 Hz Hum Frequency",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The Nebulon communicator requires a 432 Hz hum frequency for activation.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Central Crystal",
+        "type": "artifact",
+        "description": "Central crystal is a component of the Nebulon communicator that needs to be pressed for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Technology",
+        "type": "concept",
+        "description": "Nebulon technology operates on quantum principles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Geothermal Activity",
+        "type": "",
+        "description": "Geothermal activity is a region where Pyron is commonly found.",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Geothermal Activity",
+        "tgt": "Nebulon Technology",
+        "keywords": "communication method",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 1.0
+      },
+      {
+        "src": "User Interface",
+        "tgt": "Central Crystal",
+        "keywords": "asynchronous functions,pipelining",
+        "description": "The ->> operator in CortexScript is used to pipe the results from one asynchronous Cognate into the next one in a pipeline.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Nebulon Communicator",
+        "type": "artifact",
+        "description": "Nebulon communicator is a device that requires pressing the central crystal and humming at 432 Hz for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Crystal",
+        "type": "artifact",
+        "description": "Central crystal is a component of the Nebulon communicator that needs to be pressed for activation.",
+        "rank": 0.0
+      },
+      {
+        "name": "Nebulon Technology",
+        "type": "concept",
+        "description": "Nebulon technology operates on quantum principles.",
+        "rank": 0.0
+      },
+      {
+        "name": "432 Hz Hum Frequency",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Geothermal Activity",
+        "type": "",
+        "description": "Geothermal activity is a region where Pyron is commonly found.",
+        "rank": 0.0
+      },
+      {
+        "name": "User Interface",
+        "type": "",
+        "description": "The user interface for Project Nebula has received positive feedback from early testers.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Nebulon Communicator",
+        "tgt": "Nebulon Technology",
+        "keywords": "",
+        "description": "Nebulon technology principles are applied in the design of the Nebulon communicator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Crystal",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The central crystal of the Nebulon communicator must be pressed for activation.",
+        "weight": 0.0
+      },
+      {
+        "src": "432 Hz Hum Frequency",
+        "tgt": "Nebulon Communicator",
+        "keywords": "",
+        "description": "The Nebulon communicator requires a 432 Hz hum frequency for activation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Geothermal Activity",
+        "tgt": "Nebulon Technology",
+        "keywords": "",
+        "description": "Common Gloopfish communicate through ultrasonic pulses.",
+        "weight": 0.0
+      },
+      {
+        "src": "User Interface",
+        "tgt": "Central Crystal",
+        "keywords": "",
+        "description": "The ->> operator in CortexScript is used to pipe the results from one asynchronous Cognate into the next one in a pipeline.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:56:05.537828",
+  "llm_calls": 16,
+  "mode": "ft"
+}

@@ -1,0 +1,197 @@
+{
+  "question": "What are the two fundamental components of Mechanoid 'Gear-Blood'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Mechanoid"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "Mechanoid 'Gear-Blood' consists of 'Liquid-Steel' and 'Spark-Motes'.",
+    "original": "Mechanoids are composed of Liquid-Steel and energized by Spark-Motes.",
+    "perturbed": "The two fundamental components of Mechanoid 'Gear-Blood' are Gear-Blood circulation systems and Vitality-Streams.",
+    "similarity": 0.503663
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Glow-Worms"
+      ],
+      [
+        "add_edge",
+        [
+          "Glow-Worms",
+          "Gear-Blood Circulation Systems"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Verdant healers use Vitality-Streams to restore health and energy.",
+          "keywords": "energy,healing",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Xylotian Art"
+      ],
+      [
+        "add_edge",
+        [
+          "Xylotian Art",
+          "Mechanoid"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Zorblaxia's economy relies heavily on the export of crystallized snorflak.",
+          "keywords": "economy,export",
+          "source_id": "chunk-18df7f613f2ebf0d51e932222a8cf8b6",
+          "file_path": "unknown_source",
+          "created_at": 1776374206,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gear-Blood",
+        "type": "data",
+        "description": "Gear-Blood is the fluid that flows through Mechanoid systems, requiring regular filtering to prevent contamination.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mechanoid",
+        "type": "creature",
+        "description": "Mechanoids are robotic beings primarily composed of Liquid-Steel and energized by Spark-Motes.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gear-Blood Circulation Systems",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids possess advanced Gear-Blood circulation systems that are marvels of engineering.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gear-Blood",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Worms",
+        "type": "",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Glow-Worms",
+        "tgt": "Gear-Blood Circulation Systems",
+        "keywords": "energy,healing",
+        "description": "Verdant healers use Vitality-Streams to restore health and energy.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Gear-Blood Circulation Systems",
+        "type": "artifact",
+        "description": "Gear-Blood circulation systems are advanced engineering marvels within Mechanoids.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gear-Blood",
+        "type": "data",
+        "description": "Gear-Blood is the fluid that flows through Mechanoid systems, requiring regular filtering to prevent contamination.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mechanoid",
+        "type": "creature",
+        "description": "Mechanoids are robotic beings primarily composed of Liquid-Steel and energized by Spark-Motes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Worms",
+        "type": "",
+        "description": "Glow-worms are small, segmented creatures found in the Subterranean Caves that emit blinding flashes of light when threatened.<SEP>Glow-Worms are creatures that emit blinding flashes of light when threatened, temporarily disorienting predators.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Art",
+        "type": "",
+        "description": "Xylotian Art often depicts the geometric beauty of Dual-Resonance Crystals.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Gear-Blood Circulation Systems",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids possess advanced Gear-Blood circulation systems that are marvels of engineering.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gear-Blood",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Worms",
+        "tgt": "Gear-Blood Circulation Systems",
+        "keywords": "",
+        "description": "Verdant healers use Vitality-Streams to restore health and energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Art",
+        "tgt": "Mechanoid",
+        "keywords": "",
+        "description": "Zorblaxia's economy relies heavily on the export of crystallized snorflak.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:35:37.501301",
+  "llm_calls": 11,
+  "mode": "ft"
+}

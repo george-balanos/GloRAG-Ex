@@ -1,0 +1,338 @@
+{
+  "question": "What two distinct abilities does a Xylotian 'Chrono-Weaver' possess?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "A Xylotian 'Chrono-Weaver' can perceive echoes of recent past events and project faint, localized temporal distortions.",
+    "original": "Xylotian Chrono-Weavers can perceive echoes of past events and create temporal distortions.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Great Trench of Neridia"
+      ],
+      [
+        "add_edge",
+        [
+          "Great Trench of Neridia",
+          "Xylotian Myths"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Energy-Harmonizer is designed to purify and redirect ley-line energy.",
+          "keywords": "function,purification",
+          "source_id": "chunk-85b7a26d96822c1293e19cca11323d34",
+          "file_path": "unknown_source",
+          "created_at": 1776378264,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Planet Xylar"
+      ],
+      [
+        "add_edge",
+        [
+          "Planet Xylar",
+          "Xylotian Myths"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Lances used in Sky-Jousting are made from lightweight Cloudwood.",
+          "keywords": "material composition,sport equipment",
+          "source_id": "chunk-76f65d39f98e051db596cb32adaeedbb",
+          "file_path": "unknown_source",
+          "created_at": 1776374069,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Temporary Doorways'"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporary Doorways'",
+          "Hourglass Sandstone"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Nebula-Yarn is spun from the raw material of stellar nurseries.",
+          "keywords": "cosmic crafting,raw material",
+          "source_id": "chunk-cc04677e1af4f916c4eebf1816fc0d16",
+          "file_path": "unknown_source",
+          "created_at": 1776372644,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Data-Crystals"
+      ],
+      [
+        "add_edge",
+        [
+          "Data-Crystals",
+          "Xylotian Concept Of Time"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Etherean music is used by spirit guides to heal troubled souls.",
+          "keywords": "healing,spiritual aid",
+          "source_id": "chunk-a9011a4964a803f2dc08a979f2cb4b8a",
+          "file_path": "unknown_source",
+          "created_at": 1776369536,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Flux",
+        "type": "concept",
+        "description": "Temporal Flux is the ambient energy source that powers a Chrono-Weaver's abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal College",
+        "type": "location",
+        "description": "The Temporal College is an institution on Xylos where Chrono-Weavers train and hone their skills.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sun-Berries",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Concept Of Time",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Concept Of Time",
+        "keywords": "",
+        "description": "Chrono-Weavers perceive time in a multi-linear fashion, aligning with the Xylotian concept of time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal College",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers train at the Temporal College to hone their skills.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sun-Berries",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Xylotian cuisine features Sun-Berries, which ripen instantly, reflecting the temporal abilities of Chrono-Weavers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Chrono-Weaver",
+        "type": "person",
+        "description": "Xylotian Chrono-Weavers are individuals trained to perceive echoes of past events and create temporal distortions.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Flux",
+        "type": "concept",
+        "description": "Temporal Flux is the ambient energy source that powers a Chrono-Weaver's abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal College",
+        "type": "location",
+        "description": "The Temporal College is an institution on Xylos where Chrono-Weavers train and hone their skills.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Myths",
+        "type": "content",
+        "description": "Xylotian myths involve legendary Chrono-Weavers who could allegedly halt time.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sun-Berries",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hourglass Sandstone",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Concept Of Time",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Trench of Neridia",
+        "type": "",
+        "description": "The Great Trench of Neridia descends to unknown depths.",
+        "rank": 0.0
+      },
+      {
+        "name": "Planet Xylar",
+        "type": "",
+        "description": "Planet Xylar is the home of the Gleepglorp and the Flumph.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporary Doorways'",
+        "type": "",
+        "description": "Temporary Doorways are created between worlds by Dimension-Rifts.",
+        "rank": 0.0
+      },
+      {
+        "name": "Data-Crystals",
+        "type": "",
+        "description": "Data-crystals are used to store vast amounts of information.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Xylotian myths feature legendary Chrono-Weavers, influencing the perception of their abilities.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Chrono-Weaver",
+        "tgt": "Xylotian Concept Of Time",
+        "keywords": "",
+        "description": "Chrono-Weavers perceive time in a multi-linear fashion, aligning with the Xylotian concept of time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Flux",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers draw their abilities from ambient Temporal Flux.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal College",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers train at the Temporal College to hone their skills.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sun-Berries",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Xylotian cuisine features Sun-Berries, which ripen instantly, reflecting the temporal abilities of Chrono-Weavers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hourglass Sandstone",
+        "tgt": "Xylotian Chrono-Weaver",
+        "keywords": "",
+        "description": "Chrono-Weavers wear amulets made of Hourglass Sandstone to keep time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Trench of Neridia",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "The Energy-Harmonizer is designed to purify and redirect ley-line energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Planet Xylar",
+        "tgt": "Xylotian Myths",
+        "keywords": "",
+        "description": "Lances used in Sky-Jousting are made from lightweight Cloudwood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporary Doorways'",
+        "tgt": "Hourglass Sandstone",
+        "keywords": "",
+        "description": "Nebula-Yarn is spun from the raw material of stellar nurseries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Data-Crystals",
+        "tgt": "Xylotian Concept Of Time",
+        "keywords": "",
+        "description": "Etherean music is used by spirit guides to heal troubled souls.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:25:02.661167",
+  "llm_calls": 201,
+  "mode": "ft"
+}

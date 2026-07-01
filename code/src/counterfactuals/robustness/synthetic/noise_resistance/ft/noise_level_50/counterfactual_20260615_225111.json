@@ -1,0 +1,271 @@
+{
+  "question": "What is the sole food source for the Glimmerwing Moths of Aeridor?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "delete_node",
+      "Grand-Alchemist"
+    ],
+    [
+      "delete_node",
+      "Glimmerwing Moth"
+    ],
+    [
+      "delete_node",
+      "Aeridor"
+    ]
+  ],
+  "cost": 11,
+  "answers": {
+    "ground_truth": "The sole food source for the Glimmerwing Moths of Aeridor is the pollen of the Moonsilk Flower.",
+    "original": "The Glimmerwing Moths of Aeridor feed exclusively on the pollen of the Moonsilk Flower.",
+    "perturbed": "I don't have enough information to answer that.",
+    "similarity": 0.013233
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Grand-Alchemist"
+      ],
+      [
+        "add_edge",
+        [
+          "Grand-Alchemist",
+          "Crystal Spires"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Atlantean history spans over ten thousand years.",
+          "keywords": "civilization,historical span",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Great Mechanoid Assembly"
+      ],
+      [
+        "add_edge",
+        [
+          "Great Mechanoid Assembly",
+          "Moonsilk Flower"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Shadow-Academy trains students in stealth arts, including shadow-melding.",
+          "keywords": "education,training",
+          "source_id": "chunk-58a046875ebdee22cd2135d336e52823",
+          "file_path": "unknown_source",
+          "created_at": 1776370385,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aeridor",
+        "type": "location",
+        "description": "Aeridor is a region that is home to the Glimmerwing Moth, Moonsilk Flower, and Stone-Hide Wyvern.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Spires",
+        "type": "location",
+        "description": "The Crystal Spires are giant, translucent mountains located in Aeridor and are home to the Glimmerwing Moth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stone-Hide Wyvern",
+        "type": "creature",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth and is found in Aeridor.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glimmerwing Moth",
+        "type": "creature",
+        "description": "The Glimmerwing Moth is a specialized moth that feeds exclusively on the pollen of the Moonsilk Flower and has a lifespan of a single lunar cycle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moonsilk Flower",
+        "type": "naturalobject",
+        "description": "The Moonsilk Flower is a rare bloom that only grows in the Crystal Spires region of Aeridor and blooms during a full moon.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aeridor",
+        "tgt": "Moonsilk Flower",
+        "keywords": "",
+        "description": "The Moonsilk Flower only grows in the Crystal Spires region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridor",
+        "tgt": "Crystal Spires",
+        "keywords": "",
+        "description": "The Crystal Spires are located in the region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Spires",
+        "tgt": "Glimmerwing Moth",
+        "keywords": "",
+        "description": "The Glimmerwing Moth is found only in the Crystal Spires region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Stone-Hide Wyvern",
+        "keywords": "",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Moonsilk Flower",
+        "keywords": "",
+        "description": "The Glimmerwing Moth feeds exclusively on the pollen of the Moonsilk Flower.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Moonsilk Flower",
+        "type": "naturalobject",
+        "description": "The Moonsilk Flower is a rare bloom that only grows in the Crystal Spires region of Aeridor and blooms during a full moon.",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Mechanoid Assembly",
+        "type": "",
+        "description": "The Great Mechanoid Assembly governs all robotic citizens of Mechanoid society.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Great Mechanoid Assembly",
+        "tgt": "Moonsilk Flower",
+        "keywords": "education,training",
+        "description": "The Shadow-Academy trains students in stealth arts, including shadow-melding.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Aeridor",
+        "type": "location",
+        "description": "Aeridor is a region that is home to the Glimmerwing Moth, Moonsilk Flower, and Stone-Hide Wyvern.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Spires",
+        "type": "location",
+        "description": "The Crystal Spires are giant, translucent mountains located in Aeridor and are home to the Glimmerwing Moth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stone-Hide Wyvern",
+        "type": "creature",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth and is found in Aeridor.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glimmerwing Moth",
+        "type": "creature",
+        "description": "The Glimmerwing Moth is a specialized moth that feeds exclusively on the pollen of the Moonsilk Flower and has a lifespan of a single lunar cycle.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moonsilk Flower",
+        "type": "naturalobject",
+        "description": "The Moonsilk Flower is a rare bloom that only grows in the Crystal Spires region of Aeridor and blooms during a full moon.",
+        "rank": 0.0
+      },
+      {
+        "name": "Grand-Alchemist",
+        "type": "",
+        "description": "The Grand-Alchemist oversees all magical research in alchemical laboratories.",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Mechanoid Assembly",
+        "type": "",
+        "description": "The Great Mechanoid Assembly governs all robotic citizens of Mechanoid society.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aeridor",
+        "tgt": "Moonsilk Flower",
+        "keywords": "",
+        "description": "The Moonsilk Flower only grows in the Crystal Spires region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aeridor",
+        "tgt": "Crystal Spires",
+        "keywords": "",
+        "description": "The Crystal Spires are located in the region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Spires",
+        "tgt": "Glimmerwing Moth",
+        "keywords": "",
+        "description": "The Glimmerwing Moth is found only in the Crystal Spires region of Aeridor.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Stone-Hide Wyvern",
+        "keywords": "",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glimmerwing Moth",
+        "tgt": "Moonsilk Flower",
+        "keywords": "",
+        "description": "The Glimmerwing Moth feeds exclusively on the pollen of the Moonsilk Flower.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grand-Alchemist",
+        "tgt": "Crystal Spires",
+        "keywords": "",
+        "description": "Atlantean history spans over ten thousand years.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Mechanoid Assembly",
+        "tgt": "Moonsilk Flower",
+        "keywords": "",
+        "description": "The Shadow-Academy trains students in stealth arts, including shadow-melding.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:51:11.484194",
+  "llm_calls": 121,
+  "mode": "ft"
+}

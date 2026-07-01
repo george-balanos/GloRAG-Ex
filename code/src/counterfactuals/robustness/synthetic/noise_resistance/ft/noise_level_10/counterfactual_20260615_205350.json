@@ -1,0 +1,216 @@
+{
+  "question": "What are the two core materials in Aerion 'Wind-Walker' boots?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Aerion Wind-Walker Boots"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "Aerion 'Wind-Walker' boots use 'Cloud-Leather' and 'Gust-Metal'.",
+    "original": "The two core materials in Aerion Wind-Walker Boots are Cloud-Leather soles and Gust-Metal strapping.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.084277
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Deep-Space Telescopes"
+      ],
+      [
+        "add_edge",
+        [
+          "Deep-Space Telescopes",
+          "Aerion Culture"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Whales are large marine mammals.",
+          "keywords": "habitat,species",
+          "source_id": "chunk-b0ec84394955e9010ff2eef03b888d02",
+          "file_path": "unknown_source",
+          "created_at": 1776367954,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aerion Wind-Walker Boots",
+        "type": "artifact",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles and Gust-Metal strapping, allowing limited flight capabilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Walker Craftsmanship",
+        "type": "method",
+        "description": "Wind-Walker Craftsmanship is a closely guarded art form used to create the Aerion Wind-Walker Boots.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cloud-Leather",
+        "type": "artifact",
+        "description": "Cloud-Leather is a light yet durable material harvested from sky-dwelling creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerion Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gust-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Cloud-Leather",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles, contributing to their lightness and durability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Wind-Walker Craftsmanship",
+        "keywords": "",
+        "description": "Wind-Walker Craftsmanship is used to create Aerion Wind-Walker Boots.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Gust-Metal",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Culture",
+        "tgt": "Aerion Wind-Walker Boots",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots enable limited flight, aligning with the cultural emphasis on freedom and movement.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Aerion Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "Deep-Space Telescopes are used by Xylotian astronomers to identify terraforming candidates.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Aerion Culture",
+        "keywords": "habitat,species",
+        "description": "Whales are large marine mammals.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Aerion Wind-Walker Boots",
+        "type": "artifact",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles and Gust-Metal strapping, allowing limited flight capabilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Walker Craftsmanship",
+        "type": "method",
+        "description": "Wind-Walker Craftsmanship is a closely guarded art form used to create the Aerion Wind-Walker Boots.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cloud-Leather",
+        "type": "artifact",
+        "description": "Cloud-Leather is a light yet durable material harvested from sky-dwelling creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerion Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gust-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "Deep-Space Telescopes are used by Xylotian astronomers to identify terraforming candidates.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Cloud-Leather",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles, contributing to their lightness and durability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Wind-Walker Craftsmanship",
+        "keywords": "",
+        "description": "Wind-Walker Craftsmanship is used to create Aerion Wind-Walker Boots.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Gust-Metal",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Culture",
+        "tgt": "Aerion Wind-Walker Boots",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots enable limited flight, aligning with the cultural emphasis on freedom and movement.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Aerion Culture",
+        "keywords": "",
+        "description": "Whales are large marine mammals.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:53:50.232582",
+  "llm_calls": 26,
+  "mode": "ft"
+}

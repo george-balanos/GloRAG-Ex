@@ -1,0 +1,346 @@
+{
+  "question": "What two abilities are granted by Shadowmere 'Void-Cloaks'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Void-Cloaks"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "Shadowmere 'Void-Cloaks' grant 'Phase-Shift' and 'Shadow-Meld' abilities.",
+    "original": "Void-Cloaks grant the abilities of phase-shifting and shadow-melding.",
+    "perturbed": "The two abilities granted by Shadowmere 'Void-Cloaks' are Shadow-Meld and Umbral-Weavers.",
+    "similarity": 0.743742
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Grasping Vine"
+      ],
+      [
+        "add_edge",
+        [
+          "Grasping Vine",
+          "Elite Shadowmere Agents"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Lumin-Ink is created by suspending Glow-Geode powder in Aether-Blossom sap.",
+          "keywords": "ink production,material composition",
+          "source_id": "chunk-30032a9a218ee0319cc0b0104dbcb1fc",
+          "file_path": "unknown_source",
+          "created_at": 1776366753,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Xylotian Explorers"
+      ],
+      [
+        "add_edge",
+        [
+          "Xylotian Explorers",
+          "Umbral-Weavers"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Cosmic 'Star-Weavers' weave 'Galaxy-Patterns' that can bend space-time.",
+          "keywords": "creation,space-time manipulation",
+          "source_id": "chunk-cc04677e1af4f916c4eebf1816fc0d16",
+          "file_path": "unknown_source",
+          "created_at": 1776372644,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Phantasmal Artisans"
+      ],
+      [
+        "add_edge",
+        [
+          "Phantasmal Artisans",
+          "Shadow-Meld"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The ancient texts of Ploorf are hard to decipher.",
+          "keywords": "ancient knowledge,difficulty",
+          "source_id": "chunk-9699258d651968b022029e2c5661bab9",
+          "file_path": "unknown_source",
+          "created_at": 1776368330,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Void-Cloaks",
+        "type": "artifact",
+        "description": "Void-Cloaks are garments that allow the wearer to partially phase out of physical reality and meld with shadows.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadowmere",
+        "type": "location",
+        "description": "Shadowmere is a realm characterized by perpetual twilight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elite Shadowmere Agents",
+        "type": "person",
+        "description": "Elite Shadowmere Agents are individuals who wear Void-Cloaks and are involved in Shadowmere politics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Umbral-Weavers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Shifting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadow-Meld",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Shadowmere",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks are crafted in Shadowmere and allow wearers to phase-shift and shadow-meld.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elite Shadowmere Agents",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Elite Shadowmere Agents wear Void-Cloaks to perform their duties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Umbral-Weavers",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "The Umbral-Weavers craft the finest Void-Cloaks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phase-Shifting",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks enable the wearer to phase-shift, creating a translucent appearance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow-Meld",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks allow the wearer to shadow-meld, becoming one with darkness.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Elite Shadowmere Agents",
+        "type": "person",
+        "description": "Elite Shadowmere Agents are individuals who wear Void-Cloaks and are involved in Shadowmere politics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Umbral-Weavers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadow-Meld",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Grasping Vine",
+        "type": "",
+        "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Explorers",
+        "type": "",
+        "description": "Xylotian explorers carry Survival Packs with rations and tools.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Artisans",
+        "type": "",
+        "description": "Phantasmal artisans work with ethereal materials.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Grasping Vine",
+        "tgt": "Elite Shadowmere Agents",
+        "keywords": "ink production,material composition",
+        "description": "Lumin-Ink is created by suspending Glow-Geode powder in Aether-Blossom sap.",
+        "weight": 1.0
+      },
+      {
+        "src": "Xylotian Explorers",
+        "tgt": "Umbral-Weavers",
+        "keywords": "creation,space-time manipulation",
+        "description": "Cosmic 'Star-Weavers' weave 'Galaxy-Patterns' that can bend space-time.",
+        "weight": 1.0
+      },
+      {
+        "src": "Phantasmal Artisans",
+        "tgt": "Shadow-Meld",
+        "keywords": "ancient knowledge,difficulty",
+        "description": "The ancient texts of Ploorf are hard to decipher.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Void-Cloaks",
+        "type": "artifact",
+        "description": "Void-Cloaks are garments that allow the wearer to partially phase out of physical reality and meld with shadows.",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadowmere",
+        "type": "location",
+        "description": "Shadowmere is a realm characterized by perpetual twilight.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elite Shadowmere Agents",
+        "type": "person",
+        "description": "Elite Shadowmere Agents are individuals who wear Void-Cloaks and are involved in Shadowmere politics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Umbral-Weavers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Shifting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadow-Meld",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Grasping Vine",
+        "type": "",
+        "description": "The Grasping Vine is a dangerous plant found in the Shadow Fen.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Explorers",
+        "type": "",
+        "description": "Xylotian explorers carry Survival Packs with rations and tools.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Artisans",
+        "type": "",
+        "description": "Phantasmal artisans work with ethereal materials.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Shadowmere",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks are crafted in Shadowmere and allow wearers to phase-shift and shadow-meld.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elite Shadowmere Agents",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Elite Shadowmere Agents wear Void-Cloaks to perform their duties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Umbral-Weavers",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "The Umbral-Weavers craft the finest Void-Cloaks.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phase-Shifting",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks enable the wearer to phase-shift, creating a translucent appearance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow-Meld",
+        "tgt": "Void-Cloaks",
+        "keywords": "",
+        "description": "Void-Cloaks allow the wearer to shadow-meld, becoming one with darkness.",
+        "weight": 0.0
+      },
+      {
+        "src": "Grasping Vine",
+        "tgt": "Elite Shadowmere Agents",
+        "keywords": "",
+        "description": "Lumin-Ink is created by suspending Glow-Geode powder in Aether-Blossom sap.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Explorers",
+        "tgt": "Umbral-Weavers",
+        "keywords": "",
+        "description": "Cosmic 'Star-Weavers' weave 'Galaxy-Patterns' that can bend space-time.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal Artisans",
+        "tgt": "Shadow-Meld",
+        "keywords": "",
+        "description": "The ancient texts of Ploorf are hard to decipher.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:38:49.741686",
+  "llm_calls": 137,
+  "mode": "ft"
+}

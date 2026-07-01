@@ -1,0 +1,504 @@
+{
+  "question": "What is the title of the first album by the most popular Chrono-Wave musician on Riven Prime?",
+  "found": true,
+  "num_operations": 2,
+  "operations": [
+    [
+      "add_node",
+      "Temporal Drift"
+    ],
+    [
+      "add_edge",
+      [
+        "Kaelen Echo",
+        "Temporal Drift"
+      ]
+    ]
+  ],
+  "cost": 3.1567847430706024,
+  "answers": {
+    "ground_truth": "Kaelen Echo's first album is titled 'Temporal Drift'.",
+    "original": "The title of the first album by the most popular Chrono-Wave musician on Riven Prime is \"Future Echoes\".",
+    "perturbed": "The title of the first album by Kaelen Echo, the most popular Chrono-Wave musician on Riven Prime, is \"Temporal Drift\".",
+    "similarity": 0.84467
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Flour"
+      ],
+      [
+        "add_edge",
+        [
+          "Flour",
+          "Chrono-Wave"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Zorpian ale is a popular drink in the Outer Rim.",
+          "keywords": "consumption,popularity",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Temporal Rupture"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporal Rupture",
+          "Phase Shifter"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+          "keywords": "transportation,travel",
+          "source_id": "chunk-56e0a12548f29b791d118efb316a2b35",
+          "file_path": "unknown_source",
+          "created_at": 1776375936,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Reality-Institute"
+      ],
+      [
+        "add_edge",
+        [
+          "Reality-Institute",
+          "Temporal Resonance"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Echo-Bats emit a sonic screech to disorient threats.",
+          "keywords": "defense mechanism,predator disorientation",
+          "source_id": "chunk-ff80068803f637b2a8fc56713b5d826a",
+          "file_path": "unknown_source",
+          "created_at": 1776378120,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Xylotian Diplomatic Corps"
+      ],
+      [
+        "add_edge",
+        [
+          "Xylotian Diplomatic Corps",
+          "Phase Shifter"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Ghostly-Guild regulates the activities of ethereal hunters, who specialize in capturing supernatural beings.",
+          "keywords": "regulation,spectral hunting",
+          "source_id": "chunk-338af8d2707612d1119fe2069b90d9b9",
+          "file_path": "unknown_source",
+          "created_at": 1776372511,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Wave",
+        "type": "genre",
+        "description": "Chrono-Wave is a music genre popular on Riven Prime, characterized by the use of temporal manipulation technology.<SEP>Chrono-Wave is a music genre popular on Riven Prime, involving temporal elements.",
+        "rank": 0.0
+      },
+      {
+        "name": "DJ Rewind",
+        "type": "person",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre on Riven Prime, known for the album 'Future Echoes'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Riven Prime",
+        "type": "location",
+        "description": "Riven Prime is a location with a unique music industry that utilizes temporal manipulation technology.<SEP>Riven Prime is a location where the Chrono-Wave music genre is popular and where complex music licensing exists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Resonance",
+        "type": "concept",
+        "description": "Temporal resonance is a aspect of music frequently analyzed by critics on Riven Prime.",
+        "rank": 0.0
+      },
+      {
+        "name": "Kaelen Echo",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase Shifter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Future Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Riven Prime",
+        "keywords": "",
+        "description": "Chrono-Wave is a popular music genre on Riven Prime.<SEP>Chrono-Wave is a popular music genre on Riven Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Kaelen Echo",
+        "keywords": "",
+        "description": "Kaelen Echo is a popular musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Phase Shifter",
+        "keywords": "",
+        "description": "Phase Shifter is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "DJ Rewind",
+        "keywords": "",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "DJ Rewind",
+        "tgt": "Future Echoes",
+        "keywords": "",
+        "description": "DJ Rewind's groundbreaking first album is 'Future Echoes'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Riven Prime",
+        "tgt": "Temporal Resonance",
+        "keywords": "",
+        "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Wave",
+        "type": "genre",
+        "description": "Chrono-Wave is a music genre popular on Riven Prime, characterized by the use of temporal manipulation technology.<SEP>Chrono-Wave is a music genre popular on Riven Prime, involving temporal elements.",
+        "rank": 0.0
+      },
+      {
+        "name": "DJ Rewind",
+        "type": "person",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre on Riven Prime, known for the album 'Future Echoes'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Riven Prime",
+        "type": "location",
+        "description": "Riven Prime is a location with a unique music industry that utilizes temporal manipulation technology.<SEP>Riven Prime is a location where the Chrono-Wave music genre is popular and where complex music licensing exists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Resonance",
+        "type": "concept",
+        "description": "Temporal resonance is a aspect of music frequently analyzed by critics on Riven Prime.",
+        "rank": 0.0
+      },
+      {
+        "name": "Kaelen Echo",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase Shifter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Future Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Flour",
+        "type": "",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Rupture",
+        "type": "",
+        "description": "The production of Aetherium causes a temporary rupture in local spacetime, resulting in minor temporal echoes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality-Institute",
+        "type": "",
+        "description": "The Reality-Institute studies multidimensional phenomena.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Diplomatic Corps",
+        "type": "",
+        "description": "The Xylotian Diplomatic Corps is highly respected for its role in diplomacy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Drift",
+        "type": "",
+        "description": "Temporal Drift is the title of Kaelen Echo's groundbreaking first album.<SEP>Temporal Drift is the groundbreaking first album by Kaelen Echo, notable in the Chrono-Wave genre.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Riven Prime",
+        "keywords": "",
+        "description": "Chrono-Wave is a popular music genre on Riven Prime.<SEP>Chrono-Wave is a popular music genre on Riven Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Kaelen Echo",
+        "keywords": "",
+        "description": "Kaelen Echo is a popular musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Phase Shifter",
+        "keywords": "",
+        "description": "Phase Shifter is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "DJ Rewind",
+        "keywords": "",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "DJ Rewind",
+        "tgt": "Future Echoes",
+        "keywords": "",
+        "description": "DJ Rewind's groundbreaking first album is 'Future Echoes'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Riven Prime",
+        "tgt": "Temporal Resonance",
+        "keywords": "",
+        "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Kaelen Echo",
+        "tgt": "Temporal Drift",
+        "keywords": "album,artist,musician",
+        "description": "Kaelen Echo is known for the groundbreaking album 'Temporal Drift'.<SEP>Kaelen Echo's groundbreaking first album is 'Temporal Drift'.",
+        "weight": 2.0
+      },
+      {
+        "src": "Flour",
+        "tgt": "Chrono-Wave",
+        "keywords": "consumption,popularity",
+        "description": "Zorpian ale is a popular drink in the Outer Rim.",
+        "weight": 1.0
+      },
+      {
+        "src": "Temporal Rupture",
+        "tgt": "Phase Shifter",
+        "keywords": "transportation,travel",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 1.0
+      },
+      {
+        "src": "Reality-Institute",
+        "tgt": "Temporal Resonance",
+        "keywords": "defense mechanism,predator disorientation",
+        "description": "Echo-Bats emit a sonic screech to disorient threats.",
+        "weight": 1.0
+      },
+      {
+        "src": "Xylotian Diplomatic Corps",
+        "tgt": "Phase Shifter",
+        "keywords": "regulation,spectral hunting",
+        "description": "The Ghostly-Guild regulates the activities of ethereal hunters, who specialize in capturing supernatural beings.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Chrono-Wave",
+        "type": "genre",
+        "description": "Chrono-Wave is a music genre popular on Riven Prime, characterized by the use of temporal manipulation technology.<SEP>Chrono-Wave is a music genre popular on Riven Prime, involving temporal elements.",
+        "rank": 0.0
+      },
+      {
+        "name": "DJ Rewind",
+        "type": "person",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre on Riven Prime, known for the album 'Future Echoes'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Riven Prime",
+        "type": "location",
+        "description": "Riven Prime is a location with a unique music industry that utilizes temporal manipulation technology.<SEP>Riven Prime is a location where the Chrono-Wave music genre is popular and where complex music licensing exists.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Resonance",
+        "type": "concept",
+        "description": "Temporal resonance is a aspect of music frequently analyzed by critics on Riven Prime.",
+        "rank": 0.0
+      },
+      {
+        "name": "Kaelen Echo",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase Shifter",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Future Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Flour",
+        "type": "",
+        "description": "Flour is an ingredient used in baking a cake.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Rupture",
+        "type": "",
+        "description": "The production of Aetherium causes a temporary rupture in local spacetime, resulting in minor temporal echoes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Reality-Institute",
+        "type": "",
+        "description": "The Reality-Institute studies multidimensional phenomena.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Diplomatic Corps",
+        "type": "",
+        "description": "The Xylotian Diplomatic Corps is highly respected for its role in diplomacy.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Riven Prime",
+        "keywords": "",
+        "description": "Chrono-Wave is a popular music genre on Riven Prime.<SEP>Chrono-Wave is a popular music genre on Riven Prime.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Kaelen Echo",
+        "keywords": "",
+        "description": "Kaelen Echo is a popular musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "Phase Shifter",
+        "keywords": "",
+        "description": "Phase Shifter is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Wave",
+        "tgt": "DJ Rewind",
+        "keywords": "",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "DJ Rewind",
+        "tgt": "Future Echoes",
+        "keywords": "",
+        "description": "DJ Rewind's groundbreaking first album is 'Future Echoes'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Riven Prime",
+        "tgt": "Temporal Resonance",
+        "keywords": "",
+        "description": "Music criticism on Riven Prime frequently analyzes temporal resonance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Flour",
+        "tgt": "Chrono-Wave",
+        "keywords": "",
+        "description": "Zorpian ale is a popular drink in the Outer Rim.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Rupture",
+        "tgt": "Phase Shifter",
+        "keywords": "",
+        "description": "Airships are used to travel between the Floating Islands of Aeridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Reality-Institute",
+        "tgt": "Temporal Resonance",
+        "keywords": "",
+        "description": "Echo-Bats emit a sonic screech to disorient threats.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Diplomatic Corps",
+        "tgt": "Phase Shifter",
+        "keywords": "",
+        "description": "The Ghostly-Guild regulates the activities of ethereal hunters, who specialize in capturing supernatural beings.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:30:40.370394",
+  "llm_calls": 45,
+  "mode": "ff"
+}

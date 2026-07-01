@@ -1,0 +1,176 @@
+{
+  "question": "On which day do the Xandrians celebrate their New Year?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Dual Zenith Day"
+    ]
+  ],
+  "cost": 9,
+  "answers": {
+    "ground_truth": "Dual Zenith Day",
+    "original": "The Xandrians celebrate their New Year on Dual Zenith Day.",
+    "perturbed": "I don't have enough information to answer that.",
+    "similarity": -0.070474
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Chrono-Synthesizers"
+      ],
+      [
+        "add_edge",
+        [
+          "Chrono-Synthesizers",
+          "Dual Zenith Day"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Void-Cloaks allow the wearer to shadow-meld, becoming one with darkness.",
+          "keywords": "ability,technique",
+          "source_id": "chunk-58a046875ebdee22cd2135d336e52823",
+          "file_path": "unknown_source",
+          "created_at": 1776370385,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Live Music Venues"
+      ],
+      [
+        "add_edge",
+        [
+          "Live Music Venues",
+          "Dual Zenith Day"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Solara requires specialized containment systems for safe handling.",
+          "keywords": "containment requirement,safe handling",
+          "source_id": "chunk-fdbdb9446200becfa82435a43d9650c2",
+          "file_path": "unknown_source",
+          "created_at": 1776376918,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xandrians",
+        "type": "person",
+        "description": "Xandrians are the inhabitants of the planet Xandria who celebrate their New Year on Dual Zenith Day.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dual Zenith Day",
+        "type": "event",
+        "description": "Dual Zenith Day is the Xandrian New Year celebration when the twin suns of Xandria's system align.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xandrian New Year",
+        "type": "event",
+        "description": "The Xandrian New Year is celebrated on Dual Zenith Day according to their ancient calendar.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dual Zenith Day",
+        "tgt": "Xandrians",
+        "keywords": "",
+        "description": "Xandrians celebrate their New Year on Dual Zenith Day.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dual Zenith Day",
+        "tgt": "Xandrian New Year",
+        "keywords": "",
+        "description": "Dual Zenith Day marks the Xandrian New Year according to their ancient calendar.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Xandrians",
+        "type": "person",
+        "description": "Xandrians are the inhabitants of the planet Xandria who celebrate their New Year on Dual Zenith Day.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dual Zenith Day",
+        "type": "event",
+        "description": "Dual Zenith Day is the Xandrian New Year celebration when the twin suns of Xandria's system align.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xandrian New Year",
+        "type": "event",
+        "description": "The Xandrian New Year is celebrated on Dual Zenith Day according to their ancient calendar.",
+        "rank": 0.0
+      },
+      {
+        "name": "Chrono-Synthesizers",
+        "type": "",
+        "description": "Chrono-Synthesizers are devices found in music production studios on Riven Prime, capable of generating sounds from other eras.<SEP>Chrono-Synthesizers are music production tools capable of generating sounds from other eras.",
+        "rank": 0.0
+      },
+      {
+        "name": "Live Music Venues",
+        "type": "",
+        "description": "Live music venues on Riven Prime often incorporate synchronized echoes from the past or projected audio snippets of possible futures.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dual Zenith Day",
+        "tgt": "Xandrians",
+        "keywords": "",
+        "description": "Xandrians celebrate their New Year on Dual Zenith Day.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dual Zenith Day",
+        "tgt": "Xandrian New Year",
+        "keywords": "",
+        "description": "Dual Zenith Day marks the Xandrian New Year according to their ancient calendar.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chrono-Synthesizers",
+        "tgt": "Dual Zenith Day",
+        "keywords": "",
+        "description": "Void-Cloaks allow the wearer to shadow-meld, becoming one with darkness.",
+        "weight": 0.0
+      },
+      {
+        "src": "Live Music Venues",
+        "tgt": "Dual Zenith Day",
+        "keywords": "",
+        "description": "Solara requires specialized containment systems for safe handling.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:55:42.275040",
+  "llm_calls": 15,
+  "mode": "ft"
+}

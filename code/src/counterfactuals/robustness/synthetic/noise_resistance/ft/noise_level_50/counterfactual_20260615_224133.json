@@ -1,0 +1,364 @@
+{
+  "question": "What two abilities do Phantasmal 'Spirit-Mirrors' possess?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "Phantasmal 'Spirit-Mirrors' reveal 'Soul-Echoes' and project 'Phantom-Images'.",
+    "original": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' and project 'Phantom-Images'.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Triskelion's Moons"
+      ],
+      [
+        "add_edge",
+        [
+          "Triskelion's Moons",
+          "Phantasmal Artisans"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Quantum Society exists in multiple dimensions simultaneously.",
+          "keywords": "existence,simultaneous",
+          "source_id": "chunk-856633022d5e5030b7095161d9c2ded2",
+          "file_path": "unknown_source",
+          "created_at": 1776372370,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Central Command Unit"
+      ],
+      [
+        "add_edge",
+        [
+          "Central Command Unit",
+          "Phantom-Images"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The wings of a Glimmerwing Moth are prized for their iridescent dust.",
+          "keywords": "prized feature,wings",
+          "source_id": "chunk-9e8af3308d2e40e0bab7abb3f38c8dc0",
+          "file_path": "unknown_source",
+          "created_at": 1776373346,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Song-Bronze"
+      ],
+      [
+        "add_edge",
+        [
+          "Song-Bronze",
+          "Soul-Echoes"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Grand-Alchemist is involved in the study and mastery of alchemical arts.",
+          "keywords": "mastery,study",
+          "source_id": "chunk-33c4a997e02d1f9deac5d304cf96e2ed",
+          "file_path": "unknown_source",
+          "created_at": 1776371977,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Xylotian Explorers"
+      ],
+      [
+        "add_edge",
+        [
+          "Xylotian Explorers",
+          "Phantom-Images"
+        ],
+        {
+          "weight": 3.0,
+          "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+          "keywords": "buoyancy,composition,cultural significance,movement",
+          "source_id": "chunk-56e0a12548f29b791d118efb316a2b35<SEP>chunk-ef92bfdc623979401f2333636f21a156",
+          "file_path": "unknown_source",
+          "created_at": 1776378362,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "artifact",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Images",
+        "type": "concept",
+        "description": "'Phantom-Images' are illusory duplicates created by Phantasmal 'Spirit-Mirrors' that can interact with the physical world.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Realm",
+        "type": "location",
+        "description": "The Phantasmal realm exists between reality and dreams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Investigators",
+        "type": "person",
+        "description": "Investigators highly seek after Spirit-Mirrors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Soul-Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mirror-Guild",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Artisans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall-of-Mirrors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Soul-Echoes",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Realm",
+        "keywords": "",
+        "description": "The Phantasmal realm is the domain where Phantasmal 'Spirit-Mirrors' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantom-Images",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' project 'Phantom-Images' that can interact with the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Artisans",
+        "keywords": "",
+        "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Investigators",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "Investigators highly seek after Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mirror-Guild",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall-of-Mirrors",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Hall-of-Mirrors contains Phantasmal 'Spirit-Mirrors' creating a maze of infinite reflections.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "artifact",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Images",
+        "type": "concept",
+        "description": "'Phantom-Images' are illusory duplicates created by Phantasmal 'Spirit-Mirrors' that can interact with the physical world.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Realm",
+        "type": "location",
+        "description": "The Phantasmal realm exists between reality and dreams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Investigators",
+        "type": "person",
+        "description": "Investigators highly seek after Spirit-Mirrors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Soul-Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mirror-Guild",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Artisans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall-of-Mirrors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "The Central Command Unit is a device to which data from the Pathfinder Helm can be transmitted.",
+        "rank": 0.0
+      },
+      {
+        "name": "Song-Bronze",
+        "type": "",
+        "description": "Song-Bronze is a type of bronze used to cast Harmony-Bells, known for producing perfect musical tones and requiring specific temperature conditions during forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Explorers",
+        "type": "",
+        "description": "Xylotian explorers carry Survival Packs with rations and tools.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Soul-Echoes",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Realm",
+        "keywords": "",
+        "description": "The Phantasmal realm is the domain where Phantasmal 'Spirit-Mirrors' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantom-Images",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' project 'Phantom-Images' that can interact with the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Artisans",
+        "keywords": "",
+        "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Investigators",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "Investigators highly seek after Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mirror-Guild",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall-of-Mirrors",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Hall-of-Mirrors contains Phantasmal 'Spirit-Mirrors' creating a maze of infinite reflections.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion's Moons",
+        "tgt": "Phantasmal Artisans",
+        "keywords": "",
+        "description": "Quantum Society exists in multiple dimensions simultaneously.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Phantom-Images",
+        "keywords": "",
+        "description": "The wings of a Glimmerwing Moth are prized for their iridescent dust.",
+        "weight": 0.0
+      },
+      {
+        "src": "Song-Bronze",
+        "tgt": "Soul-Echoes",
+        "keywords": "",
+        "description": "The Grand-Alchemist is involved in the study and mastery of alchemical arts.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Explorers",
+        "tgt": "Phantom-Images",
+        "keywords": "",
+        "description": "The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides their buoyancy.<SEP>Aeridium Ore allows the Floating Islands of Aeridia to move slowly across the sky and is considered sacred by many cultures.<SEP>The Floating Islands of Aeridia are primarily composed of Aeridium Ore, which provides buoyancy.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:41:33.017519",
+  "llm_calls": 201,
+  "mode": "ft"
+}

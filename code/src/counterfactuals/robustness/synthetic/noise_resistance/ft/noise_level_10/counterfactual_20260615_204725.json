@@ -1,0 +1,372 @@
+{
+  "question": "What two sensory inputs does the 'Pathfinder Helm' integrate for Xylotian explorers?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Echo-Location Sonar"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The 'Pathfinder Helm' integrates 'Echo-Location Sonar' for physical mapping and 'Bio-Sign Scanners' for detecting life forms.",
+    "original": "The Pathfinder Helm integrates Echo-Location Sonar and Bio-Sign Scanners for Xylotian explorers.",
+    "perturbed": "The Pathfinder Helm integrates Bio-Sign Scanners to detect living organisms and provides basic atmospheric analysis.",
+    "similarity": 0.626224
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Shopping List"
+      ],
+      [
+        "add_edge",
+        [
+          "Shopping List",
+          "Atmospheric Analysis"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Crystalline Spires are composed of Luxite, found where the planet's magnetic fields intersect.",
+          "keywords": "composition,magnetic fields",
+          "source_id": "chunk-ef92bfdc623979401f2333636f21a156",
+          "file_path": "unknown_source",
+          "created_at": 1776378362,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Location Sonar",
+        "type": "artifact",
+        "description": "Echo-Location Sonar is a technology incorporated into the Pathfinder Helm to map out physical surroundings in zero visibility.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Location Sonar",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shopping List",
+        "type": "",
+        "description": "A shopping list is being made by her.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shopping List",
+        "tgt": "Atmospheric Analysis",
+        "keywords": "composition,magnetic fields",
+        "description": "The Crystalline Spires are composed of Luxite, found where the planet's magnetic fields intersect.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Pathfinder Helm",
+        "type": "artifact",
+        "description": "The Pathfinder Helm is a piece of equipment used by Xylotian reconnaissance teams, featuring various advanced technologies.",
+        "rank": 0.0
+      },
+      {
+        "name": "Echo-Location Sonar",
+        "type": "artifact",
+        "description": "Echo-Location Sonar is a technology incorporated into the Pathfinder Helm to map out physical surroundings in zero visibility.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Reconnaissance Teams",
+        "type": "UNKNOWN",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bio-Sign Scanners",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal-Quartz",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Central Command Unit",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Power Cell",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atmospheric Analysis",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shopping List",
+        "type": "",
+        "description": "A shopping list is being made by her.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Xylotian Reconnaissance Teams",
+        "keywords": "",
+        "description": "Pathfinder Helms are standard issue for Xylotian reconnaissance teams.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pathfinder Helm",
+        "tgt": "Power Cell",
+        "keywords": "",
+        "description": "The Power Cell of the Pathfinder Helm provides up to 72 Xylotian hours of continuous operation.",
+        "weight": 0.0
+      },
+      {
+        "src": "Echo-Location Sonar",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bio-Sign Scanners",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm is equipped with Bio-Sign Scanners to detect living organisms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal-Quartz",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The visor of the Pathfinder Helm is made from Crystal-Quartz for impact protection.",
+        "weight": 0.0
+      },
+      {
+        "src": "Central Command Unit",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "Data from the Pathfinder Helm can be transmitted to a Central Command Unit.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atmospheric Analysis",
+        "tgt": "Pathfinder Helm",
+        "keywords": "",
+        "description": "The Pathfinder Helm provides basic atmospheric analysis.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shopping List",
+        "tgt": "Atmospheric Analysis",
+        "keywords": "",
+        "description": "The Crystalline Spires are composed of Luxite, found where the planet's magnetic fields intersect.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:47:25.161128",
+  "llm_calls": 4,
+  "mode": "ft"
+}

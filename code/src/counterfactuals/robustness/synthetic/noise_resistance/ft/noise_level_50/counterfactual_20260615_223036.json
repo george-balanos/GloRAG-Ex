@@ -1,0 +1,346 @@
+{
+  "question": "What two types of information are encoded onto a Xylotian 'Legacy Crystal'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Legacy Crystal"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "A Xylotian 'Legacy Crystal' encodes a 'Lineage Record' and a 'Core Essence Imprint'.",
+    "original": "A Xylotian 'Legacy Crystal' stores a Lineage Record and a Core Essence Imprint.",
+    "perturbed": "The two types of information encoded onto a Xylotian 'Legacy Crystal' are the genetic code and the life story of the Xylotian.",
+    "similarity": 0.722643
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Sun-Wardens"
+      ],
+      [
+        "add_edge",
+        [
+          "Sun-Wardens",
+          "Crystal Readers"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Crystal Caves of Lumina contain rare gems.",
+          "keywords": "containment,location",
+          "source_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e",
+          "file_path": "unknown_source",
+          "created_at": 1776369136,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Stellar Converter"
+      ],
+      [
+        "add_edge",
+        [
+          "Stellar Converter",
+          "Hall of Ancestors"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Navigational tools on a Sky-Skiff include a Wind-Gauge.",
+          "keywords": "navigation,tool",
+          "source_id": "chunk-2d9f68ea236e65773d7fa8dfce96706b",
+          "file_path": "unknown_source",
+          "created_at": 1776366082,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Ethereal Crafters"
+      ],
+      [
+        "add_edge",
+        [
+          "Ethereal Crafters",
+          "Xylos"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+          "keywords": "cultural practice,temporal characteristic",
+          "source_id": "chunk-9293f632cf1fe9f1e68935d39d7ef7d8",
+          "file_path": "unknown_source",
+          "created_at": 1776374602,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Legacy Crystal",
+        "type": "artifact",
+        "description": "A Xylotian Legacy Crystal is a traditional artifact that stores a Lineage Record and a Core Essence Imprint, passed down as family heirlooms on Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Readers",
+        "type": "person",
+        "description": "Crystal Readers are Xylotians who are consulted to interpret older Legacy Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "location",
+        "description": "Xylos is a planet characterized by its unique environmental and cultural attributes. The planet's upper atmosphere is notable for the cultivation of Aero-Coral, a distinctive feature of its ecosystem. Xylos is also home to the Temporal College, an institution where Chrono-Weavers undergo training, indicating a significant focus on temporal or time-related sciences.\n\nThe planet serves as the homeworld of the Xylotians, a species known for launching terraforming pods from its surface. The Xylotians utilize advanced technologies such as Matter Re-sequencers for various applications, showcasing their technological prowess. Additionally, the planet's regions play a role in the design of Aura-Cloaks, suggesting a connection between its geography and cultural artifacts.\n\nXylos's crust is rich in Dual-Resonance Crystals, and the planet hosts sentient life forms that emit psychic energy, adding to its mystical and scientific intrigue. The Xylotians also pass down Legacy Crystals as family heirlooms, highlighting the cultural significance of these objects. Furthermore, Xylos is part of a binary star system and experiences unusual atmospheric storms, contributing to its dynamic and diverse environment.<SEP>Xylos is a planet with an orbital platform called the Aegis Station positioned above it.<SEP>Xylos is a planet with unusual atmospheric storms and intense volcanic activity.<SEP>Xylos is a planet with an orbital platform called Aegis Station positioned above it.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lineage Record",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Core Essence Imprint",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall of Ancestors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Legacy Crystal",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Legacy Crystals are passed down as family heirlooms on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Legacy Crystal",
+        "tgt": "Lineage Record",
+        "keywords": "",
+        "description": "A Legacy Crystal stores a Lineage Record chronicling the direct ancestors of its creator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Readers",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Core Essence Imprint",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "A Legacy Crystal stores a Core Essence Imprint, a psychic snapshot of the creator's personality and defining memories.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall of Ancestors",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "The Hall of Ancestors displays many prominent Legacy Crystals.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Crystal Readers",
+        "type": "person",
+        "description": "Crystal Readers are Xylotians who are consulted to interpret older Legacy Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "location",
+        "description": "Xylos is a planet characterized by its unique environmental and cultural attributes. The planet's upper atmosphere is notable for the cultivation of Aero-Coral, a distinctive feature of its ecosystem. Xylos is also home to the Temporal College, an institution where Chrono-Weavers undergo training, indicating a significant focus on temporal or time-related sciences.\n\nThe planet serves as the homeworld of the Xylotians, a species known for launching terraforming pods from its surface. The Xylotians utilize advanced technologies such as Matter Re-sequencers for various applications, showcasing their technological prowess. Additionally, the planet's regions play a role in the design of Aura-Cloaks, suggesting a connection between its geography and cultural artifacts.\n\nXylos's crust is rich in Dual-Resonance Crystals, and the planet hosts sentient life forms that emit psychic energy, adding to its mystical and scientific intrigue. The Xylotians also pass down Legacy Crystals as family heirlooms, highlighting the cultural significance of these objects. Furthermore, Xylos is part of a binary star system and experiences unusual atmospheric storms, contributing to its dynamic and diverse environment.<SEP>Xylos is a planet with an orbital platform called the Aegis Station positioned above it.<SEP>Xylos is a planet with unusual atmospheric storms and intense volcanic activity.<SEP>Xylos is a planet with an orbital platform called Aegis Station positioned above it.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall of Ancestors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sun-Wardens",
+        "type": "",
+        "description": "The Sun-Wardens are another group of guardians who wield radiant spears tipped with Sun-Stone.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Crafters",
+        "type": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sun-Wardens",
+        "tgt": "Crystal Readers",
+        "keywords": "containment,location",
+        "description": "The Crystal Caves of Lumina contain rare gems.",
+        "weight": 1.0
+      },
+      {
+        "src": "Stellar Converter",
+        "tgt": "Hall of Ancestors",
+        "keywords": "navigation,tool",
+        "description": "Navigational tools on a Sky-Skiff include a Wind-Gauge.",
+        "weight": 1.0
+      },
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Xylos",
+        "keywords": "cultural practice,temporal characteristic",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Legacy Crystal",
+        "type": "artifact",
+        "description": "A Xylotian Legacy Crystal is a traditional artifact that stores a Lineage Record and a Core Essence Imprint, passed down as family heirlooms on Xylos.",
+        "rank": 0.0
+      },
+      {
+        "name": "Crystal Readers",
+        "type": "person",
+        "description": "Crystal Readers are Xylotians who are consulted to interpret older Legacy Crystals.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "location",
+        "description": "Xylos is a planet characterized by its unique environmental and cultural attributes. The planet's upper atmosphere is notable for the cultivation of Aero-Coral, a distinctive feature of its ecosystem. Xylos is also home to the Temporal College, an institution where Chrono-Weavers undergo training, indicating a significant focus on temporal or time-related sciences.\n\nThe planet serves as the homeworld of the Xylotians, a species known for launching terraforming pods from its surface. The Xylotians utilize advanced technologies such as Matter Re-sequencers for various applications, showcasing their technological prowess. Additionally, the planet's regions play a role in the design of Aura-Cloaks, suggesting a connection between its geography and cultural artifacts.\n\nXylos's crust is rich in Dual-Resonance Crystals, and the planet hosts sentient life forms that emit psychic energy, adding to its mystical and scientific intrigue. The Xylotians also pass down Legacy Crystals as family heirlooms, highlighting the cultural significance of these objects. Furthermore, Xylos is part of a binary star system and experiences unusual atmospheric storms, contributing to its dynamic and diverse environment.<SEP>Xylos is a planet with an orbital platform called the Aegis Station positioned above it.<SEP>Xylos is a planet with unusual atmospheric storms and intense volcanic activity.<SEP>Xylos is a planet with an orbital platform called Aegis Station positioned above it.",
+        "rank": 0.0
+      },
+      {
+        "name": "Lineage Record",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Core Essence Imprint",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall of Ancestors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sun-Wardens",
+        "type": "",
+        "description": "The Sun-Wardens are another group of guardians who wield radiant spears tipped with Sun-Stone.",
+        "rank": 0.0
+      },
+      {
+        "name": "Stellar Converter",
+        "type": "",
+        "description": "The Stellar Converter is a massive energy generation facility designed to convert atmospheric storms into electrical power.<SEP>The Stellar Converter is a massive energy generation facility designed to capture and convert atmospheric storms into electrical power.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ethereal Crafters",
+        "type": "",
+        "description": "Ethereal crafters work only during midnight hours to weave Ghost-Nets.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Legacy Crystal",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Legacy Crystals are passed down as family heirlooms on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Legacy Crystal",
+        "tgt": "Lineage Record",
+        "keywords": "",
+        "description": "A Legacy Crystal stores a Lineage Record chronicling the direct ancestors of its creator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Crystal Readers",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "Crystal Readers are consulted to interpret older Legacy Crystals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Core Essence Imprint",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "A Legacy Crystal stores a Core Essence Imprint, a psychic snapshot of the creator's personality and defining memories.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall of Ancestors",
+        "tgt": "Legacy Crystal",
+        "keywords": "",
+        "description": "The Hall of Ancestors displays many prominent Legacy Crystals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sun-Wardens",
+        "tgt": "Crystal Readers",
+        "keywords": "",
+        "description": "The Crystal Caves of Lumina contain rare gems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Stellar Converter",
+        "tgt": "Hall of Ancestors",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Wind-Gauge.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ethereal Crafters",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Blimptonian week is a unique cultural aspect of Blimpton.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:30:36.564747",
+  "llm_calls": 137,
+  "mode": "ft"
+}

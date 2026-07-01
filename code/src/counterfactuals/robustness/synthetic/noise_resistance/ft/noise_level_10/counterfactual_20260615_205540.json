@@ -1,0 +1,265 @@
+{
+  "question": "What two abilities do Phantasmal 'Spirit-Mirrors' possess?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "Phantasmal 'Spirit-Mirrors' reveal 'Soul-Echoes' and project 'Phantom-Images'.",
+    "original": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' and project 'Phantom-Images'.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Triskelion's Moons"
+      ],
+      [
+        "add_edge",
+        [
+          "Triskelion's Moons",
+          "Phantasmal 'Spirit-Mirrors'"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Atlantean smiths work in pressurized forges.",
+          "keywords": "crafting,work environment",
+          "source_id": "chunk-b62a3a837a626d418867d6c09415f364",
+          "file_path": "unknown_source",
+          "created_at": 1776369978,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "artifact",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Images",
+        "type": "concept",
+        "description": "'Phantom-Images' are illusory duplicates created by Phantasmal 'Spirit-Mirrors' that can interact with the physical world.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Realm",
+        "type": "location",
+        "description": "The Phantasmal realm exists between reality and dreams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Investigators",
+        "type": "person",
+        "description": "Investigators highly seek after Spirit-Mirrors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Soul-Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mirror-Guild",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Artisans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall-of-Mirrors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Soul-Echoes",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Realm",
+        "keywords": "",
+        "description": "The Phantasmal realm is the domain where Phantasmal 'Spirit-Mirrors' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantom-Images",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' project 'Phantom-Images' that can interact with the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Artisans",
+        "keywords": "",
+        "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Investigators",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "Investigators highly seek after Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mirror-Guild",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall-of-Mirrors",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Hall-of-Mirrors contains Phantasmal 'Spirit-Mirrors' creating a maze of infinite reflections.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "artifact",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom-Images",
+        "type": "concept",
+        "description": "'Phantom-Images' are illusory duplicates created by Phantasmal 'Spirit-Mirrors' that can interact with the physical world.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Realm",
+        "type": "location",
+        "description": "The Phantasmal realm exists between reality and dreams.",
+        "rank": 0.0
+      },
+      {
+        "name": "Investigators",
+        "type": "person",
+        "description": "Investigators highly seek after Spirit-Mirrors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Soul-Echoes",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Mirror-Guild",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal Artisans",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hall-of-Mirrors",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Triskelion's Moons",
+        "type": "",
+        "description": "Triskelion has three moons in a stable figure-8 orbit.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Soul-Echoes",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Realm",
+        "keywords": "",
+        "description": "The Phantasmal realm is the domain where Phantasmal 'Spirit-Mirrors' exist.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantom-Images",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' project 'Phantom-Images' that can interact with the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Phantasmal Artisans",
+        "keywords": "",
+        "description": "Phantasmal artisans work with ethereal materials to craft Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Investigators",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "Investigators highly seek after Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mirror-Guild",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Mirror-Guild crafts Phantasmal 'Spirit-Mirrors'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Hall-of-Mirrors",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "The Hall-of-Mirrors contains Phantasmal 'Spirit-Mirrors' creating a maze of infinite reflections.",
+        "weight": 0.0
+      },
+      {
+        "src": "Triskelion's Moons",
+        "tgt": "Phantasmal 'Spirit-Mirrors'",
+        "keywords": "",
+        "description": "Atlantean smiths work in pressurized forges.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:55:40.770837",
+  "llm_calls": 201,
+  "mode": "ft"
+}

@@ -1,0 +1,319 @@
+{
+  "question": "What is the primary ingredient of the healing potion known as 'Sunpetal Balm'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Glow-Moss"
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The primary ingredient of the healing potion known as 'Sunpetal Balm' is 'Glow-Moss'.",
+    "original": "The primary ingredient of Sunpetal Balm is finely ground powder derived from Glow-Moss.",
+    "perturbed": "The primary ingredient of Sunpetal Balm is not specified in the provided context.",
+    "similarity": 0.752377
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Zylosian Geo-Resonator Model XR-7A"
+      ],
+      [
+        "add_edge",
+        [
+          "Zylosian Geo-Resonator Model XR-7A",
+          "Adventurers"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The official language of Zorblaxia has 47 letters.",
+          "keywords": "culture,language",
+          "source_id": "chunk-18df7f613f2ebf0d51e932222a8cf8b6",
+          "file_path": "unknown_source",
+          "created_at": 1776374207,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Floopy Rays"
+      ],
+      [
+        "add_edge",
+        [
+          "Floopy Rays",
+          "Adventurers"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Master artisans craft Echo-Lenses.",
+          "keywords": "crafting,creation",
+          "source_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e",
+          "file_path": "unknown_source",
+          "created_at": 1776369136,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Regenerative Properties",
+        "type": "concept",
+        "description": "Regenerative properties refer to the rapid healing effects of Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Moss",
+        "type": "naturalobject",
+        "description": "Glow-Moss is a rare bioluminescent plant whose finely ground powder is a key component in creating Sunpetal Balm.<SEP>Glow-Moss is a rare bioluminescent plant whose finely ground powder is a key component in Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Adventurers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Skill",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Moss",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Adventurers",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Skill",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Creating Sunpetal Balm requires alchemical skill, indicating a specialized method.<SEP>Creating Sunpetal Balm requires alchemical skill.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Regenerative Properties",
+        "type": "concept",
+        "description": "Regenerative properties refer to the rapid healing effects of Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Adventurers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Skill",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylosian Geo-Resonator Model XR-7A",
+        "type": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A is a specific version of the Geo-Resonator that requires a standard Z-type power cell to operate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Floopy Rays",
+        "type": "",
+        "description": "Floopy rays are a type of radiation or energy that shield generators protect against.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Adventurers",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Skill",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Creating Sunpetal Balm requires alchemical skill, indicating a specialized method.<SEP>Creating Sunpetal Balm requires alchemical skill.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zylosian Geo-Resonator Model XR-7A",
+        "tgt": "Adventurers",
+        "keywords": "culture,language",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 1.0
+      },
+      {
+        "src": "Floopy Rays",
+        "tgt": "Adventurers",
+        "keywords": "crafting,creation",
+        "description": "Master artisans craft Echo-Lenses.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Sunpetal Balm",
+        "type": "artifact",
+        "description": "Sunpetal Balm is a highly prized healing potion known for its rapid regenerative properties and is often carried by adventurers.<SEP>Sunpetal Balm is a famous potion known for its rapid regenerative properties and has a slightly golden color.",
+        "rank": 0.0
+      },
+      {
+        "name": "Healing Potion",
+        "type": "artifact",
+        "description": "Healing potion is a general category that includes various remedies, with Sunpetal Balm being one of the most potent.",
+        "rank": 0.0
+      },
+      {
+        "name": "Regenerative Properties",
+        "type": "concept",
+        "description": "Regenerative properties refer to the rapid healing effects of Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glow-Moss",
+        "type": "naturalobject",
+        "description": "Glow-Moss is a rare bioluminescent plant whose finely ground powder is a key component in creating Sunpetal Balm.<SEP>Glow-Moss is a rare bioluminescent plant whose finely ground powder is a key component in Sunpetal Balm.",
+        "rank": 0.0
+      },
+      {
+        "name": "Adventurers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Alchemical Skill",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zylosian Geo-Resonator Model XR-7A",
+        "type": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A is a specific version of the Geo-Resonator that requires a standard Z-type power cell to operate.",
+        "rank": 0.0
+      },
+      {
+        "name": "Floopy Rays",
+        "type": "",
+        "description": "Floopy rays are a type of radiation or energy that shield generators protect against.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Healing Potion",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Sunpetal Balm is a specific type of healing potion known for its potency.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glow-Moss",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Glow-Moss is a key component in the creation of Sunpetal Balm, contributing to its healing properties.<SEP>Sunpetal Balm requires finely ground powder derived from Glow-Moss as its main component.",
+        "weight": 0.0
+      },
+      {
+        "src": "Adventurers",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+        "weight": 0.0
+      },
+      {
+        "src": "Alchemical Skill",
+        "tgt": "Sunpetal Balm",
+        "keywords": "",
+        "description": "Creating Sunpetal Balm requires alchemical skill, indicating a specialized method.<SEP>Creating Sunpetal Balm requires alchemical skill.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zylosian Geo-Resonator Model XR-7A",
+        "tgt": "Adventurers",
+        "keywords": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floopy Rays",
+        "tgt": "Adventurers",
+        "keywords": "",
+        "description": "Master artisans craft Echo-Lenses.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:17:23.136009",
+  "llm_calls": 5,
+  "mode": "ft"
+}

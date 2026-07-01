@@ -1,0 +1,197 @@
+{
+  "question": "Which tools does a carpenter use and what are their stated purposes?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Carpenter"
+    ]
+  ],
+  "cost": 6,
+  "answers": {
+    "ground_truth": "A carpenter uses a hammer to drive nails and a saw to cut wood.",
+    "original": "The carpenter uses a hammer to drive nails and a saw to cut wood.",
+    "perturbed": "A carpenter uses a saw to cut wood.",
+    "similarity": 0.822071
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Phantasmal 'Spirit-Mirrors'"
+      ],
+      [
+        "add_edge",
+        [
+          "Phantasmal 'Spirit-Mirrors'",
+          "Saw"
+        ],
+        {
+          "weight": 1.0,
+          "description": "DJ Rewind is a musician in the Chrono-Wave genre.",
+          "keywords": "genre,musician",
+          "source_id": "chunk-8ee54215efdd5fc7b9052ad0c42d46c8",
+          "file_path": "unknown_source",
+          "created_at": 1776380318,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Seed Vaults"
+      ],
+      [
+        "add_edge",
+        [
+          "Seed Vaults",
+          "Carpenter"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Zephyrian weather patterns follow a 12-day cycle, which is related to the capture of Lightning Essence.",
+          "keywords": "energy capture,weather cycle",
+          "source_id": "chunk-dbfd518f3805f5b8ca795225dfe27c7e",
+          "file_path": "unknown_source",
+          "created_at": 1776368724,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Carpenter",
+        "type": "person",
+        "description": "The carpenter uses tools like a hammer and a saw to work with nails and wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hammer",
+        "type": "artifact",
+        "description": "The hammer is a tool used by the carpenter to drive nails.",
+        "rank": 0.0
+      },
+      {
+        "name": "Saw",
+        "type": "artifact",
+        "description": "The saw is a tool used by the carpenter to cut wood.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Carpenter",
+        "tgt": "Hammer",
+        "keywords": "",
+        "description": "The carpenter uses a hammer to drive nails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Carpenter",
+        "tgt": "Saw",
+        "keywords": "",
+        "description": "The carpenter uses a saw to cut wood.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Saw",
+        "type": "artifact",
+        "description": "The saw is a tool used by the carpenter to cut wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Saw",
+        "keywords": "genre,musician",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Carpenter",
+        "type": "person",
+        "description": "The carpenter uses tools like a hammer and a saw to work with nails and wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Hammer",
+        "type": "artifact",
+        "description": "The hammer is a tool used by the carpenter to drive nails.",
+        "rank": 0.0
+      },
+      {
+        "name": "Saw",
+        "type": "artifact",
+        "description": "The saw is a tool used by the carpenter to cut wood.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantasmal 'Spirit-Mirrors'",
+        "type": "",
+        "description": "Phantasmal 'Spirit-Mirrors' are magical mirrors capable of revealing 'Soul-Echoes' and projecting 'Phantom-Images'.",
+        "rank": 0.0
+      },
+      {
+        "name": "Seed Vaults",
+        "type": "",
+        "description": "Seed Vaults on Xylos contain genetic material for countless plant species.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Carpenter",
+        "tgt": "Hammer",
+        "keywords": "",
+        "description": "The carpenter uses a hammer to drive nails.",
+        "weight": 0.0
+      },
+      {
+        "src": "Carpenter",
+        "tgt": "Saw",
+        "keywords": "",
+        "description": "The carpenter uses a saw to cut wood.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantasmal 'Spirit-Mirrors'",
+        "tgt": "Saw",
+        "keywords": "",
+        "description": "DJ Rewind is a musician in the Chrono-Wave genre.",
+        "weight": 0.0
+      },
+      {
+        "src": "Seed Vaults",
+        "tgt": "Carpenter",
+        "keywords": "",
+        "description": "Zephyrian weather patterns follow a 12-day cycle, which is related to the capture of Lightning Essence.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:31:06.016941",
+  "llm_calls": 11,
+  "mode": "ft"
+}

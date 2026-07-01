@@ -1,0 +1,352 @@
+{
+  "question": "What two capabilities does the Etherean 'Soul-Compass' provide to spirit guides?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The Etherean 'Soul-Compass' detects 'Life-Auras' and navigates 'Astral-Currents'.",
+    "original": "The Etherean Soul-Compass allows spirit guides to detect Life-Auras and navigate Astral-Currents.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Floating Islands of Aeridia"
+      ],
+      [
+        "add_edge",
+        [
+          "Floating Islands of Aeridia",
+          "Spirit Guide"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+          "keywords": "concentration,technique",
+          "source_id": "chunk-2887778a6a2df3dfa6983170922380e7",
+          "file_path": "unknown_source",
+          "created_at": 1776368861,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Millennia"
+      ],
+      [
+        "add_edge",
+        [
+          "Millennia",
+          "Spirit-Realm"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Verdant is the third planet in the Lumina System, located within the habitable zone.<SEP>Verdant is the third planet in the Lumina System, located within the habitable zone and known for its widespread flora.",
+          "keywords": "location,planetary composition,planetary system",
+          "source_id": "chunk-7f5314f2ea2b2e09a54bf620954df4a3<SEP>chunk-4711fe35f04eff5ed27358c3c80c1ff9",
+          "file_path": "unknown_source",
+          "created_at": 1776379873,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Verdant Healers"
+      ],
+      [
+        "add_edge",
+        [
+          "Verdant Healers",
+          "Etherean Soul-Compass"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Celestian Film Industry holds awards ceremonies that are broadcast across star systems.",
+          "keywords": "broadcast,industry event",
+          "source_id": "chunk-c64531f85f69d764bfa3b1d7312ed1bb",
+          "file_path": "unknown_source",
+          "created_at": 1776380017,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Ocean Streams"
+      ],
+      [
+        "add_edge",
+        [
+          "Ocean Streams",
+          "Etherean Music"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The prophecy spoke of a chosen Zoodle.",
+          "keywords": "foretelling,prediction",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit Guide",
+        "type": "person",
+        "description": "Spirit guides are individuals who use the Soul-Compass to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Astral-Current",
+        "type": "concept",
+        "description": "Astral-Currents are invisible rivers between worlds that allow travel between dimensional planes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temple of Eternal Light",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Realm",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides use the Etherean Soul-Compass to detect Life-Auras.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Temple of Eternal Light",
+        "keywords": "",
+        "description": "The Temple of Eternal Light houses the first Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spirit Guide",
+        "tgt": "Spirit-Realm",
+        "keywords": "",
+        "description": "Spirit guides serve as bridges between the Spirit-Realm and the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Etherean Soul-Compass",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass allows navigation through Astral-Currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides navigate through Astral-Currents using the Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Music",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Etherean music is used by spirit guides to heal troubled souls.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Etherean Soul-Compass",
+        "type": "artifact",
+        "description": "The Etherean Soul-Compass is a device used by spirit guides to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit Guide",
+        "type": "person",
+        "description": "Spirit guides are individuals who use the Soul-Compass to detect Life-Auras and navigate Astral-Currents.",
+        "rank": 0.0
+      },
+      {
+        "name": "Astral-Current",
+        "type": "concept",
+        "description": "Astral-Currents are invisible rivers between worlds that allow travel between dimensional planes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Life-Aura",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Temple of Eternal Light",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Spirit-Realm",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Etherean Music",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Floating Islands of Aeridia",
+        "type": "",
+        "description": "The Floating Islands of Aeridia are natural landmasses that drift high above the world's surface in the upper atmosphere.<SEP>The Floating Islands of Aeridia are natural wonders on planet Ntulu, drifting high above the world's surface in the upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Millennia",
+        "type": "",
+        "description": "Light-Forging techniques have been refined over millennia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Healers",
+        "type": "",
+        "description": "Verdant healers are renowned throughout many realms for their healing abilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ocean Streams",
+        "type": "",
+        "description": "Current-Crystals channel the power of ocean streams.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides use the Etherean Soul-Compass to detect Life-Auras.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Life-Aura",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass detects Life-Auras around living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Soul-Compass",
+        "tgt": "Temple of Eternal Light",
+        "keywords": "",
+        "description": "The Temple of Eternal Light houses the first Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spirit Guide",
+        "tgt": "Spirit-Realm",
+        "keywords": "",
+        "description": "Spirit guides serve as bridges between the Spirit-Realm and the physical world.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Etherean Soul-Compass",
+        "keywords": "",
+        "description": "The Etherean Soul-Compass allows navigation through Astral-Currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Astral-Current",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Spirit guides navigate through Astral-Currents using the Soul-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Etherean Music",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Etherean music is used by spirit guides to heal troubled souls.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floating Islands of Aeridia",
+        "tgt": "Spirit Guide",
+        "keywords": "",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 0.0
+      },
+      {
+        "src": "Millennia",
+        "tgt": "Spirit-Realm",
+        "keywords": "",
+        "description": "Verdant is the third planet in the Lumina System, located within the habitable zone.<SEP>Verdant is the third planet in the Lumina System, located within the habitable zone and known for its widespread flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Verdant Healers",
+        "tgt": "Etherean Soul-Compass",
+        "keywords": "",
+        "description": "The Celestian Film Industry holds awards ceremonies that are broadcast across star systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ocean Streams",
+        "tgt": "Etherean Music",
+        "keywords": "",
+        "description": "The prophecy spoke of a chosen Zoodle.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:35:32.439746",
+  "llm_calls": 201,
+  "mode": "ft"
+}

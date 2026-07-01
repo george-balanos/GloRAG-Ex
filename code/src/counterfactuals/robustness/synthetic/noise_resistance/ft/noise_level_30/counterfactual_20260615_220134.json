@@ -1,0 +1,228 @@
+{
+  "question": "What two distinct powers do Verdant 'Life-Wands' channel?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Verdant Life-Wands"
+    ]
+  ],
+  "cost": 13,
+  "answers": {
+    "ground_truth": "Verdant 'Life-Wands' channel 'Growth-Force' and 'Vitality-Streams'.",
+    "original": "Verdant Life-Wands channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.111528
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Methane-Rich Atmosphere"
+      ],
+      [
+        "add_edge",
+        [
+          "Methane-Rich Atmosphere",
+          "Verdant Life-Wands"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+          "keywords": "revelation,true nature",
+          "source_id": "chunk-a8d5322c8953a45a40a65585c12dfa7d",
+          "file_path": "unknown_source",
+          "created_at": 1776370973,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Mailman"
+      ],
+      [
+        "add_edge",
+        [
+          "Mailman",
+          "Verdant Life-Wands"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Xylotian Sky-Skiff is primarily made from hardened Aero-Coral for its lightweight frame.",
+          "keywords": "construction material,durability",
+          "source_id": "chunk-2d9f68ea236e65773d7fa8dfce96706b",
+          "file_path": "unknown_source",
+          "created_at": 1776366082,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Verdant Life-Wands",
+        "type": "artifact",
+        "description": "Verdant Life-Wands are tools that can channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Growth-Force",
+        "type": "concept",
+        "description": "Growth-Force is a power that can accelerate plant development and healing, making seeds sprout in seconds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Living Branches",
+        "type": "naturalobject",
+        "description": "Life-Wands are carved from still-living branches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vitality-Streams",
+        "type": "concept",
+        "description": "Vitality-Streams are glowing green energy that can restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spring Equinox",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Verdant Life-Wands",
+        "tgt": "Vitality-Streams",
+        "keywords": "",
+        "description": "Verdant Life-Wands harness Vitality-Streams to restore health and energy to living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Growth-Force",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Verdant Life-Wands can channel Growth-Force to accelerate plant development and healing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Living Branches",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spring Equinox",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wand rituals are performed during the spring equinox.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [],
+    "relations": []
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Verdant Life-Wands",
+        "type": "artifact",
+        "description": "Verdant Life-Wands are tools that can channel Growth-Force to accelerate plant development and healing, and harness Vitality-Streams to restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Growth-Force",
+        "type": "concept",
+        "description": "Growth-Force is a power that can accelerate plant development and healing, making seeds sprout in seconds.",
+        "rank": 0.0
+      },
+      {
+        "name": "Living Branches",
+        "type": "naturalobject",
+        "description": "Life-Wands are carved from still-living branches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Vitality-Streams",
+        "type": "concept",
+        "description": "Vitality-Streams are glowing green energy that can restore health and energy to living creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Spring Equinox",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Methane-Rich Atmosphere",
+        "type": "",
+        "description": "Methane-rich atmosphere is a characteristic of Quixar, contributing to its extreme cold temperatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mailman",
+        "type": "",
+        "description": "The mailman is barked at by the dog.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Verdant Life-Wands",
+        "tgt": "Vitality-Streams",
+        "keywords": "",
+        "description": "Verdant Life-Wands harness Vitality-Streams to restore health and energy to living creatures.",
+        "weight": 0.0
+      },
+      {
+        "src": "Growth-Force",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Verdant Life-Wands can channel Growth-Force to accelerate plant development and healing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Living Branches",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Spring Equinox",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Life-Wand rituals are performed during the spring equinox.",
+        "weight": 0.0
+      },
+      {
+        "src": "Methane-Rich Atmosphere",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "Phantasmal 'Spirit-Mirrors' can reveal 'Soul-Echoes' that show the true nature of beings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mailman",
+        "tgt": "Verdant Life-Wands",
+        "keywords": "",
+        "description": "The Xylotian Sky-Skiff is primarily made from hardened Aero-Coral for its lightweight frame.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:01:34.283859",
+  "llm_calls": 63,
+  "mode": "ft"
+}

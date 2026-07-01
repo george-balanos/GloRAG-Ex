@@ -1,0 +1,301 @@
+{
+  "question": "What two materials are essential for creating Sylvanian 'Grove-Cloth'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Sylvanian Grove-Cloth"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "Sylvanian 'Grove-Cloth' is made from 'Whisper-Willow' fibers and 'Moon-Silk'.",
+    "original": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree and Moon-Silk.",
+    "perturbed": "The two materials essential for creating Sylvanian 'Grove-Cloth' are Moon-Silk and the craftsmanship of the Forest-Weavers.",
+    "similarity": 0.853979
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Petrified Sunlight"
+      ],
+      [
+        "add_edge",
+        [
+          "Petrified Sunlight",
+          "Sylvanian Grove-Cloth"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Sky-Guardians wield the Ceremonial Blade as their traditional weapon.<SEP>The Sky-Guardians wield Ceremonial Blades forged from Storm-Metal, which resonates with atmospheric energy.",
+          "keywords": "combat,material resonance,weapon use",
+          "source_id": "chunk-08f76c0cbe02e0202ec7772b666c549a<SEP>chunk-5c91ed2ea8bfed0574e27c7baf63b6c6",
+          "file_path": "unknown_source",
+          "created_at": 1776378542,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Pasta"
+      ],
+      [
+        "add_edge",
+        [
+          "Pasta",
+          "Forest-Weavers"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth.",
+          "keywords": "predator,prey",
+          "source_id": "chunk-9e8af3308d2e40e0bab7abb3f38c8dc0",
+          "file_path": "unknown_source",
+          "created_at": 1776373346,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Sylvanian Grove-Cloth",
+        "type": "artifact",
+        "description": "Sylvanian Grove-Cloth is a fabric made from Whisper-Willow fibers and Moon-Silk, known for its supernatural durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "artifact",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whisper-Willow Tree",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sylvanian Grove-Cloth",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian garments are made from Grove-Cloth and worn by nobility.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Silk",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pasta",
+        "type": "",
+        "description": "Pasta is a dish served by the restaurant.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pasta",
+        "tgt": "Forest-Weavers",
+        "keywords": "predator,prey",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Sylvanian Grove-Cloth",
+        "type": "artifact",
+        "description": "Sylvanian Grove-Cloth is a fabric made from Whisper-Willow fibers and Moon-Silk, known for its supernatural durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sylvanian Garments",
+        "type": "artifact",
+        "description": "Sylvanian garments are worn by nobility across many realms.",
+        "rank": 0.0
+      },
+      {
+        "name": "Forest-Weavers",
+        "type": "person",
+        "description": "The Forest-Weavers of Sylvania are master craftspeople who create Grove-Cloth.",
+        "rank": 0.0
+      },
+      {
+        "name": "Moon-Silk",
+        "type": "artifact",
+        "description": "Moon-Silk is a type of silk spun by nocturnal forest spiders, possessing natural magical properties.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whisper-Willow Tree",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Petrified Sunlight",
+        "type": "",
+        "description": "Petrified sunlight is a component used in crafting Sunstone Amulets.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pasta",
+        "type": "",
+        "description": "Pasta is a dish served by the restaurant.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Sylvanian Grove-Cloth",
+        "tgt": "Whisper-Willow Tree",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is made from fibers of the Whisper-Willow tree.",
+        "weight": 0.0
+      },
+      {
+        "src": "Sylvanian Garments",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian garments are made from Grove-Cloth and worn by nobility.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Moon-Silk",
+        "keywords": "",
+        "description": "Forest-Weavers use Moon-Silk to create Grove-Cloth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Forest-Weavers",
+        "tgt": "Weaving-Halls",
+        "keywords": "",
+        "description": "Forest-Weavers work in the Weaving-Halls of Sylvania.",
+        "weight": 0.0
+      },
+      {
+        "src": "Moon-Silk",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "Sylvanian Grove-Cloth is woven with Moon-Silk.",
+        "weight": 0.0
+      },
+      {
+        "src": "Petrified Sunlight",
+        "tgt": "Sylvanian Grove-Cloth",
+        "keywords": "",
+        "description": "The Sky-Guardians wield the Ceremonial Blade as their traditional weapon.<SEP>The Sky-Guardians wield Ceremonial Blades forged from Storm-Metal, which resonates with atmospheric energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pasta",
+        "tgt": "Forest-Weavers",
+        "keywords": "",
+        "description": "The Stone-Hide Wyvern is a natural predator of the Glimmerwing Moth.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:54:37.461555",
+  "llm_calls": 89,
+  "mode": "ft"
+}

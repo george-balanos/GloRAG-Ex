@@ -1,0 +1,574 @@
+{
+  "question": "What is the population of the capital of the biggest country in Xylos-7?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Aethelgard",
+        "Eldoria"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The population of the capital of Eldoria is 300 million people.",
+    "original": "The population of Aethelgard, the capital of Eldoria, the largest country in Xylos-7, is over 300 million people.",
+    "perturbed": "The population of Zorblax Prime, the capital of Eldoria, is not provided in the context.",
+    "similarity": 0.548176
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Shadow-Academy"
+      ],
+      [
+        "add_edge",
+        [
+          "Shadow-Academy",
+          "Zorblax Prime"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+          "keywords": "equipment feature,mapping",
+          "source_id": "chunk-cb3d32acabcf93ff84d53e6c715f5868",
+          "file_path": "unknown_source",
+          "created_at": 1776366883,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Bell-Tower of Resonance"
+      ],
+      [
+        "add_edge",
+        [
+          "Bell-Tower of Resonance",
+          "Xylos"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Grand Dream-Hall displays the finest dream-silk tapestries.",
+          "keywords": "display,finest tapestries",
+          "source_id": "chunk-852b4aca9611d4ba02906005fe159143",
+          "file_path": "unknown_source",
+          "created_at": 1776370100,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Acid Rain"
+      ],
+      [
+        "add_edge",
+        [
+          "Acid Rain",
+          "Zorblax Prime"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Life-Wands are carved from still-living branches.",
+          "keywords": "crafting,material",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Glacian Architecture"
+      ],
+      [
+        "add_edge",
+        [
+          "Glacian Architecture",
+          "Matter Re-sequencer"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Florpion's unique atmospheric composition causes its sky to appear chartreuse due to light refraction.",
+          "keywords": "atmospheric composition,light refraction",
+          "source_id": "chunk-cdc8f4e681bf3b5f227271df6b332b71",
+          "file_path": "unknown_source",
+          "created_at": 1776374477,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Unknown Scent"
+      ],
+      [
+        "add_edge",
+        [
+          "Unknown Scent",
+          "Eldoria"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The family went to the beach on Saturday.",
+          "keywords": "activity,recreation",
+          "source_id": "chunk-1d68c5e141612935adde70191b543400",
+          "file_path": "unknown_source",
+          "created_at": 1776367541,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 10,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "location",
+        "description": "Aethelgard is a region with a southern border adjacent to the Shadow Fen, and it has a royal family associated with Sunstone Amulets.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people, situated beside the Great Waterfall of the Kings.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people and features architecture built around ancient trees.",
+        "rank": 0.0
+      },
+      {
+        "name": "exotic goods",
+        "type": "UNKNOWN",
+        "description": "The markets of Xylos offer exotic goods.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Matter Re-sequencer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Markets of Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aethelgard",
+        "tgt": "Eldoria",
+        "keywords": "",
+        "description": "Aethelgard is the capital city of Eldoria, housing over 300 million of its 689 million people.<SEP>Aethelgard is the capital of Eldoria and has a population of over 300 million people.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians are the inhabitants of Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Telepathic Resonance Bands for communication.",
+        "weight": 0.0
+      },
+      {
+        "src": "Markets of Xylos",
+        "tgt": "exotic goods",
+        "keywords": "",
+        "description": "The markets of Xylos offer exotic goods.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "exotic goods",
+        "type": "UNKNOWN",
+        "description": "The markets of Xylos offer exotic goods.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Matter Re-sequencer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Markets of Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadow-Academy",
+        "type": "",
+        "description": "The Shadow-Academy is an institution that trains students in stealth arts.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acid Rain",
+        "type": "",
+        "description": "Hydrospire is currently under alert for a period of intense acid rain.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacian Architecture",
+        "type": "",
+        "description": "Glacian architecture incorporates natural ice formations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Scent",
+        "type": "",
+        "description": "The air was thick with an unknown scent.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians are the inhabitants of Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Telepathic Resonance Bands for communication.",
+        "weight": 0.0
+      },
+      {
+        "src": "Markets of Xylos",
+        "tgt": "exotic goods",
+        "keywords": "",
+        "description": "The markets of Xylos offer exotic goods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow-Academy",
+        "tgt": "Zorblax Prime",
+        "keywords": "equipment feature,mapping",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 1.0
+      },
+      {
+        "src": "Bell-Tower of Resonance",
+        "tgt": "Xylos",
+        "keywords": "display,finest tapestries",
+        "description": "The Grand Dream-Hall displays the finest dream-silk tapestries.",
+        "weight": 1.0
+      },
+      {
+        "src": "Acid Rain",
+        "tgt": "Zorblax Prime",
+        "keywords": "crafting,material",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 1.0
+      },
+      {
+        "src": "Glacian Architecture",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "atmospheric composition,light refraction",
+        "description": "Florpion's unique atmospheric composition causes its sky to appear chartreuse due to light refraction.",
+        "weight": 1.0
+      },
+      {
+        "src": "Unknown Scent",
+        "tgt": "Eldoria",
+        "keywords": "activity,recreation",
+        "description": "The family went to the beach on Saturday.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "location",
+        "description": "Aethelgard is a region with a southern border adjacent to the Shadow Fen, and it has a royal family associated with Sunstone Amulets.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people, situated beside the Great Waterfall of the Kings.<SEP>Aethelgard is the capital of Eldoria, with a population of over 300 million people and features architecture built around ancient trees.",
+        "rank": 0.0
+      },
+      {
+        "name": "exotic goods",
+        "type": "UNKNOWN",
+        "description": "The markets of Xylos offer exotic goods.",
+        "rank": 0.0
+      },
+      {
+        "name": "Eldoria",
+        "type": "location",
+        "description": "Eldoria is the largest country in Xylos-7, known for its deep forests, clear mountain streams, and a population of 689 million people.<SEP>Eldoria is the largest country in Xylos-7, known for its harmony with nature and reliance on river barges and forest paths for trade.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblax Prime",
+        "type": "location",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxia",
+        "type": "location",
+        "description": "Zorblaxia is a planet with a unique economy, geography, and culture.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Matter Re-sequencer",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Telepathic Resonance Bands",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Markets of Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shadow-Academy",
+        "type": "",
+        "description": "The Shadow-Academy is an institution that trains students in stealth arts.",
+        "rank": 0.0
+      },
+      {
+        "name": "Bell-Tower of Resonance",
+        "type": "",
+        "description": "The Bell-Tower of Resonance is a structure where Harmony-Bells are housed, and its sound can be heard for miles.",
+        "rank": 0.0
+      },
+      {
+        "name": "Acid Rain",
+        "type": "",
+        "description": "Hydrospire is currently under alert for a period of intense acid rain.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacian Architecture",
+        "type": "",
+        "description": "Glacian architecture incorporates natural ice formations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Unknown Scent",
+        "type": "",
+        "description": "The air was thick with an unknown scent.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aethelgard",
+        "tgt": "Eldoria",
+        "keywords": "",
+        "description": "Aethelgard is the capital city of Eldoria, housing over 300 million of its 689 million people.<SEP>Aethelgard is the capital of Eldoria and has a population of over 300 million people.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblax Prime",
+        "tgt": "Zorblaxia",
+        "keywords": "",
+        "description": "Zorblax Prime is the capital city of Zorblaxia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylos",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians are the inhabitants of Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Telepathic Resonance Bands",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Telepathic Resonance Bands for communication.",
+        "weight": 0.0
+      },
+      {
+        "src": "Markets of Xylos",
+        "tgt": "exotic goods",
+        "keywords": "",
+        "description": "The markets of Xylos offer exotic goods.",
+        "weight": 0.0
+      },
+      {
+        "src": "Shadow-Academy",
+        "tgt": "Zorblax Prime",
+        "keywords": "",
+        "description": "The Pathfinder Helm incorporates Echo-Location Sonar to map out physical surroundings.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bell-Tower of Resonance",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "The Grand Dream-Hall displays the finest dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Acid Rain",
+        "tgt": "Zorblax Prime",
+        "keywords": "",
+        "description": "Life-Wands are carved from still-living branches.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacian Architecture",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Florpion's unique atmospheric composition causes its sky to appear chartreuse due to light refraction.",
+        "weight": 0.0
+      },
+      {
+        "src": "Unknown Scent",
+        "tgt": "Eldoria",
+        "keywords": "",
+        "description": "The family went to the beach on Saturday.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:02:03.030827",
+  "llm_calls": 3,
+  "mode": "ft"
+}

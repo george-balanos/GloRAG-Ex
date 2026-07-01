@@ -1,0 +1,474 @@
+{
+  "question": "What two functions does the Mystic 'Dream-Weaver's Loom' perform?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Dream-Weaver's Loom",
+        "Memory-Stitch"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "The Mystic 'Dream-Weaver's Loom' captures 'Sleep-Visions' and performs 'Memory-Stitching'.",
+    "original": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries and uses the Memory-Stitch technique to embed specific recollections into the fabric.",
+    "perturbed": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries and produces Dream-Silk, a fabric softer than any natural fiber.",
+    "similarity": 0.930322
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Chronos Gate"
+      ],
+      [
+        "add_edge",
+        [
+          "Chronos Gate",
+          "Dream-Silk"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Ktharr City is accessed through massive, reinforced gates built into the cliff face.<SEP>Ktharr City is accessed through massive, reinforced gates built into the cliff face.",
+          "keywords": "access point,architectural feature,city access,structure",
+          "source_id": "chunk-7ac2f6afcfe12c7316903a5aaa0355f0<SEP>chunk-4f6527c8f6866b87689b9e1750922422",
+          "file_path": "unknown_source",
+          "created_at": 1776379310,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Mental Conditioning"
+      ],
+      [
+        "add_edge",
+        [
+          "Mental Conditioning",
+          "Loom-Guild"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Living Bridges of Yggdras are composed of Root-Weave, a sentient fungal growth that constantly regenerates.",
+          "keywords": "composition,regeneration",
+          "source_id": "chunk-ef92bfdc623979401f2333636f21a156",
+          "file_path": "unknown_source",
+          "created_at": 1776378362,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Light-Forged Items"
+      ],
+      [
+        "add_edge",
+        [
+          "Light-Forged Items",
+          "Loom-Guild"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+          "keywords": "circulation,composition",
+          "source_id": "chunk-6334b4c5624e548f71327321342d3140",
+          "file_path": "unknown_source",
+          "created_at": 1776369706,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Solar-Ribbons"
+      ],
+      [
+        "add_edge",
+        [
+          "Solar-Ribbons",
+          "Dream-Silk"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+          "keywords": "guardianship,protection",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Dream-Weaver's Loom",
+        "type": "artifact",
+        "description": "The Dream-Weaver's Loom is a mystical device capable of capturing and solidifying Sleep-Visions into physical dream-silk tapestries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Silk",
+        "type": "artifact",
+        "description": "Dream-Silk is a fabric produced by the Dream-Weaver's Loom, known for being softer than any natural fiber.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Weavers",
+        "type": "person",
+        "description": "Dream-Weavers are respected members of mystic society who operate the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Loom-Guild",
+        "type": "organization",
+        "description": "The Loom-Guild is an organization that maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Stitch",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sleep-Visions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lunar Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Memory-Stitch",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom uses the Memory-Stitch technique to embed specific recollections into the fabric.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "The Loom-Guild maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Sleep-Visions",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Dream-Weavers",
+        "keywords": "",
+        "description": "Dream-Weavers operate the Dream-Weaver's Loom and are respected members of mystic society.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Lunar Energy",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom is powered by Lunar Energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Silk",
+        "tgt": "Dream-Weaver's Loom",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Dream-Weaver's Loom",
+        "type": "artifact",
+        "description": "The Dream-Weaver's Loom is a mystical device capable of capturing and solidifying Sleep-Visions into physical dream-silk tapestries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Silk",
+        "type": "artifact",
+        "description": "Dream-Silk is a fabric produced by the Dream-Weaver's Loom, known for being softer than any natural fiber.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Weavers",
+        "type": "person",
+        "description": "Dream-Weavers are respected members of mystic society who operate the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Loom-Guild",
+        "type": "organization",
+        "description": "The Loom-Guild is an organization that maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Sleep-Visions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lunar Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "The Chronos Gate is protected by Jax Korden.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Conditioning",
+        "type": "",
+        "description": "Mental conditioning is a process undergone by Mind-Smiths for decades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "Light-Forged items exhibit incredible luminosity and are created using Rainbow-Essence and Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar-Ribbons",
+        "type": "",
+        "description": "Solar-Ribbons are streams of pure light created by Solarian Sun-Dancers, capable of blinding enemies or illuminating darkness.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "The Loom-Guild maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Sleep-Visions",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Dream-Weavers",
+        "keywords": "",
+        "description": "Dream-Weavers operate the Dream-Weaver's Loom and are respected members of mystic society.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Lunar Energy",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom is powered by Lunar Energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Silk",
+        "tgt": "Dream-Weaver's Loom",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Dream-Silk",
+        "keywords": "access point,architectural feature,city access,structure",
+        "description": "Ktharr City is accessed through massive, reinforced gates built into the cliff face.<SEP>Ktharr City is accessed through massive, reinforced gates built into the cliff face.",
+        "weight": 2.0
+      },
+      {
+        "src": "Mental Conditioning",
+        "tgt": "Loom-Guild",
+        "keywords": "composition,regeneration",
+        "description": "The Living Bridges of Yggdras are composed of Root-Weave, a sentient fungal growth that constantly regenerates.",
+        "weight": 1.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Loom-Guild",
+        "keywords": "circulation,composition",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 1.0
+      },
+      {
+        "src": "Solar-Ribbons",
+        "tgt": "Dream-Silk",
+        "keywords": "guardianship,protection",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Dream-Weaver's Loom",
+        "type": "artifact",
+        "description": "The Dream-Weaver's Loom is a mystical device capable of capturing and solidifying Sleep-Visions into physical dream-silk tapestries.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Silk",
+        "type": "artifact",
+        "description": "Dream-Silk is a fabric produced by the Dream-Weaver's Loom, known for being softer than any natural fiber.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dream-Weavers",
+        "type": "person",
+        "description": "Dream-Weavers are respected members of mystic society who operate the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Loom-Guild",
+        "type": "organization",
+        "description": "The Loom-Guild is an organization that maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "rank": 0.0
+      },
+      {
+        "name": "Memory-Stitch",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Sleep-Visions",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lunar Energy",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Chronos Gate",
+        "type": "",
+        "description": "The Chronos Gate is protected by Jax Korden.",
+        "rank": 0.0
+      },
+      {
+        "name": "Mental Conditioning",
+        "type": "",
+        "description": "Mental conditioning is a process undergone by Mind-Smiths for decades.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "Light-Forged items exhibit incredible luminosity and are created using Rainbow-Essence and Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Solar-Ribbons",
+        "type": "",
+        "description": "Solar-Ribbons are streams of pure light created by Solarian Sun-Dancers, capable of blinding enemies or illuminating darkness.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Memory-Stitch",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom uses the Memory-Stitch technique to embed specific recollections into the fabric.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "The Loom-Guild maintains ancient weaving traditions related to the Dream-Weaver's Loom.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Sleep-Visions",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom captures and solidifies Sleep-Visions into physical dream-silk tapestries.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Dream-Weavers",
+        "keywords": "",
+        "description": "Dream-Weavers operate the Dream-Weaver's Loom and are respected members of mystic society.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Weaver's Loom",
+        "tgt": "Lunar Energy",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom is powered by Lunar Energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dream-Silk",
+        "tgt": "Dream-Weaver's Loom",
+        "keywords": "",
+        "description": "The Dream-Weaver's Loom produces Dream-Silk, a fabric softer than any natural fiber.",
+        "weight": 0.0
+      },
+      {
+        "src": "Chronos Gate",
+        "tgt": "Dream-Silk",
+        "keywords": "",
+        "description": "Ktharr City is accessed through massive, reinforced gates built into the cliff face.<SEP>Ktharr City is accessed through massive, reinforced gates built into the cliff face.",
+        "weight": 0.0
+      },
+      {
+        "src": "Mental Conditioning",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "The Living Bridges of Yggdras are composed of Root-Weave, a sentient fungal growth that constantly regenerates.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Loom-Guild",
+        "keywords": "",
+        "description": "Mechanoids are composed of Gear-Blood, which flows through their internal systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Solar-Ribbons",
+        "tgt": "Dream-Silk",
+        "keywords": "",
+        "description": "Jax Korden serves as the primary Rift-Warden protecting the Chronos Gate.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:36:37.825878",
+  "llm_calls": 3,
+  "mode": "ft"
+}

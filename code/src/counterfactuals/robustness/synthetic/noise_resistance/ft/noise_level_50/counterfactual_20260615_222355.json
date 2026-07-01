@@ -1,0 +1,435 @@
+{
+  "question": "What are the two primary materials used to construct a Xylotian 'Sky-Skiff' hull?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The two primary materials used to construct a Xylotian 'Sky-Skiff' hull are 'Aero-Coral' for the frame and 'Noctilucent Metal' for the cladding.",
+    "original": "The two primary materials used to construct a Xylotian Sky-Skiff hull are hardened Aero-Coral and Noctilucent Metal.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Lumina Star"
+      ],
+      [
+        "add_edge",
+        [
+          "Lumina Star",
+          "Xylotian Sky-Skiff"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+          "keywords": "material composition,wind resonance",
+          "source_id": "chunk-dacf097dab6d99b72c217adbf39a0e08",
+          "file_path": "unknown_source",
+          "created_at": 1776370517,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Glacian Architecture"
+      ],
+      [
+        "add_edge",
+        [
+          "Glacian Architecture",
+          "Wind-Gauge"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+          "keywords": "celestial body,orbital relationship",
+          "source_id": "chunk-ceadd9f2295f73efa231cc507a7af047",
+          "file_path": "unknown_source",
+          "created_at": 1776374299,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Temporal Distortions"
+      ],
+      [
+        "add_edge",
+        [
+          "Temporal Distortions",
+          "Great Xylotian Sky Race"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Growth-Force can make seeds sprout in seconds.",
+          "keywords": "acceleration,sprouting",
+          "source_id": "chunk-24dd209bf576ce21067d0019b17d1f19",
+          "file_path": "unknown_source",
+          "created_at": 1776371241,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Album Releases"
+      ],
+      [
+        "add_edge",
+        [
+          "Album Releases",
+          "Star-Compass"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+          "keywords": "oversight,regulation",
+          "source_id": "chunk-5e2e2feb3a7fbc786fecc915f84cc620",
+          "file_path": "unknown_source",
+          "created_at": 1776372225,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Whirlwind-Crystal"
+      ],
+      [
+        "add_edge",
+        [
+          "Whirlwind-Crystal",
+          "Volcanic Rock"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Star-Singers use Echo-Calls to communicate across vast distances.",
+          "keywords": "communication,stellar resonance",
+          "source_id": "chunk-7b18c9f322ed4e4355c1671da51c5145",
+          "file_path": "unknown_source",
+          "created_at": 1776369807,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 10,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Sky-Skiff",
+        "type": "artifact",
+        "description": "The Xylotian Sky-Skiff is a lightweight aerial vehicle primarily made from hardened Aero-Coral and clad in Noctilucent Metal.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aero-Coral",
+        "type": "naturalobject",
+        "description": "Aero-Coral is a bio-engineered substance used in the construction of Xylotian Sky-Skiffs, grown in Xylos's upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Ground Vehicles",
+        "type": "artifact",
+        "description": "Xylotian ground vehicles are constructed using volcanic rock for durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Noctilucent Metal",
+        "type": "artifact",
+        "description": "Noctilucent Metal is a thin sheet material used to clad the Aero-Coral frame of Sky-Skiffs, known for glowing faintly in the dark.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Navigator",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Propulsion System",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Xylotian Sky Race",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Compass",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Gauge",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Rock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aero-Coral",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Xylotian Sky-Skiff is primarily made from hardened Aero-Coral for its lightweight frame.",
+        "weight": 0.0
+      },
+      {
+        "src": "Noctilucent Metal",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Aero-Coral frame of a Sky-Skiff is clad in thin sheets of Noctilucent Metal for durability and energy shielding.<SEP>Noctilucent Metal glows faintly in the dark, a common aesthetic in Xylotian design.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Navigator",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Training to pilot a Sky-Skiff begins at a young age for many Xylotians.<SEP>Sky-Skiffs are typically piloted by a single Xylotian navigator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Propulsion System",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The propulsion system of a Sky-Skiff utilizes focused solar winds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Xylotian Sky Race",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Great Xylotian Sky Race features heavily modified Sky-Skiffs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Star-Compass",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Star-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Wind-Gauge",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Wind-Gauge.",
+        "weight": 0.0
+      },
+      {
+        "src": "Volcanic Rock",
+        "tgt": "Xylotian Ground Vehicles",
+        "keywords": "",
+        "description": "Xylotian ground vehicles are often made from volcanic rock.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Xylotian Sky-Skiff",
+        "type": "artifact",
+        "description": "The Xylotian Sky-Skiff is a lightweight aerial vehicle primarily made from hardened Aero-Coral and clad in Noctilucent Metal.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aero-Coral",
+        "type": "naturalobject",
+        "description": "Aero-Coral is a bio-engineered substance used in the construction of Xylotian Sky-Skiffs, grown in Xylos's upper atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Ground Vehicles",
+        "type": "artifact",
+        "description": "Xylotian ground vehicles are constructed using volcanic rock for durability.",
+        "rank": 0.0
+      },
+      {
+        "name": "Noctilucent Metal",
+        "type": "artifact",
+        "description": "Noctilucent Metal is a thin sheet material used to clad the Aero-Coral frame of Sky-Skiffs, known for glowing faintly in the dark.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Navigator",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Propulsion System",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Xylotian Sky Race",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Star-Compass",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Gauge",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Volcanic Rock",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lumina Star",
+        "type": "",
+        "description": "Lumina Star is a stable yellow dwarf that provides consistent energy output, supporting diverse environments within the Lumina System.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glacian Architecture",
+        "type": "",
+        "description": "Glacian architecture incorporates natural ice formations.",
+        "rank": 0.0
+      },
+      {
+        "name": "Temporal Distortions",
+        "type": "",
+        "description": "Temporal distortions are rare but dangerous phenomena that the Chrono-Regulator is designed to stabilize.<SEP>Temporal Distortions are chaotic time anomalies that the Chrono-Regulator is designed to stabilize.",
+        "rank": 0.0
+      },
+      {
+        "name": "Album Releases",
+        "type": "",
+        "description": "Album releases on Riven Prime often include temporal variants offering different mixes.",
+        "rank": 0.0
+      },
+      {
+        "name": "Whirlwind-Crystal",
+        "type": "",
+        "description": "Whirlwind-Crystal is a material used to edge Spiral-Blades, maintaining their perpetual spinning motion and humming with kinetic energy.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aero-Coral",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Xylotian Sky-Skiff is primarily made from hardened Aero-Coral for its lightweight frame.",
+        "weight": 0.0
+      },
+      {
+        "src": "Noctilucent Metal",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Aero-Coral frame of a Sky-Skiff is clad in thin sheets of Noctilucent Metal for durability and energy shielding.<SEP>Noctilucent Metal glows faintly in the dark, a common aesthetic in Xylotian design.",
+        "weight": 0.0
+      },
+      {
+        "src": "Xylotian Navigator",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Training to pilot a Sky-Skiff begins at a young age for many Xylotians.<SEP>Sky-Skiffs are typically piloted by a single Xylotian navigator.",
+        "weight": 0.0
+      },
+      {
+        "src": "Propulsion System",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The propulsion system of a Sky-Skiff utilizes focused solar winds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Xylotian Sky Race",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "The Great Xylotian Sky Race features heavily modified Sky-Skiffs.",
+        "weight": 0.0
+      },
+      {
+        "src": "Star-Compass",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Star-Compass.",
+        "weight": 0.0
+      },
+      {
+        "src": "Wind-Gauge",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Navigational tools on a Sky-Skiff include a Wind-Gauge.",
+        "weight": 0.0
+      },
+      {
+        "src": "Volcanic Rock",
+        "tgt": "Xylotian Ground Vehicles",
+        "keywords": "",
+        "description": "Xylotian ground vehicles are often made from volcanic rock.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lumina Star",
+        "tgt": "Xylotian Sky-Skiff",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Glacian Architecture",
+        "tgt": "Wind-Gauge",
+        "keywords": "",
+        "description": "Worv is one of the four moons of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Temporal Distortions",
+        "tgt": "Great Xylotian Sky Race",
+        "keywords": "",
+        "description": "Growth-Force can make seeds sprout in seconds.",
+        "weight": 0.0
+      },
+      {
+        "src": "Album Releases",
+        "tgt": "Star-Compass",
+        "keywords": "",
+        "description": "The Circle-of-Mages oversees rune-crafting practices, ensuring precise ritual timing.",
+        "weight": 0.0
+      },
+      {
+        "src": "Whirlwind-Crystal",
+        "tgt": "Volcanic Rock",
+        "keywords": "",
+        "description": "Star-Singers use Echo-Calls to communicate across vast distances.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:23:55.561032",
+  "llm_calls": 201,
+  "mode": "ft"
+}

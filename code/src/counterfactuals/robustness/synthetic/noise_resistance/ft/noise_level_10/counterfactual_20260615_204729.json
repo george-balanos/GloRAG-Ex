@@ -1,0 +1,336 @@
+{
+  "question": "What two distinct phases define the operation of a Xylotian 'Matter Re-sequencer'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Matter Re-sequencer",
+        "Pattern Imprinting"
+      ]
+    ]
+  ],
+  "cost": 2,
+  "answers": {
+    "ground_truth": "A Xylotian 'Matter Re-sequencer' operates in two phases: 'Atomic Deconstruction' and 'Pattern Imprinting'.",
+    "original": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are Atomic Deconstruction followed by Pattern Imprinting.",
+    "perturbed": "The two distinct phases defining the operation of a Xylotian 'Matter Re-sequencer' are **Atomic Deconstruction** and **Error Correction Protocols**.",
+    "similarity": 0.84754
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Zorblaxian Language"
+      ],
+      [
+        "add_edge",
+        [
+          "Zorblaxian Language",
+          "Xylotian Council of Innovators"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+          "keywords": "operation,power requirement",
+          "source_id": "chunk-f12ac5dc28a653f276176bf1289286b3",
+          "file_path": "unknown_source",
+          "created_at": 1776372929,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Pattern Imprinting",
+        "keywords": "",
+        "description": "Pattern Imprinting follows Atomic Deconstruction in the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxian Language",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "operation,power requirement",
+        "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Matter Re-sequencer",
+        "type": "artifact",
+        "description": "The Matter Re-sequencer is a Xylotian technology used for rapid prototyping, custom manufacturing, and creating novel food textures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotian Council of Innovators",
+        "type": "organization",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylotians",
+        "type": "creature",
+        "description": "Xylotians are the inhabitants of Xylos who use Matter Re-sequencers and Telepathic Resonance Bands.",
+        "rank": 0.0
+      },
+      {
+        "name": "Xylos",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Atomic Deconstruction",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Pattern Imprinting",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Error Correction Protocols",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Zorblaxian Language",
+        "type": "",
+        "description": "The official language of Zorblaxia has 47 letters.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylos",
+        "keywords": "",
+        "description": "Matter Re-sequencers are used for rapid prototyping and custom manufacturing on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotians",
+        "keywords": "",
+        "description": "Xylotians use Matter Re-sequencers for various applications on Xylos.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Xylotian Council of Innovators oversees the development of Matter Re-sequencer technology.",
+        "weight": 0.0
+      },
+      {
+        "src": "Matter Re-sequencer",
+        "tgt": "Pattern Imprinting",
+        "keywords": "",
+        "description": "Pattern Imprinting follows Atomic Deconstruction in the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Atomic Deconstruction",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Atomic Deconstruction is the initial phase of the Matter Re-sequencer process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Error Correction Protocols",
+        "tgt": "Matter Re-sequencer",
+        "keywords": "",
+        "description": "Error Correction Protocols are vital for ensuring accurate re-sequencing in Matter Re-sequencers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Zorblaxian Language",
+        "tgt": "Xylotian Council of Innovators",
+        "keywords": "",
+        "description": "The Zylosian Geo-Resonator model XR-7A requires a standard Z-type power cell to operate.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T20:47:29.253318",
+  "llm_calls": 4,
+  "mode": "ft"
+}

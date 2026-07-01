@@ -1,0 +1,249 @@
+{
+  "question": "What are the two core materials in Aerion 'Wind-Walker' boots?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Aerion Wind-Walker Boots"
+    ]
+  ],
+  "cost": 10,
+  "answers": {
+    "ground_truth": "Aerion 'Wind-Walker' boots use 'Cloud-Leather' and 'Gust-Metal'.",
+    "original": "The two core materials in Aerion Wind-Walker Boots are Cloud-Leather soles and Gust-Metal strapping.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.084277
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Deep-Space Telescopes"
+      ],
+      [
+        "add_edge",
+        [
+          "Deep-Space Telescopes",
+          "Aerion Wind-Walker Boots"
+        ],
+        {
+          "weight": 1.0,
+          "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+          "keywords": "material property,weapon use",
+          "source_id": "chunk-5c91ed2ea8bfed0574e27c7baf63b6c6",
+          "file_path": "unknown_source",
+          "created_at": 1776378542,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Silver-Lotus"
+      ],
+      [
+        "add_edge",
+        [
+          "Silver-Lotus",
+          "Aerion Culture"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+          "keywords": "healing,use",
+          "source_id": "chunk-95e2acb9a9b9f5294e92e741d798190a",
+          "file_path": "unknown_source",
+          "created_at": 1776376195,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Aerion Wind-Walker Boots",
+        "type": "artifact",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles and Gust-Metal strapping, allowing limited flight capabilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Walker Craftsmanship",
+        "type": "method",
+        "description": "Wind-Walker Craftsmanship is a closely guarded art form used to create the Aerion Wind-Walker Boots.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cloud-Leather",
+        "type": "artifact",
+        "description": "Cloud-Leather is a light yet durable material harvested from sky-dwelling creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerion Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gust-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Cloud-Leather",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles, contributing to their lightness and durability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Wind-Walker Craftsmanship",
+        "keywords": "",
+        "description": "Wind-Walker Craftsmanship is used to create Aerion Wind-Walker Boots.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Gust-Metal",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Culture",
+        "tgt": "Aerion Wind-Walker Boots",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots enable limited flight, aligning with the cultural emphasis on freedom and movement.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Aerion Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Silver-Lotus",
+        "tgt": "Aerion Culture",
+        "keywords": "healing,use",
+        "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Aerion Wind-Walker Boots",
+        "type": "artifact",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles and Gust-Metal strapping, allowing limited flight capabilities.",
+        "rank": 0.0
+      },
+      {
+        "name": "Wind-Walker Craftsmanship",
+        "type": "method",
+        "description": "Wind-Walker Craftsmanship is a closely guarded art form used to create the Aerion Wind-Walker Boots.",
+        "rank": 0.0
+      },
+      {
+        "name": "Cloud-Leather",
+        "type": "artifact",
+        "description": "Cloud-Leather is a light yet durable material harvested from sky-dwelling creatures.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aerion Culture",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Gust-Metal",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Space Telescopes",
+        "type": "",
+        "description": "Deep-Space Telescopes are used by Xylotian astronomers to identify terraforming candidates.",
+        "rank": 0.0
+      },
+      {
+        "name": "Silver-Lotus",
+        "type": "",
+        "description": "Silver-Lotus is a flower that blooms only in moonlight and is used to create Moon-Dew Salve.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Cloud-Leather",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are crafted with Cloud-Leather soles, contributing to their lightness and durability.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Wind-Walker Craftsmanship",
+        "keywords": "",
+        "description": "Wind-Walker Craftsmanship is used to create Aerion Wind-Walker Boots.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Wind-Walker Boots",
+        "tgt": "Gust-Metal",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots are reinforced with Gust-Metal strapping that channels atmospheric currents.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aerion Culture",
+        "tgt": "Aerion Wind-Walker Boots",
+        "keywords": "",
+        "description": "Aerion Wind-Walker Boots enable limited flight, aligning with the cultural emphasis on freedom and movement.",
+        "weight": 0.0
+      },
+      {
+        "src": "Deep-Space Telescopes",
+        "tgt": "Aerion Wind-Walker Boots",
+        "keywords": "",
+        "description": "The Sun-Wardens wield Radiant Spears tipped with Sun-Stone, which can channel solar energy.",
+        "weight": 0.0
+      },
+      {
+        "src": "Silver-Lotus",
+        "tgt": "Aerion Culture",
+        "keywords": "",
+        "description": "Adventurers carry Sunpetal Balm for its rapid regenerative properties.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:58:43.134234",
+  "llm_calls": 57,
+  "mode": "ft"
+}

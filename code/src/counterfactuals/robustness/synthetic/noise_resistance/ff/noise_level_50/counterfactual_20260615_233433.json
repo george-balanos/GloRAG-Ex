@@ -1,0 +1,543 @@
+{
+  "question": "What defensive ability is possessed by the strongest creature found in Bioluminescent Forest?",
+  "found": true,
+  "num_operations": 3,
+  "operations": [
+    [
+      "delete_edge",
+      [
+        "Bioluminescent Forest",
+        "Protective Gear"
+      ]
+    ],
+    [
+      "delete_node",
+      "Phase-Lurker"
+    ],
+    [
+      "delete_edge",
+      [
+        "Pressure-Scales",
+        "Phosphorescent Fungi"
+      ]
+    ]
+  ],
+  "cost": 5,
+  "answers": {
+    "ground_truth": "The creature known as the 'Thorned Crawler' in the Bioluminescent Forest possesses the ability to instantaneously grow razor-sharp crystalline thorns across its body when threatened.",
+    "original": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+    "perturbed": "The Thorned Crawler, the strongest creature in the Bioluminescent Forest, possesses a defensive ability through its thorned body.",
+    "similarity": 0.745129
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Time-Lock"
+      ],
+      [
+        "add_edge",
+        [
+          "Time-Lock",
+          "Protective Gear"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+          "keywords": "command,leadership",
+          "source_id": "chunk-9b5074b38cab28295111649885a53894",
+          "file_path": "unknown_source",
+          "created_at": 1776368521,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Pressure-Scales"
+      ],
+      [
+        "add_edge",
+        [
+          "Pressure-Scales",
+          "Phosphorescent Fungi"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Dual-Resonance Crystals passively collect and store psychic energy emanated by Xylos's sentient life forms.<SEP>Dual-Resonance Crystals absorb ambient geothermal energy from Xylos's core.",
+          "keywords": "energy absorption,energy storage,geothermal energy,psychic energy",
+          "source_id": "chunk-3ff616f8f6c6c72f501bacf6a84fb7d1",
+          "file_path": "unknown_source",
+          "created_at": 1776366495,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Yondar System"
+      ],
+      [
+        "add_edge",
+        [
+          "Yondar System",
+          "Protective Gear"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Xylo is the largest moon of Quixar and is tidally locked to the planet.",
+          "keywords": "celestial body,orbital relationship",
+          "source_id": "chunk-ceadd9f2295f73efa231cc507a7af047",
+          "file_path": "unknown_source",
+          "created_at": 1776374299,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Danger"
+      ],
+      [
+        "add_edge",
+        [
+          "Danger",
+          "Hidden Valley"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations.",
+          "keywords": "brittle nature,remote locations",
+          "source_id": "chunk-5cea5faf4e8019e11b6d3c5f420f7267",
+          "file_path": "unknown_source",
+          "created_at": 1776379432,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hidden Valley",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Protective Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phosphorescent Fungi",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shimmer-Moth",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Hidden Valley",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is located in a hidden valley.<SEP>The Bioluminescent Forest is located in a hidden valley.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Protective Gear",
+        "keywords": "",
+        "description": "Explorers must wear protective gear in the Bioluminescent Forest.<SEP>Explorers must wear protective gear in the Bioluminescent Forest.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phosphorescent Fungi",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to phosphorescent fungi.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Flora",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Shimmer-Moth",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Shimmer-Moth.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hidden Valley",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Protective Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phosphorescent Fungi",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shimmer-Moth",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "A Time-Lock is a temporal mechanism that prevents manipulation within a localized area, creating shimmering barriers in space.",
+        "rank": 0.0
+      },
+      {
+        "name": "Yondar System",
+        "type": "",
+        "description": "The Yondar system is a planetary system that includes Quixar as its seventh planet.",
+        "rank": 0.0
+      },
+      {
+        "name": "Danger",
+        "type": "",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Hidden Valley",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is located in a hidden valley.<SEP>The Bioluminescent Forest is located in a hidden valley.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phosphorescent Fungi",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to phosphorescent fungi.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Flora",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Shimmer-Moth",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Shimmer-Moth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Time-Lock",
+        "tgt": "Protective Gear",
+        "keywords": "command,leadership",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 1.0
+      },
+      {
+        "src": "Yondar System",
+        "tgt": "Protective Gear",
+        "keywords": "celestial body,orbital relationship",
+        "description": "Xylo is the largest moon of Quixar and is tidally locked to the planet.",
+        "weight": 1.0
+      },
+      {
+        "src": "Danger",
+        "tgt": "Hidden Valley",
+        "keywords": "brittle nature,remote locations",
+        "description": "Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Bioluminescent Forest",
+        "type": "location",
+        "description": "The Bioluminescent Forest is a vibrant ecosystem known for its glowing flora and fauna.<SEP>The Bioluminescent Forest is a vibrant ecosystem known for its unique life forms that emit light.",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Fauna",
+        "type": "creature",
+        "description": "Glowing fauna are animals that emit light and are part of the Bioluminescent Forest's ecosystem.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phase-Lurker",
+        "type": "creature",
+        "description": "The Phase-Lurker can temporarily shift its body into an intangible state when threatened, allowing attacks to pass through it harmlessly.",
+        "rank": 0.0
+      },
+      {
+        "name": "Thorned Crawler",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Hidden Valley",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Protective Gear",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Phosphorescent Fungi",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Glowing Flora",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Shimmer-Moth",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Time-Lock",
+        "type": "",
+        "description": "A Time-Lock is a temporal mechanism that prevents manipulation within a localized area, creating shimmering barriers in space.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pressure-Scales",
+        "type": "",
+        "description": "Pressure-Scales are harvested from deep-sea creatures and provide natural adaptation to changing water pressure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Yondar System",
+        "type": "",
+        "description": "The Yondar system is a planetary system that includes Quixar as its seventh planet.",
+        "rank": 0.0
+      },
+      {
+        "name": "Danger",
+        "type": "",
+        "description": "Reality-Shaper abilities can be dangerous if misused.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Thorned Crawler",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Thorned Crawler.<SEP>The Bioluminescent Forest is the habitat of the Thorned Crawler.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Fauna",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing fauna.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Hidden Valley",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is located in a hidden valley.<SEP>The Bioluminescent Forest is located in a hidden valley.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phase-Lurker",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Phase-Lurker.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Protective Gear",
+        "keywords": "",
+        "description": "Explorers must wear protective gear in the Bioluminescent Forest.<SEP>Explorers must wear protective gear in the Bioluminescent Forest.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Phosphorescent Fungi",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to phosphorescent fungi.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Glowing Flora",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is home to glowing flora.",
+        "weight": 0.0
+      },
+      {
+        "src": "Bioluminescent Forest",
+        "tgt": "Shimmer-Moth",
+        "keywords": "",
+        "description": "The Bioluminescent Forest is the habitat of the Shimmer-Moth.",
+        "weight": 0.0
+      },
+      {
+        "src": "Time-Lock",
+        "tgt": "Protective Gear",
+        "keywords": "",
+        "description": "Elara Vayne is the chief Star-Navigator of the starship 'Wanderer'.",
+        "weight": 0.0
+      },
+      {
+        "src": "Pressure-Scales",
+        "tgt": "Phosphorescent Fungi",
+        "keywords": "",
+        "description": "Dual-Resonance Crystals passively collect and store psychic energy emanated by Xylos's sentient life forms.<SEP>Dual-Resonance Crystals absorb ambient geothermal energy from Xylos's core.",
+        "weight": 0.0
+      },
+      {
+        "src": "Yondar System",
+        "tgt": "Protective Gear",
+        "keywords": "",
+        "description": "Xylo is the largest moon of Quixar and is tidally locked to the planet.",
+        "weight": 0.0
+      },
+      {
+        "src": "Danger",
+        "tgt": "Hidden Valley",
+        "keywords": "",
+        "description": "Extraction of Aethelite is challenging due to its brittle nature and remote deposit locations.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:34:33.934390",
+  "llm_calls": 162,
+  "mode": "ff"
+}

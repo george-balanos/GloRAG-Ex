@@ -1,0 +1,293 @@
+{
+  "question": "What are the two primary elements used in Prismarian 'Light-Forging'?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "Prismarian 'Light-Forging' uses 'Rainbow-Essence' and 'Photon-Hammers'.",
+    "original": "The two primary elements used in Prismarian 'Light-Forging' are Rainbow-Essence and Photon-Hammers.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Lions"
+      ],
+      [
+        "add_edge",
+        [
+          "Lions",
+          "Prismarian"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Vexium is stabilized into plasma form for use in Vexian propulsion systems.",
+          "keywords": "plasma stabilization,propulsion",
+          "source_id": "chunk-38c243bd67c7fea0e715de9999b806d1",
+          "file_path": "unknown_source",
+          "created_at": 1776374733,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Gloopfish Eggs"
+      ],
+      [
+        "add_edge",
+        [
+          "Gloopfish Eggs",
+          "Rainbow-Essence"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Gleebs are native fauna of Zylos that are unaffected by Chronium.",
+          "keywords": "environmental interaction,native fauna",
+          "source_id": "chunk-f12ac5dc28a653f276176bf1289286b3",
+          "file_path": "unknown_source",
+          "created_at": 1776372929,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Last King of Aethelgard"
+      ],
+      [
+        "add_edge",
+        [
+          "Last King of Aethelgard",
+          "Photon-Hammers"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+          "keywords": "orbital platform,orbital positioning,planetary defense",
+          "source_id": "chunk-6bb11a4ff4c7939884a5f34108ffed63<SEP>chunk-1c8e5df10d050f08e5995559c1c7fa47",
+          "file_path": "unknown_source",
+          "created_at": 1776379071,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 6,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Photon-Hammers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Light-Forging requires Rainbow-Essence as a primary material.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Prismarian",
+        "keywords": "",
+        "description": "Prismarians practice Light-Forging as a cultural technique.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Photon-Hammers",
+        "keywords": "",
+        "description": "Photon-Hammers are used in the Light-Forging process to manipulate light.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Light-Smiths",
+        "keywords": "",
+        "description": "Light-Smiths are legendary craftsmen who specialize in Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Prismarian",
+        "type": "person",
+        "description": "Prismarians are a culture that celebrates the spectrum of colors and are known for their Light-Forging techniques.",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forging",
+        "type": "method",
+        "description": "Light-Forging is a technique used by Prismarians to shape Rainbow-Essence into luminous items using Photon-Hammers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Rainbow-Essence",
+        "type": "data",
+        "description": "Rainbow-Essence is extracted from prismatic storms and is used in Light-Forging.",
+        "rank": 0.0
+      },
+      {
+        "name": "Photon-Hammers",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Smiths",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Light-Forged Items",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Lions",
+        "type": "",
+        "description": "Lions are fed by the zookeeper.",
+        "rank": 0.0
+      },
+      {
+        "name": "Gloopfish Eggs",
+        "type": "",
+        "description": "Gloopfish Eggs are laid in quantities of exactly 33 each mating season.",
+        "rank": 0.0
+      },
+      {
+        "name": "Last King of Aethelgard",
+        "type": "",
+        "description": "The last king of Aethelgard is said to have been lost in the Shadow Fen.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Prismarian",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Prismarians use Rainbow-Essence extracted from prismatic storms for Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Light-Forging requires Rainbow-Essence as a primary material.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Prismarian",
+        "keywords": "",
+        "description": "Prismarians practice Light-Forging as a cultural technique.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Photon-Hammers",
+        "keywords": "",
+        "description": "Photon-Hammers are used in the Light-Forging process to manipulate light.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forging",
+        "tgt": "Light-Smiths",
+        "keywords": "",
+        "description": "Light-Smiths are legendary craftsmen who specialize in Light-Forging.",
+        "weight": 0.0
+      },
+      {
+        "src": "Light-Forged Items",
+        "tgt": "Light-Forging",
+        "keywords": "",
+        "description": "Light-Forged items are the result of the Light-Forging process.",
+        "weight": 0.0
+      },
+      {
+        "src": "Lions",
+        "tgt": "Prismarian",
+        "keywords": "",
+        "description": "Vexium is stabilized into plasma form for use in Vexian propulsion systems.",
+        "weight": 0.0
+      },
+      {
+        "src": "Gloopfish Eggs",
+        "tgt": "Rainbow-Essence",
+        "keywords": "",
+        "description": "Gleebs are native fauna of Zylos that are unaffected by Chronium.",
+        "weight": 0.0
+      },
+      {
+        "src": "Last King of Aethelgard",
+        "tgt": "Photon-Hammers",
+        "keywords": "",
+        "description": "The Aegis Station is positioned above the planet Xylos to provide planetary defense.<SEP>Aegis Station is positioned above the planet Xylos to provide planetary defense.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:37:57.281864",
+  "llm_calls": 201,
+  "mode": "ft"
+}

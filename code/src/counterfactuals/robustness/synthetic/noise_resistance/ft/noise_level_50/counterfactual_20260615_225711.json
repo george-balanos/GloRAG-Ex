@@ -1,0 +1,350 @@
+{
+  "question": "What is the main ingredient in Plorgonian stew?",
+  "found": false,
+  "num_operations": 0,
+  "operations": [],
+  "cost": 7,
+  "answers": {
+    "ground_truth": "fermented tubers of the Plorg plant",
+    "original": "The main ingredient in Plorgonian stew is fermented tubers of the Plorg plant.",
+    "perturbed": null,
+    "similarity": 0.0
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Floofel-Dust"
+      ],
+      [
+        "add_edge",
+        [
+          "Floofel-Dust",
+          "Plorg Plant Bloom"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Cyclone-Steel is formed during atmospheric storms.",
+          "keywords": "material formation,natural process",
+          "source_id": "chunk-ff92dbc05d0cbedece06bc3944fc2127",
+          "file_path": "unknown_source",
+          "created_at": 1776371103,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Starfleet"
+      ],
+      [
+        "add_edge",
+        [
+          "Starfleet",
+          "Plorgonian Chefs"
+        ],
+        {
+          "weight": 2.0,
+          "description": "The Font of Resonance is guarded by silent protectors.<SEP>The Font of Resonance is guarded by silent protectors.",
+          "keywords": "guardianship,protection",
+          "source_id": "chunk-eb238d577176add908a35b492621456f<SEP>chunk-8efb9538a2ac514d224bab59a3f4b44a",
+          "file_path": "unknown_source",
+          "created_at": 1776380583,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Aethelon's Entertainment Industry"
+      ],
+      [
+        "add_edge",
+        [
+          "Aethelon's Entertainment Industry",
+          "Plorg Tuber"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Critical reviews in the Crystalline Sound Weaving scene focus on the intricacy of sonic patterns and harmonic structure.",
+          "keywords": "harmonic structure,sonic patterns",
+          "source_id": "chunk-5dc62747f8fadc8750a88d07ed79be71",
+          "file_path": "unknown_source",
+          "created_at": 1776377834,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Phantom Realm"
+      ],
+      [
+        "add_edge",
+        [
+          "Phantom Realm",
+          "Plorg Plant Bloom"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Luminian scouts perceive Light-Trails for border patrol purposes.",
+          "keywords": "border patrol,perception",
+          "source_id": "chunk-f0749e4b55d29303cb6ae92ca3e8442e",
+          "file_path": "unknown_source",
+          "created_at": 1776369135,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 8,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Tuber",
+        "type": "naturalobject",
+        "description": "Plorg tubers are the fermented base ingredient of Plorgonian stew and grow only in volcanic soil.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Tableware",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Stew",
+        "tgt": "Plorgonian Tableware",
+        "keywords": "",
+        "description": "Plorgonian tableware is used in the context of Plorgonian dining rituals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Tuber",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian stew is made from fermented Plorg tubers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian celebrations involve the consumption of Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Chefs",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian chefs train for 15 years to prepare Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": null,
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Plorgonian Stew",
+        "type": "content",
+        "description": "Plorgonian stew is a dish made primarily from fermented tubers of the Plorg plant.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Tuber",
+        "type": "naturalobject",
+        "description": "Plorg tubers are the fermented base ingredient of Plorgonian stew and grow only in volcanic soil.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant",
+        "type": "naturalobject",
+        "description": "The Plorg plant is a botanical species whose tubers are used to make Plorgonian stew.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Celebrations",
+        "type": "event",
+        "description": "Plorgonian celebrations last for 11 days.",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Chefs",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Dining Rituals",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorgonian Tableware",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Plorg Plant Bloom",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Floofel-Dust",
+        "type": "",
+        "description": "Glimmering Floofel-dust is highly valued by artisans.",
+        "rank": 0.0
+      },
+      {
+        "name": "Starfleet",
+        "type": "",
+        "description": "Starfleet is the organization that operates Warp-Slinger class ships.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelon's Entertainment Industry",
+        "type": "",
+        "description": "Aethelon's entertainment industry is renowned for its artistically rich productions, including dramas and historical epics.",
+        "rank": 0.0
+      },
+      {
+        "name": "Phantom Realm",
+        "type": "",
+        "description": "Phantom Realm is a location shrouded in eternal mist.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Plorgonian Stew",
+        "tgt": "Plorgonian Tableware",
+        "keywords": "",
+        "description": "Plorgonian tableware is used in the context of Plorgonian dining rituals.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Tuber",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian stew is made from fermented Plorg tubers.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorg Plant",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "The Plorg plant blooms once every decade.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Celebrations",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian celebrations involve the consumption of Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Chefs",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian chefs train for 15 years to prepare Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Plorgonian Dining Rituals",
+        "tgt": "Plorgonian Stew",
+        "keywords": "",
+        "description": "Plorgonian dining rituals involve specific customs when eating Plorgonian stew.",
+        "weight": 0.0
+      },
+      {
+        "src": "Floofel-Dust",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "Cyclone-Steel is formed during atmospheric storms.",
+        "weight": 0.0
+      },
+      {
+        "src": "Starfleet",
+        "tgt": "Plorgonian Chefs",
+        "keywords": "",
+        "description": "The Font of Resonance is guarded by silent protectors.<SEP>The Font of Resonance is guarded by silent protectors.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelon's Entertainment Industry",
+        "tgt": "Plorg Tuber",
+        "keywords": "",
+        "description": "Critical reviews in the Crystalline Sound Weaving scene focus on the intricacy of sonic patterns and harmonic structure.",
+        "weight": 0.0
+      },
+      {
+        "src": "Phantom Realm",
+        "tgt": "Plorg Plant Bloom",
+        "keywords": "",
+        "description": "Luminian scouts perceive Light-Trails for border patrol purposes.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T22:57:11.501310",
+  "llm_calls": 201,
+  "mode": "ft"
+}

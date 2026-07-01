@@ -1,0 +1,241 @@
+{
+  "question": "What are the two primary components of Neridian 'Depth-Armor'?",
+  "found": true,
+  "num_operations": 1,
+  "operations": [
+    [
+      "delete_node",
+      "Neridian Depth-Armor"
+    ]
+  ],
+  "cost": 8,
+  "answers": {
+    "ground_truth": "Neridian 'Depth-Armor' is made from 'Pressure-Scales' and 'Abyssal-Resin'.",
+    "original": "The two primary components of Neridian Depth-Armor are Pressure-Scales and Abyssal-Resin.",
+    "perturbed": "I don't have enough information to answer.",
+    "similarity": 0.034312
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Weaving-Halls"
+      ],
+      [
+        "add_edge",
+        [
+          "Weaving-Halls",
+          "Neridian Depth-Armor"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Resonant musicians are celebrated in Resonant society, which values musical harmony.",
+          "keywords": "celebration,musical harmony",
+          "source_id": "chunk-80ce62b82fbb9313903beadfa2b250e0",
+          "file_path": "unknown_source",
+          "created_at": 1776371717,
+          "truncate": ""
+        }
+      ],
+      [
+        "add_node",
+        "Dimension-Rifts"
+      ],
+      [
+        "add_edge",
+        [
+          "Dimension-Rifts",
+          "Abyssal-Resin"
+        ],
+        {
+          "weight": 1.0,
+          "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+          "keywords": "concentration,technique",
+          "source_id": "chunk-2887778a6a2df3dfa6983170922380e7",
+          "file_path": "unknown_source",
+          "created_at": 1776368861,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 4,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Neridian Depth-Armor",
+        "type": "artifact",
+        "description": "Neridian Depth-Armor is a protective suit constructed with Pressure-Scales and Abyssal-Resin, allowing exploration of deep ocean trenches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Hunters of Neridia",
+        "type": "person",
+        "description": "The Deep-Sea Hunters of Neridia are legendary warriors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pressure-Scales",
+        "type": "artifact",
+        "description": "Pressure-Scales are harvested from deep-sea creatures and provide natural adaptation to changing water pressure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Trench of Neridia",
+        "type": "location",
+        "description": "The Great Trench of Neridia descends to unknown depths.",
+        "rank": 0.0
+      },
+      {
+        "name": "Abyssal-Resin",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Neridian Depth-Armor",
+        "tgt": "Pressure-Scales",
+        "keywords": "",
+        "description": "Neridian Depth-Armor is constructed with a base layer of Pressure-Scales.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Trench of Neridia",
+        "tgt": "Neridian Depth-Armor",
+        "keywords": "",
+        "description": "Neridian Depth-Armor allows exploration of the Great Trench of Neridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Abyssal-Resin",
+        "tgt": "Neridian Depth-Armor",
+        "keywords": "",
+        "description": "Neridian Depth-Armor is coated with Abyssal-Resin for waterproofing and resistance.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Deep-Sea Hunters of Neridia",
+        "type": "person",
+        "description": "The Deep-Sea Hunters of Neridia are legendary warriors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Abyssal-Resin",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Dimension-Rifts",
+        "type": "",
+        "description": "Quantum 'Reality-Shapers' generate Dimension-Rifts that create temporary portals between parallel realities.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Dimension-Rifts",
+        "tgt": "Abyssal-Resin",
+        "keywords": "concentration,technique",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 1.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Neridian Depth-Armor",
+        "type": "artifact",
+        "description": "Neridian Depth-Armor is a protective suit constructed with Pressure-Scales and Abyssal-Resin, allowing exploration of deep ocean trenches.",
+        "rank": 0.0
+      },
+      {
+        "name": "Deep-Sea Hunters of Neridia",
+        "type": "person",
+        "description": "The Deep-Sea Hunters of Neridia are legendary warriors.",
+        "rank": 0.0
+      },
+      {
+        "name": "Pressure-Scales",
+        "type": "artifact",
+        "description": "Pressure-Scales are harvested from deep-sea creatures and provide natural adaptation to changing water pressure.",
+        "rank": 0.0
+      },
+      {
+        "name": "Great Trench of Neridia",
+        "type": "location",
+        "description": "The Great Trench of Neridia descends to unknown depths.",
+        "rank": 0.0
+      },
+      {
+        "name": "Abyssal-Resin",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Weaving-Halls",
+        "type": "",
+        "description": "The Weaving-Halls of Sylvania are where Grove-Cloth is crafted, echoing with ancient songs.",
+        "rank": 0.0
+      },
+      {
+        "name": "Dimension-Rifts",
+        "type": "",
+        "description": "Quantum 'Reality-Shapers' generate Dimension-Rifts that create temporary portals between parallel realities.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Neridian Depth-Armor",
+        "tgt": "Pressure-Scales",
+        "keywords": "",
+        "description": "Neridian Depth-Armor is constructed with a base layer of Pressure-Scales.",
+        "weight": 0.0
+      },
+      {
+        "src": "Great Trench of Neridia",
+        "tgt": "Neridian Depth-Armor",
+        "keywords": "",
+        "description": "Neridian Depth-Armor allows exploration of the Great Trench of Neridia.",
+        "weight": 0.0
+      },
+      {
+        "src": "Abyssal-Resin",
+        "tgt": "Neridian Depth-Armor",
+        "keywords": "",
+        "description": "Neridian Depth-Armor is coated with Abyssal-Resin for waterproofing and resistance.",
+        "weight": 0.0
+      },
+      {
+        "src": "Weaving-Halls",
+        "tgt": "Neridian Depth-Armor",
+        "keywords": "",
+        "description": "Resonant musicians are celebrated in Resonant society, which values musical harmony.",
+        "weight": 0.0
+      },
+      {
+        "src": "Dimension-Rifts",
+        "tgt": "Abyssal-Resin",
+        "keywords": "",
+        "description": "Memory-Welding requires intense concentration and focus, a skill possessed by Mind-Smiths.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T21:53:15.434391",
+  "llm_calls": 52,
+  "mode": "ft"
+}

@@ -1,0 +1,291 @@
+{
+  "question": "What is the effect of drinking water from the sacred spring located in the ancient Elderwood forest?",
+  "found": true,
+  "num_operations": 4,
+  "operations": [
+    [
+      "add_node",
+      "Font of Resonance"
+    ],
+    [
+      "add_edge",
+      [
+        "Elderwood Forest",
+        "Font of Resonance"
+      ]
+    ],
+    [
+      "add_node",
+      "Psionic Energy"
+    ],
+    [
+      "add_edge",
+      [
+        "Font of Resonance",
+        "Psionic Energy"
+      ]
+    ]
+  ],
+  "cost": 7.405064322054386,
+  "answers": {
+    "ground_truth": "It amplifies the mental abilities of those who drink it.",
+    "original": "I do not have enough information to answer.",
+    "perturbed": "Drinking water from the Font of Resonance, located deep within the Elderwood Forest, resonates with psionic energy, amplifying mental abilities.",
+    "similarity": 0.505751
+  },
+  "noise": {
+    "ops": [
+      [
+        "add_node",
+        "Probability-Fields"
+      ],
+      [
+        "add_edge",
+        [
+          "Probability-Fields",
+          "Elderwood Forest"
+        ],
+        {
+          "weight": 2.0,
+          "description": "Void is one of the outermost planets in the Lumina System, a distant, frozen body.<SEP>Void is one of the outermost planets in the Lumina System, a distant, frozen body containing significant water ice deposits.",
+          "keywords": "location,planetary composition,planetary system",
+          "source_id": "chunk-7f5314f2ea2b2e09a54bf620954df4a3<SEP>chunk-4711fe35f04eff5ed27358c3c80c1ff9",
+          "file_path": "unknown_source",
+          "created_at": 1776379873,
+          "truncate": ""
+        }
+      ]
+    ],
+    "num_ops": 2,
+    "score_after_noise": 1,
+    "noise_robust": true,
+    "noise_nodes_in_counterfactual": [],
+    "noise_in_explanation": null
+  },
+  "original_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "perturbed_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Probability-Fields",
+        "type": "",
+        "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+        "rank": 0.0
+      },
+      {
+        "name": "Font of Resonance",
+        "type": "",
+        "description": "The Font of Resonance is a sacred spring located deep within the Elderwood forest, known for its unique properties.<SEP>The Font of Resonance is a sacred spring located deep within the Elderwood forest, known for its unique property of resonating with psionic energy.",
+        "rank": 0.0
+      },
+      {
+        "name": "Psionic Energy",
+        "type": "",
+        "description": "Psionic energy is the energy of thought and consciousness, which the water from the Font of Resonance resonates with.<SEP>Psionic energy is the energy of thought and consciousness, amplified by the water from the Font of Resonance.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Elderwood Forest",
+        "tgt": "Font of Resonance",
+        "keywords": "location,sacred site",
+        "description": "The Font of Resonance is located deep within the Elderwood Forest.<SEP>The Font of Resonance is located deep within the Elderwood Forest.",
+        "weight": 2.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      },
+      {
+        "src": "Probability-Fields",
+        "tgt": "Elderwood Forest",
+        "keywords": "location,planetary composition,planetary system",
+        "description": "Void is one of the outermost planets in the Lumina System, a distant, frozen body.<SEP>Void is one of the outermost planets in the Lumina System, a distant, frozen body containing significant water ice deposits.",
+        "weight": 2.0
+      },
+      {
+        "src": "Font of Resonance",
+        "tgt": "Psionic Energy",
+        "keywords": "amplification,energy amplification,mental abilities,resonance",
+        "description": "The water from the Font of Resonance resonates with psionic energy, amplifying mental abilities.<SEP>The water from the Font of Resonance resonates with psionic energy, amplifying mental abilities.",
+        "weight": 2.0
+      }
+    ]
+  },
+  "noisy_subgraph": {
+    "entities": [
+      {
+        "name": "Ancient Trees",
+        "type": "naturalobject",
+        "description": "Ancient trees are part of the Elderwood Forest and contribute to its sacred atmosphere.",
+        "rank": 0.0
+      },
+      {
+        "name": "Ancient Tree-Spirits",
+        "type": "creature",
+        "description": "Ancient tree-spirits inhabit Verdant forests.",
+        "rank": 0.0
+      },
+      {
+        "name": "Elderwood Forest",
+        "type": "location",
+        "description": "Elderwood Forest is an ancient forest that houses the Font of Resonance and many ancient trees.<SEP>Elderwood Forest is a forest near Aethelgard where the ruling council meets.<SEP>Elderwood Forest is where the ruling council of Eldoria meets.<SEP>Elderwood Forest is an ancient forest that houses the Font of Resonance and other natural features.",
+        "rank": 0.0
+      },
+      {
+        "name": "Verdant Forests",
+        "type": "location",
+        "description": "Verdant forests are home to ancient tree-spirits and are protected by Grove-Keepers.",
+        "rank": 0.0
+      },
+      {
+        "name": "Aethelgard",
+        "type": "",
+        "description": "",
+        "rank": 0.0
+      },
+      {
+        "name": "Probability-Fields",
+        "type": "",
+        "description": "Quantum 'Reality-Shapers' can manipulate Probability-Fields to alter the likelihood of events.",
+        "rank": 0.0
+      }
+    ],
+    "relations": [
+      {
+        "src": "Ancient Trees",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "The Elderwood Forest is home to ancient trees that enhance its sacred nature.",
+        "weight": 0.0
+      },
+      {
+        "src": "Ancient Tree-Spirits",
+        "tgt": "Verdant Forests",
+        "keywords": "",
+        "description": "Verdant forests are home to ancient tree-spirits.",
+        "weight": 0.0
+      },
+      {
+        "src": "Aethelgard",
+        "tgt": "Ancient Trees",
+        "keywords": "",
+        "description": "Aethelgard's architecture features structures built around ancient trees.",
+        "weight": 0.0
+      },
+      {
+        "src": "Probability-Fields",
+        "tgt": "Elderwood Forest",
+        "keywords": "",
+        "description": "Void is one of the outermost planets in the Lumina System, a distant, frozen body.<SEP>Void is one of the outermost planets in the Lumina System, a distant, frozen body containing significant water ice deposits.",
+        "weight": 0.0
+      }
+    ]
+  },
+  "timestamp": "2026-06-15T23:20:11.204133",
+  "llm_calls": 167,
+  "mode": "ff"
+}
